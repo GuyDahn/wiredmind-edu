@@ -6,6 +6,10 @@
    in the root layout before paint. */
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* Class mode, for a projector: the lesson page sets data-mode="class" on its
+   root, and `classroom:` utilities size text and buttons for the back row. */
+@custom-variant classroom (&:where([data-mode="class"], [data-mode="class"] *));
+
 @theme {
   /* The lesson's next button: only its outline breathes, never its label. */
   --animate-cue: cue 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;

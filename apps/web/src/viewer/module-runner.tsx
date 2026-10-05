@@ -13,7 +13,7 @@ import { DEFAULT_LOCALE, localePath } from "../i18n/locales.js";
 import { LINKS } from "../site/site.js";
 import { TranslateNotice } from "../site/translate-notice.js";
 import { enqueue } from "./commands.js";
-import { useCircuitCopy, useLessonCopy } from "./copy.js";
+import { TERM_ANCHOR, useCircuitCopy, useLessonCopy } from "./copy.js";
 import {
   controlState,
   focusFor,
@@ -182,12 +182,16 @@ export function ModuleRunner({
         <Progress lesson={lesson} phase={phase} />
         {phase.kind === "step" && step ? (
           <>
-            <p className="text-lg leading-snug text-fg">
+            <p
+              className={`${TERM_ANCHOR} text-lg leading-snug text-fg classroom:text-3xl`}
+            >
               {copy.rich(`steps.${step.id}.text`)}
             </p>
             <div aria-live="polite" className="flex flex-col gap-4">
               {revealed ? (
-                <p className="border-s-4 border-fg/40 ps-3 text-base leading-snug text-fg-muted">
+                <p
+                  className={`${TERM_ANCHOR} border-s-4 border-fg/40 ps-3 text-base leading-snug text-fg-muted classroom:text-3xl`}
+                >
                   {copy.rich(`steps.${step.id}.result`)}
                 </p>
               ) : phase.done ? (
@@ -210,7 +214,9 @@ export function ModuleRunner({
             <h2 className="text-lg font-semibold text-fg">
               {copy.plain("freePlay.title")}
             </h2>
-            <p className="text-base leading-snug text-fg-muted">
+            <p
+              className={`${TERM_ANCHOR} text-base leading-snug text-fg-muted classroom:text-3xl`}
+            >
               {copy.rich("freePlay.text")}
             </p>
           </>
@@ -515,7 +521,9 @@ function Check({
   }, [picked]);
   return (
     <>
-      <p className="text-lg leading-snug text-fg">
+      <p
+        className={`${TERM_ANCHOR} text-lg leading-snug text-fg classroom:text-3xl`}
+      >
         {copy.rich("check.question")}
       </p>
       <div
@@ -546,7 +554,9 @@ function Check({
       </div>
       <div ref={feedbackRef} aria-live="polite" className="scroll-mb-4">
         {choice ? (
-          <p className="text-base leading-snug text-fg-muted">
+          <p
+            className={`${TERM_ANCHOR} text-base leading-snug text-fg-muted classroom:text-2xl`}
+          >
             {copy.rich(`check.choices.${choice.id}.feedback`)}
             {/* A margin, not a space: Chinese and Japanese put none between sentences. */}
             {solved ? null : <span className="ms-1">{t("tryAnother")}</span>}
