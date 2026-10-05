@@ -24,7 +24,7 @@ Every neuron and synapse count in WiredMind comes from MaleCNS v1.0, the complet
 
 Each lesson is four or five one-tap steps, one check question, and free play, about 10 minutes in all. For a class, that is one or two periods with discussion. The Share button copies a link that replays a student's run, spike for spike.
 
-**For teachers.** Every lesson opens on a short "How to read this brain" intro, keeps a color key on the canvas, and explains each scientific term on a tap. "Show me how it works" plays the lesson's ideal run with its text in step, and class mode (`?mode=class`) sizes everything for a projector. Each lesson has a teacher guide (`/en/teachers/escape`) with a 45-minute plan, expected answers, discussion questions, and common misconceptions, and a one-page student worksheet (`/en/teachers/escape/worksheet`); both print on A4. None of it sets a cookie or uses browser storage.
+**For teachers.** Every lesson opens on a short "How to read this brain" intro, keeps a color key on the canvas, and explains each scientific term on a tap. "Show me how it works" plays the lesson's ideal run with its text in step, and class mode (`?mode=class`) sizes everything for a shared screen: a projector, a TV, or one computer. Each lesson has a teacher guide (`/en/teachers/escape`) with a 45-minute plan, expected answers, discussion questions, and common misconceptions, and a one-page student worksheet (`/en/teachers/escape/worksheet`); both print on A4. None of it sets a cookie or uses browser storage.
 
 ## Languages
 

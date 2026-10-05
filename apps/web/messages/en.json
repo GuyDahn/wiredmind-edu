@@ -835,7 +835,7 @@
     },
     "classMode": {
       "label": "Class mode",
-      "hint": "Class mode: bigger text and buttons for a projector"
+      "hint": "Class mode: bigger text and buttons for a shared screen"
     },
     "demo": {
       "start": "Show me how it works",
@@ -947,7 +947,7 @@
       "all": "All teacher guides",
       "address": "Lesson address",
       "setupTitle": "What you need",
-      "setup": "A projector, and one device for each pair of students: a laptop, tablet, or phone. Nothing to install and no accounts. Each lesson opens with a short guide to reading the screen, and every scientific term can be tapped for an explanation.",
+      "setup": "A shared screen helps but is optional: a projector, a TV, or a computer screen the class can see. Students need any device with internet access, ideally one for each pair: a laptop, tablet, or phone. Nothing to install and no accounts. Each lesson opens with a short guide to reading the screen, and every scientific term can be tapped for an explanation.",
       "goalTitle": "Learning goal",
       "topicsTitle": "Topics it connects to",
       "planTitle": "A 45-minute plan",
@@ -959,7 +959,7 @@
         "discuss": "Discussion"
       },
       "plan": {
-        "demo": "Project the lesson in class mode and press “Show me how it works”. Read each step aloud as it plays. It stops at the lesson’s question: leave that unanswered for now.",
+        "demo": "Show the lesson in class mode on a shared screen (a projector, a TV, or a computer screen) and press “Show me how it works”. Read each step aloud as it plays. With no shared screen, students open the same walkthrough on their own devices. It stops at the lesson’s question: leave that unanswered for now.",
         "explore": "Students work in pairs on their own devices, with the worksheet. They write a prediction before each tap, run the lesson, answer its question, and try free play.",
         "discuss": "Collect the pairs’ answers to the lesson’s question, then use the discussion questions below. End with what the model leaves out."
       },
