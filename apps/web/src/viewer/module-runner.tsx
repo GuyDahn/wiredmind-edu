@@ -12,6 +12,7 @@ import {
 import { DEFAULT_LOCALE, localePath } from "../i18n/locales.js";
 import { LINKS } from "../site/site.js";
 import { TranslateNotice } from "../site/translate-notice.js";
+import { modeHref } from "./class-mode.js";
 import { enqueue } from "./commands.js";
 import { TERM_ANCHOR, useCircuitCopy, useLessonCopy } from "./copy.js";
 import {
@@ -35,7 +36,9 @@ import type { ControlAction, ControlGate, ModuleSpec } from "./types.js";
 /** Gap between a silence toggle and the puff we send for the learner. */
 const PUFF_DELAY_MS = 500;
 
-const BUTTON = `min-h-12 w-full rounded-xl px-4 text-base font-semibold transition-colors ${FOCUS_RING}`;
+const BUTTON = `min-h-12 w-full rounded-xl px-4 text-base font-semibold transition-colors classroom:min-h-16 classroom:text-2xl ${FOCUS_RING}`;
+/** Small print under the lesson text: the hint, the clock. Bigger on a projector. */
+const HINT = "text-sm text-fg-subtle classroom:text-xl";
 
 export function ModuleRunner({
   entry,
@@ -60,6 +63,7 @@ export function ModuleRunner({
   const [sheet, setSheet] = useState<SheetState>("peek");
   const puffTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const intro = useViewerStore((state) => state.intro);
+  const classMode = useViewerStore((state) => state.classMode);
   const [introScreen, setIntroScreen] = useState(0);
   const stimulating = useViewerStore((state) => state.stimulating);
   const live = useViewerStore((state) => state.circuit === module.id);
@@ -209,8 +213,13 @@ export function ModuleRunner({
         )
       }
     >
-      <PanelTranslateNotice />
-      <Toolbar entry={entry} />
+      {/* On a projector the panel holds the lesson and nothing else. */}
+      {classMode ? null : (
+        <>
+          <PanelTranslateNotice />
+          <Toolbar entry={entry} />
+        </>
+      )}
       {notice ? (
         <p
           role="status"
@@ -241,9 +250,9 @@ export function ModuleRunner({
                   {copy.rich(`steps.${step.id}.result`)}
                 </p>
               ) : phase.done ? (
-                <p className="text-sm text-fg-subtle">{t("watching")}</p>
+                <p className={HINT}>{t("watching")}</p>
               ) : (
-                <p className="text-sm text-fg-subtle">{t("tapCue")}</p>
+                <p className={HINT}>{t("tapCue")}</p>
               )}
             </div>
           </>
@@ -257,7 +266,7 @@ export function ModuleRunner({
         ) : null}
         {phase.kind === "free" ? (
           <>
-            <h2 className="text-lg font-semibold text-fg">
+            <h2 className="text-lg font-semibold text-fg classroom:text-2xl">
               {copy.plain("freePlay.title")}
             </h2>
             <p
@@ -271,16 +280,16 @@ export function ModuleRunner({
           <button
             type="button"
             onClick={startOver}
-            className="inline-flex min-h-11 items-center self-start text-sm text-fg-subtle underline underline-offset-4 hover:text-fg-muted"
+            className="inline-flex min-h-11 items-center self-start text-sm text-fg-subtle underline underline-offset-4 hover:text-fg-muted classroom:text-lg"
           >
             {t("again")}
           </button>
         )}
       </section>
-      {intro ? null : (
+      {intro || (classMode && phase.kind !== "free") ? null : (
         <Controls module={module} gate={gate} onAction={onAction} />
       )}
-      <PanelCredit>{credit}</PanelCredit>
+      {classMode ? null : <PanelCredit>{credit}</PanelCredit>}
     </Sheet>
   );
 }
@@ -342,6 +351,7 @@ function Footer({
   const t = useTranslations("viewer.lesson");
   const titles = useTranslations("lessons");
   const locale = useLocale();
+  const classMode = useViewerStore((state) => state.classMode);
   if (goal)
     return <CueButton module={module} goal={goal} onAction={onAction} />;
   if (watching) return <Watching module={module} pending={puffPending} />;
@@ -366,16 +376,14 @@ function Footer({
         {t("freePlay")}
       </button>
     ) : (
-      <p className="py-3 text-center text-sm text-fg-subtle">
-        {t("pickAnswer")}
-      </p>
+      <p className={`py-3 text-center ${HINT}`}>{t("pickAnswer")}</p>
     );
   }
   const after = LESSONS.find((item) => item.number === entry.number + 1);
   if (after) {
     return (
       <Link
-        href={localePath(locale, after.path)}
+        href={modeHref(localePath(locale, after.path), classMode)}
         className={`${BUTTON} flex items-center justify-center gap-2 bg-accent text-accent-fg hover:bg-accent-hover`}
       >
         {t("nextLesson", { title: titles(`${after.id}.title`) })}
@@ -390,7 +398,7 @@ function Footer({
         {others.map((item) => (
           <Link
             key={item.id}
-            href={localePath(locale, item.path)}
+            href={modeHref(localePath(locale, item.path), classMode)}
             className={`${BUTTON} flex-1 border border-border-strong text-fg-muted hover:bg-overlay`}
           >
             {titles(`${item.id}.title`)}
@@ -434,14 +442,16 @@ function CueButton({
       disabled={!ready}
       data-cue=""
       onClick={() => press(action, onAction)}
-      className={`flex min-h-14 w-full touch-manipulation items-center gap-3 rounded-2xl px-4 py-2.5 text-start transition-transform active:scale-[0.99] disabled:opacity-50 ${FOCUS_RING} ${filled ? "text-zinc-950" : "border-2 bg-overlay text-fg"}`}
+      className={`flex min-h-14 w-full touch-manipulation items-center gap-3 rounded-2xl px-4 py-2.5 text-start classroom:min-h-20 transition-transform active:scale-[0.99] disabled:opacity-50 ${FOCUS_RING} ${filled ? "text-zinc-950" : "border-2 bg-overlay text-fg"}`}
       style={filled ? { backgroundColor: color } : { borderColor: color }}
     >
       <span className="flex flex-1 flex-col">
-        <span className="text-xs font-semibold tracking-[0.14em] uppercase opacity-80">
+        <span className="text-xs font-semibold tracking-[0.14em] uppercase opacity-80 classroom:text-lg">
           {ready ? verb : t("loadingBrain")}
         </span>
-        <span className="text-lg leading-tight font-semibold">{name}</span>
+        <span className="text-lg leading-tight font-semibold classroom:text-3xl">
+          {name}
+        </span>
       </span>
       <span
         aria-hidden="true"
@@ -468,7 +478,7 @@ function Watching({
   const name = puff ? circuit.name(puff.colorGroup) : null;
   return (
     <div className="flex flex-col gap-2 py-1" aria-live="polite">
-      <p className="flex items-center gap-2 text-base font-semibold text-fg">
+      <p className="flex items-center gap-2 text-base font-semibold text-fg classroom:text-2xl">
         <span aria-hidden="true" className="md:hidden">
           ↑
         </span>
@@ -490,7 +500,7 @@ function Watching({
           style={{ width: `${fraction * 100}%` }}
         />
       </div>
-      <p className="text-xs text-fg-subtle tabular-nums">
+      <p className="text-xs text-fg-subtle tabular-nums classroom:text-lg">
         {name && puff
           ? t("puffClock", {
               name,
@@ -526,7 +536,7 @@ function Progress({
         : t("done");
   return (
     <div className="flex flex-col gap-2">
-      <p className="text-xs font-semibold tracking-[0.14em] text-fg-subtle uppercase">
+      <p className="text-xs font-semibold tracking-[0.14em] text-fg-subtle uppercase classroom:text-lg">
         {label}
       </p>
       <div className="flex gap-1.5" aria-hidden="true">
@@ -593,7 +603,7 @@ function Check({
               disabled={solved}
               aria-pressed={chosen}
               onClick={() => onPick(index)}
-              className={`min-h-12 rounded-xl border px-4 py-3 text-start text-base leading-snug disabled:cursor-default ${FOCUS_RING} ${tone}`}
+              className={`min-h-12 rounded-xl border px-4 py-3 text-start text-base leading-snug disabled:cursor-default classroom:min-h-16 classroom:text-2xl ${FOCUS_RING} ${tone}`}
             >
               {copy.plain(`check.choices.${item.id}.text`)}
             </button>

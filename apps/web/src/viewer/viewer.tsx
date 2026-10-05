@@ -8,6 +8,7 @@ import { useEffect, useState, type ReactNode } from "react";
 import { ENDONYMS, localePath } from "../i18n/locales.js";
 import { LanguageMenu } from "../site/language-menu.js";
 import { SITE_NAME } from "../site/site.js";
+import { readClassMode, withClassMode } from "./class-mode.js";
 import { CompassDial } from "./compass-dial.js";
 import { Legend } from "./legend.js";
 import { groupColor } from "./module.js";
@@ -45,6 +46,14 @@ export function Viewer({
   const t = useTranslations("viewer.replay");
   const [shared, setShared] = useState<Shared | null>(null);
   const [notice, setNotice] = useState<string | null>(null);
+  const classMode = useViewerStore((state) => state.classMode);
+
+  // Class mode is whatever the address says, on every lesson page.
+  useEffect(() => {
+    useViewerStore
+      .getState()
+      .setClassMode(readClassMode(window.location.search));
+  }, [entry.id]);
 
   // A share link names its own lesson. If that is not this page's lesson,
   // go to its page, which carries that lesson's words.
@@ -83,7 +92,10 @@ export function Viewer({
   }
 
   return (
-    <div className="flex h-dvh flex-col overflow-hidden bg-canvas text-fg md:flex-row">
+    <div
+      data-mode={classMode ? "class" : undefined}
+      className="flex h-dvh flex-col overflow-hidden bg-canvas text-fg md:flex-row"
+    >
       {shared ? (
         <ReplayRunner
           key={`${shared.entry.id}-replay`}
@@ -142,7 +154,7 @@ function Stage({
             </Link>{" "}
             · {t("stage.lesson", { number: entry.number })}
           </p>
-          <h1 className="max-w-md text-xl font-semibold tracking-tight text-zinc-50 md:text-3xl">
+          <h1 className="max-w-md text-xl font-semibold tracking-tight text-zinc-50 md:text-3xl classroom:md:max-w-2xl classroom:md:text-4xl">
             {lessonCopy("title")}
           </h1>
           <p className="mt-1 hidden max-w-sm text-sm leading-snug text-zinc-300 md:block">
@@ -151,6 +163,7 @@ function Stage({
         </div>
         <div className="flex shrink-0 items-start gap-1.5">
           {replaying ? null : <IntroButton />}
+          <ClassModeButton />
           {menu}
           <StageLanguageMenu path={entry.path} />
         </div>
@@ -191,7 +204,9 @@ function Stage({
 
 /** A control on the dark canvas, the size of the phone menu's button. */
 const STAGE_BUTTON =
-  "pointer-events-auto flex min-h-11 min-w-11 items-center justify-center gap-2 rounded-lg bg-zinc-950/60 px-2.5 text-sm font-semibold text-zinc-200 backdrop-blur-sm hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white";
+  "pointer-events-auto flex min-h-11 min-w-11 items-center justify-center gap-2 rounded-lg px-2.5 text-sm font-semibold backdrop-blur-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white";
+const STAGE_BUTTON_OFF = "bg-zinc-950/60 text-zinc-200 hover:text-white";
+const STAGE_BUTTON_ON = "bg-zinc-100 text-zinc-950";
 
 /** "?": opens the "How to read this brain" intro again, at any point of the lesson. */
 function IntroButton() {
@@ -205,11 +220,50 @@ function IntroButton() {
       title={t("label")}
       aria-pressed={open}
       onClick={() => useViewerStore.getState().setIntro(true)}
-      className={STAGE_BUTTON}
+      className={`${STAGE_BUTTON} ${open ? STAGE_BUTTON_ON : STAGE_BUTTON_OFF}`}
     >
       <span aria-hidden="true" className="text-lg leading-none">
         ?
       </span>
+    </button>
+  );
+}
+
+/** Turns class mode on or off and writes it to the address, so the page can be bookmarked that way. */
+function ClassModeButton() {
+  const t = useTranslations("viewer.classMode");
+  const on = useViewerStore((state) => state.classMode);
+  function toggle() {
+    const next = !on;
+    window.history.replaceState(
+      null,
+      "",
+      withClassMode(window.location.href, next),
+    );
+    useViewerStore.getState().setClassMode(next);
+  }
+  return (
+    <button
+      type="button"
+      data-class-mode=""
+      aria-pressed={on}
+      aria-label={t("hint")}
+      title={t("hint")}
+      onClick={toggle}
+      className={`${STAGE_BUTTON} ${on ? STAGE_BUTTON_ON : STAGE_BUTTON_OFF}`}
+    >
+      <svg
+        aria-hidden="true"
+        viewBox="0 0 20 20"
+        className="size-5 fill-none stroke-current"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <rect x="2.5" y="3.5" width="15" height="10" rx="1.5" />
+        <path d="M10 13.5v3M6.5 16.5h7" />
+      </svg>
+      <span className="hidden lg:inline">{t("label")}</span>
     </button>
   );
 }

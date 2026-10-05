@@ -42,7 +42,7 @@ export function Legend({ module }: { module: ModuleSpec }) {
         aria-controls={listId}
         disabled={held}
         onClick={() => setPicked(open !== true)}
-        className="flex min-h-11 w-full items-center gap-2 rounded-xl px-3 text-start text-xs font-semibold tracking-[0.14em] text-zinc-200 uppercase hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white disabled:cursor-default classroom:text-base"
+        className="flex min-h-11 w-full items-center gap-2 rounded-xl px-3 text-start text-xs font-semibold tracking-[0.14em] text-zinc-200 uppercase hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white disabled:cursor-default classroom:md:text-base"
       >
         <span
           aria-hidden="true"
@@ -70,13 +70,13 @@ export function Legend({ module }: { module: ModuleSpec }) {
       </button>
       <ul
         id={listId}
-        className={`flex-col gap-1.5 px-3 pb-3 text-sm leading-snug classroom:gap-2.5 classroom:text-xl ${open === null ? "hidden md:flex" : open ? "flex" : "hidden"}`}
+        className={`flex-col gap-1.5 px-3 pb-3 text-sm leading-snug classroom:md:gap-2.5 classroom:md:text-xl ${open === null ? "hidden md:flex" : open ? "flex" : "hidden"}`}
       >
         {module.groups.map((group) => (
           <li key={group.colorGroup} className="flex items-baseline gap-2">
             <span
               aria-hidden="true"
-              className="size-2.5 shrink-0 translate-y-px rounded-full classroom:size-3.5"
+              className="size-2.5 shrink-0 translate-y-px rounded-full classroom:md:size-3.5"
               style={{ backgroundColor: group.color }}
             />
             <span>
@@ -92,7 +92,7 @@ export function Legend({ module }: { module: ModuleSpec }) {
         <li className="flex items-baseline gap-2 border-t border-white/15 pt-1.5 text-zinc-200">
           <span
             aria-hidden="true"
-            className="size-2.5 shrink-0 translate-y-px rounded-full bg-white shadow-[0_0_6px_2px_rgb(255_255_255/0.85)] classroom:size-3.5"
+            className="size-2.5 shrink-0 translate-y-px rounded-full bg-white shadow-[0_0_6px_2px_rgb(255_255_255/0.85)] classroom:md:size-3.5"
           />
           {t("glow")}
         </li>
