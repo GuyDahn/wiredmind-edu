@@ -9,6 +9,7 @@ import { ENDONYMS, localePath } from "../i18n/locales.js";
 import { LanguageMenu } from "../site/language-menu.js";
 import { SITE_NAME } from "../site/site.js";
 import { CompassDial } from "./compass-dial.js";
+import { Legend } from "./legend.js";
 import { groupColor } from "./module.js";
 import { findLesson, LESSONS, type LessonEntry } from "./modules.js";
 import { ModuleRunner } from "./module-runner.js";
@@ -144,16 +145,21 @@ function Stage({ entry, menu }: { entry: LessonEntry; menu?: ReactNode }) {
       </header>
       <p className="sr-only">{t("stage.canvasHelp")}</p>
       {/* The brain is a real fly's, so it never mirrors for right-to-left languages. */}
-      <div className="absolute inset-0 touch-none" dir="ltr">
+      <div
+        className="absolute inset-0 touch-none"
+        dir="ltr"
+        data-intro="canvas"
+      >
         <Scene module={module} />
       </div>
+      <Legend module={module} />
       {module.compass && status === "ready" ? (
         <div className="absolute end-3 bottom-3 z-10 md:end-4 md:bottom-4">
           <CompassDial color={groupColor(module, module.compass.colorGroup)} />
         </div>
       ) : null}
       {status === "loading" ? (
-        <p className="pointer-events-none absolute inset-x-4 bottom-3 text-center text-sm text-zinc-300">
+        <p className="pointer-events-none absolute inset-x-4 bottom-16 text-center text-sm text-zinc-300 md:bottom-3">
           {percent > 0
             ? t("stage.loadingPercent", { percent })
             : t("stage.loading")}
@@ -162,7 +168,7 @@ function Stage({ entry, menu }: { entry: LessonEntry; menu?: ReactNode }) {
       {error ? (
         <p
           role="alert"
-          className="absolute inset-x-4 bottom-3 rounded-xl bg-red-950/90 px-3 py-2 text-sm text-red-100"
+          className="absolute inset-x-4 bottom-16 z-20 rounded-xl bg-red-950/90 px-3 py-2 text-sm text-red-100"
         >
           {t(`load.${error}`)}
         </p>

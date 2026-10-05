@@ -5,11 +5,13 @@ import { Term } from "./term.js";
 import { TERM_IDS } from "./terms.js";
 import type { ModuleSpec } from "./types.js";
 
-/** Names and button descriptions for a circuit's groups, from circuits.<circuit>. */
+/** Names, plain names, and button descriptions for a circuit's groups, from circuits.<circuit>. */
 export function useCircuitCopy(module: ModuleSpec) {
   const t = useTranslations(`circuits.${module.circuit}`);
   return {
     name: (colorGroup: string) => t(`groups.${colorGroup}`),
+    /** The group's everyday nickname, the one lesson glosses use. */
+    plain: (colorGroup: string) => t(`plain.${colorGroup}`),
     stimulate: (colorGroup: string) => t(`stimulate.${colorGroup}`),
     silence: (colorGroup: string) => t(`silence.${colorGroup}`),
   };

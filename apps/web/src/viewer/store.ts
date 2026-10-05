@@ -11,6 +11,9 @@ export type PuffClock = {
   totalMs: number;
 };
 
+/** Parts of the lesson page the intro can outline. Each carries data-intro="<name>". */
+export type SpotlightTarget = "canvas" | "legend" | "buttons";
+
 export type PlaybackState = {
   applied: number;
   total: number;
@@ -38,6 +41,12 @@ type ViewerState = {
    * so the circuit a learner just left never takes them.
    */
   circuit: string | null;
+  /** Class mode, for a projector. Lives in the URL (?mode=class), never in storage. */
+  classMode: boolean;
+  /** The "How to read this brain" intro is showing. */
+  intro: boolean;
+  /** The part of the page the intro is pointing at, if any. */
+  spotlight: SpotlightTarget | null;
   setStatus: (status: ViewerStatus, error?: LoadErrorCode | null) => void;
   setProgress: (progress: number) => void;
   setStimulating: (colorGroup: string, on: boolean) => void;
@@ -48,6 +57,9 @@ type ViewerState = {
   setPlayback: (playback: PlaybackState | null) => void;
   setCompass: (compass: CompassReadout | null) => void;
   setCircuit: (circuit: string | null) => void;
+  setClassMode: (classMode: boolean) => void;
+  setIntro: (intro: boolean) => void;
+  setSpotlight: (spotlight: SpotlightTarget | null) => void;
   resetControls: () => void;
 };
 
@@ -63,6 +75,9 @@ export const useViewerStore = create<ViewerState>((set) => ({
   playback: null,
   compass: null,
   circuit: null,
+  classMode: false,
+  intro: false,
+  spotlight: null,
   setStatus: (status, error = null) => set({ status, error }),
   setProgress: (progress) => set({ progress }),
   setStimulating: (colorGroup, on) =>
@@ -83,6 +98,9 @@ export const useViewerStore = create<ViewerState>((set) => ({
   setPlayback: (playback) => set({ playback }),
   setCompass: (compass) => set({ compass }),
   setCircuit: (circuit) => set({ circuit }),
+  setClassMode: (classMode) => set({ classMode }),
+  setIntro: (intro) => set(intro ? { intro } : { intro, spotlight: null }),
+  setSpotlight: (spotlight) => set({ spotlight }),
   resetControls: () =>
     set({ stimulating: {}, silenced: {}, activity: {}, puff: null }),
 }));
