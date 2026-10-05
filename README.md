@@ -24,6 +24,8 @@ Every neuron and synapse count in WiredMind comes from MaleCNS v1.0, the complet
 
 Each lesson is four or five one-tap steps, one check question, and free play, about 10 minutes in all. For a class, that is one or two periods with discussion. The Share button copies a link that replays a student's run, spike for spike.
 
+**For teachers.** Every lesson opens on a short "How to read this brain" intro, keeps a color key on the canvas, and explains each scientific term on a tap. "Show me how it works" plays the lesson's ideal run with its text in step, and class mode (`?mode=class`) sizes everything for a projector. Each lesson has a teacher guide (`/en/teachers/escape`) with a 45-minute plan, expected answers, discussion questions, and common misconceptions, and a one-page student worksheet (`/en/teachers/escape/worksheet`); both print on A4. None of it sets a cookie or uses browser storage.
+
 ## Languages
 
 Every page and every lesson is served in 18 languages, each at its own indexed address (`/he/modules/escape`, `/ja/about`), with `hreflang` links, a sitemap per language, and a share image rendered in the reader's own script.
@@ -162,7 +164,6 @@ Read [CONTRIBUTING.md](CONTRIBUTING.md) first, and open an issue before starting
 - **Put the brain dorsal side up in the viewer.** MaleCNS y grows ventrally, so the viewer's default camera (`placeCamera` in [apps/web/src/viewer/scene.tsx](apps/web/src/viewer/scene.tsx)) shows the nervous system upside down. The landing loop already uses a dorsal-up view (`VIEW` in [apps/web/src/site/cascade-scene.ts](apps/web/src/site/cascade-scene.ts)).
 - **Test the order of the smell lesson's step 2.** The copy says receptors fire, then projection neurons, then Kenyon cells. Add a check to [tests/lesson-science.test.ts](tests/lesson-science.test.ts) that the first spikes arrive in that order.
 - **Keyboard shortcuts for lessons,** such as a key that presses the cued button and one for Next, in [apps/web/src/viewer/module-runner.tsx](apps/web/src/viewer/module-runner.tsx).
-- **A printable teacher sheet for each lesson,** built from the steps and check question in [apps/web/content/modules/](apps/web/content/modules/).
 
 **Roadmap**
 
