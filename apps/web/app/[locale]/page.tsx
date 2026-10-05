@@ -23,6 +23,7 @@ import {
 } from "@/src/site/rich-text";
 import { shareCard } from "@/src/og/share-card";
 import { FEEDBACK_URL, PAPER, REPO_URL } from "@/src/site/site";
+import { guidePath, TEACHERS_PATH, worksheetPath } from "@/src/site/teachers";
 import { findLesson, LESSONS } from "@/src/viewer/modules";
 
 const TEACHER_POINTS = [
@@ -272,6 +273,47 @@ export default async function HomePage({
                 </li>
               ))}
             </ul>
+            <div className="mt-10 rounded-2xl border border-border bg-canvas p-5">
+              <h3 className="text-lg font-semibold text-fg">
+                <Link
+                  href={localePath(locale, TEACHERS_PATH)}
+                  className={`${LINK_CLASS} inline-flex min-h-11 items-center`}
+                >
+                  {t("landing.teachers.guidesTitle")}
+                </Link>
+              </h3>
+              <p className="text-base leading-relaxed text-fg-muted">
+                {t("landing.teachers.guidesLead")}
+              </p>
+              <ul className="mt-3 flex flex-col">
+                {LESSONS.map((entry) => (
+                  <li
+                    key={entry.id}
+                    className="flex flex-col gap-x-6 border-t border-border py-2 sm:flex-row sm:items-center"
+                  >
+                    <span className="flex-1 text-base font-semibold text-fg">
+                      {t(`lessons.${entry.id}.title`)}
+                    </span>
+                    <span className="flex gap-x-6 text-base text-fg-muted">
+                      <Link
+                        href={localePath(locale, guidePath(entry))}
+                        aria-label={`${t("landing.teachers.guide")}: ${t(`lessons.${entry.id}.title`)}`}
+                        className={`${LINK_CLASS} inline-flex min-h-11 items-center`}
+                      >
+                        {t("landing.teachers.guide")}
+                      </Link>
+                      <Link
+                        href={localePath(locale, worksheetPath(entry))}
+                        aria-label={`${t("landing.teachers.worksheet")}: ${t(`lessons.${entry.id}.title`)}`}
+                        className={`${LINK_CLASS} inline-flex min-h-11 items-center`}
+                      >
+                        {t("landing.teachers.worksheet")}
+                      </Link>
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
             <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6">
               <SiteLink
                 href={REPO_URL}

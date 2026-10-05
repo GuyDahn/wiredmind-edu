@@ -2,6 +2,7 @@ import { LOCALES, localePath, type Locale } from "../i18n/locales.js";
 import { LESSONS } from "../viewer/modules.js";
 import { absoluteUrl, languageAlternates } from "./page-meta.js";
 import { SITE_URL } from "./site.js";
+import { guidePath, TEACHERS_PATH } from "./teachers.js";
 
 export type SitemapPage = {
   /** The page without its language, e.g. /about. */
@@ -19,6 +20,15 @@ export const SITEMAP_PAGES: readonly SitemapPage[] = [
       "app/[locale]/modules/[id]/page.tsx",
       `content/modules/${entry.id}.json`,
       `content/${entry.module.circuit}/module.json`,
+    ],
+  })),
+  { path: TEACHERS_PATH, sources: ["app/[locale]/teachers/page.tsx"] },
+  // The teacher guides. The worksheets are for printing and stay out.
+  ...LESSONS.map((entry) => ({
+    path: guidePath(entry),
+    sources: [
+      "app/[locale]/teachers/[lesson]/page.tsx",
+      `content/modules/${entry.id}.json`,
     ],
   })),
   { path: "/about", sources: ["app/[locale]/about/page.tsx"] },
