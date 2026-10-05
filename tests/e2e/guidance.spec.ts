@@ -326,3 +326,17 @@ test.describe("no sideways scroll at 390 px, right to left", () => {
     }
   }
 });
+
+test("the teachers page lists every term with its explanation", async ({
+  page,
+}) => {
+  await page.goto("/he/teachers");
+  const entries = page.locator("[data-term-entry]");
+  await expect(entries).toHaveCount(14);
+  for (const entry of await entries.all()) {
+    expect((await entry.locator("dt").innerText()).trim()).not.toBe("");
+    expect(
+      (await entry.locator("dd").innerText()).trim().length,
+    ).toBeGreaterThan(20);
+  }
+});

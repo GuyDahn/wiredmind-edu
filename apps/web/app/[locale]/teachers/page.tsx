@@ -17,6 +17,7 @@ import {
   worksheetPath,
 } from "@/src/site/teachers";
 import { LESSONS } from "@/src/viewer/modules";
+import { LESSON_TERMS } from "@/src/viewer/terms";
 
 export async function generateMetadata({
   params,
@@ -91,6 +92,37 @@ export default async function TeachersPage({
             </li>
           ))}
         </ol>
+
+        {/* Every term the lessons use, in one place, so a teacher can read
+            them all before class. The same explanations open on a tap inside
+            the lessons. */}
+        <section aria-labelledby="terms-title" className="mt-14">
+          <h2
+            id="terms-title"
+            className="text-2xl font-semibold tracking-tight text-fg"
+          >
+            {t("teachers.guide.termsTitle")}
+          </h2>
+          {LESSONS.map((entry) => (
+            <div key={entry.id} className="mt-6">
+              <h3 className="text-base font-semibold text-fg-subtle">
+                {t("teachers.index.lesson", { number: entry.number })}
+                {" · "}
+                {t(`lessons.${entry.id}.title`)}
+              </h3>
+              <dl className="mt-2 flex flex-col gap-3 text-base leading-relaxed text-fg-muted">
+                {(LESSON_TERMS[entry.id] ?? []).map((id) => (
+                  <div key={id} data-term-entry={id}>
+                    <dt className="font-semibold text-fg">
+                      {t(`terms.${id}.name`)}
+                    </dt>
+                    <dd>{t(`terms.${id}.text`)}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          ))}
+        </section>
       </main>
       <SiteFooter locale={locale} />
       <script
