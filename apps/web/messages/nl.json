@@ -660,6 +660,82 @@
     "jump": {
       "name": "Springneuronen",
       "text": "Motorneuronen die de springspieren van de middelste poten laten samentrekken, zodat de vlieg de lucht in schiet."
+    },
+    "neuron": {
+      "name": "Neuron",
+      "text": "Een zenuwcel. Hij krijgt signalen van andere cellen en stuurt zelf een signaal als er genoeg bij elkaar komen."
+    },
+    "spike": {
+      "name": "Vuren",
+      "text": "Een korte elektrische puls die een actief neuron over zijn hele lengte stuurt, ook wel impuls of actiepotentiaal genoemd. In de lessen staat elke lichtflits voor één impuls."
+    },
+    "synapse": {
+      "name": "Synaps",
+      "text": "De plek waar het ene neuron zijn signaal doorgeeft aan het volgende. Hoe meer synapsen twee cellen delen, hoe sterker hun verbinding."
+    },
+    "transmitter": {
+      "name": "Neurotransmitter",
+      "text": "Een stofje dat een neuron bij een synaps afgeeft om zijn signaal door te geven. Sommige neurotransmitters exciteren de volgende cel, andere remmen hem."
+    },
+    "excitation": {
+      "name": "Excitatie",
+      "text": "Een signaal dat het volgende neuron richting vuren duwt."
+    },
+    "inhibition": {
+      "name": "Inhibitie",
+      "text": "Een signaal dat het volgende neuron afremt, zodat het minder snel vuurt. Een netwerk heeft het nodig om stabiel en precies te blijven."
+    },
+    "acetylcholine": {
+      "name": "Acetylcholine",
+      "text": "De belangrijkste exciterende neurotransmitter in het brein van een vlieg. In de lessen exciteren cellen die het afgeven de cellen waarmee ze verbonden zijn."
+    },
+    "gaba": {
+      "name": "GABA",
+      "text": "Een remmende neurotransmitter, bij vliegen en bij mensen. In de lessen remmen cellen die GABA afgeven de cellen af waarmee ze verbonden zijn."
+    },
+    "circuit": {
+      "name": "Neuraal circuit",
+      "text": "Een groep neuronen die met elkaar verbonden zijn om één taak uit te voeren, zoals een geur herkennen of een sprong in gang zetten."
+    },
+    "connectome": {
+      "name": "Connectoom",
+      "text": "Een volledig bedradingsschema van een zenuwstelsel: elk neuron en elke synaps ertussen. De lessen draaien op het connectoom van één echte fruitvlieg."
+    },
+    "stimulate": {
+      "name": "Stimuleren",
+      "text": "De knop in de les die één groep cellen even laat vuren, ongeveer zoals wetenschappers gekozen cellen met licht aanzetten."
+    },
+    "silence": {
+      "name": "Stilleggen",
+      "text": "De knop in de les die één groep cellen laat stoppen met vuren, zodat je ziet wat de rest van het circuit zonder die cellen doet."
+    },
+    "sensory": {
+      "name": "Sensorisch neuron",
+      "text": "Een neuron dat iets uit de buitenwereld oppikt, zoals een geur of een naderende schaduw, en dat aan het brein doorgeeft."
+    },
+    "motor": {
+      "name": "Motorneuron",
+      "text": "Een neuron dat een opdracht naar een spier brengt en die laat samentrekken."
+    },
+    "reflex": {
+      "name": "Reflexboog",
+      "text": "De route die een reflex volgt: van sensorische neuronen, via één of meer schakelcellen, naar de motorneuronen die een spier bewegen."
+    },
+    "electricalsynapse": {
+      "name": "Elektrische synaps",
+      "text": "Een rechtstreeks kanaal tussen twee neuronen dat een signaal bijna zonder vertraging doorgeeft. De kaart achter de lessen legt alleen chemische synapsen vast."
+    },
+    "bump": {
+      "name": "Bult",
+      "text": "De vlek van actieve kompasneuronen. Waar hij op de ring zit, laat zien welke kant de vlieg op kijkt."
+    },
+    "landmark": {
+      "name": "Oriëntatiepunt",
+      "text": "Iets wat de vlieg ziet en wat op zijn plek blijft, zoals de zon of een boom. De vlieg gebruikt het om zijn richtingsgevoel stabiel te houden."
+    },
+    "bridge": {
+      "name": "Brug",
+      "text": "Een staafvormig deel van het brein van de vlieg, de protocerebrale brug. De kompasneuronen en de draaineuronen lopen er allebei doorheen."
     }
   },
   "teachers": {
@@ -677,7 +753,8 @@
       "lesson": "Les {number}",
       "guide": "Docentenhandleiding",
       "worksheet": "Werkblad voor leerlingen",
-      "demo": "Laat het de klas zien"
+      "demo": "Laat het de klas zien",
+      "generalTerms": "Basisbegrippen"
     },
     "topics": {
       "excitation": "Excitatie en inhibitie",

@@ -659,6 +659,82 @@
     "jump": {
       "name": "Neuron lompat",
       "text": "Neuron motorik yang membuat otot lompat di kaki tengah berkontraksi, sehingga lalat melesat ke udara."
+    },
+    "neuron": {
+      "name": "Neuron",
+      "text": "Sel saraf. Neuron menerima sinyal dari sel lain dan, ketika sinyal yang terkumpul sudah cukup, mengirim sinyalnya sendiri."
+    },
+    "spike": {
+      "name": "Aktif",
+      "text": "Saat aktif, neuron mengirim denyut listrik singkat di sepanjang tubuhnya. Denyut ini juga disebut impuls atau potensial aksi. Dalam pelajaran, setiap kilatan cahaya menandai satu impuls."
+    },
+    "synapse": {
+      "name": "Sinapsis",
+      "text": "Sambungan tempat satu neuron meneruskan sinyalnya ke neuron berikutnya. Makin banyak sinapsis di antara dua sel, makin kuat hubungan keduanya."
+    },
+    "transmitter": {
+      "name": "Neurotransmiter",
+      "text": "Zat kimia yang dilepaskan neuron di sinapsis untuk meneruskan sinyalnya. Sebagian neurotransmiter mengeksitasi sel berikutnya, sebagian lagi menginhibisinya."
+    },
+    "excitation": {
+      "name": "Eksitasi",
+      "text": "Sinyal yang mendorong neuron berikutnya untuk aktif."
+    },
+    "inhibition": {
+      "name": "Inhibisi",
+      "text": "Sinyal yang menahan neuron berikutnya agar tidak aktif. Jaringan memerlukannya agar tetap stabil dan tepat."
+    },
+    "acetylcholine": {
+      "name": "Asetilkolin",
+      "text": "Neurotransmiter eksitasi utama di otak lalat. Dalam pelajaran, sel yang melepaskannya mengeksitasi sel-sel yang terhubung dengannya."
+    },
+    "gaba": {
+      "name": "GABA",
+      "text": "Neurotransmiter inhibisi, pada lalat maupun manusia. Dalam pelajaran, sel yang melepaskan GABA meredam sel-sel yang terhubung dengannya."
+    },
+    "circuit": {
+      "name": "Sirkuit saraf",
+      "text": "Sekelompok neuron yang saling terhubung untuk mengerjakan satu tugas, misalnya mengenali bau atau memicu lompatan."
+    },
+    "connectome": {
+      "name": "Konektom",
+      "text": "Peta sambungan saraf yang lengkap dari sebuah sistem saraf: setiap neuron dan setiap sinapsis di antaranya. Pelajaran ini berjalan di atas konektom seekor lalat buah sungguhan."
+    },
+    "stimulate": {
+      "name": "Rangsang",
+      "text": "Tombol dalam pelajaran yang membuat satu kelompok sel aktif sesaat, mirip cara ilmuwan menyalakan sel pilihan dengan cahaya."
+    },
+    "silence": {
+      "name": "Bungkam",
+      "text": "Tombol dalam pelajaran yang menghentikan satu kelompok sel agar tidak aktif, untuk menunjukkan apa yang dilakukan bagian sirkuit lainnya tanpa sel itu."
+    },
+    "sensory": {
+      "name": "Neuron sensorik",
+      "text": "Neuron yang menangkap sesuatu dari dunia luar, misalnya bau atau bayangan yang mendekat, lalu melaporkannya ke otak."
+    },
+    "motor": {
+      "name": "Neuron motorik",
+      "text": "Neuron yang membawa perintah ke otot dan membuat otot itu berkontraksi."
+    },
+    "reflex": {
+      "name": "Lengkung refleks",
+      "text": "Jalur yang ditempuh sebuah refleks: dari neuron sensorik, melewati satu atau beberapa sel penghubung, sampai ke neuron motorik yang menggerakkan otot."
+    },
+    "electricalsynapse": {
+      "name": "Sinapsis listrik",
+      "text": "Saluran langsung antara dua neuron yang meneruskan sinyal nyaris tanpa jeda. Peta di balik pelajaran ini hanya mencatat sinapsis kimia."
+    },
+    "bump": {
+      "name": "Tonjolan",
+      "text": "Bercak neuron kompas yang sedang aktif. Letaknya pada cincin menunjukkan ke mana lalat menghadap."
+    },
+    "landmark": {
+      "name": "Patokan",
+      "text": "Sesuatu yang dilihat lalat dan tetap di tempatnya, seperti matahari atau pohon. Lalat memakainya agar rasa arahnya tetap mantap."
+    },
+    "bridge": {
+      "name": "Jembatan",
+      "text": "Bagian otak lalat yang berbentuk batang, yaitu jembatan protoserebral. Neuron kompas dan neuron belok sama-sama melewatinya."
     }
   },
   "teachers": {
@@ -676,7 +752,8 @@
       "lesson": "Pelajaran {number}",
       "guide": "Panduan guru",
       "worksheet": "Lembar kerja siswa",
-      "demo": "Tunjukkan kepada kelas"
+      "demo": "Tunjukkan kepada kelas",
+      "generalTerms": "Istilah dasar"
     },
     "topics": {
       "excitation": "Eksitasi dan inhibisi",

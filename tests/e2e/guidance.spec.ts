@@ -332,7 +332,7 @@ test("the teachers page lists every term with its explanation", async ({
 }) => {
   await page.goto("/he/teachers");
   const entries = page.locator("[data-term-entry]");
-  await expect(entries).toHaveCount(14);
+  await expect(entries).toHaveCount(33);
   for (const entry of await entries.all()) {
     expect((await entry.locator("dt").innerText()).trim()).not.toBe("");
     expect(

@@ -22,6 +22,27 @@ export const TERM_IDS = [
   "giantfiber",
   "nervecord",
   "jump",
+  // Terms a teacher needs but no lesson step tags: the guides and the
+  // teachers page list them.
+  "neuron",
+  "spike",
+  "synapse",
+  "transmitter",
+  "excitation",
+  "inhibition",
+  "acetylcholine",
+  "gaba",
+  "circuit",
+  "connectome",
+  "stimulate",
+  "silence",
+  "sensory",
+  "motor",
+  "reflex",
+  "electricalsynapse",
+  "bump",
+  "landmark",
+  "bridge",
 ] as const;
 
 export type TermId = (typeof TERM_IDS)[number];
@@ -41,6 +62,31 @@ export const LESSON_TERMS: Readonly<Record<string, readonly TermId[]>> = {
     "kenyon",
     "output",
   ],
-  compass: ["turn", "compass", "ring"],
-  escape: ["looming", "giantfiber", "nervecord", "jump"],
+  compass: ["turn", "compass", "bump", "ring", "landmark", "bridge"],
+  escape: [
+    "looming",
+    "giantfiber",
+    "nervecord",
+    "jump",
+    "reflex",
+    "sensory",
+    "motor",
+    "electricalsynapse",
+  ],
 };
+
+/** The neuroscience every lesson leans on, in the order a class would meet it. */
+export const GENERAL_TERMS: readonly TermId[] = [
+  "neuron",
+  "spike",
+  "synapse",
+  "transmitter",
+  "excitation",
+  "inhibition",
+  "acetylcholine",
+  "gaba",
+  "circuit",
+  "connectome",
+  "stimulate",
+  "silence",
+];

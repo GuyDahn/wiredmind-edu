@@ -659,6 +659,82 @@
     "jump": {
       "name": "Sprungneuronen",
       "text": "Motoneuronen, die die Sprungmuskeln der Mittelbeine anspannen, sodass die Fliege in die Luft schnellt."
+    },
+    "neuron": {
+      "name": "Neuron",
+      "text": "Eine Nervenzelle. Sie empfängt Signale von anderen Zellen. Kommen genug davon zusammen, sendet sie selbst ein Signal."
+    },
+    "spike": {
+      "name": "Feuern",
+      "text": "Ein kurzer elektrischer Impuls, den ein aktives Neuron an sich entlangschickt, auch Aktionspotenzial genannt. In den Lektionen zeigt jedes Aufleuchten einen solchen Impuls."
+    },
+    "synapse": {
+      "name": "Synapse",
+      "text": "Die Verbindungsstelle, an der ein Neuron sein Signal an das nächste weitergibt. Je mehr Synapsen zwei Zellen verbinden, desto stärker ist ihre Verbindung."
+    },
+    "transmitter": {
+      "name": "Neurotransmitter",
+      "text": "Ein chemischer Stoff, den ein Neuron an einer Synapse ausschüttet, um sein Signal weiterzugeben. Manche Neurotransmitter erregen die nächste Zelle, andere hemmen sie."
+    },
+    "excitation": {
+      "name": "Erregung",
+      "text": "Ein Signal, das das nächste Neuron zum Feuern drängt."
+    },
+    "inhibition": {
+      "name": "Hemmung",
+      "text": "Ein Signal, das das nächste Neuron vom Feuern abhält. Ein Netzwerk braucht sie, um stabil und genau zu bleiben."
+    },
+    "acetylcholine": {
+      "name": "Acetylcholin",
+      "text": "Der wichtigste erregende Neurotransmitter im Gehirn der Fliege. In den Lektionen erregen Zellen, die ihn ausschütten, die Zellen, mit denen sie verbunden sind."
+    },
+    "gaba": {
+      "name": "GABA",
+      "text": "Ein hemmender Neurotransmitter, bei Fliegen und bei Menschen. In den Lektionen dämpfen Zellen, die GABA ausschütten, die Zellen, mit denen sie verbunden sind."
+    },
+    "circuit": {
+      "name": "Neuronaler Schaltkreis",
+      "text": "Eine Gruppe von Neuronen, die für eine Aufgabe miteinander verschaltet sind, zum Beispiel einen Duft erkennen oder einen Sprung auslösen."
+    },
+    "connectome": {
+      "name": "Konnektom",
+      "text": "Der vollständige Schaltplan eines Nervensystems: jedes Neuron und jede Synapse dazwischen. Die Lektionen laufen auf dem Konnektom einer echten Fruchtfliege."
+    },
+    "stimulate": {
+      "name": "Stimulieren",
+      "text": "Der Knopf der Lektion, der eine Gruppe von Zellen kurz feuern lässt, ähnlich wie Forschende ausgewählte Zellen mit Licht einschalten."
+    },
+    "silence": {
+      "name": "Stummschalten",
+      "text": "Der Knopf der Lektion, der eine Gruppe von Zellen am Feuern hindert. So zeigt sich, was der Rest des Schaltkreises ohne sie tut."
+    },
+    "sensory": {
+      "name": "Sensorisches Neuron",
+      "text": "Ein Neuron, das etwas aus der Umwelt aufnimmt, etwa einen Duft oder einen heransausenden Schatten, und es dem Gehirn meldet."
+    },
+    "motor": {
+      "name": "Motoneuron",
+      "text": "Ein Neuron, das einen Befehl zu einem Muskel leitet und ihn dazu bringt, sich zusammenzuziehen."
+    },
+    "reflex": {
+      "name": "Reflexbogen",
+      "text": "Der Weg eines Reflexes: von sensorischen Neuronen über eine oder mehrere Schaltzellen zu den Motoneuronen, die einen Muskel bewegen."
+    },
+    "electricalsynapse": {
+      "name": "Elektrische Synapse",
+      "text": "Ein direkter Kanal zwischen zwei Neuronen, der ein Signal fast ohne Verzögerung weitergibt. Die Karte hinter den Lektionen erfasst nur chemische Synapsen."
+    },
+    "bump": {
+      "name": "Leuchtfleck",
+      "text": "Der Fleck aktiver Kompassneuronen. Seine Lage auf dem Ring zeigt, wohin die Fliege gerade schaut."
+    },
+    "landmark": {
+      "name": "Landmarke",
+      "text": "Etwas, das die Fliege sieht und das an seinem Platz bleibt, wie die Sonne oder ein Baum. Damit hält die Fliege ihren Richtungssinn stabil."
+    },
+    "bridge": {
+      "name": "Brücke",
+      "text": "Ein balkenförmiger Teil des Fliegengehirns, die Protozerebralbrücke. Durch sie ziehen sowohl die Kompassneuronen als auch die Drehneuronen."
     }
   },
   "teachers": {
@@ -676,7 +752,8 @@
       "lesson": "Lektion {number}",
       "guide": "Leitfaden für Lehrkräfte",
       "worksheet": "Arbeitsblatt",
-      "demo": "Der Klasse zeigen"
+      "demo": "Der Klasse zeigen",
+      "generalTerms": "Grundbegriffe"
     },
     "topics": {
       "excitation": "Erregung und Hemmung",

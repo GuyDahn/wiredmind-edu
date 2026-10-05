@@ -659,6 +659,82 @@
     "jump": {
       "name": "Nơ-ron nhảy",
       "text": "Các nơ-ron vận động làm cơ nhảy ở đôi chân giữa co lại, khiến ruồi bật lên không trung."
+    },
+    "neuron": {
+      "name": "Nơ-ron",
+      "text": "Một tế bào thần kinh. Nó nhận tín hiệu từ các tế bào khác và khi đủ tín hiệu cộng lại, nó gửi đi tín hiệu của riêng mình."
+    },
+    "spike": {
+      "name": "Phát xung",
+      "text": "Một xung điện ngắn mà nơ-ron đang hoạt động gửi dọc theo chiều dài của nó, còn gọi là xung thần kinh hay điện thế hoạt động. Trong bài học, mỗi lần lóe sáng là một xung."
+    },
+    "synapse": {
+      "name": "Xináp",
+      "text": "Chỗ nối nơi một nơ-ron truyền tín hiệu cho nơ-ron kế tiếp. Hai tế bào có chung càng nhiều xináp thì liên kết giữa chúng càng mạnh."
+    },
+    "transmitter": {
+      "name": "Chất dẫn truyền thần kinh",
+      "text": "Chất hóa học mà nơ-ron tiết ra ở xináp để truyền tín hiệu đi. Có chất gây hưng phấn cho tế bào kế tiếp, có chất lại ức chế nó."
+    },
+    "excitation": {
+      "name": "Hưng phấn",
+      "text": "Tín hiệu đẩy nơ-ron kế tiếp tới chỗ phát xung."
+    },
+    "inhibition": {
+      "name": "Ức chế",
+      "text": "Tín hiệu kìm nơ-ron kế tiếp, không cho nó phát xung. Mạng lưới cần có ức chế để ổn định và chính xác."
+    },
+    "acetylcholine": {
+      "name": "Axêtincôlin",
+      "text": "Chất dẫn truyền thần kinh gây hưng phấn chủ yếu trong não ruồi, còn viết là acetylcholine. Trong bài học, tế bào tiết ra nó gây hưng phấn cho các tế bào mà nó nối tới."
+    },
+    "gaba": {
+      "name": "GABA",
+      "text": "Một chất dẫn truyền thần kinh gây ức chế, có ở cả ruồi và người. Trong bài học, tế bào tiết ra GABA kìm bớt các tế bào mà nó nối tới."
+    },
+    "circuit": {
+      "name": "Mạch thần kinh",
+      "text": "Một nhóm nơ-ron nối với nhau để làm một việc, như nhận ra một mùi hay khởi động một cú nhảy."
+    },
+    "connectome": {
+      "name": "Connectome",
+      "text": "Bản đồ kết nối đầy đủ của một hệ thần kinh: mọi nơ-ron và mọi xináp giữa chúng. Các bài học chạy trên connectome của một con ruồi giấm thật."
+    },
+    "stimulate": {
+      "name": "Kích thích",
+      "text": "Nút trong bài học khiến một nhóm tế bào phát xung trong chốc lát, gần giống cách các nhà khoa học dùng ánh sáng để bật những tế bào đã chọn."
+    },
+    "silence": {
+      "name": "Làm im lặng",
+      "text": "Nút trong bài học ngăn một nhóm tế bào phát xung, để cho thấy phần còn lại của mạch làm gì khi thiếu chúng."
+    },
+    "sensory": {
+      "name": "Nơ-ron cảm giác",
+      "text": "Nơ-ron thu nhận một điều gì đó từ thế giới bên ngoài, như một mùi hay một cái bóng đang lao tới, rồi báo cho não."
+    },
+    "motor": {
+      "name": "Nơ-ron vận động",
+      "text": "Nơ-ron mang mệnh lệnh ra tới cơ và làm cơ co lại."
+    },
+    "reflex": {
+      "name": "Cung phản xạ",
+      "text": "Con đường của một phản xạ: từ nơ-ron cảm giác, qua một hay nhiều tế bào chuyển tiếp, đến nơ-ron vận động làm cơ cử động."
+    },
+    "electricalsynapse": {
+      "name": "Xináp điện",
+      "text": "Một kênh nối thẳng hai nơ-ron, truyền tín hiệu gần như không chậm trễ. Bản đồ đằng sau các bài học chỉ ghi lại xináp hóa học."
+    },
+    "bump": {
+      "name": "Đốm sáng",
+      "text": "Cụm nơ-ron la bàn đang hoạt động. Vị trí của nó trên vòng tròn cho biết ruồi đang quay mặt về hướng nào."
+    },
+    "landmark": {
+      "name": "Điểm mốc",
+      "text": "Thứ ruồi nhìn thấy và luôn ở yên một chỗ, như mặt trời hay một cái cây. Ruồi dùng nó để giữ vững cảm giác về phương hướng."
+    },
+    "bridge": {
+      "name": "Cầu tiền não",
+      "text": "Một phần hình thanh trong não ruồi, tên khoa học là protocerebral bridge. Nơ-ron la bàn và nơ-ron rẽ đều chạy qua đây."
     }
   },
   "teachers": {
@@ -676,7 +752,8 @@
       "lesson": "Bài {number}",
       "guide": "Hướng dẫn cho giáo viên",
       "worksheet": "Phiếu học tập cho học sinh",
-      "demo": "Trình chiếu cho cả lớp"
+      "demo": "Trình chiếu cho cả lớp",
+      "generalTerms": "Thuật ngữ cơ bản"
     },
     "topics": {
       "excitation": "Hưng phấn và ức chế",

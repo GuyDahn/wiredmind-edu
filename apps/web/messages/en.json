@@ -256,7 +256,46 @@
       "landing.teachers.guidesTitle",
       "landing.teachers.guidesLead",
       "landing.teachers.guide",
-      "landing.teachers.worksheet"
+      "landing.teachers.worksheet",
+      "terms.neuron.name",
+      "terms.neuron.text",
+      "terms.spike.name",
+      "terms.spike.text",
+      "terms.synapse.name",
+      "terms.synapse.text",
+      "terms.transmitter.name",
+      "terms.transmitter.text",
+      "terms.excitation.name",
+      "terms.excitation.text",
+      "terms.inhibition.name",
+      "terms.inhibition.text",
+      "terms.acetylcholine.name",
+      "terms.acetylcholine.text",
+      "terms.gaba.name",
+      "terms.gaba.text",
+      "terms.circuit.name",
+      "terms.circuit.text",
+      "terms.connectome.name",
+      "terms.connectome.text",
+      "terms.stimulate.name",
+      "terms.stimulate.text",
+      "terms.silence.name",
+      "terms.silence.text",
+      "terms.sensory.name",
+      "terms.sensory.text",
+      "terms.motor.name",
+      "terms.motor.text",
+      "terms.reflex.name",
+      "terms.reflex.text",
+      "terms.electricalsynapse.name",
+      "terms.electricalsynapse.text",
+      "terms.bump.name",
+      "terms.bump.text",
+      "terms.landmark.name",
+      "terms.landmark.text",
+      "terms.bridge.name",
+      "terms.bridge.text",
+      "teachers.index.generalTerms"
     ]
   },
   "meta": {
@@ -913,6 +952,82 @@
     "jump": {
       "name": "Jump neurons",
       "text": "Motor neurons that make the jump muscles of the middle legs contract, so the fly springs into the air."
+    },
+    "neuron": {
+      "name": "Neuron",
+      "text": "A nerve cell. It receives signals from other cells and, when enough of them add up, sends a signal of its own."
+    },
+    "spike": {
+      "name": "Firing",
+      "text": "A brief electrical pulse that an active neuron sends along its length, also called a spike or an action potential. In the lessons, each flash of light marks one."
+    },
+    "synapse": {
+      "name": "Synapse",
+      "text": "The junction where one neuron passes its signal to the next. The more synapses two cells share, the stronger the link between them."
+    },
+    "transmitter": {
+      "name": "Neurotransmitter",
+      "text": "A chemical that a neuron releases at a synapse to pass its signal on. Some neurotransmitters excite the next cell, and others inhibit it."
+    },
+    "excitation": {
+      "name": "Excitation",
+      "text": "A signal that pushes the next neuron toward firing."
+    },
+    "inhibition": {
+      "name": "Inhibition",
+      "text": "A signal that holds the next neuron back from firing. A network needs it to stay stable and precise."
+    },
+    "acetylcholine": {
+      "name": "Acetylcholine",
+      "text": "The main excitatory neurotransmitter in a fly’s brain. In the lessons, cells that release it excite the cells they connect to."
+    },
+    "gaba": {
+      "name": "GABA",
+      "text": "An inhibitory neurotransmitter, in flies and in people. In the lessons, cells that release GABA quiet the cells they connect to."
+    },
+    "circuit": {
+      "name": "Neural circuit",
+      "text": "A group of neurons wired together to do one job, such as recognizing a smell or setting off a jump."
+    },
+    "connectome": {
+      "name": "Connectome",
+      "text": "A complete wiring diagram of a nervous system: every neuron and every synapse between them. The lessons run on the connectome of one real fruit fly."
+    },
+    "stimulate": {
+      "name": "Stimulate",
+      "text": "The lesson’s button that makes one group of cells fire for a moment, much as scientists switch chosen cells on with light."
+    },
+    "silence": {
+      "name": "Silence",
+      "text": "The lesson’s button that stops one group of cells from firing, to show what the rest of the circuit does without them."
+    },
+    "sensory": {
+      "name": "Sensory neuron",
+      "text": "A neuron that picks up something from the world, such as a smell or a looming shadow, and reports it to the brain."
+    },
+    "motor": {
+      "name": "Motor neuron",
+      "text": "A neuron that carries a command out to a muscle and makes it contract."
+    },
+    "reflex": {
+      "name": "Reflex arc",
+      "text": "The route a reflex takes: from sensory neurons, through one or more relay cells, to the motor neurons that move a muscle."
+    },
+    "electricalsynapse": {
+      "name": "Electrical synapse",
+      "text": "A direct channel between two neurons that passes a signal with almost no delay. The map behind the lessons records chemical synapses only."
+    },
+    "bump": {
+      "name": "Bump",
+      "text": "The patch of active compass neurons. Where it sits on the ring shows which way the fly is facing."
+    },
+    "landmark": {
+      "name": "Landmark",
+      "text": "Something the fly sees that stays in place, like the sun or a tree. The fly uses it to keep its sense of direction steady."
+    },
+    "bridge": {
+      "name": "Bridge",
+      "text": "A bar-shaped part of the fly’s brain, the protocerebral bridge. The compass neurons and the turn neurons both run through it."
     }
   },
   "teachers": {
@@ -930,7 +1045,8 @@
       "lesson": "Lesson {number}",
       "guide": "Teacher guide",
       "worksheet": "Student worksheet",
-      "demo": "Show it to the class"
+      "demo": "Show it to the class",
+      "generalTerms": "Basic terms"
     },
     "topics": {
       "excitation": "Excitation and inhibition",

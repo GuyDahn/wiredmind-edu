@@ -23,6 +23,7 @@ import {
 import { readModule } from "../apps/web/src/viewer/module.js";
 import { findLesson, LESSONS } from "../apps/web/src/viewer/modules.js";
 import {
+  GENERAL_TERMS,
   isTermId,
   LESSON_TERMS,
   TERM_IDS,
@@ -266,8 +267,9 @@ describe("term explanations", () => {
       assert.ok(listed && listed.length > 0, lesson.id);
       assert.equal(new Set(listed).size, listed.length, lesson.id);
     }
+    assert.equal(new Set(GENERAL_TERMS).size, GENERAL_TERMS.length);
     assert.deepEqual(
-      Object.values(LESSON_TERMS).flat().sort(),
+      [...GENERAL_TERMS, ...Object.values(LESSON_TERMS).flat()].sort(),
       [...TERM_IDS].sort(),
     );
   });

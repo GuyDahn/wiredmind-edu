@@ -659,6 +659,82 @@
     "jump": {
       "name": "Neuroni del salto",
       "text": "Motoneuroni che fanno contrarre i muscoli del salto delle zampe centrali, così il moscerino scatta in aria."
+    },
+    "neuron": {
+      "name": "Neurone",
+      "text": "Una cellula nervosa. Riceve segnali da altre cellule e, quando se ne sommano abbastanza, manda un segnale suo."
+    },
+    "spike": {
+      "name": "Attivazione",
+      "text": "Un breve impulso elettrico che un neurone attivo manda lungo tutta la sua lunghezza, detto anche potenziale d’azione. Nelle lezioni ogni lampo di luce ne segna uno."
+    },
+    "synapse": {
+      "name": "Sinapsi",
+      "text": "Il punto di contatto in cui un neurone passa il segnale al successivo. Più sinapsi hanno in comune due cellule, più forte è il loro legame."
+    },
+    "transmitter": {
+      "name": "Neurotrasmettitore",
+      "text": "Una sostanza chimica che un neurone rilascia in una sinapsi per passare il segnale. Alcuni neurotrasmettitori eccitano la cellula successiva, altri la inibiscono."
+    },
+    "excitation": {
+      "name": "Eccitazione",
+      "text": "Un segnale che spinge il neurone successivo ad attivarsi."
+    },
+    "inhibition": {
+      "name": "Inibizione",
+      "text": "Un segnale che trattiene il neurone successivo dall’attivarsi. A una rete serve per restare stabile e precisa."
+    },
+    "acetylcholine": {
+      "name": "Acetilcolina",
+      "text": "Il principale neurotrasmettitore eccitatorio nel cervello del moscerino. Nelle lezioni le cellule che la rilasciano eccitano le cellule a cui sono collegate."
+    },
+    "gaba": {
+      "name": "GABA",
+      "text": "Un neurotrasmettitore inibitorio, nei moscerini e nelle persone. Nelle lezioni le cellule che rilasciano GABA calmano le cellule a cui sono collegate."
+    },
+    "circuit": {
+      "name": "Circuito neurale",
+      "text": "Un gruppo di neuroni collegati tra loro per svolgere un compito, come riconoscere un odore o far partire un salto."
+    },
+    "connectome": {
+      "name": "Connettoma",
+      "text": "Lo schema completo dei collegamenti di un sistema nervoso: ogni neurone e ogni sinapsi tra loro. Le lezioni funzionano sul connettoma di un vero moscerino della frutta."
+    },
+    "stimulate": {
+      "name": "Stimola",
+      "text": "Il pulsante della lezione che fa attivare per un momento un gruppo di cellule, un po’ come gli scienziati accendono con la luce le cellule che scelgono."
+    },
+    "silence": {
+      "name": "Silenzia",
+      "text": "Il pulsante della lezione che impedisce a un gruppo di cellule di attivarsi, per mostrare che cosa fa il resto del circuito senza di loro."
+    },
+    "sensory": {
+      "name": "Neurone sensoriale",
+      "text": "Un neurone che coglie qualcosa del mondo, come un odore o un’ombra che si avvicina, e lo riferisce al cervello."
+    },
+    "motor": {
+      "name": "Motoneurone",
+      "text": "Un neurone che porta un comando a un muscolo e lo fa contrarre."
+    },
+    "reflex": {
+      "name": "Arco riflesso",
+      "text": "Il percorso di un riflesso: dai neuroni sensoriali, attraverso una o più cellule intermedie, fino ai motoneuroni che muovono un muscolo."
+    },
+    "electricalsynapse": {
+      "name": "Sinapsi elettrica",
+      "text": "Un canale diretto tra due neuroni che passa il segnale quasi senza ritardo. La mappa su cui si basano le lezioni registra solo le sinapsi chimiche."
+    },
+    "bump": {
+      "name": "Picco",
+      "text": "La zona di neuroni bussola attivi. Il punto dell’anello in cui si trova indica da che parte è rivolto il moscerino."
+    },
+    "landmark": {
+      "name": "Punto di riferimento",
+      "text": "Qualcosa che il moscerino vede e che resta fermo, come il sole o un albero. Il moscerino lo usa per tenere stabile il suo senso dell’orientamento."
+    },
+    "bridge": {
+      "name": "Ponte",
+      "text": "Una parte del cervello del moscerino a forma di barra, il ponte protocerebrale. Ci passano sia i neuroni bussola sia i neuroni di svolta."
     }
   },
   "teachers": {
@@ -676,7 +752,8 @@
       "lesson": "Lezione {number}",
       "guide": "Guida per l’insegnante",
       "worksheet": "Scheda per gli studenti",
-      "demo": "Mostrala alla classe"
+      "demo": "Mostrala alla classe",
+      "generalTerms": "Termini di base"
     },
     "topics": {
       "excitation": "Eccitazione e inibizione",

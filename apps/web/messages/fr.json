@@ -659,6 +659,82 @@
     "jump": {
       "name": "Neurones du saut",
       "text": "Des motoneurones qui font se contracter les muscles du saut des pattes du milieu : la mouche bondit dans les airs."
+    },
+    "neuron": {
+      "name": "Neurone",
+      "text": "Une cellule nerveuse. Elle reçoit des signaux d’autres cellules et, quand ils sont assez nombreux à s’additionner, elle envoie son propre signal."
+    },
+    "spike": {
+      "name": "Activation",
+      "text": "Une brève impulsion électrique qu’un neurone actif envoie sur toute sa longueur, aussi appelée potentiel d’action. Dans les leçons, chaque éclair de lumière en marque une."
+    },
+    "synapse": {
+      "name": "Synapse",
+      "text": "La jonction où un neurone passe son signal au suivant. Plus deux cellules partagent de synapses, plus le lien entre elles est fort."
+    },
+    "transmitter": {
+      "name": "Neurotransmetteur",
+      "text": "Une substance chimique qu’un neurone libère au niveau d’une synapse pour transmettre son signal. Certains neurotransmetteurs excitent la cellule suivante, d’autres l’inhibent."
+    },
+    "excitation": {
+      "name": "Excitation",
+      "text": "Un signal qui pousse le neurone suivant à s’activer."
+    },
+    "inhibition": {
+      "name": "Inhibition",
+      "text": "Un signal qui retient le neurone suivant de s’activer. Un réseau en a besoin pour rester stable et précis."
+    },
+    "acetylcholine": {
+      "name": "Acétylcholine",
+      "text": "Le principal neurotransmetteur excitateur du cerveau de la mouche. Dans les leçons, les cellules qui en libèrent excitent les cellules auxquelles elles sont connectées."
+    },
+    "gaba": {
+      "name": "GABA",
+      "text": "Un neurotransmetteur inhibiteur, chez la mouche comme chez l’humain. Dans les leçons, les cellules qui libèrent du GABA calment les cellules auxquelles elles sont connectées."
+    },
+    "circuit": {
+      "name": "Circuit neuronal",
+      "text": "Un groupe de neurones reliés entre eux pour accomplir une tâche, comme reconnaître une odeur ou déclencher un saut."
+    },
+    "connectome": {
+      "name": "Connectome",
+      "text": "Le schéma de câblage complet d’un système nerveux : chaque neurone et chaque synapse entre eux. Les leçons reposent sur le connectome d’une vraie drosophile."
+    },
+    "stimulate": {
+      "name": "Stimuler",
+      "text": "Le bouton de la leçon qui fait s’activer un groupe de cellules un instant, un peu comme les scientifiques allument avec de la lumière des cellules choisies."
+    },
+    "silence": {
+      "name": "Faire taire",
+      "text": "Le bouton de la leçon qui empêche un groupe de cellules de s’activer, pour montrer ce que fait le reste du circuit sans elles."
+    },
+    "sensory": {
+      "name": "Neurone sensoriel",
+      "text": "Un neurone qui capte quelque chose du monde, comme une odeur ou une ombre qui grandit, et le signale au cerveau."
+    },
+    "motor": {
+      "name": "Motoneurone",
+      "text": "Un neurone qui porte un ordre jusqu’à un muscle et le fait se contracter."
+    },
+    "reflex": {
+      "name": "Arc réflexe",
+      "text": "Le trajet d’un réflexe : des neurones sensoriels, en passant par une ou plusieurs cellules relais, jusqu’aux motoneurones qui font bouger un muscle."
+    },
+    "electricalsynapse": {
+      "name": "Synapse électrique",
+      "text": "Un canal direct entre deux neurones, qui transmet un signal presque sans délai. La carte utilisée par les leçons n’enregistre que les synapses chimiques."
+    },
+    "bump": {
+      "name": "Bosse",
+      "text": "La zone de neurones de la boussole qui sont actifs. Sa position sur l’anneau indique la direction vers laquelle la mouche est tournée."
+    },
+    "landmark": {
+      "name": "Repère",
+      "text": "Quelque chose que la mouche voit et qui ne bouge pas, comme le soleil ou un arbre. Il l’aide à garder un sens de l’orientation stable."
+    },
+    "bridge": {
+      "name": "Pont",
+      "text": "Une partie du cerveau de la mouche en forme de barre, le pont protocérébral. Les neurones de la boussole et les neurones de rotation le traversent."
     }
   },
   "teachers": {
@@ -676,7 +752,8 @@
       "lesson": "Leçon {number}",
       "guide": "Guide de l’enseignant",
       "worksheet": "Fiche élève",
-      "demo": "Montrer à la classe"
+      "demo": "Montrer à la classe",
+      "generalTerms": "Notions de base"
     },
     "topics": {
       "excitation": "Excitation et inhibition",

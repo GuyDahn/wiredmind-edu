@@ -659,6 +659,82 @@
     "jump": {
       "name": "Sıçrama nöronları",
       "text": "Orta bacakların sıçrama kaslarını kastıran motor nöronlar. Böylece sinek havaya fırlar."
+    },
+    "neuron": {
+      "name": "Nöron",
+      "text": "Bir sinir hücresi. Başka hücrelerden sinyal alır ve bu sinyaller yeterince birikince kendi sinyalini gönderir."
+    },
+    "spike": {
+      "name": "Ateşleme",
+      "text": "Etkin bir nöronun kendi boyunca gönderdiği kısa elektrik darbesi. Buna aksiyon potansiyeli de denir. Derslerde her ışık parlaması bir ateşlemeyi gösterir."
+    },
+    "synapse": {
+      "name": "Sinaps",
+      "text": "Bir nöronun sinyalini bir sonrakine aktardığı bağlantı noktası. İki hücre arasında ne kadar çok sinaps varsa aralarındaki bağ o kadar güçlüdür."
+    },
+    "transmitter": {
+      "name": "Nörotransmitter",
+      "text": "Bir nöronun sinyalini iletmek için sinapsta saldığı kimyasal madde. Bazı nörotransmitterler sonraki hücreyi uyarır, bazıları ise baskılar."
+    },
+    "excitation": {
+      "name": "Uyarma",
+      "text": "Sonraki nöronu ateşlenmeye doğru iten sinyal."
+    },
+    "inhibition": {
+      "name": "Baskılama",
+      "text": "Sonraki nöronun ateşlenmesini engelleyen sinyal. Bir ağ, dengeli ve hassas kalmak için buna ihtiyaç duyar."
+    },
+    "acetylcholine": {
+      "name": "Asetilkolin",
+      "text": "Sineğin beynindeki başlıca uyarıcı nörotransmitter. Derslerde onu salan hücreler, bağlandıkları hücreleri uyarır."
+    },
+    "gaba": {
+      "name": "GABA",
+      "text": "Hem sineklerde hem insanlarda bulunan baskılayıcı bir nörotransmitter. Derslerde GABA salan hücreler, bağlandıkları hücreleri yatıştırır."
+    },
+    "circuit": {
+      "name": "Sinir devresi",
+      "text": "Bir kokuyu tanımak ya da bir sıçramayı başlatmak gibi tek bir işi yapmak için birbirine bağlanmış nöron grubu."
+    },
+    "connectome": {
+      "name": "Konektom",
+      "text": "Bir sinir sisteminin eksiksiz bağlantı şeması: her nöron ve aralarındaki her sinaps. Dersler, gerçek bir meyve sineğinin konektomu üzerinde çalışır."
+    },
+    "stimulate": {
+      "name": "Uyar",
+      "text": "Dersteki bu düğme, bir hücre grubunu kısa bir an için ateşler. Bilim insanları da seçtikleri hücreleri ışıkla buna benzer biçimde açar."
+    },
+    "silence": {
+      "name": "Sustur",
+      "text": "Dersteki bu düğme, bir hücre grubunun ateşlenmesini durdurur. Böylece devrenin geri kalanının onlar olmadan ne yaptığını görürsün."
+    },
+    "sensory": {
+      "name": "Duyu nöronu",
+      "text": "Dış dünyadan bir şeyi, örneğin bir kokuyu ya da yaklaşan bir gölgeyi algılayıp beyne bildiren nöron."
+    },
+    "motor": {
+      "name": "Motor nöron",
+      "text": "Bir komutu kasa taşıyan ve kasın kasılmasını sağlayan nöron."
+    },
+    "reflex": {
+      "name": "Refleks yayı",
+      "text": "Bir refleksin izlediği yol: duyu nöronlarından başlar, bir ya da daha fazla ara hücreden geçer ve kası hareket ettiren motor nöronlara ulaşır."
+    },
+    "electricalsynapse": {
+      "name": "Elektriksel sinaps",
+      "text": "İki nöron arasında, sinyali neredeyse hiç gecikmeden ileten doğrudan bir kanal. Derslerin dayandığı harita yalnızca kimyasal sinapsları kaydeder."
+    },
+    "bump": {
+      "name": "Tümsek",
+      "text": "Etkin pusula nöronlarının oluşturduğu bölge. Halka üzerinde durduğu yer, sineğin hangi yöne baktığını gösterir."
+    },
+    "landmark": {
+      "name": "Yer işareti",
+      "text": "Sineğin gördüğü ve yerinde duran bir şey; örneğin güneş ya da bir ağaç. Sinek, yön duygusunu sabit tutmak için onu kullanır."
+    },
+    "bridge": {
+      "name": "Köprü",
+      "text": "Sineğin beyninde çubuk biçimli bir bölüm: protoserebral köprü. Hem pusula nöronları hem dönüş nöronları buradan geçer."
     }
   },
   "teachers": {
@@ -676,7 +752,8 @@
       "lesson": "Ders {number}",
       "guide": "Öğretmen kılavuzu",
       "worksheet": "Öğrenci çalışma kâğıdı",
-      "demo": "Sınıfa gösterin"
+      "demo": "Sınıfa gösterin",
+      "generalTerms": "Temel terimler"
     },
     "topics": {
       "excitation": "Uyarma ve baskılama",

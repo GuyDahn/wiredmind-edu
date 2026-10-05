@@ -659,6 +659,82 @@
     "jump": {
       "name": "Neuronas del salto",
       "text": "Neuronas motoras que hacen contraerse los músculos de salto de las patas del medio, de modo que la mosca sale disparada hacia arriba."
+    },
+    "neuron": {
+      "name": "Neurona",
+      "text": "Una célula nerviosa. Recibe señales de otras células y, cuando se suman suficientes, envía su propia señal."
+    },
+    "spike": {
+      "name": "Disparo",
+      "text": "Un breve impulso eléctrico que una neurona activa envía a lo largo de sí misma, también llamado potencial de acción. En las lecciones, cada destello de luz marca uno."
+    },
+    "synapse": {
+      "name": "Sinapsis",
+      "text": "La unión donde una neurona pasa su señal a la siguiente. Cuantas más sinapsis comparten dos células, más fuerte es el vínculo entre ellas."
+    },
+    "transmitter": {
+      "name": "Neurotransmisor",
+      "text": "Una sustancia química que una neurona libera en una sinapsis para pasar su señal. Algunos neurotransmisores excitan a la célula siguiente y otros la inhiben."
+    },
+    "excitation": {
+      "name": "Excitación",
+      "text": "Una señal que empuja a la neurona siguiente a disparar."
+    },
+    "inhibition": {
+      "name": "Inhibición",
+      "text": "Una señal que frena a la neurona siguiente para que no dispare. Una red la necesita para mantenerse estable y precisa."
+    },
+    "acetylcholine": {
+      "name": "Acetilcolina",
+      "text": "El principal neurotransmisor excitador del cerebro de la mosca. En las lecciones, las células que la liberan excitan a las células con las que se conectan."
+    },
+    "gaba": {
+      "name": "GABA",
+      "text": "Un neurotransmisor inhibidor, en las moscas y en las personas. En las lecciones, las células que liberan GABA calman a las células con las que se conectan."
+    },
+    "circuit": {
+      "name": "Circuito neuronal",
+      "text": "Un grupo de neuronas conectadas entre sí para hacer un trabajo, como reconocer un olor o desencadenar un salto."
+    },
+    "connectome": {
+      "name": "Conectoma",
+      "text": "El mapa completo de conexiones de un sistema nervioso: todas las neuronas y todas las sinapsis entre ellas. Las lecciones usan el conectoma de una mosca de la fruta real."
+    },
+    "stimulate": {
+      "name": "Estimular",
+      "text": "El botón de la lección que hace disparar a un grupo de células por un momento, igual que los científicos encienden con luz las células que eligen."
+    },
+    "silence": {
+      "name": "Silenciar",
+      "text": "El botón de la lección que impide disparar a un grupo de células, para mostrar qué hace sin ellas el resto del circuito."
+    },
+    "sensory": {
+      "name": "Neurona sensorial",
+      "text": "Una neurona que capta algo del mundo, como un olor o una sombra que se acerca, y se lo comunica al cerebro."
+    },
+    "motor": {
+      "name": "Neurona motora",
+      "text": "Una neurona que lleva una orden hasta un músculo y lo hace contraerse."
+    },
+    "reflex": {
+      "name": "Arco reflejo",
+      "text": "El camino que sigue un reflejo: de las neuronas sensoriales, pasando por una o más células de relevo, a las neuronas motoras que mueven un músculo."
+    },
+    "electricalsynapse": {
+      "name": "Sinapsis eléctrica",
+      "text": "Un canal directo entre dos neuronas que pasa la señal casi sin retraso. El mapa en el que se basan las lecciones solo registra sinapsis químicas."
+    },
+    "bump": {
+      "name": "Pico",
+      "text": "La zona de neuronas de la brújula que están activas. Su posición en el anillo muestra hacia dónde mira la mosca."
+    },
+    "landmark": {
+      "name": "Punto de referencia",
+      "text": "Algo que la mosca ve y que no se mueve, como el sol o un árbol. La mosca lo usa para mantener estable su sentido de la orientación."
+    },
+    "bridge": {
+      "name": "Puente",
+      "text": "Una parte del cerebro de la mosca con forma de barra, el puente protocerebral. Por él pasan las neuronas de la brújula y las neuronas de giro."
     }
   },
   "teachers": {
@@ -676,7 +752,8 @@
       "lesson": "Lección {number}",
       "guide": "Guía docente",
       "worksheet": "Hoja de trabajo del estudiante",
-      "demo": "Mostrarla a la clase"
+      "demo": "Mostrarla a la clase",
+      "generalTerms": "Términos básicos"
     },
     "topics": {
       "excitation": "Excitación e inhibición",

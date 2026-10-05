@@ -17,7 +17,7 @@ import {
   worksheetPath,
 } from "@/src/site/teachers";
 import { LESSONS } from "@/src/viewer/modules";
-import { LESSON_TERMS } from "@/src/viewer/terms";
+import { GENERAL_TERMS, LESSON_TERMS } from "@/src/viewer/terms";
 
 export async function generateMetadata({
   params,
@@ -103,6 +103,21 @@ export default async function TeachersPage({
           >
             {t("teachers.guide.termsTitle")}
           </h2>
+          <div className="mt-6">
+            <h3 className="text-base font-semibold text-fg-subtle">
+              {t("teachers.index.generalTerms")}
+            </h3>
+            <dl className="mt-2 flex flex-col gap-3 text-base leading-relaxed text-fg-muted">
+              {GENERAL_TERMS.map((id) => (
+                <div key={id} data-term-entry={id}>
+                  <dt className="font-semibold text-fg">
+                    {t(`terms.${id}.name`)}
+                  </dt>
+                  <dd>{t(`terms.${id}.text`)}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
           {LESSONS.map((entry) => (
             <div key={entry.id} className="mt-6">
               <h3 className="text-base font-semibold text-fg-subtle">

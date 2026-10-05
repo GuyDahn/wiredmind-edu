@@ -659,6 +659,82 @@
     "jump": {
       "name": "Neurony skoku",
       "text": "Neurony ruchowe, które kurczą mięśnie skokowe środkowych nóg, dzięki czemu muszka wyskakuje w powietrze."
+    },
+    "neuron": {
+      "name": "Neuron",
+      "text": "Komórka nerwowa. Odbiera sygnały od innych komórek, a gdy zbierze się ich dość dużo, wysyła własny sygnał."
+    },
+    "spike": {
+      "name": "Impuls",
+      "text": "Krótki sygnał elektryczny, który aktywny neuron wysyła wzdłuż swojej długości, nazywany też iglicą lub potencjałem czynnościowym. W lekcjach każdy błysk światła oznacza jeden impuls."
+    },
+    "synapse": {
+      "name": "Synapsa",
+      "text": "Miejsce styku, w którym jeden neuron przekazuje sygnał następnemu. Im więcej synaps łączy dwie komórki, tym silniejsze jest połączenie między nimi."
+    },
+    "transmitter": {
+      "name": "Neuroprzekaźnik",
+      "text": "Substancja chemiczna, którą neuron uwalnia w synapsie, żeby przekazać sygnał dalej. Jedne neuroprzekaźniki pobudzają następną komórkę, inne ją hamują."
+    },
+    "excitation": {
+      "name": "Pobudzanie",
+      "text": "Sygnał, który popycha następny neuron do wysłania impulsu."
+    },
+    "inhibition": {
+      "name": "Hamowanie",
+      "text": "Sygnał, który powstrzymuje następny neuron przed wysłaniem impulsu. Sieć potrzebuje go, żeby działać stabilnie i precyzyjnie."
+    },
+    "acetylcholine": {
+      "name": "Acetylocholina",
+      "text": "Główny neuroprzekaźnik pobudzający w mózgu muszki. W lekcjach komórki, które ją uwalniają, pobudzają komórki, z którymi się łączą."
+    },
+    "gaba": {
+      "name": "GABA",
+      "text": "Neuroprzekaźnik hamujący, u muszek i u ludzi. W lekcjach komórki, które uwalniają GABA, uciszają komórki, z którymi się łączą."
+    },
+    "circuit": {
+      "name": "Obwód nerwowy",
+      "text": "Grupa neuronów połączonych tak, żeby wykonywać jedno zadanie, na przykład rozpoznać zapach albo uruchomić skok."
+    },
+    "connectome": {
+      "name": "Konektom",
+      "text": "Pełny schemat połączeń układu nerwowego: każdy neuron i każda synapsa między nimi. Lekcje działają na konektomie jednej prawdziwej muszki owocowej."
+    },
+    "stimulate": {
+      "name": "Pobudź",
+      "text": "Przycisk w lekcji, który sprawia, że jedna grupa komórek przez chwilę wysyła impulsy. Podobnie naukowcy włączają wybrane komórki światłem."
+    },
+    "silence": {
+      "name": "Wycisz",
+      "text": "Przycisk w lekcji, który nie pozwala jednej grupie komórek wysyłać impulsów. Widać wtedy, co bez nich robi reszta obwodu."
+    },
+    "sensory": {
+      "name": "Neuron czuciowy",
+      "text": "Neuron, który wychwytuje coś ze świata, na przykład zapach albo zbliżający się cień, i zgłasza to mózgowi."
+    },
+    "motor": {
+      "name": "Neuron ruchowy",
+      "text": "Neuron, który niesie polecenie do mięśnia i sprawia, że mięsień się kurczy."
+    },
+    "reflex": {
+      "name": "Łuk odruchowy",
+      "text": "Droga, którą biegnie odruch: od neuronów czuciowych, przez jedną lub więcej komórek pośredniczących, do neuronów ruchowych, które poruszają mięśniem."
+    },
+    "electricalsynapse": {
+      "name": "Synapsa elektryczna",
+      "text": "Bezpośredni kanał między dwoma neuronami, który przekazuje sygnał prawie bez opóźnienia. Mapa, na której opierają się lekcje, zawiera tylko synapsy chemiczne."
+    },
+    "bump": {
+      "name": "Górka",
+      "text": "Plama aktywnych neuronów kompasu. Jej miejsce na pierścieniu pokazuje, w którą stronę zwrócona jest muszka."
+    },
+    "landmark": {
+      "name": "Punkt orientacyjny",
+      "text": "Coś, co muszka widzi i co stoi w miejscu, na przykład słońce albo drzewo. Dzięki niemu muszka nie gubi poczucia kierunku."
+    },
+    "bridge": {
+      "name": "Mostek",
+      "text": "Część mózgu muszki w kształcie pręta, czyli mostek protocerebralny. Biegną przez nią i neurony kompasu, i neurony skrętu."
     }
   },
   "teachers": {
@@ -676,7 +752,8 @@
       "lesson": "Lekcja {number}",
       "guide": "Przewodnik dla nauczyciela",
       "worksheet": "Karta pracy ucznia",
-      "demo": "Pokaz dla klasy"
+      "demo": "Pokaz dla klasy",
+      "generalTerms": "Podstawowe pojęcia"
     },
     "topics": {
       "excitation": "Pobudzanie i hamowanie",
