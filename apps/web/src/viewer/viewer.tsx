@@ -4,12 +4,13 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
-import { useEffect, useState, type ReactNode } from "react";
+import { useCallback, useEffect, useState, type ReactNode } from "react";
 import { ENDONYMS, localePath } from "../i18n/locales.js";
 import { LanguageMenu } from "../site/language-menu.js";
 import { SITE_NAME } from "../site/site.js";
 import { readClassMode, withClassMode } from "./class-mode.js";
 import { CompassDial } from "./compass-dial.js";
+import { isDemo } from "./demo.js";
 import { Legend } from "./legend.js";
 import { groupColor } from "./module.js";
 import { findLesson, LESSONS, type LessonEntry } from "./modules.js";
@@ -27,7 +28,8 @@ import { useViewerStore } from "./store.js";
 
 const Scene = dynamic(() => import("./scene.js"), { ssr: false });
 
-type Shared = { entry: LessonEntry; replay: Replay };
+/** A run from a ?r= link: someone's own, or the lesson's "Show me" walkthrough. */
+type Shared = { entry: LessonEntry; replay: Replay; demo: boolean };
 
 export function Viewer({
   lessonId,
@@ -72,7 +74,7 @@ export function Viewer({
         router.replace(`${localePath(locale, target.path)}${search}`);
         return;
       }
-      setShared({ entry: target, replay });
+      setShared({ entry: target, replay, demo: isDemo(replay, target) });
       return;
     } catch (error) {
       code = error instanceof ReplayError ? error.code : "generic";
@@ -84,10 +86,16 @@ export function Viewer({
     setNotice(t("notice", { problem: t(`errors.${code}`) }));
   }, [entry.id, locale, router, t]);
 
-  function exitReplay() {
+  /** Takes the played link out of the address, so a reload opens the lesson itself. */
+  const dropReplayParam = useCallback(() => {
     const url = new URL(window.location.href);
+    if (!url.searchParams.has(REPLAY_PARAM)) return;
     url.searchParams.delete(REPLAY_PARAM);
     window.history.replaceState(null, "", `${url.pathname}${url.search}`);
+  }, []);
+
+  function exitReplay() {
+    dropReplayParam();
     setShared(null);
   }
 
@@ -96,7 +104,7 @@ export function Viewer({
       data-mode={classMode ? "class" : undefined}
       className="flex h-dvh flex-col overflow-hidden bg-canvas text-fg md:flex-row"
     >
-      {shared ? (
+      {shared && !shared.demo ? (
         <ReplayRunner
           key={`${shared.entry.id}-replay`}
           entry={shared.entry}
@@ -105,14 +113,22 @@ export function Viewer({
           credit={credit}
         />
       ) : (
+        // A walkthrough link gets its own runner, which starts on the
+        // walkthrough and stays mounted when it hands the lesson over.
         <ModuleRunner
-          key={entry.id}
+          key={shared ? `${entry.id}-demo` : entry.id}
           entry={entry}
           notice={notice}
           credit={credit}
+          autoDemo={shared !== null}
+          onDemoEnd={dropReplayParam}
         />
       )}
-      <Stage entry={entry} menu={menu} replaying={shared !== null} />
+      <Stage
+        entry={entry}
+        menu={menu}
+        replaying={shared !== null && !shared.demo}
+      />
     </div>
   );
 }
@@ -223,7 +239,7 @@ function IntroButton() {
       className={`${STAGE_BUTTON} ${open ? STAGE_BUTTON_ON : STAGE_BUTTON_OFF}`}
     >
       <span aria-hidden="true" className="text-lg leading-none">
-        ?
+        {"?"}
       </span>
     </button>
   );

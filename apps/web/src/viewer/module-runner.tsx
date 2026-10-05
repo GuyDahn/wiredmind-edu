@@ -5,6 +5,7 @@ import { useFormatter, useLocale, useTranslations } from "next-intl";
 import {
   useCallback,
   useEffect,
+  useMemo,
   useRef,
   useState,
   type ReactNode,
@@ -15,6 +16,7 @@ import { TranslateNotice } from "../site/translate-notice.js";
 import { modeHref } from "./class-mode.js";
 import { enqueue } from "./commands.js";
 import { TERM_ANCHOR, useCircuitCopy, useLessonCopy } from "./copy.js";
+import { DEMO_PACE, DEMO_RESULT_MS, demoRun } from "./demo.js";
 import {
   controlState,
   focusFor,
@@ -28,6 +30,7 @@ import { INTRO_SCREENS } from "./intro-screens.js";
 import { LESSONS, type LessonEntry } from "./modules.js";
 import { groupColor } from "./module.js";
 import { Controls, FOCUS_RING, press } from "./panel.js";
+import { startPlayback, stopPlayback } from "./recorder.js";
 import { Sheet, type SheetState } from "./sheet.js";
 import { useViewerStore } from "./store.js";
 import { Toolbar } from "./toolbar.js";
@@ -44,15 +47,22 @@ export function ModuleRunner({
   entry,
   notice,
   credit,
+  autoDemo = false,
+  onDemoEnd,
 }: {
   entry: LessonEntry;
   /** A message to show above the lesson, e.g. why a replay link failed. */
   notice?: string | null;
   /** Site credit at the very end of the panel. */
   credit?: ReactNode;
+  /** Opened from a "Show me" link: play the walkthrough instead of the intro. */
+  autoDemo?: boolean;
+  /** The walkthrough stopped or ran out, and the lesson is the reader's again. */
+  onDemoEnd?: () => void;
 }) {
   const { module, lesson } = entry;
   const t = useTranslations("viewer.lesson");
+  const d = useTranslations("viewer.demo");
   const copy = useLessonCopy(lesson);
   const [phase, setPhase] = useState<LessonPhase>({
     kind: "step",
@@ -67,11 +77,23 @@ export function ModuleRunner({
   const [introScreen, setIntroScreen] = useState(0);
   const stimulating = useViewerStore((state) => state.stimulating);
   const live = useViewerStore((state) => state.circuit === module.id);
+  const ready = useViewerStore((state) => state.status === "ready");
   const puffing = Object.values(stimulating).some(Boolean);
+  // The walkthrough: the lesson's ideal run, pressed for the reader.
+  const [demo, setDemo] = useState(false);
+  const demoStarted = useRef(false);
+  const run = useMemo(() => demoRun(entry), [entry]);
+  const applied = useViewerStore((state) => state.playback?.applied ?? 0);
 
   const step = phase.kind === "step" ? lesson.steps[phase.index] : undefined;
-  const revealed =
-    phase.kind === "step" && phase.done && !puffPending && !puffing;
+  // In a walkthrough the puff after a silence is one of its own presses.
+  const demoPuffPending =
+    demo &&
+    phase.kind === "step" &&
+    phase.done &&
+    applied < (run.end[phase.index] ?? 0);
+  const pending = demo ? demoPuffPending : puffPending;
+  const revealed = phase.kind === "step" && phase.done && !pending && !puffing;
   const watching = phase.kind === "step" && phase.done && !revealed;
 
   const clearPuff = useCallback(() => {
@@ -88,34 +110,105 @@ export function ModuleRunner({
     setSheet("peek");
   }, [clearPuff, module.seed]);
 
+  const stopDemo = useCallback(() => {
+    stopPlayback();
+    useViewerStore.getState().setPlayback(null);
+    setDemo(false);
+    onDemoEnd?.();
+  }, [onDemoEnd]);
+
+  const startDemo = useCallback(() => {
+    clearPuff();
+    const store = useViewerStore.getState();
+    store.setIntro(false);
+    store.resetControls();
+    enqueue({ type: "reset", seed: module.seed });
+    startPlayback(run.replay, DEMO_PACE);
+    store.setPlayback({
+      applied: 0,
+      total: run.replay.actions.length,
+      done: false,
+    });
+    setPhase({ kind: "step", index: 0, done: false });
+    setSheet("peek");
+    setDemo(true);
+  }, [clearPuff, module.seed, run]);
+
   // The circuit is cached across pages, so start from a clean brain once
-  // this lesson's own circuit is running.
+  // this lesson's own circuit is running. A "Show me" link starts on the
+  // walkthrough, once.
   useEffect(() => {
-    if (live) startOver();
-  }, [live, startOver]);
+    if (!live) return;
+    if (!autoDemo) startOver();
+    else if (!demoStarted.current) {
+      demoStarted.current = true;
+      startDemo();
+    }
+  }, [live, autoDemo, startOver, startDemo]);
 
   useEffect(
     () => () => {
       clearPuff();
+      stopPlayback();
+      useViewerStore.getState().setPlayback(null);
       useViewerStore.getState().setFocus([]);
     },
     [clearPuff],
   );
 
+  // Each press of the walkthrough meets its step's goal, as a tap would.
+  useEffect(() => {
+    if (!demo || applied === 0) return;
+    const index = run.stepOf[applied - 1];
+    if (index === undefined) return;
+    setPhase((current) =>
+      current.kind === "step" &&
+      (current.index < index || (current.index === index && !current.done))
+        ? { kind: "step", index, done: true }
+        : current,
+    );
+  }, [demo, applied, run]);
+
+  // It leaves each result up long enough to read, then moves on. It ends at
+  // the question, which is the class's to answer.
+  useEffect(() => {
+    if (!demo || !revealed) return;
+    const timer = setTimeout(() => {
+      setPhase((current) => {
+        if (current.kind !== "step") return current;
+        const index = current.index + 1;
+        return index < lesson.steps.length
+          ? { kind: "step", index, done: false }
+          : { kind: "check", picked: null };
+      });
+    }, DEMO_RESULT_MS);
+    return () => clearTimeout(timer);
+  }, [demo, revealed, lesson.steps.length]);
+
+  useEffect(() => {
+    if (demo && phase.kind !== "step") stopDemo();
+  }, [demo, phase.kind, stopDemo]);
+
   useEffect(() => {
     useViewerStore.getState().setFocus(focusFor(lesson, phase));
   }, [lesson, phase]);
 
-  // Every lesson opens on the intro. Nothing remembers that it was seen:
-  // no cookie, no storage. Skip is one tap.
+  // Every lesson opens on the intro, unless a "Show me" link asked for the
+  // walkthrough. Nothing remembers that it was seen: no cookie, no storage.
+  // Skip is one tap.
   useEffect(() => {
-    useViewerStore.getState().setIntro(true);
+    useViewerStore.getState().setIntro(!autoDemo);
     return () => useViewerStore.getState().setIntro(false);
-  }, []);
+  }, [autoDemo]);
 
   const closeIntro = useCallback(() => {
     useViewerStore.getState().setIntro(false);
   }, []);
+
+  // Asking how to read the brain mid-walkthrough stops the walkthrough.
+  useEffect(() => {
+    if (intro && demo) stopDemo();
+  }, [intro, demo, stopDemo]);
 
   useEffect(() => {
     if (!intro) return;
@@ -144,12 +237,8 @@ export function ModuleRunner({
   const gate: ControlGate = (kind, colorGroup) =>
     controlState(lesson, phase, kind, colorGroup);
 
-  function onAction(action: ControlAction) {
-    if (phase.kind !== "step" || phase.done || !step) return;
-    if (!meetsGoal(step.goal, action)) return;
-    setPhase({ ...phase, done: true });
-    const puff = step.puff;
-    if (!puff) return;
+  /** Sends the puff a silence step shows its effect with, after a beat. */
+  function sendPuff(puff: string) {
     setPuffPending(true);
     puffTimer.current = setTimeout(() => {
       puffTimer.current = null;
@@ -157,6 +246,21 @@ export function ModuleRunner({
       enqueue({ type: "stimulate", colorGroup: puff });
       setPuffPending(false);
     }, PUFF_DELAY_MS);
+  }
+
+  function onAction(action: ControlAction) {
+    if (demo || phase.kind !== "step" || phase.done || !step) return;
+    if (!meetsGoal(step.goal, action)) return;
+    setPhase({ ...phase, done: true });
+    if (step.puff) sendPuff(step.puff);
+  }
+
+  /** Stops the walkthrough where it is. The brain and the step stay as they are. */
+  function takeOver() {
+    const owed = demoPuffPending ? step?.puff : null;
+    stopDemo();
+    // Stopped between a silence and its puff: the lesson still owes the puff.
+    if (owed) sendPuff(owed);
   }
 
   function next() {
@@ -195,6 +299,16 @@ export function ModuleRunner({
             }
             onClose={closeIntro}
           />
+        ) : demo ? (
+          <DemoBar
+            module={module}
+            goal={
+              phase.kind === "step" && step && !phase.done ? step.goal : null
+            }
+            watching={watching}
+            pending={pending}
+            onStop={takeOver}
+          />
         ) : (
           <Footer
             entry={entry}
@@ -202,7 +316,7 @@ export function ModuleRunner({
             goal={
               phase.kind === "step" && step && !phase.done ? step.goal : null
             }
-            puffPending={puffPending}
+            puffPending={pending}
             watching={watching}
             revealed={revealed}
             solved={solved}
@@ -234,6 +348,14 @@ export function ModuleRunner({
         hidden={intro}
         className="flex flex-col gap-4 rounded-2xl bg-overlay-strong p-4 [&[hidden]]:hidden"
       >
+        {demo ? (
+          <p
+            data-demo="playing"
+            className="self-start rounded-full bg-accent px-3 py-1 text-xs font-semibold text-accent-fg classroom:text-lg"
+          >
+            {d("playing")}
+          </p>
+        ) : null}
         <Progress lesson={lesson} phase={phase} />
         {phase.kind === "step" && step ? (
           <>
@@ -251,7 +373,7 @@ export function ModuleRunner({
                 </p>
               ) : phase.done ? (
                 <p className={HINT}>{t("watching")}</p>
-              ) : (
+              ) : demo ? null : (
                 <p className={HINT}>{t("tapCue")}</p>
               )}
             </div>
@@ -276,7 +398,28 @@ export function ModuleRunner({
             </p>
           </>
         ) : null}
-        {phase.kind === "step" && phase.index === 0 && !phase.done ? null : (
+        {!demo &&
+        ((phase.kind === "step" && phase.index === 0 && !phase.done) ||
+          phase.kind === "free") ? (
+          <button
+            type="button"
+            data-demo-start=""
+            disabled={!live || !ready}
+            onClick={startDemo}
+            className={`flex min-h-12 items-center justify-center gap-2 rounded-xl border border-border-strong px-4 text-base font-semibold text-fg hover:bg-overlay disabled:opacity-50 classroom:min-h-16 classroom:text-2xl ${FOCUS_RING}`}
+          >
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 16 16"
+              className="size-4 shrink-0 fill-current rtl:-scale-x-100"
+            >
+              <path d="M4 2.5v11l9-5.5z" />
+            </svg>
+            {d("start")}
+          </button>
+        ) : null}
+        {demo ||
+        (phase.kind === "step" && phase.index === 0 && !phase.done) ? null : (
           <button
             type="button"
             onClick={startOver}
@@ -287,7 +430,12 @@ export function ModuleRunner({
         )}
       </section>
       {intro || (classMode && phase.kind !== "free") ? null : (
-        <Controls module={module} gate={gate} onAction={onAction} />
+        <Controls
+          module={module}
+          gate={gate}
+          onAction={onAction}
+          readOnly={demo}
+        />
       )}
       {classMode ? null : <PanelCredit>{credit}</PanelCredit>}
     </Sheet>
@@ -319,6 +467,56 @@ export function PanelCredit({ children }: { children?: ReactNode }) {
       data-tap-target="text"
     >
       {children}
+    </div>
+  );
+}
+
+/** While the walkthrough plays: what it is about to press, and the way out. */
+function DemoBar({
+  module,
+  goal,
+  watching,
+  pending,
+  onStop,
+}: {
+  module: ModuleSpec;
+  goal: LessonGoal | null;
+  watching: boolean;
+  pending: boolean;
+  onStop: () => void;
+}) {
+  const t = useTranslations("viewer.lesson");
+  const d = useTranslations("viewer.demo");
+  const circuit = useCircuitCopy(module);
+  const action = !goal
+    ? null
+    : goal.type === "stimulate"
+      ? t("cueStimulate")
+      : goal.on
+        ? t("cueSilence")
+        : t("cueSwitchOn");
+  return (
+    <div className="flex flex-col gap-2">
+      {watching ? (
+        <Watching module={module} pending={pending} />
+      ) : (
+        <p
+          aria-live="polite"
+          className="py-1 text-base font-semibold text-fg classroom:text-2xl"
+        >
+          {goal && action
+            ? d("upNext", { action, name: circuit.name(goal.colorGroup) })
+            : d("playing")}
+        </p>
+      )}
+      <button
+        type="button"
+        data-demo-stop=""
+        onClick={onStop}
+        className={`${BUTTON} border border-border-strong text-fg hover:bg-overlay`}
+      >
+        {d("stop")}
+      </button>
     </div>
   );
 }

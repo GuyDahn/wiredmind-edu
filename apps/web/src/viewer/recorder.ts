@@ -1,5 +1,5 @@
 import type { ViewerCommand } from "./commands.js";
-import { Playback } from "./playback.js";
+import { Playback, SHARED_PACE, type Pace } from "./playback.js";
 import type { Replay, ReplayAction } from "./replay.js";
 
 /**
@@ -39,8 +39,8 @@ export function recording(lessonId: string): Replay {
   return { lessonId, seed, actions: actions.map((action) => ({ ...action })) };
 }
 
-export function startPlayback(replay: Replay) {
-  playback = new Playback(replay);
+export function startPlayback(replay: Replay, pace: Pace = SHARED_PACE) {
+  playback = new Playback(replay, pace);
 }
 
 export function stopPlayback() {
