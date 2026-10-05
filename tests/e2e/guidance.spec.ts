@@ -194,6 +194,26 @@ test.describe("show me how it works", () => {
 });
 
 test.describe("class mode", () => {
+  for (const lesson of LESSONS) {
+    test(`is off on ${lesson} unless the address asks for it`, async ({
+      page,
+    }) => {
+      await page.setViewportSize(DESKTOP);
+      await page.goto(`/he/modules/${lesson}`);
+      await expect(page.locator("[data-class-mode]")).toHaveAttribute(
+        "aria-pressed",
+        "false",
+      );
+      await expect(page.locator('[data-mode="class"]')).toHaveCount(0);
+      // The plain link from the teacher guide opens the plain lesson too.
+      await page.goto(`/he/teachers/${lesson}`);
+      await page.locator(`main a[href="/he/modules/${lesson}"]`).click();
+      await expect(intro(page)).toBeVisible();
+      await expect(page.locator('[data-mode="class"]')).toHaveCount(0);
+      await expect(page).not.toHaveURL(/mode=class/);
+    });
+  }
+
   test("comes from the address: big text, key held open, lesson only", async ({
     page,
   }) => {
