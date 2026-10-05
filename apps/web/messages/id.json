@@ -3,7 +3,7 @@
     "locale": "id",
     "reviewed": false,
     "model": "claude-opus-5-5",
-    "draftedAt": "2026-09-27"
+    "draftedAt": "2026-10-05"
   },
   "meta": {
     "home": {
@@ -143,7 +143,11 @@
       },
       "source": "Lihat kode sumber di GitHub",
       "science": "Mana yang asli, mana yang disederhanakan",
-      "feedback": "Ada yang tidak jelas atau rusak? Beri tahu saya."
+      "feedback": "Ada yang tidak jelas atau rusak? Beri tahu saya.",
+      "guidesTitle": "Ajarkan satu pelajaran besok",
+      "guidesLead": "Setiap pelajaran dilengkapi panduan guru berisi rencana 45 menit dan lembar kerja untuk dicetak.",
+      "guide": "Panduan guru",
+      "worksheet": "Lembar kerja"
     }
   },
   "about": {
@@ -393,6 +397,12 @@
         "pn": "Mencegah lobus antena meneruskan bau itu ke badan jamur.",
         "kc": "Meredam sel yang membedakan satu bau dari bau lainnya.",
         "mbon": "Mencegah badan jamur meneruskan hasilnya ke bagian otak lainnya."
+      },
+      "plain": {
+        "orn": "Penangkap bau",
+        "pn": "Kurir bau",
+        "kc": "Pemilah bau",
+        "mbon": "Pembaca ingatan"
       }
     },
     "visual": {
@@ -409,6 +419,12 @@
       "silence": {
         "ring": "Memblokir neuron cincin yang membawa patokan dari mata.",
         "compass": "Meredam sel penunjuk arah E-PG yang membentuk kompas."
+      },
+      "plain": {
+        "ring": "Pembawa patokan",
+        "compass": "Sel penunjuk arah",
+        "turn-left": "Sinyal belok kiri",
+        "turn-right": "Sinyal belok kanan"
       }
     },
     "escape": {
@@ -424,6 +440,11 @@
         "looming": "Mencegah sel mata melaporkan sambaran itu.",
         "gf": "Memblokir serat raksasa, kabel kabur tercepat milik lalat.",
         "jump": "Meredam neuron motorik yang membuat kaki tengah menendang."
+      },
+      "plain": {
+        "looming": "Pendeteksi pemukul",
+        "gf": "Kabel kabur",
+        "jump": "Penendang kaki"
       }
     }
   },
@@ -524,6 +545,49 @@
       "left": "Ki",
       "right": "Ka",
       "caption": "Kompas · dari belakang"
+    },
+    "terms": {
+      "hint": "Penjelasan {term}",
+      "close": "Tutup"
+    },
+    "legend": {
+      "title": "Arti warna",
+      "glow": "Menyala = sedang aktif"
+    },
+    "intro": {
+      "label": "Cara membaca otak ini",
+      "progress": "{number} dari {total}",
+      "skip": "Lewati",
+      "next": "Lanjut",
+      "start": "Mulai pelajaran",
+      "screens": {
+        "lines": {
+          "title": "Garis-garis ini neuron sungguhan",
+          "text": "Setiap garis adalah satu sel saraf sungguhan dari lalat buah, digambar tepat di tempatnya dalam tubuh lalat. Seret otak untuk memutarnya."
+        },
+        "colors": {
+          "title": "Setiap warna adalah satu kelompok sel",
+          "text": "Sel yang tugasnya sama punya warna yang sama. Saat suatu warna menyala, sel-sel itu sedang aktif saat itu juga."
+        },
+        "buttons": {
+          "title": "Kamu yang menjalankan percobaan",
+          "text": "Rangsang: kami mengaktifkan sel-sel ini. Bungkam: kami mematikan sel-sel ini. Lalu kamu amati apa yang berubah."
+        },
+        "time": {
+          "title": "Semuanya diputar dalam gerak lambat",
+          "text": "Lalat sungguhan melakukannya dalam sekejap mata. Di sini waktu berjalan berkali-kali lebih lambat, supaya kamu bisa melihat sinyalnya merambat."
+        }
+      }
+    },
+    "classMode": {
+      "label": "Mode kelas",
+      "hint": "Mode kelas: teks dan tombol lebih besar untuk proyektor"
+    },
+    "demo": {
+      "start": "Tunjukkan cara kerjanya",
+      "playing": "Sedang menunjukkan cara kerjanya",
+      "upNext": "Berikutnya, kami ketuk {action}: {name}",
+      "stop": "Hentikan dan ambil alih"
     }
   },
   "errors": {
@@ -537,6 +601,306 @@
       "body": "Halaman ini mengalami kesalahan. Coba lagi, atau kembali ke pelajaran.",
       "retry": "Coba lagi",
       "home": "Lihat pelajaran"
+    }
+  },
+  "terms": {
+    "antenna": {
+      "name": "Antena",
+      "text": "Dua sungut di kepala lalat. Lalat mencium bau dengan antenanya, seperti kamu mencium dengan hidung."
+    },
+    "receptor": {
+      "name": "Reseptor bau",
+      "text": "Sel saraf di antena yang aktif saat ada bau yang mengenainya. Setiap bau berawal di sini."
+    },
+    "antennallobe": {
+      "name": "Lobus antena",
+      "text": "Perhentian pertama bau di dalam otak lalat. Di sini reseptor bau menyerahkan sinyalnya kepada neuron proyeksi."
+    },
+    "projection": {
+      "name": "Neuron proyeksi",
+      "text": "Sel saraf yang membawa sinyal bau dari lobus antena lebih jauh ke dalam otak, menuju badan jamur."
+    },
+    "mushroombody": {
+      "name": "Badan jamur",
+      "text": "Bagian otak serangga yang berbentuk seperti jamur. Di sinilah bau dipilah dan ingatan tentang bau disimpan."
+    },
+    "kenyon": {
+      "name": "Sel Kenyon",
+      "text": "Sel-sel saraf kecil di badan jamur. Setiap bau menyalakan segelintir sel yang berbeda, sehingga setiap bau punya polanya sendiri."
+    },
+    "output": {
+      "name": "Neuron keluaran",
+      "text": "Sel saraf yang membaca pola sel Kenyon dan meneruskannya ke bagian otak lainnya. Ilmuwan menyebutnya MBON, singkatan bahasa Inggris untuk neuron keluaran badan jamur."
+    },
+    "turn": {
+      "name": "Neuron belok",
+      "text": "Sel saraf yang aktif saat lalat berbelok dan mendorong tonjolan mengitari kompas. Ilmuwan menyebutnya neuron P-EN2."
+    },
+    "compass": {
+      "name": "Neuron kompas",
+      "text": "Sel-sel saraf berbentuk cincin yang mencatat ke mana lalat sedang menghadap. Ilmuwan menyebutnya neuron E-PG."
+    },
+    "ring": {
+      "name": "Neuron cincin",
+      "text": "Sel saraf yang membawa apa yang dilihat lalat, misalnya patokan, ke kompas. Sel ini meredam neuron kompas, dan itulah yang menahan tonjolan di tempatnya."
+    },
+    "looming": {
+      "name": "Neuron looming",
+      "text": "Sel saraf di belakang mata lalat yang aktif saat sesuatu cepat membesar dalam pandangan, misalnya pemukul yang mendekat. Ilmuwan menyebutnya LC4 dan LPLC2."
+    },
+    "giantfiber": {
+      "name": "Serat raksasa",
+      "text": "Sel saraf yang sangat tebal, memanjang dari otak turun ke tali saraf. Serat ini membawa sinyal kabur tercepat milik lalat."
+    },
+    "nervecord": {
+      "name": "Tali saraf",
+      "text": "Sumsum tulang belakang versi lalat: seberkas sel saraf di dadanya yang mengendalikan kaki dan sayap."
+    },
+    "jump": {
+      "name": "Neuron lompat",
+      "text": "Neuron motorik yang membuat otot lompat di kaki tengah berkontraksi, sehingga lalat melesat ke udara."
+    }
+  },
+  "teachers": {
+    "meta": {
+      "indexTitle": "Panduan guru · WiredMind",
+      "indexDescription": "Rencana pelajaran, jawaban yang diharapkan, pertanyaan diskusi, dan lembar kerja siswa siap cetak untuk setiap pelajaran WiredMind.",
+      "guideTitle": "Panduan guru: {title}",
+      "guideDescription": "Rencana 45 menit untuk “{title}”: tujuan pembelajaran, hal yang perlu diperhatikan siswa, jawaban yang diharapkan, pertanyaan diskusi, dan miskonsepsi umum.",
+      "worksheetTitle": "Lembar kerja: {title}",
+      "worksheetDescription": "Lembar kerja siswa siap cetak untuk “{title}”: prediksi, coba, amati, jelaskan."
+    },
+    "index": {
+      "title": "Panduan guru",
+      "lead": "Semua yang Anda perlukan untuk membawakan setiap pelajaran tanpa pelatihan apa pun: rencana 45 menit, hal yang perlu diperhatikan siswa, jawaban yang diharapkan, dan lembar kerja untuk dicetak.",
+      "lesson": "Pelajaran {number}",
+      "guide": "Panduan guru",
+      "worksheet": "Lembar kerja siswa",
+      "demo": "Tunjukkan kepada kelas"
+    },
+    "topics": {
+      "excitation": "Eksitasi dan inhibisi",
+      "synapses": "Sinapsis dan neurotransmiter",
+      "reflex": "Lengkung refleks",
+      "structure": "Bagaimana struktur jaringan menentukan perilaku"
+    },
+    "guide": {
+      "eyebrow": "Panduan guru · Pelajaran {number}",
+      "print": "Cetak",
+      "lesson": "Buka pelajaran",
+      "demo": "Putar “Tunjukkan” dalam mode kelas",
+      "worksheet": "Lembar kerja siswa",
+      "all": "Semua panduan guru",
+      "address": "Alamat pelajaran",
+      "setupTitle": "Yang Anda perlukan",
+      "setup": "Sebuah proyektor, dan satu perangkat untuk setiap pasangan siswa: laptop, tablet, atau ponsel. Tidak ada yang perlu dipasang dan tidak perlu akun. Setiap pelajaran dibuka dengan panduan singkat cara membaca layar, dan setiap istilah ilmiah bisa diketuk untuk melihat penjelasannya.",
+      "goalTitle": "Tujuan pembelajaran",
+      "topicsTitle": "Topik yang berkaitan",
+      "planTitle": "Rencana 45 menit",
+      "minutes": "{minutes} mnt",
+      "phases": {
+        "opening": "Pertanyaan pembuka",
+        "demo": "Demo dengan “Tunjukkan”",
+        "explore": "Siswa bereksplorasi",
+        "discuss": "Diskusi"
+      },
+      "plan": {
+        "demo": "Tayangkan pelajaran dalam mode kelas dan tekan “Tunjukkan cara kerjanya”. Bacakan setiap langkah saat diputar. Demo berhenti di pertanyaan pelajaran: biarkan dulu tanpa jawaban.",
+        "explore": "Siswa bekerja berpasangan di perangkat masing-masing, dengan lembar kerja. Mereka menulis prediksi sebelum setiap ketukan, menjalankan pelajaran, menjawab pertanyaannya, dan mencoba main bebas.",
+        "discuss": "Kumpulkan jawaban tiap pasangan atas pertanyaan pelajaran, lalu gunakan pertanyaan diskusi di bawah. Tutup dengan apa saja yang tidak tercakup dalam model."
+      },
+      "noticeTitle": "Yang perlu diperhatikan siswa di setiap langkah",
+      "step": "Langkah {number}",
+      "answerTitle": "Pertanyaan pelajaran dan jawaban yang diharapkan",
+      "rightChoice": "Pilihan yang benar",
+      "discussTitle": "Pertanyaan diskusi",
+      "misconceptionsTitle": "Miskonsepsi umum",
+      "claim": "Siswa mungkin berpikir:",
+      "fix": "Cara menanggapinya:",
+      "realTitle": "Mana yang asli, mana yang disederhanakan",
+      "real": "Asli",
+      "simplified": "Disederhanakan",
+      "realShared": "Setiap neuron dan sambungan dalam pelajaran berasal dari peta sambungan saraf seekor lalat buah sungguhan, dengan jumlah sinapsis yang sebenarnya di antara setiap pasang sel.",
+      "simplifiedShared": "Aktivitasnya adalah simulasi sederhana: setiap neuron mengikuti aturan dasar yang sama, dan semuanya diputar dalam gerak lambat.",
+      "realMore": "Daftar lengkapnya, beserta angka",
+      "termsTitle": "Istilah kunci",
+      "curriculumTitle": "Kesesuaian dengan kurikulum",
+      "curriculumPending": "Bagian ini belum diisi. Kesesuaiannya dengan kurikulum biologi resmi sedang dipastikan bersama para pengajar biologi."
+    },
+    "worksheet": {
+      "eyebrow": "Lembar kerja siswa · Pelajaran {number}",
+      "name": "Nama",
+      "class": "Kelas",
+      "date": "Tanggal",
+      "address": "Buka pelajaran di",
+      "predict": "Prediksi",
+      "predictHint": "Sebelum kamu mengetuk apa pun.",
+      "try": "Coba",
+      "tryText": "Buka pelajaran dan ikuti langkah-langkahnya. Sebelum setiap ketukan, ucapkan dengan lantang apa yang menurutmu akan terjadi.",
+      "observe": "Amati",
+      "observeHint": "Untuk setiap langkah: warna mana yang menyala, dan mana yang tetap gelap?",
+      "step": "Langkah {number}",
+      "explain": "Jelaskan",
+      "question": "Pertanyaan pelajaran"
+    },
+    "lessons": {
+      "smell-memory": {
+        "goal": "Siswa menelusuri bau dari reseptor sampai ke sel yang membaca ingatannya, dan menunjukkan bahwa membungkam satu lapisan dalam sebuah jalur memutus semua yang ada sesudahnya.",
+        "topics": {
+          "synapses": "Setiap lapisan meneruskan sinyal ke lapisan berikutnya lewat sinapsis. Para ilmuwan menduga ingatan itu sendiri adalah perubahan kekuatan sinapsis dari sel Kenyon ke neuron keluaran.",
+          "structure": "Jalurnya berupa rantai lapisan, sehingga membungkam sel Kenyon membuat neuron keluaran gelap walaupun baunya tetap masuk.",
+          "excitation": "Rangsang mengeksitasi sel dan Bungkam menahannya tetap mati: itulah dua alat dalam pelajaran ini. Di bagian sirkuit ini, setiap lapisan mengeksitasi lapisan berikutnya."
+        },
+        "opening": "Tanyakan: “Bagaimana otakmu tahu bahwa suatu bau pernah kamu cium sebelumnya?” Dengarkan beberapa tebakan, lalu sampaikan bahwa hari ini kelas akan mencari jawabannya di dalam seekor lalat.",
+        "notice": {
+          "send": "Hanya reseptor bau yang oranye yang menyala. Sinyal berawal di satu ujung sirkuit, bukan di semua tempat sekaligus.",
+          "follow": "Warna-warnanya menyala berurutan: oranye, lalu kuning, lalu biru. Sinyal bergerak melewati lapisan demi lapisan.",
+          "read": "Neuron keluaran yang merah muda menyala paling akhir, dan hanya setelah sel Kenyon yang biru.",
+          "silence": "Oranye dan kuning masih menyala, biru tetap gelap, dan merah muda hampir lenyap. Baunya masuk, tetapi tidak bisa lanjut.",
+          "restore": "Merah muda kembali begitu sel Kenyon dinyalakan lagi. Tidak ada yang rusak: sinyalnya hanya tidak punya jalan."
+        },
+        "answer": "Sel Kenyon meneruskan pola setiap bau ke neuron keluaran. Saat sel itu dibungkam, bau masih sampai ke reseptor dan neuron proyeksi, tetapi neuron keluaran tidak mendapat apa pun untuk dibaca. Minta siswa yang menjawab “baunya tidak pernah masuk” untuk melihat lagi sel oranye dan kuning.",
+        "discuss": {
+          "a": "Bau tetap masuk ke otak saat sel Kenyon dibungkam. Dari mana kita tahu?",
+          "b": "Misalkan lalat belajar bahwa bau ini berarti gula. Di bagian mana dari sirkuit ini kamu menduga ada yang berubah?",
+          "c": "Apa yang kamu perkirakan akan terlihat jika yang dibungkam adalah neuron proyeksi yang kuning? Ujilah di main bebas."
+        },
+        "misconceptions": {
+          "a": {
+            "claim": "Sebuah ingatan tersimpan di dalam satu sel, seperti sebuah file.",
+            "fix": "Kembalilah ke langkah saat merah muda membaca biru. Ingatan diduga berada pada kekuatan banyak sambungan di antara kedua kelompok itu, bukan pada satu sel saja."
+          },
+          "b": {
+            "claim": "Membungkam sel berarti membunuh atau merusaknya.",
+            "fix": "Jalankan lagi langkah terakhir: cahaya merah muda langsung kembali. Sel yang dibungkam tetap utuh. Sel itu hanya tidak aktif."
+          },
+          "c": {
+            "claim": "Pelajaran ini menunjukkan lalat mempelajari sebuah bau.",
+            "fix": "Tidak. Model ini menunjukkan di mana ingatan akan disimpan, tetapi sambungannya tidak pernah berubah. Katakan hal itu apa adanya, lalu tanyakan apa yang perlu ditambahkan."
+          }
+        },
+        "real": {
+          "a": "Keempat kelompok sel, beserta urutan sambungannya, adalah jalur penciuman lalat yang sebenarnya."
+        },
+        "simplified": {
+          "a": "Rangsang mengaktifkan semua reseptor bau sekaligus. Bau sungguhan hanya menyalakan beberapa jenis reseptor, dalam sebuah pola.",
+          "b": "Tidak ada yang belajar dalam model ini: tidak ada sinyal imbalan, dan sambungannya tidak pernah berubah."
+        },
+        "worksheet": {
+          "predict": {
+            "a": "Sebuah bau masuk lewat antena. Menurutmu, warna mana yang menyala paling akhir?",
+            "b": "Menurutmu, apa yang terjadi pada sel merah muda jika sel biru dimatikan?"
+          },
+          "explain": {
+            "a": "Mengapa sel merah muda menjadi gelap saat kamu membungkam sel biru, padahal baunya tetap masuk?",
+            "b": "Menurut para ilmuwan, di bagian mana dari sirkuit ini ingatan tentang bau disimpan?"
+          }
+        }
+      },
+      "compass": {
+        "goal": "Siswa melihat bahwa sebuah cincin neuron menyimpan arah hadap lalat sebagai satu bercak aktivitas, dan bahwa inhibisi dari neuron cincin menahan bercak itu di tempatnya.",
+        "topics": {
+          "excitation": "Contoh paling jelas dari ketiga pelajaran. Neuron belok mengeksitasi kompas dan mendorong tonjolan; neuron cincin menginhibisinya dan menahan tonjolan tetap diam.",
+          "synapses": "Neuron cincin diperkirakan melepaskan GABA, neurotransmiter yang menginhibisi. Neuron kompas dan neuron belok melepaskan asetilkolin, yang mengeksitasi.",
+          "structure": "Neuron kompas tersambung membentuk cincin, dan bentuk itulah yang membuat satu tonjolan aktivitas bisa mewakili satu arah."
+        },
+        "opening": "Tanyakan: “Pejamkan mata dan berputarlah satu kali. Bagaimana kamu masih tahu ke mana kamu menghadap?” Lalu sampaikan bahwa lalat melakukannya dengan sebuah cincin kecil sel, dan sebentar lagi kelas akan mendorong sel-sel itu ke sana kemari.",
+        "notice": {
+          "left": "Sebercak neuron kompas yang hijau menyala di satu sisi cincin, dan jarum piringan menunjuk ke sana. Bercak itulah tonjolannya.",
+          "right": "Tonjolan bergerak mengitari piringan. Kedua sinyal belok mendorongnya ke arah yang berlawanan.",
+          "silence": "Saat neuron cincin yang ungu mati, sinyal yang sama membuat tonjolan berkeliaran, bukannya menetap di satu titik.",
+          "restore": "Tonjolan kembali diam di tempatnya. Bandingkan piringannya dengan langkah sebelumnya."
+        },
+        "answer": "Tidak ada yang memberi tahu kompas di mana patokannya, jadi tidak ada yang menahan tonjolan di tempatnya. Sinyal belok tetap sampai, karena sel hijau menyala, jadi yang hilang adalah jangkar, bukan masukan. Untuk siswa yang lebih besar: dalam model ini jangkarnya adalah inhibisi dari neuron cincin.",
+        "discuss": {
+          "a": "Mengapa cincin adalah bentuk yang baik untuk sel-sel yang mencatat arah?",
+          "b": "Neuron cincin meredam sel lain, bukan mengeksitasinya. Bagaimana mematikan sel bisa membantu sebuah jaringan bekerja lebih baik?",
+          "c": "Manusia juga kehilangan arah dalam gelap atau kabut. Apa kesamaannya dengan langkah membungkam tadi?"
+        },
+        "misconceptions": {
+          "a": {
+            "claim": "Lalat punya kompas magnet, seperti yang ada di ponsel.",
+            "fix": "Kompas ini adalah pola aktivitas yang diperbarui lalat dari gerak beloknya sendiri dan dari apa yang dilihatnya. Tidak ada bagian sirkuit ini yang merasakan medan magnet."
+          },
+          "b": {
+            "claim": "Makin banyak sel yang aktif, sinyalnya selalu makin baik.",
+            "fix": "Bandingkan dua langkah terakhir: menghilangkan inhibisi justru membuat kompas lebih buruk. Inhibisi adalah bagian dari cara kerja sirkuit ini."
+          },
+          "c": {
+            "claim": "Tonjolan adalah benda yang berjalan di dalam otak.",
+            "fix": "Tidak ada sel yang berpindah. Sel-sel yang bersebelahan aktif bergantian, seperti ombak penonton di stadion."
+          }
+        },
+        "real": {
+          "a": "Neuron kompas, neuron belok, dan neuron cincin adalah jenis sel yang nyata, tersambung membentuk cincin seperti pada lalat."
+        },
+        "simplified": {
+          "a": "Dalam model ini neuron cincin tidak membawa gambaran apa pun tentang dunia. Membungkamnya menghilangkan inhibisinya, dan itulah yang membuat tonjolan melenceng.",
+          "b": "Piringan itu adalah cara kami sendiri menampilkan aktivitas sel hijau. Lalat tidak punya piringan."
+        },
+        "worksheet": {
+          "predict": {
+            "a": "Menurutmu, apa yang ditunjukkan piringan kompas saat kamu mengaktifkan neuron belok kiri? Bagaimana dengan yang kanan?",
+            "b": "Menurutmu, apa yang terjadi pada tonjolan jika neuron cincin yang ungu dimatikan?"
+          },
+          "explain": {
+            "a": "Mengapa tonjolan bergeser saat neuron cincin dibungkam?",
+            "b": "Mengapa cincin adalah bentuk yang baik untuk sel-sel yang mencatat arah?"
+          }
+        }
+      },
+      "escape": {
+        "goal": "Siswa mengikuti sebuah refleks dari mata sampai ke otot kaki dalam waktu sekitar 30 milidetik, dan menunjukkan bahwa cara kabur yang cepat bergantung pada satu mata rantai, yaitu serat raksasa.",
+        "topics": {
+          "reflex": "Satu jalur refleks utuh dalam tiga bagian: neuron sensorik (neuron looming), penghubung (serat raksasa), dan neuron motorik (neuron lompat). Berbeda dengan refleks lutut, penghubung ini melewati otak.",
+          "structure": "Sinyal menyempit dari ratusan neuron looming ke serat raksasa. Karena leher botol itulah membungkam satu jenis sel saja menghilangkan perilakunya.",
+          "synapses": "Serat raksasa itu tebal, sehingga sinyalnya cepat. Pada lalat sungguhan serat ini juga memakai sinapsis listrik, jenis yang tercepat; model ini hanya punya sinapsis kimia."
+        },
+        "opening": "Tanyakan: “Mengapa lalat begitu sulit ditepuk?” Kumpulkan beberapa gagasan, lalu sampaikan bahwa kelas akan mengukur waktu kabur lalat dan menemukan kabel di baliknya.",
+        "notice": {
+          "loom": "Neuron looming yang biru menyala lebih dulu, dan serat raksasa yang merah menyusul hampir seketika.",
+          "jump": "Aktivitas merambat turun di serat raksasa menuju tali saraf, dan neuron lompat yang kuning aktif dalam 30 milidetik waktu lalat.",
+          "silence": "Biru masih menyala, merah tetap gelap, dan kuning tidak pernah aktif. Lalat melihat pemukulnya, tetapi pesannya tidak sampai ke kaki.",
+          "restore": "Kuning aktif lagi begitu serat raksasa dinyalakan kembali."
+        },
+        "answer": "Serat raksasa membawa sinyal lompat dari neuron looming ke neuron lompat. Saat serat itu dibungkam, lalat tetap melihat pemukulnya, karena sel biru menyala, tetapi sinyalnya terhenti sebelum sampai ke kaki. Lalat sungguhan juga punya cara kabur yang lebih lambat, seperti disebutkan di langkah terakhir pelajaran.",
+        "discuss": {
+          "a": "Gerakan kabur ini lebih cepat daripada kedipan mata. Ciri apa saja pada jalur ini yang membuatnya begitu cepat?",
+          "b": "Mengapa punya satu jalur kabur yang cepat dan beberapa yang lebih lambat bisa menguntungkan bagi seekor hewan?",
+          "c": "Bandingkan jalur ini dengan refleks manusia yang kamu kenal, misalnya menarik tangan dari benda panas. Apa yang sama, dan apa yang berbeda?"
+        },
+        "misconceptions": {
+          "a": {
+            "claim": "Lalat memutuskan untuk melompat.",
+            "fix": "Lompatan cepat itu adalah refleks: sambungan sarafnya membawa sinyal langsung sampai ke ujung. Tidak ada tahap ketika lalat menimbang pilihannya."
+          },
+          "b": {
+            "claim": "Kalau lalat tidak melompat, berarti ia tidak melihat pemukulnya.",
+            "fix": "Langkah membungkam memisahkan keduanya. Neuron looming aktif, jadi lalat melihatnya. Melihat dan bertindak adalah dua tahap berbeda dalam satu jalur."
+          },
+          "c": {
+            "claim": "Satu neuron tidak mungkin berarti dalam otak yang utuh.",
+            "fix": "Di sini satu jenis sel membawa seluruh sinyal cepat itu. Di mana pun sebuah jalur menyempit menjadi segelintir sel, setiap sel sangat berarti."
+          }
+        },
+        "real": {
+          "a": "Neuron looming, serat raksasa, dan neuron lompat itu nyata, begitu pula jalur di antara ketiganya."
+        },
+        "simplified": {
+          "a": "Angka 30 milidetik berasal dari aturan waktu sederhana dalam model, bukan dari rekaman pada lalat. Angka itu berada dalam rentang yang realistis.",
+          "b": "Rangsang mengaktifkan semua neuron looming sekaligus. Pemukul sungguhan menyalakannya sedikit demi sedikit seiring ia membesar dalam pandangan."
+        },
+        "worksheet": {
+          "predict": {
+            "a": "Sebuah pemukul datang. Menurutmu, dalam urutan apa ketiga warna akan menyala?",
+            "b": "Menurutmu, apa yang terjadi pada neuron lompat yang kuning jika serat raksasa yang merah dimatikan?"
+          },
+          "explain": {
+            "a": "Mengapa neuron lompat tetap gelap, padahal lalat melihat pemukulnya?",
+            "b": "Ciri apa saja pada jalur ini yang membuat lalat bisa kabur begitu cepat?"
+          }
+        }
+      }
     }
   }
 }

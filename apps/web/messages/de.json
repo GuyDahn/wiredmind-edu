@@ -3,7 +3,7 @@
     "locale": "de",
     "reviewed": false,
     "model": "claude-opus-5-5",
-    "draftedAt": "2026-09-27"
+    "draftedAt": "2026-10-05"
   },
   "meta": {
     "home": {
@@ -143,7 +143,11 @@
       },
       "source": "Quellcode auf GitHub ansehen",
       "science": "Was echt ist und was vereinfacht",
-      "feedback": "Etwas ist unklar oder funktioniert nicht? Sagen Sie es mir."
+      "feedback": "Etwas ist unklar oder funktioniert nicht? Sagen Sie es mir.",
+      "guidesTitle": "Schon morgen eine Lektion unterrichten",
+      "guidesLead": "Zu jeder Lektion gibt es einen Leitfaden für Lehrkräfte mit einem 45-Minuten-Plan und ein Arbeitsblatt zum Ausdrucken.",
+      "guide": "Leitfaden für Lehrkräfte",
+      "worksheet": "Arbeitsblatt"
     }
   },
   "about": {
@@ -393,6 +397,12 @@
         "pn": "Verhindert, dass der Antennallobus den Duft in den Pilzkörper weiterleitet.",
         "kc": "Legt die Zellen still, die Düfte auseinanderhalten.",
         "mbon": "Hindert den Pilzkörper daran, das Ergebnis an den Rest des Gehirns weiterzugeben."
+      },
+      "plain": {
+        "orn": "Duftfänger",
+        "pn": "Duftboten",
+        "kc": "Duftsortierer",
+        "mbon": "Gedächtnisleser"
       }
     },
     "visual": {
@@ -409,6 +419,12 @@
       "silence": {
         "ring": "Blockiert die Ringneuronen, die Landmarken von den Augen weiterleiten.",
         "compass": "Legt die E-PG-Richtungszellen still, die den Kompass bilden."
+      },
+      "plain": {
+        "ring": "Landmarkenboten",
+        "compass": "Richtungszellen",
+        "turn-left": "Drehsignal links",
+        "turn-right": "Drehsignal rechts"
       }
     },
     "escape": {
@@ -424,6 +440,11 @@
         "looming": "Hindert die Augenzellen daran, den Anflug zu melden.",
         "gf": "Blockiert die Riesenfaser, die schnellste Fluchtleitung der Fliege.",
         "jump": "Legt die Motoneuronen still, die die Mittelbeine nach unten schnellen lassen."
+      },
+      "plain": {
+        "looming": "Klatschen-Späher",
+        "gf": "Fluchtleitung",
+        "jump": "Beinkicker"
       }
     }
   },
@@ -524,6 +545,49 @@
       "left": "L",
       "right": "R",
       "caption": "Kompass · Ansicht von hinten"
+    },
+    "terms": {
+      "hint": "Erklärung: {term}",
+      "close": "Schließen"
+    },
+    "legend": {
+      "title": "Farblegende",
+      "glow": "Leuchtet = feuert gerade"
+    },
+    "intro": {
+      "label": "So liest du dieses Gehirn",
+      "progress": "{number} von {total}",
+      "skip": "Überspringen",
+      "next": "Weiter",
+      "start": "Lektion starten",
+      "screens": {
+        "lines": {
+          "title": "Diese Linien sind echte Neuronen",
+          "text": "Jede Linie ist eine echte Nervenzelle einer Fruchtfliege, gezeichnet an der Stelle, an der sie im Körper der Fliege liegt. Ziehe am Gehirn, um es zu drehen."
+        },
+        "colors": {
+          "title": "Jede Farbe ist eine Gruppe von Zellen",
+          "text": "Zellen mit derselben Aufgabe haben dieselbe Farbe. Wenn eine Farbe leuchtet, feuern diese Zellen genau jetzt."
+        },
+        "buttons": {
+          "title": "Du führst das Experiment durch",
+          "text": "„Stimulieren“: Wir lassen diese Zellen feuern. „Stummschalten“: Wir schalten diese Zellen aus. Dann beobachtest du, was sich ändert."
+        },
+        "time": {
+          "title": "Alles läuft in Zeitlupe",
+          "text": "Eine echte Fliege schafft das in einem Wimpernschlag. Hier läuft die Zeit um ein Vielfaches langsamer, damit du dem Signal auf seinem Weg zusehen kannst."
+        }
+      }
+    },
+    "classMode": {
+      "label": "Klassenmodus",
+      "hint": "Klassenmodus: größere Schrift und Knöpfe für den Beamer"
+    },
+    "demo": {
+      "start": "Zeig mir, wie es funktioniert",
+      "playing": "Wir zeigen dir, wie es funktioniert",
+      "upNext": "Als Nächstes tippen wir auf „{action}“: {name}",
+      "stop": "Anhalten und selbst übernehmen"
     }
   },
   "errors": {
@@ -537,6 +601,306 @@
       "body": "Auf der Seite ist ein Fehler aufgetreten. Versuchen Sie es noch einmal oder gehen Sie zurück zu den Lektionen.",
       "retry": "Erneut versuchen",
       "home": "Zu den Lektionen"
+    }
+  },
+  "terms": {
+    "antenna": {
+      "name": "Antennen",
+      "text": "Die zwei Fühler am Kopf einer Fliege. Mit ihnen riecht die Fliege, so wie du mit deiner Nase riechst."
+    },
+    "receptor": {
+      "name": "Duftrezeptoren",
+      "text": "Nervenzellen auf den Antennen, die feuern, wenn ein Duft auf ihnen landet. Hier beginnt jeder Duft."
+    },
+    "antennallobe": {
+      "name": "Antennallobus",
+      "text": "Die erste Station für Düfte im Gehirn der Fliege. Hier geben die Duftrezeptoren ihr Signal an die Projektionsneuronen weiter."
+    },
+    "projection": {
+      "name": "Projektionsneuronen",
+      "text": "Nervenzellen, die das Duftsignal vom Antennallobus tiefer ins Gehirn tragen, bis in den Pilzkörper."
+    },
+    "mushroombody": {
+      "name": "Pilzkörper",
+      "text": "Ein pilzförmiger Teil des Insektengehirns. Hier werden Düfte sortiert und Dufterinnerungen gespeichert."
+    },
+    "kenyon": {
+      "name": "Kenyon-Zellen",
+      "text": "Die kleinen Nervenzellen des Pilzkörpers. Jeder Duft schaltet eine andere Handvoll von ihnen ein. So bekommt jeder Duft sein eigenes Muster."
+    },
+    "output": {
+      "name": "Ausgangsneuronen",
+      "text": "Nervenzellen, die das Muster der Kenyon-Zellen lesen und an den Rest des Gehirns weitergeben. In der Forschung heißen sie MBONs, kurz für Ausgangsneuronen des Pilzkörpers."
+    },
+    "turn": {
+      "name": "Drehneuronen",
+      "text": "Nervenzellen, die feuern, wenn sich die Fliege dreht, und den Leuchtfleck um den Kompass schieben. In der Forschung heißen sie P-EN2-Neuronen."
+    },
+    "compass": {
+      "name": "Kompassneuronen",
+      "text": "Ein Ring aus Nervenzellen, der festhält, wohin die Fliege gerade schaut. In der Forschung heißen sie E-PG-Neuronen."
+    },
+    "ring": {
+      "name": "Ringneuronen",
+      "text": "Nervenzellen, die dem Kompass melden, was die Fliege sieht, zum Beispiel Landmarken. Sie dämpfen die Kompassneuronen, und das hält den Leuchtfleck an seinem Platz."
+    },
+    "looming": {
+      "name": "Annäherungsneuronen",
+      "text": "Nervenzellen hinter den Augen der Fliege. Sie feuern, wenn etwas im Blickfeld schnell größer wird, etwa eine heransausende Fliegenklatsche. In der Forschung heißen sie LC4 und LPLC2."
+    },
+    "giantfiber": {
+      "name": "Riesenfaser",
+      "text": "Eine sehr dicke Nervenzelle, die vom Gehirn hinunter ins Bauchmark zieht. Sie leitet das schnellste Fluchtsignal der Fliege."
+    },
+    "nervecord": {
+      "name": "Bauchmark",
+      "text": "Das Rückenmark der Fliege, sozusagen: ein Bündel von Nervenzellen in ihrer Brust, das Beine und Flügel steuert."
+    },
+    "jump": {
+      "name": "Sprungneuronen",
+      "text": "Motoneuronen, die die Sprungmuskeln der Mittelbeine anspannen, sodass die Fliege in die Luft schnellt."
+    }
+  },
+  "teachers": {
+    "meta": {
+      "indexTitle": "Leitfäden für Lehrkräfte · WiredMind",
+      "indexDescription": "Zu jeder WiredMind-Lektion: ein Stundenplan, erwartete Antworten, Diskussionsfragen und ein Arbeitsblatt zum Ausdrucken.",
+      "guideTitle": "Leitfaden für Lehrkräfte: {title}",
+      "guideDescription": "Ein 45-Minuten-Plan für „{title}“: Lernziel, was den Schülerinnen und Schülern auffallen sollte, erwartete Antworten, Diskussionsfragen und häufige Fehlvorstellungen.",
+      "worksheetTitle": "Arbeitsblatt: {title}",
+      "worksheetDescription": "Ein Arbeitsblatt zum Ausdrucken für „{title}“: vermuten, ausprobieren, beobachten, erklären."
+    },
+    "index": {
+      "title": "Leitfäden für Lehrkräfte",
+      "lead": "Alles, was Sie brauchen, um jede Lektion ohne Einarbeitung zu unterrichten: ein 45-Minuten-Plan, was den Schülerinnen und Schülern auffallen sollte, die zu erwartenden Antworten und ein Arbeitsblatt zum Ausdrucken.",
+      "lesson": "Lektion {number}",
+      "guide": "Leitfaden für Lehrkräfte",
+      "worksheet": "Arbeitsblatt",
+      "demo": "Der Klasse zeigen"
+    },
+    "topics": {
+      "excitation": "Erregung und Hemmung",
+      "synapses": "Synapsen und Neurotransmitter",
+      "reflex": "Reflexbögen",
+      "structure": "Wie der Aufbau eines Netzwerks das Verhalten bestimmt"
+    },
+    "guide": {
+      "eyebrow": "Leitfaden für Lehrkräfte · Lektion {number}",
+      "print": "Drucken",
+      "lesson": "Lektion öffnen",
+      "demo": "„Zeig mir“ im Klassenmodus abspielen",
+      "worksheet": "Arbeitsblatt",
+      "all": "Alle Leitfäden für Lehrkräfte",
+      "address": "Adresse der Lektion",
+      "setupTitle": "Was Sie brauchen",
+      "setup": "Einen Beamer und ein Gerät für je zwei Schülerinnen und Schüler: Laptop, Tablet oder Smartphone. Es muss nichts installiert werden, und niemand braucht ein Konto. Jede Lektion beginnt mit einer kurzen Einführung, wie der Bildschirm zu lesen ist, und jeder Fachbegriff lässt sich antippen und wird dann erklärt.",
+      "goalTitle": "Lernziel",
+      "topicsTitle": "Anknüpfende Themen",
+      "planTitle": "Ein 45-Minuten-Plan",
+      "minutes": "{minutes} Min.",
+      "phases": {
+        "opening": "Einstiegsfrage",
+        "demo": "Vorführung mit „Zeig mir“",
+        "explore": "Die Klasse erkundet selbst",
+        "discuss": "Besprechung"
+      },
+      "plan": {
+        "demo": "Projizieren Sie die Lektion im Klassenmodus und drücken Sie auf „Zeig mir, wie es funktioniert“. Lesen Sie jeden Schritt laut vor, während er abläuft. Die Vorführung hält bei der Frage der Lektion an: Lassen Sie diese vorerst unbeantwortet.",
+        "explore": "Die Schülerinnen und Schüler arbeiten zu zweit an ihren eigenen Geräten, mit dem Arbeitsblatt. Vor jedem Tippen notieren sie eine Vermutung, dann gehen sie die Lektion durch, beantworten deren Frage und probieren das freie Experimentieren aus.",
+        "discuss": "Sammeln Sie die Antworten der Zweiergruppen auf die Frage der Lektion und nutzen Sie dann die Diskussionsfragen unten. Schließen Sie mit dem, was das Modell weglässt."
+      },
+      "noticeTitle": "Was den Schülerinnen und Schülern bei jedem Schritt auffallen sollte",
+      "step": "Schritt {number}",
+      "answerTitle": "Die Frage der Lektion und die zu erwartende Antwort",
+      "rightChoice": "Die richtige Antwort",
+      "discussTitle": "Diskussionsfragen",
+      "misconceptionsTitle": "Häufige Fehlvorstellungen",
+      "claim": "Mögliche Vorstellung:",
+      "fix": "So gehen Sie darauf ein:",
+      "realTitle": "Was echt ist und was vereinfacht",
+      "real": "Echt",
+      "simplified": "Vereinfacht",
+      "realShared": "Jedes Neuron und jede Verbindung in der Lektion stammt aus dem Schaltplan einer einzigen echten Fruchtfliege, mit der echten Zahl der Synapsen zwischen je zwei Zellen.",
+      "simplifiedShared": "Die Aktivität ist eine einfache Simulation, in der jedes Neuron denselben Grundregeln folgt, und sie läuft in Zeitlupe ab.",
+      "realMore": "Die vollständige Liste, mit Zahlen",
+      "termsTitle": "Wichtige Begriffe",
+      "curriculumTitle": "Lehrplanbezug",
+      "curriculumPending": "Dieser Abschnitt ist noch nicht ausgefüllt. Die Zuordnung zum offiziellen Biologielehrplan wird derzeit mit Biologielehrkräften abgestimmt."
+    },
+    "worksheet": {
+      "eyebrow": "Arbeitsblatt · Lektion {number}",
+      "name": "Name",
+      "class": "Klasse",
+      "date": "Datum",
+      "address": "Öffne die Lektion unter",
+      "predict": "Vermuten",
+      "predictHint": "Bevor du irgendetwas antippst.",
+      "try": "Ausprobieren",
+      "tryText": "Öffne die Lektion und folge ihren Schritten. Sag vor jedem Tippen laut, was deiner Meinung nach passieren wird.",
+      "observe": "Beobachten",
+      "observeHint": "Für jeden Schritt: Welche Farben haben aufgeleuchtet, und welche sind dunkel geblieben?",
+      "step": "Schritt {number}",
+      "explain": "Erklären",
+      "question": "Die Frage der Lektion"
+    },
+    "lessons": {
+      "smell-memory": {
+        "goal": "Die Schülerinnen und Schüler verfolgen einen Duft von den Rezeptoren bis zu den Zellen, die seine Erinnerung lesen, und zeigen: Wer eine Schicht einer Bahn stummschaltet, schneidet alles dahinter ab.",
+        "topics": {
+          "synapses": "Jede Schicht gibt das Signal über Synapsen an die nächste weiter. Forschende vermuten, dass die Erinnerung selbst eine Veränderung der Stärke der Synapsen von den Kenyon-Zellen zu den Ausgangsneuronen ist.",
+          "structure": "Die Bahn ist eine Kette von Schichten. Deshalb werden die Ausgangsneuronen dunkel, wenn man die Kenyon-Zellen stummschaltet, obwohl der Duft weiterhin hineingelangt.",
+          "excitation": "„Stimulieren“ erregt Zellen, „Stummschalten“ hält sie ausgeschaltet: die beiden Werkzeuge der Lektion. In diesem Teil des Schaltkreises erregt jede Schicht die nächste."
+        },
+        "opening": "Fragen Sie: „Woher weiß euer Gehirn, dass ihr einen Duft schon einmal gerochen habt?“ Sammeln Sie ein paar Vermutungen und kündigen Sie dann an, dass die Klasse heute in einer Fliege nach der Antwort sucht.",
+        "notice": {
+          "send": "Nur die orangefarbenen Duftrezeptoren leuchten auf. Das Signal beginnt an einem Ende des Schaltkreises, nicht überall zugleich.",
+          "follow": "Die Farben leuchten der Reihe nach auf: Orange, dann Gelb, dann Blau. Das Signal wandert Schicht für Schicht weiter.",
+          "read": "Die pinkfarbenen Ausgangsneuronen leuchten zuletzt auf, und erst nach den blauen Kenyon-Zellen.",
+          "silence": "Orange und Gelb leuchten weiterhin, Blau bleibt dunkel, und Pink verschwindet fast ganz. Der Duft ist hineingekommen, aber nicht weitergekommen.",
+          "restore": "Pink kommt zurück, sobald die Kenyon-Zellen wieder eingeschaltet sind. Nichts wurde beschädigt: Dem Signal fehlte nur der Weg."
+        },
+        "answer": "Die Kenyon-Zellen geben das Muster jedes Duftes an die Ausgangsneuronen weiter. Sind sie stummgeschaltet, erreicht der Duft zwar noch die Rezeptoren und die Projektionsneuronen, aber die Ausgangsneuronen bekommen nichts zu lesen. Wer antwortet „Der Duft ist gar nicht hineingelangt“, sollte sich noch einmal die orangefarbenen und gelben Zellen ansehen.",
+        "discuss": {
+          "a": "Der Duft ist weiterhin ins Gehirn gelangt, während die Kenyon-Zellen stummgeschaltet waren. Woran erkennen wir das?",
+          "b": "Angenommen, die Fliege hat gelernt, dass dieser Duft Zucker bedeutet. An welcher Stelle dieses Schaltkreises würdet ihr eine Veränderung erwarten?",
+          "c": "Was würdet ihr erwarten, wenn ihr stattdessen die gelben Projektionsneuronen stummschaltet? Testet es beim freien Experimentieren."
+        },
+        "misconceptions": {
+          "a": {
+            "claim": "Eine Erinnerung steckt in einer einzelnen Zelle, wie eine Datei.",
+            "fix": "Gehen Sie zu dem Schritt zurück, in dem Pink das blaue Muster liest. Man nimmt an, dass die Erinnerung in der Stärke vieler Verbindungen zwischen den beiden Gruppen liegt, nicht in einer einzelnen Zelle."
+          },
+          "b": {
+            "claim": "Stummschalten tötet oder beschädigt eine Zelle.",
+            "fix": "Lassen Sie den letzten Schritt noch einmal laufen: Das pinkfarbene Leuchten ist sofort wieder da. Stummgeschaltete Zellen sind unversehrt. Sie feuern nur nicht."
+          },
+          "c": {
+            "claim": "Die Lektion zeigt, wie die Fliege einen Duft lernt.",
+            "fix": "Das tut sie nicht. Das Modell zeigt, wo eine Erinnerung gespeichert würde, aber seine Verbindungen ändern sich nie. Sagen Sie das offen und fragen Sie, was man ergänzen müsste."
+          }
+        },
+        "real": {
+          "a": "Die vier Zellgruppen und die Reihenfolge, in der sie verbunden sind, bilden die echte Riechbahn der Fliege."
+        },
+        "simplified": {
+          "a": "„Stimulieren“ lässt alle Duftrezeptoren gleichzeitig feuern. Ein echter Duft schaltet nur manche Rezeptortypen ein, in einem bestimmten Muster.",
+          "b": "Im Modell lernt nichts: Es hat kein Belohnungssignal, und seine Verbindungen ändern sich nie."
+        },
+        "worksheet": {
+          "predict": {
+            "a": "Ein Duft trifft auf die Antennen. Welche Farbe leuchtet deiner Meinung nach zuletzt auf?",
+            "b": "Was passiert deiner Meinung nach mit den pinkfarbenen Zellen, wenn die blauen Zellen ausgeschaltet sind?"
+          },
+          "explain": {
+            "a": "Warum sind die pinkfarbenen Zellen dunkel geworden, als du die blauen Zellen stummgeschaltet hast, obwohl der Duft weiterhin hineingelangt ist?",
+            "b": "An welcher Stelle dieses Schaltkreises wird nach Ansicht der Forschung die Erinnerung an einen Duft gespeichert?"
+          }
+        }
+      },
+      "compass": {
+        "goal": "Die Schülerinnen und Schüler erkennen, dass ein Ring aus Neuronen die Blickrichtung der Fliege als einen einzigen Fleck von Aktivität festhält und dass die Hemmung durch die Ringneuronen diesen Fleck an seinem Platz hält.",
+        "topics": {
+          "excitation": "Das deutlichste Beispiel der drei Lektionen. Die Drehneuronen erregen den Kompass und schieben den Leuchtfleck weiter; die Ringneuronen hemmen ihn und halten den Leuchtfleck fest.",
+          "synapses": "Für die Ringneuronen ist GABA vorhergesagt, ein hemmender Transmitter. Die Kompass- und die Drehneuronen schütten Acetylcholin aus, das erregt.",
+          "structure": "Die Kompassneuronen sind ringförmig verschaltet. Erst diese Form macht es möglich, dass ein einzelner Leuchtfleck für genau eine Richtung steht."
+        },
+        "opening": "Fragen Sie: „Schließt die Augen und dreht euch einmal im Kreis. Woher wisst ihr trotzdem, wohin ihr schaut?“ Erklären Sie dann, dass eine Fliege das mit einem kleinen Ring aus Zellen schafft und dass die Klasse diese Zellen gleich anschubsen wird.",
+        "notice": {
+          "left": "Eine Gruppe grüner Kompassneuronen leuchtet auf einer Seite des Rings auf, und die Nadel der Kompassanzeige zeigt auf sie. Das ist der Leuchtfleck.",
+          "right": "Der Leuchtfleck wandert über die Kompassanzeige. Die beiden Drehsignale schieben ihn in entgegengesetzte Richtungen.",
+          "silence": "Sind die violetten Ringneuronen ausgeschaltet, lässt dasselbe Signal den Leuchtfleck umherwandern, statt dass er an einer Stelle zur Ruhe kommt.",
+          "restore": "Der Leuchtfleck bleibt wieder an seinem Platz. Vergleichen Sie die Kompassanzeige mit dem Schritt davor."
+        },
+        "answer": "Nichts hat dem Kompass gezeigt, wo die Landmarken sind, also hat nichts den Leuchtfleck an seinem Platz gehalten. Das Drehsignal ist angekommen, denn die grünen Zellen haben geleuchtet. Gefehlt hat also ein Anker, kein Eingangssignal. Für Ältere: In diesem Modell ist der Anker die Hemmung durch die Ringneuronen.",
+        "discuss": {
+          "a": "Warum ist ein Ring eine gute Form für Zellen, die eine Richtung festhalten?",
+          "b": "Die Ringneuronen dämpfen andere Zellen, statt sie zu erregen. Wie kann es einem Netzwerk helfen, besser zu arbeiten, wenn Zellen ausgeschaltet werden?",
+          "c": "Auch Menschen verlieren im Dunkeln oder im Nebel die Orientierung. Was hat das mit dem Schritt gemeinsam, in dem die Ringneuronen stummgeschaltet werden?"
+        },
+        "misconceptions": {
+          "a": {
+            "claim": "Die Fliege hat einen Magnetkompass, wie der im Handy.",
+            "fix": "Dieser Kompass ist ein Aktivitätsmuster, das die Fliege anhand ihrer eigenen Drehungen und dessen, was sie sieht, auf dem Stand hält. Nichts in diesem Schaltkreis nimmt Magnetismus wahr."
+          },
+          "b": {
+            "claim": "Je mehr Zellen aktiv sind, desto besser ist das Signal.",
+            "fix": "Vergleichen Sie die letzten beiden Schritte: Ohne Hemmung wurde der Kompass schlechter. Hemmung gehört dazu, damit der Schaltkreis funktioniert."
+          },
+          "c": {
+            "claim": "Der Leuchtfleck ist ein Gegenstand, der durchs Gehirn wandert.",
+            "fix": "Keine Zelle bewegt sich. Benachbarte Zellen sind nacheinander aktiv, wie bei einer La-Ola-Welle, die durchs Stadion läuft."
+          }
+        },
+        "real": {
+          "a": "Die Kompassneuronen, die Drehneuronen und die Ringneuronen sind echte Zelltypen, ringförmig verschaltet wie in der Fliege."
+        },
+        "simplified": {
+          "a": "Im Modell tragen die Ringneuronen kein Bild der Umgebung. Wer sie stummschaltet, nimmt ihre Hemmung weg, und genau das lässt den Leuchtfleck driften.",
+          "b": "Die Kompassanzeige ist unsere eigene Darstellung der Aktivität der grünen Zellen. Die Fliege hat keine Anzeige."
+        },
+        "worksheet": {
+          "predict": {
+            "a": "Was zeigt die Kompassanzeige deiner Meinung nach, wenn du die linken Drehneuronen feuern lässt? Und bei den rechten?",
+            "b": "Was passiert deiner Meinung nach mit dem Leuchtfleck, wenn die violetten Ringneuronen ausgeschaltet sind?"
+          },
+          "explain": {
+            "a": "Warum ist der Leuchtfleck abgedriftet, als die Ringneuronen stummgeschaltet waren?",
+            "b": "Warum ist ein Ring eine gute Form für Zellen, die eine Richtung festhalten?"
+          }
+        }
+      },
+      "escape": {
+        "goal": "Die Schülerinnen und Schüler verfolgen einen Reflex von den Augen bis zu den Beinmuskeln in etwa 30 Millisekunden und zeigen, dass die schnelle Flucht an einem einzigen Glied hängt: der Riesenfaser.",
+        "topics": {
+          "reflex": "Eine vollständige Reflexbahn in drei Teilen: sensorische Neuronen (die Annäherungsneuronen), eine Schaltstation (die Riesenfaser) und Motoneuronen (die Sprungneuronen). Anders als beim Kniesehnenreflex läuft diese Verschaltung über das Gehirn.",
+          "structure": "Das Signal läuft von Hunderten Annäherungsneuronen auf die Riesenfaser zusammen. Wegen dieses Engpasses verschwindet das Verhalten, wenn man eine einzige Zellart stummschaltet.",
+          "synapses": "Die Riesenfaser ist dick, und das macht ihr Signal schnell. In einer echten Fliege nutzt sie außerdem elektrische Synapsen, die schnellste Art; das Modell hat nur chemische Synapsen."
+        },
+        "opening": "Fragen Sie: „Warum ist es so schwer, eine Fliege zu erwischen?“ Sammeln Sie ein paar Ideen und kündigen Sie dann an, dass die Klasse misst, wie lange die Flucht der Fliege dauert, und die Leitung findet, die dahintersteckt.",
+        "notice": {
+          "loom": "Die blauen Annäherungsneuronen leuchten zuerst auf, und die rote Riesenfaser folgt fast sofort.",
+          "jump": "Die Aktivität läuft die Riesenfaser hinunter ins Bauchmark, und die gelben Sprungneuronen feuern innerhalb von 30 Millisekunden Fliegenzeit.",
+          "silence": "Blau leuchtet weiterhin, Rot bleibt dunkel, und Gelb feuert gar nicht. Die Fliege hat die Fliegenklatsche gesehen, aber die Nachricht ist nicht bei ihren Beinen angekommen.",
+          "restore": "Gelb feuert wieder, sobald die Riesenfaser wieder eingeschaltet ist."
+        },
+        "answer": "Die Riesenfaser bringt das Sprungsignal von den Annäherungsneuronen zu den Sprungneuronen. Ist sie stummgeschaltet, sieht die Fliege die Fliegenklatsche weiterhin, denn die blauen Zellen leuchten auf, aber das Signal bleibt vor den Beinen stecken. Echte Fliegen haben auch langsamere Fluchtwege, wie der letzte Schritt der Lektion sagt.",
+        "discuss": {
+          "a": "Diese Flucht ist schneller als ein Wimpernschlag. Welche Eigenschaften der Bahn machen sie so schnell?",
+          "b": "Warum könnte es für ein Tier nützlich sein, einen schnellen Fluchtweg und mehrere langsamere zu haben?",
+          "c": "Vergleicht diese Bahn mit einem menschlichen Reflex, den ihr kennt, etwa dem Wegziehen der Hand von etwas Heißem. Was ist gleich, und was ist anders?"
+        },
+        "misconceptions": {
+          "a": {
+            "claim": "Die Fliege entscheidet sich zu springen.",
+            "fix": "Der schnelle Sprung ist ein Reflex: Die Verschaltung leitet das Signal ohne Umweg durch. Es gibt keine Stufe, auf der die Fliege abwägt."
+          },
+          "b": {
+            "claim": "Wenn die Fliege nicht gesprungen ist, hat sie die Fliegenklatsche nicht gesehen.",
+            "fix": "Der Schritt mit dem Stummschalten trennt beides. Die Annäherungsneuronen feuern, die Fliege hat die Klatsche also gesehen. Sehen und Handeln sind verschiedene Stufen derselben Bahn."
+          },
+          "c": {
+            "claim": "Ein einzelnes Neuron kann in einem ganzen Gehirn keine Rolle spielen.",
+            "fix": "Hier leitet eine einzige Zellart das gesamte schnelle Signal. Überall, wo sich eine Bahn auf wenige Zellen verengt, kommt es auf jede von ihnen sehr an."
+          }
+        },
+        "real": {
+          "a": "Die Annäherungsneuronen, die Riesenfaser und die Sprungneuronen sind echt, ebenso der Weg zwischen ihnen."
+        },
+        "simplified": {
+          "a": "Die 30 Millisekunden ergeben sich aus den einfachen Zeitregeln des Modells, nicht aus Messungen an einer Fliege. Sie liegen in einem realistischen Bereich.",
+          "b": "„Stimulieren“ lässt alle Annäherungsneuronen gleichzeitig feuern. Eine echte Fliegenklatsche schaltet sie nach und nach ein, während sie im Blickfeld größer wird."
+        },
+        "worksheet": {
+          "predict": {
+            "a": "Eine Fliegenklatsche saust heran. In welcher Reihenfolge leuchten die drei Farben deiner Meinung nach auf?",
+            "b": "Was passiert deiner Meinung nach mit den gelben Sprungneuronen, wenn die rote Riesenfaser ausgeschaltet ist?"
+          },
+          "explain": {
+            "a": "Warum sind die Sprungneuronen dunkel geblieben, obwohl die Fliege die Fliegenklatsche gesehen hat?",
+            "b": "Welche Eigenschaften dieser Bahn machen die Flucht so schnell?"
+          }
+        }
+      }
     }
   }
 }

@@ -3,7 +3,7 @@
     "locale": "pl",
     "reviewed": false,
     "model": "claude-opus-5-5",
-    "draftedAt": "2026-09-27"
+    "draftedAt": "2026-10-05"
   },
   "meta": {
     "home": {
@@ -143,7 +143,11 @@
       },
       "source": "Kod źródłowy na GitHubie",
       "science": "Co jest prawdziwe, a co uproszczone",
-      "feedback": "Coś jest niejasne albo nie działa? Daj znać."
+      "feedback": "Coś jest niejasne albo nie działa? Daj znać.",
+      "guidesTitle": "Lekcja gotowa na jutro",
+      "guidesLead": "Do każdej lekcji jest przewodnik dla nauczyciela z planem na 45 minut i karta pracy do wydrukowania.",
+      "guide": "Przewodnik dla nauczyciela",
+      "worksheet": "Karta pracy"
     }
   },
   "about": {
@@ -393,6 +397,12 @@
         "pn": "Blokuje drogę zapachu z płata czułkowego do ciała grzybkowatego.",
         "kc": "Wycisza komórki, które odróżniają jeden zapach od drugiego.",
         "mbon": "Blokuje przekazywanie wyniku z ciała grzybkowatego do reszty mózgu."
+      },
+      "plain": {
+        "orn": "Łapacze zapachów",
+        "pn": "Posłańcy zapachu",
+        "kc": "Sortery zapachów",
+        "mbon": "Czytniki pamięci"
       }
     },
     "visual": {
@@ -409,6 +419,12 @@
       "silence": {
         "ring": "Blokuje neurony pierścieniowe, które przynoszą z oczu punkty orientacyjne.",
         "compass": "Wycisza komórki kierunku E-PG, z których składa się kompas."
+      },
+      "plain": {
+        "ring": "Kurierzy widoków",
+        "compass": "Komórki kierunku",
+        "turn-left": "Lewy sygnał skrętu",
+        "turn-right": "Prawy sygnał skrętu"
       }
     },
     "escape": {
@@ -424,6 +440,11 @@
         "looming": "Nie pozwala komórkom oka zgłosić nalotu.",
         "gf": "Blokuje włókno olbrzymie, najszybszy kabel ucieczki muszki.",
         "jump": "Wycisza neurony ruchowe, które uruchamiają kopnięcie środkowych nóg."
+      },
+      "plain": {
+        "looming": "Wykrywacze packi",
+        "gf": "Kabel ucieczki",
+        "jump": "Motorki nóg"
       }
     }
   },
@@ -524,6 +545,49 @@
       "left": "L",
       "right": "P",
       "caption": "Kompas · widok od tyłu"
+    },
+    "terms": {
+      "hint": "Wyjaśnienie: {term}",
+      "close": "Zamknij"
+    },
+    "legend": {
+      "title": "Legenda kolorów",
+      "glow": "Świeci = wysyła teraz impulsy"
+    },
+    "intro": {
+      "label": "Jak czytać ten mózg",
+      "progress": "{number} z {total}",
+      "skip": "Pomiń",
+      "next": "Dalej",
+      "start": "Zacznij lekcję",
+      "screens": {
+        "lines": {
+          "title": "Te linie to prawdziwe neurony",
+          "text": "Każda linia to jedna prawdziwa komórka nerwowa muszki owocowej, narysowana tam, gdzie leży w jej ciele. Przeciągnij mózg, żeby go obrócić."
+        },
+        "colors": {
+          "title": "Każdy kolor to jedna grupa komórek",
+          "text": "Komórki, które robią to samo, mają ten sam kolor. Gdy kolor świeci, te komórki właśnie wysyłają impulsy."
+        },
+        "buttons": {
+          "title": "To ty prowadzisz eksperyment",
+          "text": "„Pobudź”: uruchamiamy te komórki. „Wycisz”: wyłączamy te komórki. Potem obserwujesz, co się zmienia."
+        },
+        "time": {
+          "title": "Wszystko dzieje się w zwolnionym tempie",
+          "text": "Prawdziwa muszka robi to w mgnieniu oka. Tutaj czas płynie wiele razy wolniej, żeby dało się zobaczyć, jak wędruje sygnał."
+        }
+      }
+    },
+    "classMode": {
+      "label": "Tryb klasowy",
+      "hint": "Tryb klasowy: większy tekst i przyciski, do wyświetlania z projektora"
+    },
+    "demo": {
+      "start": "Pokaż mi, jak to działa",
+      "playing": "Pokazujemy, jak to działa",
+      "upNext": "Za chwilę naciśniemy „{action}”: {name}",
+      "stop": "Zatrzymaj i przejmij stery"
     }
   },
   "errors": {
@@ -537,6 +601,306 @@
       "body": "Na stronie wystąpił błąd. Można spróbować jeszcze raz albo wrócić do lekcji.",
       "retry": "Spróbuj ponownie",
       "home": "Przejdź do lekcji"
+    }
+  },
+  "terms": {
+    "antenna": {
+      "name": "Czułki",
+      "text": "Dwa różki na głowie muszki. Muszka wącha nimi tak, jak ty wąchasz nosem."
+    },
+    "receptor": {
+      "name": "Receptory węchowe",
+      "text": "Komórki nerwowe na czułkach, które wysyłają impulsy, gdy trafi na nie zapach. Tu zaczyna się każdy zapach."
+    },
+    "antennallobe": {
+      "name": "Płat czułkowy",
+      "text": "Pierwszy przystanek zapachów w mózgu muszki. Tu receptory węchowe przekazują sygnał neuronom projekcyjnym."
+    },
+    "projection": {
+      "name": "Neurony projekcyjne",
+      "text": "Komórki nerwowe, które niosą sygnał zapachu z płata czułkowego w głąb mózgu, do ciała grzybkowatego."
+    },
+    "mushroombody": {
+      "name": "Ciało grzybkowate",
+      "text": "Część mózgu owada w kształcie grzyba. Tu zapachy są sortowane i tu przechowywane są wspomnienia zapachów."
+    },
+    "kenyon": {
+      "name": "Komórki Kenyona",
+      "text": "Małe komórki nerwowe ciała grzybkowatego. Każdy zapach włącza inną ich garstkę, więc każdy zapach ma swój własny wzór."
+    },
+    "output": {
+      "name": "Neurony wyjściowe",
+      "text": "Komórki nerwowe, które odczytują wzór komórek Kenyona i przekazują go reszcie mózgu. Naukowcy nazywają je MBON: to skrót od angielskiej nazwy neuronów wyjściowych ciała grzybkowatego."
+    },
+    "turn": {
+      "name": "Neurony skrętu",
+      "text": "Komórki nerwowe, które wysyłają impulsy, gdy muszka skręca, i przesuwają górkę po kompasie. Naukowcy nazywają je neuronami P-EN2."
+    },
+    "compass": {
+      "name": "Neurony kompasu",
+      "text": "Pierścień komórek nerwowych, który śledzi, w którą stronę zwrócona jest muszka. Naukowcy nazywają je neuronami E-PG."
+    },
+    "ring": {
+      "name": "Neurony pierścieniowe",
+      "text": "Komórki nerwowe, które przynoszą do kompasu to, co widzi muszka, na przykład punkty orientacyjne. Uciszają neurony kompasu i dzięki temu górka trzyma się miejsca."
+    },
+    "looming": {
+      "name": "Neurony zbliżeniowe",
+      "text": "Komórki nerwowe za oczami muszki. Wysyłają impulsy, gdy coś szybko rośnie w polu widzenia, na przykład zbliżająca się packa. Naukowcy nazywają je LC4 i LPLC2."
+    },
+    "giantfiber": {
+      "name": "Włókno olbrzymie",
+      "text": "Bardzo gruba komórka nerwowa, która biegnie z mózgu w dół, do łańcuszka nerwowego. Niesie najszybszy sygnał ucieczki muszki."
+    },
+    "nervecord": {
+      "name": "Łańcuszek nerwowy",
+      "text": "Odpowiednik rdzenia kręgowego u muszki: wiązka komórek nerwowych w tułowiu, która steruje nogami i skrzydłami."
+    },
+    "jump": {
+      "name": "Neurony skoku",
+      "text": "Neurony ruchowe, które kurczą mięśnie skokowe środkowych nóg, dzięki czemu muszka wyskakuje w powietrze."
+    }
+  },
+  "teachers": {
+    "meta": {
+      "indexTitle": "Przewodniki dla nauczycieli · WiredMind",
+      "indexDescription": "Plan lekcji, oczekiwane odpowiedzi, pytania do dyskusji i karta pracy ucznia do wydrukowania do każdej lekcji WiredMind.",
+      "guideTitle": "Przewodnik dla nauczyciela: {title}",
+      "guideDescription": "Plan na 45 minut do lekcji „{title}”: cel lekcji, co uczniowie powinni zauważyć, oczekiwane odpowiedzi, pytania do dyskusji i częste błędne przekonania.",
+      "worksheetTitle": "Karta pracy: {title}",
+      "worksheetDescription": "Karta pracy ucznia do wydrukowania do lekcji „{title}”: przewiduj, sprawdź, obserwuj, wyjaśnij."
+    },
+    "index": {
+      "title": "Przewodniki dla nauczycieli",
+      "lead": "Wszystko, czego potrzeba, żeby poprowadzić każdą lekcję bez żadnego szkolenia: plan na 45 minut, co uczniowie powinni zauważyć, jakich odpowiedzi się spodziewać i karta pracy do wydrukowania.",
+      "lesson": "Lekcja {number}",
+      "guide": "Przewodnik dla nauczyciela",
+      "worksheet": "Karta pracy ucznia",
+      "demo": "Pokaz dla klasy"
+    },
+    "topics": {
+      "excitation": "Pobudzanie i hamowanie",
+      "synapses": "Synapsy i neuroprzekaźniki",
+      "reflex": "Łuk odruchowy",
+      "structure": "Jak budowa sieci decyduje o zachowaniu"
+    },
+    "guide": {
+      "eyebrow": "Przewodnik dla nauczyciela · Lekcja {number}",
+      "print": "Drukuj",
+      "lesson": "Otwórz lekcję",
+      "demo": "Odtwórz „Pokaż mi” w trybie klasowym",
+      "worksheet": "Karta pracy ucznia",
+      "all": "Wszystkie przewodniki dla nauczycieli",
+      "address": "Adres lekcji",
+      "setupTitle": "Co będzie potrzebne",
+      "setup": "Projektor i jedno urządzenie na każdą parę uczniów: laptop, tablet albo telefon. Niczego nie trzeba instalować ani zakładać kont. Każda lekcja zaczyna się od krótkiego wprowadzenia, jak czytać ekran, a każdy termin naukowy można nacisnąć, żeby zobaczyć wyjaśnienie.",
+      "goalTitle": "Cel lekcji",
+      "topicsTitle": "Powiązane tematy",
+      "planTitle": "Plan na 45 minut",
+      "minutes": "{minutes} min",
+      "phases": {
+        "opening": "Pytanie na początek",
+        "demo": "Pokaz z „Pokaż mi”",
+        "explore": "Uczniowie badają sami",
+        "discuss": "Dyskusja"
+      },
+      "plan": {
+        "demo": "Lekcję należy wyświetlić w trybie klasowym i nacisnąć „Pokaż mi, jak to działa”. Każdy krok warto czytać na głos w trakcie pokazu. Pokaz zatrzymuje się na pytaniu z lekcji: na razie lepiej zostawić je bez odpowiedzi.",
+        "explore": "Uczniowie pracują w parach na własnych urządzeniach, z kartą pracy. Przed każdym naciśnięciem zapisują przewidywanie, przechodzą lekcję, odpowiadają na jej pytanie i próbują swobodnych eksperymentów.",
+        "discuss": "Najpierw warto zebrać odpowiedzi par na pytanie z lekcji, a potem sięgnąć po pytania do dyskusji poniżej. Na koniec: co model pomija."
+      },
+      "noticeTitle": "Co uczniowie powinni zauważyć w każdym kroku",
+      "step": "Krok {number}",
+      "answerTitle": "Pytanie z lekcji i oczekiwana odpowiedź",
+      "rightChoice": "Prawidłowa odpowiedź",
+      "discussTitle": "Pytania do dyskusji",
+      "misconceptionsTitle": "Częste błędne przekonania",
+      "claim": "Uczniowie mogą myśleć:",
+      "fix": "Jak na to odpowiedzieć:",
+      "realTitle": "Co jest prawdziwe, a co uproszczone",
+      "real": "Prawdziwe",
+      "simplified": "Uproszczone",
+      "realShared": "Każdy neuron i każde połączenie w lekcji pochodzi ze schematu połączeń jednej prawdziwej muszki owocowej, z prawdziwą liczbą synaps między każdą parą komórek.",
+      "simplifiedShared": "Aktywność to prosta symulacja, w której każdy neuron działa według tych samych podstawowych reguł, odtwarzana w zwolnionym tempie.",
+      "realMore": "Pełna lista, z liczbami",
+      "termsTitle": "Kluczowe pojęcia",
+      "curriculumTitle": "Zgodność z podstawą programową",
+      "curriculumPending": "Ta część nie jest jeszcze uzupełniona. Zgodność z oficjalną podstawą programową z biologii jest właśnie potwierdzana z nauczycielami biologii."
+    },
+    "worksheet": {
+      "eyebrow": "Karta pracy ucznia · Lekcja {number}",
+      "name": "Imię i nazwisko",
+      "class": "Klasa",
+      "date": "Data",
+      "address": "Otwórz lekcję pod adresem",
+      "predict": "Przewiduj",
+      "predictHint": "Zanim cokolwiek naciśniesz.",
+      "try": "Sprawdź",
+      "tryText": "Otwórz lekcję i wykonuj jej kroki. Przed każdym naciśnięciem powiedz na głos, co twoim zdaniem się stanie.",
+      "observe": "Obserwuj",
+      "observeHint": "Dla każdego kroku: które kolory się zapaliły, a które pozostały ciemne?",
+      "step": "Krok {number}",
+      "explain": "Wyjaśnij",
+      "question": "Pytanie z lekcji"
+    },
+    "lessons": {
+      "smell-memory": {
+        "goal": "Uczniowie śledzą drogę zapachu od receptorów do komórek, które odczytują jego wspomnienie, i pokazują, że wyciszenie jednej warstwy szlaku odcina wszystko, co leży za nią.",
+        "topics": {
+          "synapses": "Każda warstwa przekazuje sygnał następnej przez synapsy. Naukowcy uważają, że sama pamięć to zmiana siły synaps między komórkami Kenyona a neuronami wyjściowymi.",
+          "structure": "Szlak jest łańcuchem warstw, dlatego wyciszenie komórek Kenyona gasi neurony wyjściowe, mimo że zapach wciąż dociera do mózgu.",
+          "excitation": "„Pobudź” pobudza komórki, a „Wycisz” nie pozwala im działać: to dwa narzędzia tej lekcji. W tej części obwodu każda warstwa pobudza następną."
+        },
+        "opening": "Pytanie do klasy: „Skąd twój mózg wie, że ten zapach już kiedyś spotkał?”. Po kilku próbach odpowiedzi warto powiedzieć, że dziś klasa poszuka odpowiedzi w mózgu muszki.",
+        "notice": {
+          "send": "Zapalają się tylko pomarańczowe receptory węchowe. Sygnał zaczyna się na jednym końcu obwodu, a nie wszędzie naraz.",
+          "follow": "Kolory zapalają się po kolei: pomarańczowy, potem żółty, potem niebieski. Sygnał przechodzi przez warstwy jedna po drugiej.",
+          "read": "Różowe neurony wyjściowe zapalają się na końcu i dopiero po niebieskich komórkach Kenyona.",
+          "silence": "Pomarańczowy i żółty wciąż się zapalają, niebieski pozostaje ciemny, a różowy prawie znika. Zapach dotarł do mózgu, ale nie mógł pójść dalej.",
+          "restore": "Różowy wraca, gdy tylko komórki Kenyona znów są włączone. Nic nie zostało uszkodzone: sygnał po prostu nie miał którędy przejść."
+        },
+        "answer": "Komórki Kenyona przekazują wzór każdego zapachu neuronom wyjściowym. Gdy są wyciszone, zapach wciąż dociera do receptorów i neuronów projekcyjnych, ale neurony wyjściowe nie mają czego odczytać. Uczniów, którzy odpowiedzą „zapach w ogóle nie dostał się do muszki”, warto odesłać do pomarańczowych i żółtych komórek.",
+        "discuss": {
+          "a": "Gdy komórki Kenyona były wyciszone, zapach wciąż docierał do mózgu. Skąd to wiemy?",
+          "b": "Załóżmy, że muszka nauczyła się, że ten zapach oznacza cukier. W którym miejscu tego obwodu coś powinno się wtedy zmienić?",
+          "c": "Co będzie widać, jeśli zamiast nich wyciszy się żółte neurony projekcyjne? Warto to sprawdzić w swobodnych eksperymentach."
+        },
+        "misconceptions": {
+          "a": {
+            "claim": "Wspomnienie siedzi w jednej komórce, jak plik.",
+            "fix": "Warto wrócić do kroku, w którym różowe komórki odczytują niebieskie. Uważa się, że pamięć tkwi w sile wielu połączeń między tymi dwiema grupami, a nie w pojedynczej komórce."
+          },
+          "b": {
+            "claim": "Wyciszenie komórki zabija ją albo uszkadza.",
+            "fix": "Wystarczy powtórzyć ostatni krok: różowe światło wraca od razu. Wyciszone komórki są całe. Po prostu nie wysyłają impulsów."
+          },
+          "c": {
+            "claim": "Lekcja pokazuje, jak muszka uczy się zapachu.",
+            "fix": "Nie pokazuje. Model pokazuje, gdzie wspomnienie byłoby zapisane, ale jego połączenia nigdy się nie zmieniają. Warto powiedzieć to wprost i zapytać, co trzeba by dodać."
+          }
+        },
+        "real": {
+          "a": "Cztery grupy komórek i kolejność, w jakiej się łączą, to prawdziwy szlak węchowy muszki."
+        },
+        "simplified": {
+          "a": "„Pobudź” uruchamia wszystkie receptory węchowe naraz. Prawdziwy zapach włącza tylko niektóre rodzaje receptorów, układające się we wzór.",
+          "b": "Nic w modelu się nie uczy: nie ma w nim sygnału nagrody, a jego połączenia nigdy się nie zmieniają."
+        },
+        "worksheet": {
+          "predict": {
+            "a": "Zapach dociera do czułków. Jak myślisz, który kolor zapali się jako ostatni?",
+            "b": "Jak myślisz, co się stanie z różowymi komórkami, jeśli niebieskie komórki zostaną wyłączone?"
+          },
+          "explain": {
+            "a": "Dlaczego różowe komórki zgasły, gdy niebieskie zostały wyciszone, chociaż zapach wciąż docierał do mózgu?",
+            "b": "W którym miejscu tego obwodu, zdaniem naukowców, zapisane jest wspomnienie zapachu?"
+          }
+        }
+      },
+      "compass": {
+        "goal": "Uczniowie widzą, że pierścień neuronów przechowuje kierunek muszki jako jedną plamę aktywności, a hamowanie przez neurony pierścieniowe utrzymuje tę plamę w miejscu.",
+        "topics": {
+          "excitation": "Najwyraźniejszy przykład w trzech lekcjach. Neurony skrętu pobudzają kompas i przesuwają górkę; neurony pierścieniowe hamują go i utrzymują górkę w miejscu.",
+          "synapses": "Przewiduje się, że neurony pierścieniowe uwalniają GABA, przekaźnik hamujący. Neurony kompasu i neurony skrętu uwalniają acetylocholinę, która pobudza.",
+          "structure": "Neurony kompasu są połączone w pierścień i to dzięki temu kształtowi jedna górka aktywności może oznaczać jeden kierunek."
+        },
+        "opening": "Pytanie do klasy: „Zamknij oczy i obróć się raz dookoła. Skąd nadal wiesz, w którą stronę stoisz?”. Potem warto powiedzieć, że muszka robi to za pomocą małego pierścienia komórek, a klasa zaraz zacznie je popychać.",
+        "notice": {
+          "left": "Po jednej stronie pierścienia zapala się plama zielonych neuronów kompasu, a igła tarczy wskazuje właśnie ją. Ta plama to górka.",
+          "right": "Górka przesuwa się po tarczy. Dwa sygnały skrętu pchają ją w przeciwne strony.",
+          "silence": "Gdy fioletowe neurony pierścieniowe są wyłączone, po tym samym sygnale górka wędruje, zamiast zatrzymać się w jednym miejscu.",
+          "restore": "Górka znów trzyma się swojego miejsca. Warto porównać tarczę z poprzednim krokiem."
+        },
+        "answer": "Nic nie mówiło kompasowi, gdzie są punkty orientacyjne, więc nic nie trzymało górki w miejscu. Sygnał skrętu wciąż docierał, bo zielone komórki się zapalały, czyli brakowało kotwicy, a nie sygnału wejściowego. Dla starszych uczniów: w tym modelu kotwicą jest hamowanie przez neurony pierścieniowe.",
+        "discuss": {
+          "a": "Dlaczego pierścień to dobry kształt dla komórek, które śledzą kierunek?",
+          "b": "Neurony pierścieniowe uciszają inne komórki, zamiast je pobudzać. Jak wyłączanie komórek może pomóc sieci działać lepiej?",
+          "c": "Ludzie też tracą orientację w ciemności albo we mgle. Co to ma wspólnego z krokiem, w którym wyciszamy komórki?"
+        },
+        "misconceptions": {
+          "a": {
+            "claim": "Muszka ma kompas magnetyczny, taki jak w telefonie.",
+            "fix": "Ten kompas to wzór aktywności, który muszka aktualizuje na podstawie własnych skrętów i tego, co widzi. Nic w tym obwodzie nie wyczuwa pola magnetycznego."
+          },
+          "b": {
+            "claim": "Im więcej aktywnych komórek, tym lepszy sygnał.",
+            "fix": "Warto porównać dwa ostatnie kroki: bez hamowania kompas działał gorzej. Hamowanie jest częścią tego, jak działa obwód."
+          },
+          "c": {
+            "claim": "Górka to przedmiot, który wędruje przez mózg.",
+            "fix": "Żadna komórka się nie przesuwa. Sąsiednie komórki uaktywniają się po kolei, jak fala meksykańska na stadionie."
+          }
+        },
+        "real": {
+          "a": "Neurony kompasu, neurony skrętu i neurony pierścieniowe to prawdziwe typy komórek, połączone w pierścień tak jak u muszki."
+        },
+        "simplified": {
+          "a": "W modelu neurony pierścieniowe nie niosą żadnego obrazu świata. Ich wyciszenie usuwa hamowanie i to właśnie przez to górka dryfuje.",
+          "b": "Tarcza to nasz własny sposób pokazania aktywności zielonych komórek. Muszka nie ma żadnej tarczy."
+        },
+        "worksheet": {
+          "predict": {
+            "a": "Jak myślisz, co pokaże tarcza kompasu, gdy pobudzisz lewe neurony skrętu? A gdy prawe?",
+            "b": "Jak myślisz, co się stanie z górką, jeśli fioletowe neurony pierścieniowe zostaną wyłączone?"
+          },
+          "explain": {
+            "a": "Dlaczego górka dryfowała, gdy neurony pierścieniowe były wyciszone?",
+            "b": "Dlaczego pierścień to dobry kształt dla komórek, które śledzą kierunek?"
+          }
+        }
+      },
+      "escape": {
+        "goal": "Uczniowie śledzą odruch od oczu do mięśni nóg, trwający około 30 milisekund, i pokazują, że szybka ucieczka zależy od jednego ogniwa: włókna olbrzymiego.",
+        "topics": {
+          "reflex": "Cała droga odruchu w trzech częściach: neurony czuciowe (neurony zbliżeniowe), przekaźnik (włókno olbrzymie) i neurony ruchowe (neurony skoku). Inaczej niż w odruchu kolanowym, ten przekaźnik biegnie przez mózg.",
+          "structure": "Sygnał z setek neuronów zbliżeniowych zbiega się na włóknie olbrzymim. To wąskie gardło sprawia, że wyciszenie jednego rodzaju komórek usuwa całe zachowanie.",
+          "synapses": "Włókno olbrzymie jest grube, dlatego jego sygnał jest szybki. U prawdziwej muszki korzysta też z synaps elektrycznych, najszybszych ze wszystkich; w modelu są tylko synapsy chemiczne."
+        },
+        "opening": "Pytanie do klasy: „Dlaczego tak trudno trafić muszkę packą?”. Po zebraniu kilku pomysłów warto powiedzieć, że klasa zmierzy czas ucieczki muszki i znajdzie kabel, który za nią stoi.",
+        "notice": {
+          "loom": "Najpierw zapalają się niebieskie neurony zbliżeniowe, a czerwone włókno olbrzymie niemal od razu po nich.",
+          "jump": "Aktywność biegnie włóknem olbrzymim w dół, do łańcuszka nerwowego, a żółte neurony skoku wysyłają impulsy w ciągu 30 milisekund czasu muszki.",
+          "silence": "Niebieski wciąż się zapala, czerwony pozostaje ciemny, a żółty nie zapala się wcale. Muszka zobaczyła packę, ale wiadomość nie dotarła do nóg.",
+          "restore": "Żółty zapala się znowu, gdy tylko włókno olbrzymie jest z powrotem włączone."
+        },
+        "answer": "Włókno olbrzymie niesie sygnał do skoku od neuronów zbliżeniowych do neuronów skoku. Gdy jest wyciszone, muszka wciąż widzi packę, bo niebieskie komórki się zapalają, ale sygnał zatrzymuje się przed nogami. Prawdziwe muszki mają też wolniejsze drogi ucieczki, o czym mówi ostatni krok lekcji.",
+        "discuss": {
+          "a": "Ta ucieczka trwa krócej niż mrugnięcie okiem. Jakie cechy tego szlaku sprawiają, że jest tak szybka?",
+          "b": "Dlaczego zwierzęciu może się opłacać jedna szybka droga ucieczki i kilka wolniejszych?",
+          "c": "Warto porównać ten szlak ze znanym odruchem człowieka, na przykład cofnięciem ręki od czegoś gorącego. Co jest takie samo, a co inne?"
+        },
+        "misconceptions": {
+          "a": {
+            "claim": "Muszka decyduje, że skoczy.",
+            "fix": "Szybki skok to odruch: połączenia przenoszą sygnał prosto do celu. Nie ma etapu, na którym muszka rozważa, co zrobić."
+          },
+          "b": {
+            "claim": "Skoro muszka nie skoczyła, to nie widziała packi.",
+            "fix": "Krok z wyciszeniem rozdziela te dwie rzeczy. Neurony zbliżeniowe wysyłają impulsy, więc muszka widziała packę. Widzenie i działanie to różne etapy jednego szlaku."
+          },
+          "c": {
+            "claim": "Jeden neuron nie może mieć znaczenia w całym mózgu.",
+            "fix": "Tutaj jeden rodzaj komórek niesie cały szybki sygnał. Wszędzie tam, gdzie szlak zwęża się do kilku komórek, każda z nich ma ogromne znaczenie."
+          }
+        },
+        "real": {
+          "a": "Neurony zbliżeniowe, włókno olbrzymie i neurony skoku są prawdziwe, tak samo jak droga między nimi."
+        },
+        "simplified": {
+          "a": "Te 30 milisekund wynika z prostych reguł czasowych modelu, a nie z pomiarów u muszki. Mieści się w realistycznym zakresie.",
+          "b": "„Pobudź” uruchamia wszystkie neurony zbliżeniowe naraz. Prawdziwa packa włącza je stopniowo, w miarę jak rośnie w polu widzenia."
+        },
+        "worksheet": {
+          "predict": {
+            "a": "Nadlatuje packa. Jak myślisz, w jakiej kolejności zapalą się trzy kolory?",
+            "b": "Jak myślisz, co się stanie z żółtymi neuronami skoku, jeśli czerwone włókno olbrzymie zostanie wyłączone?"
+          },
+          "explain": {
+            "a": "Dlaczego neurony skoku pozostały ciemne, chociaż muszka widziała packę?",
+            "b": "Jakie cechy tego szlaku sprawiają, że ucieczka jest tak szybka?"
+          }
+        }
+      }
     }
   }
 }

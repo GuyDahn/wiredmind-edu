@@ -3,7 +3,7 @@
     "locale": "nl",
     "reviewed": false,
     "model": "claude-opus-5-5",
-    "draftedAt": "2026-09-27",
+    "draftedAt": "2026-10-05",
     "sameAsSource": ["landing.teachers.points.open.title"]
   },
   "meta": {
@@ -144,7 +144,11 @@
       },
       "source": "Bekijk de broncode op GitHub",
       "science": "Wat is echt en wat is vereenvoudigd?",
-      "feedback": "Is iets onduidelijk of kapot? Laat het me weten."
+      "feedback": "Is iets onduidelijk of kapot? Laat het me weten.",
+      "guidesTitle": "Geef morgen al een les",
+      "guidesLead": "Bij elke les hoort een docentenhandleiding met een lesplan van 45 minuten en een werkblad om te printen.",
+      "guide": "Docentenhandleiding",
+      "worksheet": "Werkblad"
     }
   },
   "about": {
@@ -394,6 +398,12 @@
         "pn": "Voorkomt dat de antennekwab de geur doorgeeft aan het paddenstoellichaam.",
         "kc": "Legt de cellen stil die de ene geur van de andere onderscheiden.",
         "mbon": "Voorkomt dat het paddenstoellichaam het resultaat doorgeeft aan de rest van het brein."
+      },
+      "plain": {
+        "orn": "Geurvangers",
+        "pn": "Geurboodschappers",
+        "kc": "Geursorteerders",
+        "mbon": "Geheugenlezers"
       }
     },
     "visual": {
@@ -410,6 +420,12 @@
       "silence": {
         "ring": "Blokkeert de ringneuronen die oriëntatiepunten vanuit de ogen doorgeven.",
         "compass": "Legt de E-PG-richtingcellen stil die samen het kompas vormen."
+      },
+      "plain": {
+        "ring": "Wegwijzers",
+        "compass": "Richtingcellen",
+        "turn-left": "Draaisignaal links",
+        "turn-right": "Draaisignaal rechts"
       }
     },
     "escape": {
@@ -425,6 +441,11 @@
         "looming": "Voorkomt dat de oogcellen de duikvlucht melden.",
         "gf": "Blokkeert de reuzenvezel, de snelste ontsnappingsdraad van de vlieg.",
         "jump": "Legt de motorneuronen stil die de middelste poten een schop geven."
+      },
+      "plain": {
+        "looming": "Meppermelders",
+        "gf": "Ontsnappingsdraad",
+        "jump": "Pootschoppers"
       }
     }
   },
@@ -525,6 +546,49 @@
       "left": "L",
       "right": "R",
       "caption": "Kompas · van achteren gezien"
+    },
+    "terms": {
+      "hint": "Uitleg bij {term}",
+      "close": "Sluiten"
+    },
+    "legend": {
+      "title": "Kleurenlegenda",
+      "glow": "Licht op = vuurt nu"
+    },
+    "intro": {
+      "label": "Zo lees je dit brein",
+      "progress": "{number} van {total}",
+      "skip": "Overslaan",
+      "next": "Volgende",
+      "start": "Start de les",
+      "screens": {
+        "lines": {
+          "title": "Deze lijnen zijn echte neuronen",
+          "text": "Elke lijn is één echte zenuwcel van een fruitvlieg, getekend op de plek waar hij in het lijf van de vlieg zit. Sleep over het brein om het te draaien."
+        },
+        "colors": {
+          "title": "Elke kleur is één groep cellen",
+          "text": "Cellen die hetzelfde werk doen, hebben dezelfde kleur. Licht een kleur op, dan vuren die cellen op dat moment."
+        },
+        "buttons": {
+          "title": "Jij doet het experiment",
+          "text": "Stimuleren: we laten deze cellen vuren. Stilleggen: we zetten deze cellen uit. Daarna kijk jij wat er verandert."
+        },
+        "time": {
+          "title": "Alles speelt vertraagd af",
+          "text": "Een echte vlieg doet dit in een oogwenk. Hier loopt de tijd vele malen trager, zodat je het signaal kunt zien reizen."
+        }
+      }
+    },
+    "classMode": {
+      "label": "Klasmodus",
+      "hint": "Klasmodus: grotere tekst en knoppen voor op het digibord"
+    },
+    "demo": {
+      "start": "Laat zien hoe het werkt",
+      "playing": "We laten zien hoe het werkt",
+      "upNext": "Hierna tikken we op {action}: {name}",
+      "stop": "Stop en neem het over"
     }
   },
   "errors": {
@@ -538,6 +602,306 @@
       "body": "Er is een fout opgetreden op deze pagina. Probeer het opnieuw of ga terug naar de lessen.",
       "retry": "Opnieuw proberen",
       "home": "Naar de lessen"
+    }
+  },
+  "terms": {
+    "antenna": {
+      "name": "Antennes",
+      "text": "De twee voelsprieten op de kop van een vlieg. Een vlieg ruikt ermee, zoals jij met je neus ruikt."
+    },
+    "receptor": {
+      "name": "Geurreceptoren",
+      "text": "Zenuwcellen op de antennes die vuren als er een geur op terechtkomt. Elke geur begint hier."
+    },
+    "antennallobe": {
+      "name": "Antennekwab",
+      "text": "De eerste halte voor geuren in het vliegenbrein. Hier geven de geurreceptoren hun signaal door aan de projectieneuronen."
+    },
+    "projection": {
+      "name": "Projectieneuronen",
+      "text": "Zenuwcellen die het geursignaal van de antennekwab dieper het brein in brengen, naar het paddenstoellichaam."
+    },
+    "mushroombody": {
+      "name": "Paddenstoellichaam",
+      "text": "Een deel van het insectenbrein in de vorm van een paddenstoel. Hier worden geuren gesorteerd en geurherinneringen bewaard."
+    },
+    "kenyon": {
+      "name": "Kenyon-cellen",
+      "text": "De kleine zenuwcellen van het paddenstoellichaam. Elke geur zet een ander handjevol ervan aan, dus elke geur krijgt een eigen patroon."
+    },
+    "output": {
+      "name": "Outputneuronen",
+      "text": "Zenuwcellen die het patroon van de Kenyon-cellen lezen en doorgeven aan de rest van het brein. Wetenschappers noemen ze MBON’s: de outputneuronen van het paddenstoellichaam."
+    },
+    "turn": {
+      "name": "Draaineuronen",
+      "text": "Zenuwcellen die vuren als de vlieg draait en de bult over het kompas duwen. Wetenschappers noemen ze P-EN2-neuronen."
+    },
+    "compass": {
+      "name": "Kompasneuronen",
+      "text": "Een ring van zenuwcellen die bijhoudt welke kant de vlieg op kijkt. Wetenschappers noemen ze E-PG-neuronen."
+    },
+    "ring": {
+      "name": "Ringneuronen",
+      "text": "Zenuwcellen die naar het kompas brengen wat de vlieg ziet, zoals oriëntatiepunten. Ze remmen de kompasneuronen af, en dat houdt de bult op zijn plek."
+    },
+    "looming": {
+      "name": "Naderingsneuronen",
+      "text": "Zenuwcellen achter de ogen van de vlieg. Ze vuren als iets snel groter wordt in beeld, zoals een naderende vliegenmepper. Wetenschappers noemen ze LC4 en LPLC2."
+    },
+    "giantfiber": {
+      "name": "Reuzenvezel",
+      "text": "Een heel dikke zenuwcel die van het brein omlaag loopt, de zenuwstreng in. Hij vervoert het snelste ontsnappingssignaal van de vlieg."
+    },
+    "nervecord": {
+      "name": "Zenuwstreng",
+      "text": "Het ruggenmerg van de vlieg, zeg maar: een bundel zenuwcellen in het borststuk die de poten en vleugels aanstuurt."
+    },
+    "jump": {
+      "name": "Springneuronen",
+      "text": "Motorneuronen die de springspieren van de middelste poten laten samentrekken, zodat de vlieg de lucht in schiet."
+    }
+  },
+  "teachers": {
+    "meta": {
+      "indexTitle": "Docentenhandleidingen · WiredMind",
+      "indexDescription": "Bij elke les van WiredMind: een lesplan, de antwoorden die je kunt verwachten, discussievragen en een werkblad voor leerlingen om te printen.",
+      "guideTitle": "Docentenhandleiding: {title}",
+      "guideDescription": "Een lesplan van 45 minuten bij “{title}”: leerdoel, wat leerlingen moeten opmerken, verwachte antwoorden, discussievragen en veelvoorkomende misvattingen.",
+      "worksheetTitle": "Werkblad: {title}",
+      "worksheetDescription": "Een werkblad voor leerlingen bij “{title}”, om te printen: voorspellen, proberen, waarnemen, verklaren."
+    },
+    "index": {
+      "title": "Docentenhandleidingen",
+      "lead": "Alles wat je nodig hebt om elke les te geven, zonder training: een lesplan van 45 minuten, wat leerlingen moeten opmerken, de antwoorden die je kunt verwachten en een werkblad om te printen.",
+      "lesson": "Les {number}",
+      "guide": "Docentenhandleiding",
+      "worksheet": "Werkblad voor leerlingen",
+      "demo": "Laat het de klas zien"
+    },
+    "topics": {
+      "excitation": "Excitatie en inhibitie",
+      "synapses": "Synapsen en neurotransmitters",
+      "reflex": "Reflexbogen",
+      "structure": "Hoe de bouw van een netwerk het gedrag bepaalt"
+    },
+    "guide": {
+      "eyebrow": "Docentenhandleiding · Les {number}",
+      "print": "Printen",
+      "lesson": "Open de les",
+      "demo": "Speel “Laat zien” af in klasmodus",
+      "worksheet": "Werkblad voor leerlingen",
+      "all": "Alle docentenhandleidingen",
+      "address": "Adres van de les",
+      "setupTitle": "Wat je nodig hebt",
+      "setup": "Een beamer of digibord, en één apparaat per tweetal: een laptop, tablet of telefoon. Je hoeft niets te installeren en er zijn geen accounts nodig. Elke les begint met een korte uitleg over hoe je het scherm leest, en op elke wetenschappelijke term kun je tikken voor uitleg.",
+      "goalTitle": "Leerdoel",
+      "topicsTitle": "Onderwerpen waar de les bij aansluit",
+      "planTitle": "Een lesplan van 45 minuten",
+      "minutes": "{minutes} min",
+      "phases": {
+        "opening": "Openingsvraag",
+        "demo": "Demonstratie met “Laat zien”",
+        "explore": "Leerlingen gaan zelf aan de slag",
+        "discuss": "Nabespreking"
+      },
+      "plan": {
+        "demo": "Projecteer de les in klasmodus en druk op “Laat zien hoe het werkt”. Lees elke stap hardop voor terwijl hij afspeelt. De demonstratie stopt bij de vraag van de les: laat die nog even onbeantwoord.",
+        "explore": "De leerlingen werken in tweetallen op hun eigen apparaat, met het werkblad erbij. Voor elke tik schrijven ze een voorspelling op. Ze doorlopen de les, beantwoorden de vraag en proberen vrij spel uit.",
+        "discuss": "Verzamel de antwoorden van de tweetallen op de vraag van de les en gebruik daarna de discussievragen hieronder. Sluit af met wat het model weglaat."
+      },
+      "noticeTitle": "Wat leerlingen bij elke stap moeten opmerken",
+      "step": "Stap {number}",
+      "answerTitle": "De vraag van de les, en het antwoord dat je kunt verwachten",
+      "rightChoice": "Het juiste antwoord",
+      "discussTitle": "Discussievragen",
+      "misconceptionsTitle": "Veelvoorkomende misvattingen",
+      "claim": "Leerlingen denken misschien:",
+      "fix": "Zo ga je erop in:",
+      "realTitle": "Wat is echt en wat is vereenvoudigd?",
+      "real": "Echt",
+      "simplified": "Vereenvoudigd",
+      "realShared": "Elk neuron en elke verbinding in de les komt uit het bedradingsschema van één echte fruitvlieg, met het echte aantal synapsen tussen elk paar cellen.",
+      "simplifiedShared": "De activiteit is een eenvoudige simulatie waarin elk neuron dezelfde basisregels volgt, en ze speelt vertraagd af.",
+      "realMore": "De volledige lijst, met getallen",
+      "termsTitle": "Kernbegrippen",
+      "curriculumTitle": "Aansluiting op het curriculum",
+      "curriculumPending": "Dit onderdeel is nog niet ingevuld. De aansluiting op het officiële biologiecurriculum wordt nog nagegaan met biologiedocenten."
+    },
+    "worksheet": {
+      "eyebrow": "Werkblad voor leerlingen · Les {number}",
+      "name": "Naam",
+      "class": "Klas",
+      "date": "Datum",
+      "address": "Open de les op",
+      "predict": "Voorspellen",
+      "predictHint": "Voordat je ergens op tikt.",
+      "try": "Proberen",
+      "tryText": "Open de les en volg de stappen. Zeg voor elke tik hardop wat er volgens jou gaat gebeuren.",
+      "observe": "Waarnemen",
+      "observeHint": "Bij elke stap: welke kleuren lichtten op, en welke bleven donker?",
+      "step": "Stap {number}",
+      "explain": "Verklaren",
+      "question": "De vraag van de les"
+    },
+    "lessons": {
+      "smell-memory": {
+        "goal": "Leerlingen volgen een geur van de receptoren tot de cellen die de herinnering eraan lezen, en laten zien dat het stilleggen van één laag in een route alles daarna afsnijdt.",
+        "topics": {
+          "synapses": "Elke laag geeft het signaal via synapsen door aan de volgende. Wetenschappers denken dat de herinnering zelf een verandering is in de sterkte van de synapsen van Kenyon-cellen naar outputneuronen.",
+          "structure": "De route is een keten van lagen. Daarom worden de outputneuronen donker als je de Kenyon-cellen stillegt, ook al komt de geur nog wel binnen.",
+          "excitation": "Stimuleren exciteert cellen en Stilleggen houdt ze uit: de twee gereedschappen van de les. In dit deel van het circuit exciteert elke laag de volgende."
+        },
+        "opening": "Vraag: “Hoe weet je brein dat je een geur al eens eerder hebt geroken?” Laat een paar leerlingen gokken en vertel dan dat de klas het antwoord vandaag gaat zoeken in een vlieg.",
+        "notice": {
+          "send": "Alleen de oranje geurreceptoren lichten op. Het signaal begint aan één rand van het circuit, niet overal tegelijk.",
+          "follow": "De kleuren lichten op volgorde op: eerst oranje, dan geel, dan blauw. Het signaal gaat laag voor laag door het circuit.",
+          "read": "De roze outputneuronen lichten als laatste op, en pas na de blauwe Kenyon-cellen.",
+          "silence": "Oranje en geel lichten nog op, blauw blijft donker en roze verdwijnt bijna. De geur kwam wel binnen, maar kon niet verder.",
+          "restore": "Roze komt terug zodra de Kenyon-cellen weer aan staan. Er was niets beschadigd: het signaal had alleen geen route."
+        },
+        "answer": "De Kenyon-cellen geven het patroon van elke geur door aan de outputneuronen. Zijn ze stilgelegd, dan bereikt de geur nog wel de receptoren en de projectieneuronen, maar krijgen de outputneuronen niets te lezen. Stuur leerlingen die “de geur kwam nooit binnen” antwoorden terug om naar de oranje en gele cellen te kijken.",
+        "discuss": {
+          "a": "De geur kwam het brein nog steeds binnen terwijl de Kenyon-cellen waren stilgelegd. Hoe weten we dat?",
+          "b": "Stel dat de vlieg heeft geleerd dat deze geur suiker betekent. Waar in dit circuit verwacht je dat er iets verandert?",
+          "c": "Wat verwacht je te zien als je in plaats daarvan de gele projectieneuronen stillegt? Test het in vrij spel."
+        },
+        "misconceptions": {
+          "a": {
+            "claim": "Een herinnering zit in één cel, als een bestand.",
+            "fix": "Ga terug naar de stap waarin roze het blauwe patroon leest. De herinnering zit vermoedelijk in de sterkte van veel verbindingen tussen de twee groepen, niet in één enkele cel."
+          },
+          "b": {
+            "claim": "Als je een cel stillegt, gaat hij dood of raakt hij beschadigd.",
+            "fix": "Doe de laatste stap nog een keer: het roze licht is meteen terug. Stilgelegde cellen zijn heel. Ze vuren alleen niet."
+          },
+          "c": {
+            "claim": "De les laat zien hoe de vlieg een geur leert.",
+            "fix": "Dat doet de les niet. Het model laat zien waar een herinnering zou worden opgeslagen, maar de verbindingen veranderen nooit. Zeg dat eerlijk, en vraag wat er zou moeten worden toegevoegd."
+          }
+        },
+        "real": {
+          "a": "De vier groepen cellen, en de volgorde waarin ze verbonden zijn, vormen de echte geurroute van de vlieg."
+        },
+        "simplified": {
+          "a": "Stimuleren laat alle geurreceptoren tegelijk vuren. Een echte geur zet maar een paar soorten receptoren aan, in een patroon.",
+          "b": "Niets in het model leert: er is geen beloningssignaal en de verbindingen veranderen nooit."
+        },
+        "worksheet": {
+          "predict": {
+            "a": "Een geur komt binnen bij de antennes. Welke kleur licht volgens jou als laatste op?",
+            "b": "Wat gebeurt er volgens jou met de roze cellen als de blauwe cellen worden uitgezet?"
+          },
+          "explain": {
+            "a": "Waarom werden de roze cellen donker toen je de blauwe cellen stillegde, terwijl de geur nog wel binnenkwam?",
+            "b": "Waar in dit circuit wordt de herinnering aan een geur volgens wetenschappers opgeslagen?"
+          }
+        }
+      },
+      "compass": {
+        "goal": "Leerlingen zien dat een ring van neuronen de kijkrichting van de vlieg vasthoudt als één vlek van activiteit, en dat inhibitie door de ringneuronen die vlek op zijn plek houdt.",
+        "topics": {
+          "excitation": "Het duidelijkste voorbeeld in de drie lessen. De draaineuronen exciteren het kompas en duwen de bult verder; de ringneuronen remmen het af en houden de bult stil.",
+          "synapses": "De ringneuronen geven naar verwachting GABA af, een remmende neurotransmitter. De kompasneuronen en de draaineuronen geven acetylcholine af, en dat exciteert.",
+          "structure": "De kompasneuronen zijn in een ring met elkaar verbonden. Door die vorm kan één bult van activiteit voor één richting staan."
+        },
+        "opening": "Vraag: “Doe je ogen dicht en draai één keer rond. Hoe weet je dan nog welke kant je op kijkt?” Vertel daarna dat een vlieg dit doet met een kleine ring van cellen, en dat de klas die zo meteen gaat rondduwen.",
+        "notice": {
+          "left": "Aan één kant van de ring licht een vlek groene kompasneuronen op, en de naald van de kompasschijf wijst ernaar. Die vlek is de bult.",
+          "right": "De bult verschuift over de kompasschijf. De twee draaisignalen duwen hem in tegengestelde richtingen.",
+          "silence": "Met de paarse ringneuronen uit laat hetzelfde signaal de bult ronddwalen, in plaats van dat hij op één plek tot rust komt.",
+          "restore": "De bult blijft weer op zijn plek. Vergelijk de kompasschijf met de vorige stap."
+        },
+        "answer": "Niets vertelde het kompas waar de oriëntatiepunten waren, dus niets hield de bult op zijn plek. Het draaisignaal kwam nog wel aan, want de groene cellen lichtten op. Er ontbrak dus een anker, geen input. Voor oudere leerlingen: in dit model is dat anker de inhibitie door de ringneuronen.",
+        "discuss": {
+          "a": "Waarom is een ring een goede vorm voor cellen die een richting bijhouden?",
+          "b": "De ringneuronen remmen andere cellen af in plaats van ze te exciteren. Hoe kan een netwerk beter werken doordat cellen worden uitgezet?",
+          "c": "Ook mensen raken hun richtinggevoel kwijt in het donker of in de mist. Wat heeft dat gemeen met de stap waarin je cellen stillegt?"
+        },
+        "misconceptions": {
+          "a": {
+            "claim": "De vlieg heeft een magnetisch kompas, net als een telefoon.",
+            "fix": "Dit kompas is een patroon van activiteit dat de vlieg bijwerkt met zijn eigen draaibewegingen en met wat hij ziet. Niets in dit circuit neemt magnetisme waar."
+          },
+          "b": {
+            "claim": "Meer actieve cellen geven altijd een beter signaal.",
+            "fix": "Vergelijk de laatste twee stappen: zonder inhibitie werd het kompas slechter. Inhibitie hoort bij de manier waarop het circuit werkt."
+          },
+          "c": {
+            "claim": "De bult is een ding dat door het brein reist.",
+            "fix": "Er beweegt geen enkele cel. Buurcellen zijn om de beurt actief, zoals bij een wave in een stadion."
+          }
+        },
+        "real": {
+          "a": "De kompasneuronen, de draaineuronen en de ringneuronen zijn echte celtypen, in een ring verbonden zoals in de vlieg."
+        },
+        "simplified": {
+          "a": "In het model dragen de ringneuronen geen beeld van de wereld. Door ze stil te leggen valt hun inhibitie weg, en daardoor kan de bult afdrijven.",
+          "b": "De kompasschijf is onze eigen weergave van de activiteit van de groene cellen. De vlieg heeft geen schijf."
+        },
+        "worksheet": {
+          "predict": {
+            "a": "Wat laat de kompasschijf volgens jou zien als je de draaineuronen links laat vuren? En die rechts?",
+            "b": "Wat gebeurt er volgens jou met de bult als de paarse ringneuronen worden uitgezet?"
+          },
+          "explain": {
+            "a": "Waarom dreef de bult weg toen de ringneuronen waren stilgelegd?",
+            "b": "Waarom is een ring een goede vorm voor cellen die een richting bijhouden?"
+          }
+        }
+      },
+      "escape": {
+        "goal": "Leerlingen volgen een reflex van de ogen naar de pootspieren in ongeveer 30 milliseconden, en laten zien dat de snelle ontsnapping afhangt van één schakel: de reuzenvezel.",
+        "topics": {
+          "reflex": "Een complete reflexroute in drie delen: sensorische neuronen (de naderingsneuronen), een schakel (de reuzenvezel) en motorneuronen (de springneuronen). Anders dan bij de kniepeesreflex loopt deze schakel door het brein.",
+          "structure": "Het signaal van honderden naderingsneuronen komt samen op de reuzenvezel. Door dat knelpunt verdwijnt het gedrag als je één soort cel stillegt.",
+          "synapses": "De reuzenvezel is dik, en dat maakt zijn signaal snel. In een echte vlieg gebruikt hij ook elektrische synapsen, de snelste soort; het model heeft alleen chemische synapsen."
+        },
+        "opening": "Vraag: “Waarom is het zo moeilijk om een vlieg dood te slaan?” Verzamel een paar ideeën en vertel dan dat de klas de ontsnapping van de vlieg gaat timen en de draad erachter gaat zoeken.",
+        "notice": {
+          "loom": "De blauwe naderingsneuronen lichten als eerste op, en de rode reuzenvezel volgt bijna meteen.",
+          "jump": "De activiteit loopt via de reuzenvezel omlaag de zenuwstreng in, en de gele springneuronen vuren binnen 30 milliseconden vliegentijd.",
+          "silence": "Blauw licht nog op, rood blijft donker en geel vuurt helemaal niet. De vlieg zag de vliegenmepper wel, maar de boodschap kwam niet bij zijn poten aan.",
+          "restore": "Geel vuurt weer zodra de reuzenvezel weer aan staat."
+        },
+        "answer": "De reuzenvezel brengt het springsignaal van de naderingsneuronen naar de springneuronen. Is hij stilgelegd, dan ziet de vlieg de vliegenmepper nog wel, want de blauwe cellen lichten op, maar het signaal stopt vóór de poten. Echte vliegen kunnen ook op tragere manieren ontsnappen, zoals de laatste stap van de les zegt.",
+        "discuss": {
+          "a": "Deze ontsnapping gaat sneller dan je met je ogen kunt knipperen. Door welke kenmerken van de route gaat het zo snel?",
+          "b": "Waarom kan het voor een dier handig zijn om één snelle ontsnappingsroute te hebben en een paar tragere?",
+          "c": "Vergelijk deze route met een reflex bij mensen die je kent, zoals je hand terugtrekken van iets heets. Wat is hetzelfde, en wat is anders?"
+        },
+        "misconceptions": {
+          "a": {
+            "claim": "De vlieg besluit om te springen.",
+            "fix": "De snelle sprong is een reflex: de bedrading stuurt het signaal er rechtstreeks doorheen. Er is geen stap waarin de vlieg afweegt wat hij gaat doen."
+          },
+          "b": {
+            "claim": "Als de vlieg niet sprong, heeft hij de vliegenmepper niet gezien.",
+            "fix": "De stap met stilleggen haalt die twee uit elkaar. De naderingsneuronen vuren, dus de vlieg zag hem. Zien en reageren zijn verschillende stappen van één route."
+          },
+          "c": {
+            "claim": "Eén neuron kan er in een heel brein niet toe doen.",
+            "fix": "Hier draagt één soort cel het hele snelle signaal. Overal waar een route versmalt tot een paar cellen, doet elke cel er enorm toe."
+          }
+        },
+        "real": {
+          "a": "De naderingsneuronen, de reuzenvezel en de springneuronen zijn echt, en de route ertussen ook."
+        },
+        "simplified": {
+          "a": "De 30 milliseconden komen uit de eenvoudige tijdsregels van het model, niet uit metingen aan een vlieg. Ze vallen wel binnen een realistisch bereik.",
+          "b": "Stimuleren laat alle naderingsneuronen tegelijk vuren. Een echte vliegenmepper zet ze geleidelijk aan, naarmate hij groter wordt in beeld."
+        },
+        "worksheet": {
+          "predict": {
+            "a": "Er komt een vliegenmepper aan. In welke volgorde lichten de drie kleuren volgens jou op?",
+            "b": "Wat gebeurt er volgens jou met de gele springneuronen als de rode reuzenvezel wordt uitgezet?"
+          },
+          "explain": {
+            "a": "Waarom bleven de springneuronen donker, terwijl de vlieg de vliegenmepper wel zag?",
+            "b": "Door welke kenmerken van deze route gaat de ontsnapping zo snel?"
+          }
+        }
+      }
     }
   }
 }

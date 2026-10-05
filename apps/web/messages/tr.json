@@ -3,7 +3,7 @@
     "locale": "tr",
     "reviewed": false,
     "model": "claude-opus-5-5",
-    "draftedAt": "2026-09-27"
+    "draftedAt": "2026-10-05"
   },
   "meta": {
     "home": {
@@ -143,7 +143,11 @@
       },
       "source": "Kaynak kodunu GitHub’da inceleyin",
       "science": "Neler gerçek, neler basitleştirilmiş",
-      "feedback": "Bir şey anlaşılmıyor mu ya da çalışmıyor mu? Bana bildirin."
+      "feedback": "Bir şey anlaşılmıyor mu ya da çalışmıyor mu? Bana bildirin.",
+      "guidesTitle": "Yarın bir ders işleyin",
+      "guidesLead": "Her dersin, 45 dakikalık bir plan içeren bir öğretmen kılavuzu ve yazdırabileceğiniz bir çalışma kâğıdı var.",
+      "guide": "Öğretmen kılavuzu",
+      "worksheet": "Çalışma kâğıdı"
     }
   },
   "about": {
@@ -393,6 +397,12 @@
         "pn": "Anten lobunun o kokuyu mantar cisimciğine taşımasını durdurur.",
         "kc": "Kokuları birbirinden ayırt eden hücreleri susturur.",
         "mbon": "Mantar cisimciğinin sonucu beynin geri kalanına iletmesini engeller."
+      },
+      "plain": {
+        "orn": "Koku yakalayıcıları",
+        "pn": "Koku habercileri",
+        "kc": "Koku ayırıcıları",
+        "mbon": "Bellek okuyucuları"
       }
     },
     "visual": {
@@ -409,6 +419,12 @@
       "silence": {
         "ring": "Yer işaretlerini gözlerden içeri taşıyan halka nöronlarını engeller.",
         "compass": "Pusulayı oluşturan E-PG yön hücrelerini susturur."
+      },
+      "plain": {
+        "ring": "Yer işareti taşıyıcıları",
+        "compass": "Yön hücreleri",
+        "turn-left": "Sol dönüş sinyali",
+        "turn-right": "Sağ dönüş sinyali"
       }
     },
     "escape": {
@@ -424,6 +440,11 @@
         "looming": "Göz hücrelerinin bu ani yaklaşmayı bildirmesini engeller.",
         "gf": "Sineğin en hızlı kaçış kablosu olan dev lifi engeller.",
         "jump": "Orta bacakları iten motor nöronlarını susturur."
+      },
+      "plain": {
+        "looming": "Sineklik gözcüleri",
+        "gf": "Kaçış kablosu",
+        "jump": "Bacak iticileri"
       }
     }
   },
@@ -524,6 +545,49 @@
       "left": "Sol",
       "right": "Sağ",
       "caption": "Pusula · arkadan bakış"
+    },
+    "terms": {
+      "hint": "{term} teriminin açıklaması",
+      "close": "Kapat"
+    },
+    "legend": {
+      "title": "Renk anahtarı",
+      "glow": "Parlıyor = şu an ateşleniyor"
+    },
+    "intro": {
+      "label": "Bu beyin nasıl okunur?",
+      "progress": "{number}/{total}",
+      "skip": "Geç",
+      "next": "İleri",
+      "start": "Derse başla",
+      "screens": {
+        "lines": {
+          "title": "Bu çizgiler gerçek nöronlar",
+          "text": "Her çizgi, bir meyve sineğinin gerçek bir sinir hücresi. Sineğin vücudunda durduğu yere çizildi. Beyni döndürmek için sürükle."
+        },
+        "colors": {
+          "title": "Her renk bir hücre grubu",
+          "text": "Aynı işi yapan hücreler aynı renktedir. Bir renk parlıyorsa o hücreler tam şu anda ateşleniyor demektir."
+        },
+        "buttons": {
+          "title": "Deneyi sen yürütüyorsun",
+          "text": "Uyar: Bu hücreleri ateşleriz. Sustur: Bu hücreleri kapatırız. Sonra neyin değiştiğini sen izlersin."
+        },
+        "time": {
+          "title": "Her şey ağır çekimde oynar",
+          "text": "Gerçek bir sinek bunu göz açıp kapayıncaya kadar yapar. Burada zaman kat kat yavaş akar; böylece sinyalin yol alışını izleyebilirsin."
+        }
+      }
+    },
+    "classMode": {
+      "label": "Sınıf modu",
+      "hint": "Sınıf modu: projeksiyon için daha büyük yazı ve düğmeler"
+    },
+    "demo": {
+      "start": "Nasıl çalıştığını göster",
+      "playing": "Nasıl çalıştığı gösteriliyor",
+      "upNext": "Sırada “{action}” var: {name}",
+      "stop": "Durdur ve kendin devam et"
     }
   },
   "errors": {
@@ -537,6 +601,306 @@
       "body": "Sayfada bir hata oluştu. Yeniden deneyin ya da derslere dönün.",
       "retry": "Yeniden deneyin",
       "home": "Derslere gidin"
+    }
+  },
+  "terms": {
+    "antenna": {
+      "name": "Antenler",
+      "text": "Sineğin başındaki iki duyarga. Sen nasıl burnunla koku alıyorsan sinek de onlarla koku alır."
+    },
+    "receptor": {
+      "name": "Koku reseptörleri",
+      "text": "Antenlerdeki sinir hücreleri. Üzerlerine bir koku konduğunda ateşlenirler. Her koku burada başlar."
+    },
+    "antennallobe": {
+      "name": "Anten lobu",
+      "text": "Kokuların sineğin beynindeki ilk durağı. Koku reseptörleri sinyallerini burada projeksiyon nöronlarına devreder."
+    },
+    "projection": {
+      "name": "Projeksiyon nöronları",
+      "text": "Koku sinyalini anten lobundan beynin daha derinine, mantar cisimciğine taşıyan sinir hücreleri."
+    },
+    "mushroombody": {
+      "name": "Mantar cisimciği",
+      "text": "Böcek beyninin mantar biçimli bir bölümü. Kokular burada ayrılır ve koku anıları burada saklanır."
+    },
+    "kenyon": {
+      "name": "Kenyon hücreleri",
+      "text": "Mantar cisimciğinin küçük sinir hücreleri. Her koku bunlardan farklı bir avuç hücreyi açar; böylece her kokunun kendi deseni olur."
+    },
+    "output": {
+      "name": "Çıktı nöronları",
+      "text": "Kenyon hücrelerinin desenini okuyup beynin geri kalanına ileten sinir hücreleri. Bilim insanları onlara MBON der: mantar cisimciği çıktı nöronları."
+    },
+    "turn": {
+      "name": "Dönüş nöronları",
+      "text": "Sinek döndüğünde ateşlenen ve tümseği pusula boyunca iten sinir hücreleri. Bilim insanları onlara P-EN2 nöronları der."
+    },
+    "compass": {
+      "name": "Pusula nöronları",
+      "text": "Sineğin hangi yöne baktığını takip eden, halka biçiminde dizilmiş sinir hücreleri. Bilim insanları onlara E-PG nöronları der."
+    },
+    "ring": {
+      "name": "Halka nöronları",
+      "text": "Sineğin gördüklerini, örneğin yer işaretlerini pusulaya taşıyan sinir hücreleri. Pusula nöronlarını yatıştırırlar; bu da tümseği yerinde tutar."
+    },
+    "looming": {
+      "name": "Yaklaşma nöronları",
+      "text": "Sineğin gözlerinin arkasındaki sinir hücreleri. Yaklaşan bir sineklik gibi bir şey görüş alanında hızla büyüdüğünde ateşlenirler. Bilim insanları onlara LC4 ve LPLC2 der."
+    },
+    "giantfiber": {
+      "name": "Dev lif",
+      "text": "Beyinden aşağıya, sinir kordonuna uzanan çok kalın bir sinir hücresi. Sineğin en hızlı kaçış sinyalini taşır."
+    },
+    "nervecord": {
+      "name": "Sinir kordonu",
+      "text": "Sineğin omuriliği sayılır: göğsünde bulunan, bacakları ve kanatları yöneten bir sinir hücresi demeti."
+    },
+    "jump": {
+      "name": "Sıçrama nöronları",
+      "text": "Orta bacakların sıçrama kaslarını kastıran motor nöronlar. Böylece sinek havaya fırlar."
+    }
+  },
+  "teachers": {
+    "meta": {
+      "indexTitle": "Öğretmen kılavuzları · WiredMind",
+      "indexDescription": "Her WiredMind dersi için ders planı, beklenen yanıtlar, tartışma soruları ve yazdırılabilir öğrenci çalışma kâğıdı.",
+      "guideTitle": "Öğretmen kılavuzu: {title}",
+      "guideDescription": "“{title}” için 45 dakikalık plan: öğrenme hedefi, öğrencilerin fark etmesi gerekenler, beklenen yanıtlar, tartışma soruları, sık yanılgılar.",
+      "worksheetTitle": "Çalışma kâğıdı: {title}",
+      "worksheetDescription": "“{title}” için yazdırılabilir öğrenci çalışma kâğıdı: tahmin et, dene, gözlemle, açıkla."
+    },
+    "index": {
+      "title": "Öğretmen kılavuzları",
+      "lead": "Her dersi hiçbir eğitim almadan işleyebilmeniz için gereken her şey burada: 45 dakikalık bir plan, öğrencilerin fark etmesi gerekenler, bekleyebileceğiniz yanıtlar ve yazdırabileceğiniz bir çalışma kâğıdı.",
+      "lesson": "Ders {number}",
+      "guide": "Öğretmen kılavuzu",
+      "worksheet": "Öğrenci çalışma kâğıdı",
+      "demo": "Sınıfa gösterin"
+    },
+    "topics": {
+      "excitation": "Uyarma ve baskılama",
+      "synapses": "Sinapslar ve nörotransmitterler",
+      "reflex": "Refleks yayları",
+      "structure": "Bir ağın yapısı davranışı nasıl belirler?"
+    },
+    "guide": {
+      "eyebrow": "Öğretmen kılavuzu · Ders {number}",
+      "print": "Yazdır",
+      "lesson": "Dersi aç",
+      "demo": "“Nasıl çalıştığını göster” gösterimini sınıf modunda oynat",
+      "worksheet": "Öğrenci çalışma kâğıdı",
+      "all": "Tüm öğretmen kılavuzları",
+      "address": "Dersin adresi",
+      "setupTitle": "Gerekenler",
+      "setup": "Bir projeksiyon cihazı ve her iki öğrenciye bir cihaz: dizüstü bilgisayar, tablet ya da telefon. Kurulacak bir şey yok, hesap da gerekmiyor. Her ders, ekranın nasıl okunacağını anlatan kısa bir tanıtımla açılır; her bilimsel terime dokunulduğunda açıklaması görünür.",
+      "goalTitle": "Öğrenme hedefi",
+      "topicsTitle": "Bağlandığı konular",
+      "planTitle": "45 dakikalık plan",
+      "minutes": "{minutes} dk",
+      "phases": {
+        "opening": "Açılış sorusu",
+        "demo": "“Nasıl çalıştığını göster” ile gösterim",
+        "explore": "Öğrenciler keşfediyor",
+        "discuss": "Tartışma"
+      },
+      "plan": {
+        "demo": "Dersi sınıf modunda perdeye yansıtın ve “Nasıl çalıştığını göster” düğmesine basın. Her adımı oynarken yüksek sesle okuyun. Gösterim dersin sorusunda durur: Soruyu şimdilik yanıtsız bırakın.",
+        "explore": "Öğrenciler ikişerli gruplar hâlinde kendi cihazlarında, çalışma kâğıdıyla çalışır. Her dokunuştan önce bir tahmin yazar, dersi yürütür, dersin sorusunu yanıtlar ve serbest keşfi denerler.",
+        "discuss": "İkililerin dersin sorusuna verdiği yanıtları toplayın, ardından aşağıdaki tartışma sorularını kullanın. Dersi, modelin dışarıda bıraktıklarıyla bitirin."
+      },
+      "noticeTitle": "Öğrencilerin her adımda fark etmesi gerekenler",
+      "step": "Adım {number}",
+      "answerTitle": "Dersin sorusu ve beklenen yanıt",
+      "rightChoice": "Doğru seçenek",
+      "discussTitle": "Tartışma soruları",
+      "misconceptionsTitle": "Sık görülen kavram yanılgıları",
+      "claim": "Öğrenciler şöyle düşünebilir:",
+      "fix": "Nasıl ele alınır:",
+      "realTitle": "Ne gerçek, ne basitleştirilmiş?",
+      "real": "Gerçek",
+      "simplified": "Basitleştirilmiş",
+      "realShared": "Dersteki her nöron ve her bağlantı, gerçek bir meyve sineğinin bağlantı şemasından alınmıştır; her hücre çifti arasındaki sinaps sayısı da gerçektir.",
+      "simplifiedShared": "Etkinlik, her nöronun aynı temel kurallara uyduğu basit bir simülasyondur ve ağır çekimde oynar.",
+      "realMore": "Sayılarla birlikte tam liste",
+      "termsTitle": "Temel terimler",
+      "curriculumTitle": "Öğretim programıyla uyum",
+      "curriculumPending": "Bu bölüm henüz doldurulmadı. Resmî biyoloji öğretim programıyla eşleşme, biyoloji öğretmenleriyle birlikte doğrulanıyor."
+    },
+    "worksheet": {
+      "eyebrow": "Öğrenci çalışma kâğıdı · Ders {number}",
+      "name": "Ad",
+      "class": "Sınıf",
+      "date": "Tarih",
+      "address": "Dersi şu adreste aç",
+      "predict": "Tahmin et",
+      "predictHint": "Hiçbir şeye dokunmadan önce.",
+      "try": "Dene",
+      "tryText": "Dersi aç ve adımlarını izle. Her dokunuştan önce ne olacağını düşündüğünü yüksek sesle söyle.",
+      "observe": "Gözlemle",
+      "observeHint": "Her adım için: Hangi renkler yandı, hangileri sönük kaldı?",
+      "step": "Adım {number}",
+      "explain": "Açıkla",
+      "question": "Dersin sorusu"
+    },
+    "lessons": {
+      "smell-memory": {
+        "goal": "Öğrenciler bir kokuyu reseptörlerden, o kokunun belleğini okuyan hücrelere kadar izler ve bir yolun tek bir katmanını susturmanın ondan sonraki her şeyi kestiğini gösterir.",
+        "topics": {
+          "synapses": "Her katman sinyali bir sonrakine sinapslar üzerinden aktarır. Bilim insanları belleğin, Kenyon hücrelerinden çıktı nöronlarına giden sinapsların gücündeki bir değişim olduğunu düşünüyor.",
+          "structure": "Yol, art arda dizilmiş katmanlardan oluşan bir zincirdir. Bu yüzden Kenyon hücrelerini susturmak, koku yine içeri girse bile çıktı nöronlarını söndürür.",
+          "excitation": "“Uyar” hücreleri uyarır, “Sustur” ise onları kapalı tutar: Dersin iki aracı bunlardır. Devrenin bu bölümünde her katman bir sonrakini uyarır."
+        },
+        "opening": "Şunu sorun: “Beyniniz bir kokuyu daha önce aldığınızı nereden biliyor?” Birkaç tahmin alın, sonra sınıfın bugün yanıtı bir sineğin içinde arayacağını söyleyin.",
+        "notice": {
+          "send": "Yalnızca turuncu koku reseptörleri yanar. Sinyal her yerde birden değil, devrenin bir ucunda başlar.",
+          "follow": "Renkler sırayla yanar: önce turuncu, sonra sarı, sonra mavi. Sinyal katmanlardan birer birer geçer.",
+          "read": "Pembe çıktı nöronları en son, üstelik ancak mavi Kenyon hücrelerinden sonra yanar.",
+          "silence": "Turuncu ve sarı yine yanar, mavi sönük kalır, pembe ise neredeyse kaybolur. Koku içeri girdi ama daha ileri gidemedi.",
+          "restore": "Kenyon hücreleri yeniden açılır açılmaz pembe geri gelir. Hiçbir şey zarar görmedi: Sinyalin gidecek yolu yoktu, o kadar."
+        },
+        "answer": "Kenyon hücreleri her kokunun desenini çıktı nöronlarına iletir. Onlar susturulduğunda koku yine reseptörlere ve projeksiyon nöronlarına ulaşır ama çıktı nöronlarının okuyacak bir şeyi olmaz. “Koku hiç içeri girmedi” diyen öğrencileri turuncu ve sarı hücrelere yeniden bakmaya yönlendirin.",
+        "discuss": {
+          "a": "Kenyon hücreleri susturulmuşken koku yine de beyne girdi. Bunu nereden biliyoruz?",
+          "b": "Sineğin bu kokunun şeker anlamına geldiğini öğrendiğini varsayın. Bu devrenin neresinde bir şeyin değişmesini beklersiniz?",
+          "c": "Bunun yerine sarı projeksiyon nöronlarını sustursaydınız ne görmeyi beklerdiniz? Serbest keşifte deneyin."
+        },
+        "misconceptions": {
+          "a": {
+            "claim": "Bir anı, bir dosya gibi tek bir hücrenin içinde durur.",
+            "fix": "Pembenin maviyi okuduğu adıma dönün. Belleğin tek bir hücrede değil, iki grup arasındaki pek çok bağlantının gücünde saklandığı düşünülüyor."
+          },
+          "b": {
+            "claim": "Bir hücreyi susturmak onu öldürür ya da ona zarar verir.",
+            "fix": "Son adımı yeniden oynatın: Pembe ışık hemen geri gelir. Susturulan hücreler sapasağlamdır. Yalnızca ateşlenmiyorlar."
+          },
+          "c": {
+            "claim": "Ders, sineğin bir kokuyu öğrenmesini gösteriyor.",
+            "fix": "Göstermiyor. Model bir anının nerede saklanacağını gösterir ama bağlantıları hiç değişmez. Bunu açıkça söyleyin ve modele ne eklenmesi gerektiğini sorun."
+          }
+        },
+        "real": {
+          "a": "Dört hücre grubu ve bunların birbirine bağlanma sırası, sineğin gerçek koku yoludur."
+        },
+        "simplified": {
+          "a": "“Uyar” bütün koku reseptörlerini aynı anda ateşler. Gerçek bir koku ise yalnızca bazı reseptör türlerini, belli bir desenle açar.",
+          "b": "Modelde hiçbir şey öğrenmez: Ödül sinyali yoktur, bağlantıları da hiç değişmez."
+        },
+        "worksheet": {
+          "predict": {
+            "a": "Bir koku antenlerden içeri giriyor. Sence en son hangi renk yanacak?",
+            "b": "Mavi hücreler kapatılırsa sence pembe hücrelere ne olur?"
+          },
+          "explain": {
+            "a": "Koku yine içeri girdiği hâlde, mavi hücreleri susturduğunda pembe hücreler neden söndü?",
+            "b": "Bilim insanlarına göre bir kokunun belleği bu devrenin neresinde saklanır?"
+          }
+        }
+      },
+      "compass": {
+        "goal": "Öğrenciler, halka biçiminde dizilmiş nöronların sineğin baktığı yönü tek bir etkinlik bölgesi olarak tuttuğunu ve halka nöronlarından gelen baskılamanın bu bölgeyi yerinde tuttuğunu görür.",
+        "topics": {
+          "excitation": "Üç dersteki en açık örnek. Dönüş nöronları pusulayı uyarır ve tümseği ileri iter; halka nöronları ise onu baskılar ve tümseği yerinde tutar.",
+          "synapses": "Halka nöronlarının, baskılayıcı bir nörotransmitter olan GABA salgıladığı tahmin ediliyor. Pusula ve dönüş nöronları ise uyarıcı olan asetilkolin salgılar.",
+          "structure": "Pusula nöronları halka biçiminde bağlanmıştır; tek bir etkinlik tümseğinin tek bir yönü göstermesini sağlayan da bu biçimdir."
+        },
+        "opening": "Şunu sorun: “Gözlerinizi kapatın ve kendi etrafınızda bir kez dönün. Hangi yöne baktığınızı hâlâ nereden biliyorsunuz?” Sonra bir sineğin bunu küçük bir hücre halkasıyla yaptığını ve sınıfın birazdan bu hücreleri itip kakacağını söyleyin.",
+        "notice": {
+          "left": "Halkanın bir yanında yeşil pusula nöronlarından oluşan bir bölge yanar ve kadranın ibresi oraya döner. O bölge tümsektir.",
+          "right": "Tümsek kadranda yer değiştirir. İki dönüş sinyali onu zıt yönlere iter.",
+          "silence": "Mor halka nöronları kapalıyken aynı sinyal tümseği tek bir noktaya oturtmaz, başıboş dolaştırır.",
+          "restore": "Tümsek yine yerinde durur. Kadranı bir önceki adımla karşılaştırın."
+        },
+        "answer": "Pusulaya yer işaretlerinin nerede olduğunu söyleyen hiçbir şey yoktu, bu yüzden tümseği yerinde tutan bir şey de yoktu. Dönüş sinyali yine ulaştı, çünkü yeşil hücreler yandı; yani eksik olan bir girdi değil, bir çapaydı. Daha büyük öğrenciler için: Bu modelde çapa, halka nöronlarından gelen baskılamadır.",
+        "discuss": {
+          "a": "Yönü takip eden hücreler için halka neden iyi bir biçimdir?",
+          "b": "Halka nöronları başka hücreleri uyarmak yerine yatıştırır. Hücreleri kapatmak bir ağın daha iyi çalışmasına nasıl yardım edebilir?",
+          "c": "İnsanlar da karanlıkta ya da siste yön duygusunu yitirir. Bunun susturma adımıyla ortak yanı nedir?"
+        },
+        "misconceptions": {
+          "a": {
+            "claim": "Sineğin, telefondaki gibi manyetik bir pusulası var.",
+            "fix": "Bu pusula, sineğin kendi dönüşlerine ve gördüklerine göre güncellediği bir etkinlik desenidir. Bu devrede manyetizmayı algılayan hiçbir şey yok."
+          },
+          "b": {
+            "claim": "Daha çok hücre etkinse sinyal her zaman daha iyidir.",
+            "fix": "Son iki adımı karşılaştırın: Baskılamayı kaldırmak pusulayı kötüleştirdi. Baskılama, devrenin çalışma biçiminin bir parçasıdır."
+          },
+          "c": {
+            "claim": "Tümsek, beynin içinde dolaşan bir nesnedir.",
+            "fix": "Hiçbir hücre yer değiştirmez. Komşu hücreler sırayla etkinleşir; tıpkı stadyumda seyircilerin yaptığı Meksika dalgası gibi."
+          }
+        },
+        "real": {
+          "a": "Pusula nöronları, dönüş nöronları ve halka nöronları gerçek hücre tipleridir ve sinekteki gibi halka biçiminde bağlanmıştır."
+        },
+        "simplified": {
+          "a": "Modelde halka nöronları dünyaya ait hiçbir görüntü taşımaz. Onları susturmak baskılamalarını ortadan kaldırır; tümseğin kaymasına yol açan da budur.",
+          "b": "Kadran, yeşil hücrelerin etkinliğini bizim okuma biçimimizdir. Sineğin kadranı yoktur."
+        },
+        "worksheet": {
+          "predict": {
+            "a": "Sol dönüş nöronlarını ateşlediğinde pusula kadranı sence ne gösterecek? Ya sağdakileri ateşlediğinde?",
+            "b": "Mor halka nöronları kapatılırsa sence tümseğe ne olur?"
+          },
+          "explain": {
+            "a": "Halka nöronları susturulduğunda tümsek neden sürüklendi?",
+            "b": "Yönü takip eden hücreler için halka neden iyi bir biçimdir?"
+          }
+        }
+      },
+      "escape": {
+        "goal": "Öğrenciler gözlerden bacak kaslarına yaklaşık 30 milisaniyede ulaşan bir refleksi izler ve hızlı kaçışın tek bir halkaya, dev life bağlı olduğunu gösterir.",
+        "topics": {
+          "reflex": "Üç parçalı eksiksiz bir refleks yolu: duyu nöronları (yaklaşma nöronları), bir ara durak (dev lif) ve motor nöronlar (sıçrama nöronları). Diz kapağı refleksinden farklı olarak bu ara durak beyinden geçer.",
+          "structure": "Sinyal, yüzlerce yaklaşma nöronundan dev life doğru daralır. Tek bir hücre türünü susturmanın davranışı ortadan kaldırmasının nedeni bu dar boğazdır.",
+          "synapses": "Dev lif kalındır; bu da sinyalini hızlandırır. Gerçek sinekte ayrıca en hızlı tür olan elektriksel sinapsları kullanır; modelde yalnızca kimyasal sinapslar vardır."
+        },
+        "opening": "Şunu sorun: “Bir sineği vurmak neden bu kadar zor?” Birkaç fikir toplayın, sonra sınıfın sineğin kaçışının süresini ölçeceğini ve arkasındaki kabloyu bulacağını söyleyin.",
+        "notice": {
+          "loom": "Önce mavi yaklaşma nöronları yanar, kırmızı dev lif de neredeyse hemen ardından gelir.",
+          "jump": "Etkinlik dev lif boyunca sinir kordonuna iner ve sarı sıçrama nöronları sinek zamanıyla 30 milisaniye içinde ateşlenir.",
+          "silence": "Mavi yine yanar, kırmızı sönük kalır, sarı ise hiç ateşlenmez. Sinek sinekliği gördü ama mesaj bacaklarına ulaşmadı.",
+          "restore": "Dev lif yeniden açılır açılmaz sarı tekrar ateşlenir."
+        },
+        "answer": "Dev lif, sıçrama sinyalini yaklaşma nöronlarından sıçrama nöronlarına taşır. O susturulduğunda sinek sinekliği yine görür, çünkü mavi hücreler yanar; ama sinyal bacaklara varmadan durur. Dersin son adımında söylendiği gibi, gerçek sineklerin daha yavaş kaçış yolları da vardır.",
+        "discuss": {
+          "a": "Bu kaçış bir göz kırpmasından daha hızlı. Yolun hangi özellikleri onu bu kadar hızlı yapıyor?",
+          "b": "Bir hayvanın tek bir hızlı kaçış yolu ve birkaç yavaş yolu olması ona neden yarar sağlayabilir?",
+          "c": "Bu yolu, bildiğiniz bir insan refleksiyle karşılaştırın; örneğin elinizi sıcak bir şeyden çekmenizle. Neler aynı, neler farklı?"
+        },
+        "misconceptions": {
+          "a": {
+            "claim": "Sinek sıçramaya karar verir.",
+            "fix": "Hızlı sıçrama bir reflekstir: Bağlantılar sinyali dosdoğru sonuna kadar taşır. Sineğin seçeneklerini tarttığı bir aşama yoktur."
+          },
+          "b": {
+            "claim": "Sinek sıçramadıysa sinekliği görmemiştir.",
+            "fix": "Susturma adımı bu ikisini birbirinden ayırır. Yaklaşma nöronları ateşlenir, yani sinek onu görmüştür. Görmek ve harekete geçmek, tek bir yolun farklı aşamalarıdır."
+          },
+          "c": {
+            "claim": "Koca bir beyinde tek bir nöronun önemi olamaz.",
+            "fix": "Burada hızlı sinyalin tamamını tek bir hücre türü taşır. Bir yolun birkaç hücreye daraldığı her yerde, o hücrelerin her biri çok önemlidir."
+          }
+        },
+        "real": {
+          "a": "Yaklaşma nöronları, dev lif ve sıçrama nöronları gerçektir; aralarındaki yol da öyle."
+        },
+        "simplified": {
+          "a": "30 milisaniye, bir sinekten alınan kayıtlardan değil, modelin basit zamanlama kurallarından gelir. Yine de gerçekçi bir aralığa düşer.",
+          "b": "“Uyar” bütün yaklaşma nöronlarını aynı anda ateşler. Gerçek bir sineklik ise görüş alanında büyüdükçe onları yavaş yavaş açar."
+        },
+        "worksheet": {
+          "predict": {
+            "a": "Bir sineklik geliyor. Sence üç renk hangi sırayla yanacak?",
+            "b": "Kırmızı dev lif kapatılırsa sence sarı sıçrama nöronlarına ne olur?"
+          },
+          "explain": {
+            "a": "Sinek sinekliği gördüğü hâlde sıçrama nöronları neden sönük kaldı?",
+            "b": "Bu yolun hangi özellikleri kaçışı bu kadar hızlı yapıyor?"
+          }
+        }
+      }
     }
   }
 }

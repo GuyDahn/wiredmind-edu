@@ -3,7 +3,7 @@
     "locale": "es",
     "reviewed": false,
     "model": "claude-opus-5-5",
-    "draftedAt": "2026-09-27"
+    "draftedAt": "2026-10-05"
   },
   "meta": {
     "home": {
@@ -143,7 +143,11 @@
       },
       "source": "Ver el código fuente en GitHub",
       "science": "Qué es real y qué está simplificado",
-      "feedback": "¿Algo no está claro o no funciona? Cuéntamelo."
+      "feedback": "¿Algo no está claro o no funciona? Cuéntamelo.",
+      "guidesTitle": "Da una lección mañana mismo",
+      "guidesLead": "Cada lección tiene una guía docente con un plan de 45 minutos y una hoja de trabajo para imprimir.",
+      "guide": "Guía docente",
+      "worksheet": "Hoja de trabajo"
     }
   },
   "about": {
@@ -393,6 +397,12 @@
         "pn": "Impide que el lóbulo antenal lleve ese olor al cuerpo fungiforme.",
         "kc": "Apaga las células que distinguen un olor de otro.",
         "mbon": "Impide que el cuerpo fungiforme pase el resultado al resto del cerebro."
+      },
+      "plain": {
+        "orn": "Atrapaolores",
+        "pn": "Mensajeras del olor",
+        "kc": "Clasificadoras de olores",
+        "mbon": "Lectoras de recuerdos"
       }
     },
     "visual": {
@@ -409,6 +419,12 @@
       "silence": {
         "ring": "Bloquea las neuronas del anillo, que traen puntos de referencia desde los ojos.",
         "compass": "Apaga las células del rumbo E-PG, que forman la brújula."
+      },
+      "plain": {
+        "ring": "Portadoras de referencias",
+        "compass": "Células del rumbo",
+        "turn-left": "Señal de giro a la izquierda",
+        "turn-right": "Señal de giro a la derecha"
       }
     },
     "escape": {
@@ -424,6 +440,11 @@
         "looming": "Impide que las células del ojo avisen del ataque.",
         "gf": "Bloquea la fibra gigante, el cable de escape más rápido de la mosca.",
         "jump": "Apaga las neuronas motoras que impulsan las patas del medio."
+      },
+      "plain": {
+        "looming": "Vigías del matamoscas",
+        "gf": "Cable de escape",
+        "jump": "Pateadoras"
       }
     }
   },
@@ -524,6 +545,49 @@
       "left": "I",
       "right": "D",
       "caption": "Brújula · vista desde atrás"
+    },
+    "terms": {
+      "hint": "Explicación de {term}",
+      "close": "Cerrar"
+    },
+    "legend": {
+      "title": "Clave de colores",
+      "glow": "Brilla = está disparando"
+    },
+    "intro": {
+      "label": "Cómo leer este cerebro",
+      "progress": "{number} de {total}",
+      "skip": "Saltar",
+      "next": "Siguiente",
+      "start": "Empezar la lección",
+      "screens": {
+        "lines": {
+          "title": "Estas líneas son neuronas reales",
+          "text": "Cada línea es una célula nerviosa real de una mosca de la fruta, dibujada en el lugar que ocupa en su cuerpo. Arrastra el cerebro para girarlo."
+        },
+        "colors": {
+          "title": "Cada color es un grupo de células",
+          "text": "Las células que hacen el mismo trabajo comparten color. Cuando un color brilla, esas células están disparando en ese momento."
+        },
+        "buttons": {
+          "title": "El experimento lo haces tú",
+          "text": "Estimular: hacemos disparar estas células. Silenciar: apagamos estas células. Después, tú observas qué cambia."
+        },
+        "time": {
+          "title": "Todo se ve en cámara lenta",
+          "text": "Una mosca real hace esto en un abrir y cerrar de ojos. Aquí el tiempo va muchas veces más lento, para que veas viajar la señal."
+        }
+      }
+    },
+    "classMode": {
+      "label": "Modo clase",
+      "hint": "Modo clase: texto y botones más grandes para proyectar"
+    },
+    "demo": {
+      "start": "Muéstrame cómo funciona",
+      "playing": "Te mostramos cómo funciona",
+      "upNext": "Ahora tocamos {action}: {name}",
+      "stop": "Parar y tomar el control"
     }
   },
   "errors": {
@@ -537,6 +601,306 @@
       "body": "Se produjo un error en la página. Vuelve a intentarlo o regresa a las lecciones.",
       "retry": "Reintentar",
       "home": "Ir a las lecciones"
+    }
+  },
+  "terms": {
+    "antenna": {
+      "name": "Antenas",
+      "text": "Los dos apéndices que la mosca tiene en la cabeza. Con ellos huele, igual que tú hueles con la nariz."
+    },
+    "receptor": {
+      "name": "Receptores olfativos",
+      "text": "Células nerviosas de las antenas que disparan cuando les llega un olor. Todo olor empieza aquí."
+    },
+    "antennallobe": {
+      "name": "Lóbulo antenal",
+      "text": "La primera parada de los olores dentro del cerebro de la mosca. Allí los receptores olfativos pasan su señal a las neuronas de proyección."
+    },
+    "projection": {
+      "name": "Neuronas de proyección",
+      "text": "Células nerviosas que llevan la señal del olor desde el lóbulo antenal hacia el interior del cerebro, hasta el cuerpo fungiforme."
+    },
+    "mushroombody": {
+      "name": "Cuerpo fungiforme",
+      "text": "Una parte del cerebro de los insectos, con forma de seta, donde se clasifican los olores y se guardan sus recuerdos."
+    },
+    "kenyon": {
+      "name": "Células de Kenyon",
+      "text": "Las pequeñas células nerviosas del cuerpo fungiforme. Cada olor enciende un puñado distinto de ellas, así que cada olor tiene su propio patrón."
+    },
+    "output": {
+      "name": "Neuronas de salida",
+      "text": "Células nerviosas que leen el patrón de las células de Kenyon y lo pasan al resto del cerebro. Los científicos las llaman MBON: neuronas de salida del cuerpo fungiforme."
+    },
+    "turn": {
+      "name": "Neuronas de giro",
+      "text": "Células nerviosas que disparan cuando la mosca gira y empujan el pico de actividad alrededor de la brújula. Los científicos las llaman neuronas P-EN2."
+    },
+    "compass": {
+      "name": "Neuronas de la brújula",
+      "text": "Un anillo de células nerviosas que lleva la cuenta de hacia dónde mira la mosca. Los científicos las llaman neuronas E-PG."
+    },
+    "ring": {
+      "name": "Neuronas del anillo",
+      "text": "Células nerviosas que llevan a la brújula lo que ve la mosca, como puntos de referencia. Calman a sus neuronas, y eso mantiene el pico en su sitio."
+    },
+    "looming": {
+      "name": "Neuronas de aproximación",
+      "text": "Células nerviosas situadas detrás de los ojos que disparan cuando algo crece rápido a la vista, como un matamoscas que se acerca. Los científicos las llaman LC4 y LPLC2."
+    },
+    "giantfiber": {
+      "name": "Fibra gigante",
+      "text": "Una célula nerviosa muy gruesa que baja desde el cerebro hasta el cordón nervioso. Lleva la señal de escape más rápida de la mosca."
+    },
+    "nervecord": {
+      "name": "Cordón nervioso",
+      "text": "La versión de la mosca de una médula espinal: un haz de células nerviosas en el tórax que controla las patas y las alas."
+    },
+    "jump": {
+      "name": "Neuronas del salto",
+      "text": "Neuronas motoras que hacen contraerse los músculos de salto de las patas del medio, de modo que la mosca sale disparada hacia arriba."
+    }
+  },
+  "teachers": {
+    "meta": {
+      "indexTitle": "Guías docentes · WiredMind",
+      "indexDescription": "Un plan de clase, las respuestas esperadas, preguntas para el debate y una hoja de trabajo imprimible para cada lección de WiredMind.",
+      "guideTitle": "Guía docente: {title}",
+      "guideDescription": "Un plan de 45 minutos para «{title}»: objetivo de aprendizaje, qué deben observar los estudiantes, respuestas esperadas, preguntas para el debate e ideas erróneas frecuentes.",
+      "worksheetTitle": "Hoja de trabajo: {title}",
+      "worksheetDescription": "Una hoja de trabajo imprimible para «{title}»: predecir, probar, observar y explicar."
+    },
+    "index": {
+      "title": "Guías docentes",
+      "lead": "Todo lo que necesitas para dar cada lección sin formación previa: un plan de 45 minutos, lo que deben observar los estudiantes, las respuestas que cabe esperar y una hoja de trabajo para imprimir.",
+      "lesson": "Lección {number}",
+      "guide": "Guía docente",
+      "worksheet": "Hoja de trabajo del estudiante",
+      "demo": "Mostrarla a la clase"
+    },
+    "topics": {
+      "excitation": "Excitación e inhibición",
+      "synapses": "Sinapsis y neurotransmisores",
+      "reflex": "Arcos reflejos",
+      "structure": "Cómo la estructura de una red determina el comportamiento"
+    },
+    "guide": {
+      "eyebrow": "Guía docente · Lección {number}",
+      "print": "Imprimir",
+      "lesson": "Abrir la lección",
+      "demo": "Reproducir «Muéstrame» en modo clase",
+      "worksheet": "Hoja de trabajo del estudiante",
+      "all": "Todas las guías docentes",
+      "address": "Dirección de la lección",
+      "setupTitle": "Qué necesitas",
+      "setup": "Un proyector y un dispositivo por cada pareja de estudiantes: portátil, tableta o teléfono. No hay nada que instalar ni cuentas que crear. Cada lección empieza con una breve guía para leer la pantalla, y cualquier término científico se puede tocar para ver su explicación.",
+      "goalTitle": "Objetivo de aprendizaje",
+      "topicsTitle": "Temas con los que se relaciona",
+      "planTitle": "Un plan de 45 minutos",
+      "minutes": "{minutes} min",
+      "phases": {
+        "opening": "Pregunta inicial",
+        "demo": "Demostración con «Muéstrame»",
+        "explore": "Los estudiantes exploran",
+        "discuss": "Debate"
+      },
+      "plan": {
+        "demo": "Proyecta la lección en modo clase y pulsa «Muéstrame cómo funciona». Lee cada paso en voz alta mientras se reproduce. Se detiene en la pregunta de la lección: déjala sin responder por ahora.",
+        "explore": "Los estudiantes trabajan en parejas con sus propios dispositivos y la hoja de trabajo. Escriben una predicción antes de cada toque, hacen la lección, responden a su pregunta y prueban la exploración libre.",
+        "discuss": "Recoge las respuestas de las parejas a la pregunta de la lección y luego usa las preguntas para el debate de más abajo. Termina con lo que el modelo deja fuera."
+      },
+      "noticeTitle": "Qué deben observar los estudiantes en cada paso",
+      "step": "Paso {number}",
+      "answerTitle": "La pregunta de la lección y la respuesta esperada",
+      "rightChoice": "La opción correcta",
+      "discussTitle": "Preguntas para el debate",
+      "misconceptionsTitle": "Ideas erróneas frecuentes",
+      "claim": "Los estudiantes pueden pensar:",
+      "fix": "Cómo abordarlo:",
+      "realTitle": "Qué es real y qué está simplificado",
+      "real": "Real",
+      "simplified": "Simplificado",
+      "realShared": "Todas las neuronas y conexiones de la lección proceden del diagrama de cableado de una mosca de la fruta real, con el número real de sinapsis entre cada par de células.",
+      "simplifiedShared": "La actividad es una simulación sencilla en la que todas las neuronas siguen las mismas reglas básicas, y se reproduce en cámara lenta.",
+      "realMore": "La lista completa, con cifras",
+      "termsTitle": "Términos clave",
+      "curriculumTitle": "Relación con el currículo",
+      "curriculumPending": "Esta sección aún no está completa. La correspondencia con el currículo oficial de Biología se está confirmando con docentes de la materia."
+    },
+    "worksheet": {
+      "eyebrow": "Hoja de trabajo del estudiante · Lección {number}",
+      "name": "Nombre",
+      "class": "Clase",
+      "date": "Fecha",
+      "address": "Abre la lección en",
+      "predict": "Predice",
+      "predictHint": "Antes de tocar nada.",
+      "try": "Prueba",
+      "tryText": "Abre la lección y sigue sus pasos. Antes de cada toque, di en voz alta qué crees que va a pasar.",
+      "observe": "Observa",
+      "observeHint": "En cada paso: ¿qué colores se iluminaron y cuáles se quedaron a oscuras?",
+      "step": "Paso {number}",
+      "explain": "Explica",
+      "question": "La pregunta de la lección"
+    },
+    "lessons": {
+      "smell-memory": {
+        "goal": "Los estudiantes siguen un olor desde los receptores hasta las células que leen su recuerdo, y comprueban que silenciar una capa de una vía corta todo lo que viene después.",
+        "topics": {
+          "synapses": "Cada capa pasa la señal a la siguiente a través de sinapsis. Los científicos creen que el recuerdo en sí es un cambio en la fuerza de las sinapsis que van de las células de Kenyon a las neuronas de salida.",
+          "structure": "La vía es una cadena de capas; por eso, al silenciar las células de Kenyon, las neuronas de salida se quedan a oscuras aunque el olor siga entrando.",
+          "excitation": "Estimular excita las células y Silenciar las mantiene apagadas: son las dos herramientas de la lección. En esta parte del circuito, cada capa excita a la siguiente."
+        },
+        "opening": "Pregunta: «¿Cómo sabe tu cerebro que un olor ya lo has olido antes?». Escucha algunas ideas y luego di que hoy la clase buscará la respuesta dentro de una mosca.",
+        "notice": {
+          "send": "Solo se iluminan los receptores olfativos naranjas. La señal empieza en un extremo del circuito, no en todas partes a la vez.",
+          "follow": "Los colores se iluminan en orden: naranja, luego amarillo, luego azul. La señal recorre las capas una tras otra.",
+          "read": "Las neuronas de salida rosas son las últimas en iluminarse, y solo lo hacen después de las células de Kenyon azules.",
+          "silence": "El naranja y el amarillo siguen iluminándose, el azul se queda a oscuras y el rosa casi desaparece. El olor entró, pero no pudo ir más allá.",
+          "restore": "El rosa vuelve en cuanto las células de Kenyon se encienden otra vez. Nada se dañó: la señal simplemente no tenía camino."
+        },
+        "answer": "Las células de Kenyon pasan el patrón de cada olor a las neuronas de salida. Con ellas silenciadas, el olor sigue llegando a los receptores y a las neuronas de proyección, pero las neuronas de salida no reciben nada que leer. A quienes respondan «el olor nunca entró», pídeles que vuelvan a mirar las células naranjas y amarillas.",
+        "discuss": {
+          "a": "El olor siguió entrando en el cerebro mientras las células de Kenyon estaban silenciadas. ¿Cómo lo sabemos?",
+          "b": "Imagina que la mosca aprendió que este olor significa azúcar. ¿En qué parte de este circuito esperarías que algo cambiara?",
+          "c": "¿Qué esperarías ver si silenciaras en su lugar las neuronas de proyección amarillas? Compruébalo en la exploración libre."
+        },
+        "misconceptions": {
+          "a": {
+            "claim": "Un recuerdo está guardado dentro de una sola célula, como un archivo.",
+            "fix": "Vuelve al paso en el que las rosas leen a las azules. Se cree que el recuerdo está en la fuerza de muchas conexiones entre los dos grupos, no en una sola célula."
+          },
+          "b": {
+            "claim": "Silenciar una célula la mata o la daña.",
+            "fix": "Repite el último paso: la luz rosa vuelve enseguida. Las células silenciadas están intactas. Solo que no disparan."
+          },
+          "c": {
+            "claim": "La lección muestra a la mosca aprendiendo un olor.",
+            "fix": "No es así. El modelo muestra dónde se guardaría un recuerdo, pero sus conexiones nunca cambian. Dilo con claridad y pregunta qué habría que añadir."
+          }
+        },
+        "real": {
+          "a": "Los cuatro grupos de células, y el orden en que se conectan, son la vía real del olfato de la mosca."
+        },
+        "simplified": {
+          "a": "Estimular hace disparar todos los receptores olfativos a la vez. Un olor real enciende solo algunos tipos de receptor, siguiendo un patrón.",
+          "b": "En el modelo nada aprende: no tiene señal de recompensa y sus conexiones nunca cambian."
+        },
+        "worksheet": {
+          "predict": {
+            "a": "Un olor entra por las antenas. ¿Qué color crees que se iluminará el último?",
+            "b": "¿Qué crees que les pasará a las células rosas si se apagan las células azules?"
+          },
+          "explain": {
+            "a": "¿Por qué se quedaron a oscuras las células rosas cuando silenciaste las azules, si el olor seguía entrando?",
+            "b": "¿En qué parte de este circuito creen los científicos que se guarda el recuerdo de un olor?"
+          }
+        }
+      },
+      "compass": {
+        "goal": "Los estudiantes ven que un anillo de neuronas guarda el rumbo de la mosca como una única zona de actividad, y que la inhibición de las neuronas del anillo mantiene esa zona en su sitio.",
+        "topics": {
+          "excitation": "El ejemplo más claro de las tres lecciones. Las neuronas de giro excitan la brújula y empujan el pico; las neuronas del anillo la inhiben y mantienen el pico quieto.",
+          "synapses": "Según la predicción, las neuronas del anillo liberan GABA, un transmisor que inhibe. Las neuronas de la brújula y las de giro liberan acetilcolina, que excita.",
+          "structure": "Las neuronas de la brújula están conectadas en anillo, y esa forma es la que permite que un solo pico de actividad represente una sola dirección."
+        },
+        "opening": "Pregunta: «Cierra los ojos y da una vuelta completa. ¿Cómo sabes todavía hacia dónde miras?». Luego di que una mosca lo hace con un pequeño anillo de células, y que la clase está a punto de empujarlas.",
+        "notice": {
+          "left": "Una zona de neuronas verdes de la brújula se ilumina en un lado del anillo, y la aguja del dial apunta hacia ella. Esa zona es el pico.",
+          "right": "El pico se desplaza por el dial. Las dos señales de giro lo empujan en sentidos opuestos.",
+          "silence": "Con las neuronas violetas del anillo apagadas, la misma señal deja al pico deambulando en lugar de asentarse en un punto.",
+          "restore": "El pico vuelve a quedarse en su sitio. Compara el dial con el del paso anterior."
+        },
+        "answer": "Nada le decía a la brújula dónde estaban los puntos de referencia, así que nada mantenía el pico en su sitio. La señal de giro sí llegó, porque las células verdes se iluminaron; lo que faltaba era un ancla, no una entrada. Para estudiantes mayores: en este modelo, el ancla es la inhibición de las neuronas del anillo.",
+        "discuss": {
+          "a": "¿Por qué un anillo es una buena forma para unas células que llevan la cuenta de la dirección?",
+          "b": "Las neuronas del anillo calman a otras células en lugar de excitarlas. ¿Cómo puede apagar células ayudar a que una red funcione mejor?",
+          "c": "Las personas también perdemos el sentido de la orientación a oscuras o con niebla. ¿Qué tiene eso en común con el paso de silenciar?"
+        },
+        "misconceptions": {
+          "a": {
+            "claim": "La mosca tiene una brújula magnética, como la de un teléfono.",
+            "fix": "Esta brújula es un patrón de actividad que la mosca actualiza a partir de sus propios giros y de lo que ve. Nada en este circuito detecta el magnetismo."
+          },
+          "b": {
+            "claim": "Cuantas más células activas, mejor es siempre la señal.",
+            "fix": "Compara los dos últimos pasos: al quitar la inhibición, la brújula empeoró. La inhibición forma parte del funcionamiento del circuito."
+          },
+          "c": {
+            "claim": "El pico es un objeto que viaja por el cerebro.",
+            "fix": "Ninguna célula se mueve. Las células vecinas se turnan para estar activas, como una ola que recorre las gradas de un estadio."
+          }
+        },
+        "real": {
+          "a": "Las neuronas de la brújula, las de giro y las del anillo son tipos celulares reales, conectados en anillo igual que en la mosca."
+        },
+        "simplified": {
+          "a": "En el modelo, las neuronas del anillo no llevan ninguna imagen del mundo. Al silenciarlas desaparece su inhibición, y eso es lo que deja al pico ir a la deriva.",
+          "b": "El dial es nuestra propia lectura de la actividad de las células verdes. La mosca no tiene ningún dial."
+        },
+        "worksheet": {
+          "predict": {
+            "a": "¿Qué crees que mostrará el dial de la brújula cuando actives las neuronas de giro de la izquierda? ¿Y las de la derecha?",
+            "b": "¿Qué crees que le pasará al pico si se apagan las neuronas violetas del anillo?"
+          },
+          "explain": {
+            "a": "¿Por qué el pico se fue a la deriva cuando se silenciaron las neuronas del anillo?",
+            "b": "¿Por qué un anillo es una buena forma para unas células que llevan la cuenta de la dirección?"
+          }
+        }
+      },
+      "escape": {
+        "goal": "Los estudiantes siguen un reflejo desde los ojos hasta los músculos de las patas en unos 30 milisegundos, y comprueban que el escape rápido depende de un solo eslabón: la fibra gigante.",
+        "topics": {
+          "reflex": "Una vía refleja completa en tres partes: neuronas sensoriales (las neuronas de aproximación), un relevo (la fibra gigante) y neuronas motoras (las neuronas del salto). A diferencia del reflejo rotuliano, este relevo pasa por el cerebro.",
+          "structure": "La señal se estrecha desde cientos de neuronas de aproximación hasta la fibra gigante. Ese cuello de botella explica por qué silenciar un solo tipo de célula elimina el comportamiento.",
+          "synapses": "La fibra gigante es gruesa, y por eso su señal es rápida. En una mosca real usa además sinapsis eléctricas, las más rápidas; el modelo solo tiene sinapsis químicas."
+        },
+        "opening": "Pregunta: «¿Por qué es tan difícil cazar una mosca con un matamoscas?». Recoge algunas ideas y luego di que la clase va a cronometrar el escape de la mosca y a encontrar el cable que lo hace posible.",
+        "notice": {
+          "loom": "Las neuronas de aproximación azules se iluminan primero, y la fibra gigante roja las sigue casi al instante.",
+          "jump": "La actividad baja por la fibra gigante hasta el cordón nervioso, y las neuronas del salto amarillas disparan en menos de 30 milisegundos de tiempo de mosca.",
+          "silence": "El azul sigue iluminándose, el rojo se queda a oscuras y el amarillo no llega a disparar. La mosca vio el matamoscas, pero el mensaje no llegó a sus patas.",
+          "restore": "El amarillo vuelve a disparar en cuanto la fibra gigante se enciende otra vez."
+        },
+        "answer": "La fibra gigante lleva la señal de salto desde las neuronas de aproximación hasta las neuronas del salto. Con ella silenciada, la mosca sigue viendo el matamoscas, porque las células azules se iluminan, pero la señal se detiene antes de las patas. Las moscas reales también tienen formas más lentas de escapar, como dice el último paso de la lección.",
+        "discuss": {
+          "a": "Este escape es más rápido que un parpadeo. ¿Qué características de la vía lo hacen tan rápido?",
+          "b": "¿Por qué podría convenirle a un animal tener una ruta de escape rápida y varias más lentas?",
+          "c": "Compara esta vía con un reflejo humano que conozcas, como apartar la mano de algo caliente. ¿En qué se parecen y en qué se diferencian?"
+        },
+        "misconceptions": {
+          "a": {
+            "claim": "La mosca decide saltar.",
+            "fix": "El salto rápido es un reflejo: el cableado lleva la señal de un extremo al otro sin detenerse. No hay ninguna etapa en la que la mosca sopese sus opciones."
+          },
+          "b": {
+            "claim": "Si la mosca no saltó, es que no vio el matamoscas.",
+            "fix": "El paso de silenciar separa las dos cosas. Las neuronas de aproximación disparan, así que la mosca lo vio. Ver y actuar son etapas distintas de una misma vía."
+          },
+          "c": {
+            "claim": "Una sola neurona no puede ser importante en todo un cerebro.",
+            "fix": "Aquí un solo tipo de célula lleva toda la señal rápida. Allí donde una vía se estrecha hasta unas pocas células, cada una de ellas importa muchísimo."
+          }
+        },
+        "real": {
+          "a": "Las neuronas de aproximación, la fibra gigante y las neuronas del salto son reales, y también lo es la ruta que las une."
+        },
+        "simplified": {
+          "a": "Los 30 milisegundos salen de las sencillas reglas de tiempo del modelo, no de registros de una mosca. Caen dentro de un rango realista.",
+          "b": "Estimular hace disparar todas las neuronas de aproximación a la vez. Un matamoscas real las va encendiendo poco a poco a medida que crece a la vista."
+        },
+        "worksheet": {
+          "predict": {
+            "a": "Se acerca un matamoscas. ¿En qué orden crees que se iluminarán los tres colores?",
+            "b": "¿Qué crees que les pasará a las neuronas del salto amarillas si se apaga la fibra gigante roja?"
+          },
+          "explain": {
+            "a": "¿Por qué las neuronas del salto se quedaron a oscuras, si la mosca vio el matamoscas?",
+            "b": "¿Qué características de esta vía hacen que el escape sea tan rápido?"
+          }
+        }
+      }
     }
   }
 }
