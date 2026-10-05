@@ -581,7 +581,7 @@
     },
     "classMode": {
       "label": "Tryb klasowy",
-      "hint": "Tryb klasowy: większy tekst i przyciski, do wyświetlania z projektora"
+      "hint": "Tryb klasowy: większy tekst i przyciski, do wyświetlania na wspólnym ekranie"
     },
     "demo": {
       "start": "Pokaż mi, jak to działa",
@@ -693,7 +693,7 @@
       "all": "Wszystkie przewodniki dla nauczycieli",
       "address": "Adres lekcji",
       "setupTitle": "Co będzie potrzebne",
-      "setup": "Projektor i jedno urządzenie na każdą parę uczniów: laptop, tablet albo telefon. Niczego nie trzeba instalować ani zakładać kont. Każda lekcja zaczyna się od krótkiego wprowadzenia, jak czytać ekran, a każdy termin naukowy można nacisnąć, żeby zobaczyć wyjaśnienie.",
+      "setup": "Wspólny ekran pomaga, ale nie jest konieczny: projektor, telewizor albo ekran komputera widoczny dla całej klasy. Uczniom potrzebne jest dowolne urządzenie z dostępem do internetu, najlepiej jedno na parę: laptop, tablet albo telefon. Niczego nie trzeba instalować ani zakładać kont. Każda lekcja zaczyna się od krótkiego wprowadzenia, jak czytać ekran, a każdy termin naukowy można nacisnąć, żeby zobaczyć wyjaśnienie.",
       "goalTitle": "Cel lekcji",
       "topicsTitle": "Powiązane tematy",
       "planTitle": "Plan na 45 minut",
@@ -705,7 +705,7 @@
         "discuss": "Dyskusja"
       },
       "plan": {
-        "demo": "Lekcję należy wyświetlić w trybie klasowym i nacisnąć „Pokaż mi, jak to działa”. Każdy krok warto czytać na głos w trakcie pokazu. Pokaz zatrzymuje się na pytaniu z lekcji: na razie lepiej zostawić je bez odpowiedzi.",
+        "demo": "Lekcję należy wyświetlić w trybie klasowym na wspólnym ekranie (projektor, telewizor albo ekran komputera) i nacisnąć „Pokaż mi, jak to działa”. Każdy krok warto czytać na głos w trakcie pokazu. Bez wspólnego ekranu uczniowie otwierają ten sam pokaz na własnych urządzeniach. Pokaz zatrzymuje się na pytaniu z lekcji: na razie lepiej zostawić je bez odpowiedzi.",
         "explore": "Uczniowie pracują w parach na własnych urządzeniach, z kartą pracy. Przed każdym naciśnięciem zapisują przewidywanie, przechodzą lekcję, odpowiadają na jej pytanie i próbują swobodnych eksperymentów.",
         "discuss": "Najpierw warto zebrać odpowiedzi par na pytanie z lekcji, a potem sięgnąć po pytania do dyskusji poniżej. Na koniec: co model pomija."
       },

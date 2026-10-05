@@ -581,7 +581,7 @@
     },
     "classMode": {
       "label": "Sınıf modu",
-      "hint": "Sınıf modu: projeksiyon için daha büyük yazı ve düğmeler"
+      "hint": "Sınıf modu: ortak ekran için daha büyük yazı ve düğmeler"
     },
     "demo": {
       "start": "Nasıl çalıştığını göster",
@@ -693,7 +693,7 @@
       "all": "Tüm öğretmen kılavuzları",
       "address": "Dersin adresi",
       "setupTitle": "Gerekenler",
-      "setup": "Bir projeksiyon cihazı ve her iki öğrenciye bir cihaz: dizüstü bilgisayar, tablet ya da telefon. Kurulacak bir şey yok, hesap da gerekmiyor. Her ders, ekranın nasıl okunacağını anlatan kısa bir tanıtımla açılır; her bilimsel terime dokunulduğunda açıklaması görünür.",
+      "setup": "Ortak bir ekran işe yarar ama şart değildir: projeksiyon cihazı, televizyon ya da bütün sınıfın görebildiği bir bilgisayar ekranı. Öğrencilere internete bağlanan herhangi bir cihaz gerekir, tercihen her iki öğrenciye bir tane: dizüstü bilgisayar, tablet ya da telefon. Kurulacak bir şey yok, hesap da gerekmiyor. Her ders, ekranın nasıl okunacağını anlatan kısa bir tanıtımla açılır; her bilimsel terime dokunulduğunda açıklaması görünür.",
       "goalTitle": "Öğrenme hedefi",
       "topicsTitle": "Bağlandığı konular",
       "planTitle": "45 dakikalık plan",
@@ -705,7 +705,7 @@
         "discuss": "Tartışma"
       },
       "plan": {
-        "demo": "Dersi sınıf modunda perdeye yansıtın ve “Nasıl çalıştığını göster” düğmesine basın. Her adımı oynarken yüksek sesle okuyun. Gösterim dersin sorusunda durur: Soruyu şimdilik yanıtsız bırakın.",
+        "demo": "Dersi sınıf modunda ortak bir ekranda (projeksiyon, televizyon ya da bilgisayar ekranı) gösterin ve “Nasıl çalıştığını göster” düğmesine basın. Her adımı oynarken yüksek sesle okuyun. Ortak ekran yoksa öğrenciler aynı gösterimi kendi cihazlarında açar. Gösterim dersin sorusunda durur: Soruyu şimdilik yanıtsız bırakın.",
         "explore": "Öğrenciler ikişerli gruplar hâlinde kendi cihazlarında, çalışma kâğıdıyla çalışır. Her dokunuştan önce bir tahmin yazar, dersi yürütür, dersin sorusunu yanıtlar ve serbest keşfi denerler.",
         "discuss": "İkililerin dersin sorusuna verdiği yanıtları toplayın, ardından aşağıdaki tartışma sorularını kullanın. Dersi, modelin dışarıda bıraktıklarıyla bitirin."
       },

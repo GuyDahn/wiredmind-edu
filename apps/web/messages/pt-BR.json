@@ -581,7 +581,7 @@
     },
     "classMode": {
       "label": "Modo sala de aula",
-      "hint": "Modo sala de aula: texto e botões maiores para o projetor"
+      "hint": "Modo sala de aula: texto e botões maiores para uma tela compartilhada"
     },
     "demo": {
       "start": "Me mostre como funciona",
@@ -693,7 +693,7 @@
       "all": "Todos os guias do professor",
       "address": "Endereço da aula",
       "setupTitle": "Do que você precisa",
-      "setup": "Um projetor e um aparelho para cada dupla de alunos: notebook, tablet ou celular. Não é preciso instalar nada nem criar conta. Cada aula começa com um guia rápido de como ler a tela, e todo termo científico pode ser tocado para abrir uma explicação.",
+      "setup": "Uma tela compartilhada ajuda, mas é opcional: um projetor, uma TV ou uma tela de computador que a turma toda veja. Os alunos precisam de qualquer aparelho com acesso à internet, de preferência um para cada dupla: notebook, tablet ou celular. Não é preciso instalar nada nem criar conta. Cada aula começa com um guia rápido de como ler a tela, e todo termo científico pode ser tocado para abrir uma explicação.",
       "goalTitle": "Objetivo de aprendizagem",
       "topicsTitle": "Conteúdos relacionados",
       "planTitle": "Um plano de 45 minutos",
@@ -705,7 +705,7 @@
         "discuss": "Discussão"
       },
       "plan": {
-        "demo": "Projete a aula no modo sala de aula e toque em “Me mostre como funciona”. Leia cada passo em voz alta enquanto ele acontece. A demonstração para na pergunta da aula: deixe-a sem resposta por enquanto.",
+        "demo": "Mostre a aula no modo sala de aula em uma tela compartilhada (projetor, TV ou tela de computador) e toque em “Me mostre como funciona”. Leia cada passo em voz alta enquanto ele acontece. Sem tela compartilhada, os alunos abrem a mesma demonstração nos próprios aparelhos. A demonstração para na pergunta da aula: deixe-a sem resposta por enquanto.",
         "explore": "Os alunos trabalham em duplas, nos próprios aparelhos, com a folha de atividades. Eles escrevem uma previsão antes de cada toque, fazem a aula, respondem à pergunta dela e experimentam a exploração livre.",
         "discuss": "Reúna as respostas das duplas à pergunta da aula e depois use as perguntas para discussão abaixo. Termine com o que o modelo deixa de fora."
       },

@@ -581,7 +581,7 @@
     },
     "classMode": {
       "label": "Klassenmodus",
-      "hint": "Klassenmodus: größere Schrift und Knöpfe für den Beamer"
+      "hint": "Klassenmodus: größere Schrift und Knöpfe für einen gemeinsamen Bildschirm"
     },
     "demo": {
       "start": "Zeig mir, wie es funktioniert",
@@ -693,7 +693,7 @@
       "all": "Alle Leitfäden für Lehrkräfte",
       "address": "Adresse der Lektion",
       "setupTitle": "Was Sie brauchen",
-      "setup": "Einen Beamer und ein Gerät für je zwei Schülerinnen und Schüler: Laptop, Tablet oder Smartphone. Es muss nichts installiert werden, und niemand braucht ein Konto. Jede Lektion beginnt mit einer kurzen Einführung, wie der Bildschirm zu lesen ist, und jeder Fachbegriff lässt sich antippen und wird dann erklärt.",
+      "setup": "Ein gemeinsamer Bildschirm hilft, ist aber nicht nötig: ein Beamer, ein Fernseher oder ein Computerbildschirm, den die ganze Klasse sieht. Die Schülerinnen und Schüler brauchen ein beliebiges Gerät mit Internetzugang, am besten eines für je zwei: Laptop, Tablet oder Smartphone. Es muss nichts installiert werden, und niemand braucht ein Konto. Jede Lektion beginnt mit einer kurzen Einführung, wie der Bildschirm zu lesen ist, und jeder Fachbegriff lässt sich antippen und wird dann erklärt.",
       "goalTitle": "Lernziel",
       "topicsTitle": "Anknüpfende Themen",
       "planTitle": "Ein 45-Minuten-Plan",
@@ -705,7 +705,7 @@
         "discuss": "Besprechung"
       },
       "plan": {
-        "demo": "Projizieren Sie die Lektion im Klassenmodus und drücken Sie auf „Zeig mir, wie es funktioniert“. Lesen Sie jeden Schritt laut vor, während er abläuft. Die Vorführung hält bei der Frage der Lektion an: Lassen Sie diese vorerst unbeantwortet.",
+        "demo": "Zeigen Sie die Lektion im Klassenmodus auf einem gemeinsamen Bildschirm (Beamer, Fernseher oder Computerbildschirm) und drücken Sie auf „Zeig mir, wie es funktioniert“. Lesen Sie jeden Schritt laut vor, während er abläuft. Ohne gemeinsamen Bildschirm öffnen die Schülerinnen und Schüler dieselbe Vorführung auf ihren eigenen Geräten. Die Vorführung hält bei der Frage der Lektion an: Lassen Sie diese vorerst unbeantwortet.",
         "explore": "Die Schülerinnen und Schüler arbeiten zu zweit an ihren eigenen Geräten, mit dem Arbeitsblatt. Vor jedem Tippen notieren sie eine Vermutung, dann gehen sie die Lektion durch, beantworten deren Frage und probieren das freie Experimentieren aus.",
         "discuss": "Sammeln Sie die Antworten der Zweiergruppen auf die Frage der Lektion und nutzen Sie dann die Diskussionsfragen unten. Schließen Sie mit dem, was das Modell weglässt."
       },

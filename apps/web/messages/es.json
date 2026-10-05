@@ -581,7 +581,7 @@
     },
     "classMode": {
       "label": "Modo clase",
-      "hint": "Modo clase: texto y botones más grandes para proyectar"
+      "hint": "Modo clase: texto y botones más grandes para una pantalla compartida"
     },
     "demo": {
       "start": "Muéstrame cómo funciona",
@@ -693,7 +693,7 @@
       "all": "Todas las guías docentes",
       "address": "Dirección de la lección",
       "setupTitle": "Qué necesitas",
-      "setup": "Un proyector y un dispositivo por cada pareja de estudiantes: portátil, tableta o teléfono. No hay nada que instalar ni cuentas que crear. Cada lección empieza con una breve guía para leer la pantalla, y cualquier término científico se puede tocar para ver su explicación.",
+      "setup": "Una pantalla compartida ayuda, pero es opcional: un proyector, un televisor o una pantalla de ordenador que vea toda la clase. Los estudiantes necesitan cualquier dispositivo con acceso a internet, a ser posible uno por pareja: portátil, tableta o teléfono. No hay nada que instalar ni cuentas que crear. Cada lección empieza con una breve guía para leer la pantalla, y cualquier término científico se puede tocar para ver su explicación.",
       "goalTitle": "Objetivo de aprendizaje",
       "topicsTitle": "Temas con los que se relaciona",
       "planTitle": "Un plan de 45 minutos",
@@ -705,7 +705,7 @@
         "discuss": "Debate"
       },
       "plan": {
-        "demo": "Proyecta la lección en modo clase y pulsa «Muéstrame cómo funciona». Lee cada paso en voz alta mientras se reproduce. Se detiene en la pregunta de la lección: déjala sin responder por ahora.",
+        "demo": "Muestra la lección en modo clase en una pantalla compartida (un proyector, un televisor o una pantalla de ordenador) y pulsa «Muéstrame cómo funciona». Lee cada paso en voz alta mientras se reproduce. Si no hay pantalla compartida, los estudiantes abren la misma demostración en sus dispositivos. Se detiene en la pregunta de la lección: déjala sin responder por ahora.",
         "explore": "Los estudiantes trabajan en parejas con sus propios dispositivos y la hoja de trabajo. Escriben una predicción antes de cada toque, hacen la lección, responden a su pregunta y prueban la exploración libre.",
         "discuss": "Recoge las respuestas de las parejas a la pregunta de la lección y luego usa las preguntas para el debate de más abajo. Termina con lo que el modelo deja fuera."
       },

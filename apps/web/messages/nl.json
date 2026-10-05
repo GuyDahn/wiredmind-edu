@@ -582,7 +582,7 @@
     },
     "classMode": {
       "label": "Klasmodus",
-      "hint": "Klasmodus: grotere tekst en knoppen voor op het digibord"
+      "hint": "Klasmodus: grotere tekst en knoppen voor een gedeeld scherm"
     },
     "demo": {
       "start": "Laat zien hoe het werkt",
@@ -694,7 +694,7 @@
       "all": "Alle docentenhandleidingen",
       "address": "Adres van de les",
       "setupTitle": "Wat je nodig hebt",
-      "setup": "Een beamer of digibord, en één apparaat per tweetal: een laptop, tablet of telefoon. Je hoeft niets te installeren en er zijn geen accounts nodig. Elke les begint met een korte uitleg over hoe je het scherm leest, en op elke wetenschappelijke term kun je tikken voor uitleg.",
+      "setup": "Een gedeeld scherm helpt, maar hoeft niet: een beamer, digibord, tv of een computerscherm dat de hele klas kan zien. Leerlingen hebben een apparaat met internet nodig, het liefst één per tweetal: een laptop, tablet of telefoon. Je hoeft niets te installeren en er zijn geen accounts nodig. Elke les begint met een korte uitleg over hoe je het scherm leest, en op elke wetenschappelijke term kun je tikken voor uitleg.",
       "goalTitle": "Leerdoel",
       "topicsTitle": "Onderwerpen waar de les bij aansluit",
       "planTitle": "Een lesplan van 45 minuten",
@@ -706,7 +706,7 @@
         "discuss": "Nabespreking"
       },
       "plan": {
-        "demo": "Projecteer de les in klasmodus en druk op “Laat zien hoe het werkt”. Lees elke stap hardop voor terwijl hij afspeelt. De demonstratie stopt bij de vraag van de les: laat die nog even onbeantwoord.",
+        "demo": "Laat de les in klasmodus zien op een gedeeld scherm (beamer, digibord, tv of computerscherm) en druk op “Laat zien hoe het werkt”. Lees elke stap hardop voor terwijl hij afspeelt. Is er geen gedeeld scherm, dan openen leerlingen dezelfde demonstratie op hun eigen apparaat. De demonstratie stopt bij de vraag van de les: laat die nog even onbeantwoord.",
         "explore": "De leerlingen werken in tweetallen op hun eigen apparaat, met het werkblad erbij. Voor elke tik schrijven ze een voorspelling op. Ze doorlopen de les, beantwoorden de vraag en proberen vrij spel uit.",
         "discuss": "Verzamel de antwoorden van de tweetallen op de vraag van de les en gebruik daarna de discussievragen hieronder. Sluit af met wat het model weglaat."
       },

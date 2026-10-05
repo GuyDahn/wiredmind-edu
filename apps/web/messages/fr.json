@@ -581,7 +581,7 @@
     },
     "classMode": {
       "label": "Mode classe",
-      "hint": "Mode classe : texte et boutons agrandis pour le vidéoprojecteur"
+      "hint": "Mode classe : texte et boutons agrandis pour un écran partagé"
     },
     "demo": {
       "start": "Montre-moi comment ça marche",
@@ -693,7 +693,7 @@
       "all": "Tous les guides de l’enseignant",
       "address": "Adresse de la leçon",
       "setupTitle": "Ce qu’il vous faut",
-      "setup": "Un vidéoprojecteur et un appareil pour deux élèves : ordinateur portable, tablette ou téléphone. Rien à installer, aucun compte à créer. Chaque leçon s’ouvre sur un court guide de lecture de l’écran, et il suffit d’appuyer sur un terme scientifique pour en afficher l’explication.",
+      "setup": "Un écran partagé est utile, mais facultatif : vidéoprojecteur, téléviseur ou écran d’ordinateur visible par toute la classe. Les élèves ont besoin d’un appareil connecté à Internet, idéalement un pour deux : ordinateur portable, tablette ou téléphone. Rien à installer, aucun compte à créer. Chaque leçon s’ouvre sur un court guide de lecture de l’écran, et il suffit d’appuyer sur un terme scientifique pour en afficher l’explication.",
       "goalTitle": "Objectif d’apprentissage",
       "topicsTitle": "Notions du programme abordées",
       "planTitle": "Un déroulé de 45 minutes",
@@ -705,7 +705,7 @@
         "discuss": "Discussion"
       },
       "plan": {
-        "demo": "Projetez la leçon en mode classe et appuyez sur « Montre-moi comment ça marche ». Lisez chaque étape à voix haute pendant qu’elle se déroule. La démonstration s’arrête à la question de la leçon : laissez-la sans réponse pour l’instant.",
+        "demo": "Affichez la leçon en mode classe sur un écran partagé (vidéoprojecteur, téléviseur ou écran d’ordinateur) et appuyez sur « Montre-moi comment ça marche ». Lisez chaque étape à voix haute pendant qu’elle se déroule. Sans écran partagé, les élèves ouvrent la même démonstration sur leurs appareils. La démonstration s’arrête à la question de la leçon : laissez-la sans réponse pour l’instant.",
         "explore": "Les élèves travaillent en binômes sur leurs propres appareils, avec la fiche élève. Ils notent une prévision avant chaque appui, suivent la leçon, répondent à sa question, puis essaient l’exploration libre.",
         "discuss": "Recueillez les réponses des binômes à la question de la leçon, puis appuyez-vous sur les questions de discussion ci-dessous. Terminez par ce que le modèle laisse de côté."
       },

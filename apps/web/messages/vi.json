@@ -581,7 +581,7 @@
     },
     "classMode": {
       "label": "Chế độ lớp học",
-      "hint": "Chế độ lớp học: chữ và nút to hơn để chiếu lên màn hình"
+      "hint": "Chế độ lớp học: chữ và nút to hơn cho màn hình chung"
     },
     "demo": {
       "start": "Cho mình xem cách hoạt động",
@@ -693,7 +693,7 @@
       "all": "Tất cả hướng dẫn cho giáo viên",
       "address": "Địa chỉ bài học",
       "setupTitle": "Bạn cần chuẩn bị gì",
-      "setup": "Một máy chiếu, và mỗi cặp học sinh một thiết bị: máy tính xách tay, máy tính bảng hoặc điện thoại. Không cần cài đặt gì, cũng không cần tài khoản. Mỗi bài học mở đầu bằng phần hướng dẫn ngắn về cách đọc màn hình, và có thể nhấn vào bất kỳ thuật ngữ khoa học nào để xem giải thích.",
+      "setup": "Màn hình chung thì tiện hơn nhưng không bắt buộc: máy chiếu, tivi hoặc màn hình máy tính mà cả lớp nhìn thấy. Học sinh cần một thiết bị bất kỳ có kết nối internet, tốt nhất là mỗi cặp một thiết bị: máy tính xách tay, máy tính bảng hoặc điện thoại. Không cần cài đặt gì, cũng không cần tài khoản. Mỗi bài học mở đầu bằng phần hướng dẫn ngắn về cách đọc màn hình, và có thể nhấn vào bất kỳ thuật ngữ khoa học nào để xem giải thích.",
       "goalTitle": "Mục tiêu bài học",
       "topicsTitle": "Các chủ đề liên quan",
       "planTitle": "Giáo án 45 phút",
@@ -705,7 +705,7 @@
         "discuss": "Thảo luận"
       },
       "plan": {
-        "demo": "Chiếu bài học ở chế độ lớp học rồi nhấn “Cho mình xem cách hoạt động”. Đọc to từng bước trong lúc bài chạy. Phần trình diễn dừng ở câu hỏi của bài học: tạm thời hãy để ngỏ câu hỏi đó.",
+        "demo": "Mở bài học ở chế độ lớp học trên màn hình chung (máy chiếu, tivi hoặc màn hình máy tính) rồi nhấn “Cho mình xem cách hoạt động”. Đọc to từng bước trong lúc bài chạy. Nếu không có màn hình chung, học sinh mở cùng phần trình diễn này trên thiết bị của mình. Phần trình diễn dừng ở câu hỏi của bài học: tạm thời hãy để ngỏ câu hỏi đó.",
         "explore": "Học sinh làm việc theo cặp trên thiết bị của mình, kèm phiếu học tập. Các em viết dự đoán trước mỗi lần nhấn, làm hết bài học, trả lời câu hỏi của bài và thử phần khám phá tự do.",
         "discuss": "Thu thập câu trả lời của các cặp cho câu hỏi của bài học, rồi dùng các câu hỏi thảo luận bên dưới. Kết thúc bằng những gì mô hình đã lược bỏ."
       },

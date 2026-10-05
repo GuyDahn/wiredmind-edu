@@ -581,7 +581,7 @@
     },
     "classMode": {
       "label": "Modalità classe",
-      "hint": "Modalità classe: testo e pulsanti più grandi per il proiettore"
+      "hint": "Modalità classe: testo e pulsanti più grandi per uno schermo condiviso"
     },
     "demo": {
       "start": "Fammi vedere come funziona",
@@ -693,7 +693,7 @@
       "all": "Tutte le guide per l’insegnante",
       "address": "Indirizzo della lezione",
       "setupTitle": "Che cosa ti serve",
-      "setup": "Un proiettore e un dispositivo per ogni coppia di studenti: portatile, tablet o smartphone. Non c’è niente da installare e non servono account. Ogni lezione si apre con una breve guida su come leggere lo schermo, e ogni termine scientifico si può toccare per leggerne la spiegazione.",
+      "setup": "Uno schermo condiviso aiuta, ma è facoltativo: un proiettore, un televisore o lo schermo di un computer che tutta la classe possa vedere. Agli studenti serve un qualsiasi dispositivo connesso a internet, meglio se uno per coppia: portatile, tablet o smartphone. Non c’è niente da installare e non servono account. Ogni lezione si apre con una breve guida su come leggere lo schermo, e ogni termine scientifico si può toccare per leggerne la spiegazione.",
       "goalTitle": "Obiettivo di apprendimento",
       "topicsTitle": "Argomenti collegati",
       "planTitle": "Un piano di 45 minuti",
@@ -705,7 +705,7 @@
         "discuss": "Discussione"
       },
       "plan": {
-        "demo": "Proietta la lezione in modalità classe e premi «Fammi vedere come funziona». Leggi ad alta voce ogni passaggio mentre scorre. La dimostrazione si ferma alla domanda della lezione: per ora lasciala senza risposta.",
+        "demo": "Mostra la lezione in modalità classe su uno schermo condiviso (proiettore, televisore o schermo di un computer) e premi «Fammi vedere come funziona». Leggi ad alta voce ogni passaggio mentre scorre. Senza uno schermo condiviso, gli studenti aprono la stessa dimostrazione sui propri dispositivi. La dimostrazione si ferma alla domanda della lezione: per ora lasciala senza risposta.",
         "explore": "Gli studenti lavorano a coppie sui propri dispositivi, con la scheda di lavoro. Scrivono una previsione prima di ogni tocco, svolgono la lezione, rispondono alla sua domanda e provano l’esplorazione libera.",
         "discuss": "Raccogli le risposte delle coppie alla domanda della lezione, poi usa le domande per la discussione qui sotto. Chiudi con ciò che il modello lascia fuori."
       },

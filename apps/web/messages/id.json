@@ -581,7 +581,7 @@
     },
     "classMode": {
       "label": "Mode kelas",
-      "hint": "Mode kelas: teks dan tombol lebih besar untuk proyektor"
+      "hint": "Mode kelas: teks dan tombol lebih besar untuk layar bersama"
     },
     "demo": {
       "start": "Tunjukkan cara kerjanya",
@@ -693,7 +693,7 @@
       "all": "Semua panduan guru",
       "address": "Alamat pelajaran",
       "setupTitle": "Yang Anda perlukan",
-      "setup": "Sebuah proyektor, dan satu perangkat untuk setiap pasangan siswa: laptop, tablet, atau ponsel. Tidak ada yang perlu dipasang dan tidak perlu akun. Setiap pelajaran dibuka dengan panduan singkat cara membaca layar, dan setiap istilah ilmiah bisa diketuk untuk melihat penjelasannya.",
+      "setup": "Layar bersama membantu, tetapi tidak wajib: proyektor, TV, atau layar komputer yang bisa dilihat seluruh kelas. Siswa memerlukan perangkat apa pun yang terhubung ke internet, sebaiknya satu untuk setiap pasangan: laptop, tablet, atau ponsel. Tidak ada yang perlu dipasang dan tidak perlu akun. Setiap pelajaran dibuka dengan panduan singkat cara membaca layar, dan setiap istilah ilmiah bisa diketuk untuk melihat penjelasannya.",
       "goalTitle": "Tujuan pembelajaran",
       "topicsTitle": "Topik yang berkaitan",
       "planTitle": "Rencana 45 menit",
@@ -705,7 +705,7 @@
         "discuss": "Diskusi"
       },
       "plan": {
-        "demo": "Tayangkan pelajaran dalam mode kelas dan tekan “Tunjukkan cara kerjanya”. Bacakan setiap langkah saat diputar. Demo berhenti di pertanyaan pelajaran: biarkan dulu tanpa jawaban.",
+        "demo": "Tayangkan pelajaran dalam mode kelas di layar bersama (proyektor, TV, atau layar komputer) dan tekan “Tunjukkan cara kerjanya”. Bacakan setiap langkah saat diputar. Jika tidak ada layar bersama, siswa membuka demo yang sama di perangkat masing-masing. Demo berhenti di pertanyaan pelajaran: biarkan dulu tanpa jawaban.",
         "explore": "Siswa bekerja berpasangan di perangkat masing-masing, dengan lembar kerja. Mereka menulis prediksi sebelum setiap ketukan, menjalankan pelajaran, menjawab pertanyaannya, dan mencoba main bebas.",
         "discuss": "Kumpulkan jawaban tiap pasangan atas pertanyaan pelajaran, lalu gunakan pertanyaan diskusi di bawah. Tutup dengan apa saja yang tidak tercakup dalam model."
       },
