@@ -43,7 +43,7 @@ type ViewerState = {
   circuit: string | null;
   /** Class mode, for a projector. Lives in the URL (?mode=class), never in storage. */
   classMode: boolean;
-  /** The "How to read this brain" intro is showing. */
+  /** The "How to read this brain" intro is showing. Open whenever a lesson starts. */
   intro: boolean;
   /** The part of the page the intro is pointing at, if any. */
   spotlight: SpotlightTarget | null;
@@ -76,7 +76,9 @@ export const useViewerStore = create<ViewerState>((set) => ({
   compass: null,
   circuit: null,
   classMode: false,
-  intro: false,
+  // Open from the first paint, so the server renders the intro, not a
+  // lesson card that the intro then covers.
+  intro: true,
   spotlight: null,
   setStatus: (status, error = null) => set({ status, error }),
   setProgress: (progress) => set({ progress }),

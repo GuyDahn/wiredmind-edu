@@ -22,6 +22,8 @@ import {
   type LessonModule,
   type LessonPhase,
 } from "./lesson.js";
+import { IntroActions, IntroCard } from "./intro.js";
+import { INTRO_SCREENS } from "./intro-screens.js";
 import { LESSONS, type LessonEntry } from "./modules.js";
 import { groupColor } from "./module.js";
 import { Controls, FOCUS_RING, press } from "./panel.js";
@@ -57,6 +59,8 @@ export function ModuleRunner({
   const [puffPending, setPuffPending] = useState(false);
   const [sheet, setSheet] = useState<SheetState>("peek");
   const puffTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const intro = useViewerStore((state) => state.intro);
+  const [introScreen, setIntroScreen] = useState(0);
   const stimulating = useViewerStore((state) => state.stimulating);
   const live = useViewerStore((state) => state.circuit === module.id);
   const puffing = Object.values(stimulating).some(Boolean);
@@ -97,6 +101,28 @@ export function ModuleRunner({
   useEffect(() => {
     useViewerStore.getState().setFocus(focusFor(lesson, phase));
   }, [lesson, phase]);
+
+  // Every lesson opens on the intro. Nothing remembers that it was seen:
+  // no cookie, no storage. Skip is one tap.
+  useEffect(() => {
+    useViewerStore.getState().setIntro(true);
+    return () => useViewerStore.getState().setIntro(false);
+  }, []);
+
+  const closeIntro = useCallback(() => {
+    useViewerStore.getState().setIntro(false);
+  }, []);
+
+  useEffect(() => {
+    if (!intro) return;
+    setIntroScreen(0);
+    setSheet("peek");
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") closeIntro();
+    };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [intro, closeIntro]);
 
   // On a phone the sheet gets out of the way while the brain is busy, and
   // comes back with the answer. Desktop ignores it.
@@ -149,20 +175,38 @@ export function ModuleRunner({
       state={sheet}
       onState={setSheet}
       label={copy.plain("title")}
-      moment={`${phase.kind}-${phase.kind === "step" ? phase.index : ""}-${revealed}`}
+      moment={
+        intro
+          ? `intro-${introScreen}`
+          : `${phase.kind}-${phase.kind === "step" ? phase.index : ""}-${revealed}`
+      }
       footer={
-        <Footer
-          entry={entry}
-          phase={phase}
-          goal={phase.kind === "step" && step && !phase.done ? step.goal : null}
-          puffPending={puffPending}
-          watching={watching}
-          revealed={revealed}
-          solved={solved}
-          onAction={onAction}
-          onNext={next}
-          onFree={() => setPhase({ kind: "free" })}
-        />
+        intro ? (
+          <IntroActions
+            screen={introScreen}
+            onNext={() =>
+              setIntroScreen((value) =>
+                Math.min(value + 1, INTRO_SCREENS.length - 1),
+              )
+            }
+            onClose={closeIntro}
+          />
+        ) : (
+          <Footer
+            entry={entry}
+            phase={phase}
+            goal={
+              phase.kind === "step" && step && !phase.done ? step.goal : null
+            }
+            puffPending={puffPending}
+            watching={watching}
+            revealed={revealed}
+            solved={solved}
+            onAction={onAction}
+            onNext={next}
+            onFree={() => setPhase({ kind: "free" })}
+          />
+        )
       }
     >
       <PanelTranslateNotice />
@@ -175,9 +219,11 @@ export function ModuleRunner({
           {notice}
         </p>
       ) : null}
+      {intro ? <IntroCard module={module} screen={introScreen} /> : null}
       <section
         aria-label={copy.plain("title")}
-        className="flex flex-col gap-4 rounded-2xl bg-overlay-strong p-4"
+        hidden={intro}
+        className="flex flex-col gap-4 rounded-2xl bg-overlay-strong p-4 [&[hidden]]:hidden"
       >
         <Progress lesson={lesson} phase={phase} />
         {phase.kind === "step" && step ? (
@@ -231,7 +277,9 @@ export function ModuleRunner({
           </button>
         )}
       </section>
-      <Controls module={module} gate={gate} onAction={onAction} />
+      {intro ? null : (
+        <Controls module={module} gate={gate} onAction={onAction} />
+      )}
       <PanelCredit>{credit}</PanelCredit>
     </Sheet>
   );

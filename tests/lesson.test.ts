@@ -16,6 +16,10 @@ import {
   type LessonModule,
   type LessonPhase,
 } from "../apps/web/src/viewer/lesson.js";
+import {
+  INTRO_SCREENS,
+  MAX_INTRO_WORDS,
+} from "../apps/web/src/viewer/intro-screens.js";
 import { readModule } from "../apps/web/src/viewer/module.js";
 import { findLesson, LESSONS } from "../apps/web/src/viewer/modules.js";
 import {
@@ -217,6 +221,33 @@ for (const { lesson } of LESSONS)
       }
     });
   });
+
+describe("how to read this brain", () => {
+  it("takes at most four screens of 30 words, in English and Hebrew", () => {
+    assert.ok(INTRO_SCREENS.length >= 3 && INTRO_SCREENS.length <= 4);
+    for (const locale of ["en", "he"]) {
+      const messages = JSON.parse(
+        readFileSync(
+          new URL(`../apps/web/messages/${locale}.json`, import.meta.url),
+          "utf8",
+        ),
+      ) as {
+        viewer: {
+          intro: { screens: Record<string, { title: string; text: string }> };
+        };
+      };
+      const screens = messages.viewer.intro.screens;
+      assert.deepEqual(
+        Object.keys(screens),
+        INTRO_SCREENS.map((screen) => screen.id),
+      );
+      for (const [id, screen] of Object.entries(screens)) {
+        const words = wordCount(screen.text);
+        assert.ok(words <= MAX_INTRO_WORDS, `${locale} ${id}: ${words} words`);
+      }
+    }
+  });
+});
 
 describe("term explanations", () => {
   it("explains every term in English, in 30 words or fewer", () => {

@@ -100,12 +100,21 @@ export function Viewer({
           credit={credit}
         />
       )}
-      <Stage entry={entry} menu={menu} />
+      <Stage entry={entry} menu={menu} replaying={shared !== null} />
     </div>
   );
 }
 
-function Stage({ entry, menu }: { entry: LessonEntry; menu?: ReactNode }) {
+function Stage({
+  entry,
+  menu,
+  replaying,
+}: {
+  entry: LessonEntry;
+  menu?: ReactNode;
+  /** A shared run is playing, which has no intro to reopen. */
+  replaying: boolean;
+}) {
   const status = useViewerStore((state) => state.status);
   const error = useViewerStore((state) => state.error);
   const progress = useViewerStore((state) => state.progress);
@@ -140,8 +149,11 @@ function Stage({ entry, menu }: { entry: LessonEntry; menu?: ReactNode }) {
             {lessonCopy("summary")}
           </p>
         </div>
-        {menu}
-        <StageLanguageMenu path={entry.path} />
+        <div className="flex shrink-0 items-start gap-1.5">
+          {replaying ? null : <IntroButton />}
+          {menu}
+          <StageLanguageMenu path={entry.path} />
+        </div>
       </header>
       <p className="sr-only">{t("stage.canvasHelp")}</p>
       {/* The brain is a real fly's, so it never mirrors for right-to-left languages. */}
@@ -174,6 +186,31 @@ function Stage({ entry, menu }: { entry: LessonEntry; menu?: ReactNode }) {
         </p>
       ) : null}
     </div>
+  );
+}
+
+/** A control on the dark canvas, the size of the phone menu's button. */
+const STAGE_BUTTON =
+  "pointer-events-auto flex min-h-11 min-w-11 items-center justify-center gap-2 rounded-lg bg-zinc-950/60 px-2.5 text-sm font-semibold text-zinc-200 backdrop-blur-sm hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white";
+
+/** "?": opens the "How to read this brain" intro again, at any point of the lesson. */
+function IntroButton() {
+  const t = useTranslations("viewer.intro");
+  const open = useViewerStore((state) => state.intro);
+  return (
+    <button
+      type="button"
+      data-intro-open=""
+      aria-label={t("label")}
+      title={t("label")}
+      aria-pressed={open}
+      onClick={() => useViewerStore.getState().setIntro(true)}
+      className={STAGE_BUTTON}
+    >
+      <span aria-hidden="true" className="text-lg leading-none">
+        ?
+      </span>
+    </button>
   );
 }
 
