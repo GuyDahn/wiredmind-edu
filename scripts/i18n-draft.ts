@@ -139,7 +139,7 @@ function noteFor(key: string): string | null {
     return "search result description, at most 155 characters";
   }
   if (/^lessons\.[^.]+\.(steps|check|freePlay)\./.test(key)) {
-    return "lesson copy for students; keep <term>/<gloss> markup, glosses three words or fewer";
+    return "lesson copy for students; keep each term tag around the same term and each <gloss>, glosses three words or fewer";
   }
   if (/^viewer\.controls\.|^viewer\.lesson\.cue/.test(key)) {
     return "button or label on the lesson controls; keep it short";

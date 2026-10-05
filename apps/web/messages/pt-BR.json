@@ -247,28 +247,28 @@
       "description": "Envie um cheiro ao cérebro real de uma mosca-da-fruta, siga-o até o corpo pedunculado e ache as células que guardam a memória. Aula grátis de 10 minutos.",
       "steps": {
         "send": {
-          "text": "A mosca sente cheiros com as <term>antenas</term> <gloss>(o nariz dela)</gloss>. Toque em Estimular para enviar um cheiro. Veja os neurônios laranja acenderem.",
-          "result": "Esses neurônios laranja são os <term>receptores olfativos</term> <gloss>(detectores de cheiro)</gloss>. Eles disparam primeiro. Todo cheiro começa aqui."
+          "text": "A mosca sente cheiros com as <antenna>antenas</antenna> <gloss>(o nariz dela)</gloss>. Toque em Estimular para enviar um cheiro. Veja os neurônios laranja acenderem.",
+          "result": "Esses neurônios laranja são os <receptor>receptores olfativos</receptor> <gloss>(detectores de cheiro)</gloss>. Eles disparam primeiro. Todo cheiro começa aqui."
         },
         "follow": {
-          "text": "Toque em Estimular de novo e siga as cores. Em amarelo, os <term>neurônios de projeção</term> <gloss>(mensageiros do cheiro)</gloss> levam o cheiro para dentro. Em azul, as <term>células de Kenyon</term> <gloss>(separadoras de cheiro)</gloss> pegam o cheiro logo depois.",
+          "text": "Toque em Estimular de novo e siga as cores. Em amarelo, os <projection>neurônios de projeção</projection> <gloss>(mensageiros do cheiro)</gloss> levam o cheiro para dentro. Em azul, as <kenyon>células de Kenyon</kenyon> <gloss>(separadoras de cheiro)</gloss> pegam o cheiro logo depois.",
           "result": "As células azuis transformam cada cheiro em um padrão só dele."
         },
         "read": {
-          "text": "Toque em Estimular mais uma vez. Agora observe, em rosa, os <term>neurônios de saída</term> <gloss>(leitores da memória)</gloss>. Eles leem o padrão azul.",
+          "text": "Toque em Estimular mais uma vez. Agora observe, em rosa, os <output>neurônios de saída</output> <gloss>(leitores da memória)</gloss>. Eles leem o padrão azul.",
           "result": "Quando um cheiro vem com açúcar ou perigo, as ligações do azul para o rosa mudam. Os cientistas acham que essa mudança é a memória."
         },
         "silence": {
-          "text": "Agora toque em Silenciar nas <term>células de Kenyon</term> <gloss>(separadoras de cheiro)</gloss>. Nós mandamos o cheiro para você. O que desaparece?",
+          "text": "Agora toque em Silenciar nas <kenyon>células de Kenyon</kenyon> <gloss>(separadoras de cheiro)</gloss>. Nós mandamos o cheiro para você. O que desaparece?",
           "result": "A luz rosa quase some. O cheiro ainda entra, mas os leitores da memória não recebem nada para ler."
         },
         "restore": {
-          "text": "Toque no botão das <term>células de Kenyon</term> <gloss>(separadoras de cheiro)</gloss> para ligar as células de novo. Nós mandamos o mesmo cheiro.",
+          "text": "Toque no botão das <kenyon>células de Kenyon</kenyon> <gloss>(separadoras de cheiro)</gloss> para ligar as células de novo. Nós mandamos o mesmo cheiro.",
           "result": "A luz rosa volta. A mosca consegue ler de novo a memória do cheiro."
         }
       },
       "check": {
-        "question": "Você silenciou as <term>células de Kenyon</term> <gloss>(as células azuis)</gloss>. Por que as células rosa se apagaram?",
+        "question": "Você silenciou as <kenyon>células de Kenyon</kenyon> <gloss>(as células azuis)</gloss>. Por que as células rosa se apagaram?",
         "choices": {
           "never": {
             "text": "O cheiro nunca entrou na mosca.",
@@ -295,19 +295,19 @@
       "description": "Gire a bússola interna de uma mosca-da-fruta real, silencie os neurônios em anel e veja o senso de direção dela se perder. Aula grátis de 10 minutos.",
       "steps": {
         "left": {
-          "text": "Toque em Estimular para disparar os <term>neurônios de giro</term> <gloss>(sinal para virar)</gloss> da esquerda. Depois observe o mostrador da bússola.",
-          "result": "Os <term>neurônios da bússola</term> <gloss>(células de direção)</gloss> acendem de um lado. Essa mancha brilhante, a bolha, mostra para onde a mosca está virada."
+          "text": "Toque em Estimular para disparar os <turn>neurônios de giro</turn> <gloss>(sinal para virar)</gloss> da esquerda. Depois observe o mostrador da bússola.",
+          "result": "Os <compass>neurônios da bússola</compass> <gloss>(células de direção)</gloss> acendem de um lado. Essa mancha brilhante, a bolha, mostra para onde a mosca está virada."
         },
         "right": {
-          "text": "Agora toque em Estimular nos <term>neurônios de giro</term> <gloss>(o outro sinal)</gloss> da direita. Fique de olho na bolha.",
+          "text": "Agora toque em Estimular nos <turn>neurônios de giro</turn> <gloss>(o outro sinal)</gloss> da direita. Fique de olho na bolha.",
           "result": "A bolha girou pelo mostrador. Os sinais para virar de cada lado empurram a bolha em sentidos opostos, então a mosca também muda de direção."
         },
         "silence": {
-          "text": "Toque em Silenciar nos <term>neurônios em anel</term> <gloss>(mensageiros da paisagem)</gloss>. Eles trazem o que a mosca vê. Nós mandamos o sinal da direita para você.",
+          "text": "Toque em Silenciar nos <ring>neurônios em anel</ring> <gloss>(mensageiros da paisagem)</gloss>. Eles trazem o que a mosca vê. Nós mandamos o sinal da direita para você.",
           "result": "A bolha escorrega do lugar e fica vagando. Sem pontos de referência, a bússola fica à deriva."
         },
         "restore": {
-          "text": "Toque no botão dos <term>neurônios em anel</term> <gloss>(mensageiros da paisagem)</gloss> para ligar os neurônios de novo. Nós mandamos o mesmo sinal.",
+          "text": "Toque no botão dos <ring>neurônios em anel</ring> <gloss>(mensageiros da paisagem)</gloss> para ligar os neurônios de novo. Nós mandamos o mesmo sinal.",
           "result": "A bolha volta a ficar firme no lugar. Os pontos de referência mantêm a bússola da mosca no rumo certo."
         }
       },
@@ -339,24 +339,24 @@
       "description": "Siga um mata-moscas dos olhos de uma mosca-da-fruta real até as pernas, pela fibra gigante, em 30 ms. Depois, corte o fio. Aula grátis de 10 minutos.",
       "steps": {
         "loom": {
-          "text": "Um mata-moscas vem com tudo para cima da mosca. Toque em Estimular para disparar os <term>neurônios de aproximação</term> <gloss>(vigias do mata-moscas)</gloss>.",
-          "result": "Eles disparam e, em poucos milésimos de segundo, a <term>fibra gigante</term> <gloss>(fio da fuga)</gloss> dispara também."
+          "text": "Um mata-moscas vem com tudo para cima da mosca. Toque em Estimular para disparar os <looming>neurônios de aproximação</looming> <gloss>(vigias do mata-moscas)</gloss>.",
+          "result": "Eles disparam e, em poucos milésimos de segundo, a <giantfiber>fibra gigante</giantfiber> <gloss>(fio da fuga)</gloss> dispara também."
         },
         "jump": {
-          "text": "Toque em Estimular de novo. Siga a <term>fibra gigante</term> <gloss>(fio da fuga)</gloss> descendo até o <term>cordão nervoso</term> <gloss>(a medula dela)</gloss>.",
-          "result": "Os <term>neurônios de salto</term> <gloss>(os lançadores)</gloss> disparam em até 30 milissegundos. Eles fazem as pernas do meio darem um impulso, e a mosca salta para longe."
+          "text": "Toque em Estimular de novo. Siga a <giantfiber>fibra gigante</giantfiber> <gloss>(fio da fuga)</gloss> descendo até o <nervecord>cordão nervoso</nervecord> <gloss>(a medula dela)</gloss>.",
+          "result": "Os <jump>neurônios de salto</jump> <gloss>(os lançadores)</gloss> disparam em até 30 milissegundos. Eles fazem as pernas do meio darem um impulso, e a mosca salta para longe."
         },
         "silence": {
-          "text": "Agora toque em Silenciar na <term>fibra gigante</term> <gloss>(fio da fuga)</gloss>. Nós mandamos o mata-moscas. Observe os <term>neurônios de salto</term> <gloss>(os lançadores)</gloss>.",
-          "result": "Os <term>neurônios de aproximação</term> <gloss>(vigias do mata-moscas)</gloss> ainda disparam, mas os <term>neurônios de salto</term> ficam apagados. A fuga rápida sumiu."
+          "text": "Agora toque em Silenciar na <giantfiber>fibra gigante</giantfiber> <gloss>(fio da fuga)</gloss>. Nós mandamos o mata-moscas. Observe os <jump>neurônios de salto</jump> <gloss>(os lançadores)</gloss>.",
+          "result": "Os <looming>neurônios de aproximação</looming> <gloss>(vigias do mata-moscas)</gloss> ainda disparam, mas os <jump>neurônios de salto</jump> ficam apagados. A fuga rápida sumiu."
         },
         "restore": {
-          "text": "Toque no botão da <term>fibra gigante</term> <gloss>(fio da fuga)</gloss> para ligar a fibra de novo. Nós mandamos o mesmo mata-moscas.",
-          "result": "Os <term>neurônios de salto</term> <gloss>(os lançadores)</gloss> voltam a disparar. Moscas reais também têm jeitos mais lentos de escapar, mas este é o mais rápido."
+          "text": "Toque no botão da <giantfiber>fibra gigante</giantfiber> <gloss>(fio da fuga)</gloss> para ligar a fibra de novo. Nós mandamos o mesmo mata-moscas.",
+          "result": "Os <jump>neurônios de salto</jump> <gloss>(os lançadores)</gloss> voltam a disparar. Moscas reais também têm jeitos mais lentos de escapar, mas este é o mais rápido."
         }
       },
       "check": {
-        "question": "Você silenciou a <term>fibra gigante</term> <gloss>(fio da fuga)</gloss>. Por que os lançadores ficaram apagados?",
+        "question": "Você silenciou a <giantfiber>fibra gigante</giantfiber> <gloss>(fio da fuga)</gloss>. Por que os lançadores ficaram apagados?",
         "choices": {
           "never": {
             "text": "A mosca nunca viu o mata-moscas.",

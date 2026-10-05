@@ -247,28 +247,28 @@
       "description": "Wyślij zapach do prawdziwego mózgu muszki owocowej, śledź go aż do ciała grzybkowatego i znajdź komórki, które go zapamiętują. Darmowa lekcja na 10 minut.",
       "steps": {
         "send": {
-          "text": "Muszka wącha <term>czułkami</term> <gloss>(dwoma różkami)</gloss>. Naciśnij „Pobudź”, żeby wysłać do niej zapach. Zobacz, jak zapalają się pomarańczowe neurony.",
-          "result": "Te pomarańczowe <term>receptory węchowe</term> <gloss>(łapacze zapachów)</gloss> wysyłają impulsy jako pierwsze. Tu zaczyna się droga każdego zapachu."
+          "text": "Muszka wącha <antenna>czułkami</antenna> <gloss>(dwoma różkami)</gloss>. Naciśnij „Pobudź”, żeby wysłać do niej zapach. Zobacz, jak zapalają się pomarańczowe neurony.",
+          "result": "Te pomarańczowe <receptor>receptory węchowe</receptor> <gloss>(łapacze zapachów)</gloss> wysyłają impulsy jako pierwsze. Tu zaczyna się droga każdego zapachu."
         },
         "follow": {
-          "text": "Naciśnij znowu „Pobudź” i śledź kolory. Żółte <term>neurony projekcyjne</term> <gloss>(posłańcy zapachu)</gloss> niosą zapach w głąb mózgu. Dalej przejmują go niebieskie <term>komórki Kenyona</term> <gloss>(sortery zapachów)</gloss>.",
+          "text": "Naciśnij znowu „Pobudź” i śledź kolory. Żółte <projection>neurony projekcyjne</projection> <gloss>(posłańcy zapachu)</gloss> niosą zapach w głąb mózgu. Dalej przejmują go niebieskie <kenyon>komórki Kenyona</kenyon> <gloss>(sortery zapachów)</gloss>.",
           "result": "Niebieskie komórki zamieniają każdy zapach w jego własny wzór."
         },
         "read": {
-          "text": "Naciśnij „Pobudź” jeszcze raz. Teraz patrz na różowe <term>neurony wyjściowe</term> <gloss>(czytniki pamięci)</gloss>. Odczytują niebieski wzór.",
+          "text": "Naciśnij „Pobudź” jeszcze raz. Teraz patrz na różowe <output>neurony wyjściowe</output> <gloss>(czytniki pamięci)</gloss>. Odczytują niebieski wzór.",
           "result": "Gdy zapach pojawia się razem z cukrem albo z niebezpieczeństwem, zmieniają się połączenia od niebieskich do różowych komórek. Naukowcy uważają, że właśnie ta zmiana jest pamięcią."
         },
         "silence": {
-          "text": "Teraz wycisz <term>komórki Kenyona</term> <gloss>(sortery zapachów)</gloss>. Zapach wyślemy za ciebie. Co zniknie?",
+          "text": "Teraz wycisz <kenyon>komórki Kenyona</kenyon> <gloss>(sortery zapachów)</gloss>. Zapach wyślemy za ciebie. Co zniknie?",
           "result": "Różowe światło prawie znika. Zapach wciąż dociera do mózgu, ale czytniki pamięci nie mają czego odczytać."
         },
         "restore": {
-          "text": "Włącz z powrotem <term>komórki Kenyona</term> <gloss>(sortery zapachów)</gloss>: naciśnij jeszcze raz ich przycisk. Wyślemy ten sam zapach.",
+          "text": "Włącz z powrotem <kenyon>komórki Kenyona</kenyon> <gloss>(sortery zapachów)</gloss>: naciśnij jeszcze raz ich przycisk. Wyślemy ten sam zapach.",
           "result": "Różowe światło wraca. Muszka znów może odczytać swoje wspomnienie zapachu."
         }
       },
       "check": {
-        "question": "Po wyciszeniu <term>komórek Kenyona</term> <gloss>(tych niebieskich)</gloss> różowe komórki zgasły. Dlaczego?",
+        "question": "Po wyciszeniu <kenyon>komórek Kenyona</kenyon> <gloss>(tych niebieskich)</gloss> różowe komórki zgasły. Dlaczego?",
         "choices": {
           "never": {
             "text": "Zapach w ogóle nie dostał się do muszki.",
@@ -295,19 +295,19 @@
       "description": "Poobracaj wewnętrznym kompasem prawdziwej muszki owocowej, wycisz neurony pierścieniowe i zobacz, jak muszka gubi kierunek. Darmowa lekcja na 10 minut.",
       "steps": {
         "left": {
-          "text": "Naciśnij „Pobudź”, żeby uruchomić lewe <term>neurony skrętu</term> <gloss>(sygnał skrętu)</gloss>. Potem obserwuj tarczę kompasu.",
-          "result": "<term>Neurony kompasu</term> <gloss>(komórki kierunku)</gloss> zapalają się po jednej stronie. Ta jasna plama to tak zwana górka. Pokazuje, w którą stronę zwrócona jest muszka."
+          "text": "Naciśnij „Pobudź”, żeby uruchomić lewe <turn>neurony skrętu</turn> <gloss>(sygnał skrętu)</gloss>. Potem obserwuj tarczę kompasu.",
+          "result": "<compass>Neurony kompasu</compass> <gloss>(komórki kierunku)</gloss> zapalają się po jednej stronie. Ta jasna plama to tak zwana górka. Pokazuje, w którą stronę zwrócona jest muszka."
         },
         "right": {
-          "text": "Teraz naciśnij „Pobudź”, żeby uruchomić prawe <term>neurony skrętu</term> <gloss>(drugi sygnał)</gloss>. Nie spuszczaj oka z górki.",
+          "text": "Teraz naciśnij „Pobudź”, żeby uruchomić prawe <turn>neurony skrętu</turn> <gloss>(drugi sygnał)</gloss>. Nie spuszczaj oka z górki.",
           "result": "Górka przesunęła się po tarczy. Sygnały skrętu z lewej i z prawej pchają ją w przeciwne strony, więc muszka też się obraca."
         },
         "silence": {
-          "text": "Wycisz <term>neurony pierścieniowe</term> <gloss>(kurierów widoków)</gloss>. Dostarczają mózgowi to, co widzi muszka. Prawy sygnał wyślemy za ciebie.",
+          "text": "Wycisz <ring>neurony pierścieniowe</ring> <gloss>(kurierów widoków)</gloss>. Dostarczają mózgowi to, co widzi muszka. Prawy sygnał wyślemy za ciebie.",
           "result": "Górka zsuwa się ze swojego miejsca i wędruje. Bez punktów orientacyjnych kompas dryfuje."
         },
         "restore": {
-          "text": "Włącz z powrotem <term>neurony pierścieniowe</term> <gloss>(kurierów widoków)</gloss>: naciśnij jeszcze raz ich przycisk. Wyślemy ten sam sygnał.",
+          "text": "Włącz z powrotem <ring>neurony pierścieniowe</ring> <gloss>(kurierów widoków)</gloss>: naciśnij jeszcze raz ich przycisk. Wyślemy ten sam sygnał.",
           "result": "Górka znów trzyma się swojego miejsca. Punkty orientacyjne pilnują, żeby kompas muszki się nie mylił."
         }
       },
@@ -339,24 +339,24 @@
       "description": "Prześledź sygnał o packce od oczu prawdziwej muszki owocowej przez włókno olbrzymie do nóg w 30 ms, a potem przetnij kabel. Darmowa lekcja na 10 minut.",
       "steps": {
         "loom": {
-          "text": "Packa pędzi prosto na muszkę. Naciśnij „Pobudź”, żeby uruchomić <term>neurony zbliżeniowe</term> <gloss>(wykrywacze packi)</gloss>.",
-          "result": "Wysyłają impulsy, a po kilku tysięcznych sekundy impuls wysyła też <term>włókno olbrzymie</term> <gloss>(kabel ucieczki)</gloss>."
+          "text": "Packa pędzi prosto na muszkę. Naciśnij „Pobudź”, żeby uruchomić <looming>neurony zbliżeniowe</looming> <gloss>(wykrywacze packi)</gloss>.",
+          "result": "Wysyłają impulsy, a po kilku tysięcznych sekundy impuls wysyła też <giantfiber>włókno olbrzymie</giantfiber> <gloss>(kabel ucieczki)</gloss>."
         },
         "jump": {
-          "text": "Naciśnij jeszcze raz „Pobudź”. Śledź <term>włókno olbrzymie</term> <gloss>(kabel ucieczki)</gloss> w dół, aż do <term>łańcuszka nerwowego</term> <gloss>(jej rdzenia kręgowego)</gloss>.",
-          "result": "<term>Neurony skoku</term> <gloss>(motorki nóg)</gloss> wysyłają impulsy w ciągu 30 milisekund. Sprawiają, że środkowe nogi kopią, a muszka odskakuje."
+          "text": "Naciśnij jeszcze raz „Pobudź”. Śledź <giantfiber>włókno olbrzymie</giantfiber> <gloss>(kabel ucieczki)</gloss> w dół, aż do <nervecord>łańcuszka nerwowego</nervecord> <gloss>(jej rdzenia kręgowego)</gloss>.",
+          "result": "<jump>Neurony skoku</jump> <gloss>(motorki nóg)</gloss> wysyłają impulsy w ciągu 30 milisekund. Sprawiają, że środkowe nogi kopią, a muszka odskakuje."
         },
         "silence": {
-          "text": "Teraz wycisz <term>włókno olbrzymie</term> <gloss>(kabel ucieczki)</gloss>. Packę wyślemy my. Obserwuj <term>neurony skoku</term> <gloss>(motorki nóg)</gloss>.",
-          "result": "<term>Neurony zbliżeniowe</term> <gloss>(wykrywacze packi)</gloss> nadal wysyłają impulsy, ale <term>neurony skoku</term> pozostają ciemne. Szybkiej ucieczki już nie ma."
+          "text": "Teraz wycisz <giantfiber>włókno olbrzymie</giantfiber> <gloss>(kabel ucieczki)</gloss>. Packę wyślemy my. Obserwuj <jump>neurony skoku</jump> <gloss>(motorki nóg)</gloss>.",
+          "result": "<looming>Neurony zbliżeniowe</looming> <gloss>(wykrywacze packi)</gloss> nadal wysyłają impulsy, ale <jump>neurony skoku</jump> pozostają ciemne. Szybkiej ucieczki już nie ma."
         },
         "restore": {
-          "text": "Włącz z powrotem <term>włókno olbrzymie</term> <gloss>(kabel ucieczki)</gloss>: naciśnij jeszcze raz jego przycisk. Wyślemy tę samą packę.",
-          "result": "<term>Neurony skoku</term> <gloss>(motorki nóg)</gloss> znów wysyłają impulsy. Prawdziwe muszki mają też wolniejsze drogi ucieczki, ale ta jest najszybsza."
+          "text": "Włącz z powrotem <giantfiber>włókno olbrzymie</giantfiber> <gloss>(kabel ucieczki)</gloss>: naciśnij jeszcze raz jego przycisk. Wyślemy tę samą packę.",
+          "result": "<jump>Neurony skoku</jump> <gloss>(motorki nóg)</gloss> znów wysyłają impulsy. Prawdziwe muszki mają też wolniejsze drogi ucieczki, ale ta jest najszybsza."
         }
       },
       "check": {
-        "question": "Po wyciszeniu <term>włókna olbrzymiego</term> <gloss>(kabla ucieczki)</gloss> motorki nóg pozostały ciemne. Dlaczego?",
+        "question": "Po wyciszeniu <giantfiber>włókna olbrzymiego</giantfiber> <gloss>(kabla ucieczki)</gloss> motorki nóg pozostały ciemne. Dlaczego?",
         "choices": {
           "never": {
             "text": "Muszka w ogóle nie zobaczyła packi.",

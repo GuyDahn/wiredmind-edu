@@ -248,28 +248,28 @@
       "description": "Stuur een geur een echt fruitvliegbrein in, volg hem naar het paddenstoellichaam en vind de cellen die hem onthouden. Een gratis les van 10 minuten.",
       "steps": {
         "send": {
-          "text": "Een vlieg ruikt met zijn <term>antennes</term> <gloss>(twee voelsprieten)</gloss>. Tik op Stimuleren om een geur naar binnen te sturen. Kijk hoe de oranje neuronen oplichten.",
-          "result": "Die oranje <term>geurreceptoren</term> <gloss>(de geurvangers)</gloss> vuren als eerste. Elke geur begint hier."
+          "text": "Een vlieg ruikt met zijn <antenna>antennes</antenna> <gloss>(twee voelsprieten)</gloss>. Tik op Stimuleren om een geur naar binnen te sturen. Kijk hoe de oranje neuronen oplichten.",
+          "result": "Die oranje <receptor>geurreceptoren</receptor> <gloss>(de geurvangers)</gloss> vuren als eerste. Elke geur begint hier."
         },
         "follow": {
-          "text": "Tik nog een keer op Stimuleren en volg de kleuren. Gele <term>projectieneuronen</term> <gloss>(de geurboodschappers)</gloss> brengen de geur naar binnen. Daarna vangen blauwe <term>Kenyon-cellen</term> <gloss>(de geursorteerders)</gloss> hem op.",
+          "text": "Tik nog een keer op Stimuleren en volg de kleuren. Gele <projection>projectieneuronen</projection> <gloss>(de geurboodschappers)</gloss> brengen de geur naar binnen. Daarna vangen blauwe <kenyon>Kenyon-cellen</kenyon> <gloss>(de geursorteerders)</gloss> hem op.",
           "result": "De blauwe cellen maken van elke geur een eigen patroon."
         },
         "read": {
-          "text": "Tik nog één keer op Stimuleren. Kijk nu naar de roze <term>outputneuronen</term> <gloss>(de geheugenlezers)</gloss>. Die lezen het blauwe patroon.",
+          "text": "Tik nog één keer op Stimuleren. Kijk nu naar de roze <output>outputneuronen</output> <gloss>(de geheugenlezers)</gloss>. Die lezen het blauwe patroon.",
           "result": "Als een geur samengaat met suiker of gevaar, veranderen de verbindingen van blauw naar roze. Wetenschappers denken dat die verandering de herinnering is."
         },
         "silence": {
-          "text": "Nu ga je de <term>Kenyon-cellen</term> <gloss>(de geursorteerders)</gloss> stilleggen. Wij sturen de geur voor je. Wat verdwijnt er?",
+          "text": "Nu ga je de <kenyon>Kenyon-cellen</kenyon> <gloss>(de geursorteerders)</gloss> stilleggen. Wij sturen de geur voor je. Wat verdwijnt er?",
           "result": "Het roze licht verdwijnt bijna. De geur komt nog steeds binnen, maar de geheugenlezers krijgen niets te lezen."
         },
         "restore": {
-          "text": "Tik nog een keer op de knop van de <term>Kenyon-cellen</term> <gloss>(de geursorteerders)</gloss> om ze weer aan te zetten. Wij sturen dezelfde geur.",
+          "text": "Tik nog een keer op de knop van de <kenyon>Kenyon-cellen</kenyon> <gloss>(de geursorteerders)</gloss> om ze weer aan te zetten. Wij sturen dezelfde geur.",
           "result": "Het roze licht komt terug. De vlieg kan zijn geurherinnering weer lezen."
         }
       },
       "check": {
-        "question": "Je hebt de <term>Kenyon-cellen</term> <gloss>(de blauwe cellen)</gloss> stilgelegd. Waarom werden de roze cellen donker?",
+        "question": "Je hebt de <kenyon>Kenyon-cellen</kenyon> <gloss>(de blauwe cellen)</gloss> stilgelegd. Waarom werden de roze cellen donker?",
         "choices": {
           "never": {
             "text": "De geur kwam de vlieg nooit binnen.",
@@ -296,19 +296,19 @@
       "description": "Duw het interne kompas van een echte fruitvlieg rond, leg dan de ringneuronen stil en zie het richtinggevoel afdrijven. Een gratis les van 10 minuten.",
       "steps": {
         "left": {
-          "text": "Tik op Stimuleren om links de <term>draaineuronen</term> <gloss>(het draaisignaal)</gloss> te laten vuren. Kijk dan naar de kompasschijf.",
-          "result": "De <term>kompasneuronen</term> <gloss>(de richtingcellen)</gloss> lichten aan één kant op. Die heldere vlek, de bult, laat zien welke kant de vlieg op kijkt."
+          "text": "Tik op Stimuleren om links de <turn>draaineuronen</turn> <gloss>(het draaisignaal)</gloss> te laten vuren. Kijk dan naar de kompasschijf.",
+          "result": "De <compass>kompasneuronen</compass> <gloss>(de richtingcellen)</gloss> lichten aan één kant op. Die heldere vlek, de bult, laat zien welke kant de vlieg op kijkt."
         },
         "right": {
-          "text": "Tik nu op Stimuleren om rechts de <term>draaineuronen</term> <gloss>(het andere signaal)</gloss> te laten vuren. Hou de bult goed in de gaten.",
+          "text": "Tik nu op Stimuleren om rechts de <turn>draaineuronen</turn> <gloss>(het andere signaal)</gloss> te laten vuren. Hou de bult goed in de gaten.",
           "result": "De bult zwaaide over de schijf. Draaisignalen van elke kant duwen hem in tegengestelde richtingen, dus de kijkrichting van de vlieg draait mee."
         },
         "silence": {
-          "text": "Nu ga je de <term>ringneuronen</term> <gloss>(de wegwijzers)</gloss> stilleggen. Die brengen binnen wat de vlieg ziet. Wij sturen het signaal van rechts voor je.",
+          "text": "Nu ga je de <ring>ringneuronen</ring> <gloss>(de wegwijzers)</gloss> stilleggen. Die brengen binnen wat de vlieg ziet. Wij sturen het signaal van rechts voor je.",
           "result": "De bult glijdt van zijn plek en dwaalt rond. Zonder oriëntatiepunten drijft het kompas af."
         },
         "restore": {
-          "text": "Tik nog een keer op de knop van de <term>ringneuronen</term> <gloss>(de wegwijzers)</gloss> om ze weer aan te zetten. Wij sturen hetzelfde signaal.",
+          "text": "Tik nog een keer op de knop van de <ring>ringneuronen</ring> <gloss>(de wegwijzers)</gloss> om ze weer aan te zetten. Wij sturen hetzelfde signaal.",
           "result": "De bult blijft weer op zijn plek. Oriëntatiepunten houden het kompas van de vlieg op koers."
         }
       },
@@ -340,24 +340,24 @@
       "description": "Volg in 30 ms een vliegenmepper van oog tot poot, via de reuzenvezel van een echte fruitvlieg. Knip dan de draad door. Een gratis les van 10 minuten.",
       "steps": {
         "loom": {
-          "text": "Een vliegenmepper duikt op de vlieg af. Tik op Stimuleren om de <term>naderingsneuronen</term> <gloss>(de meppermelders)</gloss> te laten vuren.",
-          "result": "Ze vuren, en binnen een paar duizendsten van een seconde vuurt ook de <term>reuzenvezel</term> <gloss>(de ontsnappingsdraad)</gloss>."
+          "text": "Een vliegenmepper duikt op de vlieg af. Tik op Stimuleren om de <looming>naderingsneuronen</looming> <gloss>(de meppermelders)</gloss> te laten vuren.",
+          "result": "Ze vuren, en binnen een paar duizendsten van een seconde vuurt ook de <giantfiber>reuzenvezel</giantfiber> <gloss>(de ontsnappingsdraad)</gloss>."
         },
         "jump": {
-          "text": "Tik nog een keer op Stimuleren. Volg de <term>reuzenvezel</term> <gloss>(de ontsnappingsdraad)</gloss> omlaag, de <term>zenuwstreng</term> <gloss>(een soort ruggenmerg)</gloss> in.",
-          "result": "De <term>springneuronen</term> <gloss>(de pootschoppers)</gloss> vuren binnen 30 milliseconden. Ze geven de middelste poten een schop, en de vlieg springt weg."
+          "text": "Tik nog een keer op Stimuleren. Volg de <giantfiber>reuzenvezel</giantfiber> <gloss>(de ontsnappingsdraad)</gloss> omlaag, de <nervecord>zenuwstreng</nervecord> <gloss>(een soort ruggenmerg)</gloss> in.",
+          "result": "De <jump>springneuronen</jump> <gloss>(de pootschoppers)</gloss> vuren binnen 30 milliseconden. Ze geven de middelste poten een schop, en de vlieg springt weg."
         },
         "silence": {
-          "text": "Nu ga je de <term>reuzenvezel</term> <gloss>(de ontsnappingsdraad)</gloss> stilleggen. Wij sturen de vliegenmepper. Kijk naar de <term>springneuronen</term> <gloss>(de pootschoppers)</gloss>.",
-          "result": "De <term>naderingsneuronen</term> <gloss>(de meppermelders)</gloss> vuren nog steeds, maar de <term>springneuronen</term> blijven donker. De snelle ontsnapping is weg."
+          "text": "Nu ga je de <giantfiber>reuzenvezel</giantfiber> <gloss>(de ontsnappingsdraad)</gloss> stilleggen. Wij sturen de vliegenmepper. Kijk naar de <jump>springneuronen</jump> <gloss>(de pootschoppers)</gloss>.",
+          "result": "De <looming>naderingsneuronen</looming> <gloss>(de meppermelders)</gloss> vuren nog steeds, maar de <jump>springneuronen</jump> blijven donker. De snelle ontsnapping is weg."
         },
         "restore": {
-          "text": "Tik nog een keer op de knop van de <term>reuzenvezel</term> <gloss>(de ontsnappingsdraad)</gloss> om hem weer aan te zetten. Wij sturen dezelfde vliegenmepper.",
-          "result": "De <term>springneuronen</term> <gloss>(de pootschoppers)</gloss> vuren weer. Echte vliegen kunnen ook op tragere manieren ontsnappen, maar dit is de snelste."
+          "text": "Tik nog een keer op de knop van de <giantfiber>reuzenvezel</giantfiber> <gloss>(de ontsnappingsdraad)</gloss> om hem weer aan te zetten. Wij sturen dezelfde vliegenmepper.",
+          "result": "De <jump>springneuronen</jump> <gloss>(de pootschoppers)</gloss> vuren weer. Echte vliegen kunnen ook op tragere manieren ontsnappen, maar dit is de snelste."
         }
       },
       "check": {
-        "question": "Je hebt de <term>reuzenvezel</term> <gloss>(de ontsnappingsdraad)</gloss> stilgelegd. Waarom bleven de pootschoppers donker?",
+        "question": "Je hebt de <giantfiber>reuzenvezel</giantfiber> <gloss>(de ontsnappingsdraad)</gloss> stilgelegd. Waarom bleven de pootschoppers donker?",
         "choices": {
           "never": {
             "text": "De vlieg heeft de vliegenmepper nooit gezien.",

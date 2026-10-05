@@ -247,28 +247,28 @@
       "description": "Gerçek bir meyve sineği beynine koku gönder, onu mantar cisimciğine kadar izle ve kokunun anısını saklayan hücreleri bul. Ücretsiz, 10 dakikalık bir ders.",
       "steps": {
         "send": {
-          "text": "Sinek <term>antenleriyle</term> <gloss>(iki duyargası)</gloss> koku alır. Bir koku göndermek için “Uyar” düğmesine dokun. Turuncu nöronların nasıl yandığını izle.",
-          "result": "Önce o turuncu <term>koku reseptörleri</term> <gloss>(koku yakalayıcıları)</gloss> ateşlenir. Her koku burada başlar."
+          "text": "Sinek <antenna>antenleriyle</antenna> <gloss>(iki duyargası)</gloss> koku alır. Bir koku göndermek için “Uyar” düğmesine dokun. Turuncu nöronların nasıl yandığını izle.",
+          "result": "Önce o turuncu <receptor>koku reseptörleri</receptor> <gloss>(koku yakalayıcıları)</gloss> ateşlenir. Her koku burada başlar."
         },
         "follow": {
-          "text": "“Uyar” düğmesine yine dokun ve renkleri takip et. Sarı <term>projeksiyon nöronları</term> <gloss>(koku habercileri)</gloss> kokuyu içeri taşır. Ardından mavi <term>Kenyon hücreleri</term> <gloss>(koku ayırıcıları)</gloss> onu yakalar.",
+          "text": "“Uyar” düğmesine yine dokun ve renkleri takip et. Sarı <projection>projeksiyon nöronları</projection> <gloss>(koku habercileri)</gloss> kokuyu içeri taşır. Ardından mavi <kenyon>Kenyon hücreleri</kenyon> <gloss>(koku ayırıcıları)</gloss> onu yakalar.",
           "result": "Mavi hücreler her kokuyu kendine özgü bir desene dönüştürür."
         },
         "read": {
-          "text": "“Uyar” düğmesine bir kez daha dokun. Şimdi pembe <term>çıktı nöronlarını</term> <gloss>(bellek okuyucuları)</gloss> izle. Bu nöronlar mavi deseni okur.",
+          "text": "“Uyar” düğmesine bir kez daha dokun. Şimdi pembe <output>çıktı nöronlarını</output> <gloss>(bellek okuyucuları)</gloss> izle. Bu nöronlar mavi deseni okur.",
           "result": "Bir koku şekerle ya da tehlikeyle birlikte gelirse maviden pembeye giden bağlantılar değişir. Bilim insanlarına göre bellek, işte bu değişimdir."
         },
         "silence": {
-          "text": "Şimdi <term>Kenyon hücrelerini</term> <gloss>(koku ayırıcıları)</gloss> sustur. Kokuyu senin için biz göndereceğiz. Ne kayboluyor?",
+          "text": "Şimdi <kenyon>Kenyon hücrelerini</kenyon> <gloss>(koku ayırıcıları)</gloss> sustur. Kokuyu senin için biz göndereceğiz. Ne kayboluyor?",
           "result": "Pembe ışık neredeyse kaybolur. Koku yine içeri girer ama bellek okuyucularının okuyacak hiçbir şeyi olmaz."
         },
         "restore": {
-          "text": "<term>Kenyon hücreleri</term> <gloss>(koku ayırıcıları)</gloss> düğmesine tekrar dokunup onları yeniden aç. Aynı kokuyu biz göndereceğiz.",
+          "text": "<kenyon>Kenyon hücreleri</kenyon> <gloss>(koku ayırıcıları)</gloss> düğmesine tekrar dokunup onları yeniden aç. Aynı kokuyu biz göndereceğiz.",
           "result": "Pembe ışık geri gelir. Sinek koku belleğini yeniden okuyabilir."
         }
       },
       "check": {
-        "question": "<term>Kenyon hücrelerini</term> <gloss>(mavi hücreler)</gloss> susturdun. Pembe hücreler neden söndü?",
+        "question": "<kenyon>Kenyon hücrelerini</kenyon> <gloss>(mavi hücreler)</gloss> susturdun. Pembe hücreler neden söndü?",
         "choices": {
           "never": {
             "text": "Koku sineğe hiç ulaşmadı.",
@@ -295,19 +295,19 @@
       "description": "Gerçek bir meyve sineğinin iç pusulasını sağa sola it, sonra halka nöronlarını sustur ve yön duygusunun kaymasını izle. Ücretsiz, 10 dakikalık bir ders.",
       "steps": {
         "left": {
-          "text": "Sol <term>dönüş nöronlarını</term> <gloss>(dönüş sinyali)</gloss> ateşlemek için “Uyar” düğmesine dokun. Sonra pusula kadranını izle.",
-          "result": "<term>Pusula nöronları</term> <gloss>(yön hücreleri)</gloss> bir tarafta yanar. Tümsek denen bu parlak bölge, sineğin hangi yöne baktığını gösterir."
+          "text": "Sol <turn>dönüş nöronlarını</turn> <gloss>(dönüş sinyali)</gloss> ateşlemek için “Uyar” düğmesine dokun. Sonra pusula kadranını izle.",
+          "result": "<compass>Pusula nöronları</compass> <gloss>(yön hücreleri)</gloss> bir tarafta yanar. Tümsek denen bu parlak bölge, sineğin hangi yöne baktığını gösterir."
         },
         "right": {
-          "text": "Şimdi sağ <term>dönüş nöronlarının</term> <gloss>(diğer sinyal)</gloss> “Uyar” düğmesine dokun. Gözünü tümsekten ayırma.",
+          "text": "Şimdi sağ <turn>dönüş nöronlarının</turn> <gloss>(diğer sinyal)</gloss> “Uyar” düğmesine dokun. Gözünü tümsekten ayırma.",
           "result": "Tümsek kadranda döndü. İki taraftan gelen dönüş sinyalleri onu zıt yönlere iter; bu yüzden sineğin yönü de döner."
         },
         "silence": {
-          "text": "<term>Halka nöronlarını</term> <gloss>(yer işareti taşıyıcıları)</gloss> sustur. Bu nöronlar sineğin gördüklerini içeri taşır. Sağ dönüş sinyalini senin için biz göndereceğiz.",
+          "text": "<ring>Halka nöronlarını</ring> <gloss>(yer işareti taşıyıcıları)</gloss> sustur. Bu nöronlar sineğin gördüklerini içeri taşır. Sağ dönüş sinyalini senin için biz göndereceğiz.",
           "result": "Tümsek yerinden kayar ve başıboş dolaşır. Yer işaretleri olmadan pusula sürüklenir."
         },
         "restore": {
-          "text": "<term>Halka nöronları</term> <gloss>(yer işareti taşıyıcıları)</gloss> düğmesine tekrar dokunup onları yeniden aç. Aynı sinyali biz göndereceğiz.",
+          "text": "<ring>Halka nöronları</ring> <gloss>(yer işareti taşıyıcıları)</gloss> düğmesine tekrar dokunup onları yeniden aç. Aynı sinyali biz göndereceğiz.",
           "result": "Tümsek yine yerinde durur. Yer işaretleri sineğin pusulasını şaşmaz tutar."
         }
       },
@@ -339,24 +339,24 @@
       "description": "Bir sinekliğin izini gerçek bir meyve sineğinin gözlerinden dev lif boyunca bacaklarına 30 ms’de sür, sonra kabloyu kes. Ücretsiz, 10 dakikalık bir ders.",
       "steps": {
         "loom": {
-          "text": "Bir sineklik sineğe doğru hızla iniyor. <term>Yaklaşma nöronlarını</term> <gloss>(sineklik gözcüleri)</gloss> ateşlemek için “Uyar” düğmesine dokun.",
-          "result": "Onlar ateşlenir ve saniyenin birkaç binde biri içinde <term>dev lif</term> <gloss>(kaçış kablosu)</gloss> de ateşlenir."
+          "text": "Bir sineklik sineğe doğru hızla iniyor. <looming>Yaklaşma nöronlarını</looming> <gloss>(sineklik gözcüleri)</gloss> ateşlemek için “Uyar” düğmesine dokun.",
+          "result": "Onlar ateşlenir ve saniyenin birkaç binde biri içinde <giantfiber>dev lif</giantfiber> <gloss>(kaçış kablosu)</gloss> de ateşlenir."
         },
         "jump": {
-          "text": "“Uyar” düğmesine yine dokun. <term>Dev lifi</term> <gloss>(kaçış kablosu)</gloss> aşağıya, <term>sinir kordonuna</term> <gloss>(sineğin omuriliği)</gloss> kadar izle.",
-          "result": "<term>Sıçrama nöronları</term> <gloss>(bacak iticileri)</gloss> 30 milisaniye içinde ateşlenir. Orta bacakları hızla iterler ve sinek sıçrayıp kaçar."
+          "text": "“Uyar” düğmesine yine dokun. <giantfiber>Dev lifi</giantfiber> <gloss>(kaçış kablosu)</gloss> aşağıya, <nervecord>sinir kordonuna</nervecord> <gloss>(sineğin omuriliği)</gloss> kadar izle.",
+          "result": "<jump>Sıçrama nöronları</jump> <gloss>(bacak iticileri)</gloss> 30 milisaniye içinde ateşlenir. Orta bacakları hızla iterler ve sinek sıçrayıp kaçar."
         },
         "silence": {
-          "text": "Şimdi <term>dev lifi</term> <gloss>(kaçış kablosu)</gloss> sustur. Sinekliği biz göndereceğiz. <term>Sıçrama nöronlarını</term> <gloss>(bacak iticileri)</gloss> izle.",
-          "result": "<term>Yaklaşma nöronları</term> <gloss>(sineklik gözcüleri)</gloss> yine ateşlenir ama <term>sıçrama nöronları</term> sönük kalır. Hızlı kaçış yok olur."
+          "text": "Şimdi <giantfiber>dev lifi</giantfiber> <gloss>(kaçış kablosu)</gloss> sustur. Sinekliği biz göndereceğiz. <jump>Sıçrama nöronlarını</jump> <gloss>(bacak iticileri)</gloss> izle.",
+          "result": "<looming>Yaklaşma nöronları</looming> <gloss>(sineklik gözcüleri)</gloss> yine ateşlenir ama <jump>sıçrama nöronları</jump> sönük kalır. Hızlı kaçış yok olur."
         },
         "restore": {
-          "text": "<term>Dev lif</term> <gloss>(kaçış kablosu)</gloss> düğmesine tekrar dokunup onu yeniden aç. Aynı sinekliği biz göndereceğiz.",
-          "result": "<term>Sıçrama nöronları</term> <gloss>(bacak iticileri)</gloss> yeniden ateşlenir. Gerçek sineklerin daha yavaş kaçış yolları da var ama en hızlısı bu."
+          "text": "<giantfiber>Dev lif</giantfiber> <gloss>(kaçış kablosu)</gloss> düğmesine tekrar dokunup onu yeniden aç. Aynı sinekliği biz göndereceğiz.",
+          "result": "<jump>Sıçrama nöronları</jump> <gloss>(bacak iticileri)</gloss> yeniden ateşlenir. Gerçek sineklerin daha yavaş kaçış yolları da var ama en hızlısı bu."
         }
       },
       "check": {
-        "question": "<term>Dev lifi</term> <gloss>(kaçış kablosu)</gloss> susturdun. Bacak iticileri neden sönük kaldı?",
+        "question": "<giantfiber>Dev lifi</giantfiber> <gloss>(kaçış kablosu)</gloss> susturdun. Bacak iticileri neden sönük kaldı?",
         "choices": {
           "never": {
             "text": "Sinek sinekliği hiç görmedi.",

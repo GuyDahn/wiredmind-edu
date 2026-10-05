@@ -247,28 +247,28 @@
       "description": "Manda un odore nel cervello di un vero moscerino, seguilo fino al corpo fungiforme e scopri le cellule che lo ricordano. Lezione gratuita di 10 minuti.",
       "steps": {
         "send": {
-          "text": "Un moscerino sente gli odori con le <term>antenne</term> <gloss>(due piccoli nasi)</gloss>. Tocca «Stimola» per far entrare un odore. Guarda come si accendono i neuroni arancioni.",
-          "result": "Quelli arancioni sono i <term>recettori olfattivi</term> <gloss>(acchiappaodori)</gloss> e si attivano per primi. Ogni odore comincia da qui."
+          "text": "Un moscerino sente gli odori con le <antenna>antenne</antenna> <gloss>(due piccoli nasi)</gloss>. Tocca «Stimola» per far entrare un odore. Guarda come si accendono i neuroni arancioni.",
+          "result": "Quelli arancioni sono i <receptor>recettori olfattivi</receptor> <gloss>(acchiappaodori)</gloss> e si attivano per primi. Ogni odore comincia da qui."
         },
         "follow": {
-          "text": "Tocca di nuovo «Stimola» e segui i colori. In giallo, i <term>neuroni di proiezione</term> <gloss>(messaggeri dell’odore)</gloss> portano l’odore verso l’interno. In blu, le <term>cellule di Kenyon</term> <gloss>(smistatrici di odori)</gloss> lo ricevono subito dopo.",
+          "text": "Tocca di nuovo «Stimola» e segui i colori. In giallo, i <projection>neuroni di proiezione</projection> <gloss>(messaggeri dell’odore)</gloss> portano l’odore verso l’interno. In blu, le <kenyon>cellule di Kenyon</kenyon> <gloss>(smistatrici di odori)</gloss> lo ricevono subito dopo.",
           "result": "Le cellule blu trasformano ogni odore in una combinazione tutta sua."
         },
         "read": {
-          "text": "Tocca «Stimola» ancora una volta. Ora guarda quelli rosa: sono i <term>neuroni di uscita</term> <gloss>(lettori di ricordi)</gloss>. Leggono la combinazione blu.",
+          "text": "Tocca «Stimola» ancora una volta. Ora guarda quelli rosa: sono i <output>neuroni di uscita</output> <gloss>(lettori di ricordi)</gloss>. Leggono la combinazione blu.",
           "result": "Quando un odore arriva insieme allo zucchero o a un pericolo, i collegamenti dal blu al rosa cambiano. Gli scienziati pensano che il ricordo sia proprio questo cambiamento."
         },
         "silence": {
-          "text": "Ora silenzia le <term>cellule di Kenyon</term> <gloss>(smistatrici di odori)</gloss>. L’odore lo mandiamo noi. Che cosa sparisce?",
+          "text": "Ora silenzia le <kenyon>cellule di Kenyon</kenyon> <gloss>(smistatrici di odori)</gloss>. L’odore lo mandiamo noi. Che cosa sparisce?",
           "result": "La luce rosa quasi sparisce. L’odore entra lo stesso, ma i lettori di ricordi non hanno niente da leggere."
         },
         "restore": {
-          "text": "Tocca di nuovo il pulsante delle <term>cellule di Kenyon</term> <gloss>(smistatrici di odori)</gloss> per riattivarle. Mandiamo di nuovo lo stesso odore.",
+          "text": "Tocca di nuovo il pulsante delle <kenyon>cellule di Kenyon</kenyon> <gloss>(smistatrici di odori)</gloss> per riattivarle. Mandiamo di nuovo lo stesso odore.",
           "result": "La luce rosa torna. Il moscerino può di nuovo leggere il ricordo dell’odore."
         }
       },
       "check": {
-        "question": "Hai silenziato le <term>cellule di Kenyon</term> <gloss>(cellule blu)</gloss>. Perché le cellule rosa si sono spente?",
+        "question": "Hai silenziato le <kenyon>cellule di Kenyon</kenyon> <gloss>(cellule blu)</gloss>. Perché le cellule rosa si sono spente?",
         "choices": {
           "never": {
             "text": "L’odore non è mai entrato nel moscerino.",
@@ -295,19 +295,19 @@
       "description": "Fai girare la bussola interna di un vero moscerino, poi silenzia i neuroni ad anello e guardala andare alla deriva. Lezione gratuita di 10 minuti.",
       "steps": {
         "left": {
-          "text": "Tocca «Stimola» per attivare i <term>neuroni di svolta</term> di sinistra <gloss>(segnale per girare)</gloss>. Poi guarda il quadrante della bussola.",
-          "result": "I <term>neuroni bussola</term> <gloss>(cellule di rotta)</gloss> si accendono da un lato. Quella zona luminosa, il picco, indica da che parte è rivolto il moscerino."
+          "text": "Tocca «Stimola» per attivare i <turn>neuroni di svolta</turn> di sinistra <gloss>(segnale per girare)</gloss>. Poi guarda il quadrante della bussola.",
+          "result": "I <compass>neuroni bussola</compass> <gloss>(cellule di rotta)</gloss> si accendono da un lato. Quella zona luminosa, il picco, indica da che parte è rivolto il moscerino."
         },
         "right": {
-          "text": "Ora tocca «Stimola» sui <term>neuroni di svolta</term> di destra <gloss>(segnale opposto)</gloss>. Tieni d’occhio il picco.",
+          "text": "Ora tocca «Stimola» sui <turn>neuroni di svolta</turn> di destra <gloss>(segnale opposto)</gloss>. Tieni d’occhio il picco.",
           "result": "Il picco si è spostato lungo il quadrante. I segnali di svolta dei due lati lo spingono in direzioni opposte, così cambia anche la rotta del moscerino."
         },
         "silence": {
-          "text": "Silenzia i <term>neuroni ad anello</term> <gloss>(occhi della bussola)</gloss>. Portano dentro quello che vede il moscerino. Il segnale di destra lo mandiamo noi.",
+          "text": "Silenzia i <ring>neuroni ad anello</ring> <gloss>(occhi della bussola)</gloss>. Portano dentro quello che vede il moscerino. Il segnale di destra lo mandiamo noi.",
           "result": "Il picco scivola via dal suo posto e vaga. Senza punti di riferimento, la bussola va alla deriva."
         },
         "restore": {
-          "text": "Tocca di nuovo il pulsante dei <term>neuroni ad anello</term> <gloss>(occhi della bussola)</gloss> per riattivarli. Mandiamo di nuovo lo stesso segnale.",
+          "text": "Tocca di nuovo il pulsante dei <ring>neuroni ad anello</ring> <gloss>(occhi della bussola)</gloss> per riattivarli. Mandiamo di nuovo lo stesso segnale.",
           "result": "Il picco resta di nuovo fermo al suo posto. I punti di riferimento tengono la bussola del moscerino sulla rotta giusta."
         }
       },
@@ -339,24 +339,24 @@
       "description": "Dagli occhi alle zampe in 30 ms: segui lo scacciamosche lungo la fibra gigante di un vero moscerino, poi taglia il filo. Lezione gratuita di 10 minuti.",
       "steps": {
         "loom": {
-          "text": "Uno scacciamosche piomba sul moscerino. Tocca «Stimola» per attivare i <term>neuroni di avvicinamento</term> <gloss>(sentinelle)</gloss>.",
-          "result": "Si attivano e, in pochi millesimi di secondo, si attiva anche la <term>fibra gigante</term> <gloss>(filo di fuga)</gloss>."
+          "text": "Uno scacciamosche piomba sul moscerino. Tocca «Stimola» per attivare i <looming>neuroni di avvicinamento</looming> <gloss>(sentinelle)</gloss>.",
+          "result": "Si attivano e, in pochi millesimi di secondo, si attiva anche la <giantfiber>fibra gigante</giantfiber> <gloss>(filo di fuga)</gloss>."
         },
         "jump": {
-          "text": "Tocca di nuovo «Stimola». Segui la <term>fibra gigante</term> <gloss>(filo di fuga)</gloss> giù nel <term>cordone nervoso</term> <gloss>(midollo spinale)</gloss>.",
-          "result": "I <term>neuroni del salto</term> <gloss>(motori delle zampe)</gloss> si attivano entro 30 millisecondi. Fanno scattare le zampe centrali e il moscerino salta via."
+          "text": "Tocca di nuovo «Stimola». Segui la <giantfiber>fibra gigante</giantfiber> <gloss>(filo di fuga)</gloss> giù nel <nervecord>cordone nervoso</nervecord> <gloss>(midollo spinale)</gloss>.",
+          "result": "I <jump>neuroni del salto</jump> <gloss>(motori delle zampe)</gloss> si attivano entro 30 millisecondi. Fanno scattare le zampe centrali e il moscerino salta via."
         },
         "silence": {
-          "text": "Ora silenzia la <term>fibra gigante</term> <gloss>(filo di fuga)</gloss>. Lo scacciamosche lo mandiamo noi. Guarda i <term>neuroni del salto</term> <gloss>(motori delle zampe)</gloss>.",
-          "result": "I <term>neuroni di avvicinamento</term> <gloss>(sentinelle)</gloss> si attivano ancora, ma i <term>neuroni del salto</term> restano spenti. La fuga veloce non c’è più."
+          "text": "Ora silenzia la <giantfiber>fibra gigante</giantfiber> <gloss>(filo di fuga)</gloss>. Lo scacciamosche lo mandiamo noi. Guarda i <jump>neuroni del salto</jump> <gloss>(motori delle zampe)</gloss>.",
+          "result": "I <looming>neuroni di avvicinamento</looming> <gloss>(sentinelle)</gloss> si attivano ancora, ma i <jump>neuroni del salto</jump> restano spenti. La fuga veloce non c’è più."
         },
         "restore": {
-          "text": "Tocca di nuovo il pulsante della <term>fibra gigante</term> <gloss>(filo di fuga)</gloss> per riattivarla. Mandiamo di nuovo lo stesso scacciamosche.",
-          "result": "I <term>neuroni del salto</term> <gloss>(motori delle zampe)</gloss> si attivano di nuovo. I moscerini veri hanno anche vie di fuga più lente, ma questa è la più veloce."
+          "text": "Tocca di nuovo il pulsante della <giantfiber>fibra gigante</giantfiber> <gloss>(filo di fuga)</gloss> per riattivarla. Mandiamo di nuovo lo stesso scacciamosche.",
+          "result": "I <jump>neuroni del salto</jump> <gloss>(motori delle zampe)</gloss> si attivano di nuovo. I moscerini veri hanno anche vie di fuga più lente, ma questa è la più veloce."
         }
       },
       "check": {
-        "question": "Hai silenziato la <term>fibra gigante</term> <gloss>(filo di fuga)</gloss>. Perché i motori delle zampe sono rimasti spenti?",
+        "question": "Hai silenziato la <giantfiber>fibra gigante</giantfiber> <gloss>(filo di fuga)</gloss>. Perché i motori delle zampe sono rimasti spenti?",
         "choices": {
           "never": {
             "text": "Il moscerino non ha mai visto lo scacciamosche.",

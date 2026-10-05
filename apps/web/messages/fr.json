@@ -247,28 +247,28 @@
       "description": "Envoyer une odeur dans un vrai cerveau de drosophile, la suivre jusqu’au corps pédonculé et trouver où se loge son souvenir. Leçon gratuite de 10 minutes.",
       "steps": {
         "send": {
-          "text": "Une mouche sent avec ses <term>antennes</term> <gloss>(ses deux capteurs)</gloss>. Appuie sur « Stimuler » pour lui envoyer une odeur. Regarde les neurones orange s’allumer.",
-          "result": "Ces neurones orange sont les <term>récepteurs olfactifs</term> <gloss>(les attrape-odeurs)</gloss> : ils s’activent en premier. Toute odeur commence ici."
+          "text": "Une mouche sent avec ses <antenna>antennes</antenna> <gloss>(ses deux capteurs)</gloss>. Appuie sur « Stimuler » pour lui envoyer une odeur. Regarde les neurones orange s’allumer.",
+          "result": "Ces neurones orange sont les <receptor>récepteurs olfactifs</receptor> <gloss>(les attrape-odeurs)</gloss> : ils s’activent en premier. Toute odeur commence ici."
         },
         "follow": {
-          "text": "Appuie de nouveau sur « Stimuler » et suis les couleurs. En jaune, les <term>neurones de projection</term> <gloss>(les messagers d’odeurs)</gloss> emportent l’odeur vers l’intérieur du cerveau. En bleu, les <term>cellules de Kenyon</term> <gloss>(les trieuses d’odeurs)</gloss> la captent ensuite.",
+          "text": "Appuie de nouveau sur « Stimuler » et suis les couleurs. En jaune, les <projection>neurones de projection</projection> <gloss>(les messagers d’odeurs)</gloss> emportent l’odeur vers l’intérieur du cerveau. En bleu, les <kenyon>cellules de Kenyon</kenyon> <gloss>(les trieuses d’odeurs)</gloss> la captent ensuite.",
           "result": "Les cellules bleues donnent à chaque odeur son propre motif."
         },
         "read": {
-          "text": "Appuie encore une fois sur « Stimuler ». Regarde maintenant les <term>neurones de sortie</term> <gloss>(les décodeurs)</gloss>, en rose. Ils décodent le motif bleu.",
+          "text": "Appuie encore une fois sur « Stimuler ». Regarde maintenant les <output>neurones de sortie</output> <gloss>(les décodeurs)</gloss>, en rose. Ils décodent le motif bleu.",
           "result": "Quand une odeur arrive avec du sucre ou un danger, les liens du bleu vers le rose changent. Les scientifiques pensent que ce changement, c’est la mémoire."
         },
         "silence": {
-          "text": "Maintenant, fais taire les <term>cellules de Kenyon</term> <gloss>(les trieuses d’odeurs)</gloss>. On envoie l’odeur à ta place. Qu’est-ce qui disparaît ?",
+          "text": "Maintenant, fais taire les <kenyon>cellules de Kenyon</kenyon> <gloss>(les trieuses d’odeurs)</gloss>. On envoie l’odeur à ta place. Qu’est-ce qui disparaît ?",
           "result": "La lumière rose disparaît presque. L’odeur entre toujours, mais les décodeurs n’ont plus rien à décoder."
         },
         "restore": {
-          "text": "Appuie de nouveau sur le bouton des <term>cellules de Kenyon</term> <gloss>(les trieuses d’odeurs)</gloss> pour les réactiver. On envoie la même odeur.",
+          "text": "Appuie de nouveau sur le bouton des <kenyon>cellules de Kenyon</kenyon> <gloss>(les trieuses d’odeurs)</gloss> pour les réactiver. On envoie la même odeur.",
           "result": "La lumière rose revient. La mouche retrouve le souvenir de cette odeur."
         }
       },
       "check": {
-        "question": "Tu as fait taire les <term>cellules de Kenyon</term> <gloss>(les cellules bleues)</gloss>. Pourquoi les cellules roses se sont-elles éteintes ?",
+        "question": "Tu as fait taire les <kenyon>cellules de Kenyon</kenyon> <gloss>(les cellules bleues)</gloss>. Pourquoi les cellules roses se sont-elles éteintes ?",
         "choices": {
           "never": {
             "text": "L’odeur n’est jamais entrée dans la mouche.",
@@ -295,19 +295,19 @@
       "description": "Faire tourner la boussole interne d’une vraie drosophile, puis faire taire les neurones en anneau et la voir dériver. Leçon gratuite de 10 minutes.",
       "steps": {
         "left": {
-          "text": "Appuie sur « Stimuler » pour activer les <term>neurones de rotation</term> <gloss>(l’ordre de tourner)</gloss> du côté gauche. Puis regarde le cadran de la boussole.",
-          "result": "Les <term>neurones de la boussole</term> <gloss>(les cellules d’orientation)</gloss> s’allument d’un côté. Cette tache brillante, la « bosse », montre de quel côté la mouche est tournée."
+          "text": "Appuie sur « Stimuler » pour activer les <turn>neurones de rotation</turn> <gloss>(l’ordre de tourner)</gloss> du côté gauche. Puis regarde le cadran de la boussole.",
+          "result": "Les <compass>neurones de la boussole</compass> <gloss>(les cellules d’orientation)</gloss> s’allument d’un côté. Cette tache brillante, la « bosse », montre de quel côté la mouche est tournée."
         },
         "right": {
-          "text": "Maintenant, appuie sur « Stimuler » pour les <term>neurones de rotation</term> <gloss>(l’autre ordre)</gloss> du côté droit. Garde les yeux sur la bosse.",
+          "text": "Maintenant, appuie sur « Stimuler » pour les <turn>neurones de rotation</turn> <gloss>(l’autre ordre)</gloss> du côté droit. Garde les yeux sur la bosse.",
           "result": "La bosse a tourné autour du cadran. Les ordres de tourner venus de chaque côté la poussent dans des sens opposés : la mouche change donc d’orientation, elle aussi."
         },
         "silence": {
-          "text": "Fais taire les <term>neurones en anneau</term> <gloss>(les porte-repères)</gloss>. Ils apportent ce que la mouche voit. On envoie l’ordre de droite à ta place.",
+          "text": "Fais taire les <ring>neurones en anneau</ring> <gloss>(les porte-repères)</gloss>. Ils apportent ce que la mouche voit. On envoie l’ordre de droite à ta place.",
           "result": "La bosse quitte sa place et se met à errer. Sans repères, la boussole dérive."
         },
         "restore": {
-          "text": "Appuie de nouveau sur le bouton des <term>neurones en anneau</term> <gloss>(les porte-repères)</gloss> pour les réactiver. On envoie le même ordre.",
+          "text": "Appuie de nouveau sur le bouton des <ring>neurones en anneau</ring> <gloss>(les porte-repères)</gloss> pour les réactiver. On envoie le même ordre.",
           "result": "La bosse tient de nouveau sa place. Grâce aux repères, la boussole de la mouche reste fiable."
         }
       },
@@ -339,24 +339,24 @@
       "description": "Des yeux aux pattes d’une vraie drosophile en 30 ms : suivre l’alerte au tue-mouches par la fibre géante, puis couper le fil. Leçon gratuite de 10 minutes.",
       "steps": {
         "loom": {
-          "text": "Un tue-mouches fond sur la mouche. Appuie sur « Stimuler » pour activer les <term>neurones d’approche</term> <gloss>(les guetteurs)</gloss>.",
-          "result": "Ils s’activent et, en quelques millièmes de seconde, la <term>fibre géante</term> <gloss>(le fil d’évasion)</gloss> s’active à son tour."
+          "text": "Un tue-mouches fond sur la mouche. Appuie sur « Stimuler » pour activer les <looming>neurones d’approche</looming> <gloss>(les guetteurs)</gloss>.",
+          "result": "Ils s’activent et, en quelques millièmes de seconde, la <giantfiber>fibre géante</giantfiber> <gloss>(le fil d’évasion)</gloss> s’active à son tour."
         },
         "jump": {
-          "text": "Appuie de nouveau sur « Stimuler ». Suis la <term>fibre géante</term> <gloss>(le fil d’évasion)</gloss> qui descend jusque dans le <term>cordon nerveux</term> <gloss>(sa moelle épinière)</gloss>.",
-          "result": "Les <term>neurones du saut</term> <gloss>(les propulseurs)</gloss> s’activent en moins de 30 millisecondes. Ils détendent d’un coup les pattes du milieu, et la mouche s’envole d’un bond."
+          "text": "Appuie de nouveau sur « Stimuler ». Suis la <giantfiber>fibre géante</giantfiber> <gloss>(le fil d’évasion)</gloss> qui descend jusque dans le <nervecord>cordon nerveux</nervecord> <gloss>(sa moelle épinière)</gloss>.",
+          "result": "Les <jump>neurones du saut</jump> <gloss>(les propulseurs)</gloss> s’activent en moins de 30 millisecondes. Ils détendent d’un coup les pattes du milieu, et la mouche s’envole d’un bond."
         },
         "silence": {
-          "text": "Maintenant, fais taire la <term>fibre géante</term> <gloss>(le fil d’évasion)</gloss>. On envoie le tue-mouches. Regarde les <term>neurones du saut</term> <gloss>(les propulseurs)</gloss>.",
-          "result": "Les <term>neurones d’approche</term> <gloss>(les guetteurs)</gloss> s’activent toujours, mais les <term>neurones du saut</term> restent éteints. La fuite rapide a disparu."
+          "text": "Maintenant, fais taire la <giantfiber>fibre géante</giantfiber> <gloss>(le fil d’évasion)</gloss>. On envoie le tue-mouches. Regarde les <jump>neurones du saut</jump> <gloss>(les propulseurs)</gloss>.",
+          "result": "Les <looming>neurones d’approche</looming> <gloss>(les guetteurs)</gloss> s’activent toujours, mais les <jump>neurones du saut</jump> restent éteints. La fuite rapide a disparu."
         },
         "restore": {
-          "text": "Appuie de nouveau sur le bouton de la <term>fibre géante</term> <gloss>(le fil d’évasion)</gloss> pour la réactiver. On envoie le même tue-mouches.",
-          "result": "Les <term>neurones du saut</term> <gloss>(les propulseurs)</gloss> s’activent de nouveau. Les vraies mouches ont aussi des façons plus lentes de s’échapper, mais celle-ci est la plus rapide."
+          "text": "Appuie de nouveau sur le bouton de la <giantfiber>fibre géante</giantfiber> <gloss>(le fil d’évasion)</gloss> pour la réactiver. On envoie le même tue-mouches.",
+          "result": "Les <jump>neurones du saut</jump> <gloss>(les propulseurs)</gloss> s’activent de nouveau. Les vraies mouches ont aussi des façons plus lentes de s’échapper, mais celle-ci est la plus rapide."
         }
       },
       "check": {
-        "question": "Tu as fait taire la <term>fibre géante</term> <gloss>(le fil d’évasion)</gloss>. Pourquoi les propulseurs sont-ils restés éteints ?",
+        "question": "Tu as fait taire la <giantfiber>fibre géante</giantfiber> <gloss>(le fil d’évasion)</gloss>. Pourquoi les propulseurs sont-ils restés éteints ?",
         "choices": {
           "never": {
             "text": "La mouche n’a jamais vu le tue-mouches.",

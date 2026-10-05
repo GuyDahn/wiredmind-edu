@@ -247,28 +247,28 @@
       "description": "Einen Duft durch ein echtes Fruchtfliegengehirn bis in den Pilzkörper verfolgen und die Zellen finden, die ihn speichern. Kostenlose 10-Minuten-Lektion.",
       "steps": {
         "send": {
-          "text": "Eine Fliege riecht mit ihren <term>Antennen</term> <gloss>(ihren zwei Fühlern)</gloss>. Tippe auf „Stimulieren“, um einen Duft hineinzuschicken. Sieh zu, wie die orangefarbenen Neuronen aufleuchten.",
-          "result": "Diese orangefarbenen <term>Duftrezeptoren</term> <gloss>(die Duftfänger)</gloss> feuern zuerst. Hier beginnt jeder Duft."
+          "text": "Eine Fliege riecht mit ihren <antenna>Antennen</antenna> <gloss>(ihren zwei Fühlern)</gloss>. Tippe auf „Stimulieren“, um einen Duft hineinzuschicken. Sieh zu, wie die orangefarbenen Neuronen aufleuchten.",
+          "result": "Diese orangefarbenen <receptor>Duftrezeptoren</receptor> <gloss>(die Duftfänger)</gloss> feuern zuerst. Hier beginnt jeder Duft."
         },
         "follow": {
-          "text": "Tippe noch einmal auf „Stimulieren“ und folge den Farben. Gelbe <term>Projektionsneuronen</term> <gloss>(die Duftboten)</gloss> tragen den Duft nach innen. Blaue <term>Kenyon-Zellen</term> <gloss>(die Duftsortierer)</gloss> fangen ihn als Nächstes auf.",
+          "text": "Tippe noch einmal auf „Stimulieren“ und folge den Farben. Gelbe <projection>Projektionsneuronen</projection> <gloss>(die Duftboten)</gloss> tragen den Duft nach innen. Blaue <kenyon>Kenyon-Zellen</kenyon> <gloss>(die Duftsortierer)</gloss> fangen ihn als Nächstes auf.",
           "result": "Die blauen Zellen machen aus jedem Duft ein eigenes Muster."
         },
         "read": {
-          "text": "Tippe ein weiteres Mal auf „Stimulieren“. Achte jetzt auf die pinkfarbenen <term>Ausgangsneuronen</term> <gloss>(die Gedächtnisleser)</gloss>. Sie lesen das blaue Muster.",
+          "text": "Tippe ein weiteres Mal auf „Stimulieren“. Achte jetzt auf die pinkfarbenen <output>Ausgangsneuronen</output> <gloss>(die Gedächtnisleser)</gloss>. Sie lesen das blaue Muster.",
           "result": "Wenn ein Duft zusammen mit Zucker oder Gefahr auftritt, verändern sich die Verbindungen von Blau zu Pink. Forschende vermuten, dass diese Veränderung die Erinnerung ist."
         },
         "silence": {
-          "text": "Schalte jetzt die <term>Kenyon-Zellen</term> <gloss>(die Duftsortierer)</gloss> stumm. Wir schicken den Duft für dich hinein. Was verschwindet?",
+          "text": "Schalte jetzt die <kenyon>Kenyon-Zellen</kenyon> <gloss>(die Duftsortierer)</gloss> stumm. Wir schicken den Duft für dich hinein. Was verschwindet?",
           "result": "Das pinkfarbene Leuchten verschwindet fast ganz. Der Duft kommt zwar noch hinein, aber die Gedächtnisleser bekommen nichts zu lesen."
         },
         "restore": {
-          "text": "Tippe noch einmal auf den Knopf der <term>Kenyon-Zellen</term> <gloss>(der Duftsortierer)</gloss>, um sie wieder einzuschalten. Wir schicken denselben Duft.",
+          "text": "Tippe noch einmal auf den Knopf der <kenyon>Kenyon-Zellen</kenyon> <gloss>(der Duftsortierer)</gloss>, um sie wieder einzuschalten. Wir schicken denselben Duft.",
           "result": "Das pinkfarbene Leuchten kommt zurück. Die Fliege kann ihr Duftgedächtnis wieder lesen."
         }
       },
       "check": {
-        "question": "Du hast die <term>Kenyon-Zellen</term> <gloss>(die blauen Zellen)</gloss> stummgeschaltet. Warum sind die pinkfarbenen Zellen dunkel geworden?",
+        "question": "Du hast die <kenyon>Kenyon-Zellen</kenyon> <gloss>(die blauen Zellen)</gloss> stummgeschaltet. Warum sind die pinkfarbenen Zellen dunkel geworden?",
         "choices": {
           "never": {
             "text": "Der Duft ist gar nicht in die Fliege gelangt.",
@@ -295,19 +295,19 @@
       "description": "Den inneren Kompass einer echten Fruchtfliege verschieben, dann die Ringneuronen stummschalten und zusehen, wie er driftet. Kostenlose 10-Minuten-Lektion.",
       "steps": {
         "left": {
-          "text": "Tippe auf „Stimulieren“, um die linken <term>Drehneuronen</term> <gloss>(das Drehsignal)</gloss> feuern zu lassen. Beobachte dann die Kompassanzeige.",
-          "result": "Die <term>Kompassneuronen</term> <gloss>(die Richtungszellen)</gloss> leuchten auf einer Seite auf. Dieser Leuchtfleck zeigt, wohin die Fliege schaut."
+          "text": "Tippe auf „Stimulieren“, um die linken <turn>Drehneuronen</turn> <gloss>(das Drehsignal)</gloss> feuern zu lassen. Beobachte dann die Kompassanzeige.",
+          "result": "Die <compass>Kompassneuronen</compass> <gloss>(die Richtungszellen)</gloss> leuchten auf einer Seite auf. Dieser Leuchtfleck zeigt, wohin die Fliege schaut."
         },
         "right": {
-          "text": "Tippe jetzt bei den rechten <term>Drehneuronen</term> <gloss>(dem anderen Signal)</gloss> auf „Stimulieren“. Behalte den Leuchtfleck im Blick.",
+          "text": "Tippe jetzt bei den rechten <turn>Drehneuronen</turn> <gloss>(dem anderen Signal)</gloss> auf „Stimulieren“. Behalte den Leuchtfleck im Blick.",
           "result": "Der Leuchtfleck ist über die Anzeige gewandert. Die Drehsignale von links und rechts schieben ihn in entgegengesetzte Richtungen. So ändert sich auch, wohin die Fliege schaut."
         },
         "silence": {
-          "text": "Schalte die <term>Ringneuronen</term> <gloss>(die Landmarkenboten)</gloss> stumm. Sie melden, was die Fliege sieht. Wir schicken das Signal von rechts für dich.",
+          "text": "Schalte die <ring>Ringneuronen</ring> <gloss>(die Landmarkenboten)</gloss> stumm. Sie melden, was die Fliege sieht. Wir schicken das Signal von rechts für dich.",
           "result": "Der Leuchtfleck rutscht von seinem Platz und wandert umher. Ohne Landmarken driftet der Kompass."
         },
         "restore": {
-          "text": "Tippe noch einmal auf den Knopf der <term>Ringneuronen</term> <gloss>(der Landmarkenboten)</gloss>, um sie wieder einzuschalten. Wir schicken dasselbe Signal.",
+          "text": "Tippe noch einmal auf den Knopf der <ring>Ringneuronen</ring> <gloss>(der Landmarkenboten)</gloss>, um sie wieder einzuschalten. Wir schicken dasselbe Signal.",
           "result": "Der Leuchtfleck bleibt wieder an seinem Platz. Landmarken halten den Kompass der Fliege auf Kurs."
         }
       },
@@ -339,24 +339,24 @@
       "description": "Die Flucht einer echten Fruchtfliege verfolgen: in 30 ms von den Augen über die Riesenfaser in die Beine. Dann die Leitung kappen. 10 Minuten, kostenlos.",
       "steps": {
         "loom": {
-          "text": "Eine Fliegenklatsche saust auf die Fliege zu. Tippe auf „Stimulieren“, um die <term>Annäherungsneuronen</term> <gloss>(die Klatschen-Späher)</gloss> feuern zu lassen.",
-          "result": "Sie feuern, und nach wenigen Tausendstelsekunden feuert auch die <term>Riesenfaser</term> <gloss>(die Fluchtleitung)</gloss>."
+          "text": "Eine Fliegenklatsche saust auf die Fliege zu. Tippe auf „Stimulieren“, um die <looming>Annäherungsneuronen</looming> <gloss>(die Klatschen-Späher)</gloss> feuern zu lassen.",
+          "result": "Sie feuern, und nach wenigen Tausendstelsekunden feuert auch die <giantfiber>Riesenfaser</giantfiber> <gloss>(die Fluchtleitung)</gloss>."
         },
         "jump": {
-          "text": "Tippe noch einmal auf „Stimulieren“. Folge der <term>Riesenfaser</term> <gloss>(der Fluchtleitung)</gloss> hinunter ins <term>Bauchmark</term> <gloss>(das Fliegen-Rückenmark)</gloss>.",
-          "result": "Die <term>Sprungneuronen</term> <gloss>(die Beinkicker)</gloss> feuern innerhalb von 30 Millisekunden. Sie lassen die Mittelbeine nach unten schnellen, und die Fliege springt davon."
+          "text": "Tippe noch einmal auf „Stimulieren“. Folge der <giantfiber>Riesenfaser</giantfiber> <gloss>(der Fluchtleitung)</gloss> hinunter ins <nervecord>Bauchmark</nervecord> <gloss>(das Fliegen-Rückenmark)</gloss>.",
+          "result": "Die <jump>Sprungneuronen</jump> <gloss>(die Beinkicker)</gloss> feuern innerhalb von 30 Millisekunden. Sie lassen die Mittelbeine nach unten schnellen, und die Fliege springt davon."
         },
         "silence": {
-          "text": "Schalte jetzt die <term>Riesenfaser</term> <gloss>(die Fluchtleitung)</gloss> stumm. Wir schicken die Fliegenklatsche. Beobachte die <term>Sprungneuronen</term> <gloss>(die Beinkicker)</gloss>.",
-          "result": "Die <term>Annäherungsneuronen</term> <gloss>(die Klatschen-Späher)</gloss> feuern noch, aber die <term>Sprungneuronen</term> bleiben dunkel. Die schnelle Flucht ist weg."
+          "text": "Schalte jetzt die <giantfiber>Riesenfaser</giantfiber> <gloss>(die Fluchtleitung)</gloss> stumm. Wir schicken die Fliegenklatsche. Beobachte die <jump>Sprungneuronen</jump> <gloss>(die Beinkicker)</gloss>.",
+          "result": "Die <looming>Annäherungsneuronen</looming> <gloss>(die Klatschen-Späher)</gloss> feuern noch, aber die <jump>Sprungneuronen</jump> bleiben dunkel. Die schnelle Flucht ist weg."
         },
         "restore": {
-          "text": "Tippe noch einmal auf den Knopf der <term>Riesenfaser</term> <gloss>(der Fluchtleitung)</gloss>, um sie wieder einzuschalten. Wir schicken dieselbe Fliegenklatsche.",
-          "result": "Die <term>Sprungneuronen</term> <gloss>(die Beinkicker)</gloss> feuern wieder. Echte Fliegen haben auch langsamere Fluchtwege, aber dieser ist der schnellste."
+          "text": "Tippe noch einmal auf den Knopf der <giantfiber>Riesenfaser</giantfiber> <gloss>(der Fluchtleitung)</gloss>, um sie wieder einzuschalten. Wir schicken dieselbe Fliegenklatsche.",
+          "result": "Die <jump>Sprungneuronen</jump> <gloss>(die Beinkicker)</gloss> feuern wieder. Echte Fliegen haben auch langsamere Fluchtwege, aber dieser ist der schnellste."
         }
       },
       "check": {
-        "question": "Du hast die <term>Riesenfaser</term> <gloss>(die Fluchtleitung)</gloss> stummgeschaltet. Warum sind die Beinkicker dunkel geblieben?",
+        "question": "Du hast die <giantfiber>Riesenfaser</giantfiber> <gloss>(die Fluchtleitung)</gloss> stummgeschaltet. Warum sind die Beinkicker dunkel geblieben?",
         "choices": {
           "never": {
             "text": "Die Fliege hat die Fliegenklatsche gar nicht gesehen.",

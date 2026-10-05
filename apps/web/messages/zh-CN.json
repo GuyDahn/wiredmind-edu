@@ -247,28 +247,28 @@
       "description": "把一种气味送进真实的果蝇大脑，一路追到蘑菇体，找出储存这段记忆的细胞。10分钟免费小课。",
       "steps": {
         "send": {
-          "text": "果蝇用<term>触角</term><gloss>（两根“小天线”）</gloss>闻气味。点“刺激”，把一种气味送进去。注意看橙色的神经元亮起来。",
-          "result": "这些橙色的<term>气味感受器</term><gloss>（气味捕手）</gloss>最先放电。每一种气味都从这里开始。"
+          "text": "果蝇用<antenna>触角</antenna><gloss>（两根“小天线”）</gloss>闻气味。点“刺激”，把一种气味送进去。注意看橙色的神经元亮起来。",
+          "result": "这些橙色的<receptor>气味感受器</receptor><gloss>（气味捕手）</gloss>最先放电。每一种气味都从这里开始。"
         },
         "follow": {
-          "text": "再点一次“刺激”，跟着颜色走。黄色的<term>投射神经元</term><gloss>（气味信使）</gloss>把气味往大脑深处传。随后由蓝色的<term>Kenyon细胞</term><gloss>（气味分拣员）</gloss>接手。",
+          "text": "再点一次“刺激”，跟着颜色走。黄色的<projection>投射神经元</projection><gloss>（气味信使）</gloss>把气味往大脑深处传。随后由蓝色的<kenyon>Kenyon细胞</kenyon><gloss>（气味分拣员）</gloss>接手。",
           "result": "蓝色细胞把每种气味都变成独一无二的模式。"
         },
         "read": {
-          "text": "再点一下“刺激”。这次看粉色的<term>输出神经元</term><gloss>（记忆读取员）</gloss>。它们会读取蓝色细胞的模式。",
+          "text": "再点一下“刺激”。这次看粉色的<output>输出神经元</output><gloss>（记忆读取员）</gloss>。它们会读取蓝色细胞的模式。",
           "result": "如果一种气味总和糖或危险一起出现，从蓝色到粉色的连接就会改变。科学家认为，这种改变就是记忆。"
         },
         "silence": {
-          "text": "现在，让<term>Kenyon细胞</term><gloss>（气味分拣员）</gloss>沉默。我们会替你送入气味。什么消失了？",
+          "text": "现在，让<kenyon>Kenyon细胞</kenyon><gloss>（气味分拣员）</gloss>沉默。我们会替你送入气味。什么消失了？",
           "result": "粉色的光几乎消失了。气味还是进来了，但记忆读取员没有东西可读。"
         },
         "restore": {
-          "text": "再点一下<term>Kenyon细胞</term><gloss>（气味分拣员）</gloss>的按钮，把它们重新开启。我们会送入同样的气味。",
+          "text": "再点一下<kenyon>Kenyon细胞</kenyon><gloss>（气味分拣员）</gloss>的按钮，把它们重新开启。我们会送入同样的气味。",
           "result": "粉色的光回来了。果蝇又能读取它的气味记忆了。"
         }
       },
       "check": {
-        "question": "你让<term>Kenyon细胞</term><gloss>（蓝色细胞）</gloss>沉默了。为什么粉色细胞暗了下去？",
+        "question": "你让<kenyon>Kenyon细胞</kenyon><gloss>（蓝色细胞）</gloss>沉默了。为什么粉色细胞暗了下去？",
         "choices": {
           "never": {
             "text": "气味根本没有进入果蝇体内。",
@@ -295,19 +295,19 @@
       "description": "推动真实果蝇脑中的“内置罗盘”，再让环形神经元沉默，看它的方向感如何漂移。10分钟免费小课。",
       "steps": {
         "left": {
-          "text": "点“刺激”，让左侧的<term>转向神经元</term><gloss>（转向信号）</gloss>放电。然后看着罗盘。",
-          "result": "<term>罗盘神经元</term><gloss>（朝向细胞）</gloss>在一侧亮了起来。这块亮斑标出了果蝇面朝哪边。"
+          "text": "点“刺激”，让左侧的<turn>转向神经元</turn><gloss>（转向信号）</gloss>放电。然后看着罗盘。",
+          "result": "<compass>罗盘神经元</compass><gloss>（朝向细胞）</gloss>在一侧亮了起来。这块亮斑标出了果蝇面朝哪边。"
         },
         "right": {
-          "text": "现在点“刺激”，这次换成右侧的<term>转向神经元</term><gloss>（另一路信号）</gloss>。眼睛盯紧亮斑。",
+          "text": "现在点“刺激”，这次换成右侧的<turn>转向神经元</turn><gloss>（另一路信号）</gloss>。眼睛盯紧亮斑。",
           "result": "亮斑沿着罗盘转了过去。两侧的转向信号把它往相反的方向推，所以果蝇的朝向也跟着转了。"
         },
         "silence": {
-          "text": "让<term>环形神经元</term><gloss>（地标快递员）</gloss>沉默。它们负责把果蝇看到的东西送进来。我们会替你发送右侧的信号。",
+          "text": "让<ring>环形神经元</ring><gloss>（地标快递员）</gloss>沉默。它们负责把果蝇看到的东西送进来。我们会替你发送右侧的信号。",
           "result": "亮斑离开了原来的位置，开始四处游荡。没有地标，罗盘就会漂移。"
         },
         "restore": {
-          "text": "再点一下<term>环形神经元</term><gloss>（地标快递员）</gloss>的按钮，把它们重新开启。我们会发送同样的信号。",
+          "text": "再点一下<ring>环形神经元</ring><gloss>（地标快递员）</gloss>的按钮，把它们重新开启。我们会发送同样的信号。",
           "result": "亮斑又稳稳地停在原位了。有了地标，果蝇的罗盘才能保持准确。"
         }
       },
@@ -339,24 +339,24 @@
       "description": "跟着苍蝇拍的信号，从真实果蝇的眼睛沿巨纤维传到腿，只用30 ms；然后切断这条线。10分钟免费小课。",
       "steps": {
         "loom": {
-          "text": "一把苍蝇拍正朝果蝇挥过来。点“刺激”，让<term>逼近神经元</term><gloss>（苍蝇拍哨兵）</gloss>放电。",
-          "result": "它们一放电，千分之几秒之内，<term>巨纤维</term><gloss>（逃生专线）</gloss>也跟着放电了。"
+          "text": "一把苍蝇拍正朝果蝇挥过来。点“刺激”，让<looming>逼近神经元</looming><gloss>（苍蝇拍哨兵）</gloss>放电。",
+          "result": "它们一放电，千分之几秒之内，<giantfiber>巨纤维</giantfiber><gloss>（逃生专线）</gloss>也跟着放电了。"
         },
         "jump": {
-          "text": "再点一次“刺激”。顺着<term>巨纤维</term><gloss>（逃生专线）</gloss>往下，一直追到<term>神经索</term><gloss>（相当于脊髓）</gloss>里。",
-          "result": "<term>跳跃神经元</term><gloss>（蹬腿细胞）</gloss>在30毫秒内就放电了。它们让中间那对腿猛地一蹬，果蝇就跳走了。"
+          "text": "再点一次“刺激”。顺着<giantfiber>巨纤维</giantfiber><gloss>（逃生专线）</gloss>往下，一直追到<nervecord>神经索</nervecord><gloss>（相当于脊髓）</gloss>里。",
+          "result": "<jump>跳跃神经元</jump><gloss>（蹬腿细胞）</gloss>在30毫秒内就放电了。它们让中间那对腿猛地一蹬，果蝇就跳走了。"
         },
         "silence": {
-          "text": "现在，让<term>巨纤维</term><gloss>（逃生专线）</gloss>沉默。我们会把苍蝇拍送过来。注意看<term>跳跃神经元</term><gloss>（蹬腿细胞）</gloss>。",
-          "result": "<term>逼近神经元</term><gloss>（苍蝇拍哨兵）</gloss>照样放电，但<term>跳跃神经元</term>一直没亮。快速逃生的路断了。"
+          "text": "现在，让<giantfiber>巨纤维</giantfiber><gloss>（逃生专线）</gloss>沉默。我们会把苍蝇拍送过来。注意看<jump>跳跃神经元</jump><gloss>（蹬腿细胞）</gloss>。",
+          "result": "<looming>逼近神经元</looming><gloss>（苍蝇拍哨兵）</gloss>照样放电，但<jump>跳跃神经元</jump>一直没亮。快速逃生的路断了。"
         },
         "restore": {
-          "text": "再点一下<term>巨纤维</term><gloss>（逃生专线）</gloss>的按钮，把它重新开启。我们会送来同一把苍蝇拍。",
-          "result": "<term>跳跃神经元</term><gloss>（蹬腿细胞）</gloss>又放电了。真实的果蝇还有其他更慢的逃生办法，但这是最快的一条。"
+          "text": "再点一下<giantfiber>巨纤维</giantfiber><gloss>（逃生专线）</gloss>的按钮，把它重新开启。我们会送来同一把苍蝇拍。",
+          "result": "<jump>跳跃神经元</jump><gloss>（蹬腿细胞）</gloss>又放电了。真实的果蝇还有其他更慢的逃生办法，但这是最快的一条。"
         }
       },
       "check": {
-        "question": "你让<term>巨纤维</term><gloss>（逃生专线）</gloss>沉默了。为什么蹬腿细胞一直没亮？",
+        "question": "你让<giantfiber>巨纤维</giantfiber><gloss>（逃生专线）</gloss>沉默了。为什么蹬腿细胞一直没亮？",
         "choices": {
           "never": {
             "text": "果蝇根本没看见苍蝇拍。",

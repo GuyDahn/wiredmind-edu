@@ -289,28 +289,28 @@
       "description": "Send a smell into a real fruit fly brain, follow it to the mushroom body, and find the cells that store its memory. A free 10-minute lesson.",
       "steps": {
         "send": {
-          "text": "A fly smells with its <term>antennae</term> <gloss>(its two feelers)</gloss>. Tap Stimulate to send a smell in. Watch the orange neurons light up.",
-          "result": "Those orange <term>smell receptors</term> <gloss>(the smell catchers)</gloss> fire first. Every smell starts here."
+          "text": "A fly smells with its <antenna>antennae</antenna> <gloss>(its two feelers)</gloss>. Tap Stimulate to send a smell in. Watch the orange neurons light up.",
+          "result": "Those orange <receptor>smell receptors</receptor> <gloss>(the smell catchers)</gloss> fire first. Every smell starts here."
         },
         "follow": {
-          "text": "Tap Stimulate again and follow the colors. Yellow <term>projection neurons</term> <gloss>(the smell messengers)</gloss> carry the smell inward. Blue <term>Kenyon cells</term> <gloss>(the smell sorters)</gloss> catch it next.",
+          "text": "Tap Stimulate again and follow the colors. Yellow <projection>projection neurons</projection> <gloss>(the smell messengers)</gloss> carry the smell inward. Blue <kenyon>Kenyon cells</kenyon> <gloss>(the smell sorters)</gloss> catch it next.",
           "result": "The blue cells turn each smell into its own pattern."
         },
         "read": {
-          "text": "Tap Stimulate once more. Now watch the pink <term>output neurons</term> <gloss>(the memory readers)</gloss>. They read the blue pattern.",
+          "text": "Tap Stimulate once more. Now watch the pink <output>output neurons</output> <gloss>(the memory readers)</gloss>. They read the blue pattern.",
           "result": "When a smell comes with sugar or danger, the links from blue to pink change. Scientists think that change is the memory."
         },
         "silence": {
-          "text": "Now silence the <term>Kenyon cells</term> <gloss>(the smell sorters)</gloss>. We will send the smell for you. What disappears?",
+          "text": "Now silence the <kenyon>Kenyon cells</kenyon> <gloss>(the smell sorters)</gloss>. We will send the smell for you. What disappears?",
           "result": "The pink light almost vanishes. The smell still gets in, but the memory readers get nothing to read."
         },
         "restore": {
-          "text": "Tap the <term>Kenyon cells</term> <gloss>(the smell sorters)</gloss> button again to switch them back on. We will send the same smell.",
+          "text": "Tap the <kenyon>Kenyon cells</kenyon> <gloss>(the smell sorters)</gloss> button again to switch them back on. We will send the same smell.",
           "result": "The pink light comes back. The fly can read its smell memory again."
         }
       },
       "check": {
-        "question": "You silenced the <term>Kenyon cells</term> <gloss>(the blue cells)</gloss>. Why did the pink cells go dark?",
+        "question": "You silenced the <kenyon>Kenyon cells</kenyon> <gloss>(the blue cells)</gloss>. Why did the pink cells go dark?",
         "choices": {
           "never": {
             "text": "The smell never got into the fly.",
@@ -337,19 +337,19 @@
       "description": "Push a real fruit fly’s internal compass around, then silence the ring neurons and watch its sense of direction drift. A free 10-minute lesson.",
       "steps": {
         "left": {
-          "text": "Tap Stimulate to fire the left <term>turn neurons</term> <gloss>(the turning signal)</gloss>. Then watch the compass dial.",
-          "result": "The <term>compass neurons</term> <gloss>(the heading cells)</gloss> light up on one side. That bright patch, the bump, marks which way the fly faces."
+          "text": "Tap Stimulate to fire the left <turn>turn neurons</turn> <gloss>(the turning signal)</gloss>. Then watch the compass dial.",
+          "result": "The <compass>compass neurons</compass> <gloss>(the heading cells)</gloss> light up on one side. That bright patch, the bump, marks which way the fly faces."
         },
         "right": {
-          "text": "Now tap Stimulate on the right <term>turn neurons</term> <gloss>(the other signal)</gloss>. Keep your eyes on the bump.",
+          "text": "Now tap Stimulate on the right <turn>turn neurons</turn> <gloss>(the other signal)</gloss>. Keep your eyes on the bump.",
           "result": "The bump swung around the dial. Turning signals from each side push it opposite ways, so the fly's heading turns too."
         },
         "silence": {
-          "text": "Silence the <term>ring neurons</term> <gloss>(the landmark carriers)</gloss>. They bring in what the fly sees. We will send the right signal for you.",
+          "text": "Silence the <ring>ring neurons</ring> <gloss>(the landmark carriers)</gloss>. They bring in what the fly sees. We will send the right signal for you.",
           "result": "The bump slips off its spot and wanders. Without landmarks, the compass drifts."
         },
         "restore": {
-          "text": "Tap the <term>ring neurons</term> <gloss>(the landmark carriers)</gloss> button again to switch them back on. We will send the same signal.",
+          "text": "Tap the <ring>ring neurons</ring> <gloss>(the landmark carriers)</gloss> button again to switch them back on. We will send the same signal.",
           "result": "The bump holds its spot again. Landmarks keep the fly's compass true."
         }
       },
@@ -381,24 +381,24 @@
       "description": "Follow a swatter from a real fruit fly’s eyes down the giant fiber to its legs in 30 ms, then cut the wire. A free 10-minute lesson.",
       "steps": {
         "loom": {
-          "text": "A swatter swoops at the fly. Tap Stimulate to fire the <term>looming neurons</term> <gloss>(the swatter spotters)</gloss>.",
-          "result": "They fire, and in a few thousandths of a second the <term>giant fiber</term> <gloss>(the escape wire)</gloss> fires too."
+          "text": "A swatter swoops at the fly. Tap Stimulate to fire the <looming>looming neurons</looming> <gloss>(the swatter spotters)</gloss>.",
+          "result": "They fire, and in a few thousandths of a second the <giantfiber>giant fiber</giantfiber> <gloss>(the escape wire)</gloss> fires too."
         },
         "jump": {
-          "text": "Tap Stimulate again. Follow the <term>giant fiber</term> <gloss>(the escape wire)</gloss> down into the <term>nerve cord</term> <gloss>(its spinal cord)</gloss>.",
-          "result": "The <term>jump neurons</term> <gloss>(the leg kickers)</gloss> fire within 30 milliseconds. They kick the middle legs, and the fly leaps away."
+          "text": "Tap Stimulate again. Follow the <giantfiber>giant fiber</giantfiber> <gloss>(the escape wire)</gloss> down into the <nervecord>nerve cord</nervecord> <gloss>(its spinal cord)</gloss>.",
+          "result": "The <jump>jump neurons</jump> <gloss>(the leg kickers)</gloss> fire within 30 milliseconds. They kick the middle legs, and the fly leaps away."
         },
         "silence": {
-          "text": "Now silence the <term>giant fiber</term> <gloss>(the escape wire)</gloss>. We will send the swatter. Watch the <term>jump neurons</term> <gloss>(the leg kickers)</gloss>.",
-          "result": "The <term>looming neurons</term> <gloss>(the swatter spotters)</gloss> still fire, but the <term>jump neurons</term> stay dark. The fast escape is gone."
+          "text": "Now silence the <giantfiber>giant fiber</giantfiber> <gloss>(the escape wire)</gloss>. We will send the swatter. Watch the <jump>jump neurons</jump> <gloss>(the leg kickers)</gloss>.",
+          "result": "The <looming>looming neurons</looming> <gloss>(the swatter spotters)</gloss> still fire, but the <jump>jump neurons</jump> stay dark. The fast escape is gone."
         },
         "restore": {
-          "text": "Tap the <term>giant fiber</term> <gloss>(the escape wire)</gloss> button again to switch it back on. We will send the same swatter.",
-          "result": "The <term>jump neurons</term> <gloss>(the leg kickers)</gloss> fire again. Real flies also have slower ways out, but this is the fastest."
+          "text": "Tap the <giantfiber>giant fiber</giantfiber> <gloss>(the escape wire)</gloss> button again to switch it back on. We will send the same swatter.",
+          "result": "The <jump>jump neurons</jump> <gloss>(the leg kickers)</gloss> fire again. Real flies also have slower ways out, but this is the fastest."
         }
       },
       "check": {
-        "question": "You silenced the <term>giant fiber</term> <gloss>(the escape wire)</gloss>. Why did the leg kickers stay dark?",
+        "question": "You silenced the <giantfiber>giant fiber</giantfiber> <gloss>(the escape wire)</gloss>. Why did the leg kickers stay dark?",
         "choices": {
           "never": {
             "text": "The fly never saw the swatter.",

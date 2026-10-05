@@ -247,28 +247,28 @@
       "description": "Kirim bau ke otak lalat buah sungguhan, ikuti jalannya ke badan jamur, dan temukan sel yang menyimpan ingatannya. Pelajaran gratis 10 menit.",
       "steps": {
         "send": {
-          "text": "Lalat mencium bau dengan <term>antena</term> <gloss>(kedua sungutnya)</gloss>. Ketuk Rangsang untuk mengirimkan bau. Perhatikan neuron oranye menyala.",
-          "result": "<term>Reseptor bau</term> <gloss>(si penangkap bau)</gloss> yang oranye itu aktif paling dulu. Setiap bau berawal di sini."
+          "text": "Lalat mencium bau dengan <antenna>antena</antenna> <gloss>(kedua sungutnya)</gloss>. Ketuk Rangsang untuk mengirimkan bau. Perhatikan neuron oranye menyala.",
+          "result": "<receptor>Reseptor bau</receptor> <gloss>(si penangkap bau)</gloss> yang oranye itu aktif paling dulu. Setiap bau berawal di sini."
         },
         "follow": {
-          "text": "Ketuk Rangsang lagi dan ikuti warnanya. <term>Neuron proyeksi</term> <gloss>(si kurir bau)</gloss> yang kuning membawa bau itu lebih ke dalam. Lalu <term>sel Kenyon</term> <gloss>(si pemilah bau)</gloss> yang biru menangkapnya.",
+          "text": "Ketuk Rangsang lagi dan ikuti warnanya. <projection>Neuron proyeksi</projection> <gloss>(si kurir bau)</gloss> yang kuning membawa bau itu lebih ke dalam. Lalu <kenyon>sel Kenyon</kenyon> <gloss>(si pemilah bau)</gloss> yang biru menangkapnya.",
           "result": "Sel-sel biru mengubah setiap bau menjadi polanya sendiri."
         },
         "read": {
-          "text": "Ketuk Rangsang sekali lagi. Sekarang perhatikan <term>neuron keluaran</term> <gloss>(si pembaca ingatan)</gloss> yang merah muda. Neuron ini membaca pola biru tadi.",
+          "text": "Ketuk Rangsang sekali lagi. Sekarang perhatikan <output>neuron keluaran</output> <gloss>(si pembaca ingatan)</gloss> yang merah muda. Neuron ini membaca pola biru tadi.",
           "result": "Saat sebuah bau datang bersama gula atau bahaya, sambungan dari biru ke merah muda berubah. Para ilmuwan menduga perubahan itulah ingatannya."
         },
         "silence": {
-          "text": "Sekarang bungkam <term>sel Kenyon</term> <gloss>(si pemilah bau)</gloss>. Kami akan mengirimkan baunya untukmu. Apa yang hilang?",
+          "text": "Sekarang bungkam <kenyon>sel Kenyon</kenyon> <gloss>(si pemilah bau)</gloss>. Kami akan mengirimkan baunya untukmu. Apa yang hilang?",
           "result": "Cahaya merah muda hampir lenyap. Baunya tetap masuk, tetapi si pembaca ingatan tidak mendapat apa pun untuk dibaca."
         },
         "restore": {
-          "text": "Nyalakan kembali <term>sel Kenyon</term> <gloss>(si pemilah bau)</gloss> dengan mengetuk tombolnya lagi. Kami akan mengirimkan bau yang sama.",
+          "text": "Nyalakan kembali <kenyon>sel Kenyon</kenyon> <gloss>(si pemilah bau)</gloss> dengan mengetuk tombolnya lagi. Kami akan mengirimkan bau yang sama.",
           "result": "Cahaya merah muda kembali. Lalat bisa membaca ingatan baunya lagi."
         }
       },
       "check": {
-        "question": "Kamu membungkam <term>sel Kenyon</term> <gloss>(sel-sel biru)</gloss>. Mengapa sel-sel merah muda menjadi gelap?",
+        "question": "Kamu membungkam <kenyon>sel Kenyon</kenyon> <gloss>(sel-sel biru)</gloss>. Mengapa sel-sel merah muda menjadi gelap?",
         "choices": {
           "never": {
             "text": "Baunya tidak pernah masuk ke tubuh lalat.",
@@ -295,19 +295,19 @@
       "description": "Dorong kompas internal lalat buah sungguhan ke sana kemari, lalu bungkam neuron cincin dan saksikan arah hadapnya melenceng. Pelajaran gratis 10 menit.",
       "steps": {
         "left": {
-          "text": "Ketuk Rangsang untuk mengaktifkan <term>neuron belok</term> <gloss>(sinyal belok)</gloss> di sisi kiri. Lalu perhatikan piringan kompas.",
-          "result": "<term>Neuron kompas</term> <gloss>(sel penunjuk arah)</gloss> menyala di satu sisi. Bercak terang itu, yang disebut tonjolan, menandai ke mana lalat menghadap."
+          "text": "Ketuk Rangsang untuk mengaktifkan <turn>neuron belok</turn> <gloss>(sinyal belok)</gloss> di sisi kiri. Lalu perhatikan piringan kompas.",
+          "result": "<compass>Neuron kompas</compass> <gloss>(sel penunjuk arah)</gloss> menyala di satu sisi. Bercak terang itu, yang disebut tonjolan, menandai ke mana lalat menghadap."
         },
         "right": {
-          "text": "Sekarang ketuk Rangsang pada <term>neuron belok</term> <gloss>(sinyal satunya lagi)</gloss> di sisi kanan. Terus perhatikan tonjolannya.",
+          "text": "Sekarang ketuk Rangsang pada <turn>neuron belok</turn> <gloss>(sinyal satunya lagi)</gloss> di sisi kanan. Terus perhatikan tonjolannya.",
           "result": "Tonjolan itu berputar mengitari piringan. Sinyal belok dari tiap sisi mendorongnya ke arah yang berlawanan, jadi arah hadap lalat pun ikut berbelok."
         },
         "silence": {
-          "text": "Bungkam <term>neuron cincin</term> <gloss>(si pembawa patokan)</gloss>. Neuron ini membawa masuk apa yang dilihat lalat. Kami akan mengirimkan sinyal belok kanan untukmu.",
+          "text": "Bungkam <ring>neuron cincin</ring> <gloss>(si pembawa patokan)</gloss>. Neuron ini membawa masuk apa yang dilihat lalat. Kami akan mengirimkan sinyal belok kanan untukmu.",
           "result": "Tonjolan itu tergelincir dari tempatnya dan berkeliaran. Tanpa patokan, kompasnya melenceng."
         },
         "restore": {
-          "text": "Nyalakan kembali <term>neuron cincin</term> <gloss>(si pembawa patokan)</gloss> dengan mengetuk tombolnya lagi. Kami akan mengirimkan sinyal yang sama.",
+          "text": "Nyalakan kembali <ring>neuron cincin</ring> <gloss>(si pembawa patokan)</gloss> dengan mengetuk tombolnya lagi. Kami akan mengirimkan sinyal yang sama.",
           "result": "Tonjolan itu kembali diam di tempatnya. Patokan menjaga kompas lalat tetap akurat."
         }
       },
@@ -339,24 +339,24 @@
       "description": "Ikuti sinyal pemukul dari mata lalat buah sungguhan lewat serat raksasa hingga ke kakinya dalam 30 ms, lalu putuskan kabelnya. Pelajaran gratis 10 menit.",
       "steps": {
         "loom": {
-          "text": "Pemukul lalat menyambar ke arah si lalat. Ketuk Rangsang untuk mengaktifkan <term>neuron looming</term> <gloss>(si pendeteksi pemukul)</gloss>.",
-          "result": "Neuron itu aktif, lalu dalam beberapa perseribu detik <term>serat raksasa</term> <gloss>(si kabel kabur)</gloss> ikut aktif."
+          "text": "Pemukul lalat menyambar ke arah si lalat. Ketuk Rangsang untuk mengaktifkan <looming>neuron looming</looming> <gloss>(si pendeteksi pemukul)</gloss>.",
+          "result": "Neuron itu aktif, lalu dalam beberapa perseribu detik <giantfiber>serat raksasa</giantfiber> <gloss>(si kabel kabur)</gloss> ikut aktif."
         },
         "jump": {
-          "text": "Ketuk Rangsang lagi. Ikuti <term>serat raksasa</term> <gloss>(si kabel kabur)</gloss> turun ke <term>tali saraf</term> <gloss>(sumsum tulang belakangnya)</gloss>.",
-          "result": "<term>Neuron lompat</term> <gloss>(si penendang kaki)</gloss> aktif dalam 30 milidetik. Neuron ini membuat kaki tengah menendang, dan lalat pun melesat pergi."
+          "text": "Ketuk Rangsang lagi. Ikuti <giantfiber>serat raksasa</giantfiber> <gloss>(si kabel kabur)</gloss> turun ke <nervecord>tali saraf</nervecord> <gloss>(sumsum tulang belakangnya)</gloss>.",
+          "result": "<jump>Neuron lompat</jump> <gloss>(si penendang kaki)</gloss> aktif dalam 30 milidetik. Neuron ini membuat kaki tengah menendang, dan lalat pun melesat pergi."
         },
         "silence": {
-          "text": "Sekarang bungkam <term>serat raksasa</term> <gloss>(si kabel kabur)</gloss>. Kami akan mengirimkan pemukulnya. Perhatikan <term>neuron lompat</term> <gloss>(si penendang kaki)</gloss>.",
-          "result": "<term>Neuron looming</term> <gloss>(si pendeteksi pemukul)</gloss> masih aktif, tetapi <term>neuron lompat</term> tetap gelap. Cara kabur yang cepat itu pun hilang."
+          "text": "Sekarang bungkam <giantfiber>serat raksasa</giantfiber> <gloss>(si kabel kabur)</gloss>. Kami akan mengirimkan pemukulnya. Perhatikan <jump>neuron lompat</jump> <gloss>(si penendang kaki)</gloss>.",
+          "result": "<looming>Neuron looming</looming> <gloss>(si pendeteksi pemukul)</gloss> masih aktif, tetapi <jump>neuron lompat</jump> tetap gelap. Cara kabur yang cepat itu pun hilang."
         },
         "restore": {
-          "text": "Nyalakan kembali <term>serat raksasa</term> <gloss>(si kabel kabur)</gloss> dengan mengetuk tombolnya lagi. Kami akan mengirimkan pemukul yang sama.",
-          "result": "<term>Neuron lompat</term> <gloss>(si penendang kaki)</gloss> aktif lagi. Lalat sungguhan juga punya cara kabur yang lebih lambat, tetapi inilah yang tercepat."
+          "text": "Nyalakan kembali <giantfiber>serat raksasa</giantfiber> <gloss>(si kabel kabur)</gloss> dengan mengetuk tombolnya lagi. Kami akan mengirimkan pemukul yang sama.",
+          "result": "<jump>Neuron lompat</jump> <gloss>(si penendang kaki)</gloss> aktif lagi. Lalat sungguhan juga punya cara kabur yang lebih lambat, tetapi inilah yang tercepat."
         }
       },
       "check": {
-        "question": "Kamu membungkam <term>serat raksasa</term> <gloss>(si kabel kabur)</gloss>. Mengapa si penendang kaki tetap gelap?",
+        "question": "Kamu membungkam <giantfiber>serat raksasa</giantfiber> <gloss>(si kabel kabur)</gloss>. Mengapa si penendang kaki tetap gelap?",
         "choices": {
           "never": {
             "text": "Lalat tidak pernah melihat pemukulnya.",

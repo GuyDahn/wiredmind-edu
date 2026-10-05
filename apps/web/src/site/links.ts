@@ -1,3 +1,4 @@
+import { TERM_IDS } from "../viewer/terms.js";
 import { LINKS, PAPER, REPO_URL } from "./site.js";
 
 /**
@@ -21,5 +22,8 @@ export const LINK_TAGS = {
 
 export type LinkTag = keyof typeof LINK_TAGS;
 
-/** Tags lesson copy uses for glossed jargon, and the one that marks a citation. */
-export const TEXT_TAGS = ["term", "gloss", "cite"] as const;
+/**
+ * Tags lesson copy uses for glossed jargon (a term by its id, or `term` for
+ * one without an explanation), and the one that marks a citation.
+ */
+export const TEXT_TAGS = ["term", "gloss", "cite", ...TERM_IDS] as const;

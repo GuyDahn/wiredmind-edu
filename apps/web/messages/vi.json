@@ -247,28 +247,28 @@
       "description": "Gửi một mùi vào não ruồi giấm thật, lần theo nó đến thể nấm và tìm các tế bào lưu giữ ký ức về mùi. Bài học miễn phí dài 10 phút.",
       "steps": {
         "send": {
-          "text": "Ruồi ngửi mùi bằng <term>anten</term> <gloss>(hai sợi râu)</gloss>. Nhấn nút Kích thích để gửi một mùi vào. Hãy xem các nơ-ron màu cam sáng lên.",
-          "result": "Những nơ-ron màu cam ấy là <term>thụ thể mùi</term> <gloss>(người bắt mùi)</gloss>. Chúng phát xung đầu tiên. Mọi mùi đều bắt đầu từ đây."
+          "text": "Ruồi ngửi mùi bằng <antenna>anten</antenna> <gloss>(hai sợi râu)</gloss>. Nhấn nút Kích thích để gửi một mùi vào. Hãy xem các nơ-ron màu cam sáng lên.",
+          "result": "Những nơ-ron màu cam ấy là <receptor>thụ thể mùi</receptor> <gloss>(người bắt mùi)</gloss>. Chúng phát xung đầu tiên. Mọi mùi đều bắt đầu từ đây."
         },
         "follow": {
-          "text": "Nhấn nút Kích thích lần nữa và dõi theo các màu. Màu vàng là <term>nơ-ron chiếu</term> <gloss>(người đưa tin mùi)</gloss>, chúng mang mùi vào trong. Màu xanh dương là <term>tế bào Kenyon</term> <gloss>(người phân loại mùi)</gloss>, chúng đón mùi ngay sau đó.",
+          "text": "Nhấn nút Kích thích lần nữa và dõi theo các màu. Màu vàng là <projection>nơ-ron chiếu</projection> <gloss>(người đưa tin mùi)</gloss>, chúng mang mùi vào trong. Màu xanh dương là <kenyon>tế bào Kenyon</kenyon> <gloss>(người phân loại mùi)</gloss>, chúng đón mùi ngay sau đó.",
           "result": "Các tế bào màu xanh dương biến mỗi mùi thành một mẫu hình riêng."
         },
         "read": {
-          "text": "Nhấn nút Kích thích thêm một lần nữa. Giờ hãy nhìn màu hồng: đó là <term>nơ-ron đầu ra</term> <gloss>(người đọc ký ức)</gloss>. Chúng đọc mẫu hình của màu xanh dương.",
+          "text": "Nhấn nút Kích thích thêm một lần nữa. Giờ hãy nhìn màu hồng: đó là <output>nơ-ron đầu ra</output> <gloss>(người đọc ký ức)</gloss>. Chúng đọc mẫu hình của màu xanh dương.",
           "result": "Khi một mùi đi kèm với đồ ngọt hoặc mối nguy hiểm, các liên kết từ màu xanh dương sang màu hồng sẽ thay đổi. Các nhà khoa học cho rằng chính sự thay đổi đó là ký ức."
         },
         "silence": {
-          "text": "Giờ hãy làm im lặng <term>tế bào Kenyon</term> <gloss>(người phân loại mùi)</gloss>. Chúng mình sẽ gửi mùi giúp bạn. Điều gì sẽ biến mất?",
+          "text": "Giờ hãy làm im lặng <kenyon>tế bào Kenyon</kenyon> <gloss>(người phân loại mùi)</gloss>. Chúng mình sẽ gửi mùi giúp bạn. Điều gì sẽ biến mất?",
           "result": "Ánh sáng màu hồng gần như tắt hẳn. Mùi vẫn vào được, nhưng người đọc ký ức chẳng có gì để đọc."
         },
         "restore": {
-          "text": "Nhấn nút <term>tế bào Kenyon</term> <gloss>(người phân loại mùi)</gloss> một lần nữa để bật lại chúng. Chúng mình sẽ gửi đúng mùi đó.",
+          "text": "Nhấn nút <kenyon>tế bào Kenyon</kenyon> <gloss>(người phân loại mùi)</gloss> một lần nữa để bật lại chúng. Chúng mình sẽ gửi đúng mùi đó.",
           "result": "Ánh sáng màu hồng quay trở lại. Ruồi lại đọc được ký ức về mùi của nó."
         }
       },
       "check": {
-        "question": "Bạn đã làm im lặng <term>tế bào Kenyon</term> <gloss>(màu xanh dương)</gloss>. Vì sao các tế bào màu hồng lại tối đi?",
+        "question": "Bạn đã làm im lặng <kenyon>tế bào Kenyon</kenyon> <gloss>(màu xanh dương)</gloss>. Vì sao các tế bào màu hồng lại tối đi?",
         "choices": {
           "never": {
             "text": "Mùi không hề vào được bên trong ruồi.",
@@ -295,19 +295,19 @@
       "description": "Đẩy la bàn trong não ruồi giấm thật xoay vòng, rồi làm im lặng nơ-ron vòng và xem cảm giác phương hướng của ruồi trôi đi. Bài học miễn phí dài 10 phút.",
       "steps": {
         "left": {
-          "text": "Nhấn nút Kích thích để <term>nơ-ron rẽ trái</term> <gloss>(tín hiệu rẽ)</gloss> phát xung. Sau đó hãy nhìn mặt la bàn.",
-          "result": "<term>Nơ-ron la bàn</term> <gloss>(tế bào chỉ hướng)</gloss> sáng lên ở một phía. Đốm sáng đó cho biết ruồi đang quay mặt về hướng nào."
+          "text": "Nhấn nút Kích thích để <turn>nơ-ron rẽ trái</turn> <gloss>(tín hiệu rẽ)</gloss> phát xung. Sau đó hãy nhìn mặt la bàn.",
+          "result": "<compass>Nơ-ron la bàn</compass> <gloss>(tế bào chỉ hướng)</gloss> sáng lên ở một phía. Đốm sáng đó cho biết ruồi đang quay mặt về hướng nào."
         },
         "right": {
-          "text": "Giờ hãy nhấn nút Kích thích của <term>nơ-ron rẽ phải</term> <gloss>(tín hiệu kia)</gloss>. Đừng rời mắt khỏi đốm sáng.",
+          "text": "Giờ hãy nhấn nút Kích thích của <turn>nơ-ron rẽ phải</turn> <gloss>(tín hiệu kia)</gloss>. Đừng rời mắt khỏi đốm sáng.",
           "result": "Đốm sáng đã xoay quanh mặt la bàn. Tín hiệu rẽ từ mỗi bên đẩy nó theo hai hướng ngược nhau, nên hướng của ruồi cũng xoay theo."
         },
         "silence": {
-          "text": "Hãy làm im lặng <term>nơ-ron vòng</term> <gloss>(người mang điểm mốc)</gloss>. Chúng đưa vào những gì ruồi nhìn thấy. Chúng mình sẽ gửi tín hiệu rẽ phải giúp bạn.",
+          "text": "Hãy làm im lặng <ring>nơ-ron vòng</ring> <gloss>(người mang điểm mốc)</gloss>. Chúng đưa vào những gì ruồi nhìn thấy. Chúng mình sẽ gửi tín hiệu rẽ phải giúp bạn.",
           "result": "Đốm sáng trượt khỏi chỗ của nó và đi lang thang. Không có điểm mốc, la bàn bị trôi."
         },
         "restore": {
-          "text": "Nhấn nút <term>nơ-ron vòng</term> <gloss>(người mang điểm mốc)</gloss> một lần nữa để bật lại chúng. Chúng mình sẽ gửi đúng tín hiệu đó.",
+          "text": "Nhấn nút <ring>nơ-ron vòng</ring> <gloss>(người mang điểm mốc)</gloss> một lần nữa để bật lại chúng. Chúng mình sẽ gửi đúng tín hiệu đó.",
           "result": "Đốm sáng lại đứng yên đúng chỗ. Điểm mốc giúp la bàn của ruồi luôn chỉ đúng."
         }
       },
@@ -339,24 +339,24 @@
       "description": "Lần theo chiếc vỉ đập ruồi từ mắt ruồi giấm thật, dọc sợi khổng lồ xuống tận chân chỉ trong 30 ms, rồi cắt sợi dây đó. Bài học miễn phí dài 10 phút.",
       "steps": {
         "loom": {
-          "text": "Một chiếc vỉ đập ruồi đang lao xuống con ruồi. Nhấn nút Kích thích để <term>nơ-ron phát hiện vật lao tới</term> <gloss>(bộ dò vỉ ruồi)</gloss> phát xung.",
-          "result": "Chúng phát xung, và chỉ vài phần nghìn giây sau, <term>sợi khổng lồ</term> <gloss>(dây thoát hiểm)</gloss> cũng phát xung theo."
+          "text": "Một chiếc vỉ đập ruồi đang lao xuống con ruồi. Nhấn nút Kích thích để <looming>nơ-ron phát hiện vật lao tới</looming> <gloss>(bộ dò vỉ ruồi)</gloss> phát xung.",
+          "result": "Chúng phát xung, và chỉ vài phần nghìn giây sau, <giantfiber>sợi khổng lồ</giantfiber> <gloss>(dây thoát hiểm)</gloss> cũng phát xung theo."
         },
         "jump": {
-          "text": "Nhấn nút Kích thích lần nữa. Lần theo <term>sợi khổng lồ</term> <gloss>(dây thoát hiểm)</gloss> xuống tận <term>dây thần kinh bụng</term> <gloss>(tủy sống của ruồi)</gloss>.",
-          "result": "<term>Nơ-ron nhảy</term> <gloss>(bộ đạp chân)</gloss> phát xung trong vòng 30 mili giây. Chúng khiến đôi chân giữa đạp mạnh, và ruồi nhảy vọt đi."
+          "text": "Nhấn nút Kích thích lần nữa. Lần theo <giantfiber>sợi khổng lồ</giantfiber> <gloss>(dây thoát hiểm)</gloss> xuống tận <nervecord>dây thần kinh bụng</nervecord> <gloss>(tủy sống của ruồi)</gloss>.",
+          "result": "<jump>Nơ-ron nhảy</jump> <gloss>(bộ đạp chân)</gloss> phát xung trong vòng 30 mili giây. Chúng khiến đôi chân giữa đạp mạnh, và ruồi nhảy vọt đi."
         },
         "silence": {
-          "text": "Giờ hãy làm im lặng <term>sợi khổng lồ</term> <gloss>(dây thoát hiểm)</gloss>. Chúng mình sẽ gửi vỉ đập ruồi tới. Hãy quan sát <term>nơ-ron nhảy</term> <gloss>(bộ đạp chân)</gloss>.",
-          "result": "<term>Nơ-ron phát hiện vật lao tới</term> <gloss>(bộ dò vỉ ruồi)</gloss> vẫn phát xung, nhưng <term>nơ-ron nhảy</term> thì tối om. Cú thoát hiểm nhanh không còn nữa."
+          "text": "Giờ hãy làm im lặng <giantfiber>sợi khổng lồ</giantfiber> <gloss>(dây thoát hiểm)</gloss>. Chúng mình sẽ gửi vỉ đập ruồi tới. Hãy quan sát <jump>nơ-ron nhảy</jump> <gloss>(bộ đạp chân)</gloss>.",
+          "result": "<looming>Nơ-ron phát hiện vật lao tới</looming> <gloss>(bộ dò vỉ ruồi)</gloss> vẫn phát xung, nhưng <jump>nơ-ron nhảy</jump> thì tối om. Cú thoát hiểm nhanh không còn nữa."
         },
         "restore": {
-          "text": "Nhấn nút <term>sợi khổng lồ</term> <gloss>(dây thoát hiểm)</gloss> một lần nữa để bật lại nó. Chúng mình sẽ gửi đúng chiếc vỉ đó.",
-          "result": "<term>Nơ-ron nhảy</term> <gloss>(bộ đạp chân)</gloss> lại phát xung. Ruồi thật còn có những đường thoát chậm hơn, nhưng đây là đường nhanh nhất."
+          "text": "Nhấn nút <giantfiber>sợi khổng lồ</giantfiber> <gloss>(dây thoát hiểm)</gloss> một lần nữa để bật lại nó. Chúng mình sẽ gửi đúng chiếc vỉ đó.",
+          "result": "<jump>Nơ-ron nhảy</jump> <gloss>(bộ đạp chân)</gloss> lại phát xung. Ruồi thật còn có những đường thoát chậm hơn, nhưng đây là đường nhanh nhất."
         }
       },
       "check": {
-        "question": "Bạn đã làm im lặng <term>sợi khổng lồ</term> <gloss>(dây thoát hiểm)</gloss>. Vì sao bộ đạp chân vẫn tối?",
+        "question": "Bạn đã làm im lặng <giantfiber>sợi khổng lồ</giantfiber> <gloss>(dây thoát hiểm)</gloss>. Vì sao bộ đạp chân vẫn tối?",
         "choices": {
           "never": {
             "text": "Ruồi không hề nhìn thấy chiếc vỉ.",
