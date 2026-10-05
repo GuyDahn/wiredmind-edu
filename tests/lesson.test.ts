@@ -16,8 +16,18 @@ import {
   type LessonModule,
   type LessonPhase,
 } from "../apps/web/src/viewer/lesson.js";
+import {
+  INTRO_SCREENS,
+  MAX_INTRO_WORDS,
+} from "../apps/web/src/viewer/intro-screens.js";
 import { readModule } from "../apps/web/src/viewer/module.js";
 import { findLesson, LESSONS } from "../apps/web/src/viewer/modules.js";
+import {
+  GENERAL_TERMS,
+  isTermId,
+  LESSON_TERMS,
+  TERM_IDS,
+} from "../apps/web/src/viewer/terms.js";
 
 function json(path: string): unknown {
   return JSON.parse(
@@ -44,7 +54,10 @@ const en = JSON.parse(
     new URL("../apps/web/messages/en.json", import.meta.url),
     "utf8",
   ),
-) as { lessons: Record<string, LessonCopy> };
+) as {
+  lessons: Record<string, LessonCopy>;
+  terms: Record<string, { name: string; text: string }>;
+};
 
 /** A lesson's English, as a reader sees it: markup gone. */
 function english(lesson: LessonModule) {
@@ -166,6 +179,23 @@ for (const { lesson } of LESSONS)
       }
     });
 
+    it("tags every term with one its teacher guide lists, so a tap can explain it", () => {
+      const listed = LESSON_TERMS[lesson.id] ?? [];
+      for (const markup of [
+        ...copy.steps.flatMap((step) => step.markup),
+        ...copy.markup,
+      ]) {
+        assert.doesNotMatch(markup, /<term>/, markup);
+        for (const [, tag] of markup.matchAll(/<([a-z]+)>/g)) {
+          if (tag === "gloss") continue;
+          assert.ok(
+            isTermId(tag!) && listed.includes(tag),
+            `${tag}: ${markup}`,
+          );
+        }
+      }
+    });
+
     it("only says neuron while a group is lit", () => {
       for (const step of copy.steps) {
         if (!/neuron/i.test(`${step.text} ${step.result}`)) continue;
@@ -192,6 +222,58 @@ for (const { lesson } of LESSONS)
       }
     });
   });
+
+describe("how to read this brain", () => {
+  it("takes at most four screens of 30 words, in English and Hebrew", () => {
+    assert.ok(INTRO_SCREENS.length >= 3 && INTRO_SCREENS.length <= 4);
+    for (const locale of ["en", "he"]) {
+      const messages = JSON.parse(
+        readFileSync(
+          new URL(`../apps/web/messages/${locale}.json`, import.meta.url),
+          "utf8",
+        ),
+      ) as {
+        viewer: {
+          intro: { screens: Record<string, { title: string; text: string }> };
+        };
+      };
+      const screens = messages.viewer.intro.screens;
+      assert.deepEqual(
+        Object.keys(screens),
+        INTRO_SCREENS.map((screen) => screen.id),
+      );
+      for (const [id, screen] of Object.entries(screens)) {
+        const words = wordCount(screen.text);
+        assert.ok(words <= MAX_INTRO_WORDS, `${locale} ${id}: ${words} words`);
+      }
+    }
+  });
+});
+
+describe("term explanations", () => {
+  it("explains every term in English, in 30 words or fewer", () => {
+    assert.deepEqual(Object.keys(en.terms).sort(), [...TERM_IDS].sort());
+    for (const id of TERM_IDS) {
+      const { name, text } = en.terms[id]!;
+      assert.ok(name.length > 0, id);
+      const words = wordCount(text);
+      assert.ok(words > 0 && words <= 30, `${id} has ${words} words`);
+    }
+  });
+
+  it("lists each lesson's terms once, and only terms that exist", () => {
+    for (const { lesson } of LESSONS) {
+      const listed = LESSON_TERMS[lesson.id];
+      assert.ok(listed && listed.length > 0, lesson.id);
+      assert.equal(new Set(listed).size, listed.length, lesson.id);
+    }
+    assert.equal(new Set(GENERAL_TERMS).size, GENERAL_TERMS.length);
+    assert.deepEqual(
+      [...GENERAL_TERMS, ...Object.values(LESSON_TERMS).flat()].sort(),
+      [...TERM_IDS].sort(),
+    );
+  });
+});
 
 describe("glosses", () => {
   it("splits a term from its gloss so the gloss reads as an aside", () => {

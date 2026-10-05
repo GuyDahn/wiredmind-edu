@@ -4,10 +4,12 @@ import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
 import { localePath } from "../i18n/locales.js";
+import { modeHref } from "./class-mode.js";
 import { LESSONS, type LessonEntry } from "./modules.js";
 import { FOCUS_RING } from "./panel.js";
 import { recording } from "./recorder.js";
 import { replayUrl } from "./replay.js";
+import { useViewerStore } from "./store.js";
 
 /** Lesson switcher and Share, at the top of the sheet where a thumb reaches. */
 export function Toolbar({ entry }: { entry: LessonEntry }) {
@@ -15,6 +17,7 @@ export function Toolbar({ entry }: { entry: LessonEntry }) {
   const t = useTranslations("viewer.toolbar");
   const titles = useTranslations("lessons");
   const locale = useLocale();
+  const classMode = useViewerStore((state) => state.classMode);
   return (
     <div className="flex flex-col gap-3">
       <div className="flex items-center justify-between gap-3">
@@ -44,7 +47,7 @@ export function Toolbar({ entry }: { entry: LessonEntry }) {
             return (
               <li key={item.id}>
                 <Link
-                  href={localePath(locale, item.path)}
+                  href={modeHref(localePath(locale, item.path), classMode)}
                   aria-current={current ? "page" : undefined}
                   onClick={() => setOpen(false)}
                   className={`flex min-h-11 items-center gap-3 rounded-xl px-3 py-2 text-sm ${FOCUS_RING} ${current ? "bg-overlay-strong text-fg" : "text-fg-muted hover:bg-overlay"}`}

@@ -2,7 +2,7 @@
   "$comment": "How WiredMind sounds in each language. `pnpm i18n:draft` gives the translator the shared rules and the language's own notes; reviewers can sharpen a language here.",
   "shared": [
     "Readers are students aged about 11 to 16 and their teachers. Write the way a good science teacher talks to a class: short sentences, plain words, one idea at a time. Keep the English's warmth and its honesty about what is simplified.",
-    "Keep every scientific term from the glossary exactly as given (inflect it as the grammar needs). In lesson copy each <term> keeps the scientific name and its <gloss> is a short, friendly nickname in parentheses: three words or fewer where the language allows.",
+    "Keep every scientific term from the glossary exactly as given (inflect it as the grammar needs). In lesson copy each scientific name sits in a tag named after it (<kenyon>, <giantfiber>, ...): keep that tag around the same term the English has it around. Its <gloss> is a short, friendly nickname in parentheses: three words or fewer where the language allows.",
     "Buttons are named in lesson text: 'Tap Stimulate', 'silence the Kenyon cells'. Use exactly your translations of viewer.controls.stimulate, viewer.controls.silence, and viewer.lesson.cueSwitchOn for them, so the words on screen match the words in the lesson.",
     "Keep the colors (orange, yellow, blue, pink, green, violet) and what each one names; students match them to the screen.",
     "Keep every number as digits (0-9), with your language's usual decimal and thousands separators. Keep units (ms, mV, Hz) as symbols.",

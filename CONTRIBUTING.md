@@ -23,7 +23,7 @@ Do not commit neuron data, raw downloads, `.env` files, or baked assets. `tools/
 
 WiredMind is written in 18 languages. Each language is one file, [`apps/web/messages/<locale>.json`](apps/web/messages/), with exactly the keys of `en.json`. Every string on the site, in the lessons, on the share images, and in search results comes from that file, so fixing a language never means touching code.
 
-Messages use [ICU MessageFormat](https://unicode-org.github.io/icu/userguide/format_parse/messages/): keep every `{placeholder}` and every `<tag>…</tag>` as it is, write every plural form your language has, and translate everything else. In lessons, `<term>` marks a scientific name and `<gloss>` the short nickname in parentheses after it.
+Messages use [ICU MessageFormat](https://unicode-org.github.io/icu/userguide/format_parse/messages/): keep every `{placeholder}` and every `<tag>…</tag>` as it is, write every plural form your language has, and translate everything else. In lessons, a tag named after a scientific term (`<kenyon>`, `<giantfiber>`; the list is in [`apps/web/src/viewer/terms.ts`](apps/web/src/viewer/terms.ts)) marks that term, and `<gloss>` the short nickname in parentheses after it. Keep each tag around the same term the English has it around.
 
 **Fix a string.** Edit the language's file, run `pnpm i18n:check --locale <locale>`, and open a pull request. To see it in place, run `pnpm dev` and open `http://localhost:3000/<locale>`. The share images' fonts are stored in the repo with only the characters the cards use, so the build never waits on the network; if the check says they lack a character you added, run `pnpm og:fonts` and commit what it writes to `apps/web/src/og/fonts/`.
 

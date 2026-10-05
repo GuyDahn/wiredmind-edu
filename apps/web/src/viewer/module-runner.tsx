@@ -5,6 +5,7 @@ import { useFormatter, useLocale, useTranslations } from "next-intl";
 import {
   useCallback,
   useEffect,
+  useMemo,
   useRef,
   useState,
   type ReactNode,
@@ -12,8 +13,10 @@ import {
 import { DEFAULT_LOCALE, localePath } from "../i18n/locales.js";
 import { LINKS } from "../site/site.js";
 import { TranslateNotice } from "../site/translate-notice.js";
+import { modeHref } from "./class-mode.js";
 import { enqueue } from "./commands.js";
-import { useCircuitCopy, useLessonCopy } from "./copy.js";
+import { TERM_ANCHOR, useCircuitCopy, useLessonCopy } from "./copy.js";
+import { DEMO_PACE, DEMO_RESULT_MS, demoRun } from "./demo.js";
 import {
   controlState,
   focusFor,
@@ -22,9 +25,12 @@ import {
   type LessonModule,
   type LessonPhase,
 } from "./lesson.js";
+import { IntroActions, IntroCard } from "./intro.js";
+import { INTRO_SCREENS } from "./intro-screens.js";
 import { LESSONS, type LessonEntry } from "./modules.js";
 import { groupColor } from "./module.js";
 import { Controls, FOCUS_RING, press } from "./panel.js";
+import { startPlayback, stopPlayback } from "./recorder.js";
 import { Sheet, type SheetState } from "./sheet.js";
 import { useViewerStore } from "./store.js";
 import { Toolbar } from "./toolbar.js";
@@ -33,21 +39,30 @@ import type { ControlAction, ControlGate, ModuleSpec } from "./types.js";
 /** Gap between a silence toggle and the puff we send for the learner. */
 const PUFF_DELAY_MS = 500;
 
-const BUTTON = `min-h-12 w-full rounded-xl px-4 text-base font-semibold transition-colors ${FOCUS_RING}`;
+const BUTTON = `min-h-12 w-full rounded-xl px-4 text-base font-semibold transition-colors classroom:min-h-16 classroom:text-2xl ${FOCUS_RING}`;
+/** Small print under the lesson text: the hint, the clock. Bigger on a projector. */
+const HINT = "text-sm text-fg-subtle classroom:text-xl";
 
 export function ModuleRunner({
   entry,
   notice,
   credit,
+  autoDemo = false,
+  onDemoEnd,
 }: {
   entry: LessonEntry;
   /** A message to show above the lesson, e.g. why a replay link failed. */
   notice?: string | null;
   /** Site credit at the very end of the panel. */
   credit?: ReactNode;
+  /** Opened from a "Show me" link: play the walkthrough instead of the intro. */
+  autoDemo?: boolean;
+  /** The walkthrough stopped or ran out, and the lesson is the reader's again. */
+  onDemoEnd?: () => void;
 }) {
   const { module, lesson } = entry;
   const t = useTranslations("viewer.lesson");
+  const d = useTranslations("viewer.demo");
   const copy = useLessonCopy(lesson);
   const [phase, setPhase] = useState<LessonPhase>({
     kind: "step",
@@ -57,13 +72,28 @@ export function ModuleRunner({
   const [puffPending, setPuffPending] = useState(false);
   const [sheet, setSheet] = useState<SheetState>("peek");
   const puffTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const intro = useViewerStore((state) => state.intro);
+  const classMode = useViewerStore((state) => state.classMode);
+  const [introScreen, setIntroScreen] = useState(0);
   const stimulating = useViewerStore((state) => state.stimulating);
   const live = useViewerStore((state) => state.circuit === module.id);
+  const ready = useViewerStore((state) => state.status === "ready");
   const puffing = Object.values(stimulating).some(Boolean);
+  // The walkthrough: the lesson's ideal run, pressed for the reader.
+  const [demo, setDemo] = useState(false);
+  const demoStarted = useRef(false);
+  const run = useMemo(() => demoRun(entry), [entry]);
+  const applied = useViewerStore((state) => state.playback?.applied ?? 0);
 
   const step = phase.kind === "step" ? lesson.steps[phase.index] : undefined;
-  const revealed =
-    phase.kind === "step" && phase.done && !puffPending && !puffing;
+  // In a walkthrough the puff after a silence is one of its own presses.
+  const demoPuffPending =
+    demo &&
+    phase.kind === "step" &&
+    phase.done &&
+    applied < (run.end[phase.index] ?? 0);
+  const pending = demo ? demoPuffPending : puffPending;
+  const revealed = phase.kind === "step" && phase.done && !pending && !puffing;
   const watching = phase.kind === "step" && phase.done && !revealed;
 
   const clearPuff = useCallback(() => {
@@ -80,23 +110,116 @@ export function ModuleRunner({
     setSheet("peek");
   }, [clearPuff, module.seed]);
 
+  const stopDemo = useCallback(() => {
+    stopPlayback();
+    useViewerStore.getState().setPlayback(null);
+    setDemo(false);
+    onDemoEnd?.();
+  }, [onDemoEnd]);
+
+  const startDemo = useCallback(() => {
+    clearPuff();
+    const store = useViewerStore.getState();
+    store.setIntro(false);
+    store.resetControls();
+    enqueue({ type: "reset", seed: module.seed });
+    startPlayback(run.replay, DEMO_PACE);
+    store.setPlayback({
+      applied: 0,
+      total: run.replay.actions.length,
+      done: false,
+    });
+    setPhase({ kind: "step", index: 0, done: false });
+    setSheet("peek");
+    setDemo(true);
+  }, [clearPuff, module.seed, run]);
+
   // The circuit is cached across pages, so start from a clean brain once
-  // this lesson's own circuit is running.
+  // this lesson's own circuit is running. A "Show me" link starts on the
+  // walkthrough, once.
   useEffect(() => {
-    if (live) startOver();
-  }, [live, startOver]);
+    if (!live) return;
+    if (!autoDemo) startOver();
+    else if (!demoStarted.current) {
+      demoStarted.current = true;
+      startDemo();
+    }
+  }, [live, autoDemo, startOver, startDemo]);
 
   useEffect(
     () => () => {
       clearPuff();
+      stopPlayback();
+      useViewerStore.getState().setPlayback(null);
       useViewerStore.getState().setFocus([]);
     },
     [clearPuff],
   );
 
+  // Each press of the walkthrough meets its step's goal, as a tap would.
+  useEffect(() => {
+    if (!demo || applied === 0) return;
+    const index = run.stepOf[applied - 1];
+    if (index === undefined) return;
+    setPhase((current) =>
+      current.kind === "step" &&
+      (current.index < index || (current.index === index && !current.done))
+        ? { kind: "step", index, done: true }
+        : current,
+    );
+  }, [demo, applied, run]);
+
+  // It leaves each result up long enough to read, then moves on. It ends at
+  // the question, which is the class's to answer.
+  useEffect(() => {
+    if (!demo || !revealed) return;
+    const timer = setTimeout(() => {
+      setPhase((current) => {
+        if (current.kind !== "step") return current;
+        const index = current.index + 1;
+        return index < lesson.steps.length
+          ? { kind: "step", index, done: false }
+          : { kind: "check", picked: null };
+      });
+    }, DEMO_RESULT_MS);
+    return () => clearTimeout(timer);
+  }, [demo, revealed, lesson.steps.length]);
+
+  useEffect(() => {
+    if (demo && phase.kind !== "step") stopDemo();
+  }, [demo, phase.kind, stopDemo]);
+
   useEffect(() => {
     useViewerStore.getState().setFocus(focusFor(lesson, phase));
   }, [lesson, phase]);
+
+  // Every lesson opens on the intro, unless a "Show me" link asked for the
+  // walkthrough. Nothing remembers that it was seen: no cookie, no storage.
+  // Skip is one tap.
+  useEffect(() => {
+    useViewerStore.getState().setIntro(!autoDemo);
+    return () => useViewerStore.getState().setIntro(false);
+  }, [autoDemo]);
+
+  const closeIntro = useCallback(() => {
+    useViewerStore.getState().setIntro(false);
+  }, []);
+
+  // Asking how to read the brain mid-walkthrough stops the walkthrough.
+  useEffect(() => {
+    if (intro && demo) stopDemo();
+  }, [intro, demo, stopDemo]);
+
+  useEffect(() => {
+    if (!intro) return;
+    setIntroScreen(0);
+    setSheet("peek");
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") closeIntro();
+    };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [intro, closeIntro]);
 
   // On a phone the sheet gets out of the way while the brain is busy, and
   // comes back with the answer. Desktop ignores it.
@@ -114,12 +237,8 @@ export function ModuleRunner({
   const gate: ControlGate = (kind, colorGroup) =>
     controlState(lesson, phase, kind, colorGroup);
 
-  function onAction(action: ControlAction) {
-    if (phase.kind !== "step" || phase.done || !step) return;
-    if (!meetsGoal(step.goal, action)) return;
-    setPhase({ ...phase, done: true });
-    const puff = step.puff;
-    if (!puff) return;
+  /** Sends the puff a silence step shows its effect with, after a beat. */
+  function sendPuff(puff: string) {
     setPuffPending(true);
     puffTimer.current = setTimeout(() => {
       puffTimer.current = null;
@@ -127,6 +246,21 @@ export function ModuleRunner({
       enqueue({ type: "stimulate", colorGroup: puff });
       setPuffPending(false);
     }, PUFF_DELAY_MS);
+  }
+
+  function onAction(action: ControlAction) {
+    if (demo || phase.kind !== "step" || phase.done || !step) return;
+    if (!meetsGoal(step.goal, action)) return;
+    setPhase({ ...phase, done: true });
+    if (step.puff) sendPuff(step.puff);
+  }
+
+  /** Stops the walkthrough where it is. The brain and the step stay as they are. */
+  function takeOver() {
+    const owed = demoPuffPending ? step?.puff : null;
+    stopDemo();
+    // Stopped between a silence and its puff: the lesson still owes the puff.
+    if (owed) sendPuff(owed);
   }
 
   function next() {
@@ -149,24 +283,57 @@ export function ModuleRunner({
       state={sheet}
       onState={setSheet}
       label={copy.plain("title")}
-      moment={`${phase.kind}-${phase.kind === "step" ? phase.index : ""}-${revealed}`}
+      moment={
+        intro
+          ? `intro-${introScreen}`
+          : `${phase.kind}-${phase.kind === "step" ? phase.index : ""}-${revealed}`
+      }
       footer={
-        <Footer
-          entry={entry}
-          phase={phase}
-          goal={phase.kind === "step" && step && !phase.done ? step.goal : null}
-          puffPending={puffPending}
-          watching={watching}
-          revealed={revealed}
-          solved={solved}
-          onAction={onAction}
-          onNext={next}
-          onFree={() => setPhase({ kind: "free" })}
-        />
+        intro ? (
+          <IntroActions
+            screen={introScreen}
+            onNext={() =>
+              setIntroScreen((value) =>
+                Math.min(value + 1, INTRO_SCREENS.length - 1),
+              )
+            }
+            onClose={closeIntro}
+          />
+        ) : demo ? (
+          <DemoBar
+            module={module}
+            goal={
+              phase.kind === "step" && step && !phase.done ? step.goal : null
+            }
+            watching={watching}
+            pending={pending}
+            onStop={takeOver}
+          />
+        ) : (
+          <Footer
+            entry={entry}
+            phase={phase}
+            goal={
+              phase.kind === "step" && step && !phase.done ? step.goal : null
+            }
+            puffPending={pending}
+            watching={watching}
+            revealed={revealed}
+            solved={solved}
+            onAction={onAction}
+            onNext={next}
+            onFree={() => setPhase({ kind: "free" })}
+          />
+        )
       }
     >
-      <PanelTranslateNotice />
-      <Toolbar entry={entry} />
+      {/* On a projector the panel holds the lesson and nothing else. */}
+      {classMode ? null : (
+        <>
+          <PanelTranslateNotice />
+          <Toolbar entry={entry} />
+        </>
+      )}
       {notice ? (
         <p
           role="status"
@@ -175,25 +342,39 @@ export function ModuleRunner({
           {notice}
         </p>
       ) : null}
+      {intro ? <IntroCard module={module} screen={introScreen} /> : null}
       <section
         aria-label={copy.plain("title")}
-        className="flex flex-col gap-4 rounded-2xl bg-overlay-strong p-4"
+        hidden={intro}
+        className="flex flex-col gap-4 rounded-2xl bg-overlay-strong p-4 [&[hidden]]:hidden"
       >
+        {demo ? (
+          <p
+            data-demo="playing"
+            className="self-start rounded-full bg-accent px-3 py-1 text-xs font-semibold text-accent-fg classroom:text-lg"
+          >
+            {d("playing")}
+          </p>
+        ) : null}
         <Progress lesson={lesson} phase={phase} />
         {phase.kind === "step" && step ? (
           <>
-            <p className="text-lg leading-snug text-fg">
+            <p
+              className={`${TERM_ANCHOR} text-lg leading-snug text-fg classroom:text-3xl`}
+            >
               {copy.rich(`steps.${step.id}.text`)}
             </p>
             <div aria-live="polite" className="flex flex-col gap-4">
               {revealed ? (
-                <p className="border-s-4 border-fg/40 ps-3 text-base leading-snug text-fg-muted">
+                <p
+                  className={`${TERM_ANCHOR} border-s-4 border-fg/40 ps-3 text-base leading-snug text-fg-muted classroom:text-3xl`}
+                >
                   {copy.rich(`steps.${step.id}.result`)}
                 </p>
               ) : phase.done ? (
-                <p className="text-sm text-fg-subtle">{t("watching")}</p>
-              ) : (
-                <p className="text-sm text-fg-subtle">{t("tapCue")}</p>
+                <p className={HINT}>{t("watching")}</p>
+              ) : demo ? null : (
+                <p className={HINT}>{t("tapCue")}</p>
               )}
             </div>
           </>
@@ -207,26 +388,56 @@ export function ModuleRunner({
         ) : null}
         {phase.kind === "free" ? (
           <>
-            <h2 className="text-lg font-semibold text-fg">
+            <h2 className="text-lg font-semibold text-fg classroom:text-2xl">
               {copy.plain("freePlay.title")}
             </h2>
-            <p className="text-base leading-snug text-fg-muted">
+            <p
+              className={`${TERM_ANCHOR} text-base leading-snug text-fg-muted classroom:text-3xl`}
+            >
               {copy.rich("freePlay.text")}
             </p>
           </>
         ) : null}
-        {phase.kind === "step" && phase.index === 0 && !phase.done ? null : (
+        {!demo &&
+        ((phase.kind === "step" && phase.index === 0 && !phase.done) ||
+          phase.kind === "free") ? (
+          <button
+            type="button"
+            data-demo-start=""
+            disabled={!live || !ready}
+            onClick={startDemo}
+            className={`flex min-h-12 items-center justify-center gap-2 rounded-xl border border-border-strong px-4 text-base font-semibold text-fg hover:bg-overlay disabled:opacity-50 classroom:min-h-16 classroom:text-2xl ${FOCUS_RING}`}
+          >
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 16 16"
+              className="size-4 shrink-0 fill-current rtl:-scale-x-100"
+            >
+              <path d="M4 2.5v11l9-5.5z" />
+            </svg>
+            {d("start")}
+          </button>
+        ) : null}
+        {demo ||
+        (phase.kind === "step" && phase.index === 0 && !phase.done) ? null : (
           <button
             type="button"
             onClick={startOver}
-            className="inline-flex min-h-11 items-center self-start text-sm text-fg-subtle underline underline-offset-4 hover:text-fg-muted"
+            className="inline-flex min-h-11 items-center self-start text-sm text-fg-subtle underline underline-offset-4 hover:text-fg-muted classroom:text-lg"
           >
             {t("again")}
           </button>
         )}
       </section>
-      <Controls module={module} gate={gate} onAction={onAction} />
-      <PanelCredit>{credit}</PanelCredit>
+      {intro || (classMode && phase.kind !== "free") ? null : (
+        <Controls
+          module={module}
+          gate={gate}
+          onAction={onAction}
+          readOnly={demo}
+        />
+      )}
+      {classMode ? null : <PanelCredit>{credit}</PanelCredit>}
     </Sheet>
   );
 }
@@ -260,6 +471,56 @@ export function PanelCredit({ children }: { children?: ReactNode }) {
   );
 }
 
+/** While the walkthrough plays: what it is about to press, and the way out. */
+function DemoBar({
+  module,
+  goal,
+  watching,
+  pending,
+  onStop,
+}: {
+  module: ModuleSpec;
+  goal: LessonGoal | null;
+  watching: boolean;
+  pending: boolean;
+  onStop: () => void;
+}) {
+  const t = useTranslations("viewer.lesson");
+  const d = useTranslations("viewer.demo");
+  const circuit = useCircuitCopy(module);
+  const action = !goal
+    ? null
+    : goal.type === "stimulate"
+      ? t("cueStimulate")
+      : goal.on
+        ? t("cueSilence")
+        : t("cueSwitchOn");
+  return (
+    <div className="flex flex-col gap-2">
+      {watching ? (
+        <Watching module={module} pending={pending} />
+      ) : (
+        <p
+          aria-live="polite"
+          className="py-1 text-base font-semibold text-fg classroom:text-2xl"
+        >
+          {goal && action
+            ? d("upNext", { action, name: circuit.name(goal.colorGroup) })
+            : d("playing")}
+        </p>
+      )}
+      <button
+        type="button"
+        data-demo-stop=""
+        onClick={onStop}
+        className={`${BUTTON} border border-border-strong text-fg hover:bg-overlay`}
+      >
+        {d("stop")}
+      </button>
+    </div>
+  );
+}
+
 /** The one thing to do next, pinned where a thumb rests. */
 function Footer({
   entry,
@@ -288,6 +549,7 @@ function Footer({
   const t = useTranslations("viewer.lesson");
   const titles = useTranslations("lessons");
   const locale = useLocale();
+  const classMode = useViewerStore((state) => state.classMode);
   if (goal)
     return <CueButton module={module} goal={goal} onAction={onAction} />;
   if (watching) return <Watching module={module} pending={puffPending} />;
@@ -312,16 +574,14 @@ function Footer({
         {t("freePlay")}
       </button>
     ) : (
-      <p className="py-3 text-center text-sm text-fg-subtle">
-        {t("pickAnswer")}
-      </p>
+      <p className={`py-3 text-center ${HINT}`}>{t("pickAnswer")}</p>
     );
   }
   const after = LESSONS.find((item) => item.number === entry.number + 1);
   if (after) {
     return (
       <Link
-        href={localePath(locale, after.path)}
+        href={modeHref(localePath(locale, after.path), classMode)}
         className={`${BUTTON} flex items-center justify-center gap-2 bg-accent text-accent-fg hover:bg-accent-hover`}
       >
         {t("nextLesson", { title: titles(`${after.id}.title`) })}
@@ -336,7 +596,7 @@ function Footer({
         {others.map((item) => (
           <Link
             key={item.id}
-            href={localePath(locale, item.path)}
+            href={modeHref(localePath(locale, item.path), classMode)}
             className={`${BUTTON} flex-1 border border-border-strong text-fg-muted hover:bg-overlay`}
           >
             {titles(`${item.id}.title`)}
@@ -380,14 +640,16 @@ function CueButton({
       disabled={!ready}
       data-cue=""
       onClick={() => press(action, onAction)}
-      className={`flex min-h-14 w-full touch-manipulation items-center gap-3 rounded-2xl px-4 py-2.5 text-start transition-transform active:scale-[0.99] disabled:opacity-50 ${FOCUS_RING} ${filled ? "text-zinc-950" : "border-2 bg-overlay text-fg"}`}
+      className={`flex min-h-14 w-full touch-manipulation items-center gap-3 rounded-2xl px-4 py-2.5 text-start classroom:min-h-20 transition-transform active:scale-[0.99] disabled:opacity-50 ${FOCUS_RING} ${filled ? "text-zinc-950" : "border-2 bg-overlay text-fg"}`}
       style={filled ? { backgroundColor: color } : { borderColor: color }}
     >
       <span className="flex flex-1 flex-col">
-        <span className="text-xs font-semibold tracking-[0.14em] uppercase opacity-80">
+        <span className="text-xs font-semibold tracking-[0.14em] uppercase opacity-80 classroom:text-lg">
           {ready ? verb : t("loadingBrain")}
         </span>
-        <span className="text-lg leading-tight font-semibold">{name}</span>
+        <span className="text-lg leading-tight font-semibold classroom:text-3xl">
+          {name}
+        </span>
       </span>
       <span
         aria-hidden="true"
@@ -414,7 +676,7 @@ function Watching({
   const name = puff ? circuit.name(puff.colorGroup) : null;
   return (
     <div className="flex flex-col gap-2 py-1" aria-live="polite">
-      <p className="flex items-center gap-2 text-base font-semibold text-fg">
+      <p className="flex items-center gap-2 text-base font-semibold text-fg classroom:text-2xl">
         <span aria-hidden="true" className="md:hidden">
           ↑
         </span>
@@ -436,7 +698,7 @@ function Watching({
           style={{ width: `${fraction * 100}%` }}
         />
       </div>
-      <p className="text-xs text-fg-subtle tabular-nums">
+      <p className="text-xs text-fg-subtle tabular-nums classroom:text-lg">
         {name && puff
           ? t("puffClock", {
               name,
@@ -472,7 +734,7 @@ function Progress({
         : t("done");
   return (
     <div className="flex flex-col gap-2">
-      <p className="text-xs font-semibold tracking-[0.14em] text-fg-subtle uppercase">
+      <p className="text-xs font-semibold tracking-[0.14em] text-fg-subtle uppercase classroom:text-lg">
         {label}
       </p>
       <div className="flex gap-1.5" aria-hidden="true">
@@ -515,7 +777,9 @@ function Check({
   }, [picked]);
   return (
     <>
-      <p className="text-lg leading-snug text-fg">
+      <p
+        className={`${TERM_ANCHOR} text-lg leading-snug text-fg classroom:text-3xl`}
+      >
         {copy.rich("check.question")}
       </p>
       <div
@@ -537,7 +801,7 @@ function Check({
               disabled={solved}
               aria-pressed={chosen}
               onClick={() => onPick(index)}
-              className={`min-h-12 rounded-xl border px-4 py-3 text-start text-base leading-snug disabled:cursor-default ${FOCUS_RING} ${tone}`}
+              className={`min-h-12 rounded-xl border px-4 py-3 text-start text-base leading-snug disabled:cursor-default classroom:min-h-16 classroom:text-2xl ${FOCUS_RING} ${tone}`}
             >
               {copy.plain(`check.choices.${item.id}.text`)}
             </button>
@@ -546,7 +810,9 @@ function Check({
       </div>
       <div ref={feedbackRef} aria-live="polite" className="scroll-mb-4">
         {choice ? (
-          <p className="text-base leading-snug text-fg-muted">
+          <p
+            className={`${TERM_ANCHOR} text-base leading-snug text-fg-muted classroom:text-2xl`}
+          >
             {copy.rich(`check.choices.${choice.id}.feedback`)}
             {/* A margin, not a space: Chinese and Japanese put none between sentences. */}
             {solved ? null : <span className="ms-1">{t("tryAnother")}</span>}

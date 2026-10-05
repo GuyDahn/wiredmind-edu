@@ -3,7 +3,7 @@
     "locale": "fr",
     "reviewed": false,
     "model": "claude-opus-5-5",
-    "draftedAt": "2026-09-27"
+    "draftedAt": "2026-10-05"
   },
   "meta": {
     "home": {
@@ -143,7 +143,11 @@
       },
       "source": "Voir le code source sur GitHub",
       "science": "Ce qui est réel et ce qui est simplifié",
-      "feedback": "Quelque chose n’est pas clair ou ne fonctionne pas ? Dites-le-moi."
+      "feedback": "Quelque chose n’est pas clair ou ne fonctionne pas ? Dites-le-moi.",
+      "guidesTitle": "Faites une leçon dès demain",
+      "guidesLead": "Chaque leçon est accompagnée d’un guide de l’enseignant, avec un déroulé de 45 minutes, et d’une fiche élève à imprimer.",
+      "guide": "Guide de l’enseignant",
+      "worksheet": "Fiche élève"
     }
   },
   "about": {
@@ -247,28 +251,28 @@
       "description": "Envoyer une odeur dans un vrai cerveau de drosophile, la suivre jusqu’au corps pédonculé et trouver où se loge son souvenir. Leçon gratuite de 10 minutes.",
       "steps": {
         "send": {
-          "text": "Une mouche sent avec ses <term>antennes</term> <gloss>(ses deux capteurs)</gloss>. Appuie sur « Stimuler » pour lui envoyer une odeur. Regarde les neurones orange s’allumer.",
-          "result": "Ces neurones orange sont les <term>récepteurs olfactifs</term> <gloss>(les attrape-odeurs)</gloss> : ils s’activent en premier. Toute odeur commence ici."
+          "text": "Une mouche sent avec ses <antenna>antennes</antenna> <gloss>(ses deux capteurs)</gloss>. Appuie sur « Stimuler » pour lui envoyer une odeur. Regarde les neurones orange s’allumer.",
+          "result": "Ces neurones orange sont les <receptor>récepteurs olfactifs</receptor> <gloss>(les attrape-odeurs)</gloss> : ils s’activent en premier. Toute odeur commence ici."
         },
         "follow": {
-          "text": "Appuie de nouveau sur « Stimuler » et suis les couleurs. En jaune, les <term>neurones de projection</term> <gloss>(les messagers d’odeurs)</gloss> emportent l’odeur vers l’intérieur du cerveau. En bleu, les <term>cellules de Kenyon</term> <gloss>(les trieuses d’odeurs)</gloss> la captent ensuite.",
+          "text": "Appuie de nouveau sur « Stimuler » et suis les couleurs. En jaune, les <projection>neurones de projection</projection> <gloss>(les messagers d’odeurs)</gloss> emportent l’odeur vers l’intérieur du cerveau. En bleu, les <kenyon>cellules de Kenyon</kenyon> <gloss>(les trieuses d’odeurs)</gloss> la captent ensuite.",
           "result": "Les cellules bleues donnent à chaque odeur son propre motif."
         },
         "read": {
-          "text": "Appuie encore une fois sur « Stimuler ». Regarde maintenant les <term>neurones de sortie</term> <gloss>(les décodeurs)</gloss>, en rose. Ils décodent le motif bleu.",
+          "text": "Appuie encore une fois sur « Stimuler ». Regarde maintenant les <output>neurones de sortie</output> <gloss>(les décodeurs)</gloss>, en rose. Ils décodent le motif bleu.",
           "result": "Quand une odeur arrive avec du sucre ou un danger, les liens du bleu vers le rose changent. Les scientifiques pensent que ce changement, c’est la mémoire."
         },
         "silence": {
-          "text": "Maintenant, fais taire les <term>cellules de Kenyon</term> <gloss>(les trieuses d’odeurs)</gloss>. On envoie l’odeur à ta place. Qu’est-ce qui disparaît ?",
+          "text": "Maintenant, fais taire les <kenyon>cellules de Kenyon</kenyon> <gloss>(les trieuses d’odeurs)</gloss>. On envoie l’odeur à ta place. Qu’est-ce qui disparaît ?",
           "result": "La lumière rose disparaît presque. L’odeur entre toujours, mais les décodeurs n’ont plus rien à décoder."
         },
         "restore": {
-          "text": "Appuie de nouveau sur le bouton des <term>cellules de Kenyon</term> <gloss>(les trieuses d’odeurs)</gloss> pour les réactiver. On envoie la même odeur.",
+          "text": "Appuie de nouveau sur le bouton des <kenyon>cellules de Kenyon</kenyon> <gloss>(les trieuses d’odeurs)</gloss> pour les réactiver. On envoie la même odeur.",
           "result": "La lumière rose revient. La mouche retrouve le souvenir de cette odeur."
         }
       },
       "check": {
-        "question": "Tu as fait taire les <term>cellules de Kenyon</term> <gloss>(les cellules bleues)</gloss>. Pourquoi les cellules roses se sont-elles éteintes ?",
+        "question": "Tu as fait taire les <kenyon>cellules de Kenyon</kenyon> <gloss>(les cellules bleues)</gloss>. Pourquoi les cellules roses se sont-elles éteintes ?",
         "choices": {
           "never": {
             "text": "L’odeur n’est jamais entrée dans la mouche.",
@@ -295,19 +299,19 @@
       "description": "Faire tourner la boussole interne d’une vraie drosophile, puis faire taire les neurones en anneau et la voir dériver. Leçon gratuite de 10 minutes.",
       "steps": {
         "left": {
-          "text": "Appuie sur « Stimuler » pour activer les <term>neurones de rotation</term> <gloss>(l’ordre de tourner)</gloss> du côté gauche. Puis regarde le cadran de la boussole.",
-          "result": "Les <term>neurones de la boussole</term> <gloss>(les cellules d’orientation)</gloss> s’allument d’un côté. Cette tache brillante, la « bosse », montre de quel côté la mouche est tournée."
+          "text": "Appuie sur « Stimuler » pour activer les <turn>neurones de rotation</turn> <gloss>(l’ordre de tourner)</gloss> du côté gauche. Puis regarde le cadran de la boussole.",
+          "result": "Les <compass>neurones de la boussole</compass> <gloss>(les cellules d’orientation)</gloss> s’allument d’un côté. Cette tache brillante, la « bosse », montre de quel côté la mouche est tournée."
         },
         "right": {
-          "text": "Maintenant, appuie sur « Stimuler » pour les <term>neurones de rotation</term> <gloss>(l’autre ordre)</gloss> du côté droit. Garde les yeux sur la bosse.",
+          "text": "Maintenant, appuie sur « Stimuler » pour les <turn>neurones de rotation</turn> <gloss>(l’autre ordre)</gloss> du côté droit. Garde les yeux sur la bosse.",
           "result": "La bosse a tourné autour du cadran. Les ordres de tourner venus de chaque côté la poussent dans des sens opposés : la mouche change donc d’orientation, elle aussi."
         },
         "silence": {
-          "text": "Fais taire les <term>neurones en anneau</term> <gloss>(les porte-repères)</gloss>. Ils apportent ce que la mouche voit. On envoie l’ordre de droite à ta place.",
+          "text": "Fais taire les <ring>neurones en anneau</ring> <gloss>(les porte-repères)</gloss>. Ils apportent ce que la mouche voit. On envoie l’ordre de droite à ta place.",
           "result": "La bosse quitte sa place et se met à errer. Sans repères, la boussole dérive."
         },
         "restore": {
-          "text": "Appuie de nouveau sur le bouton des <term>neurones en anneau</term> <gloss>(les porte-repères)</gloss> pour les réactiver. On envoie le même ordre.",
+          "text": "Appuie de nouveau sur le bouton des <ring>neurones en anneau</ring> <gloss>(les porte-repères)</gloss> pour les réactiver. On envoie le même ordre.",
           "result": "La bosse tient de nouveau sa place. Grâce aux repères, la boussole de la mouche reste fiable."
         }
       },
@@ -339,24 +343,24 @@
       "description": "Des yeux aux pattes d’une vraie drosophile en 30 ms : suivre l’alerte au tue-mouches par la fibre géante, puis couper le fil. Leçon gratuite de 10 minutes.",
       "steps": {
         "loom": {
-          "text": "Un tue-mouches fond sur la mouche. Appuie sur « Stimuler » pour activer les <term>neurones d’approche</term> <gloss>(les guetteurs)</gloss>.",
-          "result": "Ils s’activent et, en quelques millièmes de seconde, la <term>fibre géante</term> <gloss>(le fil d’évasion)</gloss> s’active à son tour."
+          "text": "Un tue-mouches fond sur la mouche. Appuie sur « Stimuler » pour activer les <looming>neurones d’approche</looming> <gloss>(les guetteurs)</gloss>.",
+          "result": "Ils s’activent et, en quelques millièmes de seconde, la <giantfiber>fibre géante</giantfiber> <gloss>(le fil d’évasion)</gloss> s’active à son tour."
         },
         "jump": {
-          "text": "Appuie de nouveau sur « Stimuler ». Suis la <term>fibre géante</term> <gloss>(le fil d’évasion)</gloss> qui descend jusque dans le <term>cordon nerveux</term> <gloss>(sa moelle épinière)</gloss>.",
-          "result": "Les <term>neurones du saut</term> <gloss>(les propulseurs)</gloss> s’activent en moins de 30 millisecondes. Ils détendent d’un coup les pattes du milieu, et la mouche s’envole d’un bond."
+          "text": "Appuie de nouveau sur « Stimuler ». Suis la <giantfiber>fibre géante</giantfiber> <gloss>(le fil d’évasion)</gloss> qui descend jusque dans le <nervecord>cordon nerveux</nervecord> <gloss>(sa moelle épinière)</gloss>.",
+          "result": "Les <jump>neurones du saut</jump> <gloss>(les propulseurs)</gloss> s’activent en moins de 30 millisecondes. Ils détendent d’un coup les pattes du milieu, et la mouche s’envole d’un bond."
         },
         "silence": {
-          "text": "Maintenant, fais taire la <term>fibre géante</term> <gloss>(le fil d’évasion)</gloss>. On envoie le tue-mouches. Regarde les <term>neurones du saut</term> <gloss>(les propulseurs)</gloss>.",
-          "result": "Les <term>neurones d’approche</term> <gloss>(les guetteurs)</gloss> s’activent toujours, mais les <term>neurones du saut</term> restent éteints. La fuite rapide a disparu."
+          "text": "Maintenant, fais taire la <giantfiber>fibre géante</giantfiber> <gloss>(le fil d’évasion)</gloss>. On envoie le tue-mouches. Regarde les <jump>neurones du saut</jump> <gloss>(les propulseurs)</gloss>.",
+          "result": "Les <looming>neurones d’approche</looming> <gloss>(les guetteurs)</gloss> s’activent toujours, mais les <jump>neurones du saut</jump> restent éteints. La fuite rapide a disparu."
         },
         "restore": {
-          "text": "Appuie de nouveau sur le bouton de la <term>fibre géante</term> <gloss>(le fil d’évasion)</gloss> pour la réactiver. On envoie le même tue-mouches.",
-          "result": "Les <term>neurones du saut</term> <gloss>(les propulseurs)</gloss> s’activent de nouveau. Les vraies mouches ont aussi des façons plus lentes de s’échapper, mais celle-ci est la plus rapide."
+          "text": "Appuie de nouveau sur le bouton de la <giantfiber>fibre géante</giantfiber> <gloss>(le fil d’évasion)</gloss> pour la réactiver. On envoie le même tue-mouches.",
+          "result": "Les <jump>neurones du saut</jump> <gloss>(les propulseurs)</gloss> s’activent de nouveau. Les vraies mouches ont aussi des façons plus lentes de s’échapper, mais celle-ci est la plus rapide."
         }
       },
       "check": {
-        "question": "Tu as fait taire la <term>fibre géante</term> <gloss>(le fil d’évasion)</gloss>. Pourquoi les propulseurs sont-ils restés éteints ?",
+        "question": "Tu as fait taire la <giantfiber>fibre géante</giantfiber> <gloss>(le fil d’évasion)</gloss>. Pourquoi les propulseurs sont-ils restés éteints ?",
         "choices": {
           "never": {
             "text": "La mouche n’a jamais vu le tue-mouches.",
@@ -393,6 +397,12 @@
         "pn": "Empêche le lobe antennaire de transmettre cette odeur au corps pédonculé.",
         "kc": "Réduit au silence les cellules qui distinguent une odeur d’une autre.",
         "mbon": "Empêche le corps pédonculé de transmettre le résultat au reste du cerveau."
+      },
+      "plain": {
+        "orn": "Attrape-odeurs",
+        "pn": "Messagers d’odeurs",
+        "kc": "Trieuses d’odeurs",
+        "mbon": "Décodeurs"
       }
     },
     "visual": {
@@ -409,6 +419,12 @@
       "silence": {
         "ring": "Bloque les neurones en anneau, qui apportent les repères venus des yeux.",
         "compass": "Réduit au silence les cellules d’orientation E-PG qui forment la boussole."
+      },
+      "plain": {
+        "ring": "Porte-repères",
+        "compass": "Cellules d’orientation",
+        "turn-left": "Ordre de tourner, côté gauche",
+        "turn-right": "Ordre de tourner, côté droit"
       }
     },
     "escape": {
@@ -424,6 +440,11 @@
         "looming": "Empêche les cellules visuelles de signaler l’attaque.",
         "gf": "Bloque la fibre géante, le fil d’évasion le plus rapide de la mouche.",
         "jump": "Réduit au silence les motoneurones qui détendent les pattes du milieu."
+      },
+      "plain": {
+        "looming": "Guetteurs",
+        "gf": "Fil d’évasion",
+        "jump": "Propulseurs"
       }
     }
   },
@@ -524,6 +545,49 @@
       "left": "G",
       "right": "D",
       "caption": "Boussole · vue de dos"
+    },
+    "terms": {
+      "hint": "Explication : {term}",
+      "close": "Fermer"
+    },
+    "legend": {
+      "title": "Légende des couleurs",
+      "glow": "Brille = s’active en ce moment"
+    },
+    "intro": {
+      "label": "Comment lire ce cerveau",
+      "progress": "{number} sur {total}",
+      "skip": "Passer",
+      "next": "Suivant",
+      "start": "Commencer la leçon",
+      "screens": {
+        "lines": {
+          "title": "Ces lignes sont de vrais neurones",
+          "text": "Chaque ligne est une vraie cellule nerveuse de drosophile, dessinée là où elle se trouve dans le corps de la mouche. Fais glisser le cerveau pour le faire pivoter."
+        },
+        "colors": {
+          "title": "Chaque couleur est un groupe de cellules",
+          "text": "Les cellules qui font le même travail ont la même couleur. Quand une couleur brille, ces cellules s’activent à cet instant."
+        },
+        "buttons": {
+          "title": "C’est toi qui mènes l’expérience",
+          "text": "« Stimuler » : on active ces cellules. « Faire taire » : on éteint ces cellules. Ensuite, à toi d’observer ce qui change."
+        },
+        "time": {
+          "title": "Tout se déroule au ralenti",
+          "text": "Une vraie mouche fait tout cela en un clin d’œil. Ici, le temps passe bien plus lentement, pour que tu puisses voir le signal voyager."
+        }
+      }
+    },
+    "classMode": {
+      "label": "Mode classe",
+      "hint": "Mode classe : texte et boutons agrandis pour un écran partagé"
+    },
+    "demo": {
+      "start": "Montre-moi comment ça marche",
+      "playing": "On te montre comment ça marche",
+      "upNext": "Ensuite, on appuie sur « {action} » : {name}",
+      "stop": "Arrêter et reprendre la main"
     }
   },
   "errors": {
@@ -537,6 +601,383 @@
       "body": "La page a rencontré une erreur. Réessayez, ou revenez aux leçons.",
       "retry": "Réessayer",
       "home": "Aller aux leçons"
+    }
+  },
+  "terms": {
+    "antenna": {
+      "name": "Antennes",
+      "text": "Les deux petits capteurs sur la tête de la mouche. Elle sent avec ses antennes, comme tu sens avec ton nez."
+    },
+    "receptor": {
+      "name": "Récepteurs olfactifs",
+      "text": "Des cellules nerveuses des antennes qui s’activent quand une odeur se pose sur elles. Toute odeur commence ici."
+    },
+    "antennallobe": {
+      "name": "Lobe antennaire",
+      "text": "La première étape des odeurs dans le cerveau de la mouche : les récepteurs olfactifs y passent leur signal aux neurones de projection."
+    },
+    "projection": {
+      "name": "Neurones de projection",
+      "text": "Des cellules nerveuses qui emportent le signal de l’odeur du lobe antennaire vers l’intérieur du cerveau, jusqu’au corps pédonculé."
+    },
+    "mushroombody": {
+      "name": "Corps pédonculé",
+      "text": "Une partie du cerveau des insectes, en forme de champignon, où les odeurs sont triées et où leurs souvenirs sont conservés."
+    },
+    "kenyon": {
+      "name": "Cellules de Kenyon",
+      "text": "Les petites cellules nerveuses du corps pédonculé. Chaque odeur en active une poignée différente : chaque odeur a donc son propre motif."
+    },
+    "output": {
+      "name": "Neurones de sortie",
+      "text": "Des cellules nerveuses qui décodent le motif des cellules de Kenyon et le transmettent au reste du cerveau. Les scientifiques disent MBON : neurones de sortie du corps pédonculé."
+    },
+    "turn": {
+      "name": "Neurones de rotation",
+      "text": "Des cellules nerveuses qui s’activent quand la mouche tourne et poussent la bosse autour de la boussole. Les scientifiques les appellent neurones P-EN2."
+    },
+    "compass": {
+      "name": "Neurones de la boussole",
+      "text": "Un anneau de cellules nerveuses qui garde en mémoire la direction vers laquelle la mouche est tournée. Les scientifiques les appellent neurones E-PG."
+    },
+    "ring": {
+      "name": "Neurones en anneau",
+      "text": "Des cellules nerveuses qui apportent à la boussole ce que la mouche voit, comme les repères. Elles calment les neurones de la boussole : la bosse reste en place."
+    },
+    "looming": {
+      "name": "Neurones d’approche",
+      "text": "Des cellules nerveuses, derrière les yeux, qui s’activent quand un objet grossit vite, comme un tue-mouches qui approche. Les scientifiques les appellent LC4 et LPLC2."
+    },
+    "giantfiber": {
+      "name": "Fibre géante",
+      "text": "Une cellule nerveuse très épaisse qui descend du cerveau jusque dans le cordon nerveux. Elle porte le signal de fuite le plus rapide de la mouche."
+    },
+    "nervecord": {
+      "name": "Cordon nerveux",
+      "text": "La moelle épinière de la mouche, en quelque sorte : un faisceau de cellules nerveuses, dans son thorax, qui commande les pattes et les ailes."
+    },
+    "jump": {
+      "name": "Neurones du saut",
+      "text": "Des motoneurones qui font se contracter les muscles du saut des pattes du milieu : la mouche bondit dans les airs."
+    },
+    "neuron": {
+      "name": "Neurone",
+      "text": "Une cellule nerveuse. Elle reçoit des signaux d’autres cellules et, quand ils sont assez nombreux à s’additionner, elle envoie son propre signal."
+    },
+    "spike": {
+      "name": "Activation",
+      "text": "Une brève impulsion électrique qu’un neurone actif envoie sur toute sa longueur, aussi appelée potentiel d’action. Dans les leçons, chaque éclair de lumière en marque une."
+    },
+    "synapse": {
+      "name": "Synapse",
+      "text": "La jonction où un neurone passe son signal au suivant. Plus deux cellules partagent de synapses, plus le lien entre elles est fort."
+    },
+    "transmitter": {
+      "name": "Neurotransmetteur",
+      "text": "Une substance chimique qu’un neurone libère au niveau d’une synapse pour transmettre son signal. Certains neurotransmetteurs excitent la cellule suivante, d’autres l’inhibent."
+    },
+    "excitation": {
+      "name": "Excitation",
+      "text": "Un signal qui pousse le neurone suivant à s’activer."
+    },
+    "inhibition": {
+      "name": "Inhibition",
+      "text": "Un signal qui retient le neurone suivant de s’activer. Un réseau en a besoin pour rester stable et précis."
+    },
+    "acetylcholine": {
+      "name": "Acétylcholine",
+      "text": "Le principal neurotransmetteur excitateur du cerveau de la mouche. Dans les leçons, les cellules qui en libèrent excitent les cellules auxquelles elles sont connectées."
+    },
+    "gaba": {
+      "name": "GABA",
+      "text": "Un neurotransmetteur inhibiteur, chez la mouche comme chez l’humain. Dans les leçons, les cellules qui libèrent du GABA calment les cellules auxquelles elles sont connectées."
+    },
+    "circuit": {
+      "name": "Circuit neuronal",
+      "text": "Un groupe de neurones reliés entre eux pour accomplir une tâche, comme reconnaître une odeur ou déclencher un saut."
+    },
+    "connectome": {
+      "name": "Connectome",
+      "text": "Le schéma de câblage complet d’un système nerveux : chaque neurone et chaque synapse entre eux. Les leçons reposent sur le connectome d’une vraie drosophile."
+    },
+    "stimulate": {
+      "name": "Stimuler",
+      "text": "Le bouton de la leçon qui fait s’activer un groupe de cellules un instant, un peu comme les scientifiques allument avec de la lumière des cellules choisies."
+    },
+    "silence": {
+      "name": "Faire taire",
+      "text": "Le bouton de la leçon qui empêche un groupe de cellules de s’activer, pour montrer ce que fait le reste du circuit sans elles."
+    },
+    "sensory": {
+      "name": "Neurone sensoriel",
+      "text": "Un neurone qui capte quelque chose du monde, comme une odeur ou une ombre qui grandit, et le signale au cerveau."
+    },
+    "motor": {
+      "name": "Motoneurone",
+      "text": "Un neurone qui porte un ordre jusqu’à un muscle et le fait se contracter."
+    },
+    "reflex": {
+      "name": "Arc réflexe",
+      "text": "Le trajet d’un réflexe : des neurones sensoriels, en passant par une ou plusieurs cellules relais, jusqu’aux motoneurones qui font bouger un muscle."
+    },
+    "electricalsynapse": {
+      "name": "Synapse électrique",
+      "text": "Un canal direct entre deux neurones, qui transmet un signal presque sans délai. La carte utilisée par les leçons n’enregistre que les synapses chimiques."
+    },
+    "bump": {
+      "name": "Bosse",
+      "text": "La zone de neurones de la boussole qui sont actifs. Sa position sur l’anneau indique la direction vers laquelle la mouche est tournée."
+    },
+    "landmark": {
+      "name": "Repère",
+      "text": "Quelque chose que la mouche voit et qui ne bouge pas, comme le soleil ou un arbre. Il l’aide à garder un sens de l’orientation stable."
+    },
+    "bridge": {
+      "name": "Pont",
+      "text": "Une partie du cerveau de la mouche en forme de barre, le pont protocérébral. Les neurones de la boussole et les neurones de rotation le traversent."
+    }
+  },
+  "teachers": {
+    "meta": {
+      "indexTitle": "Guides de l’enseignant · WiredMind",
+      "indexDescription": "Pour chaque leçon WiredMind : un déroulé de séance, les réponses attendues, des questions de discussion et une fiche élève à imprimer.",
+      "guideTitle": "Guide de l’enseignant : {title}",
+      "guideDescription": "Un déroulé de 45 minutes pour « {title} » : objectif d’apprentissage, ce que les élèves doivent remarquer, réponses attendues, questions de discussion et idées fausses courantes.",
+      "worksheetTitle": "Fiche élève : {title}",
+      "worksheetDescription": "Une fiche élève à imprimer pour « {title} » : prévoir, essayer, observer, expliquer."
+    },
+    "index": {
+      "title": "Guides de l’enseignant",
+      "lead": "Tout ce qu’il vous faut pour mener chaque leçon sans formation préalable : un déroulé de 45 minutes, ce que les élèves doivent remarquer, les réponses à attendre et une fiche élève à imprimer.",
+      "lesson": "Leçon {number}",
+      "guide": "Guide de l’enseignant",
+      "worksheet": "Fiche élève",
+      "demo": "Montrer à la classe",
+      "generalTerms": "Notions de base"
+    },
+    "topics": {
+      "excitation": "Excitation et inhibition",
+      "synapses": "Synapses et neurotransmetteurs",
+      "reflex": "Arcs réflexes",
+      "structure": "Comment la structure d’un réseau détermine le comportement"
+    },
+    "guide": {
+      "eyebrow": "Guide de l’enseignant · Leçon {number}",
+      "print": "Imprimer",
+      "lesson": "Ouvrir la leçon",
+      "demo": "Lancer « Montre-moi » en mode classe",
+      "worksheet": "Fiche élève",
+      "all": "Tous les guides de l’enseignant",
+      "address": "Adresse de la leçon",
+      "setupTitle": "Ce qu’il vous faut",
+      "setup": "Un écran partagé est utile, mais facultatif : vidéoprojecteur, téléviseur ou écran d’ordinateur visible par toute la classe. Les élèves ont besoin d’un appareil connecté à Internet, idéalement un pour deux : ordinateur portable, tablette ou téléphone. Rien à installer, aucun compte à créer. Chaque leçon s’ouvre sur un court guide de lecture de l’écran, et il suffit d’appuyer sur un terme scientifique pour en afficher l’explication.",
+      "goalTitle": "Objectif d’apprentissage",
+      "topicsTitle": "Notions du programme abordées",
+      "planTitle": "Un déroulé de 45 minutes",
+      "minutes": "{minutes} min",
+      "phases": {
+        "opening": "Question d’ouverture",
+        "demo": "Démonstration avec « Montre-moi »",
+        "explore": "Exploration par les élèves",
+        "discuss": "Discussion"
+      },
+      "plan": {
+        "demo": "Affichez la leçon en mode classe sur un écran partagé (vidéoprojecteur, téléviseur ou écran d’ordinateur) et appuyez sur « Montre-moi comment ça marche ». Lisez chaque étape à voix haute pendant qu’elle se déroule. Sans écran partagé, les élèves ouvrent la même démonstration sur leurs appareils. La démonstration s’arrête à la question de la leçon : laissez-la sans réponse pour l’instant.",
+        "explore": "Les élèves travaillent en binômes sur leurs propres appareils, avec la fiche élève. Ils notent une prévision avant chaque appui, suivent la leçon, répondent à sa question, puis essaient l’exploration libre.",
+        "discuss": "Recueillez les réponses des binômes à la question de la leçon, puis appuyez-vous sur les questions de discussion ci-dessous. Terminez par ce que le modèle laisse de côté."
+      },
+      "noticeTitle": "Ce que les élèves doivent remarquer à chaque étape",
+      "step": "Étape {number}",
+      "answerTitle": "La question de la leçon et la réponse attendue",
+      "rightChoice": "Le bon choix",
+      "discussTitle": "Questions de discussion",
+      "misconceptionsTitle": "Idées fausses courantes",
+      "claim": "Les élèves peuvent penser :",
+      "fix": "Comment y répondre :",
+      "realTitle": "Ce qui est réel et ce qui est simplifié",
+      "real": "Réel",
+      "simplified": "Simplifié",
+      "realShared": "Chaque neurone et chaque connexion de la leçon proviennent du schéma de câblage d’une vraie drosophile, avec le nombre réel de synapses entre chaque paire de cellules.",
+      "simplifiedShared": "L’activité est une simulation simple, où tous les neurones suivent les mêmes règles de base, et elle se déroule au ralenti.",
+      "realMore": "La liste complète, chiffres à l’appui",
+      "termsTitle": "Termes clés",
+      "curriculumTitle": "Liens avec le programme",
+      "curriculumPending": "Cette section n’est pas encore rédigée. La correspondance avec le programme officiel de SVT est en cours de validation avec des enseignants de la discipline."
+    },
+    "worksheet": {
+      "eyebrow": "Fiche élève · Leçon {number}",
+      "name": "Nom",
+      "class": "Classe",
+      "date": "Date",
+      "address": "Ouvre la leçon à l’adresse",
+      "predict": "Prévois",
+      "predictHint": "Avant d’appuyer sur quoi que ce soit.",
+      "try": "Essaie",
+      "tryText": "Ouvre la leçon et suis ses étapes. Avant chaque appui, dis à voix haute ce qui va se passer, d’après toi.",
+      "observe": "Observe",
+      "observeHint": "À chaque étape : quelles couleurs se sont allumées, et lesquelles sont restées éteintes ?",
+      "step": "Étape {number}",
+      "explain": "Explique",
+      "question": "La question de la leçon"
+    },
+    "lessons": {
+      "smell-memory": {
+        "goal": "Les élèves suivent une odeur depuis les récepteurs jusqu’aux cellules qui en décodent le souvenir, et montrent que faire taire une seule couche d’une voie coupe tout ce qui vient après.",
+        "topics": {
+          "synapses": "Chaque couche transmet le signal à la suivante par des synapses. Les scientifiques pensent que le souvenir lui-même est un changement de la force des synapses qui relient les cellules de Kenyon aux neurones de sortie.",
+          "structure": "La voie est une chaîne de couches : faire taire les cellules de Kenyon éteint donc les neurones de sortie, alors même que l’odeur entre toujours.",
+          "excitation": "« Stimuler » excite les cellules et « Faire taire » les maintient éteintes : ce sont les deux outils de la leçon. Dans cette partie du circuit, chaque couche excite la suivante."
+        },
+        "opening": "Demandez : « Comment votre cerveau sait-il qu’il a déjà rencontré une odeur ? » Laissez les élèves proposer quelques hypothèses, puis annoncez que la classe va chercher la réponse aujourd’hui dans une mouche.",
+        "notice": {
+          "send": "Seuls les récepteurs olfactifs, en orange, s’allument. Le signal part d’une extrémité du circuit, et non de partout à la fois.",
+          "follow": "Les couleurs s’allument dans l’ordre : orange, puis jaune, puis bleu. Le signal traverse les couches l’une après l’autre.",
+          "read": "Les neurones de sortie, en rose, s’allument en dernier, et seulement après les cellules de Kenyon, en bleu.",
+          "silence": "L’orange et le jaune s’allument toujours, le bleu reste éteint et le rose disparaît presque. L’odeur est entrée, mais n’a pas pu aller plus loin.",
+          "restore": "Le rose revient dès que les cellules de Kenyon sont réactivées. Rien n’a été abîmé : le signal n’avait simplement plus de chemin."
+        },
+        "answer": "Les cellules de Kenyon transmettent le motif de chaque odeur aux neurones de sortie. Quand on les fait taire, l’odeur atteint toujours les récepteurs et les neurones de projection, mais les neurones de sortie n’ont plus rien à décoder. Aux élèves qui répondent « l’odeur n’est jamais entrée », demandez de regarder de nouveau les cellules orange et jaunes.",
+        "discuss": {
+          "a": "L’odeur entrait toujours dans le cerveau pendant que les cellules de Kenyon étaient réduites au silence. Comment le sait-on ?",
+          "b": "Imaginons que la mouche ait appris que cette odeur annonce du sucre. À quel endroit de ce circuit vous attendriez-vous à voir quelque chose changer ?",
+          "c": "Que vous attendriez-vous à voir si vous faisiez plutôt taire les neurones de projection, en jaune ? Vérifiez-le en exploration libre."
+        },
+        "misconceptions": {
+          "a": {
+            "claim": "Un souvenir est rangé dans une seule cellule, comme un fichier.",
+            "fix": "Revenez à l’étape où le rose décode le bleu. On pense que le souvenir tient à la force de nombreuses connexions entre les deux groupes, et non à une cellule unique."
+          },
+          "b": {
+            "claim": "Faire taire une cellule la tue ou l’abîme.",
+            "fix": "Rejouez la dernière étape : la lumière rose revient aussitôt. Les cellules réduites au silence sont intactes. Elles ne s’activent pas, c’est tout."
+          },
+          "c": {
+            "claim": "La leçon montre la mouche en train d’apprendre une odeur.",
+            "fix": "Ce n’est pas le cas. Le modèle montre où un souvenir serait conservé, mais ses connexions ne changent jamais. Dites-le clairement, et demandez ce qu’il faudrait ajouter."
+          }
+        },
+        "real": {
+          "a": "Les quatre groupes de cellules, et l’ordre dans lequel ils se connectent, forment la véritable voie de l’odorat de la mouche."
+        },
+        "simplified": {
+          "a": "« Stimuler » active tous les récepteurs olfactifs d’un coup. Une vraie odeur n’active que certains types de récepteurs, selon un motif.",
+          "b": "Rien n’apprend dans le modèle : il n’a pas de signal de récompense, et ses connexions ne changent jamais."
+        },
+        "worksheet": {
+          "predict": {
+            "a": "Une odeur entre par les antennes. D’après toi, quelle couleur s’allumera en dernier ?",
+            "b": "D’après toi, qu’arrivera-t-il aux cellules roses si on éteint les cellules bleues ?"
+          },
+          "explain": {
+            "a": "Pourquoi les cellules roses se sont-elles éteintes quand tu as fait taire les cellules bleues, alors que l’odeur entrait toujours ?",
+            "b": "À quel endroit de ce circuit les scientifiques pensent-ils que le souvenir d’une odeur est conservé ?"
+          }
+        }
+      },
+      "compass": {
+        "goal": "Les élèves constatent qu’un anneau de neurones garde l’orientation de la mouche sous la forme d’une seule tache d’activité, et que l’inhibition exercée par les neurones en anneau maintient cette tache en place.",
+        "topics": {
+          "excitation": "L’exemple le plus net des trois leçons. Les neurones de rotation excitent la boussole et poussent la bosse ; les neurones en anneau l’inhibent et immobilisent la bosse.",
+          "synapses": "D’après les prédictions, les neurones en anneau libèrent du GABA, un neurotransmetteur inhibiteur. Les neurones de la boussole et les neurones de rotation libèrent de l’acétylcholine, qui excite.",
+          "structure": "Les neurones de la boussole sont câblés en anneau, et c’est cette forme qui permet à une seule bosse d’activité de représenter une seule direction."
+        },
+        "opening": "Demandez : « Fermez les yeux et faites un tour sur vous-mêmes. Comment savez-vous encore dans quelle direction vous êtes tournés ? » Expliquez ensuite qu’une mouche y parvient avec un petit anneau de cellules, et que la classe va les bousculer un peu.",
+        "notice": {
+          "left": "Une tache de neurones de la boussole, en vert, s’allume d’un côté de l’anneau, et l’aiguille du cadran pointe vers elle. Cette tache, c’est la bosse.",
+          "right": "La bosse se déplace autour du cadran. Les deux ordres de tourner la poussent dans des sens opposés.",
+          "silence": "Quand les neurones en anneau, en violet, sont éteints, le même ordre laisse la bosse errer au lieu de se fixer à un endroit.",
+          "restore": "La bosse tient de nouveau sa place. Comparez le cadran avec celui de l’étape précédente."
+        },
+        "answer": "Rien n’indiquait à la boussole où étaient les repères : rien ne retenait donc la bosse en place. L’ordre de tourner est bien arrivé, puisque les cellules vertes se sont allumées ; il manquait donc un ancrage, et non une entrée. Pour les élèves plus âgés : dans ce modèle, l’ancrage est l’inhibition exercée par les neurones en anneau.",
+        "discuss": {
+          "a": "Pourquoi l’anneau est-il une bonne forme pour des cellules qui gardent la trace d’une direction ?",
+          "b": "Les neurones en anneau calment d’autres cellules au lieu de les exciter. Comment le fait d’éteindre des cellules peut-il aider un réseau à mieux fonctionner ?",
+          "c": "Nous aussi, nous perdons le sens de l’orientation dans le noir ou dans le brouillard. Quel est le point commun avec l’étape où l’on fait taire les neurones en anneau ?"
+        },
+        "misconceptions": {
+          "a": {
+            "claim": "La mouche a une boussole magnétique, comme celle d’un téléphone.",
+            "fix": "Cette boussole est un motif d’activité que la mouche met à jour à partir de ses propres rotations et de ce qu’elle voit. Rien dans ce circuit ne détecte le magnétisme."
+          },
+          "b": {
+            "claim": "Plus il y a de cellules actives, meilleur est le signal.",
+            "fix": "Comparez les deux dernières étapes : supprimer l’inhibition a rendu la boussole moins bonne. L’inhibition fait partie du fonctionnement du circuit."
+          },
+          "c": {
+            "claim": "La bosse est un objet qui se déplace dans le cerveau.",
+            "fix": "Aucune cellule ne bouge. Des cellules voisines s’activent tour à tour, comme une ola qui fait le tour d’un stade."
+          }
+        },
+        "real": {
+          "a": "Les neurones de la boussole, les neurones de rotation et les neurones en anneau sont de vrais types cellulaires, câblés en anneau comme chez la mouche."
+        },
+        "simplified": {
+          "a": "Dans le modèle, les neurones en anneau ne portent aucune image du monde. Les faire taire supprime leur inhibition, et c’est ce qui laisse la bosse dériver.",
+          "b": "Le cadran est notre propre lecture de l’activité des cellules vertes. La mouche n’a pas de cadran."
+        },
+        "worksheet": {
+          "predict": {
+            "a": "D’après toi, que montrera le cadran de la boussole quand tu activeras les neurones de rotation de gauche ? Et ceux de droite ?",
+            "b": "D’après toi, qu’arrivera-t-il à la bosse si on éteint les neurones en anneau, en violet ?"
+          },
+          "explain": {
+            "a": "Pourquoi la bosse a-t-elle dérivé quand les neurones en anneau ont été réduits au silence ?",
+            "b": "Pourquoi l’anneau est-il une bonne forme pour des cellules qui gardent la trace d’une direction ?"
+          }
+        }
+      },
+      "escape": {
+        "goal": "Les élèves suivent un réflexe des yeux jusqu’aux muscles des pattes en 30 millisecondes environ, et montrent que la fuite rapide dépend d’un seul maillon : la fibre géante.",
+        "topics": {
+          "reflex": "Une voie réflexe complète en trois parties : des neurones sensoriels (les neurones d’approche), un relais (la fibre géante) et des motoneurones (les neurones du saut). À la différence du réflexe rotulien, ce relais passe par le cerveau.",
+          "structure": "Le signal converge de centaines de neurones d’approche vers la fibre géante. Ce goulot d’étranglement explique pourquoi faire taire un seul type de cellule supprime le comportement.",
+          "synapses": "La fibre géante est épaisse, ce qui rend son signal rapide. Chez la vraie mouche, elle utilise aussi des synapses électriques, les plus rapides ; le modèle n’a que des synapses chimiques."
+        },
+        "opening": "Demandez : « Pourquoi est-il si difficile d’écraser une mouche ? » Recueillez quelques idées, puis annoncez que la classe va chronométrer la fuite de la mouche et trouver le fil qui la rend possible.",
+        "notice": {
+          "loom": "Les neurones d’approche, en bleu, s’allument en premier, et la fibre géante, en rouge, suit presque aussitôt.",
+          "jump": "L’activité descend le long de la fibre géante jusque dans le cordon nerveux, et les neurones du saut, en jaune, s’activent en moins de 30 millisecondes de temps de mouche.",
+          "silence": "Le bleu s’allume toujours, le rouge reste éteint et le jaune ne s’active jamais. La mouche a vu le tue-mouches, mais le message n’est pas arrivé à ses pattes.",
+          "restore": "Le jaune s’active de nouveau dès que la fibre géante est réactivée."
+        },
+        "answer": "La fibre géante transmet le signal de saut des neurones d’approche aux neurones du saut. Quand on la fait taire, la mouche voit toujours le tue-mouches, puisque les cellules bleues s’allument, mais le signal s’arrête avant les pattes. Les vraies mouches ont aussi des façons plus lentes de s’échapper, comme le dit la dernière étape de la leçon.",
+        "discuss": {
+          "a": "Cette fuite est plus rapide qu’un clignement d’œil. Quelles caractéristiques de la voie la rendent si rapide ?",
+          "b": "Pourquoi un animal aurait-il intérêt à disposer d’une voie de fuite rapide et de plusieurs voies plus lentes ?",
+          "c": "Comparez cette voie à un réflexe humain que vous connaissez, comme retirer la main d’un objet brûlant. Qu’est-ce qui est pareil, et qu’est-ce qui est différent ?"
+        },
+        "misconceptions": {
+          "a": {
+            "claim": "La mouche décide de sauter.",
+            "fix": "Le saut rapide est un réflexe : le câblage conduit le signal d’un bout à l’autre, sans détour. À aucun moment la mouche ne pèse le pour et le contre."
+          },
+          "b": {
+            "claim": "Si la mouche n’a pas sauté, c’est qu’elle n’a pas vu le tue-mouches.",
+            "fix": "L’étape où l’on fait taire la fibre géante distingue les deux. Les neurones d’approche s’activent : la mouche l’a donc vu. Voir et agir sont deux étapes différentes d’une même voie."
+          },
+          "c": {
+            "claim": "Un seul neurone ne peut pas compter dans tout un cerveau.",
+            "fix": "Ici, un seul type de cellule porte tout le signal rapide. Partout où une voie se resserre sur quelques cellules, chacune d’elles compte énormément."
+          }
+        },
+        "real": {
+          "a": "Les neurones d’approche, la fibre géante et les neurones du saut sont réels, tout comme le trajet qui les relie."
+        },
+        "simplified": {
+          "a": "Les 30 millisecondes viennent des règles de temps simples du modèle, et non d’enregistrements réalisés sur une mouche. Elles se situent dans un ordre de grandeur réaliste.",
+          "b": "« Stimuler » active tous les neurones d’approche d’un coup. Un vrai tue-mouches les active peu à peu, à mesure qu’il grossit dans le champ de vision."
+        },
+        "worksheet": {
+          "predict": {
+            "a": "Un tue-mouches arrive. D’après toi, dans quel ordre les trois couleurs s’allumeront-elles ?",
+            "b": "D’après toi, qu’arrivera-t-il aux neurones du saut, en jaune, si on éteint la fibre géante, en rouge ?"
+          },
+          "explain": {
+            "a": "Pourquoi les neurones du saut sont-ils restés éteints, alors que la mouche a vu le tue-mouches ?",
+            "b": "Quelles caractéristiques de cette voie rendent la fuite si rapide ?"
+          }
+        }
+      }
     }
   }
 }
