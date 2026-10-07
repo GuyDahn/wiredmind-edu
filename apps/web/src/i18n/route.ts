@@ -1,4 +1,4 @@
-import { detectLocale } from "./detect.js";
+import { knownLocale } from "./detect.js";
 import {
   canonicalLocale,
   DEFAULT_LOCALE,
@@ -26,7 +26,10 @@ export type RouteDecision =
  * rule without a server:
  *
  * - `/` picks a language (a saved choice, then Accept-Language, then the
- *   visitor's country, then English) and redirects once.
+ *   visitor's country) and redirects once, for now: the next visit may pick
+ *   another. A visitor who tells us nothing moves to English for good. That
+ *   is what a search crawler sees, and a temporary redirect made Google index
+ *   `/` in place of `/en`, against the English page's own canonical link.
  * - A URL that names a live language is served as is, never redirected.
  * - A language spelled in the wrong case moves to the right spelling.
  * - A language without a translation serves the English page at its own URL.
@@ -48,11 +51,14 @@ export function routeRequest({
   country?: string | null;
 }): RouteDecision {
   if (pathname === "/") {
-    const locale = detectLocale({ cookie, acceptLanguage, country });
+    const locale = knownLocale({ cookie, acceptLanguage, country });
     return {
       kind: "redirect",
-      status: 307,
-      pathname: localePath(locale, hasReplay ? FIRST_LESSON : "/"),
+      status: locale ? 307 : 308,
+      pathname: localePath(
+        locale ?? DEFAULT_LOCALE,
+        hasReplay ? FIRST_LESSON : "/",
+      ),
       vary: "Accept-Language",
     };
   }

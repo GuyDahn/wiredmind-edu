@@ -161,6 +161,23 @@ describe("routing", () => {
     });
   });
 
+  it("moves a visitor who names no language, like a crawler, to English for good", () => {
+    for (const extra of [{}, { acceptLanguage: "sv", country: "US" }]) {
+      assert.deepEqual(route("/", extra), {
+        kind: "redirect",
+        status: 308,
+        pathname: "/en",
+        vary: "Accept-Language",
+      });
+    }
+    assert.deepEqual(route("/", { acceptLanguage: "en-US" }), {
+      kind: "redirect",
+      status: 307,
+      pathname: "/en",
+      vary: "Accept-Language",
+    });
+  });
+
   it("serves a URL that names its language as is", () => {
     for (const locale of LOCALES) {
       assert.deepEqual(route(`/${locale}/about`, { acceptLanguage: "ja" }), {

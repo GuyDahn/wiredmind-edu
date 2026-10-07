@@ -69,6 +69,13 @@ describe("host routing", () => {
     assert.equal(response.headers.get("location"), "https://wiredmind.app/he");
   });
 
+  it("sends a crawler at / to English for good, uncached", () => {
+    const response = middleware(request("https://wiredmind.app/"));
+    assert.equal(response.status, 308);
+    assert.equal(response.headers.get("location"), "https://wiredmind.app/en");
+    assert.equal(response.headers.get("cache-control"), "private, no-store");
+  });
+
   it("serves previews, but keeps them out of search", () => {
     for (const host of [
       "wiredmind-edu-git-fix-mobile-header-guy-dev.vercel.app",
