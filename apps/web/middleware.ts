@@ -51,7 +51,11 @@ function routeLanguage(request: NextRequest): NextResponse {
     return response;
   }
   const response = NextResponse.redirect(target, decision.status);
-  if (decision.vary) response.headers.set("Vary", decision.vary);
+  if (decision.vary) {
+    response.headers.set("Vary", decision.vary);
+    // Browsers keep a 308 forever and would ignore a language picked later.
+    response.headers.set("Cache-Control", "private, no-store");
+  }
   return response;
 }
 

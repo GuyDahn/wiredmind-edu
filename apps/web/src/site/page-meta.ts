@@ -17,18 +17,15 @@ export function absoluteUrl(path: string): string {
 
 /**
  * Every language's copy of a page, for hreflang in the head and in the
- * sitemaps. `x-default` is the language-picking root for the home page and
- * the English page everywhere else.
+ * sitemaps. `x-default` is the English page, the home page's too: naming the
+ * language-picking root there told Google to index `/` in place of `/en`.
  */
 export function languageAlternates(path: string): Record<string, string> {
   const languages: Record<string, string> = {};
   for (const locale of LOCALES) {
     languages[locale] = absoluteUrl(localePath(locale, path));
   }
-  languages["x-default"] =
-    path === "/"
-      ? `${SITE_URL}/`
-      : absoluteUrl(localePath(DEFAULT_LOCALE, path));
+  languages["x-default"] = absoluteUrl(localePath(DEFAULT_LOCALE, path));
   return languages;
 }
 

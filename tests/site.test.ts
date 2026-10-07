@@ -452,7 +452,7 @@ describe("site metadata", () => {
     );
     const twitter = meta.twitter as Record<string, unknown>;
     assert.equal(twitter.card, "summary_large_image");
-    assert.equal(languageAlternates("/")["x-default"], `${SITE_URL}/`);
+    assert.equal(languageAlternates("/")["x-default"], `${SITE_URL}/en`);
   });
 
   it("lists every page in one sitemap per language, each naming its translations", () => {
@@ -475,7 +475,7 @@ describe("site metadata", () => {
     );
     const links = xml.match(/<xhtml:link rel="alternate"/g) ?? [];
     assert.equal(links.length, SITEMAP_PAGES.length * (LOCALES.length + 1));
-    assert.match(xml, /hreflang="x-default" href="https:\/\/[^"]+\/"/);
+    assert.match(xml, /hreflang="x-default" href="https:\/\/[^"/]+\/en"/);
     assert.match(xml, /<lastmod>2026-09-27T10:00:00\+03:00<\/lastmod>/);
     assert.doesNotMatch(xml, /sim-bench/);
   });
