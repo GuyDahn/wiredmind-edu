@@ -14,7 +14,6 @@
       "title": "Il progetto WiredMind: cosa è reale e cosa è semplificato",
       "description": "Cosa è reale e cosa è semplificato nelle lezioni di WiredMind sul cervello del moscerino della frutta, chi le ha create e come sostenere il progetto."
     },
-    "lessonTitle": "{title} · WiredMind",
     "notFoundTitle": "Pagina non trovata · WiredMind"
   },
   "og": {
@@ -249,6 +248,7 @@
       "title": "Come un moscerino ricorda un odore",
       "summary": "Manda un odore nel cervello di un vero moscerino e trova le cellule che lo ricordano.",
       "description": "Manda un odore nel cervello di un vero moscerino, seguilo fino al corpo fungiforme e scopri le cellule che lo ricordano. Lezione gratuita di 10 minuti.",
+      "searchTitle": "Olfatto e memoria del moscerino: lezione interattiva",
       "steps": {
         "send": {
           "text": "Un moscerino sente gli odori con le <antenna>antenne</antenna> <gloss>(due piccoli nasi)</gloss>. Tocca «Stimola» per far entrare un odore. Guarda come si accendono i neuroni arancioni.",
@@ -297,6 +297,7 @@
       "title": "Come un moscerino sa da che parte è rivolto",
       "summary": "Fai girare la bussola di un vero moscerino e scopri che cosa la tiene ferma.",
       "description": "Fai girare la bussola interna di un vero moscerino, poi silenzia i neuroni ad anello e guardala andare alla deriva. Lezione gratuita di 10 minuti.",
+      "searchTitle": "La bussola interna del moscerino: lezione interattiva",
       "steps": {
         "left": {
           "text": "Tocca «Stimola» per attivare i <turn>neuroni di svolta</turn> di sinistra <gloss>(segnale per girare)</gloss>. Poi guarda il quadrante della bussola.",
@@ -341,6 +342,7 @@
       "title": "La fuga in 30 millisecondi",
       "summary": "Trova il filo che permette a un moscerino di sfuggire allo scacciamosche.",
       "description": "Dagli occhi alle zampe in 30 ms: segui lo scacciamosche lungo la fibra gigante di un vero moscerino, poi taglia il filo. Lezione gratuita di 10 minuti.",
+      "searchTitle": "Riflesso di fuga del moscerino: lezione sulla fibra gigante",
       "steps": {
         "loom": {
           "text": "Uno scacciamosche piomba sul moscerino. Tocca «Stimola» per attivare i <looming>neuroni di avvicinamento</looming> <gloss>(sentinelle)</gloss>.",
@@ -736,6 +738,18 @@
       "name": "Ponte",
       "text": "Una parte del cervello del moscerino a forma di barra, il ponte protocerebrale. Ci passano sia i neuroni bussola sia i neuroni di svolta."
     }
+  },
+  "glossary": {
+    "nav": "Glossario",
+    "title": "Glossario di neuroscienze",
+    "lead": "Tutti i termini scientifici delle lezioni, spiegati in una o due frasi. Apri un termine per vedere dove compare nel cervello di un vero moscerino della frutta.",
+    "metaTitle": "Glossario di neuroscienze per studenti · WiredMind",
+    "metaDescription": "Neurone, sinapsi, connettoma, corpo fungiforme e altro: i termini delle lezioni di WiredMind sul moscerino della frutta, spiegati in una o due frasi.",
+    "termTitle": "{term}: spiegazione semplice per studenti",
+    "inLessons": "Guardalo in una lezione",
+    "steps": "Dove compare nella lezione",
+    "related": "Termini correlati",
+    "all": "Tutti i termini"
   },
   "teachers": {
     "meta": {

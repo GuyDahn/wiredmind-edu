@@ -37,7 +37,7 @@ export async function generateMetadata({
   return pageMetadata({
     locale,
     path: entry.path,
-    title: t("meta.lessonTitle", { title }),
+    title: t(`lessons.${entry.id}.searchTitle`),
     shareTitle: title,
     description: t(`lessons.${entry.id}.description`),
     image: shareImagePath(locale, `lesson-${entry.id}`, card.version),

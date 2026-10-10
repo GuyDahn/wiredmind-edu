@@ -48,6 +48,7 @@ const ORDER = [
   "landing",
   "about",
   "terms",
+  "glossary",
   "lessons",
   "teachers",
 ];
@@ -131,13 +132,20 @@ export function systemPrompt(
 
 /** What a translator should know about one key. */
 function noteFor(key: string): string | null {
-  if (/^meta\.(home|about)\.title$|^meta\.notFoundTitle$/.test(key)) {
+  if (
+    /^meta\.(home|about)\.title$|^meta\.notFoundTitle$/.test(key) ||
+    /^lessons\.[^.]+\.searchTitle$/.test(key) ||
+    key === "glossary.metaTitle"
+  ) {
     return "search result title, at most 60 characters";
   }
-  if (key === "meta.lessonTitle") {
-    return "search result title pattern; with a lesson title filled in it must stay within 60 characters";
+  if (key === "glossary.termTitle") {
+    return "search result title pattern; with the longest term name filled in it must stay within 60 characters";
   }
-  if (/\.description$/.test(key) && /^(meta|lessons)\./.test(key)) {
+  if (
+    key === "glossary.metaDescription" ||
+    (/\.description$/.test(key) && /^(meta|lessons)\./.test(key))
+  ) {
     return "search result description, at most 155 characters";
   }
   if (/^lessons\.[^.]+\.(steps|check|freePlay)\./.test(key)) {
@@ -374,8 +382,8 @@ async function main() {
       }).filter((issue) => issue.level === "error");
       for (const issue of issues) {
         const key = issue.key.replace(
-          /^meta\.lessonTitle \((.+)\)$/,
-          "meta.lessonTitle",
+          /^glossary\.termTitle \((.+)\)$/,
+          "glossary.termTitle",
         );
         failing.set(key, [...(failing.get(key) ?? []), issue.message]);
       }

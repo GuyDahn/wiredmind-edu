@@ -1,5 +1,6 @@
 import { LOCALES, localePath, type Locale } from "../i18n/locales.js";
 import { LESSONS } from "../viewer/modules.js";
+import { GLOSSARY_PATH, GLOSSARY_TERMS, termPath } from "./glossary.js";
 import { absoluteUrl, languageAlternates } from "./page-meta.js";
 import { SITE_URL } from "./site.js";
 import { guidePath, TEACHERS_PATH } from "./teachers.js";
@@ -30,6 +31,11 @@ export const SITEMAP_PAGES: readonly SitemapPage[] = [
       "app/[locale]/teachers/[lesson]/page.tsx",
       `content/modules/${entry.id}.json`,
     ],
+  })),
+  { path: GLOSSARY_PATH, sources: ["app/[locale]/glossary/page.tsx"] },
+  ...GLOSSARY_TERMS.map((id) => ({
+    path: termPath(id),
+    sources: ["app/[locale]/glossary/[term]/page.tsx"],
   })),
   { path: "/about", sources: ["app/[locale]/about/page.tsx"] },
 ];

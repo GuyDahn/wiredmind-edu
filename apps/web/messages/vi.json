@@ -14,7 +14,6 @@
       "title": "Về WiredMind: điều gì là thật, điều gì được đơn giản hóa",
       "description": "Điều gì là thật và điều gì được đơn giản hóa trong các bài học về não ruồi giấm của WiredMind, ai đã làm ra và cách ủng hộ dự án."
     },
-    "lessonTitle": "{title} · WiredMind",
     "notFoundTitle": "Không tìm thấy trang · WiredMind"
   },
   "og": {
@@ -249,6 +248,7 @@
       "title": "Ruồi ghi nhớ mùi như thế nào",
       "summary": "Gửi một mùi vào não ruồi thật và tìm những tế bào ghi nhớ mùi đó.",
       "description": "Gửi một mùi vào não ruồi giấm thật, lần theo nó đến thể nấm và tìm các tế bào lưu giữ ký ức về mùi. Bài học miễn phí dài 10 phút.",
+      "searchTitle": "Ruồi ngửi và ghi nhớ mùi thế nào: bài học tương tác",
       "steps": {
         "send": {
           "text": "Ruồi ngửi mùi bằng <antenna>anten</antenna> <gloss>(hai sợi râu)</gloss>. Nhấn nút Kích thích để gửi một mùi vào. Hãy xem các nơ-ron màu cam sáng lên.",
@@ -297,6 +297,7 @@
       "title": "Làm sao ruồi biết mình đang hướng về đâu",
       "summary": "Đẩy la bàn của một con ruồi thật xoay vòng và xem điều gì giữ nó đúng chỗ.",
       "description": "Đẩy la bàn trong não ruồi giấm thật xoay vòng, rồi làm im lặng nơ-ron vòng và xem cảm giác phương hướng của ruồi trôi đi. Bài học miễn phí dài 10 phút.",
+      "searchTitle": "La bàn bên trong của ruồi: bài học tương tác về não",
       "steps": {
         "left": {
           "text": "Nhấn nút Kích thích để <turn>nơ-ron rẽ trái</turn> <gloss>(tín hiệu rẽ)</gloss> phát xung. Sau đó hãy nhìn mặt la bàn.",
@@ -341,6 +342,7 @@
       "title": "Cú thoát hiểm trong 30 mili giây",
       "summary": "Tìm sợi dây giúp ruồi thoát khỏi chiếc vỉ đang đập xuống.",
       "description": "Lần theo chiếc vỉ đập ruồi từ mắt ruồi giấm thật, dọc sợi khổng lồ xuống tận chân chỉ trong 30 ms, rồi cắt sợi dây đó. Bài học miễn phí dài 10 phút.",
+      "searchTitle": "Phản xạ thoát hiểm của ruồi giấm: bài học sợi khổng lồ",
       "steps": {
         "loom": {
           "text": "Một chiếc vỉ đập ruồi đang lao xuống con ruồi. Nhấn nút Kích thích để <looming>nơ-ron phát hiện vật lao tới</looming> <gloss>(bộ dò vỉ ruồi)</gloss> phát xung.",
@@ -736,6 +738,18 @@
       "name": "Cầu tiền não",
       "text": "Một phần hình thanh trong não ruồi, tên khoa học là protocerebral bridge. Nơ-ron la bàn và nơ-ron rẽ đều chạy qua đây."
     }
+  },
+  "glossary": {
+    "nav": "Thuật ngữ",
+    "title": "Thuật ngữ khoa học thần kinh",
+    "lead": "Mọi thuật ngữ khoa học trong các bài học, được giải thích trong một hoặc hai câu. Mở một thuật ngữ để xem nó xuất hiện ở đâu trong bộ não thật của ruồi giấm.",
+    "metaTitle": "Thuật ngữ khoa học thần kinh cho học sinh · WiredMind",
+    "metaDescription": "Nơ-ron, xináp, connectome, thể nấm và hơn thế nữa: thuật ngữ trong các bài học về ruồi giấm của WiredMind, giải thích trong một hoặc hai câu.",
+    "termTitle": "{term}: giải thích dễ hiểu",
+    "inLessons": "Xem trong bài học",
+    "steps": "Thuật ngữ này xuất hiện ở đâu trong bài học",
+    "related": "Thuật ngữ liên quan",
+    "all": "Tất cả thuật ngữ"
   },
   "teachers": {
     "meta": {

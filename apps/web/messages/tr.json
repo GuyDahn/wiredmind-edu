@@ -14,7 +14,6 @@
       "title": "WiredMind hakkında: Neler gerçek, neler basitleştirilmiş",
       "description": "WiredMind’ın meyve sineği beyni derslerinde neler gerçek, neler basitleştirilmiş? Projeyi kim yaptı, siz nasıl destek olabilirsiniz? Hepsi bu sayfada."
     },
-    "lessonTitle": "{title} · WiredMind",
     "notFoundTitle": "Sayfa bulunamadı · WiredMind"
   },
   "og": {
@@ -249,6 +248,7 @@
       "title": "Sinek bir kokuyu nasıl hatırlar?",
       "summary": "Gerçek bir sinek beynine bir koku gönder ve onu hatırlayan hücreleri bul.",
       "description": "Gerçek bir meyve sineği beynine koku gönder, onu mantar cisimciğine kadar izle ve kokunun anısını saklayan hücreleri bul. Ücretsiz, 10 dakikalık bir ders.",
+      "searchTitle": "Sinekler nasıl koku alır ve hatırlar? Etkileşimli ders",
       "steps": {
         "send": {
           "text": "Sinek <antenna>antenleriyle</antenna> <gloss>(iki duyargası)</gloss> koku alır. Bir koku göndermek için “Uyar” düğmesine dokun. Turuncu nöronların nasıl yandığını izle.",
@@ -297,6 +297,7 @@
       "title": "Sinek hangi yöne baktığını nasıl bilir?",
       "summary": "Gerçek bir sineğin pusulasını sağa sola it ve onu yerinde neyin tuttuğunu gör.",
       "description": "Gerçek bir meyve sineğinin iç pusulasını sağa sola it, sonra halka nöronlarını sustur ve yön duygusunun kaymasını izle. Ücretsiz, 10 dakikalık bir ders.",
+      "searchTitle": "Sineğin iç pusulası: etkileşimli beyin dersi",
       "steps": {
         "left": {
           "text": "Sol <turn>dönüş nöronlarını</turn> <gloss>(dönüş sinyali)</gloss> ateşlemek için “Uyar” düğmesine dokun. Sonra pusula kadranını izle.",
@@ -341,6 +342,7 @@
       "title": "30 milisaniyelik kaçış",
       "summary": "Sineği sinekliğin altından kurtaran kabloyu bul.",
       "description": "Bir sinekliğin izini gerçek bir meyve sineğinin gözlerinden dev lif boyunca bacaklarına 30 ms’de sür, sonra kabloyu kes. Ücretsiz, 10 dakikalık bir ders.",
+      "searchTitle": "Meyve sineğinde kaçış refleksi: dev lif dersi",
       "steps": {
         "loom": {
           "text": "Bir sineklik sineğe doğru hızla iniyor. <looming>Yaklaşma nöronlarını</looming> <gloss>(sineklik gözcüleri)</gloss> ateşlemek için “Uyar” düğmesine dokun.",
@@ -736,6 +738,18 @@
       "name": "Köprü",
       "text": "Sineğin beyninde çubuk biçimli bir bölüm: protoserebral köprü. Hem pusula nöronları hem dönüş nöronları buradan geçer."
     }
+  },
+  "glossary": {
+    "nav": "Sözlük",
+    "title": "Sinirbilim sözlüğü",
+    "lead": "Derslerde geçen bütün bilimsel terimler, bir iki cümleyle açıklanıyor. Bir terimi açın ve gerçek bir meyve sineğinin beyninde nerede geçtiğini görün.",
+    "metaTitle": "Öğrenciler için sinirbilim sözlüğü · WiredMind",
+    "metaDescription": "Nöron, sinaps, konektom, mantar cisimciği ve daha fazlası: WiredMind’ın meyve sineği derslerindeki terimler, her biri bir iki cümleyle açıklanıyor.",
+    "termTitle": "{term}: öğrenciler için basit açıklama",
+    "inLessons": "Bir derste görün",
+    "steps": "Derste geçtiği yerler",
+    "related": "İlgili terimler",
+    "all": "Tüm terimler"
   },
   "teachers": {
     "meta": {

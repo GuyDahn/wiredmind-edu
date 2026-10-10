@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { localePath } from "@/src/i18n/locales";
+import type { ReactNode } from "react";
+import { localePath, type Locale } from "@/src/i18n/locales";
 import { pageLocale, type LocaleParams } from "@/src/i18n/server";
 import { shareCard } from "@/src/og/share-card";
 import { SiteFooter } from "@/src/site/footer";
+import { hasPage, termPath } from "@/src/site/glossary";
 import { SiteHeader } from "@/src/site/header";
 import { jsonLdScript, pageJsonLd } from "@/src/site/json-ld";
 import { pageMetadata, shareImagePath } from "@/src/site/page-meta";
@@ -17,7 +19,7 @@ import {
   worksheetPath,
 } from "@/src/site/teachers";
 import { LESSONS } from "@/src/viewer/modules";
-import { GENERAL_TERMS, LESSON_TERMS } from "@/src/viewer/terms";
+import { GENERAL_TERMS, LESSON_TERMS, type TermId } from "@/src/viewer/terms";
 
 export async function generateMetadata({
   params,
@@ -111,7 +113,9 @@ export default async function TeachersPage({
               {GENERAL_TERMS.map((id) => (
                 <div key={id} data-term-entry={id}>
                   <dt className="font-semibold text-fg">
-                    {t(`terms.${id}.name`)}
+                    <TermName locale={locale} id={id}>
+                      {t(`terms.${id}.name`)}
+                    </TermName>
                   </dt>
                   <dd>{t(`terms.${id}.text`)}</dd>
                 </div>
@@ -129,7 +133,9 @@ export default async function TeachersPage({
                 {(LESSON_TERMS[entry.id] ?? []).map((id) => (
                   <div key={id} data-term-entry={id}>
                     <dt className="font-semibold text-fg">
-                      {t(`terms.${id}.name`)}
+                      <TermName locale={locale} id={id}>
+                        {t(`terms.${id}.name`)}
+                      </TermName>
                     </dt>
                     <dd>{t(`terms.${id}.text`)}</dd>
                   </div>
@@ -152,5 +158,23 @@ export default async function TeachersPage({
         }}
       />
     </>
+  );
+}
+
+/** A term's name, linked to its glossary page when it has one. */
+function TermName({
+  locale,
+  id,
+  children,
+}: {
+  locale: Locale;
+  id: TermId;
+  children: ReactNode;
+}) {
+  if (!hasPage(id)) return children;
+  return (
+    <Link href={localePath(locale, termPath(id))} className={LINK_CLASS}>
+      {children}
+    </Link>
   );
 }

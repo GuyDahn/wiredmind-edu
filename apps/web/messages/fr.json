@@ -14,7 +14,6 @@
       "title": "À propos de WiredMind : ce qui est réel ou simplifié",
       "description": "Ce qui est réel et ce qui est simplifié dans les leçons de WiredMind sur le cerveau de la drosophile, qui a créé le site et comment le soutenir."
     },
-    "lessonTitle": "{title} · WiredMind",
     "notFoundTitle": "Page introuvable · WiredMind"
   },
   "og": {
@@ -249,6 +248,7 @@
       "title": "Comment une mouche se souvient d’une odeur",
       "summary": "Envoyer une odeur dans un vrai cerveau de mouche et trouver les cellules qui s’en souviennent.",
       "description": "Envoyer une odeur dans un vrai cerveau de drosophile, la suivre jusqu’au corps pédonculé et trouver où se loge son souvenir. Leçon gratuite de 10 minutes.",
+      "searchTitle": "Odorat et mémoire de la mouche : leçon interactive",
       "steps": {
         "send": {
           "text": "Une mouche sent avec ses <antenna>antennes</antenna> <gloss>(ses deux capteurs)</gloss>. Appuie sur « Stimuler » pour lui envoyer une odeur. Regarde les neurones orange s’allumer.",
@@ -297,6 +297,7 @@
       "title": "Comment une mouche s’oriente",
       "summary": "Faire tourner la boussole d’une vraie mouche et voir ce qui la maintient en place.",
       "description": "Faire tourner la boussole interne d’une vraie drosophile, puis faire taire les neurones en anneau et la voir dériver. Leçon gratuite de 10 minutes.",
+      "searchTitle": "La boussole interne de la mouche : leçon interactive",
       "steps": {
         "left": {
           "text": "Appuie sur « Stimuler » pour activer les <turn>neurones de rotation</turn> <gloss>(l’ordre de tourner)</gloss> du côté gauche. Puis regarde le cadran de la boussole.",
@@ -341,6 +342,7 @@
       "title": "La fuite en 30 millisecondes",
       "summary": "Trouver le fil qui permet à une mouche d’échapper à un tue-mouches.",
       "description": "Des yeux aux pattes d’une vraie drosophile en 30 ms : suivre l’alerte au tue-mouches par la fibre géante, puis couper le fil. Leçon gratuite de 10 minutes.",
+      "searchTitle": "Réflexe de fuite de la drosophile : la fibre géante",
       "steps": {
         "loom": {
           "text": "Un tue-mouches fond sur la mouche. Appuie sur « Stimuler » pour activer les <looming>neurones d’approche</looming> <gloss>(les guetteurs)</gloss>.",
@@ -736,6 +738,18 @@
       "name": "Pont",
       "text": "Une partie du cerveau de la mouche en forme de barre, le pont protocérébral. Les neurones de la boussole et les neurones de rotation le traversent."
     }
+  },
+  "glossary": {
+    "nav": "Glossaire",
+    "title": "Glossaire de neurosciences",
+    "lead": "Tous les termes scientifiques des leçons, expliqués en une ou deux phrases. Ouvrez un terme pour voir où il apparaît dans le cerveau d’une vraie drosophile.",
+    "metaTitle": "Glossaire de neurosciences pour la classe · WiredMind",
+    "metaDescription": "Neurone, synapse, connectome, corps pédonculé et plus : les termes des leçons WiredMind sur la drosophile, expliqués chacun en une ou deux phrases.",
+    "termTitle": "{term} : explication simple pour les élèves",
+    "inLessons": "À voir dans une leçon",
+    "steps": "Où la leçon l’utilise",
+    "related": "Termes associés",
+    "all": "Tous les termes"
   },
   "teachers": {
     "meta": {

@@ -14,7 +14,6 @@
       "title": "O projekcie WiredMind: co jest prawdziwe, a co uproszczone",
       "description": "Co w lekcjach WiredMind o mózgu muszki owocowej jest prawdziwe, a co uproszczone, kto je stworzył i jak można wesprzeć projekt."
     },
-    "lessonTitle": "{title} · WiredMind",
     "notFoundTitle": "Nie znaleziono strony · WiredMind"
   },
   "og": {
@@ -249,6 +248,7 @@
       "title": "Jak muszka zapamiętuje zapach",
       "summary": "Wyślij zapach do prawdziwego mózgu muszki i znajdź komórki, które go zapamiętują.",
       "description": "Wyślij zapach do prawdziwego mózgu muszki owocowej, śledź go aż do ciała grzybkowatego i znajdź komórki, które go zapamiętują. Darmowa lekcja na 10 minut.",
+      "searchTitle": "Jak muszki czują i zapamiętują zapachy: lekcja interaktywna",
       "steps": {
         "send": {
           "text": "Muszka wącha <antenna>czułkami</antenna> <gloss>(dwoma różkami)</gloss>. Naciśnij „Pobudź”, żeby wysłać do niej zapach. Zobacz, jak zapalają się pomarańczowe neurony.",
@@ -297,6 +297,7 @@
       "title": "Skąd muszka wie, w którą stronę jest zwrócona",
       "summary": "Poobracaj kompasem prawdziwej muszki i zobacz, co utrzymuje go w miejscu.",
       "description": "Poobracaj wewnętrznym kompasem prawdziwej muszki owocowej, wycisz neurony pierścieniowe i zobacz, jak muszka gubi kierunek. Darmowa lekcja na 10 minut.",
+      "searchTitle": "Wewnętrzny kompas muszki: interaktywna lekcja o mózgu",
       "steps": {
         "left": {
           "text": "Naciśnij „Pobudź”, żeby uruchomić lewe <turn>neurony skrętu</turn> <gloss>(sygnał skrętu)</gloss>. Potem obserwuj tarczę kompasu.",
@@ -341,6 +342,7 @@
       "title": "Ucieczka w 30 milisekund",
       "summary": "Znajdź kabel, dzięki któremu muszka ucieka spod packi.",
       "description": "Prześledź sygnał o packce od oczu prawdziwej muszki owocowej przez włókno olbrzymie do nóg w 30 ms, a potem przetnij kabel. Darmowa lekcja na 10 minut.",
+      "searchTitle": "Odruch ucieczki muszki owocowej: lekcja o włóknie olbrzymim",
       "steps": {
         "loom": {
           "text": "Packa pędzi prosto na muszkę. Naciśnij „Pobudź”, żeby uruchomić <looming>neurony zbliżeniowe</looming> <gloss>(wykrywacze packi)</gloss>.",
@@ -736,6 +738,18 @@
       "name": "Mostek",
       "text": "Część mózgu muszki w kształcie pręta, czyli mostek protocerebralny. Biegną przez nią i neurony kompasu, i neurony skrętu."
     }
+  },
+  "glossary": {
+    "nav": "Słowniczek",
+    "title": "Słowniczek neurobiologii",
+    "lead": "Wszystkie pojęcia naukowe z lekcji, wyjaśnione w jednym lub dwóch zdaniach. Każde pojęcie pokazuje, gdzie pojawia się w mózgu prawdziwej muszki owocowej.",
+    "metaTitle": "Słowniczek neurobiologii dla uczniów · WiredMind",
+    "metaDescription": "Neuron, synapsa, konektom, ciało grzybkowate i inne: pojęcia z lekcji WiredMind o muszce owocowej, każde wyjaśnione w jednym lub dwóch zdaniach.",
+    "termTitle": "{term}: proste wyjaśnienie dla uczniów",
+    "inLessons": "Zobacz to w lekcji",
+    "steps": "Gdzie pojawia się w lekcji",
+    "related": "Powiązane pojęcia",
+    "all": "Wszystkie pojęcia"
   },
   "teachers": {
     "meta": {

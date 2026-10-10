@@ -14,7 +14,6 @@
       "title": "Tentang WiredMind: mana yang asli, mana yang disederhanakan",
       "description": "Mana yang asli dan mana yang disederhanakan dalam pelajaran otak lalat buah WiredMind, siapa pembuatnya, dan cara mendukungnya."
     },
-    "lessonTitle": "{title} · WiredMind",
     "notFoundTitle": "Halaman tidak ditemukan · WiredMind"
   },
   "og": {
@@ -249,6 +248,7 @@
       "title": "Bagaimana lalat mengingat bau",
       "summary": "Kirim bau ke otak lalat sungguhan dan temukan sel yang mengingatnya.",
       "description": "Kirim bau ke otak lalat buah sungguhan, ikuti jalannya ke badan jamur, dan temukan sel yang menyimpan ingatannya. Pelajaran gratis 10 menit.",
+      "searchTitle": "Cara lalat mencium dan mengingat bau: pelajaran interaktif",
       "steps": {
         "send": {
           "text": "Lalat mencium bau dengan <antenna>antena</antenna> <gloss>(kedua sungutnya)</gloss>. Ketuk Rangsang untuk mengirimkan bau. Perhatikan neuron oranye menyala.",
@@ -297,6 +297,7 @@
       "title": "Bagaimana lalat tahu ke mana ia menghadap",
       "summary": "Dorong kompas lalat sungguhan ke sana kemari dan lihat apa yang menahannya tetap di tempat.",
       "description": "Dorong kompas internal lalat buah sungguhan ke sana kemari, lalu bungkam neuron cincin dan saksikan arah hadapnya melenceng. Pelajaran gratis 10 menit.",
+      "searchTitle": "Kompas internal lalat: pelajaran otak interaktif",
       "steps": {
         "left": {
           "text": "Ketuk Rangsang untuk mengaktifkan <turn>neuron belok</turn> <gloss>(sinyal belok)</gloss> di sisi kiri. Lalu perhatikan piringan kompas.",
@@ -341,6 +342,7 @@
       "title": "Kabur dalam 30 milidetik",
       "summary": "Temukan kabel yang membuat lalat lolos dari pemukul.",
       "description": "Ikuti sinyal pemukul dari mata lalat buah sungguhan lewat serat raksasa hingga ke kakinya dalam 30 ms, lalu putuskan kabelnya. Pelajaran gratis 10 menit.",
+      "searchTitle": "Refleks kabur lalat buah: pelajaran serat raksasa",
       "steps": {
         "loom": {
           "text": "Pemukul lalat menyambar ke arah si lalat. Ketuk Rangsang untuk mengaktifkan <looming>neuron looming</looming> <gloss>(si pendeteksi pemukul)</gloss>.",
@@ -736,6 +738,18 @@
       "name": "Jembatan",
       "text": "Bagian otak lalat yang berbentuk batang, yaitu jembatan protoserebral. Neuron kompas dan neuron belok sama-sama melewatinya."
     }
+  },
+  "glossary": {
+    "nav": "Glosarium",
+    "title": "Glosarium ilmu saraf",
+    "lead": "Semua istilah ilmiah dalam pelajaran, dijelaskan dalam satu atau dua kalimat. Buka sebuah istilah untuk melihat di mana ia muncul di otak lalat buah sungguhan.",
+    "metaTitle": "Glosarium ilmu saraf untuk siswa · WiredMind",
+    "metaDescription": "Neuron, sinapsis, konektom, badan jamur, dan lainnya: istilah dalam pelajaran lalat buah WiredMind, masing-masing dijelaskan dalam satu atau dua kalimat.",
+    "termTitle": "{term}: penjelasan sederhana untuk siswa",
+    "inLessons": "Lihat dalam pelajaran",
+    "steps": "Di mana istilah ini muncul dalam pelajaran",
+    "related": "Istilah terkait",
+    "all": "Semua istilah"
   },
   "teachers": {
     "meta": {
