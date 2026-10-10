@@ -16,6 +16,8 @@ const PAGES = [
   "/en",
   "/he",
   "/en/about",
+  "/en/glossary",
+  "/he/glossary/giant-fiber",
   "/en/modules/smell-memory",
   "/en/modules/compass",
   "/en/modules/escape",

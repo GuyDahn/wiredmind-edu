@@ -14,7 +14,6 @@
       "title": "Sobre o WiredMind: o que é real e o que é simplificado",
       "description": "O que é real e o que é simplificado nas aulas do WiredMind sobre o cérebro da mosca-da-fruta, quem criou o projeto e como apoiá-lo."
     },
-    "lessonTitle": "{title} · WiredMind",
     "notFoundTitle": "Página não encontrada · WiredMind"
   },
   "og": {
@@ -249,6 +248,7 @@
       "title": "Como uma mosca se lembra de um cheiro",
       "summary": "Envie um cheiro para o cérebro de uma mosca real e encontre as células que se lembram dele.",
       "description": "Envie um cheiro ao cérebro real de uma mosca-da-fruta, siga-o até o corpo pedunculado e ache as células que guardam a memória. Aula grátis de 10 minutos.",
+      "searchTitle": "Como as moscas sentem cheiro e se lembram: aula interativa",
       "steps": {
         "send": {
           "text": "A mosca sente cheiros com as <antenna>antenas</antenna> <gloss>(o nariz dela)</gloss>. Toque em Estimular para enviar um cheiro. Veja os neurônios laranja acenderem.",
@@ -297,6 +297,7 @@
       "title": "Como uma mosca sabe para onde está virada",
       "summary": "Gire a bússola de uma mosca real e veja o que a mantém no lugar.",
       "description": "Gire a bússola interna de uma mosca-da-fruta real, silencie os neurônios em anel e veja o senso de direção dela se perder. Aula grátis de 10 minutos.",
+      "searchTitle": "A bússola interna da mosca: aula interativa sobre o cérebro",
       "steps": {
         "left": {
           "text": "Toque em Estimular para disparar os <turn>neurônios de giro</turn> <gloss>(sinal para virar)</gloss> da esquerda. Depois observe o mostrador da bússola.",
@@ -341,6 +342,7 @@
       "title": "A fuga em 30 milissegundos",
       "summary": "Encontre o fio que tira a mosca de baixo do mata-moscas.",
       "description": "Siga um mata-moscas dos olhos de uma mosca-da-fruta real até as pernas, pela fibra gigante, em 30 ms. Depois, corte o fio. Aula grátis de 10 minutos.",
+      "searchTitle": "Reflexo de fuga da mosca-da-fruta: aula da fibra gigante",
       "steps": {
         "loom": {
           "text": "Um mata-moscas vem com tudo para cima da mosca. Toque em Estimular para disparar os <looming>neurônios de aproximação</looming> <gloss>(vigias do mata-moscas)</gloss>.",
@@ -736,6 +738,18 @@
       "name": "Ponte",
       "text": "Uma parte do cérebro da mosca em forma de barra, a ponte protocerebral. Os neurônios da bússola e os neurônios de giro passam por ela."
     }
+  },
+  "glossary": {
+    "nav": "Glossário",
+    "title": "Glossário de neurociência",
+    "lead": "Todos os termos científicos das aulas, explicados em uma ou duas frases. Abra um termo para ver onde ele aparece no cérebro real de uma mosca-da-fruta.",
+    "metaTitle": "Glossário de neurociência para estudantes · WiredMind",
+    "metaDescription": "Neurônio, sinapse, conectoma, corpo pedunculado e mais: os termos das aulas do WiredMind sobre a mosca-da-fruta, explicados em uma ou duas frases.",
+    "termTitle": "{term}: explicação simples para estudantes",
+    "inLessons": "Veja em uma aula",
+    "steps": "Onde aparece na aula",
+    "related": "Termos relacionados",
+    "all": "Todos os termos"
   },
   "teachers": {
     "meta": {

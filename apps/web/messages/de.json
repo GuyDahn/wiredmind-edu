@@ -14,7 +14,6 @@
       "title": "Über WiredMind: Was echt ist und was vereinfacht",
       "description": "Was an den Fruchtfliegen-Lektionen von WiredMind echt ist und was vereinfacht, wer sie entwickelt hat und wie Sie das Projekt unterstützen können."
     },
-    "lessonTitle": "{title} · WiredMind",
     "notFoundTitle": "Seite nicht gefunden · WiredMind"
   },
   "og": {
@@ -249,6 +248,7 @@
       "title": "Wie sich eine Fliege einen Duft merkt",
       "summary": "Einen Duft in ein echtes Fliegengehirn schicken und die Zellen finden, die ihn sich merken.",
       "description": "Einen Duft durch ein echtes Fruchtfliegengehirn bis in den Pilzkörper verfolgen und die Zellen finden, die ihn speichern. Kostenlose 10-Minuten-Lektion.",
+      "searchTitle": "Wie Fliegen riechen und sich erinnern: interaktive Lektion",
       "steps": {
         "send": {
           "text": "Eine Fliege riecht mit ihren <antenna>Antennen</antenna> <gloss>(ihren zwei Fühlern)</gloss>. Tippe auf „Stimulieren“, um einen Duft hineinzuschicken. Sieh zu, wie die orangefarbenen Neuronen aufleuchten.",
@@ -297,6 +297,7 @@
       "title": "Woher eine Fliege weiß, wohin sie schaut",
       "summary": "Den Kompass einer echten Fliege verschieben und herausfinden, was ihn an seinem Platz hält.",
       "description": "Den inneren Kompass einer echten Fruchtfliege verschieben, dann die Ringneuronen stummschalten und zusehen, wie er driftet. Kostenlose 10-Minuten-Lektion.",
+      "searchTitle": "Der innere Kompass der Fliege: interaktive Lektion",
       "steps": {
         "left": {
           "text": "Tippe auf „Stimulieren“, um die linken <turn>Drehneuronen</turn> <gloss>(das Drehsignal)</gloss> feuern zu lassen. Beobachte dann die Kompassanzeige.",
@@ -341,6 +342,7 @@
       "title": "Die Flucht in 30 Millisekunden",
       "summary": "Die Leitung finden, die eine Fliege vor der Fliegenklatsche rettet.",
       "description": "Die Flucht einer echten Fruchtfliege verfolgen: in 30 ms von den Augen über die Riesenfaser in die Beine. Dann die Leitung kappen. 10 Minuten, kostenlos.",
+      "searchTitle": "Fluchtreflex der Fruchtfliege: Lektion zur Riesenfaser",
       "steps": {
         "loom": {
           "text": "Eine Fliegenklatsche saust auf die Fliege zu. Tippe auf „Stimulieren“, um die <looming>Annäherungsneuronen</looming> <gloss>(die Klatschen-Späher)</gloss> feuern zu lassen.",
@@ -736,6 +738,18 @@
       "name": "Brücke",
       "text": "Ein balkenförmiger Teil des Fliegengehirns, die Protozerebralbrücke. Durch sie ziehen sowohl die Kompassneuronen als auch die Drehneuronen."
     }
+  },
+  "glossary": {
+    "nav": "Glossar",
+    "title": "Glossar der Neurobiologie",
+    "lead": "Alle Fachbegriffe aus den Lektionen, in ein bis zwei Sätzen erklärt. Jeder Begriff zeigt, wo er im Gehirn einer echten Fruchtfliege vorkommt.",
+    "metaTitle": "Neurobiologie-Glossar für die Schule · WiredMind",
+    "metaDescription": "Neuron, Synapse, Konnektom, Pilzkörper und mehr: die Fachbegriffe aus den Fruchtfliegen-Lektionen von WiredMind, jeweils in ein bis zwei Sätzen erklärt.",
+    "termTitle": "{term}: einfach erklärt für die Schule",
+    "inLessons": "In einer Lektion ansehen",
+    "steps": "Hier kommt der Begriff in der Lektion vor",
+    "related": "Verwandte Begriffe",
+    "all": "Alle Begriffe"
   },
   "teachers": {
     "meta": {

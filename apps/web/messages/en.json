@@ -5,7 +5,6 @@
     "unreviewedKeys": [
       "meta.home.description",
       "meta.about.title",
-      "meta.lessonTitle",
       "meta.notFoundTitle",
       "og.about.title",
       "og.about.subtitle",
@@ -295,19 +294,32 @@
       "terms.landmark.text",
       "terms.bridge.name",
       "terms.bridge.text",
-      "teachers.index.generalTerms"
+      "teachers.index.generalTerms",
+      "glossary.nav",
+      "glossary.title",
+      "glossary.lead",
+      "glossary.metaTitle",
+      "glossary.metaDescription",
+      "glossary.termTitle",
+      "glossary.inLessons",
+      "glossary.steps",
+      "glossary.related",
+      "glossary.all",
+      "lessons.smell-memory.searchTitle",
+      "lessons.compass.searchTitle",
+      "lessons.escape.searchTitle",
+      "meta.home.title"
     ]
   },
   "meta": {
     "home": {
-      "title": "WiredMind: explore a real fruit fly brain",
+      "title": "WiredMind: interactive lessons on a real fruit fly brain",
       "description": "Free classroom lessons on the real wiring of a fruit fly’s brain. Stimulate and silence neurons from the MaleCNS connectome in your browser. No login."
     },
     "about": {
       "title": "About WiredMind: what’s real and what’s simplified",
       "description": "What’s real and what’s simplified in WiredMind’s fruit fly brain lessons, who built it, and how to support it."
     },
-    "lessonTitle": "{title} · WiredMind",
     "notFoundTitle": "Page not found · WiredMind"
   },
   "og": {
@@ -542,6 +554,7 @@
       "title": "How a fly remembers a smell",
       "summary": "Send a smell into a real fly brain and find the cells that remember it.",
       "description": "Send a smell into a real fruit fly brain, follow it to the mushroom body, and find the cells that store its memory. A free 10-minute lesson.",
+      "searchTitle": "How flies smell and remember: an interactive brain lesson",
       "steps": {
         "send": {
           "text": "A fly smells with its <antenna>antennae</antenna> <gloss>(its two feelers)</gloss>. Tap Stimulate to send a smell in. Watch the orange neurons light up.",
@@ -590,6 +603,7 @@
       "title": "How a fly knows which way it's facing",
       "summary": "Push a real fly's compass around and see what holds it in place.",
       "description": "Push a real fruit fly’s internal compass around, then silence the ring neurons and watch its sense of direction drift. A free 10-minute lesson.",
+      "searchTitle": "A fly’s internal compass: an interactive brain lesson",
       "steps": {
         "left": {
           "text": "Tap Stimulate to fire the left <turn>turn neurons</turn> <gloss>(the turning signal)</gloss>. Then watch the compass dial.",
@@ -634,6 +648,7 @@
       "title": "The 30-millisecond escape",
       "summary": "Find the wire that gets a fly out from under a swatter.",
       "description": "Follow a swatter from a real fruit fly’s eyes down the giant fiber to its legs in 30 ms, then cut the wire. A free 10-minute lesson.",
+      "searchTitle": "Fruit fly escape reflex: an interactive giant fiber lesson",
       "steps": {
         "loom": {
           "text": "A swatter swoops at the fly. Tap Stimulate to fire the <looming>looming neurons</looming> <gloss>(the swatter spotters)</gloss>.",
@@ -1029,6 +1044,18 @@
       "name": "Bridge",
       "text": "A bar-shaped part of the fly’s brain, the protocerebral bridge. The compass neurons and the turn neurons both run through it."
     }
+  },
+  "glossary": {
+    "nav": "Glossary",
+    "title": "Neuroscience glossary",
+    "lead": "Every scientific term the lessons use, explained in a sentence or two. Open a term to see where it shows up in a real fruit fly’s brain.",
+    "metaTitle": "Neuroscience glossary for students · WiredMind",
+    "metaDescription": "Neuron, synapse, connectome, mushroom body, and more: the neuroscience terms in WiredMind’s fruit fly lessons, each explained in a sentence or two.",
+    "termTitle": "{term}: a simple explanation for students",
+    "inLessons": "See it in a lesson",
+    "steps": "Where the lesson uses it",
+    "related": "Related terms",
+    "all": "All terms"
   },
   "teachers": {
     "meta": {

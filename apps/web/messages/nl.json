@@ -15,7 +15,6 @@
       "title": "Over WiredMind: wat is echt en wat is vereenvoudigd?",
       "description": "Wat is echt en wat is vereenvoudigd in de fruitvlieglessen van WiredMind? Lees ook wie het heeft gemaakt en hoe je het kunt steunen."
     },
-    "lessonTitle": "{title} · WiredMind",
     "notFoundTitle": "Pagina niet gevonden · WiredMind"
   },
   "og": {
@@ -250,6 +249,7 @@
       "title": "Hoe een vlieg een geur onthoudt",
       "summary": "Stuur een geur een echt vliegenbrein in en zoek de cellen die de geur onthouden.",
       "description": "Stuur een geur een echt fruitvliegbrein in, volg hem naar het paddenstoellichaam en vind de cellen die hem onthouden. Een gratis les van 10 minuten.",
+      "searchTitle": "Hoe vliegen ruiken en onthouden: interactieve les",
       "steps": {
         "send": {
           "text": "Een vlieg ruikt met zijn <antenna>antennes</antenna> <gloss>(twee voelsprieten)</gloss>. Tik op Stimuleren om een geur naar binnen te sturen. Kijk hoe de oranje neuronen oplichten.",
@@ -298,6 +298,7 @@
       "title": "Hoe een vlieg weet welke kant hij op kijkt",
       "summary": "Duw het kompas van een echte vlieg rond en ontdek wat het op zijn plaats houdt.",
       "description": "Duw het interne kompas van een echte fruitvlieg rond, leg dan de ringneuronen stil en zie het richtinggevoel afdrijven. Een gratis les van 10 minuten.",
+      "searchTitle": "Het interne kompas van de vlieg: interactieve les",
       "steps": {
         "left": {
           "text": "Tik op Stimuleren om links de <turn>draaineuronen</turn> <gloss>(het draaisignaal)</gloss> te laten vuren. Kijk dan naar de kompasschijf.",
@@ -342,6 +343,7 @@
       "title": "Ontsnappen in 30 milliseconden",
       "summary": "Vind de draad die een vlieg onder een vliegenmepper vandaan haalt.",
       "description": "Volg in 30 ms een vliegenmepper van oog tot poot, via de reuzenvezel van een echte fruitvlieg. Knip dan de draad door. Een gratis les van 10 minuten.",
+      "searchTitle": "Vluchtreflex van de fruitvlieg: les over de reuzenvezel",
       "steps": {
         "loom": {
           "text": "Een vliegenmepper duikt op de vlieg af. Tik op Stimuleren om de <looming>naderingsneuronen</looming> <gloss>(de meppermelders)</gloss> te laten vuren.",
@@ -737,6 +739,18 @@
       "name": "Brug",
       "text": "Een staafvormig deel van het brein van de vlieg, de protocerebrale brug. De kompasneuronen en de draaineuronen lopen er allebei doorheen."
     }
+  },
+  "glossary": {
+    "nav": "Begrippenlijst",
+    "title": "Begrippenlijst neurowetenschap",
+    "lead": "Alle wetenschappelijke begrippen uit de lessen, uitgelegd in een of twee zinnen. Open een begrip om te zien waar het voorkomt in het brein van een echte fruitvlieg.",
+    "metaTitle": "Begrippenlijst neurowetenschap voor de klas · WiredMind",
+    "metaDescription": "Neuron, synaps, connectoom, paddenstoellichaam en meer: de begrippen uit de fruitvlieglessen van WiredMind, elk uitgelegd in een of twee zinnen.",
+    "termTitle": "{term}: eenvoudige uitleg voor scholieren",
+    "inLessons": "Bekijk het in een les",
+    "steps": "Waar het in de les voorkomt",
+    "related": "Verwante begrippen",
+    "all": "Alle begrippen"
   },
   "teachers": {
     "meta": {

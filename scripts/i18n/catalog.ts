@@ -21,7 +21,7 @@ export const MESSAGES = new URL("messages/", WEB);
 export const SIMPLE_KEYS: ReadonlySet<string> = new Set([
   "landing.loop.clock",
   "translate.notice",
-  "meta.lessonTitle",
+  "glossary.termTitle",
 ]);
 
 /** Search result limits, counting a Chinese, Japanese, or Korean character as two. */
@@ -248,26 +248,28 @@ export function searchSnippets(
   flat: Flat,
 ): { key: string; text: string; limit: number }[] {
   const snippets: { key: string; text: string; limit: number }[] = [];
-  for (const key of [
-    "meta.home.title",
-    "meta.about.title",
-    "meta.notFoundTitle",
-  ]) {
-    const text = flat.get(key);
-    if (text !== undefined) snippets.push({ key, text, limit: TITLE_WIDTH });
-  }
-  const template = flat.get("meta.lessonTitle");
   for (const [key, text] of flat) {
-    if (/^lessons\.[^.]+\.title$/.test(key) && template !== undefined) {
+    if (
+      /^meta\.(home|about)\.title$|^meta\.notFoundTitle$/.test(key) ||
+      /^lessons\.[^.]+\.searchTitle$/.test(key) ||
+      key === "glossary.metaTitle"
+    ) {
+      snippets.push({ key, text, limit: TITLE_WIDTH });
+    }
+  }
+  const template = flat.get("glossary.termTitle");
+  for (const [key, text] of flat) {
+    if (/^terms\.[^.]+\.name$/.test(key) && template !== undefined) {
       snippets.push({
-        key: `meta.lessonTitle (${key})`,
-        text: fill(template, { title: text }),
+        key: `glossary.termTitle (${key})`,
+        text: fill(template, { term: text }),
         limit: TITLE_WIDTH,
       });
     }
     if (
       key === "meta.home.description" ||
       key === "meta.about.description" ||
+      key === "glossary.metaDescription" ||
       /^lessons\.[^.]+\.description$/.test(key)
     ) {
       snippets.push({ key, text, limit: DESCRIPTION_WIDTH });

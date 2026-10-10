@@ -9,7 +9,7 @@
     "Never translate the brand WiredMind, the names in the glossary's keep list, cell type codes (LC4, LPLC2, P-EN2, E-PG), or anything inside {curly braces}.",
     "Keep every <tag> and </tag> exactly, around the words that mean the same thing in your sentence. A link tag may move anywhere its words go.",
     "Use your language's own quotation marks and punctuation, and non-breaking spaces where its typography wants them.",
-    "Page titles (meta.*.title, meta.lessonTitle, meta.notFoundTitle) must stay within 60 characters and descriptions within 155, after the placeholders are filled; count a Chinese, Japanese, or Korean character as two. Write them for search results: say what the page is and why it is worth a click."
+    "Page titles (meta.*.title, meta.notFoundTitle, lessons.*.searchTitle, glossary.metaTitle, and glossary.termTitle with any term name filled in) must stay within 60 characters and descriptions within 155, after the placeholders are filled; count a Chinese, Japanese, or Korean character as two. Write them for search results: say what the page is and why it is worth a click."
   ],
   "locales": {
     "he": "Modern Hebrew without niqqud. Address students in the plural imperative (לחצו, שלחו, צפו), which reads as gender-neutral in Israeli classrooms. Hebrew quotation marks \"…\" and gershayim in abbreviations (מ״מ). Latin names and units stay in Latin script.",

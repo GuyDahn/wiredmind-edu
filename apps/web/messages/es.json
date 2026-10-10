@@ -14,7 +14,6 @@
       "title": "Acerca de WiredMind: qué es real y qué está simplificado",
       "description": "Qué es real y qué está simplificado en las lecciones de WiredMind sobre el cerebro de la mosca de la fruta, quién las creó y cómo apoyar el proyecto."
     },
-    "lessonTitle": "{title} · WiredMind",
     "notFoundTitle": "Página no encontrada · WiredMind"
   },
   "og": {
@@ -249,6 +248,7 @@
       "title": "Cómo recuerda una mosca un olor",
       "summary": "Envía un olor al cerebro real de una mosca y encuentra las células que lo recuerdan.",
       "description": "Envía un olor al cerebro real de una mosca de la fruta y síguelo hasta el cuerpo fungiforme, donde se guarda su recuerdo. Lección gratis de 10 minutos.",
+      "searchTitle": "Cómo huelen y recuerdan las moscas: lección interactiva",
       "steps": {
         "send": {
           "text": "Una mosca huele con sus <antenna>antenas</antenna> <gloss>(su nariz)</gloss>. Toca Estimular para enviar un olor. Mira cómo se iluminan las neuronas naranjas.",
@@ -297,6 +297,7 @@
       "title": "Cómo sabe una mosca hacia dónde mira",
       "summary": "Haz girar la brújula de una mosca real y descubre qué la mantiene en su sitio.",
       "description": "Haz girar la brújula interna de una mosca de la fruta, silencia las neuronas del anillo y mira cómo pierde el rumbo. Lección gratis de 10 minutos.",
+      "searchTitle": "La brújula interna de la mosca: lección interactiva",
       "steps": {
         "left": {
           "text": "Toca Estimular para activar las <turn>neuronas de giro</turn> <gloss>(señal de giro)</gloss> de la izquierda. Luego mira el dial de la brújula.",
@@ -341,6 +342,7 @@
       "title": "El escape de 30 milisegundos",
       "summary": "Encuentra el cable que salva a una mosca del matamoscas.",
       "description": "Sigue un matamoscas de los ojos a las patas de una mosca de la fruta por la fibra gigante en 30 ms y luego corta el cable. Lección gratis de 10 minutos.",
+      "searchTitle": "Reflejo de escape de la mosca: lección de la fibra gigante",
       "steps": {
         "loom": {
           "text": "Un matamoscas se abalanza sobre la mosca. Toca Estimular para activar las <looming>neuronas de aproximación</looming> <gloss>(vigías del matamoscas)</gloss>.",
@@ -736,6 +738,18 @@
       "name": "Puente",
       "text": "Una parte del cerebro de la mosca con forma de barra, el puente protocerebral. Por él pasan las neuronas de la brújula y las neuronas de giro."
     }
+  },
+  "glossary": {
+    "nav": "Glosario",
+    "title": "Glosario de neurociencia",
+    "lead": "Todos los términos científicos de las lecciones, explicados en una o dos frases. Abre un término para ver dónde aparece en el cerebro real de una mosca de la fruta.",
+    "metaTitle": "Glosario de neurociencia para estudiantes · WiredMind",
+    "metaDescription": "Neurona, sinapsis, conectoma, cuerpo fungiforme y más: los términos de las lecciones de WiredMind sobre la mosca de la fruta, en una o dos frases.",
+    "termTitle": "{term}: explicación fácil para estudiantes",
+    "inLessons": "Míralo en una lección",
+    "steps": "Dónde aparece en la lección",
+    "related": "Términos relacionados",
+    "all": "Todos los términos"
   },
   "teachers": {
     "meta": {
