@@ -47,7 +47,9 @@ const ORDER = [
   "credits",
   "landing",
   "about",
+  "terms",
   "lessons",
+  "teachers",
 ];
 /** Words other messages quote, handed to every later batch. */
 const TERMINOLOGY =
@@ -139,7 +141,21 @@ function noteFor(key: string): string | null {
     return "search result description, at most 155 characters";
   }
   if (/^lessons\.[^.]+\.(steps|check|freePlay)\./.test(key)) {
-    return "lesson copy for students; keep <term>/<gloss> markup, glosses three words or fewer";
+    return "lesson copy for students; keep each term tag around the same term and each <gloss>, glosses three words or fewer";
+  }
+  if (/^viewer\.intro\.screens\.[^.]+\.text$/.test(key)) {
+    return "one screen of the intro before a lesson, read at a glance: 30 words or fewer";
+  }
+  if (/^terms\.[^.]+\.text$/.test(key)) {
+    return "explanation a student sees on tapping the term: plain words, 30 words or fewer";
+  }
+  if (/^circuits\.[^.]+\.plain\./.test(key)) {
+    return "the group's everyday nickname in the color key; the lessons' glosses use the same words";
+  }
+  if (key.startsWith("teachers.")) {
+    return /\.worksheet\.(predict|explain)\./.test(key)
+      ? "question on a printed worksheet, for students"
+      : "teacher guide: written for the teacher, in the form of address the style guide gives the teachers' section";
   }
   if (/^viewer\.controls\.|^viewer\.lesson\.cue/.test(key)) {
     return "button or label on the lesson controls; keep it short";

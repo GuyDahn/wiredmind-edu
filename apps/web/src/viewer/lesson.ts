@@ -1,3 +1,4 @@
+import { TERM_IDS } from "./terms.js";
 import type {
   ControlAction,
   ControlKind,
@@ -40,7 +41,7 @@ export type LessonModule = {
   circuit: string;
   /**
    * English terms that need a short gloss in parentheses on first use. The
-   * English copy marks them <term>, and tests hold it to this list.
+   * English copy tags each one (see terms.ts), and tests hold it to this list.
    */
   jargon: string[];
   steps: LessonStep[];
@@ -172,15 +173,19 @@ export function unglossed(value: string, jargon: readonly string[]): string[] {
 
 export type GlossPart = { kind: "text" | "term" | "gloss"; value: string };
 
-const MARKUP = /<(term|gloss)>([^<]*)<\/\1>/g;
+/** A term is tagged with its id from terms.ts (`<kenyon>`), or `<term>` if it has no explanation. */
+const MARKUP = new RegExp(
+  `<(${["term", "gloss", ...TERM_IDS].join("|")})>([^<]*)</\\1>`,
+  "g",
+);
 
-/** Lesson copy without its <term> and <gloss> tags, as a reader sees it. */
+/** Lesson copy without its term and <gloss> tags, as a reader sees it. */
 export function plainText(markup: string): string {
   return markup.replace(MARKUP, "$2");
 }
 
 /**
- * The parts a lesson string marks up: every <term> in bold, every <gloss>
+ * The parts a lesson string marks up: every term in bold, every <gloss>
  * as an aside. Matches what glossParts finds in the plain English text.
  */
 export function markupParts(markup: string): GlossPart[] {
@@ -190,7 +195,10 @@ export function markupParts(markup: string): GlossPart[] {
     const index = found.index ?? 0;
     if (index > at)
       parts.push({ kind: "text", value: markup.slice(at, index) });
-    parts.push({ kind: found[1] as "term" | "gloss", value: found[2] ?? "" });
+    parts.push({
+      kind: found[1] === "gloss" ? "gloss" : "term",
+      value: found[2] ?? "",
+    });
     at = index + found[0].length;
   }
   if (at < markup.length) parts.push({ kind: "text", value: markup.slice(at) });

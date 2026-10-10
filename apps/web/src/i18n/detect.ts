@@ -58,25 +58,31 @@ export function matchLanguages(requested: readonly string[]): Locale | null {
   return null;
 }
 
-/**
- * The language for a visitor at `/`: the one they picked before, else the
- * best Accept-Language match, else their country's classroom language, else
- * English.
- */
-export function detectLocale({
-  cookie,
-  acceptLanguage,
-  country,
-}: {
+type Visitor = {
   cookie?: string | null;
   acceptLanguage?: string | null;
   country?: string | null;
-}): Locale {
+};
+
+/**
+ * What a visitor tells us about their language: the one they picked before,
+ * else the best Accept-Language match, else their country's classroom
+ * language. Null when they tell us nothing, as a search crawler does.
+ */
+export function knownLocale({
+  cookie,
+  acceptLanguage,
+  country,
+}: Visitor): Locale | null {
   if (cookie && isLocale(cookie)) return cookie;
   const fromHeader = matchLanguages(
     parseAcceptLanguage(acceptLanguage ?? null),
   );
   if (fromHeader) return fromHeader;
-  const fromCountry = country ? COUNTRY_LOCALES[country.toUpperCase()] : null;
-  return fromCountry ?? DEFAULT_LOCALE;
+  return (country && COUNTRY_LOCALES[country.toUpperCase()]) || null;
+}
+
+/** The language for a visitor at `/`: what they tell us, else English. */
+export function detectLocale(visitor: Visitor): Locale {
+  return knownLocale(visitor) ?? DEFAULT_LOCALE;
 }

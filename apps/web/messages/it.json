@@ -3,7 +3,7 @@
     "locale": "it",
     "reviewed": false,
     "model": "claude-opus-5-5",
-    "draftedAt": "2026-09-27"
+    "draftedAt": "2026-10-05"
   },
   "meta": {
     "home": {
@@ -143,7 +143,11 @@
       },
       "source": "Guarda il codice sorgente su GitHub",
       "science": "Cosa è reale e cosa è semplificato",
-      "feedback": "Qualcosa non è chiaro o non funziona? Dimmelo."
+      "feedback": "Qualcosa non è chiaro o non funziona? Dimmelo.",
+      "guidesTitle": "Fai lezione già domani",
+      "guidesLead": "Ogni lezione ha una guida per l’insegnante, con un piano di 45 minuti, e una scheda di lavoro da stampare.",
+      "guide": "Guida per l’insegnante",
+      "worksheet": "Scheda di lavoro"
     }
   },
   "about": {
@@ -247,28 +251,28 @@
       "description": "Manda un odore nel cervello di un vero moscerino, seguilo fino al corpo fungiforme e scopri le cellule che lo ricordano. Lezione gratuita di 10 minuti.",
       "steps": {
         "send": {
-          "text": "Un moscerino sente gli odori con le <term>antenne</term> <gloss>(due piccoli nasi)</gloss>. Tocca «Stimola» per far entrare un odore. Guarda come si accendono i neuroni arancioni.",
-          "result": "Quelli arancioni sono i <term>recettori olfattivi</term> <gloss>(acchiappaodori)</gloss> e si attivano per primi. Ogni odore comincia da qui."
+          "text": "Un moscerino sente gli odori con le <antenna>antenne</antenna> <gloss>(due piccoli nasi)</gloss>. Tocca «Stimola» per far entrare un odore. Guarda come si accendono i neuroni arancioni.",
+          "result": "Quelli arancioni sono i <receptor>recettori olfattivi</receptor> <gloss>(acchiappaodori)</gloss> e si attivano per primi. Ogni odore comincia da qui."
         },
         "follow": {
-          "text": "Tocca di nuovo «Stimola» e segui i colori. In giallo, i <term>neuroni di proiezione</term> <gloss>(messaggeri dell’odore)</gloss> portano l’odore verso l’interno. In blu, le <term>cellule di Kenyon</term> <gloss>(smistatrici di odori)</gloss> lo ricevono subito dopo.",
+          "text": "Tocca di nuovo «Stimola» e segui i colori. In giallo, i <projection>neuroni di proiezione</projection> <gloss>(messaggeri dell’odore)</gloss> portano l’odore verso l’interno. In blu, le <kenyon>cellule di Kenyon</kenyon> <gloss>(smistatrici di odori)</gloss> lo ricevono subito dopo.",
           "result": "Le cellule blu trasformano ogni odore in una combinazione tutta sua."
         },
         "read": {
-          "text": "Tocca «Stimola» ancora una volta. Ora guarda quelli rosa: sono i <term>neuroni di uscita</term> <gloss>(lettori di ricordi)</gloss>. Leggono la combinazione blu.",
+          "text": "Tocca «Stimola» ancora una volta. Ora guarda quelli rosa: sono i <output>neuroni di uscita</output> <gloss>(lettori di ricordi)</gloss>. Leggono la combinazione blu.",
           "result": "Quando un odore arriva insieme allo zucchero o a un pericolo, i collegamenti dal blu al rosa cambiano. Gli scienziati pensano che il ricordo sia proprio questo cambiamento."
         },
         "silence": {
-          "text": "Ora silenzia le <term>cellule di Kenyon</term> <gloss>(smistatrici di odori)</gloss>. L’odore lo mandiamo noi. Che cosa sparisce?",
+          "text": "Ora silenzia le <kenyon>cellule di Kenyon</kenyon> <gloss>(smistatrici di odori)</gloss>. L’odore lo mandiamo noi. Che cosa sparisce?",
           "result": "La luce rosa quasi sparisce. L’odore entra lo stesso, ma i lettori di ricordi non hanno niente da leggere."
         },
         "restore": {
-          "text": "Tocca di nuovo il pulsante delle <term>cellule di Kenyon</term> <gloss>(smistatrici di odori)</gloss> per riattivarle. Mandiamo di nuovo lo stesso odore.",
+          "text": "Tocca di nuovo il pulsante delle <kenyon>cellule di Kenyon</kenyon> <gloss>(smistatrici di odori)</gloss> per riattivarle. Mandiamo di nuovo lo stesso odore.",
           "result": "La luce rosa torna. Il moscerino può di nuovo leggere il ricordo dell’odore."
         }
       },
       "check": {
-        "question": "Hai silenziato le <term>cellule di Kenyon</term> <gloss>(cellule blu)</gloss>. Perché le cellule rosa si sono spente?",
+        "question": "Hai silenziato le <kenyon>cellule di Kenyon</kenyon> <gloss>(cellule blu)</gloss>. Perché le cellule rosa si sono spente?",
         "choices": {
           "never": {
             "text": "L’odore non è mai entrato nel moscerino.",
@@ -295,19 +299,19 @@
       "description": "Fai girare la bussola interna di un vero moscerino, poi silenzia i neuroni ad anello e guardala andare alla deriva. Lezione gratuita di 10 minuti.",
       "steps": {
         "left": {
-          "text": "Tocca «Stimola» per attivare i <term>neuroni di svolta</term> di sinistra <gloss>(segnale per girare)</gloss>. Poi guarda il quadrante della bussola.",
-          "result": "I <term>neuroni bussola</term> <gloss>(cellule di rotta)</gloss> si accendono da un lato. Quella zona luminosa, il picco, indica da che parte è rivolto il moscerino."
+          "text": "Tocca «Stimola» per attivare i <turn>neuroni di svolta</turn> di sinistra <gloss>(segnale per girare)</gloss>. Poi guarda il quadrante della bussola.",
+          "result": "I <compass>neuroni bussola</compass> <gloss>(cellule di rotta)</gloss> si accendono da un lato. Quella zona luminosa, il picco, indica da che parte è rivolto il moscerino."
         },
         "right": {
-          "text": "Ora tocca «Stimola» sui <term>neuroni di svolta</term> di destra <gloss>(segnale opposto)</gloss>. Tieni d’occhio il picco.",
+          "text": "Ora tocca «Stimola» sui <turn>neuroni di svolta</turn> di destra <gloss>(segnale opposto)</gloss>. Tieni d’occhio il picco.",
           "result": "Il picco si è spostato lungo il quadrante. I segnali di svolta dei due lati lo spingono in direzioni opposte, così cambia anche la rotta del moscerino."
         },
         "silence": {
-          "text": "Silenzia i <term>neuroni ad anello</term> <gloss>(occhi della bussola)</gloss>. Portano dentro quello che vede il moscerino. Il segnale di destra lo mandiamo noi.",
+          "text": "Silenzia i <ring>neuroni ad anello</ring> <gloss>(occhi della bussola)</gloss>. Portano dentro quello che vede il moscerino. Il segnale di destra lo mandiamo noi.",
           "result": "Il picco scivola via dal suo posto e vaga. Senza punti di riferimento, la bussola va alla deriva."
         },
         "restore": {
-          "text": "Tocca di nuovo il pulsante dei <term>neuroni ad anello</term> <gloss>(occhi della bussola)</gloss> per riattivarli. Mandiamo di nuovo lo stesso segnale.",
+          "text": "Tocca di nuovo il pulsante dei <ring>neuroni ad anello</ring> <gloss>(occhi della bussola)</gloss> per riattivarli. Mandiamo di nuovo lo stesso segnale.",
           "result": "Il picco resta di nuovo fermo al suo posto. I punti di riferimento tengono la bussola del moscerino sulla rotta giusta."
         }
       },
@@ -339,24 +343,24 @@
       "description": "Dagli occhi alle zampe in 30 ms: segui lo scacciamosche lungo la fibra gigante di un vero moscerino, poi taglia il filo. Lezione gratuita di 10 minuti.",
       "steps": {
         "loom": {
-          "text": "Uno scacciamosche piomba sul moscerino. Tocca «Stimola» per attivare i <term>neuroni di avvicinamento</term> <gloss>(sentinelle)</gloss>.",
-          "result": "Si attivano e, in pochi millesimi di secondo, si attiva anche la <term>fibra gigante</term> <gloss>(filo di fuga)</gloss>."
+          "text": "Uno scacciamosche piomba sul moscerino. Tocca «Stimola» per attivare i <looming>neuroni di avvicinamento</looming> <gloss>(sentinelle)</gloss>.",
+          "result": "Si attivano e, in pochi millesimi di secondo, si attiva anche la <giantfiber>fibra gigante</giantfiber> <gloss>(filo di fuga)</gloss>."
         },
         "jump": {
-          "text": "Tocca di nuovo «Stimola». Segui la <term>fibra gigante</term> <gloss>(filo di fuga)</gloss> giù nel <term>cordone nervoso</term> <gloss>(midollo spinale)</gloss>.",
-          "result": "I <term>neuroni del salto</term> <gloss>(motori delle zampe)</gloss> si attivano entro 30 millisecondi. Fanno scattare le zampe centrali e il moscerino salta via."
+          "text": "Tocca di nuovo «Stimola». Segui la <giantfiber>fibra gigante</giantfiber> <gloss>(filo di fuga)</gloss> giù nel <nervecord>cordone nervoso</nervecord> <gloss>(midollo spinale)</gloss>.",
+          "result": "I <jump>neuroni del salto</jump> <gloss>(motori delle zampe)</gloss> si attivano entro 30 millisecondi. Fanno scattare le zampe centrali e il moscerino salta via."
         },
         "silence": {
-          "text": "Ora silenzia la <term>fibra gigante</term> <gloss>(filo di fuga)</gloss>. Lo scacciamosche lo mandiamo noi. Guarda i <term>neuroni del salto</term> <gloss>(motori delle zampe)</gloss>.",
-          "result": "I <term>neuroni di avvicinamento</term> <gloss>(sentinelle)</gloss> si attivano ancora, ma i <term>neuroni del salto</term> restano spenti. La fuga veloce non c’è più."
+          "text": "Ora silenzia la <giantfiber>fibra gigante</giantfiber> <gloss>(filo di fuga)</gloss>. Lo scacciamosche lo mandiamo noi. Guarda i <jump>neuroni del salto</jump> <gloss>(motori delle zampe)</gloss>.",
+          "result": "I <looming>neuroni di avvicinamento</looming> <gloss>(sentinelle)</gloss> si attivano ancora, ma i <jump>neuroni del salto</jump> restano spenti. La fuga veloce non c’è più."
         },
         "restore": {
-          "text": "Tocca di nuovo il pulsante della <term>fibra gigante</term> <gloss>(filo di fuga)</gloss> per riattivarla. Mandiamo di nuovo lo stesso scacciamosche.",
-          "result": "I <term>neuroni del salto</term> <gloss>(motori delle zampe)</gloss> si attivano di nuovo. I moscerini veri hanno anche vie di fuga più lente, ma questa è la più veloce."
+          "text": "Tocca di nuovo il pulsante della <giantfiber>fibra gigante</giantfiber> <gloss>(filo di fuga)</gloss> per riattivarla. Mandiamo di nuovo lo stesso scacciamosche.",
+          "result": "I <jump>neuroni del salto</jump> <gloss>(motori delle zampe)</gloss> si attivano di nuovo. I moscerini veri hanno anche vie di fuga più lente, ma questa è la più veloce."
         }
       },
       "check": {
-        "question": "Hai silenziato la <term>fibra gigante</term> <gloss>(filo di fuga)</gloss>. Perché i motori delle zampe sono rimasti spenti?",
+        "question": "Hai silenziato la <giantfiber>fibra gigante</giantfiber> <gloss>(filo di fuga)</gloss>. Perché i motori delle zampe sono rimasti spenti?",
         "choices": {
           "never": {
             "text": "Il moscerino non ha mai visto lo scacciamosche.",
@@ -393,6 +397,12 @@
         "pn": "Impedisce al lobo antennale di portare quell’odore nel corpo fungiforme.",
         "kc": "Zittisce le cellule che distinguono un odore dall’altro.",
         "mbon": "Blocca il passaggio del risultato dal corpo fungiforme al resto del cervello."
+      },
+      "plain": {
+        "orn": "Acchiappaodori",
+        "pn": "Messaggeri dell’odore",
+        "kc": "Smistatrici di odori",
+        "mbon": "Lettori di ricordi"
       }
     },
     "visual": {
@@ -409,6 +419,12 @@
       "silence": {
         "ring": "Blocca i neuroni ad anello, che portano dentro i punti di riferimento visti dagli occhi.",
         "compass": "Zittisce le cellule di rotta E-PG, che formano la bussola."
+      },
+      "plain": {
+        "ring": "Occhi della bussola",
+        "compass": "Cellule di rotta",
+        "turn-left": "Segnale per girare a sinistra",
+        "turn-right": "Segnale per girare a destra"
       }
     },
     "escape": {
@@ -424,6 +440,11 @@
         "looming": "Impedisce alle cellule dell’occhio di segnalare la picchiata.",
         "gf": "Blocca la fibra gigante, il filo di fuga più veloce del moscerino.",
         "jump": "Zittisce i motoneuroni che fanno scattare le zampe centrali."
+      },
+      "plain": {
+        "looming": "Sentinelle",
+        "gf": "Filo di fuga",
+        "jump": "Motori delle zampe"
       }
     }
   },
@@ -524,6 +545,49 @@
       "left": "S",
       "right": "D",
       "caption": "Bussola · vista da dietro"
+    },
+    "terms": {
+      "hint": "Spiegazione di {term}",
+      "close": "Chiudi"
+    },
+    "legend": {
+      "title": "Legenda dei colori",
+      "glow": "Luminoso = attivo adesso"
+    },
+    "intro": {
+      "label": "Come leggere questo cervello",
+      "progress": "{number} di {total}",
+      "skip": "Salta",
+      "next": "Avanti",
+      "start": "Inizia la lezione",
+      "screens": {
+        "lines": {
+          "title": "Queste linee sono neuroni veri",
+          "text": "Ogni linea è una vera cellula nervosa di un moscerino della frutta, disegnata lì dove si trova nel suo corpo. Trascina il cervello per ruotarlo."
+        },
+        "colors": {
+          "title": "Ogni colore è un gruppo di cellule",
+          "text": "Le cellule che fanno lo stesso lavoro hanno lo stesso colore. Quando un colore si illumina, quelle cellule si stanno attivando proprio adesso."
+        },
+        "buttons": {
+          "title": "L’esperimento lo fai tu",
+          "text": "Stimola: attiviamo queste cellule. Silenzia: spegniamo queste cellule. Poi guardi che cosa cambia."
+        },
+        "time": {
+          "title": "Va tutto al rallentatore",
+          "text": "Un moscerino vero fa tutto questo in un batter d’occhio. Qui il tempo scorre molte volte più lento, così puoi vedere il segnale che viaggia."
+        }
+      }
+    },
+    "classMode": {
+      "label": "Modalità classe",
+      "hint": "Modalità classe: testo e pulsanti più grandi per uno schermo condiviso"
+    },
+    "demo": {
+      "start": "Fammi vedere come funziona",
+      "playing": "Ti faccio vedere come funziona",
+      "upNext": "Ora tocchiamo «{action}»: {name}",
+      "stop": "Ferma e continua tu"
     }
   },
   "errors": {
@@ -537,6 +601,383 @@
       "body": "C’è stato un errore nella pagina. Riprova o torna alle lezioni.",
       "retry": "Riprova",
       "home": "Vai alle lezioni"
+    }
+  },
+  "terms": {
+    "antenna": {
+      "name": "Antenne",
+      "text": "Le due piccole sporgenze sulla testa del moscerino. Il moscerino le usa per sentire gli odori, come tu usi il naso."
+    },
+    "receptor": {
+      "name": "Recettori olfattivi",
+      "text": "Cellule nervose sulle antenne che si attivano quando un odore le raggiunge. Ogni odore comincia da qui."
+    },
+    "antennallobe": {
+      "name": "Lobo antennale",
+      "text": "La prima tappa degli odori nel cervello del moscerino: qui i recettori olfattivi passano il segnale ai neuroni di proiezione."
+    },
+    "projection": {
+      "name": "Neuroni di proiezione",
+      "text": "Cellule nervose che portano il segnale dell’odore dal lobo antennale più in profondità nel cervello, fino al corpo fungiforme."
+    },
+    "mushroombody": {
+      "name": "Corpo fungiforme",
+      "text": "Una parte del cervello degli insetti a forma di fungo, dove gli odori vengono smistati e i ricordi degli odori vengono conservati."
+    },
+    "kenyon": {
+      "name": "Cellule di Kenyon",
+      "text": "Le piccole cellule nervose del corpo fungiforme. Ogni odore ne accende una manciata diversa, così ogni odore ha la sua combinazione."
+    },
+    "output": {
+      "name": "Neuroni di uscita",
+      "text": "Cellule nervose che leggono la combinazione delle cellule di Kenyon e la passano al resto del cervello. Gli scienziati le chiamano MBON: neuroni di uscita del corpo fungiforme."
+    },
+    "turn": {
+      "name": "Neuroni di svolta",
+      "text": "Cellule nervose che si attivano quando il moscerino gira e spingono il picco lungo la bussola. Gli scienziati li chiamano neuroni P-EN2."
+    },
+    "compass": {
+      "name": "Neuroni bussola",
+      "text": "Un anello di cellule nervose che tiene traccia della direzione in cui è rivolto il moscerino. Gli scienziati li chiamano neuroni E-PG."
+    },
+    "ring": {
+      "name": "Neuroni ad anello",
+      "text": "Cellule nervose che portano alla bussola ciò che il moscerino vede, come i punti di riferimento. Calmano i neuroni bussola, e così il picco resta fermo."
+    },
+    "looming": {
+      "name": "Neuroni di avvicinamento",
+      "text": "Cellule nervose dietro gli occhi del moscerino. Si attivano quando qualcosa si ingrandisce in fretta, come uno scacciamosche in arrivo. Gli scienziati le chiamano LC4 e LPLC2."
+    },
+    "giantfiber": {
+      "name": "Fibra gigante",
+      "text": "Una cellula nervosa molto spessa che scende dal cervello fino al cordone nervoso. Porta il segnale di fuga più veloce del moscerino."
+    },
+    "nervecord": {
+      "name": "Cordone nervoso",
+      "text": "Il midollo spinale del moscerino, per così dire: un fascio di cellule nervose nel torace che comanda zampe e ali."
+    },
+    "jump": {
+      "name": "Neuroni del salto",
+      "text": "Motoneuroni che fanno contrarre i muscoli del salto delle zampe centrali, così il moscerino scatta in aria."
+    },
+    "neuron": {
+      "name": "Neurone",
+      "text": "Una cellula nervosa. Riceve segnali da altre cellule e, quando se ne sommano abbastanza, manda un segnale suo."
+    },
+    "spike": {
+      "name": "Attivazione",
+      "text": "Un breve impulso elettrico che un neurone attivo manda lungo tutta la sua lunghezza, detto anche potenziale d’azione. Nelle lezioni ogni lampo di luce ne segna uno."
+    },
+    "synapse": {
+      "name": "Sinapsi",
+      "text": "Il punto di contatto in cui un neurone passa il segnale al successivo. Più sinapsi hanno in comune due cellule, più forte è il loro legame."
+    },
+    "transmitter": {
+      "name": "Neurotrasmettitore",
+      "text": "Una sostanza chimica che un neurone rilascia in una sinapsi per passare il segnale. Alcuni neurotrasmettitori eccitano la cellula successiva, altri la inibiscono."
+    },
+    "excitation": {
+      "name": "Eccitazione",
+      "text": "Un segnale che spinge il neurone successivo ad attivarsi."
+    },
+    "inhibition": {
+      "name": "Inibizione",
+      "text": "Un segnale che trattiene il neurone successivo dall’attivarsi. A una rete serve per restare stabile e precisa."
+    },
+    "acetylcholine": {
+      "name": "Acetilcolina",
+      "text": "Il principale neurotrasmettitore eccitatorio nel cervello del moscerino. Nelle lezioni le cellule che la rilasciano eccitano le cellule a cui sono collegate."
+    },
+    "gaba": {
+      "name": "GABA",
+      "text": "Un neurotrasmettitore inibitorio, nei moscerini e nelle persone. Nelle lezioni le cellule che rilasciano GABA calmano le cellule a cui sono collegate."
+    },
+    "circuit": {
+      "name": "Circuito neurale",
+      "text": "Un gruppo di neuroni collegati tra loro per svolgere un compito, come riconoscere un odore o far partire un salto."
+    },
+    "connectome": {
+      "name": "Connettoma",
+      "text": "Lo schema completo dei collegamenti di un sistema nervoso: ogni neurone e ogni sinapsi tra loro. Le lezioni funzionano sul connettoma di un vero moscerino della frutta."
+    },
+    "stimulate": {
+      "name": "Stimola",
+      "text": "Il pulsante della lezione che fa attivare per un momento un gruppo di cellule, un po’ come gli scienziati accendono con la luce le cellule che scelgono."
+    },
+    "silence": {
+      "name": "Silenzia",
+      "text": "Il pulsante della lezione che impedisce a un gruppo di cellule di attivarsi, per mostrare che cosa fa il resto del circuito senza di loro."
+    },
+    "sensory": {
+      "name": "Neurone sensoriale",
+      "text": "Un neurone che coglie qualcosa del mondo, come un odore o un’ombra che si avvicina, e lo riferisce al cervello."
+    },
+    "motor": {
+      "name": "Motoneurone",
+      "text": "Un neurone che porta un comando a un muscolo e lo fa contrarre."
+    },
+    "reflex": {
+      "name": "Arco riflesso",
+      "text": "Il percorso di un riflesso: dai neuroni sensoriali, attraverso una o più cellule intermedie, fino ai motoneuroni che muovono un muscolo."
+    },
+    "electricalsynapse": {
+      "name": "Sinapsi elettrica",
+      "text": "Un canale diretto tra due neuroni che passa il segnale quasi senza ritardo. La mappa su cui si basano le lezioni registra solo le sinapsi chimiche."
+    },
+    "bump": {
+      "name": "Picco",
+      "text": "La zona di neuroni bussola attivi. Il punto dell’anello in cui si trova indica da che parte è rivolto il moscerino."
+    },
+    "landmark": {
+      "name": "Punto di riferimento",
+      "text": "Qualcosa che il moscerino vede e che resta fermo, come il sole o un albero. Il moscerino lo usa per tenere stabile il suo senso dell’orientamento."
+    },
+    "bridge": {
+      "name": "Ponte",
+      "text": "Una parte del cervello del moscerino a forma di barra, il ponte protocerebrale. Ci passano sia i neuroni bussola sia i neuroni di svolta."
+    }
+  },
+  "teachers": {
+    "meta": {
+      "indexTitle": "Guide per l’insegnante · WiredMind",
+      "indexDescription": "Per ogni lezione di WiredMind: piano della lezione, risposte attese, domande per la discussione e scheda di lavoro da stampare.",
+      "guideTitle": "Guida per l’insegnante: {title}",
+      "guideDescription": "Un piano di 45 minuti per «{title}»: obiettivo, cosa notare, risposte attese, domande per discutere ed errori comuni.",
+      "worksheetTitle": "Scheda di lavoro: {title}",
+      "worksheetDescription": "Una scheda di lavoro da stampare per «{title}»: prevedi, prova, osserva, spiega."
+    },
+    "index": {
+      "title": "Guide per l’insegnante",
+      "lead": "Tutto quello che ti serve per condurre ogni lezione senza alcuna formazione: un piano di 45 minuti, che cosa gli studenti dovrebbero notare, le risposte da aspettarsi e una scheda di lavoro da stampare.",
+      "lesson": "Lezione {number}",
+      "guide": "Guida per l’insegnante",
+      "worksheet": "Scheda per gli studenti",
+      "demo": "Mostrala alla classe",
+      "generalTerms": "Termini di base"
+    },
+    "topics": {
+      "excitation": "Eccitazione e inibizione",
+      "synapses": "Sinapsi e neurotrasmettitori",
+      "reflex": "Archi riflessi",
+      "structure": "Come la struttura di una rete determina il comportamento"
+    },
+    "guide": {
+      "eyebrow": "Guida per l’insegnante · Lezione {number}",
+      "print": "Stampa",
+      "lesson": "Apri la lezione",
+      "demo": "Avvia «Fammi vedere come funziona» in modalità classe",
+      "worksheet": "Scheda per gli studenti",
+      "all": "Tutte le guide per l’insegnante",
+      "address": "Indirizzo della lezione",
+      "setupTitle": "Che cosa ti serve",
+      "setup": "Uno schermo condiviso aiuta, ma è facoltativo: un proiettore, un televisore o lo schermo di un computer che tutta la classe possa vedere. Agli studenti serve un qualsiasi dispositivo connesso a internet, meglio se uno per coppia: portatile, tablet o smartphone. Non c’è niente da installare e non servono account. Ogni lezione si apre con una breve guida su come leggere lo schermo, e ogni termine scientifico si può toccare per leggerne la spiegazione.",
+      "goalTitle": "Obiettivo di apprendimento",
+      "topicsTitle": "Argomenti collegati",
+      "planTitle": "Un piano di 45 minuti",
+      "minutes": "{minutes} min",
+      "phases": {
+        "opening": "Domanda di apertura",
+        "demo": "Dimostrazione con «Fammi vedere come funziona»",
+        "explore": "Gli studenti esplorano",
+        "discuss": "Discussione"
+      },
+      "plan": {
+        "demo": "Mostra la lezione in modalità classe su uno schermo condiviso (proiettore, televisore o schermo di un computer) e premi «Fammi vedere come funziona». Leggi ad alta voce ogni passaggio mentre scorre. Senza uno schermo condiviso, gli studenti aprono la stessa dimostrazione sui propri dispositivi. La dimostrazione si ferma alla domanda della lezione: per ora lasciala senza risposta.",
+        "explore": "Gli studenti lavorano a coppie sui propri dispositivi, con la scheda di lavoro. Scrivono una previsione prima di ogni tocco, svolgono la lezione, rispondono alla sua domanda e provano l’esplorazione libera.",
+        "discuss": "Raccogli le risposte delle coppie alla domanda della lezione, poi usa le domande per la discussione qui sotto. Chiudi con ciò che il modello lascia fuori."
+      },
+      "noticeTitle": "Che cosa gli studenti dovrebbero notare a ogni passaggio",
+      "step": "Passaggio {number}",
+      "answerTitle": "La domanda della lezione e la risposta da aspettarsi",
+      "rightChoice": "La scelta giusta",
+      "discussTitle": "Domande per la discussione",
+      "misconceptionsTitle": "Idee sbagliate più comuni",
+      "claim": "Gli studenti potrebbero pensare:",
+      "fix": "Come affrontarla:",
+      "realTitle": "Cosa è reale e cosa è semplificato",
+      "real": "Reale",
+      "simplified": "Semplificato",
+      "realShared": "Ogni neurone e ogni collegamento della lezione viene dallo schema dei collegamenti di un vero moscerino della frutta, con il numero reale di sinapsi tra ogni coppia di cellule.",
+      "simplifiedShared": "L’attività è una simulazione semplice in cui tutti i neuroni seguono le stesse regole di base, e scorre al rallentatore.",
+      "realMore": "L’elenco completo, con i numeri",
+      "termsTitle": "Termini chiave",
+      "curriculumTitle": "Collegamento con i programmi scolastici",
+      "curriculumPending": "Questa sezione non è ancora compilata. La corrispondenza con il programma ufficiale di biologia è in corso di verifica con docenti di biologia."
+    },
+    "worksheet": {
+      "eyebrow": "Scheda per gli studenti · Lezione {number}",
+      "name": "Nome",
+      "class": "Classe",
+      "date": "Data",
+      "address": "Apri la lezione all’indirizzo",
+      "predict": "Prevedi",
+      "predictHint": "Prima di toccare qualsiasi cosa.",
+      "try": "Prova",
+      "tryText": "Apri la lezione e segui i suoi passaggi. Prima di ogni tocco, di’ ad alta voce che cosa pensi che succederà.",
+      "observe": "Osserva",
+      "observeHint": "Per ogni passaggio: quali colori si sono accesi e quali sono rimasti spenti?",
+      "step": "Passaggio {number}",
+      "explain": "Spiega",
+      "question": "La domanda della lezione"
+    },
+    "lessons": {
+      "smell-memory": {
+        "goal": "Gli studenti seguono un odore dai recettori fino alle cellule che ne leggono il ricordo, e mostrano che silenziare uno strato di una via interrompe tutto ciò che viene dopo.",
+        "topics": {
+          "synapses": "Ogni strato passa il segnale al successivo attraverso le sinapsi. Gli scienziati pensano che il ricordo sia un cambiamento nella forza delle sinapsi tra le cellule di Kenyon e i neuroni di uscita.",
+          "structure": "La via è una catena di strati: per questo silenziare le cellule di Kenyon spegne i neuroni di uscita anche se l’odore entra lo stesso.",
+          "excitation": "«Stimola» eccita le cellule e «Silenzia» le tiene spente: sono i due strumenti della lezione. In questa parte del circuito ogni strato eccita il successivo."
+        },
+        "opening": "Chiedi: «Come fa il tuo cervello a sapere che un odore l’hai già sentito?» Raccogli qualche ipotesi, poi di’ che oggi la classe cercherà la risposta dentro un moscerino.",
+        "notice": {
+          "send": "Si accendono solo i recettori olfattivi arancioni. Il segnale parte da un’estremità del circuito, non dappertutto insieme.",
+          "follow": "I colori si accendono in ordine: arancione, poi giallo, poi blu. Il segnale attraversa gli strati uno dopo l’altro.",
+          "read": "I neuroni di uscita rosa si accendono per ultimi, e solo dopo le cellule di Kenyon blu.",
+          "silence": "Arancione e giallo si accendono ancora, il blu resta spento e il rosa quasi sparisce. L’odore è entrato, ma non è potuto andare oltre.",
+          "restore": "Il rosa torna appena le cellule di Kenyon vengono riattivate. Niente si era rotto: al segnale mancava semplicemente la strada."
+        },
+        "answer": "Le cellule di Kenyon passano la combinazione di ogni odore ai neuroni di uscita. Quando sono silenziate, l’odore arriva lo stesso ai recettori e ai neuroni di proiezione, ma i neuroni di uscita non hanno niente da leggere. Chi risponde «l’odore non è mai entrato» va rimandato a guardare le cellule arancioni e gialle.",
+        "discuss": {
+          "a": "L’odore è entrato nel cervello anche con le cellule di Kenyon silenziate. Come facciamo a saperlo?",
+          "b": "Immagina che il moscerino abbia imparato che questo odore vuol dire zucchero. In quale punto del circuito ti aspetteresti un cambiamento?",
+          "c": "Che cosa ti aspetteresti di vedere silenziando invece i neuroni di proiezione gialli? Verificalo nell’esplorazione libera."
+        },
+        "misconceptions": {
+          "a": {
+            "claim": "Un ricordo sta dentro una sola cellula, come un file.",
+            "fix": "Torna al passaggio in cui il rosa legge il blu. Si pensa che il ricordo stia nella forza di molti collegamenti tra i due gruppi, non in una singola cellula."
+          },
+          "b": {
+            "claim": "Silenziare una cellula la uccide o la danneggia.",
+            "fix": "Ripeti l’ultimo passaggio: la luce rosa torna subito. Le cellule silenziate sono intatte. Semplicemente non si attivano."
+          },
+          "c": {
+            "claim": "La lezione mostra il moscerino che impara un odore.",
+            "fix": "Non è così. Il modello mostra dove verrebbe conservato un ricordo, ma i suoi collegamenti non cambiano mai. Dillo chiaramente, e chiedi che cosa bisognerebbe aggiungere."
+          }
+        },
+        "real": {
+          "a": "I quattro gruppi di cellule, e l’ordine in cui si collegano, sono la vera via olfattiva del moscerino."
+        },
+        "simplified": {
+          "a": "«Stimola» attiva tutti i recettori olfattivi insieme. Un odore vero ne accende solo alcuni tipi, secondo una combinazione.",
+          "b": "Nel modello niente impara: non c’è un segnale di ricompensa e i collegamenti non cambiano mai."
+        },
+        "worksheet": {
+          "predict": {
+            "a": "Un odore entra dalle antenne. Secondo te, quale colore si accenderà per ultimo?",
+            "b": "Secondo te, che cosa succederà alle cellule rosa se le cellule blu vengono spente?"
+          },
+          "explain": {
+            "a": "Perché le cellule rosa si sono spente quando hai silenziato le cellule blu, anche se l’odore è entrato lo stesso?",
+            "b": "In quale punto di questo circuito, secondo gli scienziati, viene conservato il ricordo di un odore?"
+          }
+        }
+      },
+      "compass": {
+        "goal": "Gli studenti vedono che un anello di neuroni conserva la direzione del moscerino sotto forma di una sola zona di attività, e che l’inibizione dei neuroni ad anello tiene ferma quella zona.",
+        "topics": {
+          "excitation": "L’esempio più chiaro delle tre lezioni. I neuroni di svolta eccitano la bussola e spingono il picco; i neuroni ad anello la inibiscono e tengono fermo il picco.",
+          "synapses": "Si prevede che i neuroni ad anello rilascino GABA, un neurotrasmettitore che inibisce. I neuroni bussola e i neuroni di svolta rilasciano acetilcolina, che eccita.",
+          "structure": "I neuroni bussola sono collegati ad anello, ed è proprio questa forma a far sì che un solo picco di attività rappresenti una sola direzione."
+        },
+        "opening": "Chiedi: «Chiudi gli occhi e fai un giro su te stesso. Come fai a sapere ancora da che parte sei rivolto?» Poi di’ che un moscerino ci riesce con un piccolo anello di cellule, e che la classe sta per spingerle di qua e di là.",
+        "notice": {
+          "left": "Una zona di neuroni bussola verdi si accende su un lato dell’anello, e l’ago del quadrante punta lì. Quella zona è il picco.",
+          "right": "Il picco si sposta lungo il quadrante. I due segnali di svolta lo spingono in direzioni opposte.",
+          "silence": "Con i neuroni ad anello viola spenti, lo stesso segnale lascia il picco vagare invece di fermarsi in un punto.",
+          "restore": "Il picco resta di nuovo al suo posto. Confronta il quadrante con il passaggio precedente."
+        },
+        "answer": "Niente diceva alla bussola dove fossero i punti di riferimento, quindi niente teneva fermo il picco. Il segnale di svolta è arrivato lo stesso, perché le cellule verdi si sono accese: a mancare era un’ancora, non un ingresso. Per gli studenti più grandi: in questo modello l’ancora è l’inibizione dei neuroni ad anello.",
+        "discuss": {
+          "a": "Perché l’anello è una buona forma per cellule che tengono traccia della direzione?",
+          "b": "I neuroni ad anello calmano altre cellule invece di eccitarle. In che modo spegnere delle cellule può aiutare una rete a funzionare meglio?",
+          "c": "Anche le persone perdono l’orientamento al buio o nella nebbia. Che cosa ha in comune questo con il passaggio in cui si silenzia?"
+        },
+        "misconceptions": {
+          "a": {
+            "claim": "Il moscerino ha una bussola magnetica, come quella del telefono.",
+            "fix": "Questa bussola è una configurazione di attività che il moscerino aggiorna in base alle proprie svolte e a ciò che vede. In questo circuito niente percepisce il magnetismo."
+          },
+          "b": {
+            "claim": "Più cellule sono attive, migliore è sempre il segnale.",
+            "fix": "Confronta gli ultimi due passaggi: togliere l’inibizione ha peggiorato la bussola. L’inibizione fa parte del modo in cui il circuito funziona."
+          },
+          "c": {
+            "claim": "Il picco è un oggetto che viaggia nel cervello.",
+            "fix": "Nessuna cellula si sposta. Le cellule vicine si attivano a turno, come la ola che gira tra il pubblico di uno stadio."
+          }
+        },
+        "real": {
+          "a": "I neuroni bussola, i neuroni di svolta e i neuroni ad anello sono tipi di cellule reali, collegati ad anello come nel moscerino."
+        },
+        "simplified": {
+          "a": "Nel modello i neuroni ad anello non portano alcuna immagine del mondo. Silenziarli toglie la loro inibizione, ed è questo che lascia il picco andare alla deriva.",
+          "b": "Il quadrante è il nostro modo di leggere l’attività delle cellule verdi. Il moscerino non ha nessun quadrante."
+        },
+        "worksheet": {
+          "predict": {
+            "a": "Secondo te, che cosa mostrerà il quadrante della bussola quando attivi i neuroni di svolta di sinistra? E quelli di destra?",
+            "b": "Secondo te, che cosa succederà al picco se i neuroni ad anello viola vengono spenti?"
+          },
+          "explain": {
+            "a": "Perché il picco è andato alla deriva quando i neuroni ad anello erano silenziati?",
+            "b": "Perché l’anello è una buona forma per cellule che tengono traccia della direzione?"
+          }
+        }
+      },
+      "escape": {
+        "goal": "Gli studenti seguono un riflesso dagli occhi ai muscoli delle zampe in circa 30 millisecondi, e mostrano che la fuga veloce dipende da un solo anello della catena: la fibra gigante.",
+        "topics": {
+          "reflex": "Un’intera via riflessa in tre parti: neuroni sensoriali (i neuroni di avvicinamento), una stazione intermedia (la fibra gigante) e motoneuroni (i neuroni del salto). A differenza del riflesso patellare, qui il segnale passa dal cervello.",
+          "structure": "Il segnale si restringe da centinaia di neuroni di avvicinamento alla fibra gigante. È per questa strozzatura che silenziare un solo tipo di cellula elimina il comportamento.",
+          "synapses": "La fibra gigante è spessa, e questo rende veloce il suo segnale. In un moscerino vero usa anche sinapsi elettriche, le più veloci; il modello ha solo sinapsi chimiche."
+        },
+        "opening": "Chiedi: «Perché è così difficile schiacciare una mosca?» Raccogli qualche idea, poi di’ che la classe cronometrerà la fuga del moscerino e troverà il filo che la rende possibile.",
+        "notice": {
+          "loom": "I neuroni di avvicinamento blu si accendono per primi, e la fibra gigante rossa li segue quasi subito.",
+          "jump": "L’attività scende lungo la fibra gigante nel cordone nervoso, e i neuroni del salto gialli si attivano entro 30 millisecondi del tempo del moscerino.",
+          "silence": "Il blu si accende ancora, il rosso resta spento e il giallo non si attiva mai. Il moscerino ha visto lo scacciamosche, ma il messaggio non è arrivato alle zampe.",
+          "restore": "Il giallo si attiva di nuovo appena la fibra gigante viene riattivata."
+        },
+        "answer": "La fibra gigante porta il segnale del salto dai neuroni di avvicinamento ai neuroni del salto. Quando è silenziata, il moscerino vede lo stesso lo scacciamosche, perché le cellule blu si accendono, ma il segnale si ferma prima delle zampe. I moscerini veri hanno anche vie di fuga più lente, come dice l’ultimo passaggio della lezione.",
+        "discuss": {
+          "a": "Questa fuga è più veloce di un battito di ciglia. Quali caratteristiche della via la rendono così veloce?",
+          "b": "Perché a un animale può essere utile avere una via di fuga veloce e diverse vie più lente?",
+          "c": "Confronta questa via con un riflesso umano che conosci, per esempio ritirare la mano da qualcosa che scotta. Che cosa è uguale e che cosa è diverso?"
+        },
+        "misconceptions": {
+          "a": {
+            "claim": "Il moscerino decide di saltare.",
+            "fix": "Il salto veloce è un riflesso: i collegamenti portano il segnale dritto fino in fondo. Non c’è una fase in cui il moscerino valuta le alternative."
+          },
+          "b": {
+            "claim": "Se il moscerino non è saltato, vuol dire che non ha visto lo scacciamosche.",
+            "fix": "Il passaggio in cui si silenzia separa le due cose. I neuroni di avvicinamento si attivano, quindi il moscerino l’ha visto. Vedere e agire sono fasi diverse della stessa via."
+          },
+          "c": {
+            "claim": "Un solo neurone non può contare in un cervello intero.",
+            "fix": "Qui un solo tipo di cellula porta tutto il segnale veloce. Ovunque una via si restringa a poche cellule, ciascuna di esse conta moltissimo."
+          }
+        },
+        "real": {
+          "a": "I neuroni di avvicinamento, la fibra gigante e i neuroni del salto sono reali, e lo è anche il percorso che li collega."
+        },
+        "simplified": {
+          "a": "I 30 millisecondi derivano dalle semplici regole di temporizzazione del modello, non da registrazioni su un moscerino. Cadono però in un intervallo realistico.",
+          "b": "«Stimola» attiva tutti i neuroni di avvicinamento insieme. Uno scacciamosche vero li accende poco a poco, man mano che si ingrandisce nel campo visivo."
+        },
+        "worksheet": {
+          "predict": {
+            "a": "Sta arrivando uno scacciamosche. Secondo te, in che ordine si accenderanno i tre colori?",
+            "b": "Secondo te, che cosa succederà ai neuroni del salto gialli se la fibra gigante rossa viene spenta?"
+          },
+          "explain": {
+            "a": "Perché i neuroni del salto sono rimasti spenti, anche se il moscerino ha visto lo scacciamosche?",
+            "b": "Quali caratteristiche di questa via rendono la fuga così veloce?"
+          }
+        }
+      }
     }
   }
 }

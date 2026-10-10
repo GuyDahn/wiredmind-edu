@@ -44,7 +44,258 @@
       "viewer.lesson.moreLessons",
       "viewer.controls.silencedLocked",
       "nav.menuOpen",
-      "nav.menuClose"
+      "nav.menuClose",
+      "terms.antenna.name",
+      "terms.antenna.text",
+      "terms.receptor.name",
+      "terms.receptor.text",
+      "terms.antennallobe.name",
+      "terms.antennallobe.text",
+      "terms.projection.name",
+      "terms.projection.text",
+      "terms.mushroombody.name",
+      "terms.mushroombody.text",
+      "terms.kenyon.name",
+      "terms.kenyon.text",
+      "terms.output.name",
+      "terms.output.text",
+      "terms.turn.name",
+      "terms.turn.text",
+      "terms.compass.name",
+      "terms.compass.text",
+      "terms.ring.name",
+      "terms.ring.text",
+      "terms.looming.name",
+      "terms.looming.text",
+      "terms.giantfiber.name",
+      "terms.giantfiber.text",
+      "terms.nervecord.name",
+      "terms.nervecord.text",
+      "terms.jump.name",
+      "terms.jump.text",
+      "viewer.terms.hint",
+      "viewer.terms.close",
+      "circuits.olfactory.plain.orn",
+      "circuits.olfactory.plain.pn",
+      "circuits.olfactory.plain.kc",
+      "circuits.olfactory.plain.mbon",
+      "circuits.visual.plain.ring",
+      "circuits.visual.plain.compass",
+      "circuits.visual.plain.turn-left",
+      "circuits.visual.plain.turn-right",
+      "circuits.escape.plain.looming",
+      "circuits.escape.plain.gf",
+      "circuits.escape.plain.jump",
+      "viewer.legend.title",
+      "viewer.legend.glow",
+      "viewer.intro.label",
+      "viewer.intro.progress",
+      "viewer.intro.skip",
+      "viewer.intro.next",
+      "viewer.intro.start",
+      "viewer.intro.screens.lines.title",
+      "viewer.intro.screens.lines.text",
+      "viewer.intro.screens.colors.title",
+      "viewer.intro.screens.colors.text",
+      "viewer.intro.screens.buttons.title",
+      "viewer.intro.screens.buttons.text",
+      "viewer.intro.screens.time.title",
+      "viewer.intro.screens.time.text",
+      "viewer.classMode.label",
+      "viewer.classMode.hint",
+      "viewer.demo.start",
+      "viewer.demo.playing",
+      "viewer.demo.upNext",
+      "viewer.demo.stop",
+      "teachers.meta.indexTitle",
+      "teachers.meta.indexDescription",
+      "teachers.meta.guideTitle",
+      "teachers.meta.guideDescription",
+      "teachers.meta.worksheetTitle",
+      "teachers.meta.worksheetDescription",
+      "teachers.index.title",
+      "teachers.index.lead",
+      "teachers.index.lesson",
+      "teachers.index.guide",
+      "teachers.index.worksheet",
+      "teachers.index.demo",
+      "teachers.topics.excitation",
+      "teachers.topics.synapses",
+      "teachers.topics.reflex",
+      "teachers.topics.structure",
+      "teachers.guide.eyebrow",
+      "teachers.guide.print",
+      "teachers.guide.lesson",
+      "teachers.guide.demo",
+      "teachers.guide.worksheet",
+      "teachers.guide.all",
+      "teachers.guide.address",
+      "teachers.guide.setupTitle",
+      "teachers.guide.setup",
+      "teachers.guide.goalTitle",
+      "teachers.guide.topicsTitle",
+      "teachers.guide.planTitle",
+      "teachers.guide.minutes",
+      "teachers.guide.phases.opening",
+      "teachers.guide.phases.demo",
+      "teachers.guide.phases.explore",
+      "teachers.guide.phases.discuss",
+      "teachers.guide.plan.demo",
+      "teachers.guide.plan.explore",
+      "teachers.guide.plan.discuss",
+      "teachers.guide.noticeTitle",
+      "teachers.guide.step",
+      "teachers.guide.answerTitle",
+      "teachers.guide.rightChoice",
+      "teachers.guide.discussTitle",
+      "teachers.guide.misconceptionsTitle",
+      "teachers.guide.claim",
+      "teachers.guide.fix",
+      "teachers.guide.realTitle",
+      "teachers.guide.real",
+      "teachers.guide.simplified",
+      "teachers.guide.realShared",
+      "teachers.guide.simplifiedShared",
+      "teachers.guide.realMore",
+      "teachers.guide.termsTitle",
+      "teachers.guide.curriculumTitle",
+      "teachers.guide.curriculumPending",
+      "teachers.worksheet.eyebrow",
+      "teachers.worksheet.name",
+      "teachers.worksheet.class",
+      "teachers.worksheet.date",
+      "teachers.worksheet.address",
+      "teachers.worksheet.predict",
+      "teachers.worksheet.predictHint",
+      "teachers.worksheet.try",
+      "teachers.worksheet.tryText",
+      "teachers.worksheet.observe",
+      "teachers.worksheet.observeHint",
+      "teachers.worksheet.step",
+      "teachers.worksheet.explain",
+      "teachers.worksheet.question",
+      "teachers.lessons.smell-memory.goal",
+      "teachers.lessons.smell-memory.topics.synapses",
+      "teachers.lessons.smell-memory.topics.structure",
+      "teachers.lessons.smell-memory.topics.excitation",
+      "teachers.lessons.smell-memory.opening",
+      "teachers.lessons.smell-memory.notice.send",
+      "teachers.lessons.smell-memory.notice.follow",
+      "teachers.lessons.smell-memory.notice.read",
+      "teachers.lessons.smell-memory.notice.silence",
+      "teachers.lessons.smell-memory.notice.restore",
+      "teachers.lessons.smell-memory.answer",
+      "teachers.lessons.smell-memory.discuss.a",
+      "teachers.lessons.smell-memory.discuss.b",
+      "teachers.lessons.smell-memory.discuss.c",
+      "teachers.lessons.smell-memory.misconceptions.a.claim",
+      "teachers.lessons.smell-memory.misconceptions.a.fix",
+      "teachers.lessons.smell-memory.misconceptions.b.claim",
+      "teachers.lessons.smell-memory.misconceptions.b.fix",
+      "teachers.lessons.smell-memory.misconceptions.c.claim",
+      "teachers.lessons.smell-memory.misconceptions.c.fix",
+      "teachers.lessons.smell-memory.real.a",
+      "teachers.lessons.smell-memory.simplified.a",
+      "teachers.lessons.smell-memory.simplified.b",
+      "teachers.lessons.smell-memory.worksheet.predict.a",
+      "teachers.lessons.smell-memory.worksheet.predict.b",
+      "teachers.lessons.smell-memory.worksheet.explain.a",
+      "teachers.lessons.smell-memory.worksheet.explain.b",
+      "teachers.lessons.compass.goal",
+      "teachers.lessons.compass.topics.excitation",
+      "teachers.lessons.compass.topics.synapses",
+      "teachers.lessons.compass.topics.structure",
+      "teachers.lessons.compass.opening",
+      "teachers.lessons.compass.notice.left",
+      "teachers.lessons.compass.notice.right",
+      "teachers.lessons.compass.notice.silence",
+      "teachers.lessons.compass.notice.restore",
+      "teachers.lessons.compass.answer",
+      "teachers.lessons.compass.discuss.a",
+      "teachers.lessons.compass.discuss.b",
+      "teachers.lessons.compass.discuss.c",
+      "teachers.lessons.compass.misconceptions.a.claim",
+      "teachers.lessons.compass.misconceptions.a.fix",
+      "teachers.lessons.compass.misconceptions.b.claim",
+      "teachers.lessons.compass.misconceptions.b.fix",
+      "teachers.lessons.compass.misconceptions.c.claim",
+      "teachers.lessons.compass.misconceptions.c.fix",
+      "teachers.lessons.compass.real.a",
+      "teachers.lessons.compass.simplified.a",
+      "teachers.lessons.compass.simplified.b",
+      "teachers.lessons.compass.worksheet.predict.a",
+      "teachers.lessons.compass.worksheet.predict.b",
+      "teachers.lessons.compass.worksheet.explain.a",
+      "teachers.lessons.compass.worksheet.explain.b",
+      "teachers.lessons.escape.goal",
+      "teachers.lessons.escape.topics.reflex",
+      "teachers.lessons.escape.topics.structure",
+      "teachers.lessons.escape.topics.synapses",
+      "teachers.lessons.escape.opening",
+      "teachers.lessons.escape.notice.loom",
+      "teachers.lessons.escape.notice.jump",
+      "teachers.lessons.escape.notice.silence",
+      "teachers.lessons.escape.notice.restore",
+      "teachers.lessons.escape.answer",
+      "teachers.lessons.escape.discuss.a",
+      "teachers.lessons.escape.discuss.b",
+      "teachers.lessons.escape.discuss.c",
+      "teachers.lessons.escape.misconceptions.a.claim",
+      "teachers.lessons.escape.misconceptions.a.fix",
+      "teachers.lessons.escape.misconceptions.b.claim",
+      "teachers.lessons.escape.misconceptions.b.fix",
+      "teachers.lessons.escape.misconceptions.c.claim",
+      "teachers.lessons.escape.misconceptions.c.fix",
+      "teachers.lessons.escape.real.a",
+      "teachers.lessons.escape.simplified.a",
+      "teachers.lessons.escape.simplified.b",
+      "teachers.lessons.escape.worksheet.predict.a",
+      "teachers.lessons.escape.worksheet.predict.b",
+      "teachers.lessons.escape.worksheet.explain.a",
+      "teachers.lessons.escape.worksheet.explain.b",
+      "landing.teachers.guidesTitle",
+      "landing.teachers.guidesLead",
+      "landing.teachers.guide",
+      "landing.teachers.worksheet",
+      "terms.neuron.name",
+      "terms.neuron.text",
+      "terms.spike.name",
+      "terms.spike.text",
+      "terms.synapse.name",
+      "terms.synapse.text",
+      "terms.transmitter.name",
+      "terms.transmitter.text",
+      "terms.excitation.name",
+      "terms.excitation.text",
+      "terms.inhibition.name",
+      "terms.inhibition.text",
+      "terms.acetylcholine.name",
+      "terms.acetylcholine.text",
+      "terms.gaba.name",
+      "terms.gaba.text",
+      "terms.circuit.name",
+      "terms.circuit.text",
+      "terms.connectome.name",
+      "terms.connectome.text",
+      "terms.stimulate.name",
+      "terms.stimulate.text",
+      "terms.silence.name",
+      "terms.silence.text",
+      "terms.sensory.name",
+      "terms.sensory.text",
+      "terms.motor.name",
+      "terms.motor.text",
+      "terms.reflex.name",
+      "terms.reflex.text",
+      "terms.electricalsynapse.name",
+      "terms.electricalsynapse.text",
+      "terms.bump.name",
+      "terms.bump.text",
+      "terms.landmark.name",
+      "terms.landmark.text",
+      "terms.bridge.name",
+      "terms.bridge.text",
+      "teachers.index.generalTerms"
     ]
   },
   "meta": {
@@ -185,7 +436,11 @@
       },
       "source": "View the source on GitHub",
       "science": "What’s real and what’s simplified",
-      "feedback": "Something unclear or broken? Tell me."
+      "feedback": "Something unclear or broken? Tell me.",
+      "guidesTitle": "Run a lesson tomorrow",
+      "guidesLead": "Each lesson has a teacher guide with a 45-minute plan and a worksheet to print.",
+      "guide": "Teacher guide",
+      "worksheet": "Worksheet"
     }
   },
   "about": {
@@ -289,28 +544,28 @@
       "description": "Send a smell into a real fruit fly brain, follow it to the mushroom body, and find the cells that store its memory. A free 10-minute lesson.",
       "steps": {
         "send": {
-          "text": "A fly smells with its <term>antennae</term> <gloss>(its two feelers)</gloss>. Tap Stimulate to send a smell in. Watch the orange neurons light up.",
-          "result": "Those orange <term>smell receptors</term> <gloss>(the smell catchers)</gloss> fire first. Every smell starts here."
+          "text": "A fly smells with its <antenna>antennae</antenna> <gloss>(its two feelers)</gloss>. Tap Stimulate to send a smell in. Watch the orange neurons light up.",
+          "result": "Those orange <receptor>smell receptors</receptor> <gloss>(the smell catchers)</gloss> fire first. Every smell starts here."
         },
         "follow": {
-          "text": "Tap Stimulate again and follow the colors. Yellow <term>projection neurons</term> <gloss>(the smell messengers)</gloss> carry the smell inward. Blue <term>Kenyon cells</term> <gloss>(the smell sorters)</gloss> catch it next.",
+          "text": "Tap Stimulate again and follow the colors. Yellow <projection>projection neurons</projection> <gloss>(the smell messengers)</gloss> carry the smell inward. Blue <kenyon>Kenyon cells</kenyon> <gloss>(the smell sorters)</gloss> catch it next.",
           "result": "The blue cells turn each smell into its own pattern."
         },
         "read": {
-          "text": "Tap Stimulate once more. Now watch the pink <term>output neurons</term> <gloss>(the memory readers)</gloss>. They read the blue pattern.",
+          "text": "Tap Stimulate once more. Now watch the pink <output>output neurons</output> <gloss>(the memory readers)</gloss>. They read the blue pattern.",
           "result": "When a smell comes with sugar or danger, the links from blue to pink change. Scientists think that change is the memory."
         },
         "silence": {
-          "text": "Now silence the <term>Kenyon cells</term> <gloss>(the smell sorters)</gloss>. We will send the smell for you. What disappears?",
+          "text": "Now silence the <kenyon>Kenyon cells</kenyon> <gloss>(the smell sorters)</gloss>. We will send the smell for you. What disappears?",
           "result": "The pink light almost vanishes. The smell still gets in, but the memory readers get nothing to read."
         },
         "restore": {
-          "text": "Tap the <term>Kenyon cells</term> <gloss>(the smell sorters)</gloss> button again to switch them back on. We will send the same smell.",
+          "text": "Tap the <kenyon>Kenyon cells</kenyon> <gloss>(the smell sorters)</gloss> button again to switch them back on. We will send the same smell.",
           "result": "The pink light comes back. The fly can read its smell memory again."
         }
       },
       "check": {
-        "question": "You silenced the <term>Kenyon cells</term> <gloss>(the blue cells)</gloss>. Why did the pink cells go dark?",
+        "question": "You silenced the <kenyon>Kenyon cells</kenyon> <gloss>(the blue cells)</gloss>. Why did the pink cells go dark?",
         "choices": {
           "never": {
             "text": "The smell never got into the fly.",
@@ -337,19 +592,19 @@
       "description": "Push a real fruit fly’s internal compass around, then silence the ring neurons and watch its sense of direction drift. A free 10-minute lesson.",
       "steps": {
         "left": {
-          "text": "Tap Stimulate to fire the left <term>turn neurons</term> <gloss>(the turning signal)</gloss>. Then watch the compass dial.",
-          "result": "The <term>compass neurons</term> <gloss>(the heading cells)</gloss> light up on one side. That bright patch, the bump, marks which way the fly faces."
+          "text": "Tap Stimulate to fire the left <turn>turn neurons</turn> <gloss>(the turning signal)</gloss>. Then watch the compass dial.",
+          "result": "The <compass>compass neurons</compass> <gloss>(the heading cells)</gloss> light up on one side. That bright patch, the bump, marks which way the fly faces."
         },
         "right": {
-          "text": "Now tap Stimulate on the right <term>turn neurons</term> <gloss>(the other signal)</gloss>. Keep your eyes on the bump.",
+          "text": "Now tap Stimulate on the right <turn>turn neurons</turn> <gloss>(the other signal)</gloss>. Keep your eyes on the bump.",
           "result": "The bump swung around the dial. Turning signals from each side push it opposite ways, so the fly's heading turns too."
         },
         "silence": {
-          "text": "Silence the <term>ring neurons</term> <gloss>(the landmark carriers)</gloss>. They bring in what the fly sees. We will send the right signal for you.",
+          "text": "Silence the <ring>ring neurons</ring> <gloss>(the landmark carriers)</gloss>. They bring in what the fly sees. We will send the right signal for you.",
           "result": "The bump slips off its spot and wanders. Without landmarks, the compass drifts."
         },
         "restore": {
-          "text": "Tap the <term>ring neurons</term> <gloss>(the landmark carriers)</gloss> button again to switch them back on. We will send the same signal.",
+          "text": "Tap the <ring>ring neurons</ring> <gloss>(the landmark carriers)</gloss> button again to switch them back on. We will send the same signal.",
           "result": "The bump holds its spot again. Landmarks keep the fly's compass true."
         }
       },
@@ -381,24 +636,24 @@
       "description": "Follow a swatter from a real fruit fly’s eyes down the giant fiber to its legs in 30 ms, then cut the wire. A free 10-minute lesson.",
       "steps": {
         "loom": {
-          "text": "A swatter swoops at the fly. Tap Stimulate to fire the <term>looming neurons</term> <gloss>(the swatter spotters)</gloss>.",
-          "result": "They fire, and in a few thousandths of a second the <term>giant fiber</term> <gloss>(the escape wire)</gloss> fires too."
+          "text": "A swatter swoops at the fly. Tap Stimulate to fire the <looming>looming neurons</looming> <gloss>(the swatter spotters)</gloss>.",
+          "result": "They fire, and in a few thousandths of a second the <giantfiber>giant fiber</giantfiber> <gloss>(the escape wire)</gloss> fires too."
         },
         "jump": {
-          "text": "Tap Stimulate again. Follow the <term>giant fiber</term> <gloss>(the escape wire)</gloss> down into the <term>nerve cord</term> <gloss>(its spinal cord)</gloss>.",
-          "result": "The <term>jump neurons</term> <gloss>(the leg kickers)</gloss> fire within 30 milliseconds. They kick the middle legs, and the fly leaps away."
+          "text": "Tap Stimulate again. Follow the <giantfiber>giant fiber</giantfiber> <gloss>(the escape wire)</gloss> down into the <nervecord>nerve cord</nervecord> <gloss>(its spinal cord)</gloss>.",
+          "result": "The <jump>jump neurons</jump> <gloss>(the leg kickers)</gloss> fire within 30 milliseconds. They kick the middle legs, and the fly leaps away."
         },
         "silence": {
-          "text": "Now silence the <term>giant fiber</term> <gloss>(the escape wire)</gloss>. We will send the swatter. Watch the <term>jump neurons</term> <gloss>(the leg kickers)</gloss>.",
-          "result": "The <term>looming neurons</term> <gloss>(the swatter spotters)</gloss> still fire, but the <term>jump neurons</term> stay dark. The fast escape is gone."
+          "text": "Now silence the <giantfiber>giant fiber</giantfiber> <gloss>(the escape wire)</gloss>. We will send the swatter. Watch the <jump>jump neurons</jump> <gloss>(the leg kickers)</gloss>.",
+          "result": "The <looming>looming neurons</looming> <gloss>(the swatter spotters)</gloss> still fire, but the <jump>jump neurons</jump> stay dark. The fast escape is gone."
         },
         "restore": {
-          "text": "Tap the <term>giant fiber</term> <gloss>(the escape wire)</gloss> button again to switch it back on. We will send the same swatter.",
-          "result": "The <term>jump neurons</term> <gloss>(the leg kickers)</gloss> fire again. Real flies also have slower ways out, but this is the fastest."
+          "text": "Tap the <giantfiber>giant fiber</giantfiber> <gloss>(the escape wire)</gloss> button again to switch it back on. We will send the same swatter.",
+          "result": "The <jump>jump neurons</jump> <gloss>(the leg kickers)</gloss> fire again. Real flies also have slower ways out, but this is the fastest."
         }
       },
       "check": {
-        "question": "You silenced the <term>giant fiber</term> <gloss>(the escape wire)</gloss>. Why did the leg kickers stay dark?",
+        "question": "You silenced the <giantfiber>giant fiber</giantfiber> <gloss>(the escape wire)</gloss>. Why did the leg kickers stay dark?",
         "choices": {
           "never": {
             "text": "The fly never saw the swatter.",
@@ -435,6 +690,12 @@
         "pn": "Stops the antennal lobe from carrying that smell into the mushroom body.",
         "kc": "Quiets the cells that tell one smell apart from another.",
         "mbon": "Blocks the mushroom body from passing the result to the rest of the brain."
+      },
+      "plain": {
+        "orn": "Smell catchers",
+        "pn": "Smell messengers",
+        "kc": "Smell sorters",
+        "mbon": "Memory readers"
       }
     },
     "visual": {
@@ -451,6 +712,12 @@
       "silence": {
         "ring": "Blocks the ring neurons that carry landmarks in from the eyes.",
         "compass": "Quiets the E-PG heading cells that make up the compass."
+      },
+      "plain": {
+        "ring": "Landmark carriers",
+        "compass": "Heading cells",
+        "turn-left": "Left turning signal",
+        "turn-right": "Right turning signal"
       }
     },
     "escape": {
@@ -466,6 +733,11 @@
         "looming": "Stops the eye cells from reporting the swoop.",
         "gf": "Blocks the giant fiber, the fly’s fastest escape wire.",
         "jump": "Quiets the motor neurons that kick the middle legs."
+      },
+      "plain": {
+        "looming": "Swatter spotters",
+        "gf": "Escape wire",
+        "jump": "Leg kickers"
       }
     }
   },
@@ -566,6 +838,49 @@
       "left": "L",
       "right": "R",
       "caption": "Compass · from behind"
+    },
+    "terms": {
+      "hint": "Explanation of {term}",
+      "close": "Close"
+    },
+    "legend": {
+      "title": "Color key",
+      "glow": "Glowing = firing now"
+    },
+    "intro": {
+      "label": "How to read this brain",
+      "progress": "{number} of {total}",
+      "skip": "Skip",
+      "next": "Next",
+      "start": "Start the lesson",
+      "screens": {
+        "lines": {
+          "title": "These lines are real neurons",
+          "text": "Every line is one real nerve cell from a fruit fly, drawn where it sits in the fly’s body. Drag the brain to turn it."
+        },
+        "colors": {
+          "title": "Each color is one group of cells",
+          "text": "Cells that do the same job share a color. When a color glows, those cells are firing right now."
+        },
+        "buttons": {
+          "title": "You run the experiment",
+          "text": "Stimulate: we fire these cells. Silence: we switch these cells off. Then you watch what changes."
+        },
+        "time": {
+          "title": "It all plays in slow motion",
+          "text": "A real fly does this in the blink of an eye. Here time runs many times slower, so you can watch the signal travel."
+        }
+      }
+    },
+    "classMode": {
+      "label": "Class mode",
+      "hint": "Class mode: bigger text and buttons for a shared screen"
+    },
+    "demo": {
+      "start": "Show me how it works",
+      "playing": "Showing you how it works",
+      "upNext": "Next, we tap {action}: {name}",
+      "stop": "Stop and take over"
     }
   },
   "errors": {
@@ -579,6 +894,383 @@
       "body": "The page hit an error. Try again, or go back to the lessons.",
       "retry": "Try again",
       "home": "Go to the lessons"
+    }
+  },
+  "terms": {
+    "antenna": {
+      "name": "Antennae",
+      "text": "The two feelers on a fly’s head. A fly smells with them, the way you smell with your nose."
+    },
+    "receptor": {
+      "name": "Smell receptors",
+      "text": "Nerve cells on the antennae that fire when a smell lands on them. Every smell starts here."
+    },
+    "antennallobe": {
+      "name": "Antennal lobe",
+      "text": "The first stop for smells inside the fly’s brain, where the smell receptors hand their signal to the projection neurons."
+    },
+    "projection": {
+      "name": "Projection neurons",
+      "text": "Nerve cells that carry the smell signal from the antennal lobe deeper into the brain, to the mushroom body."
+    },
+    "mushroombody": {
+      "name": "Mushroom body",
+      "text": "A mushroom-shaped part of an insect’s brain where smells are sorted and smell memories are stored."
+    },
+    "kenyon": {
+      "name": "Kenyon cells",
+      "text": "The small nerve cells of the mushroom body. Each smell switches on a different handful of them, so every smell gets its own pattern."
+    },
+    "output": {
+      "name": "Output neurons",
+      "text": "Nerve cells that read the pattern of the Kenyon cells and pass it on to the rest of the brain. Scientists call them MBONs, short for mushroom body output neurons."
+    },
+    "turn": {
+      "name": "Turn neurons",
+      "text": "Nerve cells that fire when the fly turns and push the bump around the compass. Scientists call them P-EN2 neurons."
+    },
+    "compass": {
+      "name": "Compass neurons",
+      "text": "A ring of nerve cells that keeps track of which way the fly is facing. Scientists call them E-PG neurons."
+    },
+    "ring": {
+      "name": "Ring neurons",
+      "text": "Nerve cells that bring what the fly sees, such as landmarks, to the compass. They quiet the compass neurons, and that holds the bump in place."
+    },
+    "looming": {
+      "name": "Looming neurons",
+      "text": "Nerve cells behind the fly’s eyes that fire when something grows quickly in view, like a swatter coming closer. Scientists call them LC4 and LPLC2."
+    },
+    "giantfiber": {
+      "name": "Giant fiber",
+      "text": "A very thick nerve cell that runs from the brain down into the nerve cord. It carries the fly’s fastest escape signal."
+    },
+    "nervecord": {
+      "name": "Nerve cord",
+      "text": "The fly’s version of a spinal cord: a bundle of nerve cells in its chest that controls the legs and wings."
+    },
+    "jump": {
+      "name": "Jump neurons",
+      "text": "Motor neurons that make the jump muscles of the middle legs contract, so the fly springs into the air."
+    },
+    "neuron": {
+      "name": "Neuron",
+      "text": "A nerve cell. It receives signals from other cells and, when enough of them add up, sends a signal of its own."
+    },
+    "spike": {
+      "name": "Firing",
+      "text": "A brief electrical pulse that an active neuron sends along its length, also called a spike or an action potential. In the lessons, each flash of light marks one."
+    },
+    "synapse": {
+      "name": "Synapse",
+      "text": "The junction where one neuron passes its signal to the next. The more synapses two cells share, the stronger the link between them."
+    },
+    "transmitter": {
+      "name": "Neurotransmitter",
+      "text": "A chemical that a neuron releases at a synapse to pass its signal on. Some neurotransmitters excite the next cell, and others inhibit it."
+    },
+    "excitation": {
+      "name": "Excitation",
+      "text": "A signal that pushes the next neuron toward firing."
+    },
+    "inhibition": {
+      "name": "Inhibition",
+      "text": "A signal that holds the next neuron back from firing. A network needs it to stay stable and precise."
+    },
+    "acetylcholine": {
+      "name": "Acetylcholine",
+      "text": "The main excitatory neurotransmitter in a fly’s brain. In the lessons, cells that release it excite the cells they connect to."
+    },
+    "gaba": {
+      "name": "GABA",
+      "text": "An inhibitory neurotransmitter, in flies and in people. In the lessons, cells that release GABA quiet the cells they connect to."
+    },
+    "circuit": {
+      "name": "Neural circuit",
+      "text": "A group of neurons wired together to do one job, such as recognizing a smell or setting off a jump."
+    },
+    "connectome": {
+      "name": "Connectome",
+      "text": "A complete wiring diagram of a nervous system: every neuron and every synapse between them. The lessons run on the connectome of one real fruit fly."
+    },
+    "stimulate": {
+      "name": "Stimulate",
+      "text": "The lesson’s button that makes one group of cells fire for a moment, much as scientists switch chosen cells on with light."
+    },
+    "silence": {
+      "name": "Silence",
+      "text": "The lesson’s button that stops one group of cells from firing, to show what the rest of the circuit does without them."
+    },
+    "sensory": {
+      "name": "Sensory neuron",
+      "text": "A neuron that picks up something from the world, such as a smell or a looming shadow, and reports it to the brain."
+    },
+    "motor": {
+      "name": "Motor neuron",
+      "text": "A neuron that carries a command out to a muscle and makes it contract."
+    },
+    "reflex": {
+      "name": "Reflex arc",
+      "text": "The route a reflex takes: from sensory neurons, through one or more relay cells, to the motor neurons that move a muscle."
+    },
+    "electricalsynapse": {
+      "name": "Electrical synapse",
+      "text": "A direct channel between two neurons that passes a signal with almost no delay. The map behind the lessons records chemical synapses only."
+    },
+    "bump": {
+      "name": "Bump",
+      "text": "The patch of active compass neurons. Where it sits on the ring shows which way the fly is facing."
+    },
+    "landmark": {
+      "name": "Landmark",
+      "text": "Something the fly sees that stays in place, like the sun or a tree. The fly uses it to keep its sense of direction steady."
+    },
+    "bridge": {
+      "name": "Bridge",
+      "text": "A bar-shaped part of the fly’s brain, the protocerebral bridge. The compass neurons and the turn neurons both run through it."
+    }
+  },
+  "teachers": {
+    "meta": {
+      "indexTitle": "Teacher guides · WiredMind",
+      "indexDescription": "A lesson plan, expected answers, discussion questions, and a printable student worksheet for each WiredMind lesson.",
+      "guideTitle": "Teacher guide: {title}",
+      "guideDescription": "A 45-minute plan for “{title}”: learning goal, what students should notice, expected answers, discussion questions, and common misconceptions.",
+      "worksheetTitle": "Worksheet: {title}",
+      "worksheetDescription": "A printable student worksheet for “{title}”: predict, try, observe, explain."
+    },
+    "index": {
+      "title": "Teacher guides",
+      "lead": "Everything you need to run each lesson without any training: a 45-minute plan, what students should notice, the answers to expect, and a worksheet to print.",
+      "lesson": "Lesson {number}",
+      "guide": "Teacher guide",
+      "worksheet": "Student worksheet",
+      "demo": "Show it to the class",
+      "generalTerms": "Basic terms"
+    },
+    "topics": {
+      "excitation": "Excitation and inhibition",
+      "synapses": "Synapses and neurotransmitters",
+      "reflex": "Reflex arcs",
+      "structure": "How a network’s structure determines behavior"
+    },
+    "guide": {
+      "eyebrow": "Teacher guide · Lesson {number}",
+      "print": "Print",
+      "lesson": "Open the lesson",
+      "demo": "Play “Show me” in class mode",
+      "worksheet": "Student worksheet",
+      "all": "All teacher guides",
+      "address": "Lesson address",
+      "setupTitle": "What you need",
+      "setup": "A shared screen helps but is optional: a projector, a TV, or a computer screen the class can see. Students need any device with internet access, ideally one for each pair: a laptop, tablet, or phone. Nothing to install and no accounts. Each lesson opens with a short guide to reading the screen, and every scientific term can be tapped for an explanation.",
+      "goalTitle": "Learning goal",
+      "topicsTitle": "Topics it connects to",
+      "planTitle": "A 45-minute plan",
+      "minutes": "{minutes} min",
+      "phases": {
+        "opening": "Opening question",
+        "demo": "Demo with “Show me”",
+        "explore": "Students explore",
+        "discuss": "Discussion"
+      },
+      "plan": {
+        "demo": "Show the lesson in class mode on a shared screen (a projector, a TV, or a computer screen) and press “Show me how it works”. Read each step aloud as it plays. With no shared screen, students open the same walkthrough on their own devices. It stops at the lesson’s question: leave that unanswered for now.",
+        "explore": "Students work in pairs on their own devices, with the worksheet. They write a prediction before each tap, run the lesson, answer its question, and try free play.",
+        "discuss": "Collect the pairs’ answers to the lesson’s question, then use the discussion questions below. End with what the model leaves out."
+      },
+      "noticeTitle": "What students should notice at each step",
+      "step": "Step {number}",
+      "answerTitle": "The lesson’s question, and the answer to expect",
+      "rightChoice": "The right choice",
+      "discussTitle": "Discussion questions",
+      "misconceptionsTitle": "Common misconceptions",
+      "claim": "Students may think:",
+      "fix": "How to address it:",
+      "realTitle": "What’s real and what’s simplified",
+      "real": "Real",
+      "simplified": "Simplified",
+      "realShared": "Every neuron and connection in the lesson comes from the wiring diagram of one real fruit fly, with the real number of synapses between each pair of cells.",
+      "simplifiedShared": "The activity is a simple simulation in which every neuron follows the same basic rules, and it plays in slow motion.",
+      "realMore": "The full list, with numbers",
+      "termsTitle": "Key terms",
+      "curriculumTitle": "Curriculum alignment",
+      "curriculumPending": "This section is not filled in yet. The match to the official biology curriculum is being confirmed with biology instructors."
+    },
+    "worksheet": {
+      "eyebrow": "Student worksheet · Lesson {number}",
+      "name": "Name",
+      "class": "Class",
+      "date": "Date",
+      "address": "Open the lesson at",
+      "predict": "Predict",
+      "predictHint": "Before you tap anything.",
+      "try": "Try",
+      "tryText": "Open the lesson and follow its steps. Before each tap, say out loud what you think will happen.",
+      "observe": "Observe",
+      "observeHint": "For each step: which colors lit up, and which stayed dark?",
+      "step": "Step {number}",
+      "explain": "Explain",
+      "question": "The lesson’s question"
+    },
+    "lessons": {
+      "smell-memory": {
+        "goal": "Students trace a smell from the receptors to the cells that read its memory, and show that silencing one layer of a pathway cuts off everything after it.",
+        "topics": {
+          "synapses": "Each layer passes the signal to the next across synapses. Scientists think the memory itself is a change in the strength of the synapses from Kenyon cells to output neurons.",
+          "structure": "The pathway is a chain of layers, so silencing the Kenyon cells darkens the output neurons even though the smell still gets in.",
+          "excitation": "Stimulate excites cells and Silence holds them off: the lesson’s two tools. In this part of the circuit, each layer excites the next."
+        },
+        "opening": "Ask: “How does your brain know that a smell is one you have met before?” Take a few guesses, then say that today the class will look for the answer inside a fly.",
+        "notice": {
+          "send": "Only the orange smell receptors light up. The signal starts at one edge of the circuit, not everywhere at once.",
+          "follow": "The colors light in order: orange, then yellow, then blue. The signal moves through the layers one after another.",
+          "read": "The pink output neurons light last, and only after the blue Kenyon cells.",
+          "silence": "Orange and yellow still light, blue stays dark, and pink almost vanishes. The smell got in but could go no further.",
+          "restore": "Pink returns as soon as the Kenyon cells are back on. Nothing was damaged: the signal simply had no path."
+        },
+        "answer": "The Kenyon cells pass each smell’s pattern on to the output neurons. With them silenced, the smell still reaches the receptors and the projection neurons, but the output neurons get nothing to read. Send students who answer “the smell never got in” back to look at the orange and yellow cells.",
+        "discuss": {
+          "a": "The smell still entered the brain while the Kenyon cells were silenced. How do we know?",
+          "b": "Suppose the fly learned that this smell means sugar. Where in this circuit would you expect something to change?",
+          "c": "What would you expect to see if you silenced the yellow projection neurons instead? Test it in free play."
+        },
+        "misconceptions": {
+          "a": {
+            "claim": "A memory sits inside one cell, like a file.",
+            "fix": "Go back to the step where pink reads blue. The memory is thought to be in the strength of many connections between the two groups, not in a single cell."
+          },
+          "b": {
+            "claim": "Silencing a cell kills or damages it.",
+            "fix": "Run the last step again: the pink light returns at once. Silenced cells are whole. They are just not firing."
+          },
+          "c": {
+            "claim": "The lesson shows the fly learning a smell.",
+            "fix": "It does not. The model shows where a memory would be stored, but its connections never change. Say so plainly, and ask what would have to be added."
+          }
+        },
+        "real": {
+          "a": "The four groups of cells, and the order they connect in, are the fly’s real smell pathway."
+        },
+        "simplified": {
+          "a": "Stimulate fires all the smell receptors at once. A real smell switches on only some kinds of receptor, in a pattern.",
+          "b": "Nothing in the model learns: it has no reward signal, and its connections never change."
+        },
+        "worksheet": {
+          "predict": {
+            "a": "A smell enters at the antennae. Which color do you think will light up last?",
+            "b": "What do you think will happen to the pink cells if the blue cells are switched off?"
+          },
+          "explain": {
+            "a": "Why did the pink cells go dark when you silenced the blue cells, even though the smell still got in?",
+            "b": "Where in this circuit do scientists think the memory of a smell is stored?"
+          }
+        }
+      },
+      "compass": {
+        "goal": "Students see that a ring of neurons holds the fly’s heading as one patch of activity, and that inhibition from the ring neurons keeps that patch in place.",
+        "topics": {
+          "excitation": "The clearest example in the three lessons. The turn neurons excite the compass and push the bump along; the ring neurons inhibit it and hold the bump still.",
+          "synapses": "The ring neurons are predicted to release GABA, a transmitter that inhibits. The compass and turn neurons release acetylcholine, which excites.",
+          "structure": "The compass neurons are wired in a ring, and that shape is what lets one bump of activity stand for one direction."
+        },
+        "opening": "Ask: “Close your eyes and turn around once. How do you still know which way you are facing?” Then say that a fly does this with a small ring of cells, and the class is about to push them around.",
+        "notice": {
+          "left": "A patch of green compass neurons lights on one side of the ring, and the needle of the dial points at it. That patch is the bump.",
+          "right": "The bump moves around the dial. The two turn signals push it in opposite directions.",
+          "silence": "With the violet ring neurons off, the same signal leaves the bump wandering instead of settling on one spot.",
+          "restore": "The bump holds its place again. Compare the dial with the step before."
+        },
+        "answer": "Nothing told the compass where the landmarks were, so nothing held the bump in place. The turn signal still arrived, because the green cells lit up, so what was missing was an anchor and not an input. For older students: in this model the anchor is the inhibition from the ring neurons.",
+        "discuss": {
+          "a": "Why is a ring a good shape for cells that keep track of direction?",
+          "b": "The ring neurons quiet other cells instead of exciting them. How can switching cells off help a network work better?",
+          "c": "People also lose their sense of direction in the dark or in fog. What does that have in common with the silence step?"
+        },
+        "misconceptions": {
+          "a": {
+            "claim": "The fly has a magnetic compass, like the one in a phone.",
+            "fix": "This compass is a pattern of activity that the fly updates from its own turns and from what it sees. Nothing in this circuit senses magnetism."
+          },
+          "b": {
+            "claim": "More active cells always make a better signal.",
+            "fix": "Compare the last two steps: taking inhibition away made the compass worse. Inhibition is part of how the circuit works."
+          },
+          "c": {
+            "claim": "The bump is an object that travels through the brain.",
+            "fix": "No cell moves. Neighboring cells take turns being active, like a wave going around a stadium crowd."
+          }
+        },
+        "real": {
+          "a": "The compass neurons, the turn neurons, and the ring neurons are real cell types, wired in a ring as they are in the fly."
+        },
+        "simplified": {
+          "a": "In the model the ring neurons carry no picture of the world. Silencing them takes away their inhibition, and that is what lets the bump drift.",
+          "b": "The dial is our own readout of the green cells’ activity. The fly has no dial."
+        },
+        "worksheet": {
+          "predict": {
+            "a": "What do you think the compass dial will show when you fire the left turn neurons? And the right ones?",
+            "b": "What do you think will happen to the bump if the violet ring neurons are switched off?"
+          },
+          "explain": {
+            "a": "Why did the bump drift when the ring neurons were silenced?",
+            "b": "Why is a ring a good shape for cells that keep track of direction?"
+          }
+        }
+      },
+      "escape": {
+        "goal": "Students follow a reflex from the eyes to the leg muscles in about 30 milliseconds, and show that the fast escape depends on one link, the giant fiber.",
+        "topics": {
+          "reflex": "A whole reflex pathway in three parts: sensory neurons (the looming neurons), a relay (the giant fiber), and motor neurons (the jump neurons). Unlike a knee-jerk reflex, this relay runs through the brain.",
+          "structure": "The signal narrows from hundreds of looming neurons onto the giant fiber. That bottleneck is why silencing one kind of cell removes the behavior.",
+          "synapses": "The giant fiber is thick, which makes its signal fast. In a real fly it also uses electrical synapses, the fastest kind; the model has chemical synapses only."
+        },
+        "opening": "Ask: “Why is it so hard to swat a fly?” Collect a few ideas, then say that the class will time the fly’s escape and find the wire behind it.",
+        "notice": {
+          "loom": "The blue looming neurons light first, and the red giant fiber follows almost at once.",
+          "jump": "Activity runs down the giant fiber into the nerve cord, and the yellow jump neurons fire within 30 milliseconds of fly time.",
+          "silence": "Blue still lights, red stays dark, and yellow never fires. The fly saw the swatter, but the message did not reach its legs.",
+          "restore": "Yellow fires again as soon as the giant fiber is back on."
+        },
+        "answer": "The giant fiber carries the jump signal from the looming neurons to the jump neurons. With it silenced, the fly still sees the swatter, because the blue cells light up, but the signal stops before the legs. Real flies also have slower ways out, as the lesson’s last step says.",
+        "discuss": {
+          "a": "This escape is faster than a blink. Which features of the pathway make it so fast?",
+          "b": "Why might it help an animal to have one fast escape route and several slower ones?",
+          "c": "Compare this pathway with a human reflex you know, such as pulling your hand away from something hot. What is the same, and what is different?"
+        },
+        "misconceptions": {
+          "a": {
+            "claim": "The fly decides to jump.",
+            "fix": "The fast jump is a reflex: the wiring carries the signal straight through. There is no stage where the fly weighs its options."
+          },
+          "b": {
+            "claim": "If the fly did not jump, it did not see the swatter.",
+            "fix": "The silence step separates the two. The looming neurons fire, so the fly saw it. Seeing and acting are different stages of one pathway."
+          },
+          "c": {
+            "claim": "One neuron cannot matter in a whole brain.",
+            "fix": "Here one kind of cell carries the entire fast signal. Wherever a pathway narrows to a few cells, each of them matters a great deal."
+          }
+        },
+        "real": {
+          "a": "The looming neurons, the giant fiber, and the jump neurons are real, and so is the route between them."
+        },
+        "simplified": {
+          "a": "The 30 milliseconds come from the model’s simple timing rules, not from recordings of a fly. They land in a realistic range.",
+          "b": "Stimulate fires all the looming neurons at once. A real swatter switches them on gradually as it grows in view."
+        },
+        "worksheet": {
+          "predict": {
+            "a": "A swatter is coming. In what order do you think the three colors will light up?",
+            "b": "What do you think will happen to the yellow jump neurons if the red giant fiber is switched off?"
+          },
+          "explain": {
+            "a": "Why did the jump neurons stay dark, even though the fly saw the swatter?",
+            "b": "Which features of this pathway make the escape so fast?"
+          }
+        }
+      }
     }
   }
 }

@@ -6,6 +6,27 @@ export const MAX_PAUSE_MS = 2500;
 /** Pause before the first press, so the viewer sees the brain at rest. */
 export const FIRST_PAUSE_MS = 700;
 
+/** How a replay spends the wall time between presses. */
+export type Pace = {
+  /** Longest pause kept before the first press. */
+  firstPauseMs: number;
+  /** Longest pause kept between two presses. */
+  maxPauseMs: number;
+  /**
+   * Count each pause from the moment the brain went quiet instead of from
+   * the last press, and never press while it is busy. For a walkthrough,
+   * where the pause is reading time.
+   */
+  fromQuiet: boolean;
+};
+
+/** A shared run: brisk, and pressed on the recorded ticks whatever the brain is doing. */
+export const SHARED_PACE: Pace = {
+  firstPauseMs: FIRST_PAUSE_MS,
+  maxPauseMs: MAX_PAUSE_MS,
+  fromQuiet: false,
+};
+
 type Stepper = {
   readonly clock: number;
   advance(ticks: number, keep?: boolean): StepResult;
@@ -31,8 +52,13 @@ export class Playback {
   /** Wall time of the last press, or of the first frame. Null until then. */
   private lastWall: number | null = null;
   private lastRecordedWall = 0;
+  /** Wall time the brain went quiet ahead of the next press. Only kept when the pace counts from it. */
+  private quietSince: number | null = null;
 
-  constructor(readonly replay: Replay) {}
+  constructor(
+    readonly replay: Replay,
+    readonly pace: Pace = SHARED_PACE,
+  ) {}
 
   get applied(): number {
     return this.next;
@@ -59,15 +85,30 @@ export class Playback {
     let left = budget;
     let since = this.lastWall ?? nowWall;
     this.lastWall = since;
+    // A paced press that waits on a busy brain lets the brain keep running.
+    let waitingOnBrain = false;
     while (!this.finished) {
       const action = this.replay.actions[this.next];
       if (!action) break;
       if (session.clock >= action.tick) {
         const pause =
           this.next === 0
-            ? Math.min(action.wallMs, FIRST_PAUSE_MS)
-            : Math.min(action.wallMs - this.lastRecordedWall, MAX_PAUSE_MS);
-        if (quiet() && nowWall - since < pause) break;
+            ? Math.min(action.wallMs, this.pace.firstPauseMs)
+            : Math.min(
+                action.wallMs - this.lastRecordedWall,
+                this.pace.maxPauseMs,
+              );
+        const still = quiet();
+        if (this.pace.fromQuiet) {
+          if (!still) {
+            this.quietSince = null;
+            waitingOnBrain = true;
+            break;
+          }
+          this.quietSince ??= nowWall;
+          if (nowWall - this.quietSince < pause) break;
+        } else if (still && nowWall - since < pause) break;
+        this.quietSince = null;
         apply(action.command);
         since = nowWall;
         this.lastWall = nowWall;
@@ -83,6 +124,10 @@ export class Playback {
       result = { spikes: step.spikes, finished };
       left -= ticks;
     }
-    return { result, applied, left: this.finished ? left : 0 };
+    return {
+      result,
+      applied,
+      left: this.finished || waitingOnBrain ? left : 0,
+    };
   }
 }

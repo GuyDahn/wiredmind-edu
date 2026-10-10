@@ -3,7 +3,7 @@
     "locale": "vi",
     "reviewed": false,
     "model": "claude-opus-5-5",
-    "draftedAt": "2026-09-27"
+    "draftedAt": "2026-10-05"
   },
   "meta": {
     "home": {
@@ -143,7 +143,11 @@
       },
       "source": "Xem mã nguồn trên GitHub",
       "science": "Điều gì là thật, điều gì được đơn giản hóa",
-      "feedback": "Có điều gì chưa rõ hoặc bị lỗi không? Hãy cho tôi biết."
+      "feedback": "Có điều gì chưa rõ hoặc bị lỗi không? Hãy cho tôi biết.",
+      "guidesTitle": "Dạy ngay một bài vào ngày mai",
+      "guidesLead": "Mỗi bài học có hướng dẫn cho giáo viên với giáo án 45 phút và một phiếu học tập để in.",
+      "guide": "Hướng dẫn cho giáo viên",
+      "worksheet": "Phiếu học tập"
     }
   },
   "about": {
@@ -247,28 +251,28 @@
       "description": "Gửi một mùi vào não ruồi giấm thật, lần theo nó đến thể nấm và tìm các tế bào lưu giữ ký ức về mùi. Bài học miễn phí dài 10 phút.",
       "steps": {
         "send": {
-          "text": "Ruồi ngửi mùi bằng <term>anten</term> <gloss>(hai sợi râu)</gloss>. Nhấn nút Kích thích để gửi một mùi vào. Hãy xem các nơ-ron màu cam sáng lên.",
-          "result": "Những nơ-ron màu cam ấy là <term>thụ thể mùi</term> <gloss>(người bắt mùi)</gloss>. Chúng phát xung đầu tiên. Mọi mùi đều bắt đầu từ đây."
+          "text": "Ruồi ngửi mùi bằng <antenna>anten</antenna> <gloss>(hai sợi râu)</gloss>. Nhấn nút Kích thích để gửi một mùi vào. Hãy xem các nơ-ron màu cam sáng lên.",
+          "result": "Những nơ-ron màu cam ấy là <receptor>thụ thể mùi</receptor> <gloss>(người bắt mùi)</gloss>. Chúng phát xung đầu tiên. Mọi mùi đều bắt đầu từ đây."
         },
         "follow": {
-          "text": "Nhấn nút Kích thích lần nữa và dõi theo các màu. Màu vàng là <term>nơ-ron chiếu</term> <gloss>(người đưa tin mùi)</gloss>, chúng mang mùi vào trong. Màu xanh dương là <term>tế bào Kenyon</term> <gloss>(người phân loại mùi)</gloss>, chúng đón mùi ngay sau đó.",
+          "text": "Nhấn nút Kích thích lần nữa và dõi theo các màu. Màu vàng là <projection>nơ-ron chiếu</projection> <gloss>(người đưa tin mùi)</gloss>, chúng mang mùi vào trong. Màu xanh dương là <kenyon>tế bào Kenyon</kenyon> <gloss>(người phân loại mùi)</gloss>, chúng đón mùi ngay sau đó.",
           "result": "Các tế bào màu xanh dương biến mỗi mùi thành một mẫu hình riêng."
         },
         "read": {
-          "text": "Nhấn nút Kích thích thêm một lần nữa. Giờ hãy nhìn màu hồng: đó là <term>nơ-ron đầu ra</term> <gloss>(người đọc ký ức)</gloss>. Chúng đọc mẫu hình của màu xanh dương.",
+          "text": "Nhấn nút Kích thích thêm một lần nữa. Giờ hãy nhìn màu hồng: đó là <output>nơ-ron đầu ra</output> <gloss>(người đọc ký ức)</gloss>. Chúng đọc mẫu hình của màu xanh dương.",
           "result": "Khi một mùi đi kèm với đồ ngọt hoặc mối nguy hiểm, các liên kết từ màu xanh dương sang màu hồng sẽ thay đổi. Các nhà khoa học cho rằng chính sự thay đổi đó là ký ức."
         },
         "silence": {
-          "text": "Giờ hãy làm im lặng <term>tế bào Kenyon</term> <gloss>(người phân loại mùi)</gloss>. Chúng mình sẽ gửi mùi giúp bạn. Điều gì sẽ biến mất?",
+          "text": "Giờ hãy làm im lặng <kenyon>tế bào Kenyon</kenyon> <gloss>(người phân loại mùi)</gloss>. Chúng mình sẽ gửi mùi giúp bạn. Điều gì sẽ biến mất?",
           "result": "Ánh sáng màu hồng gần như tắt hẳn. Mùi vẫn vào được, nhưng người đọc ký ức chẳng có gì để đọc."
         },
         "restore": {
-          "text": "Nhấn nút <term>tế bào Kenyon</term> <gloss>(người phân loại mùi)</gloss> một lần nữa để bật lại chúng. Chúng mình sẽ gửi đúng mùi đó.",
+          "text": "Nhấn nút <kenyon>tế bào Kenyon</kenyon> <gloss>(người phân loại mùi)</gloss> một lần nữa để bật lại chúng. Chúng mình sẽ gửi đúng mùi đó.",
           "result": "Ánh sáng màu hồng quay trở lại. Ruồi lại đọc được ký ức về mùi của nó."
         }
       },
       "check": {
-        "question": "Bạn đã làm im lặng <term>tế bào Kenyon</term> <gloss>(màu xanh dương)</gloss>. Vì sao các tế bào màu hồng lại tối đi?",
+        "question": "Bạn đã làm im lặng <kenyon>tế bào Kenyon</kenyon> <gloss>(màu xanh dương)</gloss>. Vì sao các tế bào màu hồng lại tối đi?",
         "choices": {
           "never": {
             "text": "Mùi không hề vào được bên trong ruồi.",
@@ -295,19 +299,19 @@
       "description": "Đẩy la bàn trong não ruồi giấm thật xoay vòng, rồi làm im lặng nơ-ron vòng và xem cảm giác phương hướng của ruồi trôi đi. Bài học miễn phí dài 10 phút.",
       "steps": {
         "left": {
-          "text": "Nhấn nút Kích thích để <term>nơ-ron rẽ trái</term> <gloss>(tín hiệu rẽ)</gloss> phát xung. Sau đó hãy nhìn mặt la bàn.",
-          "result": "<term>Nơ-ron la bàn</term> <gloss>(tế bào chỉ hướng)</gloss> sáng lên ở một phía. Đốm sáng đó cho biết ruồi đang quay mặt về hướng nào."
+          "text": "Nhấn nút Kích thích để <turn>nơ-ron rẽ trái</turn> <gloss>(tín hiệu rẽ)</gloss> phát xung. Sau đó hãy nhìn mặt la bàn.",
+          "result": "<compass>Nơ-ron la bàn</compass> <gloss>(tế bào chỉ hướng)</gloss> sáng lên ở một phía. Đốm sáng đó cho biết ruồi đang quay mặt về hướng nào."
         },
         "right": {
-          "text": "Giờ hãy nhấn nút Kích thích của <term>nơ-ron rẽ phải</term> <gloss>(tín hiệu kia)</gloss>. Đừng rời mắt khỏi đốm sáng.",
+          "text": "Giờ hãy nhấn nút Kích thích của <turn>nơ-ron rẽ phải</turn> <gloss>(tín hiệu kia)</gloss>. Đừng rời mắt khỏi đốm sáng.",
           "result": "Đốm sáng đã xoay quanh mặt la bàn. Tín hiệu rẽ từ mỗi bên đẩy nó theo hai hướng ngược nhau, nên hướng của ruồi cũng xoay theo."
         },
         "silence": {
-          "text": "Hãy làm im lặng <term>nơ-ron vòng</term> <gloss>(người mang điểm mốc)</gloss>. Chúng đưa vào những gì ruồi nhìn thấy. Chúng mình sẽ gửi tín hiệu rẽ phải giúp bạn.",
+          "text": "Hãy làm im lặng <ring>nơ-ron vòng</ring> <gloss>(người mang điểm mốc)</gloss>. Chúng đưa vào những gì ruồi nhìn thấy. Chúng mình sẽ gửi tín hiệu rẽ phải giúp bạn.",
           "result": "Đốm sáng trượt khỏi chỗ của nó và đi lang thang. Không có điểm mốc, la bàn bị trôi."
         },
         "restore": {
-          "text": "Nhấn nút <term>nơ-ron vòng</term> <gloss>(người mang điểm mốc)</gloss> một lần nữa để bật lại chúng. Chúng mình sẽ gửi đúng tín hiệu đó.",
+          "text": "Nhấn nút <ring>nơ-ron vòng</ring> <gloss>(người mang điểm mốc)</gloss> một lần nữa để bật lại chúng. Chúng mình sẽ gửi đúng tín hiệu đó.",
           "result": "Đốm sáng lại đứng yên đúng chỗ. Điểm mốc giúp la bàn của ruồi luôn chỉ đúng."
         }
       },
@@ -339,24 +343,24 @@
       "description": "Lần theo chiếc vỉ đập ruồi từ mắt ruồi giấm thật, dọc sợi khổng lồ xuống tận chân chỉ trong 30 ms, rồi cắt sợi dây đó. Bài học miễn phí dài 10 phút.",
       "steps": {
         "loom": {
-          "text": "Một chiếc vỉ đập ruồi đang lao xuống con ruồi. Nhấn nút Kích thích để <term>nơ-ron phát hiện vật lao tới</term> <gloss>(bộ dò vỉ ruồi)</gloss> phát xung.",
-          "result": "Chúng phát xung, và chỉ vài phần nghìn giây sau, <term>sợi khổng lồ</term> <gloss>(dây thoát hiểm)</gloss> cũng phát xung theo."
+          "text": "Một chiếc vỉ đập ruồi đang lao xuống con ruồi. Nhấn nút Kích thích để <looming>nơ-ron phát hiện vật lao tới</looming> <gloss>(bộ dò vỉ ruồi)</gloss> phát xung.",
+          "result": "Chúng phát xung, và chỉ vài phần nghìn giây sau, <giantfiber>sợi khổng lồ</giantfiber> <gloss>(dây thoát hiểm)</gloss> cũng phát xung theo."
         },
         "jump": {
-          "text": "Nhấn nút Kích thích lần nữa. Lần theo <term>sợi khổng lồ</term> <gloss>(dây thoát hiểm)</gloss> xuống tận <term>dây thần kinh bụng</term> <gloss>(tủy sống của ruồi)</gloss>.",
-          "result": "<term>Nơ-ron nhảy</term> <gloss>(bộ đạp chân)</gloss> phát xung trong vòng 30 mili giây. Chúng khiến đôi chân giữa đạp mạnh, và ruồi nhảy vọt đi."
+          "text": "Nhấn nút Kích thích lần nữa. Lần theo <giantfiber>sợi khổng lồ</giantfiber> <gloss>(dây thoát hiểm)</gloss> xuống tận <nervecord>dây thần kinh bụng</nervecord> <gloss>(tủy sống của ruồi)</gloss>.",
+          "result": "<jump>Nơ-ron nhảy</jump> <gloss>(bộ đạp chân)</gloss> phát xung trong vòng 30 mili giây. Chúng khiến đôi chân giữa đạp mạnh, và ruồi nhảy vọt đi."
         },
         "silence": {
-          "text": "Giờ hãy làm im lặng <term>sợi khổng lồ</term> <gloss>(dây thoát hiểm)</gloss>. Chúng mình sẽ gửi vỉ đập ruồi tới. Hãy quan sát <term>nơ-ron nhảy</term> <gloss>(bộ đạp chân)</gloss>.",
-          "result": "<term>Nơ-ron phát hiện vật lao tới</term> <gloss>(bộ dò vỉ ruồi)</gloss> vẫn phát xung, nhưng <term>nơ-ron nhảy</term> thì tối om. Cú thoát hiểm nhanh không còn nữa."
+          "text": "Giờ hãy làm im lặng <giantfiber>sợi khổng lồ</giantfiber> <gloss>(dây thoát hiểm)</gloss>. Chúng mình sẽ gửi vỉ đập ruồi tới. Hãy quan sát <jump>nơ-ron nhảy</jump> <gloss>(bộ đạp chân)</gloss>.",
+          "result": "<looming>Nơ-ron phát hiện vật lao tới</looming> <gloss>(bộ dò vỉ ruồi)</gloss> vẫn phát xung, nhưng <jump>nơ-ron nhảy</jump> thì tối om. Cú thoát hiểm nhanh không còn nữa."
         },
         "restore": {
-          "text": "Nhấn nút <term>sợi khổng lồ</term> <gloss>(dây thoát hiểm)</gloss> một lần nữa để bật lại nó. Chúng mình sẽ gửi đúng chiếc vỉ đó.",
-          "result": "<term>Nơ-ron nhảy</term> <gloss>(bộ đạp chân)</gloss> lại phát xung. Ruồi thật còn có những đường thoát chậm hơn, nhưng đây là đường nhanh nhất."
+          "text": "Nhấn nút <giantfiber>sợi khổng lồ</giantfiber> <gloss>(dây thoát hiểm)</gloss> một lần nữa để bật lại nó. Chúng mình sẽ gửi đúng chiếc vỉ đó.",
+          "result": "<jump>Nơ-ron nhảy</jump> <gloss>(bộ đạp chân)</gloss> lại phát xung. Ruồi thật còn có những đường thoát chậm hơn, nhưng đây là đường nhanh nhất."
         }
       },
       "check": {
-        "question": "Bạn đã làm im lặng <term>sợi khổng lồ</term> <gloss>(dây thoát hiểm)</gloss>. Vì sao bộ đạp chân vẫn tối?",
+        "question": "Bạn đã làm im lặng <giantfiber>sợi khổng lồ</giantfiber> <gloss>(dây thoát hiểm)</gloss>. Vì sao bộ đạp chân vẫn tối?",
         "choices": {
           "never": {
             "text": "Ruồi không hề nhìn thấy chiếc vỉ.",
@@ -393,6 +397,12 @@
         "pn": "Ngăn thùy râu chuyển mùi đó vào thể nấm.",
         "kc": "Làm im các tế bào giúp phân biệt mùi này với mùi khác.",
         "mbon": "Chặn thể nấm gửi kết quả đến phần còn lại của não."
+      },
+      "plain": {
+        "orn": "Người bắt mùi",
+        "pn": "Người đưa tin mùi",
+        "kc": "Người phân loại mùi",
+        "mbon": "Người đọc ký ức"
       }
     },
     "visual": {
@@ -409,6 +419,12 @@
       "silence": {
         "ring": "Chặn các nơ-ron vòng, vốn đưa điểm mốc từ mắt vào.",
         "compass": "Làm im các tế bào chỉ hướng E-PG tạo nên la bàn."
+      },
+      "plain": {
+        "ring": "Người mang điểm mốc",
+        "compass": "Tế bào chỉ hướng",
+        "turn-left": "Tín hiệu rẽ trái",
+        "turn-right": "Tín hiệu rẽ phải"
       }
     },
     "escape": {
@@ -424,6 +440,11 @@
         "looming": "Ngăn các tế bào thị giác báo tin có vật lao tới.",
         "gf": "Chặn sợi khổng lồ, dây thoát hiểm nhanh nhất của ruồi.",
         "jump": "Làm im các nơ-ron vận động khiến đôi chân giữa đạp mạnh."
+      },
+      "plain": {
+        "looming": "Bộ dò vỉ ruồi",
+        "gf": "Dây thoát hiểm",
+        "jump": "Bộ đạp chân"
       }
     }
   },
@@ -524,6 +545,49 @@
       "left": "T",
       "right": "P",
       "caption": "La bàn · nhìn từ phía sau"
+    },
+    "terms": {
+      "hint": "Giải thích: {term}",
+      "close": "Đóng"
+    },
+    "legend": {
+      "title": "Chú giải màu",
+      "glow": "Phát sáng = đang phát xung"
+    },
+    "intro": {
+      "label": "Cách đọc bộ não này",
+      "progress": "{number}/{total}",
+      "skip": "Bỏ qua",
+      "next": "Tiếp theo",
+      "start": "Bắt đầu bài học",
+      "screens": {
+        "lines": {
+          "title": "Những đường này là nơ-ron thật",
+          "text": "Mỗi đường là một tế bào thần kinh thật của ruồi giấm, vẽ đúng vị trí của nó trong cơ thể ruồi. Kéo bộ não để xoay."
+        },
+        "colors": {
+          "title": "Mỗi màu là một nhóm tế bào",
+          "text": "Các tế bào làm cùng một việc thì có cùng màu. Khi một màu phát sáng, các tế bào đó đang phát xung."
+        },
+        "buttons": {
+          "title": "Bạn là người làm thí nghiệm",
+          "text": "Kích thích: chúng mình cho các tế bào này phát xung. Làm im lặng: chúng mình tắt chúng đi. Rồi bạn xem điều gì thay đổi."
+        },
+        "time": {
+          "title": "Mọi thứ đều được quay chậm",
+          "text": "Ruồi thật làm việc này trong chớp mắt. Ở đây thời gian chạy chậm hơn nhiều lần để bạn kịp xem tín hiệu lan đi."
+        }
+      }
+    },
+    "classMode": {
+      "label": "Chế độ lớp học",
+      "hint": "Chế độ lớp học: chữ và nút to hơn cho màn hình chung"
+    },
+    "demo": {
+      "start": "Cho mình xem cách hoạt động",
+      "playing": "Đang cho bạn xem cách hoạt động",
+      "upNext": "Tiếp theo, chúng mình nhấn {action}: {name}",
+      "stop": "Dừng lại và tự điều khiển"
     }
   },
   "errors": {
@@ -537,6 +601,383 @@
       "body": "Trang đã gặp lỗi. Hãy thử lại hoặc quay lại các bài học.",
       "retry": "Thử lại",
       "home": "Đến các bài học"
+    }
+  },
+  "terms": {
+    "antenna": {
+      "name": "Anten",
+      "text": "Hai sợi râu trên đầu ruồi. Ruồi ngửi bằng anten, giống như bạn ngửi bằng mũi."
+    },
+    "receptor": {
+      "name": "Thụ thể mùi",
+      "text": "Các tế bào thần kinh trên anten, phát xung khi có mùi bám vào. Mọi mùi đều bắt đầu từ đây."
+    },
+    "antennallobe": {
+      "name": "Thùy râu",
+      "text": "Trạm dừng đầu tiên của mùi trong não ruồi, nơi thụ thể mùi chuyển tín hiệu cho nơ-ron chiếu."
+    },
+    "projection": {
+      "name": "Nơ-ron chiếu",
+      "text": "Các tế bào thần kinh mang tín hiệu mùi từ thùy râu vào sâu trong não, đến thể nấm."
+    },
+    "mushroombody": {
+      "name": "Thể nấm",
+      "text": "Một phần hình cây nấm trong não côn trùng, nơi mùi được phân loại và ký ức về mùi được lưu giữ."
+    },
+    "kenyon": {
+      "name": "Tế bào Kenyon",
+      "text": "Các tế bào thần kinh nhỏ của thể nấm. Mỗi mùi bật một nhóm nhỏ khác nhau, nên mùi nào cũng có mẫu hình riêng."
+    },
+    "output": {
+      "name": "Nơ-ron đầu ra",
+      "text": "Tế bào thần kinh đọc mẫu hình của tế bào Kenyon rồi chuyển cho các vùng não khác. Giới khoa học gọi là MBON: nơ-ron đầu ra của thể nấm."
+    },
+    "turn": {
+      "name": "Nơ-ron rẽ",
+      "text": "Các tế bào thần kinh phát xung khi ruồi rẽ và đẩy đốm sáng chạy quanh la bàn. Giới khoa học gọi chúng là nơ-ron P-EN2."
+    },
+    "compass": {
+      "name": "Nơ-ron la bàn",
+      "text": "Một vòng tế bào thần kinh theo dõi xem ruồi đang quay mặt về hướng nào. Giới khoa học gọi chúng là nơ-ron E-PG."
+    },
+    "ring": {
+      "name": "Nơ-ron vòng",
+      "text": "Tế bào thần kinh đưa những gì ruồi thấy, như điểm mốc, đến la bàn. Chúng kìm bớt nơ-ron la bàn, nhờ đó đốm sáng đứng yên."
+    },
+    "looming": {
+      "name": "Nơ-ron phát hiện vật lao tới",
+      "text": "Tế bào thần kinh sau mắt ruồi, phát xung khi có vật to nhanh lên trước mắt, như chiếc vỉ lao tới. Giới khoa học gọi là LC4 và LPLC2."
+    },
+    "giantfiber": {
+      "name": "Sợi khổng lồ",
+      "text": "Một tế bào thần kinh rất to, chạy từ não xuống dây thần kinh bụng. Nó mang tín hiệu thoát hiểm nhanh nhất của ruồi."
+    },
+    "nervecord": {
+      "name": "Dây thần kinh bụng",
+      "text": "Giống như tủy sống của ruồi: một bó tế bào thần kinh trong ngực, điều khiển chân và cánh."
+    },
+    "jump": {
+      "name": "Nơ-ron nhảy",
+      "text": "Các nơ-ron vận động làm cơ nhảy ở đôi chân giữa co lại, khiến ruồi bật lên không trung."
+    },
+    "neuron": {
+      "name": "Nơ-ron",
+      "text": "Một tế bào thần kinh. Nó nhận tín hiệu từ các tế bào khác và khi đủ tín hiệu cộng lại, nó gửi đi tín hiệu của riêng mình."
+    },
+    "spike": {
+      "name": "Phát xung",
+      "text": "Một xung điện ngắn mà nơ-ron đang hoạt động gửi dọc theo chiều dài của nó, còn gọi là xung thần kinh hay điện thế hoạt động. Trong bài học, mỗi lần lóe sáng là một xung."
+    },
+    "synapse": {
+      "name": "Xináp",
+      "text": "Chỗ nối nơi một nơ-ron truyền tín hiệu cho nơ-ron kế tiếp. Hai tế bào có chung càng nhiều xináp thì liên kết giữa chúng càng mạnh."
+    },
+    "transmitter": {
+      "name": "Chất dẫn truyền thần kinh",
+      "text": "Chất hóa học mà nơ-ron tiết ra ở xináp để truyền tín hiệu đi. Có chất gây hưng phấn cho tế bào kế tiếp, có chất lại ức chế nó."
+    },
+    "excitation": {
+      "name": "Hưng phấn",
+      "text": "Tín hiệu đẩy nơ-ron kế tiếp tới chỗ phát xung."
+    },
+    "inhibition": {
+      "name": "Ức chế",
+      "text": "Tín hiệu kìm nơ-ron kế tiếp, không cho nó phát xung. Mạng lưới cần có ức chế để ổn định và chính xác."
+    },
+    "acetylcholine": {
+      "name": "Axêtincôlin",
+      "text": "Chất dẫn truyền thần kinh gây hưng phấn chủ yếu trong não ruồi, còn viết là acetylcholine. Trong bài học, tế bào tiết ra nó gây hưng phấn cho các tế bào mà nó nối tới."
+    },
+    "gaba": {
+      "name": "GABA",
+      "text": "Một chất dẫn truyền thần kinh gây ức chế, có ở cả ruồi và người. Trong bài học, tế bào tiết ra GABA kìm bớt các tế bào mà nó nối tới."
+    },
+    "circuit": {
+      "name": "Mạch thần kinh",
+      "text": "Một nhóm nơ-ron nối với nhau để làm một việc, như nhận ra một mùi hay khởi động một cú nhảy."
+    },
+    "connectome": {
+      "name": "Connectome",
+      "text": "Bản đồ kết nối đầy đủ của một hệ thần kinh: mọi nơ-ron và mọi xináp giữa chúng. Các bài học chạy trên connectome của một con ruồi giấm thật."
+    },
+    "stimulate": {
+      "name": "Kích thích",
+      "text": "Nút trong bài học khiến một nhóm tế bào phát xung trong chốc lát, gần giống cách các nhà khoa học dùng ánh sáng để bật những tế bào đã chọn."
+    },
+    "silence": {
+      "name": "Làm im lặng",
+      "text": "Nút trong bài học ngăn một nhóm tế bào phát xung, để cho thấy phần còn lại của mạch làm gì khi thiếu chúng."
+    },
+    "sensory": {
+      "name": "Nơ-ron cảm giác",
+      "text": "Nơ-ron thu nhận một điều gì đó từ thế giới bên ngoài, như một mùi hay một cái bóng đang lao tới, rồi báo cho não."
+    },
+    "motor": {
+      "name": "Nơ-ron vận động",
+      "text": "Nơ-ron mang mệnh lệnh ra tới cơ và làm cơ co lại."
+    },
+    "reflex": {
+      "name": "Cung phản xạ",
+      "text": "Con đường của một phản xạ: từ nơ-ron cảm giác, qua một hay nhiều tế bào chuyển tiếp, đến nơ-ron vận động làm cơ cử động."
+    },
+    "electricalsynapse": {
+      "name": "Xináp điện",
+      "text": "Một kênh nối thẳng hai nơ-ron, truyền tín hiệu gần như không chậm trễ. Bản đồ đằng sau các bài học chỉ ghi lại xináp hóa học."
+    },
+    "bump": {
+      "name": "Đốm sáng",
+      "text": "Cụm nơ-ron la bàn đang hoạt động. Vị trí của nó trên vòng tròn cho biết ruồi đang quay mặt về hướng nào."
+    },
+    "landmark": {
+      "name": "Điểm mốc",
+      "text": "Thứ ruồi nhìn thấy và luôn ở yên một chỗ, như mặt trời hay một cái cây. Ruồi dùng nó để giữ vững cảm giác về phương hướng."
+    },
+    "bridge": {
+      "name": "Cầu tiền não",
+      "text": "Một phần hình thanh trong não ruồi, tên khoa học là protocerebral bridge. Nơ-ron la bàn và nơ-ron rẽ đều chạy qua đây."
+    }
+  },
+  "teachers": {
+    "meta": {
+      "indexTitle": "Hướng dẫn cho giáo viên · WiredMind",
+      "indexDescription": "Giáo án, đáp án mong đợi, câu hỏi thảo luận và phiếu học tập in được cho học sinh, dành cho từng bài học của WiredMind.",
+      "guideTitle": "Hướng dẫn cho giáo viên: {title}",
+      "guideDescription": "Giáo án 45 phút cho bài “{title}”: mục tiêu bài học, điều học sinh cần nhận ra, đáp án mong đợi, câu hỏi thảo luận và những hiểu lầm thường gặp.",
+      "worksheetTitle": "Phiếu học tập: {title}",
+      "worksheetDescription": "Phiếu học tập in được cho học sinh, bài “{title}”: dự đoán, thử, quan sát, giải thích."
+    },
+    "index": {
+      "title": "Hướng dẫn cho giáo viên",
+      "lead": "Mọi thứ bạn cần để dạy từng bài mà không phải tập huấn gì: giáo án 45 phút, điều học sinh cần nhận ra, đáp án mong đợi và một phiếu học tập để in.",
+      "lesson": "Bài {number}",
+      "guide": "Hướng dẫn cho giáo viên",
+      "worksheet": "Phiếu học tập cho học sinh",
+      "demo": "Trình chiếu cho cả lớp",
+      "generalTerms": "Thuật ngữ cơ bản"
+    },
+    "topics": {
+      "excitation": "Hưng phấn và ức chế",
+      "synapses": "Xináp và chất dẫn truyền thần kinh",
+      "reflex": "Cung phản xạ",
+      "structure": "Cấu trúc của mạng lưới quyết định hành vi như thế nào"
+    },
+    "guide": {
+      "eyebrow": "Hướng dẫn cho giáo viên · Bài {number}",
+      "print": "In",
+      "lesson": "Mở bài học",
+      "demo": "Phát “Cho mình xem” ở chế độ lớp học",
+      "worksheet": "Phiếu học tập cho học sinh",
+      "all": "Tất cả hướng dẫn cho giáo viên",
+      "address": "Địa chỉ bài học",
+      "setupTitle": "Bạn cần chuẩn bị gì",
+      "setup": "Màn hình chung thì tiện hơn nhưng không bắt buộc: máy chiếu, tivi hoặc màn hình máy tính mà cả lớp nhìn thấy. Học sinh cần một thiết bị bất kỳ có kết nối internet, tốt nhất là mỗi cặp một thiết bị: máy tính xách tay, máy tính bảng hoặc điện thoại. Không cần cài đặt gì, cũng không cần tài khoản. Mỗi bài học mở đầu bằng phần hướng dẫn ngắn về cách đọc màn hình, và có thể nhấn vào bất kỳ thuật ngữ khoa học nào để xem giải thích.",
+      "goalTitle": "Mục tiêu bài học",
+      "topicsTitle": "Các chủ đề liên quan",
+      "planTitle": "Giáo án 45 phút",
+      "minutes": "{minutes} phút",
+      "phases": {
+        "opening": "Câu hỏi mở đầu",
+        "demo": "Trình diễn bằng “Cho mình xem”",
+        "explore": "Học sinh tự khám phá",
+        "discuss": "Thảo luận"
+      },
+      "plan": {
+        "demo": "Mở bài học ở chế độ lớp học trên màn hình chung (máy chiếu, tivi hoặc màn hình máy tính) rồi nhấn “Cho mình xem cách hoạt động”. Đọc to từng bước trong lúc bài chạy. Nếu không có màn hình chung, học sinh mở cùng phần trình diễn này trên thiết bị của mình. Phần trình diễn dừng ở câu hỏi của bài học: tạm thời hãy để ngỏ câu hỏi đó.",
+        "explore": "Học sinh làm việc theo cặp trên thiết bị của mình, kèm phiếu học tập. Các em viết dự đoán trước mỗi lần nhấn, làm hết bài học, trả lời câu hỏi của bài và thử phần khám phá tự do.",
+        "discuss": "Thu thập câu trả lời của các cặp cho câu hỏi của bài học, rồi dùng các câu hỏi thảo luận bên dưới. Kết thúc bằng những gì mô hình đã lược bỏ."
+      },
+      "noticeTitle": "Điều học sinh cần nhận ra ở mỗi bước",
+      "step": "Bước {number}",
+      "answerTitle": "Câu hỏi của bài học và đáp án mong đợi",
+      "rightChoice": "Lựa chọn đúng",
+      "discussTitle": "Câu hỏi thảo luận",
+      "misconceptionsTitle": "Những hiểu lầm thường gặp",
+      "claim": "Học sinh có thể nghĩ:",
+      "fix": "Cách xử lý:",
+      "realTitle": "Điều gì là thật, điều gì được đơn giản hóa",
+      "real": "Thật",
+      "simplified": "Được đơn giản hóa",
+      "realShared": "Mọi nơ-ron và mọi kết nối trong bài học đều lấy từ bản đồ kết nối của một con ruồi giấm thật, với đúng số xináp giữa từng cặp tế bào.",
+      "simplifiedShared": "Hoạt động thần kinh là một mô phỏng đơn giản, trong đó mọi nơ-ron tuân theo cùng những quy tắc cơ bản, và được quay chậm.",
+      "realMore": "Danh sách đầy đủ, kèm số liệu",
+      "termsTitle": "Thuật ngữ chính",
+      "curriculumTitle": "Liên hệ với chương trình học",
+      "curriculumPending": "Phần này chưa được hoàn thiện. Mức độ phù hợp với chương trình sinh học chính thức đang được xác nhận cùng các giáo viên sinh học."
+    },
+    "worksheet": {
+      "eyebrow": "Phiếu học tập cho học sinh · Bài {number}",
+      "name": "Họ và tên",
+      "class": "Lớp",
+      "date": "Ngày",
+      "address": "Mở bài học tại",
+      "predict": "Dự đoán",
+      "predictHint": "Trước khi bạn nhấn bất cứ nút nào.",
+      "try": "Thử",
+      "tryText": "Mở bài học và làm theo từng bước. Trước mỗi lần nhấn, hãy nói to điều bạn nghĩ sẽ xảy ra.",
+      "observe": "Quan sát",
+      "observeHint": "Ở mỗi bước: màu nào sáng lên, màu nào vẫn tối?",
+      "step": "Bước {number}",
+      "explain": "Giải thích",
+      "question": "Câu hỏi của bài học"
+    },
+    "lessons": {
+      "smell-memory": {
+        "goal": "Học sinh lần theo một mùi từ các thụ thể đến những tế bào đọc ký ức về mùi đó, và chỉ ra rằng làm im lặng một lớp trong đường dẫn truyền sẽ cắt đứt mọi thứ phía sau.",
+        "topics": {
+          "synapses": "Mỗi lớp truyền tín hiệu sang lớp kế tiếp qua các xináp. Các nhà khoa học cho rằng bản thân ký ức là sự thay đổi độ mạnh của các xináp từ tế bào Kenyon đến nơ-ron đầu ra.",
+          "structure": "Đường dẫn truyền là một chuỗi các lớp nối tiếp, nên làm im lặng tế bào Kenyon sẽ khiến nơ-ron đầu ra tối đi dù mùi vẫn vào được.",
+          "excitation": "Kích thích làm tế bào hưng phấn, còn Làm im lặng giữ cho chúng tắt: đó là hai công cụ của bài học. Ở phần này của mạch thần kinh, mỗi lớp gây hưng phấn cho lớp kế tiếp."
+        },
+        "opening": "Hãy hỏi: “Làm sao bộ não của em biết một mùi là mùi em từng gặp?” Nghe vài phỏng đoán, rồi nói rằng hôm nay cả lớp sẽ đi tìm câu trả lời bên trong một con ruồi.",
+        "notice": {
+          "send": "Chỉ các thụ thể mùi màu cam sáng lên. Tín hiệu bắt đầu từ một đầu của mạch thần kinh, chứ không phải ở khắp nơi cùng lúc.",
+          "follow": "Các màu sáng lên theo thứ tự: cam, rồi vàng, rồi xanh dương. Tín hiệu đi qua từng lớp, hết lớp này đến lớp khác.",
+          "read": "Các nơ-ron đầu ra màu hồng sáng lên sau cùng, và chỉ sau các tế bào Kenyon màu xanh dương.",
+          "silence": "Màu cam và màu vàng vẫn sáng, màu xanh dương vẫn tối, còn màu hồng gần như tắt hẳn. Mùi đã vào được nhưng không đi tiếp được.",
+          "restore": "Màu hồng trở lại ngay khi tế bào Kenyon được bật lại. Không có gì bị hỏng: chỉ là tín hiệu không có đường đi."
+        },
+        "answer": "Tế bào Kenyon chuyển mẫu hình của từng mùi sang nơ-ron đầu ra. Khi chúng bị làm im lặng, mùi vẫn đến được các thụ thể và nơ-ron chiếu, nhưng nơ-ron đầu ra chẳng có gì để đọc. Với học sinh trả lời “mùi không hề vào được”, hãy bảo các em xem lại các tế bào màu cam và màu vàng.",
+        "discuss": {
+          "a": "Mùi vẫn đi vào não trong lúc tế bào Kenyon bị làm im lặng. Làm sao chúng ta biết điều đó?",
+          "b": "Giả sử ruồi đã học được rằng mùi này nghĩa là có đường. Em đoán chỗ nào trong mạch thần kinh này sẽ thay đổi?",
+          "c": "Em nghĩ sẽ thấy gì nếu thay vào đó ta làm im lặng các nơ-ron chiếu màu vàng? Hãy kiểm tra trong phần khám phá tự do."
+        },
+        "misconceptions": {
+          "a": {
+            "claim": "Ký ức nằm trong một tế bào, giống như một tệp tin.",
+            "fix": "Quay lại bước màu hồng đọc màu xanh dương. Người ta cho rằng ký ức nằm ở độ mạnh của rất nhiều liên kết giữa hai nhóm, chứ không nằm trong một tế bào riêng lẻ."
+          },
+          "b": {
+            "claim": "Làm im lặng một tế bào là giết chết hoặc làm hỏng nó.",
+            "fix": "Chạy lại bước cuối: ánh sáng màu hồng trở lại ngay. Các tế bào bị làm im lặng vẫn nguyên vẹn. Chúng chỉ không phát xung thôi."
+          },
+          "c": {
+            "claim": "Bài học cho thấy ruồi đang học một mùi.",
+            "fix": "Không phải vậy. Mô hình cho thấy ký ức sẽ được lưu ở đâu, nhưng các liên kết của nó không bao giờ thay đổi. Hãy nói thẳng điều đó, rồi hỏi xem cần bổ sung những gì."
+          }
+        },
+        "real": {
+          "a": "Bốn nhóm tế bào, cùng thứ tự chúng nối với nhau, chính là đường dẫn truyền mùi thật của ruồi."
+        },
+        "simplified": {
+          "a": "Kích thích làm tất cả thụ thể mùi phát xung cùng lúc. Một mùi thật chỉ bật một số loại thụ thể, theo một mẫu hình.",
+          "b": "Trong mô hình không có gì học cả: không có tín hiệu phần thưởng, và các liên kết không bao giờ thay đổi."
+        },
+        "worksheet": {
+          "predict": {
+            "a": "Một mùi đi vào qua anten. Bạn nghĩ màu nào sẽ sáng lên sau cùng?",
+            "b": "Bạn nghĩ điều gì sẽ xảy ra với các tế bào màu hồng nếu các tế bào màu xanh dương bị tắt?"
+          },
+          "explain": {
+            "a": "Vì sao các tế bào màu hồng tối đi khi bạn làm im lặng các tế bào màu xanh dương, dù mùi vẫn vào được?",
+            "b": "Các nhà khoa học cho rằng ký ức về một mùi được lưu ở đâu trong mạch thần kinh này?"
+          }
+        }
+      },
+      "compass": {
+        "goal": "Học sinh thấy rằng một vòng nơ-ron lưu giữ hướng của ruồi dưới dạng một đốm hoạt động, và sự ức chế từ nơ-ron vòng giữ đốm ấy đứng yên.",
+        "topics": {
+          "excitation": "Ví dụ rõ nhất trong ba bài học. Nơ-ron rẽ gây hưng phấn cho la bàn và đẩy đốm sáng đi; nơ-ron vòng ức chế la bàn và giữ đốm sáng đứng yên.",
+          "synapses": "Nơ-ron vòng được dự đoán là tiết ra GABA, một chất dẫn truyền gây ức chế. Nơ-ron la bàn và nơ-ron rẽ tiết ra axêtincôlin, chất gây hưng phấn.",
+          "structure": "Các nơ-ron la bàn nối với nhau thành một vòng, và chính hình dạng đó cho phép một đốm hoạt động đại diện cho một hướng."
+        },
+        "opening": "Hãy hỏi: “Nhắm mắt lại và xoay một vòng. Làm sao em vẫn biết mình đang quay mặt về hướng nào?” Sau đó nói rằng ruồi làm việc này bằng một vòng tế bào nhỏ, và cả lớp sắp đẩy chúng xoay vòng.",
+        "notice": {
+          "left": "Một đốm nơ-ron la bàn màu xanh lá sáng lên ở một phía của vòng, và kim trên mặt la bàn chỉ vào đó. Đó chính là đốm sáng.",
+          "right": "Đốm sáng di chuyển quanh mặt la bàn. Hai tín hiệu rẽ đẩy nó theo hai hướng ngược nhau.",
+          "silence": "Khi nơ-ron vòng màu tím bị tắt, cũng tín hiệu ấy lại khiến đốm sáng đi lang thang thay vì dừng yên ở một chỗ.",
+          "restore": "Đốm sáng lại đứng yên đúng chỗ. Hãy so sánh mặt la bàn với bước trước."
+        },
+        "answer": "Không có gì cho la bàn biết điểm mốc ở đâu, nên không có gì giữ đốm sáng đứng yên. Tín hiệu rẽ vẫn đến nơi, vì các tế bào màu xanh lá sáng lên; vậy thứ bị thiếu là một cái neo chứ không phải tín hiệu đầu vào. Với học sinh lớn hơn: trong mô hình này, cái neo chính là sự ức chế từ nơ-ron vòng.",
+        "discuss": {
+          "a": "Vì sao hình vòng là hình dạng phù hợp cho những tế bào theo dõi phương hướng?",
+          "b": "Nơ-ron vòng kìm các tế bào khác lại chứ không gây hưng phấn cho chúng. Vì sao việc tắt bớt tế bào lại giúp một mạng lưới hoạt động tốt hơn?",
+          "c": "Con người cũng mất phương hướng trong bóng tối hoặc sương mù. Điều đó có điểm gì chung với bước làm im lặng?"
+        },
+        "misconceptions": {
+          "a": {
+            "claim": "Ruồi có một la bàn từ tính, giống la bàn trong điện thoại.",
+            "fix": "La bàn này là một mẫu hình hoạt động mà ruồi cập nhật dựa trên những lần nó rẽ và những gì nó nhìn thấy. Không có gì trong mạch thần kinh này cảm nhận từ trường."
+          },
+          "b": {
+            "claim": "Càng nhiều tế bào hoạt động thì tín hiệu càng tốt.",
+            "fix": "So sánh hai bước cuối: bỏ sự ức chế đi làm la bàn kém hẳn. Ức chế là một phần trong cách mạch thần kinh vận hành."
+          },
+          "c": {
+            "claim": "Đốm sáng là một vật thể di chuyển trong não.",
+            "fix": "Không tế bào nào di chuyển cả. Các tế bào cạnh nhau lần lượt hoạt động, giống như làn sóng người trên khán đài sân vận động."
+          }
+        },
+        "real": {
+          "a": "Nơ-ron la bàn, nơ-ron rẽ và nơ-ron vòng là những loại tế bào có thật, nối thành vòng đúng như trong ruồi."
+        },
+        "simplified": {
+          "a": "Trong mô hình, nơ-ron vòng không mang hình ảnh nào về thế giới. Làm im lặng chúng là bỏ đi sự ức chế, và chính điều đó khiến đốm sáng trôi đi.",
+          "b": "Mặt la bàn là cách chúng tôi tự hiển thị hoạt động của các tế bào màu xanh lá. Ruồi không có mặt la bàn nào cả."
+        },
+        "worksheet": {
+          "predict": {
+            "a": "Bạn nghĩ mặt la bàn sẽ hiện gì khi bạn cho nơ-ron rẽ trái phát xung? Còn nơ-ron rẽ phải thì sao?",
+            "b": "Bạn nghĩ điều gì sẽ xảy ra với đốm sáng nếu nơ-ron vòng màu tím bị tắt?"
+          },
+          "explain": {
+            "a": "Vì sao đốm sáng bị trôi khi nơ-ron vòng bị làm im lặng?",
+            "b": "Vì sao hình vòng là hình dạng phù hợp cho những tế bào theo dõi phương hướng?"
+          }
+        }
+      },
+      "escape": {
+        "goal": "Học sinh lần theo một phản xạ từ mắt đến cơ chân trong khoảng 30 mili giây, và chỉ ra rằng cú thoát hiểm nhanh phụ thuộc vào một mắt xích duy nhất: sợi khổng lồ.",
+        "topics": {
+          "reflex": "Một đường phản xạ trọn vẹn gồm ba phần: nơ-ron cảm giác (nơ-ron phát hiện vật lao tới), trạm chuyển tiếp (sợi khổng lồ) và nơ-ron vận động (nơ-ron nhảy). Khác với phản xạ đầu gối, trạm chuyển tiếp này đi qua não.",
+          "structure": "Tín hiệu từ hàng trăm nơ-ron phát hiện vật lao tới dồn về sợi khổng lồ. Vì nút thắt cổ chai ấy, chỉ cần làm im lặng một loại tế bào là hành vi biến mất.",
+          "synapses": "Sợi khổng lồ rất to nên tín hiệu của nó truyền nhanh. Ở ruồi thật, nó còn dùng xináp điện, loại nhanh nhất; mô hình chỉ có xináp hóa học."
+        },
+        "opening": "Hãy hỏi: “Vì sao đập trúng một con ruồi lại khó đến vậy?” Thu thập vài ý kiến, rồi nói rằng cả lớp sẽ bấm giờ cú thoát hiểm của ruồi và tìm ra sợi dây đứng sau nó.",
+        "notice": {
+          "loom": "Nơ-ron phát hiện vật lao tới màu xanh dương sáng lên trước, và sợi khổng lồ màu đỏ theo sau gần như ngay lập tức.",
+          "jump": "Hoạt động chạy dọc sợi khổng lồ xuống dây thần kinh bụng, và nơ-ron nhảy màu vàng phát xung trong vòng 30 mili giây theo đồng hồ của ruồi.",
+          "silence": "Màu xanh dương vẫn sáng, màu đỏ vẫn tối, còn màu vàng không hề phát xung. Ruồi đã thấy chiếc vỉ, nhưng thông điệp không đến được chân.",
+          "restore": "Màu vàng lại phát xung ngay khi sợi khổng lồ được bật lại."
+        },
+        "answer": "Sợi khổng lồ mang tín hiệu nhảy từ nơ-ron phát hiện vật lao tới đến nơ-ron nhảy. Khi nó bị làm im lặng, ruồi vẫn thấy chiếc vỉ, vì các tế bào màu xanh dương sáng lên, nhưng tín hiệu dừng lại trước khi đến chân. Ruồi thật còn có những đường thoát chậm hơn, như bước cuối của bài học đã nói.",
+        "discuss": {
+          "a": "Cú thoát hiểm này nhanh hơn một cái chớp mắt. Những đặc điểm nào của đường dẫn truyền khiến nó nhanh đến vậy?",
+          "b": "Vì sao có một đường thoát nhanh và vài đường thoát chậm hơn lại có lợi cho một con vật?",
+          "c": "So sánh đường dẫn truyền này với một phản xạ ở người mà em biết, như rụt tay khỏi vật nóng. Có gì giống, có gì khác?"
+        },
+        "misconceptions": {
+          "a": {
+            "claim": "Ruồi quyết định nhảy.",
+            "fix": "Cú nhảy nhanh là một phản xạ: các kết nối đưa tín hiệu đi thẳng một mạch. Không có giai đoạn nào để ruồi cân nhắc các lựa chọn."
+          },
+          "b": {
+            "claim": "Nếu ruồi không nhảy thì tức là nó không thấy chiếc vỉ.",
+            "fix": "Bước làm im lặng tách hai việc này ra. Nơ-ron phát hiện vật lao tới vẫn phát xung, nên ruồi đã thấy chiếc vỉ. Nhìn thấy và hành động là hai giai đoạn khác nhau của cùng một đường dẫn truyền."
+          },
+          "c": {
+            "claim": "Một nơ-ron thì chẳng thể quan trọng trong cả một bộ não.",
+            "fix": "Ở đây, một loại tế bào mang toàn bộ tín hiệu nhanh. Ở đâu đường dẫn truyền thu hẹp lại còn vài tế bào, ở đó mỗi tế bào đều rất quan trọng."
+          }
+        },
+        "real": {
+          "a": "Nơ-ron phát hiện vật lao tới, sợi khổng lồ và nơ-ron nhảy đều có thật, và đường đi giữa chúng cũng vậy."
+        },
+        "simplified": {
+          "a": "Con số 30 mili giây đến từ các quy tắc thời gian đơn giản của mô hình, không phải từ số đo trên ruồi. Nó nằm trong khoảng hợp lý so với thực tế.",
+          "b": "Kích thích làm tất cả nơ-ron phát hiện vật lao tới phát xung cùng lúc. Một chiếc vỉ thật bật chúng dần dần khi nó lớn lên trong tầm nhìn."
+        },
+        "worksheet": {
+          "predict": {
+            "a": "Một chiếc vỉ đập ruồi đang lao tới. Bạn nghĩ ba màu sẽ sáng lên theo thứ tự nào?",
+            "b": "Bạn nghĩ điều gì sẽ xảy ra với nơ-ron nhảy màu vàng nếu sợi khổng lồ màu đỏ bị tắt?"
+          },
+          "explain": {
+            "a": "Vì sao nơ-ron nhảy vẫn tối, dù ruồi đã thấy chiếc vỉ?",
+            "b": "Những đặc điểm nào của đường dẫn truyền này khiến cú thoát hiểm nhanh đến vậy?"
+          }
+        }
+      }
     }
   }
 }

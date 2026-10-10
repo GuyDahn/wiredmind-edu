@@ -102,7 +102,7 @@ export function Sheet({
   return (
     <section
       aria-label={label}
-      className="relative z-10 order-2 flex w-full shrink-0 flex-col rounded-t-3xl border-t border-border bg-surface shadow-[0_-12px_32px_rgb(0_0_0/0.18)] md:order-1 md:h-full md:w-96 md:rounded-none md:border-t-0 md:border-e md:shadow-none dark:shadow-[0_-12px_32px_rgb(0_0_0/0.45)]"
+      className="relative z-10 order-2 flex w-full shrink-0 flex-col rounded-t-3xl border-t border-border bg-surface shadow-[0_-12px_32px_rgb(0_0_0/0.18)] md:order-1 md:h-full md:w-96 md:rounded-none classroom:md:w-[min(36rem,45vw)] md:border-t-0 md:border-e md:shadow-none dark:shadow-[0_-12px_32px_rgb(0_0_0/0.45)]"
     >
       <button
         type="button"

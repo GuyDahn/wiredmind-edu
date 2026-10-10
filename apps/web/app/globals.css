@@ -6,6 +6,10 @@
    in the root layout before paint. */
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* Class mode, for a projector: the lesson page sets data-mode="class" on its
+   root, and `classroom:` utilities size text and buttons for the back row. */
+@custom-variant classroom (&:where([data-mode="class"], [data-mode="class"] *));
+
 @theme {
   /* The lesson's next button: only its outline breathes, never its label. */
   --animate-cue: cue 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
@@ -105,4 +109,50 @@ body {
 :lang(ko),
 :lang(hi) {
   text-transform: none;
+}
+
+/*
+ * Printing a teacher guide or a worksheet: A4, black on white whatever the
+ * theme, and nothing that only makes sense on a screen. The pages hide their
+ * own header and footer with `print:hidden`; right-to-left languages keep
+ * the direction the page already has.
+ */
+@page {
+  size: A4;
+  margin: 16mm 15mm;
+}
+
+@media print {
+  :root,
+  .dark {
+    --color-canvas: #ffffff;
+    --color-surface: #ffffff;
+    --color-fg: #000000;
+    --color-fg-muted: #000000;
+    --color-fg-subtle: #000000;
+    --color-border: rgb(0 0 0 / 0.35);
+    --color-border-strong: rgb(0 0 0 / 0.6);
+    --color-overlay: transparent;
+    --color-overlay-strong: transparent;
+    --color-accent: #000000;
+    --color-accent-fg: #ffffff;
+    --color-ring: #000000;
+  }
+
+  html,
+  html.dark {
+    background: #ffffff;
+    color-scheme: light;
+  }
+
+  body {
+    background: #ffffff;
+    color: #000000;
+  }
+
+  canvas,
+  nav,
+  nextjs-portal {
+    display: none !important;
+  }
 }

@@ -57,10 +57,11 @@ export default async function LessonPage({
   const t = await getTranslations({ locale });
   const circuit = entry.module.circuit;
   // The viewer runs in the browser, so it gets only what it says: its own
-  // controls, this lesson, this circuit's names, and the other lessons'
-  // titles for the lesson menu.
+  // controls, this lesson, this circuit's names, the terms it explains, and
+  // the other lessons' titles for the lesson menu.
   const messages = pick((await getMessages()) as MessageTree, [
     "viewer",
+    "terms",
     "language",
     "translate",
     ...LESSONS.map((other) => `lessons.${other.id}.title`),
