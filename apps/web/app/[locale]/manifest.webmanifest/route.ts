@@ -46,6 +46,11 @@ export async function GET(
     ],
   };
   return new Response(JSON.stringify(manifest, null, 2), {
-    headers: { "Content-Type": "application/manifest+json; charset=utf-8" },
+    headers: {
+      "Content-Type": "application/manifest+json; charset=utf-8",
+      // Browsers read it; search has no use for it. Without this Google
+      // crawls it as a page and reports it as not indexed.
+      "X-Robots-Tag": "noindex",
+    },
   });
 }
