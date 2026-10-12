@@ -14,7 +14,6 @@
       "title": "Über WiredMind: Was echt ist und was vereinfacht",
       "description": "Was an den Fruchtfliegen-Lektionen von WiredMind echt ist und was vereinfacht, wer sie entwickelt hat und wie Sie das Projekt unterstützen können."
     },
-    "lessonTitle": "{title} · WiredMind",
     "notFoundTitle": "Seite nicht gefunden · WiredMind"
   },
   "og": {
@@ -249,6 +248,7 @@
       "title": "Wie sich eine Fliege einen Duft merkt",
       "summary": "Einen Duft in ein echtes Fliegengehirn schicken und die Zellen finden, die ihn sich merken.",
       "description": "Einen Duft durch ein echtes Fruchtfliegengehirn bis in den Pilzkörper verfolgen und die Zellen finden, die ihn speichern. Kostenlose 10-Minuten-Lektion.",
+      "searchTitle": "Wie Fliegen riechen und sich erinnern: interaktive Lektion",
       "steps": {
         "send": {
           "text": "Eine Fliege riecht mit ihren <antenna>Antennen</antenna> <gloss>(ihren zwei Fühlern)</gloss>. Tippe auf „Stimulieren“, um einen Duft hineinzuschicken. Sieh zu, wie die orangefarbenen Neuronen aufleuchten.",
@@ -297,6 +297,7 @@
       "title": "Woher eine Fliege weiß, wohin sie schaut",
       "summary": "Den Kompass einer echten Fliege verschieben und herausfinden, was ihn an seinem Platz hält.",
       "description": "Den inneren Kompass einer echten Fruchtfliege verschieben, dann die Ringneuronen stummschalten und zusehen, wie er driftet. Kostenlose 10-Minuten-Lektion.",
+      "searchTitle": "Der innere Kompass der Fliege: interaktive Lektion",
       "steps": {
         "left": {
           "text": "Tippe auf „Stimulieren“, um die linken <turn>Drehneuronen</turn> <gloss>(das Drehsignal)</gloss> feuern zu lassen. Beobachte dann die Kompassanzeige.",
@@ -341,6 +342,7 @@
       "title": "Die Flucht in 30 Millisekunden",
       "summary": "Die Leitung finden, die eine Fliege vor der Fliegenklatsche rettet.",
       "description": "Die Flucht einer echten Fruchtfliege verfolgen: in 30 ms von den Augen über die Riesenfaser in die Beine. Dann die Leitung kappen. 10 Minuten, kostenlos.",
+      "searchTitle": "Fluchtreflex der Fruchtfliege: Lektion zur Riesenfaser",
       "steps": {
         "loom": {
           "text": "Eine Fliegenklatsche saust auf die Fliege zu. Tippe auf „Stimulieren“, um die <looming>Annäherungsneuronen</looming> <gloss>(die Klatschen-Späher)</gloss> feuern zu lassen.",
@@ -735,6 +737,67 @@
     "bridge": {
       "name": "Brücke",
       "text": "Ein balkenförmiger Teil des Fliegengehirns, die Protozerebralbrücke. Durch sie ziehen sowohl die Kompassneuronen als auch die Drehneuronen."
+    }
+  },
+  "glossary": {
+    "nav": "Glossar",
+    "title": "Glossar der Neurobiologie",
+    "lead": "Alle Fachbegriffe aus den Lektionen, in ein bis zwei Sätzen erklärt. Jeder Begriff zeigt, wo er im Gehirn einer echten Fruchtfliege vorkommt.",
+    "metaTitle": "Neurobiologie-Glossar für die Schule · WiredMind",
+    "metaDescription": "Neuron, Synapse, Konnektom, Pilzkörper und mehr: die Fachbegriffe aus den Fruchtfliegen-Lektionen von WiredMind, jeweils in ein bis zwei Sätzen erklärt.",
+    "termTitle": "{term}: einfach erklärt für die Schule",
+    "inLessons": "In einer Lektion ansehen",
+    "steps": "Hier kommt der Begriff in der Lektion vor",
+    "related": "Verwandte Begriffe",
+    "all": "Alle Begriffe"
+  },
+  "questions": {
+    "nav": "Fragen",
+    "title": "Fragen zum Fliegengehirn",
+    "lead": "Kurze Antworten auf Fragen, die Menschen über Fliegen und ihr Gehirn stellen. Zu jeder gibt es eine Lektion, in der sich die Antwort selbst beobachten lässt.",
+    "metaTitle": "Fragen zum Fliegengehirn, einfach beantwortet · WiredMind",
+    "metaDescription": "Wie riechen Fliegen? Warum erwischt man sie so schwer? Kurze, klare Antworten zum Gehirn der Fruchtfliege, jede mit einer kostenlosen Lektion.",
+    "more": "Weitere Fragen",
+    "about": "Über diese Lektion",
+    "steps": "Was passiert, Schritt für Schritt",
+    "answered": "Fragen, die diese Lektion beantwortet",
+    "items": {
+      "smell": {
+        "title": "Wie riechen Fliegen?",
+        "short": "Eine Fliege riecht mit ihren zwei Antennen. Duftrezeptoren darauf feuern, wenn ein Duft landet, und das Signal wird im Gehirn sortiert.",
+        "a": "Eine Fliege hat keine Nase. Ihre zwei Antennen sind mit winzigen Härchen bedeckt, und in jedem Härchen sitzen Duftrezeptoren: Nervenzellen, die feuern, wenn das passende Duftmolekül auf ihnen landet. Eine Fruchtfliege hat etwa 50 Arten von Rezeptoren, und jede Art reagiert auf ihre eigene Auswahl an Düften. An dieser Mischung von Signalen unterscheidet die Fliege einen Duft vom anderen.",
+        "b": "Die Rezeptoren schicken ihr Signal in den Antennallobus, die erste Station für Düfte im Gehirn. Dort treffen sich alle Rezeptoren einer Art an derselben Stelle, sodass aus einem Duft ein Muster aktiver Stellen wird. Projektionsneuronen tragen dieses Muster tiefer ins Gehirn, zum Pilzkörper, wo die Fliege Düfte mit guten und schlechten Erfahrungen verknüpft."
+      },
+      "memory": {
+        "title": "Haben Fliegen ein Gedächtnis?",
+        "short": "Ja. Eine Fruchtfliege kann lernen, dass ein Duft Futter oder Gefahr bedeutet, und es sich tagelang merken. Die Erinnerung entsteht im Pilzkörper.",
+        "a": "In Experimenten laufen Fliegen, die einen Duft zusammen mit Zucker erlebt haben, später auf diesen Duft zu. Fliegen, die ihn zusammen mit einem leichten Stromschlag erlebt haben, meiden ihn. Sie haben gelernt und können es sich Stunden merken, manchmal Tage.",
+        "b": "Gelernt wird im Pilzkörper. Etwa 2.000 Kenyon-Zellen auf jeder Seite des Gehirns geben jedem Duft sein eigenes Muster, und Ausgangsneuronen lesen dieses Muster. Kommt ein Duft zusammen mit Belohnung oder Strafe, ändert sich die Stärke der Synapsen zwischen den beiden Gruppen. Forschende vermuten, dass diese Änderung die Erinnerung ist. Die WiredMind-Lektion zeigt diesen Weg, aber nichts darin lernt: Ihre Verbindungen ändern sich nie."
+      },
+      "direction": {
+        "title": "Woher wissen Fliegen, in welche Richtung sie schauen?",
+        "short": "Eine Fliege hat einen inneren Kompass: einen Ring aus Neuronen, in dem ein aktiver Fleck ihre Richtung anzeigt. Drehungen verschieben ihn.",
+        "a": "Mitten im Gehirn der Fliege sind Kompassneuronen zu einem Ring verschaltet. In jedem Moment ist nur ein Fleck von ihnen aktiv, und seine Position auf dem Ring steht für die Richtung, in die die Fliege schaut. 2015 haben Forschende erstmals beobachtet, wie dieser Fleck im Gehirn einer lebenden Fliege wandert.",
+        "b": "Dreht sich die Fliege, schieben Drehneuronen den Fleck um den Ring. Das allein würde mit der Zeit ungenau, deshalb nutzt die Fliege auch, was sie sieht: Ringneuronen bringen Landmarken wie die Sonne ein und halten den Fleck an seinem Platz. Der Kompass ist nicht magnetisch. Er ist ein Aktivitätsmuster, das die Fliege laufend aktualisiert, und im Dunkeln driftet er langsam."
+      },
+      "swat": {
+        "title": "Warum sind Fliegen so schwer zu erwischen?",
+        "short": "Eine Fliege sieht die Klatsche früh kommen, und ein schneller Fluchtschaltkreis bringt sie in wenigen Hundertstelsekunden in die Luft.",
+        "a": "Drei Dinge helfen der Fliege. Ihre Augen überblicken fast den ganzen Raum um sie herum, sodass man sich kaum von hinten anschleichen kann. Sie sieht schneller als wir, eine Hand wirkt auf sie langsam. Und sie hat Neuronen mit einer einzigen Aufgabe: Sie feuern, wenn etwas im Blickfeld schnell größer wird, so wie eine näher kommende Klatsche.",
+        "b": "Diese Annäherungsneuronen sind mit der Riesenfaser verbunden, einer sehr dicken Nervenzelle, die vom Gehirn hinunter zu den Neuronen der Sprungbeine zieht. Eine dicke Faser leitet ihr Signal schnell, der Befehl zum Sprung kommt also fast sofort an. Hochgeschwindigkeitsaufnahmen zeigen außerdem, dass die Fliege kurz vor dem Abheben ihre Beine umsetzt, damit der Sprung sie von der Klatsche wegträgt."
+      },
+      "reaction": {
+        "title": "Wie schnell reagiert eine Fliege?",
+        "short": "Eine Fruchtfliege kann wenige Hundertstelsekunden, nachdem sie Gefahr bemerkt, zum Fluchtsprung ansetzen. Ein Mensch braucht etwa eine Viertelsekunde.",
+        "a": "Wenn etwas auf eine Fliege zurast, läuft das Signal in einigen Dutzend Millisekunden von den Augen zu den Beinmuskeln. Eine Millisekunde ist eine Tausendstelsekunde. In der WiredMind-Lektion feuern die Sprungneuronen etwa 30 ms, nachdem die Klatsche auftaucht. Dieser Wert stammt aus einem einfachen Modell, nicht aus der Messung an einer Fliege, liegt aber in einem realistischen Bereich. Ein Mensch braucht rund 250 ms, nur um auf einen Lichtblitz zu reagieren.",
+        "b": "Die Geschwindigkeit steckt in der Verschaltung. Der Weg ist kurz: Annäherungsneuronen, dann die Riesenfaser, dann die Sprungneuronen. Die Riesenfaser ist ungewöhnlich dick, deshalb läuft ihr Signal schnell. Und in einer echten Fliege gibt sie das Signal über elektrische Synapsen weiter, direkte Kanäle zwischen Zellen fast ohne Verzögerung."
+      },
+      "neurons": {
+        "title": "Wie viele Neuronen hat das Gehirn einer Fruchtfliege?",
+        "short": "Etwa 140.000. 2024 wurde jedes einzelne davon im Gehirn einer erwachsenen Fruchtfliege kartiert, samt den Dutzenden Millionen Synapsen dazwischen.",
+        "a": "Das Gehirn einer Fruchtfliege ist kleiner als ein Mohnkorn und enthält etwa 140.000 Neuronen. Ein menschliches Gehirn hat Hunderttausende Male mehr. Trotzdem kann die Fliege damit fliegen, Futter finden, Düfte lernen und einer Klatsche entkommen.",
+        "b": "Eine vollständige Karte eines Nervensystems, mit jedem Neuron und jeder Synapse, heißt Konnektom. Die Fruchtfliege ist eines von sehr wenigen Tieren, deren ganzes Gehirn so kartiert wurde. Die WiredMind-Lektionen laufen auf dem Konnektom von Gehirn und Bauchmark einer männlichen Fliege, und jede Lektion nutzt einen Schaltkreis aus 3.000 bis 4.500 seiner Neuronen."
+      }
     }
   },
   "teachers": {

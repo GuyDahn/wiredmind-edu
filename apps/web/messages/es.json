@@ -14,7 +14,6 @@
       "title": "Acerca de WiredMind: qué es real y qué está simplificado",
       "description": "Qué es real y qué está simplificado en las lecciones de WiredMind sobre el cerebro de la mosca de la fruta, quién las creó y cómo apoyar el proyecto."
     },
-    "lessonTitle": "{title} · WiredMind",
     "notFoundTitle": "Página no encontrada · WiredMind"
   },
   "og": {
@@ -249,6 +248,7 @@
       "title": "Cómo recuerda una mosca un olor",
       "summary": "Envía un olor al cerebro real de una mosca y encuentra las células que lo recuerdan.",
       "description": "Envía un olor al cerebro real de una mosca de la fruta y síguelo hasta el cuerpo fungiforme, donde se guarda su recuerdo. Lección gratis de 10 minutos.",
+      "searchTitle": "Cómo huelen y recuerdan las moscas: lección interactiva",
       "steps": {
         "send": {
           "text": "Una mosca huele con sus <antenna>antenas</antenna> <gloss>(su nariz)</gloss>. Toca Estimular para enviar un olor. Mira cómo se iluminan las neuronas naranjas.",
@@ -297,6 +297,7 @@
       "title": "Cómo sabe una mosca hacia dónde mira",
       "summary": "Haz girar la brújula de una mosca real y descubre qué la mantiene en su sitio.",
       "description": "Haz girar la brújula interna de una mosca de la fruta, silencia las neuronas del anillo y mira cómo pierde el rumbo. Lección gratis de 10 minutos.",
+      "searchTitle": "La brújula interna de la mosca: lección interactiva",
       "steps": {
         "left": {
           "text": "Toca Estimular para activar las <turn>neuronas de giro</turn> <gloss>(señal de giro)</gloss> de la izquierda. Luego mira el dial de la brújula.",
@@ -341,6 +342,7 @@
       "title": "El escape de 30 milisegundos",
       "summary": "Encuentra el cable que salva a una mosca del matamoscas.",
       "description": "Sigue un matamoscas de los ojos a las patas de una mosca de la fruta por la fibra gigante en 30 ms y luego corta el cable. Lección gratis de 10 minutos.",
+      "searchTitle": "Reflejo de escape de la mosca: lección de la fibra gigante",
       "steps": {
         "loom": {
           "text": "Un matamoscas se abalanza sobre la mosca. Toca Estimular para activar las <looming>neuronas de aproximación</looming> <gloss>(vigías del matamoscas)</gloss>.",
@@ -735,6 +737,67 @@
     "bridge": {
       "name": "Puente",
       "text": "Una parte del cerebro de la mosca con forma de barra, el puente protocerebral. Por él pasan las neuronas de la brújula y las neuronas de giro."
+    }
+  },
+  "glossary": {
+    "nav": "Glosario",
+    "title": "Glosario de neurociencia",
+    "lead": "Todos los términos científicos de las lecciones, explicados en una o dos frases. Abre un término para ver dónde aparece en el cerebro real de una mosca de la fruta.",
+    "metaTitle": "Glosario de neurociencia para estudiantes · WiredMind",
+    "metaDescription": "Neurona, sinapsis, conectoma, cuerpo fungiforme y más: los términos de las lecciones de WiredMind sobre la mosca de la fruta, en una o dos frases.",
+    "termTitle": "{term}: explicación fácil para estudiantes",
+    "inLessons": "Míralo en una lección",
+    "steps": "Dónde aparece en la lección",
+    "related": "Términos relacionados",
+    "all": "Todos los términos"
+  },
+  "questions": {
+    "nav": "Preguntas",
+    "title": "Preguntas sobre el cerebro de la mosca",
+    "lead": "Respuestas breves a lo que la gente se pregunta sobre las moscas y su cerebro. Cada una viene con una lección donde puedes comprobarlo tú mismo.",
+    "metaTitle": "Preguntas sobre el cerebro de la mosca · WiredMind",
+    "metaDescription": "¿Cómo huelen las moscas? ¿Por qué cuesta tanto cazarlas? Respuestas breves y claras sobre el cerebro de la mosca de la fruta, con una lección gratis.",
+    "more": "Más preguntas",
+    "about": "Sobre esta lección",
+    "steps": "Qué ocurre, paso a paso",
+    "answered": "Preguntas que responde esta lección",
+    "items": {
+      "smell": {
+        "title": "¿Cómo huelen las moscas?",
+        "short": "Una mosca huele con sus dos antenas. Sus receptores olfativos se activan cuando llega un olor, y la señal viaja al cerebro para ser clasificada.",
+        "a": "Una mosca no tiene nariz. Sus dos antenas están cubiertas de pelos diminutos, y dentro de cada pelo hay receptores olfativos: células nerviosas que se activan cuando les llega la molécula de olor adecuada. Una mosca de la fruta tiene unos 50 tipos de receptor, y cada tipo responde a su propio conjunto de olores. Con esa mezcla de señales la mosca distingue un olor de otro.",
+        "b": "Los receptores envían su señal al lóbulo antenal, la primera parada de los olores en el cerebro. Allí, todos los receptores de un mismo tipo se reúnen en el mismo punto, así que un olor se convierte en un patrón de puntos activos. Las neuronas de proyección llevan ese patrón más adentro, al cuerpo fungiforme, donde la mosca asocia los olores con experiencias buenas y malas."
+      },
+      "memory": {
+        "title": "¿Tienen memoria las moscas?",
+        "short": "Sí. Una mosca de la fruta aprende que un olor significa comida o peligro y lo recuerda durante horas o días. El recuerdo se forma en el cuerpo fungiforme.",
+        "a": "En los experimentos, las moscas que encuentran un olor junto con azúcar caminan después hacia ese olor, y las que lo encuentran junto con una descarga eléctrica leve lo evitan. Han aprendido, y pueden recordarlo durante horas, a veces durante días.",
+        "b": "El aprendizaje ocurre en el cuerpo fungiforme. Unas 2000 células de Kenyon a cada lado del cerebro dan a cada olor su propio patrón, y las neuronas de salida leen ese patrón. Cuando un olor llega con una recompensa o un castigo, cambia la fuerza de las sinapsis entre los dos grupos. Los científicos creen que ese cambio es el recuerdo. La lección de WiredMind muestra esta vía, pero nada en ella aprende: sus conexiones nunca cambian."
+      },
+      "direction": {
+        "title": "¿Cómo saben las moscas hacia dónde miran?",
+        "short": "Una mosca lleva una brújula interna: un anillo de neuronas donde una zona activa marca su rumbo. Los giros la mueven y las referencias la sujetan.",
+        "a": "En el centro del cerebro de la mosca, un grupo de neuronas de la brújula está conectado en anillo. En cada momento solo una zona de ellas está activa, y el lugar que ocupa en el anillo representa la dirección hacia la que mira la mosca. Los científicos vieron por primera vez moverse esa zona en el cerebro de una mosca viva en 2015.",
+        "b": "Cuando la mosca gira, las neuronas de giro empujan la zona activa por el anillo. Eso solo acabaría fallando poco a poco, así que la mosca también usa lo que ve: las neuronas del anillo aportan puntos de referencia como el sol y mantienen la zona en su sitio. La brújula no es magnética. Es un patrón de actividad que la mosca mantiene al día, y en la oscuridad se desvía lentamente."
+      },
+      "swat": {
+        "title": "¿Por qué es tan difícil cazar una mosca?",
+        "short": "La mosca ve venir el matamoscas muy pronto, y un circuito de escape rápido la lanza al aire en unas centésimas de segundo, antes de que llegue el golpe.",
+        "a": "Tres cosas juegan a favor de la mosca. Sus ojos cubren casi todo el espacio que la rodea, así que es difícil acercarse por detrás. Su visión es más rápida que la nuestra, y una mano le parece lenta. Y tiene neuronas con una sola tarea: se activan cuando algo crece deprisa en su campo de visión, como un matamoscas que se acerca.",
+        "b": "Esas neuronas de aproximación se conectan con la fibra gigante, una célula nerviosa muy gruesa que baja del cerebro hasta las neuronas que mueven las patas del salto. Una fibra gruesa transmite su señal deprisa, así que la orden de saltar llega casi al instante. Las grabaciones a alta velocidad muestran además que la mosca recoloca las patas justo antes de despegar, para que el salto la aleje del matamoscas."
+      },
+      "reaction": {
+        "title": "¿Qué tiempo de reacción tiene una mosca?",
+        "short": "Una mosca de la fruta puede iniciar su salto de escape unas centésimas de segundo después de ver el peligro. Una persona necesita un cuarto de segundo.",
+        "a": "Cuando algo se abalanza sobre una mosca, la señal va de sus ojos a los músculos de las patas en decenas de milisegundos. Un milisegundo es la milésima parte de un segundo. En la lección de WiredMind, las neuronas del salto se activan unos 30 ms después de que aparezca el matamoscas. Esa cifra sale de un modelo sencillo, no de un registro en una mosca, pero cae en un rango realista. Una persona tarda unos 250 ms solo en reaccionar a un destello de luz.",
+        "b": "La velocidad está en el cableado. El camino es corto: neuronas de aproximación, luego la fibra gigante, luego las neuronas del salto. La fibra gigante es inusualmente gruesa, y por eso su señal viaja deprisa. Y en una mosca real pasa la señal por sinapsis eléctricas, canales directos entre células casi sin retraso."
+      },
+      "neurons": {
+        "title": "¿Cuántas neuronas tiene el cerebro de una mosca?",
+        "short": "Unas 140 000. En 2024 se terminó de cartografiar cada una de ellas en el cerebro de una mosca de la fruta adulta, con sus decenas de millones de sinapsis.",
+        "a": "El cerebro de una mosca de la fruta es más pequeño que una semilla de amapola y contiene unas 140 000 neuronas. Un cerebro humano tiene cientos de miles de veces más. Aun así, con él la mosca vuela, encuentra comida, aprende olores y escapa de un matamoscas.",
+        "b": "Un mapa completo de un sistema nervioso, con cada neurona y cada sinapsis, se llama conectoma. La mosca de la fruta es uno de los poquísimos animales cuyo cerebro entero se ha cartografiado así. Las lecciones de WiredMind funcionan con el conectoma del cerebro y el cordón nervioso de una mosca macho, y cada lección usa un circuito de 3000 a 4500 de sus neuronas."
+      }
     }
   },
   "teachers": {

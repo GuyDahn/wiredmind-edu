@@ -1,5 +1,8 @@
 import type {
+  Article,
   BreadcrumbList,
+  DefinedTerm,
+  DefinedTermSet,
   Graph,
   LearningResource,
   Organization,
@@ -93,7 +96,14 @@ export function homeJsonLd({
 export function pageJsonLd(
   locale: Locale,
   trail: readonly { name: string; path: string }[],
-  ...nodes: (LearningResource | Person | Organization)[]
+  ...nodes: (
+    | LearningResource
+    | Article
+    | Person
+    | Organization
+    | DefinedTerm
+    | DefinedTermSet
+  )[]
 ): Graph {
   return {
     "@context": "https://schema.org",
@@ -137,6 +147,96 @@ export function lessonJsonLd({
     interactivityType: "active",
     timeRequired: "PT10M",
     keywords: keywords.join(", "),
+    isPartOf: { "@id": WEBSITE_ID },
+    author: { "@type": "Person", "@id": PERSON_ID, name: AUTHOR.name },
+    publisher: {
+      "@type": "Organization",
+      "@id": ORGANIZATION_ID,
+      name: SITE_NAME,
+    },
+  };
+}
+
+function glossaryId(locale: Locale, glossaryPath: string): string {
+  return `${absoluteUrl(localePath(locale, glossaryPath))}#glossary`;
+}
+
+/** The glossary page: the set every term page says it belongs to. */
+export function glossaryJsonLd({
+  locale,
+  path,
+  name,
+  description,
+  terms,
+}: {
+  locale: Locale;
+  path: string;
+  name: string;
+  description: string;
+  terms: readonly { name: string; path: string }[];
+}): DefinedTermSet {
+  return {
+    "@type": "DefinedTermSet",
+    "@id": glossaryId(locale, path),
+    url: absoluteUrl(localePath(locale, path)),
+    name,
+    description,
+    inLanguage: locale,
+    isPartOf: { "@id": WEBSITE_ID },
+    hasDefinedTerm: terms.map((term) => ({
+      "@type": "DefinedTerm",
+      name: term.name,
+      url: absoluteUrl(localePath(locale, term.path)),
+    })),
+  };
+}
+
+/** One term's page: its name and the explanation the lessons give. */
+export function termJsonLd({
+  locale,
+  path,
+  glossaryPath,
+  name,
+  description,
+}: {
+  locale: Locale;
+  path: string;
+  glossaryPath: string;
+  name: string;
+  description: string;
+}): DefinedTerm {
+  return {
+    "@type": "DefinedTerm",
+    "@id": `${absoluteUrl(localePath(locale, path))}#term`,
+    url: absoluteUrl(localePath(locale, path)),
+    name,
+    description,
+    inDefinedTermSet: { "@id": glossaryId(locale, glossaryPath) },
+  };
+}
+
+/** A question's page: the question as the headline, its short answer as the summary. */
+export function answerJsonLd({
+  locale,
+  path,
+  headline,
+  description,
+}: {
+  locale: Locale;
+  path: string;
+  headline: string;
+  description: string;
+}): Article {
+  const url = absoluteUrl(localePath(locale, path));
+  return {
+    "@type": "Article",
+    "@id": `${url}#article`,
+    url,
+    mainEntityOfPage: url,
+    headline,
+    description,
+    inLanguage: locale,
+    isAccessibleForFree: true,
     isPartOf: { "@id": WEBSITE_ID },
     author: { "@type": "Person", "@id": PERSON_ID, name: AUTHOR.name },
     publisher: {

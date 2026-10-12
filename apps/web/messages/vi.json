@@ -14,7 +14,6 @@
       "title": "Về WiredMind: điều gì là thật, điều gì được đơn giản hóa",
       "description": "Điều gì là thật và điều gì được đơn giản hóa trong các bài học về não ruồi giấm của WiredMind, ai đã làm ra và cách ủng hộ dự án."
     },
-    "lessonTitle": "{title} · WiredMind",
     "notFoundTitle": "Không tìm thấy trang · WiredMind"
   },
   "og": {
@@ -249,6 +248,7 @@
       "title": "Ruồi ghi nhớ mùi như thế nào",
       "summary": "Gửi một mùi vào não ruồi thật và tìm những tế bào ghi nhớ mùi đó.",
       "description": "Gửi một mùi vào não ruồi giấm thật, lần theo nó đến thể nấm và tìm các tế bào lưu giữ ký ức về mùi. Bài học miễn phí dài 10 phút.",
+      "searchTitle": "Ruồi ngửi và ghi nhớ mùi thế nào: bài học tương tác",
       "steps": {
         "send": {
           "text": "Ruồi ngửi mùi bằng <antenna>anten</antenna> <gloss>(hai sợi râu)</gloss>. Nhấn nút Kích thích để gửi một mùi vào. Hãy xem các nơ-ron màu cam sáng lên.",
@@ -297,6 +297,7 @@
       "title": "Làm sao ruồi biết mình đang hướng về đâu",
       "summary": "Đẩy la bàn của một con ruồi thật xoay vòng và xem điều gì giữ nó đúng chỗ.",
       "description": "Đẩy la bàn trong não ruồi giấm thật xoay vòng, rồi làm im lặng nơ-ron vòng và xem cảm giác phương hướng của ruồi trôi đi. Bài học miễn phí dài 10 phút.",
+      "searchTitle": "La bàn bên trong của ruồi: bài học tương tác về não",
       "steps": {
         "left": {
           "text": "Nhấn nút Kích thích để <turn>nơ-ron rẽ trái</turn> <gloss>(tín hiệu rẽ)</gloss> phát xung. Sau đó hãy nhìn mặt la bàn.",
@@ -341,6 +342,7 @@
       "title": "Cú thoát hiểm trong 30 mili giây",
       "summary": "Tìm sợi dây giúp ruồi thoát khỏi chiếc vỉ đang đập xuống.",
       "description": "Lần theo chiếc vỉ đập ruồi từ mắt ruồi giấm thật, dọc sợi khổng lồ xuống tận chân chỉ trong 30 ms, rồi cắt sợi dây đó. Bài học miễn phí dài 10 phút.",
+      "searchTitle": "Phản xạ thoát hiểm của ruồi giấm: bài học sợi khổng lồ",
       "steps": {
         "loom": {
           "text": "Một chiếc vỉ đập ruồi đang lao xuống con ruồi. Nhấn nút Kích thích để <looming>nơ-ron phát hiện vật lao tới</looming> <gloss>(bộ dò vỉ ruồi)</gloss> phát xung.",
@@ -735,6 +737,67 @@
     "bridge": {
       "name": "Cầu tiền não",
       "text": "Một phần hình thanh trong não ruồi, tên khoa học là protocerebral bridge. Nơ-ron la bàn và nơ-ron rẽ đều chạy qua đây."
+    }
+  },
+  "glossary": {
+    "nav": "Thuật ngữ",
+    "title": "Thuật ngữ khoa học thần kinh",
+    "lead": "Mọi thuật ngữ khoa học trong các bài học, được giải thích trong một hoặc hai câu. Mở một thuật ngữ để xem nó xuất hiện ở đâu trong bộ não thật của ruồi giấm.",
+    "metaTitle": "Thuật ngữ khoa học thần kinh cho học sinh · WiredMind",
+    "metaDescription": "Nơ-ron, xináp, connectome, thể nấm và hơn thế nữa: thuật ngữ trong các bài học về ruồi giấm của WiredMind, giải thích trong một hoặc hai câu.",
+    "termTitle": "{term}: giải thích dễ hiểu",
+    "inLessons": "Xem trong bài học",
+    "steps": "Thuật ngữ này xuất hiện ở đâu trong bài học",
+    "related": "Thuật ngữ liên quan",
+    "all": "Tất cả thuật ngữ"
+  },
+  "questions": {
+    "nav": "Câu hỏi",
+    "title": "Câu hỏi về não ruồi",
+    "lead": "Câu trả lời ngắn cho những điều mọi người thắc mắc về ruồi và bộ não của chúng. Mỗi câu đi kèm một bài học để bạn tự mình xem.",
+    "metaTitle": "Câu hỏi về não ruồi, trả lời dễ hiểu · WiredMind",
+    "metaDescription": "Ruồi ngửi mùi thế nào? Vì sao khó đập trúng ruồi? Câu trả lời ngắn gọn, rõ ràng về não ruồi giấm, mỗi câu kèm một bài học miễn phí.",
+    "more": "Câu hỏi khác",
+    "about": "Về bài học này",
+    "steps": "Điều gì xảy ra, từng bước một",
+    "answered": "Những câu hỏi bài học này trả lời",
+    "items": {
+      "smell": {
+        "title": "Ruồi ngửi mùi như thế nào?",
+        "short": "Ruồi ngửi bằng hai anten. Các thụ thể mùi trên đó phát xung khi có mùi bay tới, rồi tín hiệu đi vào não để được phân loại.",
+        "a": "Ruồi không có mũi. Hai anten của nó phủ đầy những sợi lông tí hon, và bên trong mỗi sợi lông là các thụ thể mùi: những tế bào thần kinh phát xung khi đúng phân tử mùi đậu lên chúng. Ruồi giấm có khoảng 50 loại thụ thể, và mỗi loại đáp lại một nhóm mùi riêng. Nhờ hỗn hợp tín hiệu đó mà ruồi phân biệt mùi này với mùi khác.",
+        "b": "Các thụ thể gửi tín hiệu đến thùy râu, trạm dừng đầu tiên của mùi trong não. Ở đó, mọi thụ thể cùng loại gặp nhau tại cùng một điểm, nên một mùi trở thành một kiểu hình gồm các điểm đang hoạt động. Nơ-ron chiếu mang kiểu hình ấy vào sâu hơn, đến thể nấm, nơi ruồi gắn mùi với những trải nghiệm tốt và xấu."
+      },
+      "memory": {
+        "title": "Ruồi có trí nhớ không?",
+        "short": "Có. Ruồi giấm có thể học rằng một mùi báo hiệu thức ăn hay nguy hiểm và nhớ điều đó trong nhiều giờ hoặc nhiều ngày. Ký ức hình thành ở thể nấm.",
+        "a": "Trong thí nghiệm, những con ruồi gặp một mùi cùng với đường về sau sẽ đi về phía mùi đó, còn những con gặp mùi ấy cùng với một cú sốc điện nhẹ thì tránh xa. Chúng đã học được, và có thể nhớ trong nhiều giờ, đôi khi nhiều ngày.",
+        "b": "Việc học diễn ra ở thể nấm. Khoảng 2.000 tế bào Kenyon ở mỗi bên não tạo cho mỗi mùi một kiểu hình riêng, và các nơ-ron đầu ra đọc kiểu hình đó. Khi một mùi đến cùng phần thưởng hoặc hình phạt, độ mạnh của các xináp giữa hai nhóm thay đổi. Các nhà khoa học cho rằng sự thay đổi ấy chính là ký ức. Bài học của WiredMind cho thấy con đường này, nhưng không có gì trong đó học cả: các kết nối của nó không bao giờ thay đổi."
+      },
+      "direction": {
+        "title": "Làm sao ruồi biết mình đang hướng về đâu?",
+        "short": "Ruồi có một la bàn bên trong: một vòng nơ-ron với một vùng hoạt động đánh dấu hướng của nó. Khi ruồi rẽ, vùng đó dịch đi; điểm mốc giữ nó đứng yên.",
+        "a": "Ở giữa não ruồi, một nhóm nơ-ron la bàn được nối thành vòng. Tại mỗi thời điểm chỉ một vùng trong số chúng hoạt động, và vị trí của vùng đó trên vòng cho biết ruồi đang hướng về đâu. Năm 2015, các nhà khoa học lần đầu quan sát được vùng này di chuyển trong não một con ruồi còn sống.",
+        "b": "Khi ruồi rẽ, các nơ-ron rẽ đẩy vùng hoạt động đi quanh vòng. Chỉ thế thôi thì dần dần sẽ sai lệch, nên ruồi còn dùng những gì nó thấy: các nơ-ron vòng đưa vào các điểm mốc như mặt trời và giữ vùng đó đúng chỗ. La bàn này không có từ tính. Nó là một kiểu hoạt động mà ruồi liên tục cập nhật, và trong bóng tối nó trôi dần đi."
+      },
+      "swat": {
+        "title": "Vì sao đập trúng ruồi lại khó đến vậy?",
+        "short": "Ruồi thấy vỉ đập lao tới từ sớm, và một mạch thoát hiểm nhanh phóng nó lên không trong vài phần trăm giây, trước khi vỉ kịp đập xuống.",
+        "a": "Có ba điều có lợi cho ruồi. Mắt nó bao quát gần như toàn bộ không gian xung quanh, nên rất khó lén tới từ phía sau. Thị giác của nó nhanh hơn chúng ta, nên bàn tay trông chậm chạp với nó. Và nó có những nơ-ron chỉ làm một việc: phát xung khi có thứ gì đó lớn nhanh trong tầm nhìn, như chiếc vỉ đập đang tới gần.",
+        "b": "Các nơ-ron phát hiện vật lao tới ấy nối với sợi khổng lồ, một tế bào thần kinh rất dày chạy từ não xuống các nơ-ron điều khiển đôi chân nhảy. Sợi dày dẫn tín hiệu nhanh, nên lệnh nhảy đến gần như tức thì. Phim quay tốc độ cao còn cho thấy ruồi dịch chân ngay trước khi cất cánh, để cú nhảy đưa nó ra xa chiếc vỉ đập."
+      },
+      "reaction": {
+        "title": "Ruồi phản ứng nhanh đến mức nào?",
+        "short": "Ruồi giấm có thể bắt đầu cú nhảy thoát hiểm chỉ vài phần trăm giây sau khi thấy nguy hiểm. Con người cần khoảng một phần tư giây để phản ứng.",
+        "a": "Khi có thứ gì đó lao về phía ruồi, tín hiệu chạy từ mắt đến cơ chân của nó trong vài chục mili giây. Một mili giây là một phần nghìn giây. Trong bài học của WiredMind, các nơ-ron nhảy phát xung khoảng 30 ms sau khi vỉ đập xuất hiện. Con số đó đến từ một mô hình đơn giản, không phải từ phép đo trên ruồi, nhưng nằm trong khoảng thực tế. Con người mất khoảng 250 ms chỉ để phản ứng với một tia sáng lóe lên.",
+        "b": "Tốc độ đến từ cách đi dây. Con đường rất ngắn: nơ-ron phát hiện vật lao tới, rồi sợi khổng lồ, rồi nơ-ron nhảy. Sợi khổng lồ dày khác thường, nên tín hiệu của nó đi rất nhanh. Và ở ruồi thật, nó truyền tín hiệu qua các xináp điện, những kênh trực tiếp giữa các tế bào, gần như không có độ trễ."
+      },
+      "neurons": {
+        "title": "Não ruồi giấm có bao nhiêu nơ-ron?",
+        "short": "Khoảng 140.000. Năm 2024, các nhà khoa học đã lập xong bản đồ từng nơ-ron trong não ruồi giấm trưởng thành, cùng hàng chục triệu xináp giữa chúng.",
+        "a": "Não ruồi giấm nhỏ hơn một hạt anh túc và chứa khoảng 140.000 nơ-ron. Não người có nhiều hơn hàng trăm nghìn lần. Dù vậy, bộ não ấy vẫn giúp ruồi bay, tìm thức ăn, học mùi và thoát khỏi vỉ đập.",
+        "b": "Bản đồ đầy đủ của một hệ thần kinh, với mọi nơ-ron và mọi xináp, được gọi là connectome. Ruồi giấm là một trong số rất ít loài vật có toàn bộ não được lập bản đồ theo cách này. Các bài học của WiredMind chạy trên connectome của não và dây thần kinh bụng của một con ruồi đực, và mỗi bài học dùng một mạch gồm 3.000 đến 4.500 nơ-ron của nó."
+      }
     }
   },
   "teachers": {

@@ -11,8 +11,10 @@ import { pick, type MessageTree } from "@/src/i18n/messages";
 import { shareCard } from "@/src/og/share-card";
 import { LessonCredits } from "@/src/site/footer";
 import { SiteMenu } from "@/src/site/header";
+import { LESSON_ABOUT_ID, LessonAbout } from "@/src/site/lesson-about";
 import { jsonLdScript, lessonJsonLd, pageJsonLd } from "@/src/site/json-ld";
 import { pageMetadata, shareImagePath } from "@/src/site/page-meta";
+import { LINK_CLASS } from "@/src/site/rich-text";
 import { SITE_NAME } from "@/src/site/site";
 import { findLesson, LESSONS } from "@/src/viewer/modules";
 import { Viewer } from "@/src/viewer/viewer";
@@ -37,7 +39,7 @@ export async function generateMetadata({
   return pageMetadata({
     locale,
     path: entry.path,
-    title: t("meta.lessonTitle", { title }),
+    title: t(`lessons.${entry.id}.searchTitle`),
     shareTitle: title,
     description: t(`lessons.${entry.id}.description`),
     image: shareImagePath(locale, `lesson-${entry.id}`, card.version),
@@ -76,7 +78,20 @@ export default async function LessonPage({
             coffee link here: nothing asks students for anything mid-lesson. */}
         <Viewer
           lessonId={entry.id}
-          credit={<LessonCredits locale={locale} />}
+          credit={
+            <>
+              <LessonCredits locale={locale} />
+              {/* The viewer fills the screen and keeps the mouse wheel, so
+                  this is the way down to the lesson in words. */}
+              <a
+                href={`#${LESSON_ABOUT_ID}`}
+                className={`${LINK_CLASS} mt-1 inline-flex min-h-11 items-center gap-1.5`}
+              >
+                {t("questions.about")}
+                <span aria-hidden="true">{"↓"}</span>
+              </a>
+            </>
+          }
           menu={
             <SiteMenu
               locale={locale}
@@ -87,6 +102,7 @@ export default async function LessonPage({
           }
         />
       </NextIntlClientProvider>
+      <LessonAbout locale={locale} entry={entry} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

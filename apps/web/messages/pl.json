@@ -14,7 +14,6 @@
       "title": "O projekcie WiredMind: co jest prawdziwe, a co uproszczone",
       "description": "Co w lekcjach WiredMind o mózgu muszki owocowej jest prawdziwe, a co uproszczone, kto je stworzył i jak można wesprzeć projekt."
     },
-    "lessonTitle": "{title} · WiredMind",
     "notFoundTitle": "Nie znaleziono strony · WiredMind"
   },
   "og": {
@@ -249,6 +248,7 @@
       "title": "Jak muszka zapamiętuje zapach",
       "summary": "Wyślij zapach do prawdziwego mózgu muszki i znajdź komórki, które go zapamiętują.",
       "description": "Wyślij zapach do prawdziwego mózgu muszki owocowej, śledź go aż do ciała grzybkowatego i znajdź komórki, które go zapamiętują. Darmowa lekcja na 10 minut.",
+      "searchTitle": "Jak muszki czują i zapamiętują zapachy: lekcja interaktywna",
       "steps": {
         "send": {
           "text": "Muszka wącha <antenna>czułkami</antenna> <gloss>(dwoma różkami)</gloss>. Naciśnij „Pobudź”, żeby wysłać do niej zapach. Zobacz, jak zapalają się pomarańczowe neurony.",
@@ -297,6 +297,7 @@
       "title": "Skąd muszka wie, w którą stronę jest zwrócona",
       "summary": "Poobracaj kompasem prawdziwej muszki i zobacz, co utrzymuje go w miejscu.",
       "description": "Poobracaj wewnętrznym kompasem prawdziwej muszki owocowej, wycisz neurony pierścieniowe i zobacz, jak muszka gubi kierunek. Darmowa lekcja na 10 minut.",
+      "searchTitle": "Wewnętrzny kompas muszki: interaktywna lekcja o mózgu",
       "steps": {
         "left": {
           "text": "Naciśnij „Pobudź”, żeby uruchomić lewe <turn>neurony skrętu</turn> <gloss>(sygnał skrętu)</gloss>. Potem obserwuj tarczę kompasu.",
@@ -341,6 +342,7 @@
       "title": "Ucieczka w 30 milisekund",
       "summary": "Znajdź kabel, dzięki któremu muszka ucieka spod packi.",
       "description": "Prześledź sygnał o packce od oczu prawdziwej muszki owocowej przez włókno olbrzymie do nóg w 30 ms, a potem przetnij kabel. Darmowa lekcja na 10 minut.",
+      "searchTitle": "Odruch ucieczki muszki owocowej: lekcja o włóknie olbrzymim",
       "steps": {
         "loom": {
           "text": "Packa pędzi prosto na muszkę. Naciśnij „Pobudź”, żeby uruchomić <looming>neurony zbliżeniowe</looming> <gloss>(wykrywacze packi)</gloss>.",
@@ -735,6 +737,67 @@
     "bridge": {
       "name": "Mostek",
       "text": "Część mózgu muszki w kształcie pręta, czyli mostek protocerebralny. Biegną przez nią i neurony kompasu, i neurony skrętu."
+    }
+  },
+  "glossary": {
+    "nav": "Słowniczek",
+    "title": "Słowniczek neurobiologii",
+    "lead": "Wszystkie pojęcia naukowe z lekcji, wyjaśnione w jednym lub dwóch zdaniach. Każde pojęcie pokazuje, gdzie pojawia się w mózgu prawdziwej muszki owocowej.",
+    "metaTitle": "Słowniczek neurobiologii dla uczniów · WiredMind",
+    "metaDescription": "Neuron, synapsa, konektom, ciało grzybkowate i inne: pojęcia z lekcji WiredMind o muszce owocowej, każde wyjaśnione w jednym lub dwóch zdaniach.",
+    "termTitle": "{term}: proste wyjaśnienie dla uczniów",
+    "inLessons": "Zobacz to w lekcji",
+    "steps": "Gdzie pojawia się w lekcji",
+    "related": "Powiązane pojęcia",
+    "all": "Wszystkie pojęcia"
+  },
+  "questions": {
+    "nav": "Pytania",
+    "title": "Pytania o mózg muszki",
+    "lead": "Krótkie odpowiedzi na pytania, które ludzie zadają o muszki i ich mózg. Do każdej jest lekcja, w której można to zobaczyć na własne oczy.",
+    "metaTitle": "Pytania o mózg muszki, proste odpowiedzi · WiredMind",
+    "metaDescription": "Jak muszki czują zapachy? Dlaczego tak trudno je trafić? Krótkie, jasne odpowiedzi o mózgu muszki owocowej, każda z darmową lekcją interaktywną.",
+    "more": "Więcej pytań",
+    "about": "O tej lekcji",
+    "steps": "Co się dzieje, krok po kroku",
+    "answered": "Pytania, na które odpowiada ta lekcja",
+    "items": {
+      "smell": {
+        "title": "Jak muszki czują zapachy?",
+        "short": "Muszka czuje zapachy dwoma czułkami. Receptory węchowe na nich pobudzają się, gdy dociera zapach, a sygnał biegnie do mózgu, gdzie jest sortowany.",
+        "a": "Muszka nie ma nosa. Jej dwa czułki pokrywają maleńkie włoski, a w każdym włosku siedzą receptory węchowe: komórki nerwowe, które pobudzają się, gdy trafi na nie właściwa cząsteczka zapachu. Muszka owocowa ma około 50 rodzajów receptorów, a każdy rodzaj odpowiada na własny zestaw zapachów. Dzięki tej mieszance sygnałów muszka odróżnia jeden zapach od drugiego.",
+        "b": "Receptory wysyłają sygnał do płata czułkowego, pierwszego przystanku zapachów w mózgu. Tam wszystkie receptory jednego rodzaju spotykają się w tym samym miejscu, więc zapach staje się wzorem aktywnych miejsc. Neurony projekcyjne niosą ten wzór głębiej, do ciała grzybkowatego, gdzie muszka łączy zapachy z dobrymi i złymi doświadczeniami."
+      },
+      "memory": {
+        "title": "Czy muszki mają pamięć?",
+        "short": "Tak. Muszka owocowa uczy się, że zapach oznacza jedzenie albo zagrożenie, i pamięta to godzinami lub dniami. Wspomnienie powstaje w ciele grzybkowatym.",
+        "a": "W doświadczeniach muszki, które spotkały zapach razem z cukrem, później idą w jego stronę, a te, które spotkały go razem z lekkim wstrząsem elektrycznym, unikają go. Nauczyły się i potrafią to pamiętać godzinami, czasem dniami.",
+        "b": "Uczenie się zachodzi w ciele grzybkowatym. Około 2000 komórek Kenyona po każdej stronie mózgu nadaje każdemu zapachowi własny wzór, a neurony wyjściowe ten wzór odczytują. Gdy zapach pojawia się razem z nagrodą albo karą, zmienia się siła synaps między obiema grupami. Naukowcy sądzą, że ta zmiana jest wspomnieniem. Lekcja WiredMind pokazuje tę drogę, ale nic się w niej nie uczy: jej połączenia nigdy się nie zmieniają."
+      },
+      "direction": {
+        "title": "Skąd muszka wie, w którą stronę jest zwrócona?",
+        "short": "Muszka ma wewnętrzny kompas: pierścień neuronów, w którym jedno aktywne miejsce wskazuje jej kierunek. Skręty je przesuwają, punkty orientacyjne trzymają.",
+        "a": "W środku mózgu muszki neurony kompasu są połączone w pierścień. W każdej chwili aktywne jest tylko jedno ich miejsce, a jego położenie na pierścieniu oznacza kierunek, w którym muszka jest zwrócona. Naukowcy po raz pierwszy zobaczyli, jak to miejsce przesuwa się w mózgu żywej muszki, w 2015 roku.",
+        "b": "Gdy muszka skręca, neurony skrętu przesuwają aktywne miejsce po pierścieniu. To samo z czasem by się rozjechało, więc muszka korzysta też z tego, co widzi: neurony pierścieniowe wnoszą punkty orientacyjne, takie jak słońce, i utrzymują aktywne miejsce tam, gdzie trzeba. Kompas nie jest magnetyczny. To wzór aktywności, który muszka stale aktualizuje, a w ciemności powoli dryfuje."
+      },
+      "swat": {
+        "title": "Dlaczego tak trudno trafić muchę packą?",
+        "short": "Mucha wcześnie widzi nadlatującą packę, a szybki obwód ucieczki wyrzuca ją w powietrze w kilka setnych sekundy, zanim packa spadnie.",
+        "a": "Trzy rzeczy działają na korzyść muchy. Jej oczy obejmują prawie całą przestrzeń dookoła, więc trudno podejść ją od tyłu. Widzi szybciej niż my, dlatego ręka wydaje się jej powolna. I ma neurony z jednym zadaniem: pobudzają się, gdy coś szybko rośnie w polu widzenia, tak jak zbliżająca się packa.",
+        "b": "Te neurony zbliżeniowe łączą się z włóknem olbrzymim, bardzo grubą komórką nerwową, która biegnie z mózgu w dół do neuronów poruszających nogami skocznymi. Grube włókno szybko przewodzi sygnał, więc rozkaz skoku dociera prawie natychmiast. Na filmach z szybkich kamer widać też, że tuż przed startem mucha przestawia nogi, tak aby skok odniósł ją od packi."
+      },
+      "reaction": {
+        "title": "Jak szybko reaguje mucha?",
+        "short": "Muszka owocowa może zacząć skok ucieczki kilka setnych sekundy po zauważeniu zagrożenia. Człowiek potrzebuje około ćwierć sekundy.",
+        "a": "Gdy coś pędzi w stronę muszki, sygnał biegnie od jej oczu do mięśni nóg w kilkadziesiąt milisekund. Milisekunda to jedna tysięczna sekundy. W lekcji WiredMind neurony skoku pobudzają się około 30 ms po pojawieniu się packi. Ta liczba pochodzi z prostego modelu, a nie z pomiaru u muszki, ale mieści się w realistycznym zakresie. Człowiek potrzebuje około 250 ms tylko na to, by zareagować na błysk światła.",
+        "b": "Szybkość bierze się z połączeń. Droga jest krótka: neurony zbliżeniowe, potem włókno olbrzymie, potem neurony skoku. Włókno olbrzymie jest wyjątkowo grube, dlatego jego sygnał biegnie szybko. A u prawdziwej muszki przekazuje sygnał dalej przez synapsy elektryczne, bezpośrednie kanały między komórkami, prawie bez opóźnienia."
+      },
+      "neurons": {
+        "title": "Ile neuronów ma mózg muszki owocowej?",
+        "short": "Około 140 000. W 2024 roku naukowcy zmapowali każdy z nich w mózgu dorosłej muszki owocowej, razem z dziesiątkami milionów synaps między nimi.",
+        "a": "Mózg muszki owocowej jest mniejszy niż ziarenko maku i ma około 140 000 neuronów. Mózg człowieka ma ich setki tysięcy razy więcej. Mimo to muszka potrafi dzięki niemu latać, znajdować jedzenie, uczyć się zapachów i uciekać przed packą.",
+        "b": "Pełna mapa układu nerwowego, z każdym neuronem i każdą synapsą, nazywa się konektom. Muszka owocowa jest jednym z bardzo niewielu zwierząt, których cały mózg tak zmapowano. Lekcje WiredMind działają na konektomie mózgu i łańcuszka nerwowego jednego samca muszki, a każda lekcja korzysta z obwodu liczącego od 3000 do 4500 jego neuronów."
+      }
     }
   },
   "teachers": {

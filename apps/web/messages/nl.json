@@ -15,7 +15,6 @@
       "title": "Over WiredMind: wat is echt en wat is vereenvoudigd?",
       "description": "Wat is echt en wat is vereenvoudigd in de fruitvlieglessen van WiredMind? Lees ook wie het heeft gemaakt en hoe je het kunt steunen."
     },
-    "lessonTitle": "{title} · WiredMind",
     "notFoundTitle": "Pagina niet gevonden · WiredMind"
   },
   "og": {
@@ -250,6 +249,7 @@
       "title": "Hoe een vlieg een geur onthoudt",
       "summary": "Stuur een geur een echt vliegenbrein in en zoek de cellen die de geur onthouden.",
       "description": "Stuur een geur een echt fruitvliegbrein in, volg hem naar het paddenstoellichaam en vind de cellen die hem onthouden. Een gratis les van 10 minuten.",
+      "searchTitle": "Hoe vliegen ruiken en onthouden: interactieve les",
       "steps": {
         "send": {
           "text": "Een vlieg ruikt met zijn <antenna>antennes</antenna> <gloss>(twee voelsprieten)</gloss>. Tik op Stimuleren om een geur naar binnen te sturen. Kijk hoe de oranje neuronen oplichten.",
@@ -298,6 +298,7 @@
       "title": "Hoe een vlieg weet welke kant hij op kijkt",
       "summary": "Duw het kompas van een echte vlieg rond en ontdek wat het op zijn plaats houdt.",
       "description": "Duw het interne kompas van een echte fruitvlieg rond, leg dan de ringneuronen stil en zie het richtinggevoel afdrijven. Een gratis les van 10 minuten.",
+      "searchTitle": "Het interne kompas van de vlieg: interactieve les",
       "steps": {
         "left": {
           "text": "Tik op Stimuleren om links de <turn>draaineuronen</turn> <gloss>(het draaisignaal)</gloss> te laten vuren. Kijk dan naar de kompasschijf.",
@@ -342,6 +343,7 @@
       "title": "Ontsnappen in 30 milliseconden",
       "summary": "Vind de draad die een vlieg onder een vliegenmepper vandaan haalt.",
       "description": "Volg in 30 ms een vliegenmepper van oog tot poot, via de reuzenvezel van een echte fruitvlieg. Knip dan de draad door. Een gratis les van 10 minuten.",
+      "searchTitle": "Vluchtreflex van de fruitvlieg: les over de reuzenvezel",
       "steps": {
         "loom": {
           "text": "Een vliegenmepper duikt op de vlieg af. Tik op Stimuleren om de <looming>naderingsneuronen</looming> <gloss>(de meppermelders)</gloss> te laten vuren.",
@@ -736,6 +738,67 @@
     "bridge": {
       "name": "Brug",
       "text": "Een staafvormig deel van het brein van de vlieg, de protocerebrale brug. De kompasneuronen en de draaineuronen lopen er allebei doorheen."
+    }
+  },
+  "glossary": {
+    "nav": "Begrippenlijst",
+    "title": "Begrippenlijst neurowetenschap",
+    "lead": "Alle wetenschappelijke begrippen uit de lessen, uitgelegd in een of twee zinnen. Open een begrip om te zien waar het voorkomt in het brein van een echte fruitvlieg.",
+    "metaTitle": "Begrippenlijst neurowetenschap voor de klas · WiredMind",
+    "metaDescription": "Neuron, synaps, connectoom, paddenstoellichaam en meer: de begrippen uit de fruitvlieglessen van WiredMind, elk uitgelegd in een of twee zinnen.",
+    "termTitle": "{term}: eenvoudige uitleg voor scholieren",
+    "inLessons": "Bekijk het in een les",
+    "steps": "Waar het in de les voorkomt",
+    "related": "Verwante begrippen",
+    "all": "Alle begrippen"
+  },
+  "questions": {
+    "nav": "Vragen",
+    "title": "Vragen over het vliegenbrein",
+    "lead": "Korte antwoorden op wat mensen zich afvragen over vliegen en hun brein. Bij elk antwoord hoort een les waarin je het zelf kunt zien.",
+    "metaTitle": "Vragen over het vliegenbrein, kort uitgelegd · WiredMind",
+    "metaDescription": "Hoe ruiken vliegen? Waarom zijn ze zo moeilijk te raken? Korte, heldere antwoorden over het brein van de fruitvlieg, elk met een gratis les.",
+    "more": "Meer vragen",
+    "about": "Over deze les",
+    "steps": "Wat er gebeurt, stap voor stap",
+    "answered": "Vragen die deze les beantwoordt",
+    "items": {
+      "smell": {
+        "title": "Hoe ruiken vliegen?",
+        "short": "Een vlieg ruikt met zijn twee antennes. Geurreceptoren daarop vuren als er een geur landt, en het signaal gaat naar het brein om gesorteerd te worden.",
+        "a": "Een vlieg heeft geen neus. Zijn twee antennes zijn bedekt met piepkleine haartjes, en in elk haartje zitten geurreceptoren: zenuwcellen die vuren als het juiste geurmolecuul erop landt. Een fruitvlieg heeft ongeveer 50 soorten receptoren, en elke soort reageert op zijn eigen reeks geuren. Aan die mix van signalen herkent de vlieg de ene geur van de andere.",
+        "b": "De receptoren sturen hun signaal naar de antennekwab, de eerste halte voor geuren in het brein. Daar komen alle receptoren van één soort op dezelfde plek samen, zodat een geur een patroon van actieve plekken wordt. Projectieneuronen brengen dat patroon dieper het brein in, naar het paddenstoellichaam, waar de vlieg geuren koppelt aan goede en slechte ervaringen."
+      },
+      "memory": {
+        "title": "Hebben vliegen een geheugen?",
+        "short": "Ja. Een fruitvlieg kan leren dat een geur eten of gevaar betekent en dat uren of dagen onthouden. De herinnering ontstaat in het paddenstoellichaam.",
+        "a": "In experimenten lopen vliegen die een geur samen met suiker tegenkwamen later naar die geur toe, en vliegen die hem samen met een lichte stroomschok tegenkwamen, mijden hem. Ze hebben iets geleerd en kunnen het uren onthouden, soms dagen.",
+        "b": "Het leren gebeurt in het paddenstoellichaam. Ongeveer 2.000 Kenyon-cellen aan elke kant van het brein geven elke geur een eigen patroon, en outputneuronen lezen dat patroon. Komt een geur samen met een beloning of een straf, dan verandert de sterkte van de synapsen tussen de twee groepen. Wetenschappers denken dat die verandering de herinnering is. De les van WiredMind laat deze route zien, maar niets erin leert: de verbindingen veranderen nooit."
+      },
+      "direction": {
+        "title": "Hoe weet een vlieg welke kant hij op kijkt?",
+        "short": "Een vlieg heeft een intern kompas: een ring van neuronen waarin één actieve plek zijn richting aangeeft. Draaien verschuift die plek.",
+        "a": "Midden in het brein van de vlieg zijn kompasneuronen in een ring met elkaar verbonden. Op elk moment is maar één plek ervan actief, en waar die plek op de ring zit, staat voor de richting waarin de vlieg kijkt. Wetenschappers zagen die plek in 2015 voor het eerst bewegen in het brein van een levende vlieg.",
+        "b": "Als de vlieg draait, duwen draaineuronen de plek rond over de ring. Dat alleen zou langzaam fout gaan, dus gebruikt de vlieg ook wat hij ziet: ringneuronen brengen oriëntatiepunten zoals de zon binnen en houden de plek op zijn plaats. Het kompas is niet magnetisch. Het is een patroon van activiteit dat de vlieg steeds bijwerkt, en in het donker drijft het langzaam af."
+      },
+      "swat": {
+        "title": "Waarom zijn vliegen zo moeilijk dood te slaan?",
+        "short": "Een vlieg ziet de mepper vroeg aankomen, en een snel vluchtcircuit lanceert hem binnen een paar honderdsten van een seconde de lucht in.",
+        "a": "Drie dingen werken in het voordeel van de vlieg. Zijn ogen overzien bijna de hele ruimte om hem heen, dus van achteren besluipen lukt nauwelijks. Hij ziet sneller dan wij, zodat een hand voor hem langzaam lijkt. En hij heeft neuronen met één taak: ze vuren als iets in beeld snel groter wordt, zoals een vliegenmepper die dichterbij komt.",
+        "b": "Die naderingsneuronen zijn verbonden met de reuzenvezel, een heel dikke zenuwcel die van het brein omlaag loopt naar de neuronen die de springpoten aansturen. Een dikke vezel geleidt zijn signaal snel, dus het bevel om te springen komt bijna meteen aan. Op hogesnelheidsbeelden is ook te zien dat de vlieg vlak voor het opstijgen zijn poten verzet, zodat de sprong hem van de mepper weg draagt."
+      },
+      "reaction": {
+        "title": "Hoe snel is de reactietijd van een vlieg?",
+        "short": "Een fruitvlieg kan een paar honderdsten van een seconde nadat hij gevaar ziet al aan zijn vluchtsprong beginnen. Een mens heeft een kwart seconde nodig.",
+        "a": "Als er iets op een vlieg afkomt, loopt het signaal in enkele tientallen milliseconden van zijn ogen naar zijn pootspieren. Een milliseconde is een duizendste van een seconde. In de les van WiredMind vuren de springneuronen ongeveer 30 ms nadat de mepper verschijnt. Dat getal komt uit een eenvoudig model, niet uit een meting bij een vlieg, maar het valt binnen een realistisch bereik. Een mens doet er ongeveer 250 ms over om alleen al op een lichtflits te reageren.",
+        "b": "De snelheid zit in de bedrading. De route is kort: naderingsneuronen, dan de reuzenvezel, dan de springneuronen. De reuzenvezel is ongewoon dik, waardoor zijn signaal snel reist. En in een echte vlieg geeft hij het signaal door via elektrische synapsen, directe kanalen tussen cellen met bijna geen vertraging."
+      },
+      "neurons": {
+        "title": "Hoeveel neuronen heeft het brein van een fruitvlieg?",
+        "short": "Ongeveer 140.000. In 2024 werd elk ervan in het brein van een volwassen fruitvlieg in kaart gebracht, met de tientallen miljoenen synapsen ertussen.",
+        "a": "Het brein van een fruitvlieg is kleiner dan een maanzaadje en telt ongeveer 140.000 neuronen. Een mensenbrein heeft er honderdduizenden keren meer. Toch kan de vlieg ermee vliegen, eten vinden, geuren leren en aan een vliegenmepper ontsnappen.",
+        "b": "Een volledige kaart van een zenuwstelsel, met elk neuron en elke synaps, heet een connectoom. De fruitvlieg is een van de zeer weinige dieren waarvan het hele brein zo in kaart is gebracht. De lessen van WiredMind draaien op het connectoom van het brein en de zenuwstreng van één mannetjesvlieg, en elke les gebruikt een circuit van 3.000 tot 4.500 van zijn neuronen."
+      }
     }
   },
   "teachers": {

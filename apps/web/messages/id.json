@@ -14,7 +14,6 @@
       "title": "Tentang WiredMind: mana yang asli, mana yang disederhanakan",
       "description": "Mana yang asli dan mana yang disederhanakan dalam pelajaran otak lalat buah WiredMind, siapa pembuatnya, dan cara mendukungnya."
     },
-    "lessonTitle": "{title} · WiredMind",
     "notFoundTitle": "Halaman tidak ditemukan · WiredMind"
   },
   "og": {
@@ -249,6 +248,7 @@
       "title": "Bagaimana lalat mengingat bau",
       "summary": "Kirim bau ke otak lalat sungguhan dan temukan sel yang mengingatnya.",
       "description": "Kirim bau ke otak lalat buah sungguhan, ikuti jalannya ke badan jamur, dan temukan sel yang menyimpan ingatannya. Pelajaran gratis 10 menit.",
+      "searchTitle": "Cara lalat mencium dan mengingat bau: pelajaran interaktif",
       "steps": {
         "send": {
           "text": "Lalat mencium bau dengan <antenna>antena</antenna> <gloss>(kedua sungutnya)</gloss>. Ketuk Rangsang untuk mengirimkan bau. Perhatikan neuron oranye menyala.",
@@ -297,6 +297,7 @@
       "title": "Bagaimana lalat tahu ke mana ia menghadap",
       "summary": "Dorong kompas lalat sungguhan ke sana kemari dan lihat apa yang menahannya tetap di tempat.",
       "description": "Dorong kompas internal lalat buah sungguhan ke sana kemari, lalu bungkam neuron cincin dan saksikan arah hadapnya melenceng. Pelajaran gratis 10 menit.",
+      "searchTitle": "Kompas internal lalat: pelajaran otak interaktif",
       "steps": {
         "left": {
           "text": "Ketuk Rangsang untuk mengaktifkan <turn>neuron belok</turn> <gloss>(sinyal belok)</gloss> di sisi kiri. Lalu perhatikan piringan kompas.",
@@ -341,6 +342,7 @@
       "title": "Kabur dalam 30 milidetik",
       "summary": "Temukan kabel yang membuat lalat lolos dari pemukul.",
       "description": "Ikuti sinyal pemukul dari mata lalat buah sungguhan lewat serat raksasa hingga ke kakinya dalam 30 ms, lalu putuskan kabelnya. Pelajaran gratis 10 menit.",
+      "searchTitle": "Refleks kabur lalat buah: pelajaran serat raksasa",
       "steps": {
         "loom": {
           "text": "Pemukul lalat menyambar ke arah si lalat. Ketuk Rangsang untuk mengaktifkan <looming>neuron looming</looming> <gloss>(si pendeteksi pemukul)</gloss>.",
@@ -735,6 +737,67 @@
     "bridge": {
       "name": "Jembatan",
       "text": "Bagian otak lalat yang berbentuk batang, yaitu jembatan protoserebral. Neuron kompas dan neuron belok sama-sama melewatinya."
+    }
+  },
+  "glossary": {
+    "nav": "Glosarium",
+    "title": "Glosarium ilmu saraf",
+    "lead": "Semua istilah ilmiah dalam pelajaran, dijelaskan dalam satu atau dua kalimat. Buka sebuah istilah untuk melihat di mana ia muncul di otak lalat buah sungguhan.",
+    "metaTitle": "Glosarium ilmu saraf untuk siswa · WiredMind",
+    "metaDescription": "Neuron, sinapsis, konektom, badan jamur, dan lainnya: istilah dalam pelajaran lalat buah WiredMind, masing-masing dijelaskan dalam satu atau dua kalimat.",
+    "termTitle": "{term}: penjelasan sederhana untuk siswa",
+    "inLessons": "Lihat dalam pelajaran",
+    "steps": "Di mana istilah ini muncul dalam pelajaran",
+    "related": "Istilah terkait",
+    "all": "Semua istilah"
+  },
+  "questions": {
+    "nav": "Pertanyaan",
+    "title": "Pertanyaan tentang otak lalat",
+    "lead": "Jawaban singkat untuk hal-hal yang sering ditanyakan orang tentang lalat dan otaknya. Setiap jawaban disertai pelajaran tempat Anda bisa melihatnya sendiri.",
+    "metaTitle": "Pertanyaan tentang otak lalat, dijawab · WiredMind",
+    "metaDescription": "Bagaimana lalat mencium bau? Mengapa lalat sulit ditepuk? Jawaban singkat dan jelas tentang otak lalat buah, masing-masing dengan pelajaran gratis.",
+    "more": "Pertanyaan lainnya",
+    "about": "Tentang pelajaran ini",
+    "steps": "Apa yang terjadi, langkah demi langkah",
+    "answered": "Pertanyaan yang dijawab pelajaran ini",
+    "items": {
+      "smell": {
+        "title": "Bagaimana lalat mencium bau?",
+        "short": "Lalat mencium bau dengan dua antenanya. Reseptor bau di antena aktif saat bau datang, lalu sinyalnya dikirim ke otak untuk dipilah.",
+        "a": "Lalat tidak punya hidung. Dua antenanya ditutupi rambut-rambut halus, dan di dalam setiap rambut ada reseptor bau: sel saraf yang aktif ketika molekul bau yang cocok mendarat padanya. Lalat buah punya sekitar 50 jenis reseptor, dan setiap jenis menanggapi kumpulan baunya sendiri. Dari campuran sinyal itulah lalat membedakan satu bau dari bau lainnya.",
+        "b": "Reseptor mengirim sinyalnya ke lobus antena, perhentian pertama bau di dalam otak. Di sana, semua reseptor sejenis bertemu di titik yang sama, sehingga satu bau menjadi pola titik-titik aktif. Neuron proyeksi membawa pola itu lebih dalam, ke badan jamur, tempat lalat mengaitkan bau dengan pengalaman baik dan buruk."
+      },
+      "memory": {
+        "title": "Apakah lalat punya ingatan?",
+        "short": "Ya. Lalat buah bisa belajar bahwa suatu bau berarti makanan atau bahaya dan mengingatnya berhari-hari. Ingatan itu terbentuk di badan jamur.",
+        "a": "Dalam percobaan, lalat yang mencium suatu bau bersama gula kemudian berjalan mendekati bau itu, sedangkan lalat yang menciumnya bersama kejutan listrik ringan menghindarinya. Mereka telah belajar, dan bisa mengingatnya berjam-jam, kadang berhari-hari.",
+        "b": "Proses belajar itu terjadi di badan jamur. Sekitar 2.000 sel Kenyon di tiap sisi otak memberi setiap bau polanya sendiri, dan neuron keluaran membaca pola itu. Ketika bau datang bersama hadiah atau hukuman, kekuatan sinapsis di antara kedua kelompok itu berubah. Para ilmuwan menduga perubahan itulah ingatannya. Pelajaran WiredMind menunjukkan jalur ini, tetapi tidak ada yang belajar di dalamnya: sambungannya tidak pernah berubah."
+      },
+      "direction": {
+        "title": "Bagaimana lalat tahu ke mana ia menghadap?",
+        "short": "Lalat punya kompas internal: cincin neuron dengan satu bagian aktif yang menandai arah hadapnya. Belokan menggesernya, patokan menahannya.",
+        "a": "Di tengah otak lalat, sekelompok neuron kompas tersambung membentuk cincin. Pada setiap saat hanya satu bagiannya yang aktif, dan letak bagian itu pada cincin menunjukkan arah hadap lalat. Para ilmuwan pertama kali melihat bagian aktif ini bergerak di otak lalat hidup pada tahun 2015.",
+        "b": "Saat lalat berbelok, neuron belok mendorong bagian aktif itu mengelilingi cincin. Itu saja lama-lama akan meleset, jadi lalat juga memakai apa yang dilihatnya: neuron cincin membawa patokan seperti matahari dan menahan bagian aktif itu di tempatnya. Kompas ini tidak bersifat magnetis. Ia adalah pola aktivitas yang terus diperbarui lalat, dan dalam gelap ia perlahan melenceng."
+      },
+      "swat": {
+        "title": "Mengapa lalat begitu sulit ditepuk?",
+        "short": "Lalat melihat pemukul datang sejak awal, dan sirkuit kabur yang cepat melontarkannya ke udara dalam beberapa perseratus detik, sebelum pemukul mendarat.",
+        "a": "Ada tiga hal yang menguntungkan lalat. Matanya mencakup hampir seluruh ruang di sekelilingnya, jadi sulit mengendap dari belakang. Penglihatannya lebih cepat daripada kita, sehingga tangan tampak lambat baginya. Dan ia punya neuron dengan satu tugas saja: aktif ketika sesuatu membesar dengan cepat dalam pandangan, seperti pemukul yang mendekat.",
+        "b": "Neuron looming itu tersambung ke serat raksasa, sel saraf sangat tebal yang menjulur dari otak ke bawah menuju neuron penggerak kaki pelompat. Serat yang tebal menghantarkan sinyal dengan cepat, sehingga perintah melompat tiba hampir seketika. Rekaman berkecepatan tinggi juga memperlihatkan lalat menggeser kakinya tepat sebelum lepas landas, agar lompatannya membawanya menjauh dari pemukul."
+      },
+      "reaction": {
+        "title": "Seberapa cepat waktu reaksi lalat?",
+        "short": "Lalat buah bisa memulai lompatan kaburnya beberapa perseratus detik setelah melihat bahaya. Manusia butuh sekitar seperempat detik untuk bereaksi.",
+        "a": "Ketika sesuatu melaju ke arah lalat, sinyal berjalan dari mata ke otot kakinya dalam puluhan milidetik. Satu milidetik adalah seperseribu detik. Dalam pelajaran WiredMind, neuron lompat aktif sekitar 30 ms setelah pemukul muncul. Angka itu berasal dari model sederhana, bukan dari rekaman pada lalat, tetapi masih dalam kisaran yang realistis. Manusia butuh sekitar 250 ms hanya untuk bereaksi terhadap kilatan cahaya.",
+        "b": "Kecepatan itu berasal dari sambungannya. Jalurnya pendek: neuron looming, lalu serat raksasa, lalu neuron lompat. Serat raksasa luar biasa tebal, sehingga sinyalnya melaju cepat. Dan pada lalat sungguhan, ia meneruskan sinyal lewat sinapsis listrik, saluran langsung antarsel yang hampir tanpa jeda."
+      },
+      "neurons": {
+        "title": "Berapa banyak neuron di otak lalat buah?",
+        "short": "Sekitar 140.000. Pada 2024 para ilmuwan selesai memetakan semuanya di otak lalat buah dewasa, beserta puluhan juta sinapsis di antaranya.",
+        "a": "Otak lalat buah lebih kecil daripada biji poppy dan berisi sekitar 140.000 neuron. Otak manusia punya ratusan ribu kali lebih banyak. Meski begitu, dengan otak itu lalat bisa terbang, mencari makan, mempelajari bau, dan lolos dari pemukul.",
+        "b": "Peta lengkap sebuah sistem saraf, dengan setiap neuron dan setiap sinapsis, disebut konektom. Lalat buah adalah satu dari sangat sedikit hewan yang seluruh otaknya telah dipetakan seperti ini. Pelajaran WiredMind berjalan di atas konektom otak dan tali saraf seekor lalat jantan, dan setiap pelajaran memakai sirkuit berisi 3.000 hingga 4.500 neuronnya."
+      }
     }
   },
   "teachers": {
