@@ -16,6 +16,8 @@ const PAGES = [
   "/en",
   "/he",
   "/en/about",
+  "/en/questions",
+  "/he/questions/why-are-flies-hard-to-swat",
   "/en/glossary",
   "/he/glossary/giant-fiber",
   "/en/modules/smell-memory",

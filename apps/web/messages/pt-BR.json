@@ -751,6 +751,55 @@
     "related": "Termos relacionados",
     "all": "Todos os termos"
   },
+  "questions": {
+    "nav": "Perguntas",
+    "title": "Perguntas sobre o cérebro da mosca",
+    "lead": "Respostas curtas para o que as pessoas perguntam sobre as moscas e o cérebro delas. Cada uma vem com uma aula em que você pode ver por conta própria.",
+    "metaTitle": "Perguntas sobre o cérebro da mosca · WiredMind",
+    "metaDescription": "Como as moscas sentem cheiro? Por que é tão difícil acertá-las? Respostas curtas e claras sobre o cérebro da mosca-da-fruta, com uma aula gratuita.",
+    "more": "Mais perguntas",
+    "about": "Sobre esta aula",
+    "steps": "O que acontece, passo a passo",
+    "answered": "Perguntas que esta aula responde",
+    "items": {
+      "smell": {
+        "title": "Como as moscas sentem cheiro?",
+        "short": "A mosca sente cheiro com as duas antenas. Receptores olfativos disparam quando um odor chega, e o sinal segue para o cérebro para ser separado.",
+        "a": "A mosca não tem nariz. Suas duas antenas são cobertas de pelos minúsculos, e dentro de cada pelo ficam os receptores olfativos: células nervosas que disparam quando a molécula de cheiro certa pousa nelas. Uma mosca-da-fruta tem cerca de 50 tipos de receptor, e cada tipo responde ao seu próprio conjunto de cheiros. É com essa mistura de sinais que a mosca distingue um cheiro do outro.",
+        "b": "Os receptores enviam o sinal ao lobo antenal, a primeira parada dos cheiros no cérebro. Ali, todos os receptores de um mesmo tipo se encontram no mesmo ponto, e assim um cheiro vira um padrão de pontos ativos. Os neurônios de projeção levam esse padrão mais fundo, até o corpo pedunculado, onde a mosca liga os cheiros a experiências boas e ruins."
+      },
+      "memory": {
+        "title": "As moscas têm memória?",
+        "short": "Sim. A mosca-da-fruta aprende que um cheiro significa comida ou perigo e se lembra por horas ou dias. A memória se forma no corpo pedunculado.",
+        "a": "Em experimentos, moscas que encontram um cheiro junto com açúcar depois andam em direção a esse cheiro, e as que o encontram junto com um choque elétrico leve passam a evitá-lo. Elas aprenderam, e conseguem se lembrar por horas, às vezes por dias.",
+        "b": "O aprendizado acontece no corpo pedunculado. Cerca de 2.000 células de Kenyon de cada lado do cérebro dão a cada cheiro o seu próprio padrão, e os neurônios de saída leem esse padrão. Quando um cheiro vem com uma recompensa ou uma punição, a força das sinapses entre os dois grupos muda. Os cientistas acreditam que essa mudança é a memória. A aula do WiredMind mostra esse caminho, mas nada nela aprende: suas conexões nunca mudam."
+      },
+      "direction": {
+        "title": "Como as moscas sabem para onde estão viradas?",
+        "short": "A mosca tem uma bússola interna: um anel de neurônios em que uma região ativa marca seu rumo. As curvas a movem, e os pontos de referência a seguram.",
+        "a": "No meio do cérebro da mosca, um conjunto de neurônios da bússola é ligado em anel. A cada momento, só uma região deles está ativa, e o lugar dessa região no anel representa a direção para onde a mosca está virada. Os cientistas viram essa região se mover no cérebro de uma mosca viva pela primeira vez em 2015.",
+        "b": "Quando a mosca vira, os neurônios de giro empurram a região ativa ao longo do anel. Só isso acabaria errando aos poucos, então a mosca também usa o que vê: os neurônios em anel trazem pontos de referência, como o sol, e mantêm a região no lugar. A bússola não é magnética. É um padrão de atividade que a mosca mantém atualizado, e no escuro ele se desvia lentamente."
+      },
+      "swat": {
+        "title": "Por que é tão difícil acertar uma mosca?",
+        "short": "A mosca vê o mata-moscas chegando bem cedo, e um circuito de fuga rápido a lança no ar em poucos centésimos de segundo, antes de o golpe chegar.",
+        "a": "Três coisas jogam a favor da mosca. Seus olhos cobrem quase todo o espaço ao redor, então é difícil chegar por trás. Sua visão é mais rápida que a nossa, e uma mão parece lenta para ela. E ela tem neurônios com uma única tarefa: disparam quando algo cresce depressa no campo de visão, como um mata-moscas que se aproxima.",
+        "b": "Esses neurônios de aproximação se ligam à fibra gigante, uma célula nervosa muito grossa que desce do cérebro até os neurônios que movem as pernas do salto. Uma fibra grossa conduz o sinal depressa, e a ordem de saltar chega quase na hora. Filmagens em alta velocidade também mostram a mosca reposicionando as pernas logo antes de decolar, para que o salto a leve para longe do mata-moscas."
+      },
+      "reaction": {
+        "title": "Qual é o tempo de reação de uma mosca?",
+        "short": "A mosca-da-fruta pode iniciar o salto de fuga poucos centésimos de segundo depois de notar o perigo. Uma pessoa precisa de cerca de um quarto de segundo.",
+        "a": "Quando algo avança sobre uma mosca, o sinal vai dos olhos aos músculos das pernas em dezenas de milissegundos. Um milissegundo é a milésima parte de um segundo. Na aula do WiredMind, os neurônios de salto disparam cerca de 30 ms depois que o mata-moscas aparece. Esse número vem de um modelo simples, não de um registro em uma mosca, mas cai em uma faixa realista. Uma pessoa leva cerca de 250 ms só para reagir a um clarão de luz.",
+        "b": "A velocidade vem das conexões. O caminho é curto: neurônios de aproximação, depois a fibra gigante, depois os neurônios de salto. A fibra gigante é excepcionalmente grossa, o que faz o sinal viajar depressa. E, em uma mosca real, ela passa o sinal adiante por sinapses elétricas, canais diretos entre células quase sem atraso."
+      },
+      "neurons": {
+        "title": "Quantos neurônios tem o cérebro de uma mosca-da-fruta?",
+        "short": "Cerca de 140.000. Em 2024, cada um deles foi mapeado no cérebro de uma mosca-da-fruta adulta, com as dezenas de milhões de sinapses entre eles.",
+        "a": "O cérebro de uma mosca-da-fruta é menor que uma semente de papoula e tem cerca de 140.000 neurônios. Um cérebro humano tem centenas de milhares de vezes mais. Mesmo assim, com ele a mosca voa, acha comida, aprende cheiros e escapa de um mata-moscas.",
+        "b": "Um mapa completo de um sistema nervoso, com cada neurônio e cada sinapse, é chamado de conectoma. A mosca-da-fruta é um dos pouquíssimos animais cujo cérebro inteiro foi mapeado assim. As aulas do WiredMind rodam sobre o conectoma do cérebro e do cordão nervoso de uma mosca macho, e cada aula usa um circuito de 3.000 a 4.500 dos seus neurônios."
+      }
+    }
+  },
   "teachers": {
     "meta": {
       "indexTitle": "Guias do professor · WiredMind",

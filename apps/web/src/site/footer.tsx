@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import { localePath, type Locale } from "../i18n/locales.js";
 import { GLOSSARY_PATH } from "./glossary.js";
+import { QUESTIONS_PATH } from "./questions.js";
 import { LINK_CLASS, richLinks, SiteLink } from "./rich-text.js";
 import { AUTHOR, COFFEE_URL, FEEDBACK_URL, LINKS, REPO_URL } from "./site.js";
 
@@ -101,6 +102,13 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
               className={LINK_CLASS}
             >
               {t("glossary.nav")}
+            </Link>
+            <span aria-hidden="true"> · </span>
+            <Link
+              href={localePath(locale, QUESTIONS_PATH)}
+              className={LINK_CLASS}
+            >
+              {t("questions.nav")}
             </Link>
             <span aria-hidden="true"> · </span>
             <SiteLink href={LINKS.license} newTab={t("a11y.newTab")}>
