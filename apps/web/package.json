@@ -15,7 +15,7 @@
     "@vercel/speed-insights": "^2.0.0",
     "bidi-js": "^1.1.0",
     "harfbuzzjs": "^1.6.2",
-    "next": "^15.5.4",
+    "next": "^15.5.27",
     "next-intl": "^4.14.7",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
