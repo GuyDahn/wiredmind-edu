@@ -1,4 +1,5 @@
 import type {
+  Article,
   BreadcrumbList,
   DefinedTerm,
   DefinedTermSet,
@@ -96,7 +97,12 @@ export function pageJsonLd(
   locale: Locale,
   trail: readonly { name: string; path: string }[],
   ...nodes: (
-    LearningResource | Person | Organization | DefinedTerm | DefinedTermSet
+    | LearningResource
+    | Article
+    | Person
+    | Organization
+    | DefinedTerm
+    | DefinedTermSet
   )[]
 ): Graph {
   return {
@@ -206,6 +212,38 @@ export function termJsonLd({
     name,
     description,
     inDefinedTermSet: { "@id": glossaryId(locale, glossaryPath) },
+  };
+}
+
+/** A question's page: the question as the headline, its short answer as the summary. */
+export function answerJsonLd({
+  locale,
+  path,
+  headline,
+  description,
+}: {
+  locale: Locale;
+  path: string;
+  headline: string;
+  description: string;
+}): Article {
+  const url = absoluteUrl(localePath(locale, path));
+  return {
+    "@type": "Article",
+    "@id": `${url}#article`,
+    url,
+    mainEntityOfPage: url,
+    headline,
+    description,
+    inLanguage: locale,
+    isAccessibleForFree: true,
+    isPartOf: { "@id": WEBSITE_ID },
+    author: { "@type": "Person", "@id": PERSON_ID, name: AUTHOR.name },
+    publisher: {
+      "@type": "Organization",
+      "@id": ORGANIZATION_ID,
+      name: SITE_NAME,
+    },
   };
 }
 

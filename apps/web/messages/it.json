@@ -751,6 +751,55 @@
     "related": "Termini correlati",
     "all": "Tutti i termini"
   },
+  "questions": {
+    "nav": "Domande",
+    "title": "Domande sul cervello del moscerino",
+    "lead": "Risposte brevi a ciò che ci si chiede sui moscerini e sul loro cervello. Ognuna ha una lezione in cui puoi vederlo con i tuoi occhi.",
+    "metaTitle": "Domande sul cervello del moscerino · WiredMind",
+    "metaDescription": "Come sentono gli odori i moscerini? Perché è così difficile colpirli? Risposte brevi sul cervello del moscerino della frutta, con una lezione gratuita.",
+    "more": "Altre domande",
+    "about": "Informazioni su questa lezione",
+    "steps": "Che cosa succede, passo per passo",
+    "answered": "Le domande a cui risponde questa lezione",
+    "items": {
+      "smell": {
+        "title": "Come sentono gli odori i moscerini?",
+        "short": "Un moscerino sente gli odori con le due antenne. I recettori olfattivi si attivano quando arriva un odore e il segnale va al cervello per essere smistato.",
+        "a": "Un moscerino non ha il naso. Le sue due antenne sono coperte di peli minuscoli e dentro ogni pelo ci sono i recettori olfattivi: cellule nervose che si attivano quando vi si posa la molecola di odore giusta. Un moscerino della frutta ha circa 50 tipi di recettori, e ogni tipo risponde al proprio insieme di odori. È con questo miscuglio di segnali che il moscerino distingue un odore dall’altro.",
+        "b": "I recettori mandano il segnale al lobo antennale, la prima tappa degli odori nel cervello. Lì tutti i recettori dello stesso tipo si incontrano nello stesso punto, così un odore diventa uno schema di punti attivi. I neuroni di proiezione portano questo schema più in profondità, fino al corpo fungiforme, dove il moscerino collega gli odori a esperienze buone e cattive."
+      },
+      "memory": {
+        "title": "I moscerini hanno memoria?",
+        "short": "Sì. Un moscerino della frutta impara che un odore significa cibo o pericolo e lo ricorda per ore o giorni. Il ricordo si forma nel corpo fungiforme.",
+        "a": "Negli esperimenti, i moscerini che incontrano un odore insieme allo zucchero poi camminano verso quell’odore, e quelli che lo incontrano insieme a una lieve scossa elettrica lo evitano. Hanno imparato, e possono ricordarlo per ore, a volte per giorni.",
+        "b": "L’apprendimento avviene nel corpo fungiforme. Circa 2.000 cellule di Kenyon su ciascun lato del cervello danno a ogni odore il proprio schema, e i neuroni di uscita leggono quello schema. Quando un odore arriva con un premio o una punizione, cambia la forza delle sinapsi tra i due gruppi. Gli scienziati pensano che quel cambiamento sia il ricordo. La lezione di WiredMind mostra questo percorso, ma niente al suo interno impara: le sue connessioni non cambiano mai."
+      },
+      "direction": {
+        "title": "Come fa un moscerino a sapere dove è rivolto?",
+        "short": "Un moscerino ha una bussola interna: un anello di neuroni in cui una zona attiva segna la direzione. Le svolte la spostano, i riferimenti la tengono ferma.",
+        "a": "Al centro del cervello del moscerino, un gruppo di neuroni bussola è collegato ad anello. In ogni momento solo una zona è attiva, e la sua posizione sull’anello rappresenta la direzione verso cui il moscerino è rivolto. Gli scienziati hanno visto per la prima volta questa zona spostarsi nel cervello di un moscerino vivo nel 2015.",
+        "b": "Quando il moscerino gira, i neuroni di svolta spingono la zona attiva lungo l’anello. Da solo questo meccanismo finirebbe per sbagliare, perciò il moscerino usa anche ciò che vede: i neuroni ad anello portano i punti di riferimento, come il sole, e tengono la zona al suo posto. La bussola non è magnetica. È uno schema di attività che il moscerino tiene aggiornato, e al buio va lentamente alla deriva."
+      },
+      "swat": {
+        "title": "Perché è così difficile schiacciare una mosca?",
+        "short": "La mosca vede arrivare lo scacciamosche molto presto, e un circuito di fuga veloce la fa decollare in pochi centesimi di secondo, prima del colpo.",
+        "a": "Tre cose giocano a favore della mosca. I suoi occhi coprono quasi tutto lo spazio intorno, quindi è difficile avvicinarsi da dietro. La sua vista è più veloce della nostra, e una mano le sembra lenta. E ha neuroni con un solo compito: si attivano quando qualcosa si ingrandisce in fretta nel campo visivo, come uno scacciamosche che si avvicina.",
+        "b": "Questi neuroni di avvicinamento sono collegati alla fibra gigante, una cellula nervosa molto spessa che scende dal cervello fino ai neuroni che muovono le zampe del salto. Una fibra spessa trasmette il segnale in fretta, così l’ordine di saltare arriva quasi subito. Le riprese ad alta velocità mostrano anche che la mosca sposta le zampe appena prima del decollo, in modo che il salto la allontani dallo scacciamosche."
+      },
+      "reaction": {
+        "title": "Quanto è veloce il tempo di reazione di una mosca?",
+        "short": "Un moscerino della frutta può iniziare il salto di fuga pochi centesimi di secondo dopo aver visto il pericolo. A una persona serve un quarto di secondo.",
+        "a": "Quando qualcosa piomba su un moscerino, il segnale va dagli occhi ai muscoli delle zampe in poche decine di millisecondi. Un millisecondo è un millesimo di secondo. Nella lezione di WiredMind, i neuroni del salto si attivano circa 30 ms dopo la comparsa dello scacciamosche. Quel valore viene da un modello semplice, non da una registrazione su un moscerino, ma cade in un intervallo realistico. Una persona impiega circa 250 ms solo per reagire a un lampo di luce.",
+        "b": "La velocità sta nel cablaggio. Il percorso è breve: i neuroni di avvicinamento, poi la fibra gigante, poi i neuroni del salto. La fibra gigante è insolitamente spessa, e questo fa viaggiare veloce il suo segnale. E in un moscerino vero passa il segnale attraverso sinapsi elettriche, canali diretti tra le cellule quasi senza ritardo."
+      },
+      "neurons": {
+        "title": "Quanti neuroni ha il cervello di un moscerino?",
+        "short": "Circa 140.000. Nel 2024 è stata completata la mappa di ognuno di essi nel cervello di un moscerino della frutta adulto, con decine di milioni di sinapsi.",
+        "a": "Il cervello di un moscerino della frutta è più piccolo di un seme di papavero e contiene circa 140.000 neuroni. Un cervello umano ne ha centinaia di migliaia di volte di più. Eppure, con quel cervello il moscerino vola, trova il cibo, impara gli odori e sfugge a uno scacciamosche.",
+        "b": "La mappa completa di un sistema nervoso, con ogni neurone e ogni sinapsi, si chiama connettoma. Il moscerino della frutta è uno dei pochissimi animali il cui cervello intero è stato mappato in questo modo. Le lezioni di WiredMind funzionano sul connettoma del cervello e del cordone nervoso di un moscerino maschio, e ogni lezione usa un circuito di 3.000-4.500 dei suoi neuroni."
+      }
+    }
+  },
   "teachers": {
     "meta": {
       "indexTitle": "Guide per l’insegnante · WiredMind",

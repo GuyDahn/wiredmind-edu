@@ -252,7 +252,9 @@ export function searchSnippets(
     if (
       /^meta\.(home|about)\.title$|^meta\.notFoundTitle$/.test(key) ||
       /^lessons\.[^.]+\.searchTitle$/.test(key) ||
-      key === "glossary.metaTitle"
+      key === "glossary.metaTitle" ||
+      key === "questions.metaTitle" ||
+      /^questions\.items\.[^.]+\.title$/.test(key)
     ) {
       snippets.push({ key, text, limit: TITLE_WIDTH });
     }
@@ -270,6 +272,8 @@ export function searchSnippets(
       key === "meta.home.description" ||
       key === "meta.about.description" ||
       key === "glossary.metaDescription" ||
+      key === "questions.metaDescription" ||
+      /^questions\.items\.[^.]+\.short$/.test(key) ||
       /^lessons\.[^.]+\.description$/.test(key)
     ) {
       snippets.push({ key, text, limit: DESCRIPTION_WIDTH });

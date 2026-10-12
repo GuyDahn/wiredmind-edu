@@ -49,6 +49,7 @@ const ORDER = [
   "about",
   "terms",
   "glossary",
+  "questions",
   "lessons",
   "teachers",
 ];
@@ -135,7 +136,9 @@ function noteFor(key: string): string | null {
   if (
     /^meta\.(home|about)\.title$|^meta\.notFoundTitle$/.test(key) ||
     /^lessons\.[^.]+\.searchTitle$/.test(key) ||
-    key === "glossary.metaTitle"
+    key === "glossary.metaTitle" ||
+    key === "questions.metaTitle" ||
+    /^questions\.items\.[^.]+\.title$/.test(key)
   ) {
     return "search result title, at most 60 characters";
   }
@@ -144,6 +147,8 @@ function noteFor(key: string): string | null {
   }
   if (
     key === "glossary.metaDescription" ||
+    key === "questions.metaDescription" ||
+    /^questions\.items\.[^.]+\.short$/.test(key) ||
     (/\.description$/.test(key) && /^(meta|lessons)\./.test(key))
   ) {
     return "search result description, at most 155 characters";

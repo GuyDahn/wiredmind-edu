@@ -308,7 +308,40 @@
       "lessons.smell-memory.searchTitle",
       "lessons.compass.searchTitle",
       "lessons.escape.searchTitle",
-      "meta.home.title"
+      "meta.home.title",
+      "questions.nav",
+      "questions.title",
+      "questions.lead",
+      "questions.metaTitle",
+      "questions.metaDescription",
+      "questions.more",
+      "questions.about",
+      "questions.steps",
+      "questions.answered",
+      "questions.items.smell.title",
+      "questions.items.smell.short",
+      "questions.items.smell.a",
+      "questions.items.smell.b",
+      "questions.items.memory.title",
+      "questions.items.memory.short",
+      "questions.items.memory.a",
+      "questions.items.memory.b",
+      "questions.items.direction.title",
+      "questions.items.direction.short",
+      "questions.items.direction.a",
+      "questions.items.direction.b",
+      "questions.items.swat.title",
+      "questions.items.swat.short",
+      "questions.items.swat.a",
+      "questions.items.swat.b",
+      "questions.items.reaction.title",
+      "questions.items.reaction.short",
+      "questions.items.reaction.a",
+      "questions.items.reaction.b",
+      "questions.items.neurons.title",
+      "questions.items.neurons.short",
+      "questions.items.neurons.a",
+      "questions.items.neurons.b"
     ]
   },
   "meta": {
@@ -1056,6 +1089,55 @@
     "steps": "Where the lesson uses it",
     "related": "Related terms",
     "all": "All terms"
+  },
+  "questions": {
+    "nav": "Questions",
+    "title": "Questions about the fly brain",
+    "lead": "Short answers to things people ask about flies and their brains. Each one comes with a lesson where you can see it for yourself.",
+    "metaTitle": "Fly brain questions, answered simply · WiredMind",
+    "metaDescription": "How do flies smell? Why are they so hard to swat? Short, plain answers about the fruit fly brain, each linked to a free interactive lesson.",
+    "more": "More questions",
+    "about": "About this lesson",
+    "steps": "What happens, step by step",
+    "answered": "Questions this lesson answers",
+    "items": {
+      "smell": {
+        "title": "How do flies smell?",
+        "short": "A fly smells with its two antennae. Smell receptors on them fire when an odor lands, and the signal travels into the brain to be sorted.",
+        "a": "A fly has no nose. Its two antennae are covered in tiny hairs, and inside each hair sit smell receptors: nerve cells that fire when the right odor molecule lands on them. A fruit fly has about 50 kinds of receptor, and each kind answers to its own set of smells. That mix of signals is how the fly tells one smell from another.",
+        "b": "The receptors send their signal to the antennal lobe, the first stop for smells in the brain. There, all the receptors of one kind meet in the same spot, so a smell becomes a pattern of active spots. Projection neurons carry that pattern deeper, to the mushroom body, where the fly links smells to good and bad experiences."
+      },
+      "memory": {
+        "title": "Do flies have memories?",
+        "short": "Yes. A fruit fly can learn that a smell means food or danger and remember it for hours or days. The memory forms in the mushroom body.",
+        "a": "In experiments, flies that meet a smell together with sugar later walk toward that smell, and flies that meet it with a mild electric shock avoid it. They have learned, and they can remember it for hours, sometimes for days.",
+        "b": "The learning happens in the mushroom body. About 2,000 Kenyon cells on each side of the brain give every smell its own pattern, and output neurons read that pattern. When a smell comes with a reward or a punishment, the synapses between the two groups change strength. Scientists think that change is the memory. The WiredMind lesson shows this pathway, but nothing in it learns: its connections never change."
+      },
+      "direction": {
+        "title": "How do flies know which way they are facing?",
+        "short": "A fly keeps an internal compass: a ring of neurons where one patch of activity marks its heading. Turns move the patch, and landmarks hold it steady.",
+        "a": "In the middle of a fly’s brain, a set of compass neurons is wired in a ring. At any moment only one patch of them is active, and where that patch sits on the ring stands for the direction the fly is facing. Scientists first watched this patch move in a living fly’s brain in 2015.",
+        "b": "When the fly turns, turn neurons push the patch around the ring. That alone would slowly go wrong, so the fly also uses what it sees: ring neurons bring in landmarks such as the sun and hold the patch in place. The compass is not magnetic. It is a pattern of activity that the fly keeps up to date, and in the dark it slowly drifts."
+      },
+      "swat": {
+        "title": "Why are flies so hard to swat?",
+        "short": "A fly sees the swatter coming early, and a fast escape circuit launches it into the air in a few hundredths of a second, before the swatter lands.",
+        "a": "Three things work in the fly’s favor. Its eyes cover almost the whole space around it, so it is hard to sneak up from behind. Its vision is faster than ours, so a hand looks slow to it. And it has neurons with one job: they fire when something grows quickly in view, the way a swatter does as it comes closer.",
+        "b": "Those looming neurons connect to the giant fiber, a very thick nerve cell that runs from the brain down to the neurons that drive the jumping legs. A thick fiber carries its signal fast, so the order to jump arrives almost at once. High-speed films also show the fly shifting its legs just before take-off, so that the jump carries it away from the swatter."
+      },
+      "reaction": {
+        "title": "How fast is a fly’s reaction time?",
+        "short": "A fruit fly can start its escape jump a few hundredths of a second after it spots danger. A person needs about a quarter of a second to react.",
+        "a": "When something looms toward a fly, the signal runs from its eyes to its leg muscles in tens of milliseconds. A millisecond is a thousandth of a second. In the WiredMind lesson, the jump neurons fire about 30 ms after the swatter appears. That figure comes from a simple model, not from a recording of a fly, but it lands in a realistic range. A person takes around 250 ms just to react to a flash of light.",
+        "b": "The speed comes from the wiring. The path is short: looming neurons, then the giant fiber, then the jump neurons. The giant fiber is unusually thick, which makes its signal travel fast. And in a real fly it hands the signal on through electrical synapses, direct channels between cells with almost no delay."
+      },
+      "neurons": {
+        "title": "How many neurons does a fruit fly brain have?",
+        "short": "About 140,000. In 2024 scientists finished mapping every one of them in an adult fruit fly’s brain, with the tens of millions of synapses between them.",
+        "a": "A fruit fly’s brain is smaller than a poppy seed and holds about 140,000 neurons. A human brain has hundreds of thousands of times more. Even so, the fly’s brain lets it fly, find food, learn smells, and escape a swatter.",
+        "b": "A complete map of a nervous system, with every neuron and every synapse, is called a connectome. The fruit fly is one of very few animals whose whole brain has been mapped this way. The WiredMind lessons run on the connectome of one male fly’s brain and nerve cord, and each lesson uses a circuit of 3,000 to 4,500 of its neurons."
+      }
+    }
   },
   "teachers": {
     "meta": {

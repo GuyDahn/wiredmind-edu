@@ -751,6 +751,55 @@
     "related": "İlgili terimler",
     "all": "Tüm terimler"
   },
+  "questions": {
+    "nav": "Sorular",
+    "title": "Sinek beyni hakkında sorular",
+    "lead": "İnsanların sinekler ve beyinleri hakkında merak ettiklerine kısa yanıtlar. Her yanıtın yanında, bunu kendi gözünüzle görebileceğiniz bir ders var.",
+    "metaTitle": "Sinek beyni hakkında sorular ve yanıtlar · WiredMind",
+    "metaDescription": "Sinekler nasıl koku alır? Onları vurmak neden bu kadar zor? Meyve sineği beyni hakkında kısa ve açık yanıtlar, her biri ücretsiz bir dersle.",
+    "more": "Diğer sorular",
+    "about": "Bu ders hakkında",
+    "steps": "Adım adım neler oluyor",
+    "answered": "Bu dersin yanıtladığı sorular",
+    "items": {
+      "smell": {
+        "title": "Sinekler nasıl koku alır?",
+        "short": "Sinek, iki anteniyle koku alır. Antenlerdeki koku reseptörleri bir koku geldiğinde ateşlenir ve sinyal ayrıştırılmak üzere beyne gider.",
+        "a": "Sineğin burnu yoktur. İki anteni minik tüylerle kaplıdır ve her tüyün içinde koku reseptörleri bulunur: doğru koku molekülü üzerlerine konduğunda ateşlenen sinir hücreleri. Bir meyve sineğinde yaklaşık 50 çeşit reseptör vardır ve her çeşit kendi koku grubuna yanıt verir. Sinek, bir kokuyu diğerinden bu sinyal karışımıyla ayırt eder.",
+        "b": "Reseptörler sinyallerini beyindeki ilk koku durağı olan anten lobuna gönderir. Orada aynı çeşitten bütün reseptörler aynı noktada buluşur, böylece bir koku etkin noktalardan oluşan bir desene dönüşür. Projeksiyon nöronları bu deseni daha derine, mantar cisimciğine taşır; sinek kokuları iyi ve kötü deneyimlerle orada ilişkilendirir."
+      },
+      "memory": {
+        "title": "Sineklerin hafızası var mı?",
+        "short": "Evet. Meyve sineği bir kokunun yiyecek ya da tehlike anlamına geldiğini öğrenip saatlerce, günlerce hatırlayabilir. Anı, mantar cisimciğinde oluşur.",
+        "a": "Deneylerde, bir kokuyla şekeri birlikte yaşayan sinekler sonradan o kokuya doğru yürür; kokuyu hafif bir elektrik şokuyla birlikte yaşayanlar ise ondan kaçınır. Öğrenmişlerdir ve bunu saatlerce, bazen günlerce hatırlayabilirler.",
+        "b": "Öğrenme mantar cisimciğinde gerçekleşir. Beynin her iki yanındaki yaklaşık 2.000 Kenyon hücresi her kokuya kendine özgü bir desen verir, çıktı nöronları da bu deseni okur. Bir koku ödül ya da cezayla birlikte geldiğinde, iki grup arasındaki sinapsların gücü değişir. Bilim insanları bu değişimin anının kendisi olduğunu düşünüyor. WiredMind dersi bu yolu gösterir ama içinde hiçbir şey öğrenmez: bağlantıları hiç değişmez."
+      },
+      "direction": {
+        "title": "Sinek hangi yöne baktığını nasıl bilir?",
+        "short": "Sineğin bir iç pusulası vardır: tek bir etkin bölgenin yönü gösterdiği bir nöron halkası. Dönüşler bölgeyi kaydırır, yer işaretleri sabit tutar.",
+        "a": "Sineğin beyninin ortasında pusula nöronları bir halka biçiminde bağlanmıştır. Her an bunların yalnızca bir bölgesi etkindir ve bu bölgenin halkadaki yeri sineğin baktığı yönü gösterir. Bilim insanları bu bölgenin canlı bir sineğin beyninde hareket ettiğini ilk kez 2015’te izledi.",
+        "b": "Sinek döndüğünde, dönüş nöronları etkin bölgeyi halka boyunca iter. Yalnızca bu, zamanla hata biriktirirdi; bu yüzden sinek gördüklerini de kullanır: halka nöronları güneş gibi yer işaretlerini getirir ve bölgeyi yerinde tutar. Bu pusula manyetik değildir. Sineğin sürekli güncellediği bir etkinlik desenidir ve karanlıkta yavaş yavaş kayar."
+      },
+      "swat": {
+        "title": "Sinekleri vurmak neden bu kadar zor?",
+        "short": "Sinek, sinekliğin geldiğini erkenden görür ve hızlı bir kaçış devresi onu saniyenin birkaç yüzde biri içinde, sineklik inmeden havalandırır.",
+        "a": "Üç şey sineğin lehine çalışır. Gözleri çevresindeki alanın neredeyse tamamını görür, bu yüzden arkadan sessizce yaklaşmak zordur. Görmesi bizimkinden hızlıdır, bir el ona yavaş görünür. Bir de tek görevi olan nöronları vardır: yaklaşan bir sineklik gibi, görüş alanında bir şey hızla büyüdüğünde ateşlenirler.",
+        "b": "Bu yaklaşma nöronları dev life bağlanır: beyinden aşağıya, sıçrama bacaklarını çalıştıran nöronlara uzanan çok kalın bir sinir hücresi. Kalın bir lif sinyalini hızlı taşır, bu yüzden sıçrama emri neredeyse anında ulaşır. Yüksek hızlı çekimler ayrıca sineğin havalanmadan hemen önce bacaklarını yeniden yerleştirdiğini gösterir; böylece sıçrayış onu sineklikten uzağa götürür."
+      },
+      "reaction": {
+        "title": "Bir sineğin tepki süresi ne kadar?",
+        "short": "Meyve sineği, tehlikeyi fark ettikten saniyenin birkaç yüzde biri sonra kaçış sıçramasına başlayabilir. Bir insanın çeyrek saniyeye ihtiyacı vardır.",
+        "a": "Bir şey sineğe doğru hızla yaklaştığında, sinyal gözlerinden bacak kaslarına onlarca milisaniyede ulaşır. Bir milisaniye, saniyenin binde biridir. WiredMind dersinde sıçrama nöronları, sineklik göründükten yaklaşık 30 ms sonra ateşlenir. Bu sayı bir sinekten alınmış kayıttan değil, basit bir modelden gelir, ama gerçekçi bir aralığa düşer. Bir insanın yalnızca bir ışık parlamasına tepki vermesi yaklaşık 250 ms sürer.",
+        "b": "Hız, bağlantılardan gelir. Yol kısadır: yaklaşma nöronları, sonra dev lif, sonra sıçrama nöronları. Dev lif alışılmadık ölçüde kalındır, bu da sinyalini hızlandırır. Gerçek bir sinekte ise sinyali elektriksel sinapslarla, yani hücreler arasında neredeyse hiç gecikmesiz doğrudan kanallarla aktarır."
+      },
+      "neurons": {
+        "title": "Meyve sineğinin beyninde kaç nöron var?",
+        "short": "Yaklaşık 140.000. 2024’te bilim insanları yetişkin bir meyve sineğinin beynindeki her nöronu, aralarındaki on milyonlarca sinapsla birlikte haritaladı.",
+        "a": "Bir meyve sineğinin beyni haşhaş tohumundan küçüktür ve yaklaşık 140.000 nöron içerir. İnsan beyninde bunun yüz binlerce katı vardır. Yine de sinek bu beyinle uçar, yiyecek bulur, kokuları öğrenir ve sineklikten kaçar.",
+        "b": "Bir sinir sisteminin her nöronu ve her sinapsıyla eksiksiz haritasına konektom denir. Meyve sineği, bütün beyni bu şekilde haritalanmış çok az sayıdaki hayvandan biridir. WiredMind dersleri bir erkek sineğin beyninin ve sinir kordonunun konektomu üzerinde çalışır ve her ders, onun 3.000 ile 4.500 arasındaki nöronundan oluşan bir devre kullanır."
+      }
+    }
+  },
   "teachers": {
     "meta": {
       "indexTitle": "Öğretmen kılavuzları · WiredMind",

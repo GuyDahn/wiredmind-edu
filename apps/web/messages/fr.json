@@ -751,6 +751,55 @@
     "related": "Termes associés",
     "all": "Tous les termes"
   },
+  "questions": {
+    "nav": "Questions",
+    "title": "Questions sur le cerveau de la mouche",
+    "lead": "Des réponses courtes aux questions que l’on se pose sur les mouches et leur cerveau. Chacune est accompagnée d’une leçon où vous pouvez le vérifier vous-même.",
+    "metaTitle": "Questions sur le cerveau de la mouche · WiredMind",
+    "metaDescription": "Comment les mouches sentent-elles ? Pourquoi sont-elles si dures à attraper ? Réponses courtes sur le cerveau de la drosophile, avec une leçon gratuite.",
+    "more": "D’autres questions",
+    "about": "À propos de cette leçon",
+    "steps": "Ce qui se passe, étape par étape",
+    "answered": "Les questions auxquelles cette leçon répond",
+    "items": {
+      "smell": {
+        "title": "Comment les mouches sentent-elles les odeurs ?",
+        "short": "Une mouche sent avec ses deux antennes. Des récepteurs olfactifs s’y activent quand une odeur arrive, et le signal part vers le cerveau pour être trié.",
+        "a": "Une mouche n’a pas de nez. Ses deux antennes sont couvertes de poils minuscules, et chaque poil abrite des récepteurs olfactifs : des cellules nerveuses qui s’activent quand la bonne molécule odorante s’y pose. Une drosophile possède environ 50 sortes de récepteurs, et chaque sorte répond à son propre ensemble d’odeurs. C’est ce mélange de signaux qui permet à la mouche de distinguer une odeur d’une autre.",
+        "b": "Les récepteurs envoient leur signal au lobe antennaire, la première étape des odeurs dans le cerveau. Là, tous les récepteurs d’une même sorte se rejoignent au même endroit, si bien qu’une odeur devient un motif de points actifs. Les neurones de projection portent ce motif plus loin, jusqu’au corps pédonculé, où la mouche associe les odeurs à de bonnes et de mauvaises expériences."
+      },
+      "memory": {
+        "title": "Les mouches ont-elles de la mémoire ?",
+        "short": "Oui. Une drosophile apprend qu’une odeur annonce nourriture ou danger et s’en souvient des jours. Ce souvenir se forme dans le corps pédonculé.",
+        "a": "Dans les expériences, les mouches qui rencontrent une odeur avec du sucre marchent ensuite vers cette odeur, et celles qui la rencontrent avec un léger choc électrique l’évitent. Elles ont appris, et elles peuvent s’en souvenir pendant des heures, parfois des jours.",
+        "b": "L’apprentissage a lieu dans le corps pédonculé. Environ 2 000 cellules de Kenyon de chaque côté du cerveau donnent à chaque odeur son propre motif, et des neurones de sortie lisent ce motif. Quand une odeur arrive avec une récompense ou une punition, la force des synapses entre les deux groupes change. Les scientifiques pensent que ce changement est le souvenir. La leçon WiredMind montre ce trajet, mais rien n’y apprend : ses connexions ne changent jamais."
+      },
+      "direction": {
+        "title": "Comment une mouche sait-elle où elle regarde ?",
+        "short": "Une mouche garde une boussole interne : un anneau de neurones où une zone active marque son cap. Les virages la déplacent, les repères la maintiennent.",
+        "a": "Au milieu du cerveau de la mouche, des neurones de la boussole sont câblés en anneau. À chaque instant, une seule zone d’entre eux est active, et sa position sur l’anneau représente la direction vers laquelle la mouche est tournée. Les scientifiques ont vu cette zone se déplacer dans le cerveau d’une mouche vivante pour la première fois en 2015.",
+        "b": "Quand la mouche tourne, des neurones de rotation poussent la zone active le long de l’anneau. Cela seul finirait par dériver, alors la mouche utilise aussi ce qu’elle voit : des neurones en anneau apportent des repères comme le soleil et maintiennent la zone en place. La boussole n’est pas magnétique. C’est un motif d’activité que la mouche tient à jour, et dans le noir elle dérive lentement."
+      },
+      "swat": {
+        "title": "Pourquoi les mouches sont-elles si dures à attraper ?",
+        "short": "La mouche voit la tapette arriver très tôt, et un circuit de fuite rapide la fait décoller en quelques centièmes de seconde, avant que le coup ne tombe.",
+        "a": "Trois choses jouent en faveur de la mouche. Ses yeux couvrent presque tout l’espace autour d’elle, il est donc difficile de l’approcher par derrière. Sa vision est plus rapide que la nôtre, et une main lui paraît lente. Et elle possède des neurones qui n’ont qu’une tâche : s’activer quand quelque chose grossit vite dans son champ de vision, comme une tapette qui s’approche.",
+        "b": "Ces neurones d’approche sont reliés à la fibre géante, une cellule nerveuse très épaisse qui descend du cerveau jusqu’aux neurones qui commandent les pattes du saut. Une fibre épaisse transmet vite son signal, et l’ordre de sauter arrive presque aussitôt. Les films à haute vitesse montrent aussi que la mouche replace ses pattes juste avant de décoller, pour que le saut l’éloigne de la tapette."
+      },
+      "reaction": {
+        "title": "Quel est le temps de réaction d’une mouche ?",
+        "short": "Une drosophile peut lancer son saut de fuite quelques centièmes de seconde après avoir repéré un danger. Il faut un quart de seconde à une personne.",
+        "a": "Quand quelque chose fonce sur une mouche, le signal va de ses yeux aux muscles de ses pattes en quelques dizaines de millisecondes. Une milliseconde est un millième de seconde. Dans la leçon WiredMind, les neurones du saut s’activent environ 30 ms après l’apparition de la tapette. Ce chiffre vient d’un modèle simple, pas d’un enregistrement chez une mouche, mais il tombe dans une fourchette réaliste. Une personne met environ 250 ms rien que pour réagir à un éclair de lumière.",
+        "b": "La vitesse vient du câblage. Le chemin est court : les neurones d’approche, puis la fibre géante, puis les neurones du saut. La fibre géante est inhabituellement épaisse, ce qui fait voyager vite son signal. Et chez une vraie mouche, elle transmet le signal par des synapses électriques, des canaux directs entre cellules, presque sans délai."
+      },
+      "neurons": {
+        "title": "Combien de neurones dans le cerveau d’une drosophile ?",
+        "short": "Environ 140 000. En 2024, chacun a été cartographié dans le cerveau d’une drosophile adulte, avec les dizaines de millions de synapses qui les relient.",
+        "a": "Le cerveau d’une drosophile est plus petit qu’une graine de pavot et contient environ 140 000 neurones. Un cerveau humain en compte des centaines de milliers de fois plus. Pourtant, il permet à la mouche de voler, de trouver à manger, d’apprendre des odeurs et d’échapper à une tapette.",
+        "b": "La carte complète d’un système nerveux, avec chaque neurone et chaque synapse, s’appelle un connectome. La drosophile est l’un des très rares animaux dont le cerveau entier a été cartographié ainsi. Les leçons WiredMind s’appuient sur le connectome du cerveau et du cordon nerveux d’une mouche mâle, et chaque leçon utilise un circuit de 3 000 à 4 500 de ses neurones."
+      }
+    }
+  },
   "teachers": {
     "meta": {
       "indexTitle": "Guides de l’enseignant · WiredMind",
