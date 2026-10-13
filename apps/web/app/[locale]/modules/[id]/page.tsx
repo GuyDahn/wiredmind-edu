@@ -14,7 +14,6 @@ import { SiteMenu } from "@/src/site/header";
 import { LESSON_ABOUT_ID, LessonAbout } from "@/src/site/lesson-about";
 import { jsonLdScript, lessonJsonLd, pageJsonLd } from "@/src/site/json-ld";
 import { pageMetadata, shareImagePath } from "@/src/site/page-meta";
-import { LINK_CLASS } from "@/src/site/rich-text";
 import { SITE_NAME } from "@/src/site/site";
 import { findLesson, LESSONS } from "@/src/viewer/modules";
 import { Viewer } from "@/src/viewer/viewer";
@@ -85,7 +84,7 @@ export default async function LessonPage({
                   this is the way down to the lesson in words. */}
               <a
                 href={`#${LESSON_ABOUT_ID}`}
-                className={`${LINK_CLASS} mt-1 inline-flex min-h-11 items-center gap-1.5`}
+                className="mt-3 flex min-h-12 items-center justify-center gap-2 rounded-xl border border-border-strong px-4 text-base font-semibold text-fg transition-colors hover:bg-overlay focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
               >
                 {t("questions.about")}
                 <span aria-hidden="true">{"↓"}</span>
