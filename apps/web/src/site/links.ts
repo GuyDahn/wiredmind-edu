@@ -17,6 +17,7 @@ export const LINK_TAGS = {
   neuprint: LINKS.neuprint,
   paper: PAPER.url,
   code: REPO_URL,
+  campusil: LINKS.campusIl,
   simplified: "/about#real-and-simplified",
 } as const;
 

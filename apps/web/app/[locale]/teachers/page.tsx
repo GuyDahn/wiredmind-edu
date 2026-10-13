@@ -10,7 +10,7 @@ import { hasPage, termPath } from "@/src/site/glossary";
 import { SiteHeader } from "@/src/site/header";
 import { jsonLdScript, pageJsonLd } from "@/src/site/json-ld";
 import { pageMetadata, shareImagePath } from "@/src/site/page-meta";
-import { LINK_CLASS } from "@/src/site/rich-text";
+import { LINK_CLASS, richLinks } from "@/src/site/rich-text";
 import { SITE_NAME } from "@/src/site/site";
 import {
   demoHref,
@@ -94,6 +94,25 @@ export default async function TeachersPage({
             </li>
           ))}
         </ol>
+
+        <section
+          aria-labelledby="companion-title"
+          data-companion=""
+          className="mt-14 rounded-2xl border border-border p-5"
+        >
+          <h2
+            id="companion-title"
+            className="text-xl font-semibold tracking-tight text-fg"
+          >
+            {t("teachers.index.companionTitle")}
+          </h2>
+          <p className="mt-2 text-base leading-relaxed text-fg-muted">
+            {t.rich(
+              "teachers.index.companion",
+              richLinks(locale, t("a11y.newTab")),
+            )}
+          </p>
+        </section>
 
         {/* Every term the lessons use, in one place, so a teacher can read
             them all before class. The same explanations open on a tap inside
