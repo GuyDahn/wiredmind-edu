@@ -21,4 +21,6 @@ Suggested credit line:
 
 > Neuron data from MaleCNS v1.0 (HHMI Janelia FlyEM, University of Cambridge, MRC Laboratory of Molecular Biology, and Google Research), licensed under CC BY 4.0. https://male-cns.janelia.org/
 
+`body.glb` also holds a fly body that is not MaleCNS data and not CC BY: the NeuroMechFly model, under Apache-2.0. See [ATTRIBUTION.md](ATTRIBUTION.md).
+
 Raw downloads and baked assets are not stored in git. Baked files are published as GitHub Releases tagged `data-v1`, `data-v2`, and so on. `data.lock.json` pins the tag and the sha256 of each file. `pnpm data:fetch` downloads that set into `apps/web/public/data/`, which is gitignored.

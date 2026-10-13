@@ -18,4 +18,15 @@ gh release create data-v1 \
   tools/data/dist/visual.neurons.json
 ```
 
-Then `pnpm data:fetch` pulls those nine files into `apps/web/public/data/` and checks the sha256 in `data.lock.json`.
+## Add the fly body
+
+`body.glb` joined the lock after `data-v1` was first published. Bake it with `uv run tools/data/scripts/bake_body.py`, check that its sha256 is the one in `data.lock.json`, and add it to the same release:
+
+```bash
+shasum -a 256 tools/data/dist/body.glb
+gh release upload data-v1 tools/data/dist/body.glb --repo GuyDahn/wiredmind-edu
+```
+
+Until it is uploaded, `pnpm data:fetch` stops at `body.glb`, and so does the Vercel build, which runs it first.
+
+Then `pnpm data:fetch` pulls those files into `apps/web/public/data/` and checks the sha256 in `data.lock.json`.
