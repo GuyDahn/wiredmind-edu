@@ -109,7 +109,12 @@
       "lead": "Setiap pelajaran hanya butuh beberapa ketukan. Siswa merangsang dan membungkam jenis sel asli, menjawab satu pertanyaan, lalu menjelajah sendiri.",
       "lesson": "Pelajaran {number}",
       "meta": "{steps, plural, other {# langkah}} dan satu pertanyaan · sekitar 10 menit",
-      "start": "Mulai pelajaran {number}"
+      "start": "Mulai pelajaran {number}",
+      "mission": "Misi {number}",
+      "mapLabel": "Peta misi",
+      "done": "Selesai",
+      "todo": "Belum selesai",
+      "mapNote": "Misi yang sudah selesai ditandai di sini sampai Anda memuat ulang halaman. Tidak ada yang disimpan."
     },
     "teachers": {
       "title": "Untuk guru",
@@ -147,6 +152,18 @@
       "guidesLead": "Setiap pelajaran dilengkapi panduan guru berisi rencana 45 menit dan lembar kerja untuk dicetak.",
       "guide": "Panduan guru",
       "worksheet": "Lembar kerja"
+    },
+    "montage": {
+      "label": "Klip singkat dari pelajaran",
+      "pause": "Jeda klip",
+      "play": "Putar klip",
+      "credit": "Klip: {credit}",
+      "clips": {
+        "escape": "Sinyal kabur, dari mata sampai ke kaki",
+        "compass": "Tonjolan kompas berputar",
+        "smell": "Satu bau, satu pola kecil sel",
+        "zoom": "Dari lalat utuh sampai satu neuron"
+      }
     }
   },
   "about": {
@@ -264,7 +281,15 @@
         },
         "silence": {
           "text": "Sekarang bungkam <kenyon>sel Kenyon</kenyon> <gloss>(si pemilah bau)</gloss>. Kami akan mengirimkan baunya untukmu. Apa yang hilang?",
-          "result": "Cahaya merah muda hampir lenyap. Baunya tetap masuk, tetapi si pembaca ingatan tidak mendapat apa pun untuk dibaca."
+          "result": "Cahaya merah muda hampir lenyap. Baunya tetap masuk, tetapi si pembaca ingatan tidak mendapat apa pun untuk dibaca.",
+          "predict": {
+            "question": "Si pemilah bau akan segera dibungkam. Apa yang akan menjadi gelap?",
+            "choices": {
+              "all": "Semuanya. Tidak ada warna yang menyala.",
+              "pink": "Hanya si pembaca ingatan yang merah muda.",
+              "none": "Tidak ada. Semua warna tetap menyala."
+            }
+          }
         },
         "restore": {
           "text": "Nyalakan kembali <kenyon>sel Kenyon</kenyon> <gloss>(si pemilah bau)</gloss> dengan mengetuk tombolnya lagi. Kami akan mengirimkan bau yang sama.",
@@ -291,6 +316,38 @@
       "freePlay": {
         "title": "Main bebas",
         "text": "Sekarang semua tombol bisa dipakai. Tebak dulu, lalu ketuk: apa yang menjadi gelap jika kamu membungkam si kurir bau yang kuning? Coba bungkam dua warna sekaligus."
+      },
+      "mission": {
+        "goal": "Temukan sel-sel yang menyimpan ingatan bau lalat.",
+        "win": "Kamu menemukannya. Si pemilah bau mengubah setiap bau menjadi pola, dan si pembaca ingatan membacanya. Tanpa pola itu, tidak ada yang bisa diingat."
+      },
+      "story": {
+        "panels": {
+          "ripe": {
+            "caption": "Sebuah persik matang seharian di ambang jendela. Baunya melayang keluar lewat jendela yang terbuka.",
+            "bubble": "Ada yang wangi."
+          },
+          "sniff": {
+            "caption": "Antena {name} menangkap beberapa molekulnya. Hanya itu yang dibutuhkan seekor lalat.",
+            "bubble": "Aku kenal bau ini!"
+          },
+          "recall": {
+            "caption": "Minggu lalu bau yang sama menuntun {name} ke makanan. Otaknya menyimpan jejaknya.",
+            "bubble": "Persik berarti makan malam."
+          },
+          "land": {
+            "caption": "{name} berbelok melawan angin dan mengikuti bau itu sampai ke persik.",
+            "bubble": "Ketemu. Lagi."
+          }
+        },
+        "ending": {
+          "caption": "Bau itu menyalakan beberapa sel pemilah. Si pembaca ingatan tahu arti pola itu.",
+          "bubble": "Jadi begitu caraku mengingat!"
+        }
+      },
+      "journey": {
+        "circuit": "Sel-sel berwarna ini membawa bau dari antena ke ingatan lalat.",
+        "neuron": "Satu pembaca ingatan, sebuah sel tunggal. Titik terang itu adalah impuls, sinyal yang dikirimkannya."
       }
     },
     "compass": {
@@ -309,7 +366,15 @@
         },
         "silence": {
           "text": "Bungkam <ring>neuron cincin</ring> <gloss>(si pembawa patokan)</gloss>. Neuron ini membawa masuk apa yang dilihat lalat. Kami akan mengirimkan sinyal belok kanan untukmu.",
-          "result": "Tonjolan itu tergelincir dari tempatnya dan berkeliaran. Tanpa patokan, kompasnya melenceng."
+          "result": "Tonjolan itu tergelincir dari tempatnya dan berkeliaran. Tanpa patokan, kompasnya melenceng.",
+          "predict": {
+            "question": "Si pembawa patokan akan segera dibungkam. Apa yang akan dilakukan tonjolan itu?",
+            "choices": {
+              "vanish": "Tonjolan itu akan hilang.",
+              "drift": "Tonjolan itu akan berkeliaran dari tempatnya.",
+              "hold": "Tonjolan itu akan tetap persis di tempatnya."
+            }
+          }
         },
         "restore": {
           "text": "Nyalakan kembali <ring>neuron cincin</ring> <gloss>(si pembawa patokan)</gloss> dengan mengetuk tombolnya lagi. Kami akan mengirimkan sinyal yang sama.",
@@ -336,6 +401,38 @@
       "freePlay": {
         "title": "Main bebas",
         "text": "Sekarang semua tombol bisa dipakai. Tebak dulu, lalu ketuk: ke mana tonjolan bergerak jika kamu mengaktifkan kedua sinyal belok sekaligus? Coba juga saat sel ungu dibungkam."
+      },
+      "mission": {
+        "goal": "Temukan apa yang menjaga kompas lalat tetap akurat.",
+        "win": "Kamu menemukannya. Sinyal belok mendorong tonjolan mengitari kompas, dan si pembawa patokan menambatkannya pada apa yang dilihat lalat. Tanpa mereka, kompasnya melenceng."
+      },
+      "story": {
+        "panels": {
+          "dawn": {
+            "caption": "Pagi. Cahaya masuk lewat celah daun jendela, dan {name} ingin keluar.",
+            "bubble": "Ke sana."
+          },
+          "heading": {
+            "caption": "{name} berangkat menuju cahaya. Di dalam otaknya, sebuah kompas menandai ke mana ia menghadap.",
+            "bubble": "Cahaya di depan. Tahan di situ."
+          },
+          "gust": {
+            "caption": "Embusan angin mendorongnya ke samping. Cahaya itu bergeser ke satu sisi.",
+            "bubble": "Waduh. Aku berbelok."
+          },
+          "hold": {
+            "caption": "Ia melihat di mana cahaya itu sekarang, lalu berbelok kembali, lurus menembus celah.",
+            "bubble": "Kembali ke jalur."
+          }
+        },
+        "ending": {
+          "caption": "Sinyal belok memutar kompas. Apa yang dilihat {name} menambatkannya di tempat.",
+          "bubble": "Kompasku sendiri!"
+        }
+      },
+      "journey": {
+        "circuit": "Cincin sel ini adalah kompas lalat, bersama sel-sel yang memutarnya dan sel-sel yang menstabilkannya.",
+        "neuron": "Satu sel penunjuk arah. Titik terang itu adalah impuls, sinyal yang dikirimkannya."
       }
     },
     "escape": {
@@ -354,7 +451,15 @@
         },
         "silence": {
           "text": "Sekarang bungkam <giantfiber>serat raksasa</giantfiber> <gloss>(si kabel kabur)</gloss>. Kami akan mengirimkan pemukulnya. Perhatikan <jump>neuron lompat</jump> <gloss>(si penendang kaki)</gloss>.",
-          "result": "<looming>Neuron looming</looming> <gloss>(si pendeteksi pemukul)</gloss> masih aktif, tetapi <jump>neuron lompat</jump> tetap gelap. Cara kabur yang cepat itu pun hilang."
+          "result": "<looming>Neuron looming</looming> <gloss>(si pendeteksi pemukul)</gloss> masih aktif, tetapi <jump>neuron lompat</jump> tetap gelap. Cara kabur yang cepat itu pun hilang.",
+          "predict": {
+            "question": "Si kabel kabur akan segera dibungkam. Apa yang akan dilakukan si penendang kaki?",
+            "choices": {
+              "fire": "Aktif, sama seperti sebelumnya.",
+              "dark": "Tetap gelap.",
+              "late": "Aktif, tetapi terlambat."
+            }
+          }
         },
         "restore": {
           "text": "Nyalakan kembali <giantfiber>serat raksasa</giantfiber> <gloss>(si kabel kabur)</gloss> dengan mengetuk tombolnya lagi. Kami akan mengirimkan pemukul yang sama.",
@@ -381,6 +486,38 @@
       "freePlay": {
         "title": "Main bebas",
         "text": "Sekarang semua tombol bisa dipakai. Tebak dulu, lalu ketuk: warna apa saja yang masih menyala saat kabel kabur dibungkam? Lalu coba bungkam si pendeteksi pemukul sebagai gantinya."
+      },
+      "mission": {
+        "goal": "Temukan kabel yang menyelamatkan lalat.",
+        "win": "Kamu menemukannya. Si pendeteksi pemukul aktif, si kabel kabur membawa tanda bahaya turun lewat tali saraf, dan si penendang kaki membuat lalat melompat. Putuskan kabelnya, dan cara kabur yang cepat itu hilang."
+      },
+      "story": {
+        "panels": {
+          "rest": {
+            "caption": "{name} sedang membersihkan sayapnya di bibir gelas. Dapur sunyi.",
+            "bubble": "Tenang dan nyaman."
+          },
+          "shadow": {
+            "caption": "Sebuah bayangan membesar cepat di matanya. Sesuatu yang besar datang lurus ke arahnya.",
+            "bubble": "Gawat."
+          },
+          "leap": {
+            "caption": "Kaki tengahnya menendang sebelum pemukul mendarat. Dari pandangan pertama sampai melompat: sekitar 30 milidetik.",
+            "bubble": "Lompat!"
+          },
+          "safe": {
+            "caption": "Pemukul itu menghantam gelas kosong. {name} sudah di seberang ruangan.",
+            "bubble": "Meleset."
+          }
+        },
+        "ending": {
+          "caption": "Satu kabel tebal membawa tanda bahaya dari mata ke kakinya. Berkat kabel itulah {name} lolos.",
+          "bubble": "Terima kasih, serat raksasa."
+        }
+      },
+      "journey": {
+        "circuit": "Inilah sirkuit kabur: dari mata, lewat satu kabel, turun ke kaki.",
+        "neuron": "Inilah serat raksasa, sebuah sel tunggal. Titik terang itu adalah impuls yang melesat di sepanjang serat."
       }
     }
   },
@@ -590,6 +727,48 @@
       "playing": "Sedang menunjukkan cara kerjanya",
       "upNext": "Berikutnya, kami ketuk {action}: {name}",
       "stop": "Hentikan dan ambil alih"
+    },
+    "story": {
+      "label": "Cerita",
+      "skip": "Lewati cerita",
+      "back": "Kembali",
+      "next": "Lanjut",
+      "progress": "Panel {number} dari {total}",
+      "bridge": "Sekarang mari kita lihat apa yang terjadi di dalam otaknya.",
+      "zoom": "Perbesar",
+      "says": "{name} berkata:"
+    },
+    "journey": {
+      "label": "Pembesaran",
+      "open": "Perbesar dari lalat utuh sampai satu neuron",
+      "progress": "Tingkat {number} dari {total}",
+      "levels": {
+        "label": "Tingkat pembesaran",
+        "fly": "Lalat",
+        "brain": "Otak",
+        "circuit": "Sirkuit",
+        "neuron": "Neuron"
+      },
+      "captions": {
+        "fly": "Seekor lalat buah, panjangnya sekitar 3 mm. Tubuh ini dimodelkan dari hasil pindaian seekor lalat sungguhan.",
+        "brain": "Di dalam kepala terdapat otak. Otak ini dipetakan, sel demi sel, dari seekor lalat sungguhan yang lain."
+      },
+      "out": "Perkecil",
+      "in": "Perbesar",
+      "start": "Mulai misi",
+      "resume": "Kembali ke misi",
+      "skip": "Langsung ke misi"
+    },
+    "mission": {
+      "label": "Misi {number}",
+      "predictLabel": "Buat prediksi sebelum mengetuk",
+      "predictFirst": "Pilih apa yang menurutmu akan terjadi. Setelah itu tombolnya muncul.",
+      "predictHeld": "Prediksimu tepat.",
+      "predictSurprise": "Otak melakukan hal lain. Itulah gunanya percobaan.",
+      "finish": "Selesaikan misi",
+      "winTitle": "Misi {number} selesai",
+      "nextMission": "Misi berikutnya: {title}",
+      "map": "Lihat peta misi"
     }
   },
   "errors": {
@@ -816,7 +995,9 @@
       "guide": "Panduan guru",
       "worksheet": "Lembar kerja siswa",
       "demo": "Tunjukkan kepada kelas",
-      "generalTerms": "Istilah dasar"
+      "generalTerms": "Istilah dasar",
+      "companionTitle": "Kursus pendamping",
+      "companion": "Banyak siswa yang mengambil 5 unit biologi juga mengikuti kursus gratis Universitas Tel Aviv, <campusil>Otak: Mesin Paling Menakjubkan</campusil>, di Campus IL, yang diajarkan oleh Prof. Yossi Yovel dan Prof. Yaniv Assaf. Kursus itu membahas neuron, potensial aksi, dan sinapsis secara mendalam, dan pelajaran-pelajaran ini menjadi pendamping praktiknya. WiredMind adalah proyek independen. Proyek ini tidak berafiliasi dengan kursus tersebut, universitas itu, maupun Campus IL."
     },
     "topics": {
       "excitation": "Eksitasi dan inhibisi",
@@ -865,7 +1046,15 @@
       "realMore": "Daftar lengkapnya, beserta angka",
       "termsTitle": "Istilah kunci",
       "curriculumTitle": "Kesesuaian dengan kurikulum",
-      "curriculumPending": "Bagian ini belum diisi. Kesesuaiannya dengan kurikulum biologi resmi sedang dipastikan bersama para pengajar biologi."
+      "curriculumPending": "Bagian ini belum diisi. Kesesuaiannya dengan kurikulum biologi resmi sedang dipastikan bersama para pengajar biologi.",
+      "storyTitle": "Cerita",
+      "storyHow": "Pelajaran dibuka dengan komik pendek tentang {name}, si lalat. Bacakan panel-panelnya atau biarkan siswa membacanya; waktunya sekitar satu menit. Panel terakhirnya muncul lagi di layar kemenangan.",
+      "journeyTitle": "Pembesaran dari lalat ke neuron",
+      "journeyHow": "Tayangkan pelajaran di layar bersama. Berhentilah di setiap tingkat dari keempat tingkat itu dan ajukan pertanyaannya sebelum Anda memperbesar. Tombol tingkat melompat ke tingkat mana pun, dan tombol kaca pembesar membuka kembali pembesaran di titik mana pun dalam pelajaran.",
+      "journeyNote": "Tubuh dan otak berasal dari dua lalat yang berbeda, ditampilkan bersama dalam ukuran sebenarnya. Sampaikan hal ini kepada kelas.",
+      "predictTitle": "Prediksi",
+      "predictHow": "Sebelum langkah membungkam, siswa memilih apa yang menurut mereka akan terjadi. Mintalah mereka mengacungkan tangan lebih dulu. Tidak ada nilai, dan tebakan yang salah tidak merugikan apa pun.",
+      "predictExpected": "Jawaban yang diharapkan"
     },
     "worksheet": {
       "eyebrow": "Lembar kerja siswa · Pelajaran {number}",
@@ -935,7 +1124,15 @@
             "a": "Mengapa sel merah muda menjadi gelap saat kamu membungkam sel biru, padahal baunya tetap masuk?",
             "b": "Menurut para ilmuwan, di bagian mana dari sirkuit ini ingatan tentang bau disimpan?"
           }
-        }
+        },
+        "story": "{name} mencium persik matang, mengenali bau itu dari kali terakhir bau itu menuntunnya ke makanan, lalu mengikutinya melawan angin. Cerita ini memunculkan pertanyaan: di bagian otak mana ingatan itu disimpan?",
+        "levels": {
+          "fly": "Di bagian mana pada tubuh ini kalian akan mencari hidung?",
+          "brain": "Otak mengisi sebagian besar kepala. Menurut kalian, apa yang memakan begitu banyak tempat di dalamnya?",
+          "circuit": "Bau masuk lewat sel-sel oranye. Menurut kalian, warna mana yang dicapainya paling akhir?",
+          "neuron": "Titik itu adalah satu impuls. Bagaimana satu sel bisa memberi tahu bagian otak lainnya tentang suatu bau?"
+        },
+        "predictWhy": "Saat si pemilah bau dibungkam, baunya tetap masuk, jadi oranye dan kuning menyala, tetapi tidak ada pola yang sampai ke si pembaca ingatan yang merah muda."
       },
       "compass": {
         "goal": "Siswa melihat bahwa sebuah cincin neuron menyimpan arah hadap lalat sebagai satu bercak aktivitas, dan bahwa inhibisi dari neuron cincin menahan bercak itu di tempatnya.",
@@ -987,7 +1184,15 @@
             "a": "Mengapa tonjolan bergeser saat neuron cincin dibungkam?",
             "b": "Mengapa cincin adalah bentuk yang baik untuk sel-sel yang mencatat arah?"
           }
-        }
+        },
+        "story": "{name} menuju celah bercahaya, embusan angin membelokkannya, lalu ia berbelok kembali ke jalurnya. Cerita ini memunculkan pertanyaan: bagaimana otak tahu ke mana tubuhnya menghadap?",
+        "levels": {
+          "fly": "Lalat tidak punya peta dan tidak punya GPS. Apa yang bisa dipakainya untuk tetap terbang lurus?",
+          "brain": "Indra mana saja yang perlu didengarkan oleh kompas di dalam sini?",
+          "circuit": "Sel-sel ini membentuk cincin. Mengapa cincin bisa menjadi bentuk yang cocok untuk kompas?",
+          "neuron": "Ini satu sel penunjuk arah. Kalau sel ini aktif, menurut kalian apa yang dikatakannya tentang arah hadap lalat?"
+        },
+        "predictWhy": "Sel penunjuk arah terus aktif, jadi tonjolannya tidak hilang. Tanpa patokan yang menambatkannya, tonjolan itu tergelincir dari tempatnya dan berkeliaran."
       },
       "escape": {
         "goal": "Siswa mengikuti sebuah refleks dari mata sampai ke otot kaki dalam waktu sekitar 30 milidetik, dan menunjukkan bahwa cara kabur yang cepat bergantung pada satu mata rantai, yaitu serat raksasa.",
@@ -1039,8 +1244,19 @@
             "a": "Mengapa neuron lompat tetap gelap, padahal lalat melihat pemukulnya?",
             "b": "Ciri apa saja pada jalur ini yang membuat lalat bisa kabur begitu cepat?"
           }
-        }
+        },
+        "story": "{name} sedang beristirahat ketika sebuah pemukul lalat menyambar, dan ia melompat menghindar dalam sekitar 30 milidetik. Cerita ini memunculkan pertanyaan: apa di dalam otak yang bisa secepat itu?",
+        "levels": {
+          "fly": "Bagian tubuh mana saja yang dibutuhkan lalat untuk kabur?",
+          "brain": "Sinyal berawal di mata dan berakhir di kaki. Di mana saja sinyal itu harus lewat dalam perjalanannya?",
+          "circuit": "Ratusan sel biru, dan satu garis merah. Apa yang kalian perhatikan dari rutenya?",
+          "neuron": "Sel yang satu ini luar biasa tebal. Mengapa kabel yang tebal membantu lalat kabur dengan cepat?"
+        },
+        "predictWhy": "Neuron looming masih aktif, jadi lalat melihat pemukulnya, tetapi karena serat raksasa dibungkam, sinyalnya tidak pernah sampai ke neuron lompat, dan neuron itu tetap gelap."
       }
     }
+  },
+  "character": {
+    "name": "Ziv"
   }
 }

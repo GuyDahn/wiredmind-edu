@@ -109,7 +109,12 @@
       "lead": "Ogni lezione si completa in pochi tocchi. Gli studenti stimolano e silenziano tipi di cellule reali, rispondono a una domanda e poi esplorano da soli.",
       "lesson": "Lezione {number}",
       "meta": "{steps, plural, one {# passaggio} many {# di passaggi} other {# passaggi}} e una domanda · circa 10 minuti",
-      "start": "Inizia la lezione {number}"
+      "start": "Inizia la lezione {number}",
+      "mission": "Missione {number}",
+      "mapLabel": "Mappa delle missioni",
+      "done": "Completata",
+      "todo": "Non ancora completata",
+      "mapNote": "Le missioni completate restano segnate qui finché non ricarichi la pagina. Non viene salvato nulla."
     },
     "teachers": {
       "title": "Per gli insegnanti",
@@ -147,6 +152,18 @@
       "guidesLead": "Ogni lezione ha una guida per l’insegnante, con un piano di 45 minuti, e una scheda di lavoro da stampare.",
       "guide": "Guida per l’insegnante",
       "worksheet": "Scheda di lavoro"
+    },
+    "montage": {
+      "label": "Brevi clip dalle lezioni",
+      "pause": "Metti in pausa le clip",
+      "play": "Riproduci le clip",
+      "credit": "Clip: {credit}",
+      "clips": {
+        "escape": "Il segnale di fuga, dagli occhi alle zampe",
+        "compass": "Il picco della bussola che gira",
+        "smell": "Un odore, una piccola combinazione di cellule",
+        "zoom": "Dal moscerino intero fino a un solo neurone"
+      }
     }
   },
   "about": {
@@ -264,7 +281,15 @@
         },
         "silence": {
           "text": "Ora silenzia le <kenyon>cellule di Kenyon</kenyon> <gloss>(smistatrici di odori)</gloss>. L’odore lo mandiamo noi. Che cosa sparisce?",
-          "result": "La luce rosa quasi sparisce. L’odore entra lo stesso, ma i lettori di ricordi non hanno niente da leggere."
+          "result": "La luce rosa quasi sparisce. L’odore entra lo stesso, ma i lettori di ricordi non hanno niente da leggere.",
+          "predict": {
+            "question": "Le smistatrici di odori stanno per essere silenziate. Che cosa si spegnerà?",
+            "choices": {
+              "all": "Tutto. Non si accende nessun colore.",
+              "pink": "Solo i lettori di ricordi, in rosa.",
+              "none": "Niente. Tutti i colori si accendono ancora."
+            }
+          }
         },
         "restore": {
           "text": "Tocca di nuovo il pulsante delle <kenyon>cellule di Kenyon</kenyon> <gloss>(smistatrici di odori)</gloss> per riattivarle. Mandiamo di nuovo lo stesso odore.",
@@ -291,6 +316,38 @@
       "freePlay": {
         "title": "Esplorazione libera",
         "text": "Ora tutti i pulsanti funzionano. Prima prova a indovinare, poi tocca: che cosa si spegne se silenzi i messaggeri gialli dell’odore? Prova a silenziare due colori insieme."
+      },
+      "mission": {
+        "goal": "Trova le cellule che custodiscono il ricordo di un odore nel moscerino.",
+        "win": "Le hai trovate. Le smistatrici di odori trasformano ogni odore in una combinazione, e i lettori di ricordi la leggono. Senza la combinazione non c’è niente da ricordare."
+      },
+      "story": {
+        "panels": {
+          "ripe": {
+            "caption": "Una pesca è maturata tutto il giorno sul davanzale. Il suo profumo esce dalla finestra aperta.",
+            "bubble": "Che buon odore."
+          },
+          "sniff": {
+            "caption": "Le antenne di {name} ne catturano poche molecole. A un moscerino non serve altro.",
+            "bubble": "Questo odore lo conosco!"
+          },
+          "recall": {
+            "caption": "La settimana scorsa questo stesso odore ha portato {name} al cibo. Il suo cervello ne ha conservato una traccia.",
+            "bubble": "Pesca vuol dire cena."
+          },
+          "land": {
+            "caption": "{name} si gira controvento e segue l’odore fino alla pesca.",
+            "bubble": "Trovata. Di nuovo."
+          }
+        },
+        "ending": {
+          "caption": "L’odore ha acceso poche smistatrici di odori. I lettori di ricordi sapevano che cosa voleva dire quella combinazione.",
+          "bubble": "Ecco come faccio a ricordare!"
+        }
+      },
+      "journey": {
+        "circuit": "Queste cellule colorate portano un odore dalle antenne fino alla memoria del moscerino.",
+        "neuron": "Un lettore di ricordi, una sola cellula. Il punto luminoso è un’attivazione, il segnale che manda."
       }
     },
     "compass": {
@@ -309,7 +366,15 @@
         },
         "silence": {
           "text": "Silenzia i <ring>neuroni ad anello</ring> <gloss>(occhi della bussola)</gloss>. Portano dentro quello che vede il moscerino. Il segnale di destra lo mandiamo noi.",
-          "result": "Il picco scivola via dal suo posto e vaga. Senza punti di riferimento, la bussola va alla deriva."
+          "result": "Il picco scivola via dal suo posto e vaga. Senza punti di riferimento, la bussola va alla deriva.",
+          "predict": {
+            "question": "Gli occhi della bussola stanno per essere silenziati. Che cosa farà il picco?",
+            "choices": {
+              "vanish": "Sparirà.",
+              "drift": "Scivolerà via dal suo posto e vagherà.",
+              "hold": "Resterà esattamente dov’è."
+            }
+          }
         },
         "restore": {
           "text": "Tocca di nuovo il pulsante dei <ring>neuroni ad anello</ring> <gloss>(occhi della bussola)</gloss> per riattivarli. Mandiamo di nuovo lo stesso segnale.",
@@ -336,6 +401,38 @@
       "freePlay": {
         "title": "Esplorazione libera",
         "text": "Ora tutti i pulsanti funzionano. Prima prova a indovinare, poi tocca: dove va il picco se attivi insieme i due segnali di svolta? Prova anche con le cellule viola silenziate."
+      },
+      "mission": {
+        "goal": "Trova che cosa fa puntare giusto la bussola del moscerino.",
+        "win": "L’hai trovato. I segnali per girare spingono il picco lungo la bussola, e gli occhi della bussola lo ancorano a ciò che vede il moscerino. Senza di loro la bussola va alla deriva."
+      },
+      "story": {
+        "panels": {
+          "dawn": {
+            "caption": "Mattina. La luce entra da una fessura delle persiane, e {name} vuole uscire.",
+            "bubble": "Di là."
+          },
+          "heading": {
+            "caption": "{name} parte verso la luce. Nel suo cervello una bussola segna da che parte è rivolto.",
+            "bubble": "Luce davanti. Resta lì."
+          },
+          "gust": {
+            "caption": "Uno spiffero lo spinge di lato. La luce scivola da una parte.",
+            "bubble": "Ehi. Mi sono girato."
+          },
+          "hold": {
+            "caption": "Vede dov’è la luce adesso e corregge la rotta, dritto attraverso la fessura.",
+            "bubble": "Di nuovo in rotta."
+          }
+        },
+        "ending": {
+          "caption": "I segnali per girare fanno ruotare la bussola. Ciò che {name} vede la tiene ferma.",
+          "bubble": "Una bussola tutta mia!"
+        }
+      },
+      "journey": {
+        "circuit": "Questo anello di cellule è la bussola del moscerino, con le cellule che la fanno girare e quelle che la tengono stabile.",
+        "neuron": "Una cellula di rotta. Il punto luminoso è un’attivazione, il segnale che manda."
       }
     },
     "escape": {
@@ -354,7 +451,15 @@
         },
         "silence": {
           "text": "Ora silenzia la <giantfiber>fibra gigante</giantfiber> <gloss>(filo di fuga)</gloss>. Lo scacciamosche lo mandiamo noi. Guarda i <jump>neuroni del salto</jump> <gloss>(motori delle zampe)</gloss>.",
-          "result": "I <looming>neuroni di avvicinamento</looming> <gloss>(sentinelle)</gloss> si attivano ancora, ma i <jump>neuroni del salto</jump> restano spenti. La fuga veloce non c’è più."
+          "result": "I <looming>neuroni di avvicinamento</looming> <gloss>(sentinelle)</gloss> si attivano ancora, ma i <jump>neuroni del salto</jump> restano spenti. La fuga veloce non c’è più.",
+          "predict": {
+            "question": "Il filo di fuga sta per essere silenziato. Che cosa faranno i motori delle zampe?",
+            "choices": {
+              "fire": "Si attiveranno, come prima.",
+              "dark": "Resteranno spenti.",
+              "late": "Si attiveranno, ma più tardi."
+            }
+          }
         },
         "restore": {
           "text": "Tocca di nuovo il pulsante della <giantfiber>fibra gigante</giantfiber> <gloss>(filo di fuga)</gloss> per riattivarla. Mandiamo di nuovo lo stesso scacciamosche.",
@@ -381,6 +486,38 @@
       "freePlay": {
         "title": "Esplorazione libera",
         "text": "Ora tutti i pulsanti funzionano. Prima prova a indovinare, poi tocca: quali colori si accendono ancora con il filo di fuga silenziato? Poi prova invece a silenziare le sentinelle."
+      },
+      "mission": {
+        "goal": "Trova il filo che salva il moscerino.",
+        "win": "L’hai trovato. Le sentinelle si attivano, il filo di fuga porta l’allarme lungo il cordone nervoso e i motori delle zampe fanno scattare il salto. Taglia il filo e la fuga veloce non c’è più."
+      },
+      "story": {
+        "panels": {
+          "rest": {
+            "caption": "{name} si pulisce le ali sul bordo di un bicchiere. La cucina è silenziosa.",
+            "bubble": "Che pace."
+          },
+          "shadow": {
+            "caption": "Un’ombra cresce in fretta nei suoi occhi. Qualcosa di grosso gli arriva dritto addosso.",
+            "bubble": "Oh-oh."
+          },
+          "leap": {
+            "caption": "Le zampe di mezzo scattano prima che lo scacciamosche colpisca. Dal primo sguardo al salto: circa 30 millisecondi.",
+            "bubble": "Salta!"
+          },
+          "safe": {
+            "caption": "Lo scacciamosche colpisce un bicchiere vuoto. {name} è già dall’altra parte della stanza.",
+            "bubble": "Mancato."
+          }
+        },
+        "ending": {
+          "caption": "Un solo filo spesso ha portato l’allarme dagli occhi alle zampe. È grazie a quel filo che {name} è scappato.",
+          "bubble": "Grazie, fibra gigante."
+        }
+      },
+      "journey": {
+        "circuit": "Questo è il circuito di fuga: dagli occhi, lungo un solo filo, fino alle zampe.",
+        "neuron": "Questa è la fibra gigante, una sola cellula. Il punto luminoso è un’attivazione che la percorre a tutta velocità."
       }
     }
   },
@@ -590,6 +727,48 @@
       "playing": "Ti faccio vedere come funziona",
       "upNext": "Ora tocchiamo «{action}»: {name}",
       "stop": "Ferma e continua tu"
+    },
+    "story": {
+      "label": "La storia",
+      "skip": "Salta la storia",
+      "back": "Indietro",
+      "next": "Avanti",
+      "progress": "Vignetta {number} di {total}",
+      "bridge": "Ora vediamo che cosa è successo nel suo cervello.",
+      "zoom": "Ingrandisci",
+      "says": "{name} dice:"
+    },
+    "journey": {
+      "label": "Lo zoom",
+      "open": "Zoom dal moscerino intero fino a un neurone",
+      "progress": "Livello {number} di {total}",
+      "levels": {
+        "label": "Livelli di zoom",
+        "fly": "Moscerino",
+        "brain": "Cervello",
+        "circuit": "Circuito",
+        "neuron": "Neurone"
+      },
+      "captions": {
+        "fly": "Un moscerino della frutta, lungo circa 3 mm. Questo corpo è stato modellato a partire dalla scansione di un moscerino vero.",
+        "brain": "Dentro la testa c’è il cervello. Questo è stato mappato, cellula per cellula, a partire da un altro moscerino vero."
+      },
+      "out": "Riduci",
+      "in": "Ingrandisci",
+      "start": "Inizia la missione",
+      "resume": "Torna alla missione",
+      "skip": "Vai subito alla missione"
+    },
+    "mission": {
+      "label": "Missione {number}",
+      "predictLabel": "Fai una previsione prima di toccare",
+      "predictFirst": "Scegli che cosa succederà secondo te. Poi comparirà il pulsante.",
+      "predictHeld": "La tua previsione era giusta.",
+      "predictSurprise": "Il cervello ha fatto un’altra cosa. Gli esperimenti servono a questo.",
+      "finish": "Concludi la missione",
+      "winTitle": "Missione {number} completata",
+      "nextMission": "Prossima missione: {title}",
+      "map": "Vedi la mappa delle missioni"
     }
   },
   "errors": {
@@ -816,7 +995,9 @@
       "guide": "Guida per l’insegnante",
       "worksheet": "Scheda per gli studenti",
       "demo": "Mostrala alla classe",
-      "generalTerms": "Termini di base"
+      "generalTerms": "Termini di base",
+      "companionTitle": "Un corso da affiancare",
+      "companion": "Molti studenti che seguono 5 unità di biologia frequentano anche il corso gratuito dell’Università di Tel Aviv <campusil>Il cervello: la macchina più meravigliosa di tutte</campusil> su Campus IL, tenuto dal Prof. Yossi Yovel e dal Prof. Yaniv Assaf. Il corso tratta in modo approfondito neuroni, potenziali d’azione e sinapsi, e queste lezioni ne sono un complemento pratico. WiredMind è un progetto indipendente. Non è affiliato al corso, all’università o a Campus IL."
     },
     "topics": {
       "excitation": "Eccitazione e inibizione",
@@ -865,7 +1046,15 @@
       "realMore": "L’elenco completo, con i numeri",
       "termsTitle": "Termini chiave",
       "curriculumTitle": "Collegamento con i programmi scolastici",
-      "curriculumPending": "Questa sezione non è ancora compilata. La corrispondenza con il programma ufficiale di biologia è in corso di verifica con docenti di biologia."
+      "curriculumPending": "Questa sezione non è ancora compilata. La corrispondenza con il programma ufficiale di biologia è in corso di verifica con docenti di biologia.",
+      "storyTitle": "La storia",
+      "storyHow": "La lezione si apre con un breve fumetto su {name}, il moscerino. Leggi le vignette ad alta voce o lasciale leggere agli studenti; ci vuole circa un minuto. L’ultima vignetta ritorna nella schermata di fine missione.",
+      "journeyTitle": "Lo zoom dal moscerino al neurone",
+      "journeyHow": "Proietta la lezione. Fermati a ciascuno dei quattro livelli e fai la sua domanda prima di ingrandire. I pulsanti dei livelli portano direttamente a qualsiasi livello, e il pulsante con la lente riapre lo zoom in qualsiasi momento della lezione.",
+      "journeyNote": "Il corpo e il cervello vengono da due moscerini diversi, mostrati insieme nelle loro dimensioni reali. Dillo alla classe.",
+      "predictTitle": "La previsione",
+      "predictHow": "Prima del passaggio in cui si silenzia, gli studenti scelgono che cosa succederà secondo loro. Fai prima votare per alzata di mano. Non c’è nessun punteggio, e una previsione sbagliata non costa nulla.",
+      "predictExpected": "Risposta attesa"
     },
     "worksheet": {
       "eyebrow": "Scheda per gli studenti · Lezione {number}",
@@ -935,7 +1124,15 @@
             "a": "Perché le cellule rosa si sono spente quando hai silenziato le cellule blu, anche se l’odore è entrato lo stesso?",
             "b": "In quale punto di questo circuito, secondo gli scienziati, viene conservato il ricordo di un odore?"
           }
-        }
+        },
+        "story": "{name} sente l’odore di una pesca matura, lo riconosce dall’ultima volta in cui lo ha portato al cibo e lo segue controvento. La storia prepara la domanda: in quale punto del cervello è custodito quel ricordo?",
+        "levels": {
+          "fly": "In quale punto di questo corpo cercheresti un naso?",
+          "brain": "Il cervello riempie quasi tutta la testa. Secondo te, che cosa ne occupa così tanto?",
+          "circuit": "L’odore entra dalle cellule arancioni. Secondo te, quale colore raggiunge per ultimo?",
+          "neuron": "Il punto è una sola attivazione. Come potrebbe una sola cellula informare il resto del cervello di un odore?"
+        },
+        "predictWhy": "Con le smistatrici di odori silenziate l’odore entra lo stesso, quindi l’arancione e il giallo si accendono, ma nessuna combinazione arriva ai lettori di ricordi, in rosa."
       },
       "compass": {
         "goal": "Gli studenti vedono che un anello di neuroni conserva la direzione del moscerino sotto forma di una sola zona di attività, e che l’inibizione dei neuroni ad anello tiene ferma quella zona.",
@@ -987,7 +1184,15 @@
             "a": "Perché il picco è andato alla deriva quando i neuroni ad anello erano silenziati?",
             "b": "Perché l’anello è una buona forma per cellule che tengono traccia della direzione?"
           }
-        }
+        },
+        "story": "{name} punta verso una fessura di luce, uno spiffero lo fa girare e lui corregge la rotta. La storia prepara la domanda: come fa un cervello a sapere da che parte è rivolto il suo corpo?",
+        "levels": {
+          "fly": "Il moscerino non ha né mappa né GPS. Che cosa potrebbe usare per mantenere una rotta dritta?",
+          "brain": "Quali sensi dovrebbe ascoltare una bussola che sta qui dentro?",
+          "circuit": "Queste cellule formano un anello. Perché un anello potrebbe essere una buona forma per una bussola?",
+          "neuron": "Questa è una cellula di rotta. Se si attiva, secondo te che cosa dice su dove è rivolto il moscerino?"
+        },
+        "predictWhy": "Le cellule di rotta continuano ad attivarsi, quindi il picco non sparisce. Senza punti di riferimento che lo ancorino, scivola via dal suo posto e vaga."
       },
       "escape": {
         "goal": "Gli studenti seguono un riflesso dagli occhi ai muscoli delle zampe in circa 30 millisecondi, e mostrano che la fuga veloce dipende da un solo anello della catena: la fibra gigante.",
@@ -1039,8 +1244,19 @@
             "a": "Perché i neuroni del salto sono rimasti spenti, anche se il moscerino ha visto lo scacciamosche?",
             "b": "Quali caratteristiche di questa via rendono la fuga così veloce?"
           }
-        }
+        },
+        "story": "{name} si sta riposando quando uno scacciamosche gli piomba addosso, e lui si mette in salvo con un salto in circa 30 millisecondi. La storia prepara la domanda: che cosa, in un cervello, può essere così veloce?",
+        "levels": {
+          "fly": "Di quali parti di questo corpo ha bisogno il moscerino per scappare?",
+          "brain": "Il segnale parte dagli occhi e finisce nelle zampe. Da dove deve passare lungo il percorso?",
+          "circuit": "Centinaia di cellule blu e una sola linea rossa. Che cosa noti nel percorso?",
+          "neuron": "Questa cellula è insolitamente spessa. Perché un filo spesso aiuterebbe una fuga veloce?"
+        },
+        "predictWhy": "I neuroni di avvicinamento si attivano ancora, quindi il moscerino vede lo scacciamosche, ma con la fibra gigante silenziata il segnale non arriva mai ai neuroni del salto, che restano spenti."
       }
     }
+  },
+  "character": {
+    "name": "Ziv"
   }
 }

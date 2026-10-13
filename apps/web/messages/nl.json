@@ -110,7 +110,12 @@
       "lead": "Elke les is in een paar tikken klaar. Leerlingen stimuleren echte celtypen en leggen ze stil, beantwoorden één vraag en gaan daarna zelf op ontdekking.",
       "lesson": "Les {number}",
       "meta": "{steps, plural, one {# stap} other {# stappen}} en een vraag · ongeveer 10 minuten",
-      "start": "Start les {number}"
+      "start": "Start les {number}",
+      "mission": "Missie {number}",
+      "mapLabel": "Missiekaart",
+      "done": "Klaar",
+      "todo": "Nog niet gedaan",
+      "mapNote": "Afgeronde missies blijven hier gemarkeerd tot je de pagina opnieuw laadt. Er wordt niets opgeslagen."
     },
     "teachers": {
       "title": "Voor docenten",
@@ -148,6 +153,18 @@
       "guidesLead": "Bij elke les hoort een docentenhandleiding met een lesplan van 45 minuten en een werkblad om te printen.",
       "guide": "Docentenhandleiding",
       "worksheet": "Werkblad"
+    },
+    "montage": {
+      "label": "Korte fragmenten uit de lessen",
+      "pause": "Pauzeer de fragmenten",
+      "play": "Speel de fragmenten af",
+      "credit": "Fragment: {credit}",
+      "clips": {
+        "escape": "Het ontsnappingssignaal, van de ogen tot de poten",
+        "compass": "De bult van het kompas zwaait rond",
+        "smell": "Eén geur, een klein patroon van cellen",
+        "zoom": "Van de hele vlieg tot één neuron"
+      }
     }
   },
   "about": {
@@ -265,7 +282,15 @@
         },
         "silence": {
           "text": "Nu ga je de <kenyon>Kenyon-cellen</kenyon> <gloss>(de geursorteerders)</gloss> stilleggen. Wij sturen de geur voor je. Wat verdwijnt er?",
-          "result": "Het roze licht verdwijnt bijna. De geur komt nog steeds binnen, maar de geheugenlezers krijgen niets te lezen."
+          "result": "Het roze licht verdwijnt bijna. De geur komt nog steeds binnen, maar de geheugenlezers krijgen niets te lezen.",
+          "predict": {
+            "question": "De geursorteerders worden zo stilgelegd. Wat wordt er donker?",
+            "choices": {
+              "all": "Alles. Geen enkele kleur licht op.",
+              "pink": "Alleen de roze geheugenlezers.",
+              "none": "Niets. Elke kleur licht nog op."
+            }
+          }
         },
         "restore": {
           "text": "Tik nog een keer op de knop van de <kenyon>Kenyon-cellen</kenyon> <gloss>(de geursorteerders)</gloss> om ze weer aan te zetten. Wij sturen dezelfde geur.",
@@ -292,6 +317,38 @@
       "freePlay": {
         "title": "Vrij spel",
         "text": "Alle knoppen werken nu. Eerst gokken, dan tikken: wat wordt er donker als je de gele geurboodschappers stillegt? Probeer ook eens twee kleuren tegelijk stil te leggen."
+      },
+      "mission": {
+        "goal": "Vind de cellen die het geurgeheugen van een vlieg bewaren.",
+        "win": "Je hebt ze gevonden. De geursorteerders maken van elke geur een patroon, en de geheugenlezers lezen het. Zonder het patroon valt er niets te onthouden."
+      },
+      "story": {
+        "panels": {
+          "ripe": {
+            "caption": "Een perzik ligt al de hele dag te rijpen in de vensterbank. De geur drijft door het open raam naar buiten.",
+            "bubble": "Hier ruikt iets lekker."
+          },
+          "sniff": {
+            "caption": "De antennes van {name} vangen er een paar moleculen van op. Meer heeft een vlieg niet nodig.",
+            "bubble": "Die geur ken ik!"
+          },
+          "recall": {
+            "caption": "Vorige week bracht precies deze geur {name} bij eten. Zijn brein bewaarde er een spoor van.",
+            "bubble": "Perzik betekent avondeten."
+          },
+          "land": {
+            "caption": "{name} draait tegen de wind in en volgt de geur helemaal tot aan de perzik.",
+            "bubble": "Gevonden. Alweer."
+          }
+        },
+        "ending": {
+          "caption": "De geur liet een paar geursorteerders oplichten. De geheugenlezers wisten wat dat patroon betekende.",
+          "bubble": "Dus zo onthoud ik dat!"
+        }
+      },
+      "journey": {
+        "circuit": "Deze gekleurde cellen brengen een geur van de antennes naar het geheugen van de vlieg.",
+        "neuron": "Eén geheugenlezer, één enkele cel. De heldere stip is een impuls, het signaal dat hij verstuurt."
       }
     },
     "compass": {
@@ -310,7 +367,15 @@
         },
         "silence": {
           "text": "Nu ga je de <ring>ringneuronen</ring> <gloss>(de wegwijzers)</gloss> stilleggen. Die brengen binnen wat de vlieg ziet. Wij sturen het signaal van rechts voor je.",
-          "result": "De bult glijdt van zijn plek en dwaalt rond. Zonder oriëntatiepunten drijft het kompas af."
+          "result": "De bult glijdt van zijn plek en dwaalt rond. Zonder oriëntatiepunten drijft het kompas af.",
+          "predict": {
+            "question": "De wegwijzers worden zo stilgelegd. Wat gaat de bult doen?",
+            "choices": {
+              "vanish": "Hij verdwijnt.",
+              "drift": "Hij dwaalt van zijn plek af.",
+              "hold": "Hij blijft precies waar hij is."
+            }
+          }
         },
         "restore": {
           "text": "Tik nog een keer op de knop van de <ring>ringneuronen</ring> <gloss>(de wegwijzers)</gloss> om ze weer aan te zetten. Wij sturen hetzelfde signaal.",
@@ -337,6 +402,38 @@
       "freePlay": {
         "title": "Vrij spel",
         "text": "Alle knoppen werken nu. Eerst gokken, dan tikken: waar gaat de bult heen als je beide draaisignalen tegelijk laat vuren? Probeer het ook met de paarse cellen stilgelegd."
+      },
+      "mission": {
+        "goal": "Vind wat het kompas van een vlieg op koers houdt.",
+        "win": "Je hebt het gevonden. Draaisignalen duwen de bult het kompas rond, en de wegwijzers zetten hem vast op wat de vlieg ziet. Zonder de wegwijzers drijft het kompas af."
+      },
+      "story": {
+        "panels": {
+          "dawn": {
+            "caption": "Ochtend. Er valt licht door een kier in de luiken, en {name} wil naar buiten.",
+            "bubble": "Die kant op."
+          },
+          "heading": {
+            "caption": "{name} vliegt op het licht af. In zijn brein houdt een kompas bij welke kant hij op kijkt.",
+            "bubble": "Licht recht vooruit. Zo houden."
+          },
+          "gust": {
+            "caption": "Een tochtvlaag duwt hem opzij. Het licht schuift weg naar één kant.",
+            "bubble": "Hé. Ik ben gedraaid."
+          },
+          "hold": {
+            "caption": "Hij ziet waar het licht nu is en stuurt terug, recht door de kier.",
+            "bubble": "Weer op koers."
+          }
+        },
+        "ending": {
+          "caption": "Draaisignalen duwen het kompas rond. Wat {name} ziet, zet het vast.",
+          "bubble": "Mijn eigen kompas!"
+        }
+      },
+      "journey": {
+        "circuit": "Deze ring van cellen is het kompas van de vlieg, met de cellen die het draaien en de cellen die het stabiel houden.",
+        "neuron": "Eén richtingcel. De heldere stip is een impuls, het signaal dat hij verstuurt."
       }
     },
     "escape": {
@@ -355,7 +452,15 @@
         },
         "silence": {
           "text": "Nu ga je de <giantfiber>reuzenvezel</giantfiber> <gloss>(de ontsnappingsdraad)</gloss> stilleggen. Wij sturen de vliegenmepper. Kijk naar de <jump>springneuronen</jump> <gloss>(de pootschoppers)</gloss>.",
-          "result": "De <looming>naderingsneuronen</looming> <gloss>(de meppermelders)</gloss> vuren nog steeds, maar de <jump>springneuronen</jump> blijven donker. De snelle ontsnapping is weg."
+          "result": "De <looming>naderingsneuronen</looming> <gloss>(de meppermelders)</gloss> vuren nog steeds, maar de <jump>springneuronen</jump> blijven donker. De snelle ontsnapping is weg.",
+          "predict": {
+            "question": "De ontsnappingsdraad wordt zo stilgelegd. Wat gaan de pootschoppers doen?",
+            "choices": {
+              "fire": "Vuren, net als eerst.",
+              "dark": "Donker blijven.",
+              "late": "Vuren, maar later."
+            }
+          }
         },
         "restore": {
           "text": "Tik nog een keer op de knop van de <giantfiber>reuzenvezel</giantfiber> <gloss>(de ontsnappingsdraad)</gloss> om hem weer aan te zetten. Wij sturen dezelfde vliegenmepper.",
@@ -382,6 +487,38 @@
       "freePlay": {
         "title": "Vrij spel",
         "text": "Alle knoppen werken nu. Eerst gokken, dan tikken: welke kleuren lichten nog op als de ontsnappingsdraad is stilgelegd? Probeer daarna eens de meppermelders stil te leggen."
+      },
+      "mission": {
+        "goal": "Vind de draad die de vlieg redt.",
+        "win": "Je hebt hem gevonden. De meppermelders vuren, de ontsnappingsdraad brengt het alarm omlaag door de zenuwstreng, en de pootschoppers laten de vlieg springen. Knip de draad door en de snelle ontsnapping is weg."
+      },
+      "story": {
+        "panels": {
+          "rest": {
+            "caption": "{name} poetst zijn vleugels op de rand van een glas. Het is stil in de keuken.",
+            "bubble": "Lekker rustig."
+          },
+          "shadow": {
+            "caption": "Een schaduw groeit razendsnel in zijn ogen. Er komt iets groots recht op hem af.",
+            "bubble": "O jee."
+          },
+          "leap": {
+            "caption": "Zijn middelste poten zetten af voordat de mepper neerkomt. Van de eerste blik tot de sprong: ongeveer 30 milliseconden.",
+            "bubble": "Springen!"
+          },
+          "safe": {
+            "caption": "De mepper raakt een leeg glas. {name} zit al aan de andere kant van de kamer.",
+            "bubble": "Mis."
+          }
+        },
+        "ending": {
+          "caption": "Eén dikke draad bracht het alarm van zijn ogen naar zijn poten. Dankzij die draad ontsnapte {name}.",
+          "bubble": "Dank je, reuzenvezel."
+        }
+      },
+      "journey": {
+        "circuit": "Dit is het ontsnappingscircuit: van de ogen, via één draad, omlaag naar de poten.",
+        "neuron": "Dit is de reuzenvezel, één enkele cel. De heldere stip is een impuls die erlangs raast."
       }
     }
   },
@@ -591,6 +728,48 @@
       "playing": "We laten zien hoe het werkt",
       "upNext": "Hierna tikken we op {action}: {name}",
       "stop": "Stop en neem het over"
+    },
+    "story": {
+      "label": "Het verhaal",
+      "skip": "Sla het verhaal over",
+      "back": "Terug",
+      "next": "Volgende",
+      "progress": "Plaatje {number} van {total}",
+      "bridge": "Nu gaan we kijken wat er in zijn brein gebeurde.",
+      "zoom": "Inzoomen",
+      "says": "{name} zegt:"
+    },
+    "journey": {
+      "label": "De zoom",
+      "open": "Zoom van de hele vlieg naar één neuron",
+      "progress": "Niveau {number} van {total}",
+      "levels": {
+        "label": "Zoomniveaus",
+        "fly": "Vlieg",
+        "brain": "Brein",
+        "circuit": "Circuit",
+        "neuron": "Neuron"
+      },
+      "captions": {
+        "fly": "Een fruitvlieg, ongeveer 3 mm lang. Dit lijf is nagemaakt op basis van een scan van een echte vlieg.",
+        "brain": "In de kop zit het brein. Dit brein is cel voor cel in kaart gebracht bij een andere echte vlieg."
+      },
+      "out": "Uitzoomen",
+      "in": "Inzoomen",
+      "start": "Start de missie",
+      "resume": "Terug naar de missie",
+      "skip": "Direct naar de missie"
+    },
+    "mission": {
+      "label": "Missie {number}",
+      "predictLabel": "Voorspel voordat je tikt",
+      "predictFirst": "Kies wat er volgens jou gaat gebeuren. Dan verschijnt de knop.",
+      "predictHeld": "Je voorspelling klopte.",
+      "predictSurprise": "Het brein deed iets anders. Daar zijn experimenten voor.",
+      "finish": "Rond de missie af",
+      "winTitle": "Missie {number} voltooid",
+      "nextMission": "Volgende missie: {title}",
+      "map": "Bekijk de missiekaart"
     }
   },
   "errors": {
@@ -817,7 +996,9 @@
       "guide": "Docentenhandleiding",
       "worksheet": "Werkblad voor leerlingen",
       "demo": "Laat het de klas zien",
-      "generalTerms": "Basisbegrippen"
+      "generalTerms": "Basisbegrippen",
+      "companionTitle": "Een cursus die erbij past",
+      "companion": "Veel leerlingen die 5 eenheden biologie volgen, doen ook de gratis cursus <campusil>Het brein: de wonderlijkste machine van allemaal</campusil> van de Universiteit van Tel Aviv op Campus IL, gegeven door prof. Yossi Yovel en prof. Yaniv Assaf. Die cursus behandelt neuronen, actiepotentialen en synapsen uitgebreid, en deze lessen zijn er een praktische aanvulling op. WiredMind is een onafhankelijk project. Het is niet verbonden aan de cursus, de universiteit of Campus IL."
     },
     "topics": {
       "excitation": "Excitatie en inhibitie",
@@ -866,7 +1047,15 @@
       "realMore": "De volledige lijst, met getallen",
       "termsTitle": "Kernbegrippen",
       "curriculumTitle": "Aansluiting op het curriculum",
-      "curriculumPending": "Dit onderdeel is nog niet ingevuld. De aansluiting op het officiële biologiecurriculum wordt nog nagegaan met biologiedocenten."
+      "curriculumPending": "Dit onderdeel is nog niet ingevuld. De aansluiting op het officiële biologiecurriculum wordt nog nagegaan met biologiedocenten.",
+      "storyTitle": "Het verhaal",
+      "storyHow": "De les begint met een korte strip over {name}, de vlieg. Lees de plaatjes hardop voor of laat de leerlingen ze zelf lezen; dat duurt ongeveer een minuut. Het laatste plaatje komt terug op het eindscherm van de missie.",
+      "journeyTitle": "De zoom van vlieg naar neuron",
+      "journeyHow": "Projecteer de les. Sta stil bij elk van de vier niveaus en stel de bijbehorende vraag voordat je inzoomt. Met de niveauknoppen spring je naar elk niveau, en met de knop met het vergrootglas open je de zoom opnieuw op elk moment in de les.",
+      "journeyNote": "Het lijf en het brein komen van twee verschillende vliegen en worden samen op ware grootte getoond. Vertel dat aan de klas.",
+      "predictTitle": "De voorspelling",
+      "predictHow": "Vóór de stap met het stilleggen kiezen leerlingen wat er volgens hen gaat gebeuren. Laat ze eerst hun hand opsteken. Er worden geen punten gegeven, en een verkeerde gok kost niets.",
+      "predictExpected": "Verwacht antwoord"
     },
     "worksheet": {
       "eyebrow": "Werkblad voor leerlingen · Les {number}",
@@ -936,7 +1125,15 @@
             "a": "Waarom werden de roze cellen donker toen je de blauwe cellen stillegde, terwijl de geur nog wel binnenkwam?",
             "b": "Waar in dit circuit wordt de herinnering aan een geur volgens wetenschappers opgeslagen?"
           }
-        }
+        },
+        "story": "{name} ruikt een rijpe perzik, herkent de geur van de vorige keer dat die hem bij eten bracht, en volgt hem tegen de wind in. Het verhaal leidt naar de vraag: waar in het brein wordt die herinnering bewaard?",
+        "levels": {
+          "fly": "Waar op dit lijf zou je een neus zoeken?",
+          "brain": "Het brein vult het grootste deel van de kop. Wat neemt daar volgens jou zoveel ruimte in?",
+          "circuit": "De geur komt binnen bij de oranje cellen. Welke kleur bereikt hij volgens jou als laatste?",
+          "neuron": "De stip is één impuls. Hoe zou één cel de rest van het brein iets over een geur kunnen vertellen?"
+        },
+        "predictWhy": "Als de geursorteerders stilliggen, komt de geur nog steeds binnen, dus oranje en geel lichten op, maar er bereikt geen patroon de roze geheugenlezers."
       },
       "compass": {
         "goal": "Leerlingen zien dat een ring van neuronen de kijkrichting van de vlieg vasthoudt als één vlek van activiteit, en dat inhibitie door de ringneuronen die vlek op zijn plek houdt.",
@@ -988,7 +1185,15 @@
             "a": "Waarom dreef de bult weg toen de ringneuronen waren stilgelegd?",
             "b": "Waarom is een ring een goede vorm voor cellen die een richting bijhouden?"
           }
-        }
+        },
+        "story": "{name} vliegt op een kier met licht af, een tochtvlaag draait hem, en hij stuurt terug op koers. Het verhaal leidt naar de vraag: hoe weet een brein welke kant zijn lijf op kijkt?",
+        "levels": {
+          "fly": "De vlieg heeft geen kaart en geen GPS. Wat zou hij kunnen gebruiken om een rechte koers aan te houden?",
+          "brain": "Naar welke zintuigen zou een kompas hierbinnen moeten luisteren?",
+          "circuit": "Deze cellen vormen een ring. Waarom zou een ring een goede vorm zijn voor een kompas?",
+          "neuron": "Dit is één richtingcel. Als hij vuurt, wat zegt hij dan volgens jou over de kant die de vlieg op kijkt?"
+        },
+        "predictWhy": "De richtingcellen blijven vuren, dus de bult verdwijnt niet. Zonder oriëntatiepunten die hem vastzetten, glijdt hij van zijn plek en dwaalt hij rond."
       },
       "escape": {
         "goal": "Leerlingen volgen een reflex van de ogen naar de pootspieren in ongeveer 30 milliseconden, en laten zien dat de snelle ontsnapping afhangt van één schakel: de reuzenvezel.",
@@ -1040,8 +1245,19 @@
             "a": "Waarom bleven de springneuronen donker, terwijl de vlieg de vliegenmepper wel zag?",
             "b": "Door welke kenmerken van deze route gaat de ontsnapping zo snel?"
           }
-        }
+        },
+        "story": "{name} zit uit te rusten als er een vliegenmepper op hem af suist, en hij springt in ongeveer 30 milliseconden weg. Het verhaal leidt naar de vraag: wat in een brein kan zo snel zijn?",
+        "levels": {
+          "fly": "Welke delen van dit lijf heeft de vlieg nodig om te ontsnappen?",
+          "brain": "Het signaal begint in de ogen en eindigt in de poten. Waar moet het onderweg langs?",
+          "circuit": "Honderden blauwe cellen, en één rode lijn. Wat valt je op aan de route?",
+          "neuron": "Deze ene cel is ongewoon dik. Waarom zou een dikke draad helpen bij een snelle ontsnapping?"
+        },
+        "predictWhy": "De naderingsneuronen vuren nog steeds, dus de vlieg ziet de mepper, maar als de reuzenvezel stilligt, bereikt het signaal de springneuronen nooit, en die blijven donker."
       }
     }
+  },
+  "character": {
+    "name": "Ziv"
   }
 }

@@ -109,7 +109,12 @@
       "lead": "Her ders birkaç dokunuş sürer. Öğrenciler gerçek hücre tiplerini uyarıp susturur, bir soruyu yanıtlar, sonra kendi başlarına keşfeder.",
       "lesson": "Ders {number}",
       "meta": "{steps, plural, one {# adım} other {# adım}} ve bir soru · yaklaşık 10 dakika",
-      "start": "{number}. derse başlayın"
+      "start": "{number}. derse başlayın",
+      "mission": "Görev {number}",
+      "mapLabel": "Görev haritası",
+      "done": "Tamamlandı",
+      "todo": "Henüz tamamlanmadı",
+      "mapNote": "Bitirdiğiniz görevler, sayfayı yeniden yükleyene kadar burada işaretli kalır. Hiçbir şey kaydedilmez."
     },
     "teachers": {
       "title": "Öğretmenler için",
@@ -147,6 +152,18 @@
       "guidesLead": "Her dersin, 45 dakikalık bir plan içeren bir öğretmen kılavuzu ve yazdırabileceğiniz bir çalışma kâğıdı var.",
       "guide": "Öğretmen kılavuzu",
       "worksheet": "Çalışma kâğıdı"
+    },
+    "montage": {
+      "label": "Derslerden kısa klipler",
+      "pause": "Klipleri duraklat",
+      "play": "Klipleri oynat",
+      "credit": "Klip: {credit}",
+      "clips": {
+        "escape": "Kaçış sinyali, gözlerden bacaklara",
+        "compass": "Pusuladaki tümsek dönerken",
+        "smell": "Tek bir koku, küçük bir hücre deseni",
+        "zoom": "Bütün sinekten tek bir nörona"
+      }
     }
   },
   "about": {
@@ -264,7 +281,15 @@
         },
         "silence": {
           "text": "Şimdi <kenyon>Kenyon hücrelerini</kenyon> <gloss>(koku ayırıcıları)</gloss> sustur. Kokuyu senin için biz göndereceğiz. Ne kayboluyor?",
-          "result": "Pembe ışık neredeyse kaybolur. Koku yine içeri girer ama bellek okuyucularının okuyacak hiçbir şeyi olmaz."
+          "result": "Pembe ışık neredeyse kaybolur. Koku yine içeri girer ama bellek okuyucularının okuyacak hiçbir şeyi olmaz.",
+          "predict": {
+            "question": "Koku ayırıcıları birazdan susacak. Ne sönecek?",
+            "choices": {
+              "all": "Her şey. Hiçbir renk yanmayacak.",
+              "pink": "Yalnızca pembe bellek okuyucuları.",
+              "none": "Hiçbir şey. Bütün renkler yine yanacak."
+            }
+          }
         },
         "restore": {
           "text": "<kenyon>Kenyon hücreleri</kenyon> <gloss>(koku ayırıcıları)</gloss> düğmesine tekrar dokunup onları yeniden aç. Aynı kokuyu biz göndereceğiz.",
@@ -291,6 +316,38 @@
       "freePlay": {
         "title": "Serbest keşif",
         "text": "Artık tüm düğmeler çalışıyor. Önce tahmin et, sonra dokun: Sarı koku habercilerini susturursan ne söner? İki rengi aynı anda susturmayı da dene."
+      },
+      "mission": {
+        "goal": "Sineğin koku belleğini tutan hücreleri bul.",
+        "win": "Onları buldun. Koku ayırıcıları her kokuyu bir desene çevirir, bellek okuyucuları da bu deseni okur. Desen yoksa hatırlanacak bir şey de yoktur."
+      },
+      "story": {
+        "panels": {
+          "ripe": {
+            "caption": "Bir şeftali bütün gün pencere pervazında olgunlaştı. Kokusu açık pencereden dışarı süzülüyor.",
+            "bubble": "Bir şey güzel kokuyor."
+          },
+          "sniff": {
+            "caption": "{name} antenleriyle bu kokunun birkaç molekülünü yakalar. Bir sineğe bu kadarı yeter.",
+            "bubble": "Bu kokuyu tanıyorum!"
+          },
+          "recall": {
+            "caption": "Geçen hafta {name} aynı kokuyu izleyip yemeğe ulaşmıştı. Beyni bundan bir iz sakladı.",
+            "bubble": "Şeftali demek, akşam yemeği demek."
+          },
+          "land": {
+            "caption": "{name} rüzgâra karşı döner ve kokuyu şeftaliye kadar izler.",
+            "bubble": "Buldum. Yine."
+          }
+        },
+        "ending": {
+          "caption": "Koku birkaç ayırıcı hücreyi yaktı. Bellek okuyucuları bu desenin ne anlama geldiğini biliyordu.",
+          "bubble": "Demek böyle hatırlıyorum!"
+        }
+      },
+      "journey": {
+        "circuit": "Bu renkli hücreler bir kokuyu antenlerden sineğin belleğine taşır.",
+        "neuron": "Bir bellek okuyucusu, tek bir hücre. Parlak nokta bir ateşleme, yani hücrenin gönderdiği sinyal."
       }
     },
     "compass": {
@@ -309,7 +366,15 @@
         },
         "silence": {
           "text": "<ring>Halka nöronlarını</ring> <gloss>(yer işareti taşıyıcıları)</gloss> sustur. Bu nöronlar sineğin gördüklerini içeri taşır. Sağ dönüş sinyalini senin için biz göndereceğiz.",
-          "result": "Tümsek yerinden kayar ve başıboş dolaşır. Yer işaretleri olmadan pusula sürüklenir."
+          "result": "Tümsek yerinden kayar ve başıboş dolaşır. Yer işaretleri olmadan pusula sürüklenir.",
+          "predict": {
+            "question": "Yer işareti taşıyıcıları birazdan susacak. Tümsek ne yapacak?",
+            "choices": {
+              "vanish": "Kaybolacak.",
+              "drift": "Yerinden kayıp başıboş dolaşacak.",
+              "hold": "Tam olduğu yerde kalacak."
+            }
+          }
         },
         "restore": {
           "text": "<ring>Halka nöronları</ring> <gloss>(yer işareti taşıyıcıları)</gloss> düğmesine tekrar dokunup onları yeniden aç. Aynı sinyali biz göndereceğiz.",
@@ -336,6 +401,38 @@
       "freePlay": {
         "title": "Serbest keşif",
         "text": "Artık tüm düğmeler çalışıyor. Önce tahmin et, sonra dokun: İki dönüş sinyalini aynı anda ateşlersen tümsek nereye gider? Bir de mor hücreler susturulmuşken dene."
+      },
+      "mission": {
+        "goal": "Sineğin pusulasını şaşmaz tutan şeyi bul.",
+        "win": "Buldun. Dönüş sinyalleri tümseği pusulanın çevresinde iter, yer işareti taşıyıcıları da onu sineğin gördüklerine sabitler. Onlar olmadan pusula sürüklenir."
+      },
+      "story": {
+        "panels": {
+          "dawn": {
+            "caption": "Sabah. Panjurdaki aralıktan içeri ışık doluyor ve {name} dışarı çıkmak istiyor.",
+            "bubble": "Şu tarafa."
+          },
+          "heading": {
+            "caption": "{name} ışığa doğru yola çıkar. Beyninin içinde bir pusula, baktığı yönü işaretler.",
+            "bubble": "Işık önümde. Orada kalsın."
+          },
+          "gust": {
+            "caption": "Bir hava akımı onu yana iter. Işık bir tarafa kayar.",
+            "bubble": "Hop! Dönmüşüm."
+          },
+          "hold": {
+            "caption": "Işığın şimdi nerede olduğunu görür ve yönünü düzeltip aralıktan dosdoğru geçer.",
+            "bubble": "Yeniden rotadayım."
+          }
+        },
+        "ending": {
+          "caption": "Dönüş sinyalleri pusulayı döndürür. {name} ne görüyorsa pusulayı yerine o sabitler.",
+          "bubble": "Kendi pusulam!"
+        }
+      },
+      "journey": {
+        "circuit": "Bu hücre halkası sineğin pusulasıdır; yanında onu döndüren ve onu sabit tutan hücreler var.",
+        "neuron": "Bir yön hücresi. Parlak nokta bir ateşleme, yani hücrenin gönderdiği sinyal."
       }
     },
     "escape": {
@@ -354,7 +451,15 @@
         },
         "silence": {
           "text": "Şimdi <giantfiber>dev lifi</giantfiber> <gloss>(kaçış kablosu)</gloss> sustur. Sinekliği biz göndereceğiz. <jump>Sıçrama nöronlarını</jump> <gloss>(bacak iticileri)</gloss> izle.",
-          "result": "<looming>Yaklaşma nöronları</looming> <gloss>(sineklik gözcüleri)</gloss> yine ateşlenir ama <jump>sıçrama nöronları</jump> sönük kalır. Hızlı kaçış yok olur."
+          "result": "<looming>Yaklaşma nöronları</looming> <gloss>(sineklik gözcüleri)</gloss> yine ateşlenir ama <jump>sıçrama nöronları</jump> sönük kalır. Hızlı kaçış yok olur.",
+          "predict": {
+            "question": "Kaçış kablosu birazdan susacak. Bacak iticileri ne yapacak?",
+            "choices": {
+              "fire": "Tıpkı önceki gibi ateşlenecek.",
+              "dark": "Sönük kalacak.",
+              "late": "Ateşlenecek ama daha geç."
+            }
+          }
         },
         "restore": {
           "text": "<giantfiber>Dev lif</giantfiber> <gloss>(kaçış kablosu)</gloss> düğmesine tekrar dokunup onu yeniden aç. Aynı sinekliği biz göndereceğiz.",
@@ -381,6 +486,38 @@
       "freePlay": {
         "title": "Serbest keşif",
         "text": "Artık tüm düğmeler çalışıyor. Önce tahmin et, sonra dokun: Kaçış kablosu susturulmuşken hangi renkler hâlâ yanıyor? Sonra bunun yerine sineklik gözcülerini susturmayı dene."
+      },
+      "mission": {
+        "goal": "Sineği kurtaran kabloyu bul.",
+        "win": "Buldun. Sineklik gözcüleri ateşlenir, kaçış kablosu alarmı sinir kordonundan aşağı taşır ve bacak iticileri sineği sıçratır. Kabloyu kes, hızlı kaçış yok olur."
+      },
+      "story": {
+        "panels": {
+          "rest": {
+            "caption": "{name} bir bardağın kenarında kanatlarını temizliyor. Mutfak sessiz.",
+            "bubble": "Ne güzel, sakin."
+          },
+          "shadow": {
+            "caption": "Gözlerinde bir gölge hızla büyüyor. Büyük bir şey dosdoğru üstüne geliyor.",
+            "bubble": "Eyvah."
+          },
+          "leap": {
+            "caption": "Sineklik inmeden önce orta bacakları iter. İlk görüşten sıçrayışa: yaklaşık 30 milisaniye.",
+            "bubble": "Zıpla!"
+          },
+          "safe": {
+            "caption": "Sineklik boş bir bardağa çarpar. {name} çoktan odanın öbür ucunda.",
+            "bubble": "Iskaladın."
+          }
+        },
+        "ending": {
+          "caption": "Kalın tek bir kablo alarmı gözlerinden bacaklarına taşıdı. {name} o kablo sayesinde kurtuldu.",
+          "bubble": "Teşekkürler, dev lif."
+        }
+      },
+      "journey": {
+        "circuit": "Bu, kaçış devresi: gözlerden tek bir kablo boyunca bacaklara kadar.",
+        "neuron": "Bu dev lif, tek bir hücre. Parlak nokta, lif boyunca hızla ilerleyen bir ateşleme."
       }
     }
   },
@@ -590,6 +727,48 @@
       "playing": "Nasıl çalıştığı gösteriliyor",
       "upNext": "Sırada “{action}” var: {name}",
       "stop": "Durdur ve kendin devam et"
+    },
+    "story": {
+      "label": "Hikâye",
+      "skip": "Hikâyeyi geç",
+      "back": "Geri",
+      "next": "İleri",
+      "progress": "Kare {number}/{total}",
+      "bridge": "Şimdi beyninin içinde neler olduğuna bakalım.",
+      "zoom": "Yakınlaş",
+      "says": "{name} diyor ki:"
+    },
+    "journey": {
+      "label": "Yakınlaşma",
+      "open": "Bütün sinekten tek bir nörona yakınlaş",
+      "progress": "Düzey {number}/{total}",
+      "levels": {
+        "label": "Yakınlaşma düzeyleri",
+        "fly": "Sinek",
+        "brain": "Beyin",
+        "circuit": "Devre",
+        "neuron": "Nöron"
+      },
+      "captions": {
+        "fly": "Yaklaşık 3 mm boyunda bir meyve sineği. Bu vücut, gerçek bir sineğin taramasından modellendi.",
+        "brain": "Başın içinde beyin bulunur. Bu beynin haritası, başka bir gerçek sinekten hücre hücre çıkarıldı."
+      },
+      "out": "Uzaklaş",
+      "in": "Yakınlaş",
+      "start": "Göreve başla",
+      "resume": "Göreve dön",
+      "skip": "Göreve geç"
+    },
+    "mission": {
+      "label": "Görev {number}",
+      "predictLabel": "Dokunmadan önce tahmin et",
+      "predictFirst": "Sence ne olacağını seç. Düğme ondan sonra görünür.",
+      "predictHeld": "Tahminin tuttu.",
+      "predictSurprise": "Beyin başka bir şey yaptı. Deneyler de zaten bunun için yapılır.",
+      "finish": "Görevi bitir",
+      "winTitle": "Görev {number} tamamlandı",
+      "nextMission": "Sonraki görev: {title}",
+      "map": "Görev haritasını gör"
     }
   },
   "errors": {
@@ -816,7 +995,9 @@
       "guide": "Öğretmen kılavuzu",
       "worksheet": "Öğrenci çalışma kâğıdı",
       "demo": "Sınıfa gösterin",
-      "generalTerms": "Temel terimler"
+      "generalTerms": "Temel terimler",
+      "companionTitle": "Tamamlayıcı bir kurs",
+      "companion": "5 ünite biyoloji alan birçok öğrenci, Tel Aviv Üniversitesi’nin Campus IL üzerinde sunduğu, Prof. Yossi Yovel ile Prof. Yaniv Assaf’ın verdiği <campusil>Beyin: Makinelerin En Harikası</campusil> adlı ücretsiz kursu da alıyor. Kurs nöronları, aksiyon potansiyellerini ve sinapsları derinlemesine anlatır; bu dersler de ona uygulamalı bir eşlikçi olur. WiredMind bağımsız bir projedir. Kursla, üniversiteyle ya da Campus IL ile bir bağlantısı yoktur."
     },
     "topics": {
       "excitation": "Uyarma ve baskılama",
@@ -865,7 +1046,15 @@
       "realMore": "Sayılarla birlikte tam liste",
       "termsTitle": "Temel terimler",
       "curriculumTitle": "Öğretim programıyla uyum",
-      "curriculumPending": "Bu bölüm henüz doldurulmadı. Resmî biyoloji öğretim programıyla eşleşme, biyoloji öğretmenleriyle birlikte doğrulanıyor."
+      "curriculumPending": "Bu bölüm henüz doldurulmadı. Resmî biyoloji öğretim programıyla eşleşme, biyoloji öğretmenleriyle birlikte doğrulanıyor.",
+      "storyTitle": "Hikâye",
+      "storyHow": "Ders, {name} adlı sinek hakkında kısa bir çizgi romanla açılır. Kareleri yüksek sesle okuyun ya da öğrencilerin okumasına izin verin; yaklaşık bir dakika sürer. Son kare, kazanma ekranında yeniden görünür.",
+      "journeyTitle": "Sinekten nörona yakınlaşma",
+      "journeyHow": "Dersi ekrana yansıtın. Dört düzeyin her birinde durun ve yakınlaşmadan önce o düzeyin sorusunu sorun. Düzey düğmeleri istediğiniz düzeye atlar; büyüteç düğmesi ise dersin herhangi bir noktasında yakınlaşmayı yeniden açar.",
+      "journeyNote": "Vücut ve beyin iki farklı sinekten gelir; gerçek boyutlarıyla birlikte gösterilir. Bunu sınıfa söyleyin.",
+      "predictTitle": "Tahmin",
+      "predictHow": "Susturma adımından önce öğrenciler ne olacağını düşündüklerini seçer. Önce parmak kaldırtarak oylama yapın. Puan verilmez ve yanlış bir tahminin hiçbir bedeli yoktur.",
+      "predictExpected": "Beklenen yanıt"
     },
     "worksheet": {
       "eyebrow": "Öğrenci çalışma kâğıdı · Ders {number}",
@@ -935,7 +1124,15 @@
             "a": "Koku yine içeri girdiği hâlde, mavi hücreleri susturduğunda pembe hücreler neden söndü?",
             "b": "Bilim insanlarına göre bir kokunun belleği bu devrenin neresinde saklanır?"
           }
-        }
+        },
+        "story": "{name} olgun bir şeftalinin kokusunu alır, bu kokuyu onu yemeğe götürdüğü son seferden tanır ve rüzgâra karşı kokuyu izler. Hikâye şu soruyu hazırlar: Bu anı beynin neresinde saklanıyor?",
+        "levels": {
+          "fly": "Bu vücutta burnu nerede arardınız?",
+          "brain": "Beyin, başın büyük bölümünü doldurur. Sizce beyinde bu kadar yeri ne kaplıyor?",
+          "circuit": "Koku turuncu hücrelerden girer. Sizce en son hangi renge ulaşır?",
+          "neuron": "Nokta tek bir ateşlemedir. Tek bir hücre, bir kokuyu beynin geri kalanına nasıl anlatabilir?"
+        },
+        "predictWhy": "Koku ayırıcıları susturulunca koku yine içeri girer, bu yüzden turuncu ve sarı yanar; ama pembe bellek okuyucularına hiçbir desen ulaşmaz."
       },
       "compass": {
         "goal": "Öğrenciler, halka biçiminde dizilmiş nöronların sineğin baktığı yönü tek bir etkinlik bölgesi olarak tuttuğunu ve halka nöronlarından gelen baskılamanın bu bölgeyi yerinde tuttuğunu görür.",
@@ -987,7 +1184,15 @@
             "a": "Halka nöronları susturulduğunda tümsek neden sürüklendi?",
             "b": "Yönü takip eden hücreler için halka neden iyi bir biçimdir?"
           }
-        }
+        },
+        "story": "{name} bir ışık aralığına yönelir, bir hava akımı onu döndürür ve yönünü düzeltip rotasına döner. Hikâye şu soruyu hazırlar: Bir beyin, vücudunun hangi yöne baktığını nasıl bilir?",
+        "levels": {
+          "fly": "Sineğin haritası da GPS cihazı da yok. Dümdüz ilerlemek için neyden yararlanabilir?",
+          "brain": "Buradaki bir pusulanın hangi duyuları dinlemesi gerekir?",
+          "circuit": "Bu hücreler bir halka oluşturur. Halka, bir pusula için neden iyi bir şekil olabilir?",
+          "neuron": "Bu, tek bir yön hücresi. Ateşlenirse sizce sineğin baktığı yön hakkında ne söyler?"
+        },
+        "predictWhy": "Yön hücreleri ateşlenmeyi sürdürür, bu yüzden tümsek kaybolmaz. Onu sabitleyecek yer işaretleri olmayınca yerinden kayar ve başıboş dolaşır."
       },
       "escape": {
         "goal": "Öğrenciler gözlerden bacak kaslarına yaklaşık 30 milisaniyede ulaşan bir refleksi izler ve hızlı kaçışın tek bir halkaya, dev life bağlı olduğunu gösterir.",
@@ -1039,8 +1244,19 @@
             "a": "Sinek sinekliği gördüğü hâlde sıçrama nöronları neden sönük kaldı?",
             "b": "Bu yolun hangi özellikleri kaçışı bu kadar hızlı yapıyor?"
           }
-        }
+        },
+        "story": "{name} dinlenirken bir sineklik hızla iner ve o, yaklaşık 30 milisaniyede sıçrayıp kurtulur. Hikâye şu soruyu hazırlar: Bir beyinde bu kadar hızlı olabilen şey nedir?",
+        "levels": {
+          "fly": "Sineğin kaçabilmesi için bu vücudun hangi bölümlerine ihtiyacı var?",
+          "brain": "Sinyal gözlerde başlar, bacaklarda biter. Yol üzerinde nereden geçmek zorunda?",
+          "circuit": "Yüzlerce mavi hücre ve tek bir kırmızı çizgi. Bu yolda dikkatinizi ne çekiyor?",
+          "neuron": "Bu tek hücre alışılmadık ölçüde kalın. Kalın bir kablo hızlı bir kaçışa neden yardım eder?"
+        },
+        "predictWhy": "Yaklaşma nöronları yine ateşlenir, yani sinek sinekliği görür; ama dev lif susturulduğunda sinyal sıçrama nöronlarına hiç ulaşmaz ve onlar sönük kalır."
       }
     }
+  },
+  "character": {
+    "name": "Ziv"
   }
 }

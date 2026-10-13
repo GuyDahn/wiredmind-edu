@@ -109,7 +109,12 @@
       "lead": "Cada aula leva só alguns toques. Os alunos estimulam e silenciam tipos reais de células, respondem a uma pergunta e depois exploram por conta própria.",
       "lesson": "Aula {number}",
       "meta": "{steps, plural, one {# passo} many {# passos} other {# passos}} e uma pergunta · cerca de 10 minutos",
-      "start": "Começar a aula {number}"
+      "start": "Começar a aula {number}",
+      "mission": "Missão {number}",
+      "mapLabel": "Mapa das missões",
+      "done": "Concluída",
+      "todo": "Ainda não concluída",
+      "mapNote": "As missões concluídas ficam marcadas aqui até você recarregar a página. Nada é salvo."
     },
     "teachers": {
       "title": "Para professores",
@@ -147,6 +152,18 @@
       "guidesLead": "Cada aula tem um guia do professor com um plano de 45 minutos e uma folha de atividades para imprimir.",
       "guide": "Guia do professor",
       "worksheet": "Folha de atividades"
+    },
+    "montage": {
+      "label": "Trechos curtos das aulas",
+      "pause": "Pausar os trechos",
+      "play": "Reproduzir os trechos",
+      "credit": "Trecho: {credit}",
+      "clips": {
+        "escape": "O sinal de fuga, dos olhos até as pernas",
+        "compass": "A bolha da bússola girando",
+        "smell": "Um cheiro, um pequeno padrão de células",
+        "zoom": "Da mosca inteira até um único neurônio"
+      }
     }
   },
   "about": {
@@ -264,7 +281,15 @@
         },
         "silence": {
           "text": "Agora toque em Silenciar nas <kenyon>células de Kenyon</kenyon> <gloss>(separadoras de cheiro)</gloss>. Nós mandamos o cheiro para você. O que desaparece?",
-          "result": "A luz rosa quase some. O cheiro ainda entra, mas os leitores da memória não recebem nada para ler."
+          "result": "A luz rosa quase some. O cheiro ainda entra, mas os leitores da memória não recebem nada para ler.",
+          "predict": {
+            "question": "As separadoras de cheiro estão prestes a ficar em silêncio. O que vai se apagar?",
+            "choices": {
+              "all": "Tudo. Nenhuma cor acende.",
+              "pink": "Só os leitores da memória, em rosa.",
+              "none": "Nada. Todas as cores continuam acendendo."
+            }
+          }
         },
         "restore": {
           "text": "Toque no botão das <kenyon>células de Kenyon</kenyon> <gloss>(separadoras de cheiro)</gloss> para ligar as células de novo. Nós mandamos o mesmo cheiro.",
@@ -291,6 +316,38 @@
       "freePlay": {
         "title": "Exploração livre",
         "text": "Agora todos os botões funcionam. Primeiro dê um palpite, depois toque: o que se apaga se você silenciar os mensageiros amarelos do cheiro? Tente silenciar duas cores ao mesmo tempo."
+      },
+      "mission": {
+        "goal": "Encontre as células que guardam a memória de um cheiro na mosca.",
+        "win": "Você encontrou. As separadoras de cheiro transformam cada cheiro em um padrão, e os leitores da memória leem esse padrão. Sem o padrão, não há nada para lembrar."
+      },
+      "story": {
+        "panels": {
+          "ripe": {
+            "caption": "Um pêssego amadureceu o dia todo no parapeito. O cheiro dele sai pela janela aberta.",
+            "bubble": "Que cheiro bom."
+          },
+          "sniff": {
+            "caption": "As antenas de {name} captam algumas moléculas. Uma mosca não precisa de mais que isso.",
+            "bubble": "Eu conheço esse cheiro!"
+          },
+          "recall": {
+            "caption": "Na semana passada, esse mesmo cheiro levou {name} até a comida. O cérebro dele guardou um rastro.",
+            "bubble": "Pêssego quer dizer jantar."
+          },
+          "land": {
+            "caption": "{name} vira contra o vento e segue o cheiro até o pêssego.",
+            "bubble": "Achei. De novo."
+          }
+        },
+        "ending": {
+          "caption": "O cheiro acendeu algumas separadoras de cheiro. Os leitores da memória sabiam o que aquele padrão significava.",
+          "bubble": "Então é assim que eu lembro!"
+        }
+      },
+      "journey": {
+        "circuit": "Estas células coloridas levam um cheiro das antenas até a memória da mosca.",
+        "neuron": "Um leitor da memória, uma única célula. O ponto brilhante é um disparo, o sinal que ela envia."
       }
     },
     "compass": {
@@ -309,7 +366,15 @@
         },
         "silence": {
           "text": "Toque em Silenciar nos <ring>neurônios em anel</ring> <gloss>(mensageiros da paisagem)</gloss>. Eles trazem o que a mosca vê. Nós mandamos o sinal da direita para você.",
-          "result": "A bolha escorrega do lugar e fica vagando. Sem pontos de referência, a bússola fica à deriva."
+          "result": "A bolha escorrega do lugar e fica vagando. Sem pontos de referência, a bússola fica à deriva.",
+          "predict": {
+            "question": "Os mensageiros da paisagem estão prestes a ficar em silêncio. O que a bolha vai fazer?",
+            "choices": {
+              "vanish": "Vai desaparecer.",
+              "drift": "Vai sair do lugar e ficar vagando.",
+              "hold": "Vai ficar exatamente onde está."
+            }
+          }
         },
         "restore": {
           "text": "Toque no botão dos <ring>neurônios em anel</ring> <gloss>(mensageiros da paisagem)</gloss> para ligar os neurônios de novo. Nós mandamos o mesmo sinal.",
@@ -336,6 +401,38 @@
       "freePlay": {
         "title": "Exploração livre",
         "text": "Agora todos os botões funcionam. Primeiro dê um palpite, depois toque: para onde vai a bolha se você disparar os dois sinais para virar ao mesmo tempo? Tente também com as células violeta silenciadas."
+      },
+      "mission": {
+        "goal": "Encontre o que mantém a bússola da mosca apontando certo.",
+        "win": "Você encontrou. Os sinais para virar empurram a bolha ao redor da bússola, e os mensageiros da paisagem a prendem ao que a mosca vê. Sem eles, a bússola fica à deriva."
+      },
+      "story": {
+        "panels": {
+          "dawn": {
+            "caption": "Manhã. A luz entra por uma fresta da veneziana, e {name} quer sair.",
+            "bubble": "Por ali."
+          },
+          "heading": {
+            "caption": "{name} parte em direção à luz. Dentro do cérebro dele, uma bússola marca para onde ele está virado.",
+            "bubble": "Luz à frente. Fica aí."
+          },
+          "gust": {
+            "caption": "Uma corrente de ar o empurra de lado. A luz escorrega para um lado.",
+            "bubble": "Opa. Eu virei."
+          },
+          "hold": {
+            "caption": "Ele vê onde a luz está agora e corrige o rumo, direto pela fresta.",
+            "bubble": "De volta ao rumo."
+          }
+        },
+        "ending": {
+          "caption": "Os sinais para virar giram a bússola. O que {name} vê a mantém no lugar.",
+          "bubble": "Minha própria bússola!"
+        }
+      },
+      "journey": {
+        "circuit": "Este anel de células é a bússola da mosca, com as células que a fazem girar e as que a mantêm firme.",
+        "neuron": "Uma célula de direção. O ponto brilhante é um disparo, o sinal que ela envia."
       }
     },
     "escape": {
@@ -354,7 +451,15 @@
         },
         "silence": {
           "text": "Agora toque em Silenciar na <giantfiber>fibra gigante</giantfiber> <gloss>(fio da fuga)</gloss>. Nós mandamos o mata-moscas. Observe os <jump>neurônios de salto</jump> <gloss>(os lançadores)</gloss>.",
-          "result": "Os <looming>neurônios de aproximação</looming> <gloss>(vigias do mata-moscas)</gloss> ainda disparam, mas os <jump>neurônios de salto</jump> ficam apagados. A fuga rápida sumiu."
+          "result": "Os <looming>neurônios de aproximação</looming> <gloss>(vigias do mata-moscas)</gloss> ainda disparam, mas os <jump>neurônios de salto</jump> ficam apagados. A fuga rápida sumiu.",
+          "predict": {
+            "question": "O fio da fuga está prestes a ficar em silêncio. O que os lançadores vão fazer?",
+            "choices": {
+              "fire": "Disparar, como antes.",
+              "dark": "Ficar apagados.",
+              "late": "Disparar, só que mais tarde."
+            }
+          }
         },
         "restore": {
           "text": "Toque no botão da <giantfiber>fibra gigante</giantfiber> <gloss>(fio da fuga)</gloss> para ligar a fibra de novo. Nós mandamos o mesmo mata-moscas.",
@@ -381,6 +486,38 @@
       "freePlay": {
         "title": "Exploração livre",
         "text": "Agora todos os botões funcionam. Primeiro dê um palpite, depois toque: quais cores ainda acendem com o fio da fuga silenciado? Depois, tente silenciar os vigias do mata-moscas em vez do fio da fuga."
+      },
+      "mission": {
+        "goal": "Encontre o fio que salva a mosca.",
+        "win": "Você encontrou. Os vigias do mata-moscas disparam, o fio da fuga leva o alarme pelo cordão nervoso, e os lançadores fazem a mosca saltar. Corte o fio e a fuga rápida some."
+      },
+      "story": {
+        "panels": {
+          "rest": {
+            "caption": "{name} está limpando as asas na borda de um copo. A cozinha está em silêncio.",
+            "bubble": "Tudo calmo."
+          },
+          "shadow": {
+            "caption": "Uma sombra cresce depressa nos olhos dele. Algo grande vem direto para cima dele.",
+            "bubble": "Ih, não."
+          },
+          "leap": {
+            "caption": "As pernas do meio dão o impulso antes de o mata-moscas chegar. Do primeiro olhar ao salto: uns 30 milissegundos.",
+            "bubble": "Pula!"
+          },
+          "safe": {
+            "caption": "O mata-moscas acerta um copo vazio. {name} já está do outro lado da cozinha.",
+            "bubble": "Errou."
+          }
+        },
+        "ending": {
+          "caption": "Um único fio grosso levou o alarme dos olhos às pernas. Foi por causa desse fio que {name} escapou.",
+          "bubble": "Obrigado, fibra gigante."
+        }
+      },
+      "journey": {
+        "circuit": "Este é o circuito de fuga: dos olhos, por um único fio, até as pernas.",
+        "neuron": "Esta é a fibra gigante, uma única célula. O ponto brilhante é um disparo correndo por ela."
       }
     }
   },
@@ -590,6 +727,48 @@
       "playing": "Mostrando como funciona",
       "upNext": "Em seguida, tocamos em {action}: {name}",
       "stop": "Parar e assumir o controle"
+    },
+    "story": {
+      "label": "A história",
+      "skip": "Pular a história",
+      "back": "Voltar",
+      "next": "Próximo",
+      "progress": "Quadrinho {number} de {total}",
+      "bridge": "Agora vamos ver o que aconteceu dentro do cérebro dele.",
+      "zoom": "Aproximar",
+      "says": "{name} diz:"
+    },
+    "journey": {
+      "label": "O zoom",
+      "open": "Dar zoom da mosca inteira até um neurônio",
+      "progress": "Nível {number} de {total}",
+      "levels": {
+        "label": "Níveis de zoom",
+        "fly": "Mosca",
+        "brain": "Cérebro",
+        "circuit": "Circuito",
+        "neuron": "Neurônio"
+      },
+      "captions": {
+        "fly": "Uma mosca-da-fruta, com cerca de 3 mm de comprimento. Este corpo foi modelado a partir do escaneamento de uma mosca real.",
+        "brain": "Dentro da cabeça fica o cérebro. Este foi mapeado, célula por célula, a partir de outra mosca real."
+      },
+      "out": "Afastar",
+      "in": "Aproximar",
+      "start": "Começar a missão",
+      "resume": "Voltar à missão",
+      "skip": "Pular para a missão"
+    },
+    "mission": {
+      "label": "Missão {number}",
+      "predictLabel": "Faça sua previsão antes de tocar",
+      "predictFirst": "Escolha o que você acha que vai acontecer. Depois o botão aparece.",
+      "predictHeld": "Sua previsão se confirmou.",
+      "predictSurprise": "O cérebro fez outra coisa. É para isso que servem os experimentos.",
+      "finish": "Concluir a missão",
+      "winTitle": "Missão {number} concluída",
+      "nextMission": "Próxima missão: {title}",
+      "map": "Ver o mapa das missões"
     }
   },
   "errors": {
@@ -816,7 +995,9 @@
       "guide": "Guia do professor",
       "worksheet": "Folha de atividades do aluno",
       "demo": "Mostrar para a turma",
-      "generalTerms": "Termos básicos"
+      "generalTerms": "Termos básicos",
+      "companionTitle": "Um curso complementar",
+      "companion": "Muitos alunos que cursam 5 unidades de biologia também fazem o curso gratuito da Universidade de Tel Aviv <campusil>O cérebro: a máquina mais maravilhosa de todas</campusil> no Campus IL, ministrado pelo Prof. Yossi Yovel e pelo Prof. Yaniv Assaf. O curso ensina a fundo neurônios, potenciais de ação e sinapses, e estas aulas são um complemento prático para ele. O WiredMind é um projeto independente. Não tem vínculo com o curso, com a universidade nem com o Campus IL."
     },
     "topics": {
       "excitation": "Excitação e inibição",
@@ -865,7 +1046,15 @@
       "realMore": "A lista completa, com números",
       "termsTitle": "Termos-chave",
       "curriculumTitle": "Alinhamento curricular",
-      "curriculumPending": "Esta seção ainda não foi preenchida. A correspondência com o currículo oficial de biologia está sendo confirmada com professores de biologia."
+      "curriculumPending": "Esta seção ainda não foi preenchida. A correspondência com o currículo oficial de biologia está sendo confirmada com professores de biologia.",
+      "storyTitle": "A história",
+      "storyHow": "A aula começa com uma história em quadrinhos curta sobre {name}, a mosca. Leia os quadrinhos em voz alta ou deixe que os alunos leiam; leva cerca de um minuto. O último quadrinho volta na tela de missão concluída.",
+      "journeyTitle": "O zoom da mosca até o neurônio",
+      "journeyHow": "Projete a aula. Pare em cada um dos quatro níveis e faça a pergunta dele antes de aproximar. Os botões de nível levam direto a qualquer nível, e o botão da lupa reabre o zoom em qualquer ponto da aula.",
+      "journeyNote": "O corpo e o cérebro vêm de duas moscas diferentes, mostradas juntas em seus tamanhos reais. Diga isso à turma.",
+      "predictTitle": "A previsão",
+      "predictHow": "Antes da etapa de silenciar, os alunos escolhem o que acham que vai acontecer. Primeiro peça que levantem a mão para votar. Nada vale nota, e errar o palpite não custa nada.",
+      "predictExpected": "Resposta esperada"
     },
     "worksheet": {
       "eyebrow": "Folha de atividades do aluno · Aula {number}",
@@ -935,7 +1124,15 @@
             "a": "Por que as células rosa se apagaram quando você silenciou as células azuis, mesmo com o cheiro ainda entrando?",
             "b": "Em que parte deste circuito os cientistas acham que a memória de um cheiro fica guardada?"
           }
-        }
+        },
+        "story": "{name} sente o cheiro de um pêssego maduro, reconhece o cheiro da última vez em que ele o levou até a comida e o segue contra o vento. A história prepara a pergunta: em que lugar do cérebro essa memória fica guardada?",
+        "levels": {
+          "fly": "Em que parte deste corpo você procuraria um nariz?",
+          "brain": "O cérebro ocupa quase toda a cabeça. O que você acha que ocupa tanto espaço nele?",
+          "circuit": "O cheiro entra pelas células laranja. Em qual cor você acha que ele chega por último?",
+          "neuron": "O ponto é um único disparo. Como uma só célula poderia avisar o resto do cérebro sobre um cheiro?"
+        },
+        "predictWhy": "Com as separadoras de cheiro em silêncio, o cheiro ainda entra, então o laranja e o amarelo acendem, mas nenhum padrão chega aos leitores da memória, em rosa."
       },
       "compass": {
         "goal": "Os alunos veem que um anel de neurônios guarda a direção da mosca como uma única mancha de atividade e que a inibição vinda dos neurônios em anel mantém essa mancha no lugar.",
@@ -987,7 +1184,15 @@
             "a": "Por que a bolha saiu do lugar quando os neurônios em anel foram silenciados?",
             "b": "Por que um anel é um bom formato para células que registram a direção?"
           }
-        }
+        },
+        "story": "{name} vai em direção a uma fresta de luz, uma corrente de ar o faz virar, e ele corrige o rumo. A história prepara a pergunta: como um cérebro sabe para onde o corpo está virado?",
+        "levels": {
+          "fly": "A mosca não tem mapa nem GPS. O que ela poderia usar para manter um rumo reto?",
+          "brain": "A quais sentidos uma bússola aqui dentro precisaria prestar atenção?",
+          "circuit": "Estas células formam um anel. Por que um anel seria um bom formato para uma bússola?",
+          "neuron": "Esta é uma célula de direção. Se ela dispara, o que você acha que ela diz sobre para onde a mosca está virada?"
+        },
+        "predictWhy": "As células de direção continuam disparando, então a bolha não desaparece. Sem pontos de referência para prendê-la, ela escorrega do lugar e fica vagando."
       },
       "escape": {
         "goal": "Os alunos acompanham um reflexo dos olhos até os músculos das pernas em cerca de 30 milissegundos e mostram que a fuga rápida depende de um único elo, a fibra gigante.",
@@ -1039,8 +1244,19 @@
             "a": "Por que os neurônios de salto ficaram apagados, mesmo com a mosca tendo visto o mata-moscas?",
             "b": "Que características desta via tornam a fuga tão rápida?"
           }
-        }
+        },
+        "story": "{name} está descansando quando um mata-moscas vem para cima dele, e ele salta para longe em cerca de 30 milissegundos. A história prepara a pergunta: o que, em um cérebro, consegue ser tão rápido?",
+        "levels": {
+          "fly": "De quais partes deste corpo a mosca precisa para fugir?",
+          "brain": "O sinal começa nos olhos e termina nas pernas. Por onde ele precisa passar no caminho?",
+          "circuit": "Centenas de células azuis e uma única linha vermelha. O que você nota no trajeto?",
+          "neuron": "Esta célula é excepcionalmente grossa. Por que um fio grosso ajudaria em uma fuga rápida?"
+        },
+        "predictWhy": "Os neurônios de aproximação ainda disparam, então a mosca vê o mata-moscas, mas, com a fibra gigante em silêncio, o sinal nunca chega aos neurônios de salto, e eles ficam apagados."
       }
     }
+  },
+  "character": {
+    "name": "Ziv"
   }
 }
