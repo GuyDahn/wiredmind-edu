@@ -13,7 +13,11 @@ import { EscapeLoop, type LoopStep } from "@/src/site/escape-loop";
 import { SiteFooter } from "@/src/site/footer";
 import { SiteHeader } from "@/src/site/header";
 import { homeJsonLd, jsonLdScript } from "@/src/site/json-ld";
+import heroClips from "@/content/hero-clips.json" with { type: "json" };
+import { readHeroClips } from "@/src/site/hero-clips";
+import { HeroMontage } from "@/src/site/hero-montage";
 import { LINK_TAGS } from "@/src/site/links";
+import { MissionMap } from "@/src/site/mission-map";
 import { pageMetadata, shareImagePath } from "@/src/site/page-meta";
 import {
   ForwardArrow,
@@ -97,6 +101,19 @@ export default async function HomePage({
       };
     }) ?? [];
   const first = LESSONS[0];
+  const clips = readHeroClips(heroClips).map((clip) => {
+    const external = !clip.creditUrl.startsWith("/");
+    return {
+      id: clip.id,
+      src: clip.src,
+      poster: clip.poster,
+      duration: clip.duration,
+      caption: clip.caption ? t(`landing.montage.clips.${clip.caption}`) : null,
+      credit: t("landing.montage.credit", { credit: clip.credit }),
+      creditUrl: external ? clip.creditUrl : localePath(locale, clip.creditUrl),
+      external,
+    };
+  });
 
   return (
     <>
@@ -139,6 +156,23 @@ export default async function HomePage({
               </div>
             </div>
             <div className="[grid-area:loop] lg:self-center">
+              <HeroMontage
+                clips={clips}
+                copy={{
+                  label: t("landing.montage.label"),
+                  pause: t("landing.montage.pause"),
+                  play: t("landing.montage.play"),
+                  newTab,
+                }}
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* One signal, start to finish: the escape lesson's first swatter, with its timings. */}
+        <section className="border-t border-border">
+          <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
+            <div>
               <EscapeLoop
                 src={cascade?.url ?? null}
                 steps={steps}
@@ -189,6 +223,20 @@ export default async function HomePage({
             <p className="mt-3 max-w-2xl text-base leading-relaxed text-fg-muted">
               {t("landing.lessons.lead")}
             </p>
+            <MissionMap
+              stops={LESSONS.map((entry) => ({
+                id: entry.id,
+                label: t("landing.lessons.mission", { number: entry.number }),
+                title: t(`lessons.${entry.id}.title`),
+                href: localePath(locale, entry.path),
+              }))}
+              copy={{
+                label: t("landing.lessons.mapLabel"),
+                done: t("landing.lessons.done"),
+                todo: t("landing.lessons.todo"),
+                note: t("landing.lessons.mapNote"),
+              }}
+            />
             <ol className="mt-10 grid gap-5 md:grid-cols-3">
               {LESSONS.map((entry) => (
                 <li
