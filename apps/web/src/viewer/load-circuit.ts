@@ -426,7 +426,8 @@ type DracoFileDecoder = {
   ): Promise<unknown>;
 };
 
-function decodePosition(
+/** One Draco mesh: its positions, and its triangles if it has any. */
+export function decodePosition(
   draco: DRACOLoader,
   bytes: ArrayBuffer,
   positionId: number,

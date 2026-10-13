@@ -2,6 +2,12 @@
   "id": "compass",
   "circuit": "visual",
   "jargon": ["turn neurons", "compass neurons", "ring neurons"],
+  "story": {
+    "panels": ["dawn", "heading", "gust", "hold"]
+  },
+  "journey": {
+    "neuron": "compass"
+  },
   "steps": [
     {
       "id": "left",
@@ -39,7 +45,23 @@
         "colorGroup": "ring",
         "on": true
       },
-      "puff": "turn-right"
+      "puff": "turn-right",
+      "predict": {
+        "choices": [
+          {
+            "id": "vanish",
+            "correct": false
+          },
+          {
+            "id": "drift",
+            "correct": true
+          },
+          {
+            "id": "hold",
+            "correct": false
+          }
+        ]
+      }
     },
     {
       "id": "restore",

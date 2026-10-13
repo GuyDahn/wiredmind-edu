@@ -1,7 +1,7 @@
 {
   "name": "wiredmind",
   "private": true,
-  "description": "WiredMind — a real fly brain you can poke, in your browser",
+  "description": "WiredMind \u2014 a real fly brain you can poke, in your browser",
   "homepage": "https://wiredmind.app",
   "bugs": {
     "url": "https://github.com/GuyDahn/wiredmind-edu/issues"
@@ -29,7 +29,9 @@
     "prepare": "node scripts/install-git-hooks.mjs",
     "i18n:check": "tsx scripts/i18n-check.ts",
     "i18n:draft": "tsx scripts/i18n-draft.ts",
-    "og:fonts": "tsx scripts/og-fonts.ts"
+    "og:fonts": "tsx scripts/og-fonts.ts",
+    "art:placeholders": "tsx scripts/story-art.ts",
+    "hero:clips": "tsx scripts/hero-clips.ts"
   },
   "devDependencies": {
     "@anthropic-ai/sdk": "^0.128.0",

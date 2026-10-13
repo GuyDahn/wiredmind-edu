@@ -8,6 +8,10 @@ import type {
 
 export const MAX_STEP_WORDS = 40;
 export const MAX_GLOSS_WORDS = 3;
+/** Longest a story panel may run, caption and speech bubble together. */
+export const MAX_PANEL_WORDS = 25;
+export const MIN_STORY_PANELS = 4;
+export const MAX_STORY_PANELS = 6;
 
 export type LessonGoal =
   | { type: "stimulate"; colorGroup: string }
@@ -27,6 +31,12 @@ export type LessonStep = {
   goal: LessonGoal;
   /** Stimulus group the runner sends for the learner right after the goal. */
   puff: string | null;
+  /**
+   * "Predict before you tap": the learner picks what will happen before the
+   * step's control opens. Its question and answers are in messages, under
+   * steps.<step>.predict. No answer is punished; the brain shows who was right.
+   */
+  predict: { choices: LessonChoice[] } | null;
 };
 
 /** An answer to the check question. Its text and feedback are in messages. */
@@ -46,12 +56,35 @@ export type LessonModule = {
   jargon: string[];
   steps: LessonStep[];
   check: { focus: string[]; choices: LessonChoice[] };
+  /**
+   * The fly's story, told in comic panels before the brain and closed on the
+   * win screen. Each panel's caption and speech bubble are in messages, under
+   * story.panels.<panel>; its picture is public/art/story/<lesson>-<panel>.svg.
+   */
+  story: { panels: string[] };
+  /** The zoom from the whole fly down to one cell of this group, the last level. */
+  journey: { neuron: string };
 };
 
 export type LessonPhase =
-  | { kind: "step"; index: number; done: boolean }
+  | {
+      kind: "step";
+      index: number;
+      done: boolean;
+      /** The prediction picked on a step that asks for one. */
+      guess?: number;
+    }
   | { kind: "check"; picked: number | null }
+  | { kind: "win" }
   | { kind: "free" };
+
+/** A step that asks for a prediction keeps its controls shut until one is picked. */
+export function awaitsGuess(lesson: LessonModule, phase: LessonPhase): boolean {
+  if (phase.kind !== "step" || phase.done) return false;
+  return (
+    lesson.steps[phase.index]?.predict != null && phase.guess === undefined
+  );
+}
 
 export function readLesson(value: unknown, module: ModuleSpec): LessonModule {
   const record = object(value, "lesson");
@@ -67,20 +100,21 @@ export function readLesson(value: unknown, module: ModuleSpec): LessonModule {
   );
   if (steps.length === 0) throw new Error("lesson needs at least one step");
   const check = object(record.check, "check");
-  const choices = list(check.choices, "check.choices").map((item, index) => {
-    const row = object(item, `check.choices[${index}]`);
-    if (typeof row.correct !== "boolean") {
-      throw new Error(
-        `lesson check.choices[${index}].correct must be true or false`,
-      );
-    }
-    return {
-      id: text(row.id, `check.choices[${index}].id`),
-      correct: row.correct,
-    };
-  });
-  if (choices.filter((choice) => choice.correct).length !== 1) {
-    throw new Error("lesson check needs exactly one correct choice");
+  const choices = readChoices(check.choices, "check.choices");
+  const story = object(record.story, "story");
+  const panels = list(story.panels, "story.panels").map((item, index) =>
+    text(item, `story.panels[${index}]`),
+  );
+  if (panels.length < MIN_STORY_PANELS || panels.length > MAX_STORY_PANELS) {
+    throw new Error(
+      `lesson story needs ${MIN_STORY_PANELS} to ${MAX_STORY_PANELS} panels`,
+    );
+  }
+  unique(panels, "story panels");
+  const journey = object(record.journey, "journey");
+  const neuron = text(journey.neuron, "journey.neuron");
+  if (!groups.has(neuron)) {
+    throw new Error(`lesson journey names unknown group ${neuron}`);
   }
   unique(
     steps.map((step) => step.id),
@@ -101,7 +135,30 @@ export function readLesson(value: unknown, module: ModuleSpec): LessonModule {
       focus: groupList(check.focus, "check.focus", groups),
       choices,
     },
+    story: { panels },
+    journey: { neuron },
   };
+}
+
+/** Answers to pick from, exactly one of them right. */
+function readChoices(value: unknown, field: string): LessonChoice[] {
+  const choices = list(value, field).map((item, index) => {
+    const row = object(item, `${field}[${index}]`);
+    if (typeof row.correct !== "boolean") {
+      throw new Error(
+        `lesson ${field}[${index}].correct must be true or false`,
+      );
+    }
+    return { id: text(row.id, `${field}[${index}].id`), correct: row.correct };
+  });
+  if (choices.filter((choice) => choice.correct).length !== 1) {
+    throw new Error(`lesson ${field} needs exactly one correct choice`);
+  }
+  unique(
+    choices.map((choice) => choice.id),
+    `${field} ids`,
+  );
+  return choices;
 }
 
 function unique(ids: string[], what: string) {
@@ -117,8 +174,9 @@ export function controlState(
   kind: ControlKind,
   colorGroup = "",
 ): ControlState {
-  if (phase.kind === "free") return "open";
+  if (phase.kind === "free" || phase.kind === "win") return "open";
   if (kind === "reset") return "locked";
+  if (awaitsGuess(lesson, phase)) return "locked";
   if (phase.kind === "check") return kind === "stimulate" ? "open" : "locked";
   const step = lesson.steps[phase.index];
   if (!step) return "locked";
@@ -279,6 +337,15 @@ function readStep(
     },
     goal,
     puff: null,
+    predict:
+      row.predict === undefined
+        ? null
+        : {
+            choices: readChoices(
+              object(row.predict, `${field}.predict`).choices,
+              `${field}.predict.choices`,
+            ),
+          },
   };
   if (!step.controls[goal.type].includes(goal.colorGroup)) {
     throw new Error(`lesson ${field} locks the control its goal needs`);

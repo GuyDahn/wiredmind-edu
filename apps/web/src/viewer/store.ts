@@ -14,6 +14,12 @@ export type PuffClock = {
 /** Parts of the lesson page the intro can outline. Each carries data-intro="<name>". */
 export type SpotlightTarget = "canvas" | "legend" | "buttons";
 
+/**
+ * Where a lesson page is: the fly's story, the zoom from the fly down to one
+ * neuron, or the mission itself.
+ */
+export type Chapter = "story" | "journey" | "lesson";
+
 export type PlaybackState = {
   applied: number;
   total: number;
@@ -47,6 +53,12 @@ type ViewerState = {
   intro: boolean;
   /** The part of the page the intro is pointing at, if any. */
   spotlight: SpotlightTarget | null;
+  /** Every lesson opens on its story. Nothing remembers that it was read. */
+  chapter: Chapter;
+  /** Zoom level of the journey, an index into JOURNEY_LEVELS. */
+  level: number;
+  /** The journey's camera is between two levels. Never true with reduced motion. */
+  flying: boolean;
   setStatus: (status: ViewerStatus, error?: LoadErrorCode | null) => void;
   setProgress: (progress: number) => void;
   setStimulating: (colorGroup: string, on: boolean) => void;
@@ -60,6 +72,9 @@ type ViewerState = {
   setClassMode: (classMode: boolean) => void;
   setIntro: (intro: boolean) => void;
   setSpotlight: (spotlight: SpotlightTarget | null) => void;
+  setChapter: (chapter: Chapter) => void;
+  setLevel: (level: number) => void;
+  setFlying: (flying: boolean) => void;
   resetControls: () => void;
 };
 
@@ -76,10 +91,14 @@ export const useViewerStore = create<ViewerState>((set) => ({
   compass: null,
   circuit: null,
   classMode: false,
-  // Open from the first paint, so the server renders the intro, not a
-  // lesson card that the intro then covers.
-  intro: true,
+  // Opens from the "?" button. The story and the zoom come first now.
+  intro: false,
   spotlight: null,
+  // The story from the first paint, so the server renders it and not a
+  // lesson card that the story then covers.
+  chapter: "story",
+  level: 0,
+  flying: false,
   setStatus: (status, error = null) => set({ status, error }),
   setProgress: (progress) => set({ progress }),
   setStimulating: (colorGroup, on) =>
@@ -103,6 +122,10 @@ export const useViewerStore = create<ViewerState>((set) => ({
   setClassMode: (classMode) => set({ classMode }),
   setIntro: (intro) => set(intro ? { intro } : { intro, spotlight: null }),
   setSpotlight: (spotlight) => set({ spotlight }),
+  setChapter: (chapter) => set({ chapter }),
+  setLevel: (level) => set({ level }),
+  setFlying: (flying) =>
+    set((state) => (state.flying === flying ? state : { flying })),
   resetControls: () =>
     set({ stimulating: {}, silenced: {}, activity: {}, puff: null }),
 }));

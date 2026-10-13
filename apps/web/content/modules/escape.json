@@ -2,6 +2,12 @@
   "id": "escape",
   "circuit": "escape",
   "jargon": ["looming neurons", "giant fiber", "jump neurons", "nerve cord"],
+  "story": {
+    "panels": ["rest", "shadow", "leap", "safe"]
+  },
+  "journey": {
+    "neuron": "gf"
+  },
   "steps": [
     {
       "id": "loom",
@@ -39,7 +45,23 @@
         "colorGroup": "gf",
         "on": true
       },
-      "puff": "looming"
+      "puff": "looming",
+      "predict": {
+        "choices": [
+          {
+            "id": "fire",
+            "correct": false
+          },
+          {
+            "id": "dark",
+            "correct": true
+          },
+          {
+            "id": "late",
+            "correct": false
+          }
+        ]
+      }
     },
     {
       "id": "restore",

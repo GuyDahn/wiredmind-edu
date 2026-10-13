@@ -448,7 +448,12 @@
       "lead": "Each lesson is a few taps long. Students stimulate and silence real cell types, answer one question, then explore on their own.",
       "lesson": "Lesson {number}",
       "meta": "{steps, plural, one {# step} other {# steps}} and a question · about 10 minutes",
-      "start": "Start lesson {number}"
+      "start": "Start lesson {number}",
+      "mission": "Mission {number}",
+      "mapLabel": "Mission map",
+      "done": "Done",
+      "todo": "Not done yet",
+      "mapNote": "Finished missions are marked here until you reload the page. Nothing is saved."
     },
     "teachers": {
       "title": "For teachers",
@@ -486,6 +491,18 @@
       "guidesLead": "Each lesson has a teacher guide with a 45-minute plan and a worksheet to print.",
       "guide": "Teacher guide",
       "worksheet": "Worksheet"
+    },
+    "montage": {
+      "label": "Short clips from the lessons",
+      "pause": "Pause the clips",
+      "play": "Play the clips",
+      "credit": "Clip: {credit}",
+      "clips": {
+        "escape": "The escape signal, from the eyes to the legs",
+        "compass": "The compass bump swinging around",
+        "smell": "One smell, a small pattern of cells",
+        "zoom": "From the whole fly down to one neuron"
+      }
     }
   },
   "about": {
@@ -603,7 +620,15 @@
         },
         "silence": {
           "text": "Now silence the <kenyon>Kenyon cells</kenyon> <gloss>(the smell sorters)</gloss>. We will send the smell for you. What disappears?",
-          "result": "The pink light almost vanishes. The smell still gets in, but the memory readers get nothing to read."
+          "result": "The pink light almost vanishes. The smell still gets in, but the memory readers get nothing to read.",
+          "predict": {
+            "question": "The smell sorters are about to go silent. What will go dark?",
+            "choices": {
+              "all": "Everything. No color lights up.",
+              "pink": "Only the pink memory readers.",
+              "none": "Nothing. Every color still lights up."
+            }
+          }
         },
         "restore": {
           "text": "Tap the <kenyon>Kenyon cells</kenyon> <gloss>(the smell sorters)</gloss> button again to switch them back on. We will send the same smell.",
@@ -630,6 +655,38 @@
       "freePlay": {
         "title": "Free play",
         "text": "Every button works now. Guess first, then tap: what goes dark if you silence the yellow smell messengers? Try silencing two colors at once."
+      },
+      "mission": {
+        "goal": "Find the cells that hold a fly's smell memory.",
+        "win": "You found them. The smell sorters turn each smell into a pattern, and the memory readers read it. Without the pattern there is nothing to remember."
+      },
+      "story": {
+        "panels": {
+          "ripe": {
+            "caption": "A peach has ripened on the windowsill all day. Its smell drifts out through the open window.",
+            "bubble": "Something smells good."
+          },
+          "sniff": {
+            "caption": "{name}'s antennae catch a few molecules of it. That is all a fly needs.",
+            "bubble": "I know this smell!"
+          },
+          "recall": {
+            "caption": "Last week this same smell led {name} to food. His brain kept a trace of it.",
+            "bubble": "Peach means dinner."
+          },
+          "land": {
+            "caption": "{name} turns into the wind and follows the smell all the way to the peach.",
+            "bubble": "Found it. Again."
+          }
+        },
+        "ending": {
+          "caption": "The smell lit a few sorter cells. The memory readers knew what that pattern meant.",
+          "bubble": "So that is how I remember!"
+        }
+      },
+      "journey": {
+        "circuit": "These colored cells carry a smell from the antennae to the fly's memory.",
+        "neuron": "One memory reader, a single cell. The bright dot is a spike, the signal it sends."
       }
     },
     "compass": {
@@ -648,7 +705,15 @@
         },
         "silence": {
           "text": "Silence the <ring>ring neurons</ring> <gloss>(the landmark carriers)</gloss>. They bring in what the fly sees. We will send the right signal for you.",
-          "result": "The bump slips off its spot and wanders. Without landmarks, the compass drifts."
+          "result": "The bump slips off its spot and wanders. Without landmarks, the compass drifts.",
+          "predict": {
+            "question": "The landmark carriers are about to go silent. What will the bump do?",
+            "choices": {
+              "vanish": "It will disappear.",
+              "drift": "It will wander off its spot.",
+              "hold": "It will stay exactly where it is."
+            }
+          }
         },
         "restore": {
           "text": "Tap the <ring>ring neurons</ring> <gloss>(the landmark carriers)</gloss> button again to switch them back on. We will send the same signal.",
@@ -675,6 +740,38 @@
       "freePlay": {
         "title": "Free play",
         "text": "Every button works now. Guess first, then tap: where does the bump go if you fire both turning signals at once? Try it with the violet cells silenced."
+      },
+      "mission": {
+        "goal": "Find what keeps a fly's compass pointing true.",
+        "win": "You found it. Turning signals push the bump around the compass, and the landmark carriers pin it to what the fly sees. Without them the compass drifts."
+      },
+      "story": {
+        "panels": {
+          "dawn": {
+            "caption": "Morning. Light pours in through a gap in the shutters, and {name} wants out.",
+            "bubble": "That way."
+          },
+          "heading": {
+            "caption": "{name} sets off toward the light. Inside his brain, a compass marks the way he is facing.",
+            "bubble": "Light ahead. Hold it there."
+          },
+          "gust": {
+            "caption": "A draft pushes him sideways. The light slides off to one side.",
+            "bubble": "Whoa. I have turned."
+          },
+          "hold": {
+            "caption": "He sees where the light is now and steers back, straight through the gap.",
+            "bubble": "Back on course."
+          }
+        },
+        "ending": {
+          "caption": "Turning signals push the compass around. What {name} sees pins it in place.",
+          "bubble": "My very own compass!"
+        }
+      },
+      "journey": {
+        "circuit": "This ring of cells is the fly's compass, with the cells that turn it and the cells that steady it.",
+        "neuron": "One heading cell. The bright dot is a spike, the signal it sends."
       }
     },
     "escape": {
@@ -693,7 +790,15 @@
         },
         "silence": {
           "text": "Now silence the <giantfiber>giant fiber</giantfiber> <gloss>(the escape wire)</gloss>. We will send the swatter. Watch the <jump>jump neurons</jump> <gloss>(the leg kickers)</gloss>.",
-          "result": "The <looming>looming neurons</looming> <gloss>(the swatter spotters)</gloss> still fire, but the <jump>jump neurons</jump> stay dark. The fast escape is gone."
+          "result": "The <looming>looming neurons</looming> <gloss>(the swatter spotters)</gloss> still fire, but the <jump>jump neurons</jump> stay dark. The fast escape is gone.",
+          "predict": {
+            "question": "The escape wire is about to go silent. What will the leg kickers do?",
+            "choices": {
+              "fire": "Fire, just as before.",
+              "dark": "Stay dark.",
+              "late": "Fire, but later."
+            }
+          }
         },
         "restore": {
           "text": "Tap the <giantfiber>giant fiber</giantfiber> <gloss>(the escape wire)</gloss> button again to switch it back on. We will send the same swatter.",
@@ -720,6 +825,38 @@
       "freePlay": {
         "title": "Free play",
         "text": "Every button works now. Guess first, then tap: which colors still light up with the escape wire silenced? Then try silencing the swatter spotters instead."
+      },
+      "mission": {
+        "goal": "Find the wire that saves the fly.",
+        "win": "You found it. The swatter spotters fire, the escape wire carries the alarm down the nerve cord, and the leg kickers jump. Cut the wire and the fast escape is gone."
+      },
+      "story": {
+        "panels": {
+          "rest": {
+            "caption": "{name} is cleaning his wings on the rim of a glass. The kitchen is quiet.",
+            "bubble": "Nice and calm."
+          },
+          "shadow": {
+            "caption": "A shadow grows fast in his eyes. Something big is coming straight at him.",
+            "bubble": "Uh-oh."
+          },
+          "leap": {
+            "caption": "His middle legs kick before the swatter lands. From first sight to jump: about 30 milliseconds.",
+            "bubble": "Jump!"
+          },
+          "safe": {
+            "caption": "The swatter hits an empty glass. {name} is already across the room.",
+            "bubble": "Missed me."
+          }
+        },
+        "ending": {
+          "caption": "One thick wire carried the alarm from his eyes to his legs. That wire is why {name} got away.",
+          "bubble": "Thank you, giant fiber."
+        }
+      },
+      "journey": {
+        "circuit": "This is the escape circuit: from the eyes, through one wire, down to the legs.",
+        "neuron": "This is the giant fiber, a single cell. The bright dot is a spike racing down it."
       }
     }
   },
@@ -929,6 +1066,48 @@
       "playing": "Showing you how it works",
       "upNext": "Next, we tap {action}: {name}",
       "stop": "Stop and take over"
+    },
+    "story": {
+      "label": "The story",
+      "skip": "Skip the story",
+      "back": "Back",
+      "next": "Next",
+      "progress": "Panel {number} of {total}",
+      "bridge": "Now let's see what happened inside his brain.",
+      "zoom": "Zoom in",
+      "says": "{name} says:"
+    },
+    "journey": {
+      "label": "The zoom",
+      "open": "Zoom from the whole fly to one neuron",
+      "progress": "Level {number} of {total}",
+      "levels": {
+        "label": "Zoom levels",
+        "fly": "Fly",
+        "brain": "Brain",
+        "circuit": "Circuit",
+        "neuron": "Neuron"
+      },
+      "captions": {
+        "fly": "A fruit fly, about 3 mm long. This body was modeled from a scan of a real one.",
+        "brain": "Inside the head sits the brain. This one was mapped, cell by cell, from another real fly."
+      },
+      "out": "Zoom out",
+      "in": "Zoom in",
+      "start": "Start the mission",
+      "resume": "Back to the mission",
+      "skip": "Skip to the mission"
+    },
+    "mission": {
+      "label": "Mission {number}",
+      "predictLabel": "Predict before you tap",
+      "predictFirst": "Pick what you think will happen. Then the button appears.",
+      "predictHeld": "Your prediction held.",
+      "predictSurprise": "The brain did something else. That is what experiments are for.",
+      "finish": "Finish the mission",
+      "winTitle": "Mission {number} complete",
+      "nextMission": "Next mission: {title}",
+      "map": "See the mission map"
     }
   },
   "errors": {
@@ -1155,7 +1334,9 @@
       "guide": "Teacher guide",
       "worksheet": "Student worksheet",
       "demo": "Show it to the class",
-      "generalTerms": "Basic terms"
+      "generalTerms": "Basic terms",
+      "companionTitle": "A companion course",
+      "companion": "Many students who take 5 units of biology also take Tel Aviv University's free course <campusil>The Brain: the Most Wonderful Machine of All</campusil> on Campus IL, taught by Prof. Yossi Yovel and Prof. Yaniv Assaf. It teaches neurons, action potentials, and synapses in depth, and these lessons make a hands-on companion to it. WiredMind is an independent project. It is not affiliated with the course, the university, or Campus IL."
     },
     "topics": {
       "excitation": "Excitation and inhibition",
@@ -1204,7 +1385,15 @@
       "realMore": "The full list, with numbers",
       "termsTitle": "Key terms",
       "curriculumTitle": "Curriculum alignment",
-      "curriculumPending": "This section is not filled in yet. The match to the official biology curriculum is being confirmed with biology instructors."
+      "curriculumPending": "This section is not filled in yet. The match to the official biology curriculum is being confirmed with biology instructors.",
+      "storyTitle": "The story",
+      "storyHow": "The lesson opens with a short comic about {name}, the fly. Read the panels aloud or let students read them; it takes about a minute. Its last panel comes back on the win screen.",
+      "journeyTitle": "The zoom from fly to neuron",
+      "journeyHow": "Project the lesson. Pause at each of the four levels and ask its question before you zoom in. The level buttons jump to any level, and the magnifier button reopens the zoom at any point of the lesson.",
+      "journeyNote": "The body and the brain come from two different flies, shown together at their true sizes. Say so to the class.",
+      "predictTitle": "The prediction",
+      "predictHow": "Before the silence step, students pick what they think will happen. Take a show of hands first. Nothing is scored, and a wrong guess costs nothing.",
+      "predictExpected": "Expected answer"
     },
     "worksheet": {
       "eyebrow": "Student worksheet · Lesson {number}",
@@ -1274,7 +1463,15 @@
             "a": "Why did the pink cells go dark when you silenced the blue cells, even though the smell still got in?",
             "b": "Where in this circuit do scientists think the memory of a smell is stored?"
           }
-        }
+        },
+        "story": "{name} smells a ripe peach, recognizes the smell from the last time it led him to food, and follows it upwind. The story sets up the question: where in the brain is that memory kept?",
+        "levels": {
+          "fly": "Where on this body would you look for a nose?",
+          "brain": "The brain fills most of the head. What do you think takes up so much of it?",
+          "circuit": "The smell comes in at the orange cells. Which color do you think it reaches last?",
+          "neuron": "The dot is one spike. How could one cell tell the rest of the brain about a smell?"
+        },
+        "predictWhy": "With the smell sorters silent, the smell still enters, so orange and yellow light up, but no pattern reaches the pink memory readers."
       },
       "compass": {
         "goal": "Students see that a ring of neurons holds the fly’s heading as one patch of activity, and that inhibition from the ring neurons keeps that patch in place.",
@@ -1326,7 +1523,15 @@
             "a": "Why did the bump drift when the ring neurons were silenced?",
             "b": "Why is a ring a good shape for cells that keep track of direction?"
           }
-        }
+        },
+        "story": "{name} heads for a gap of light, a draft turns him, and he steers back on course. The story sets up the question: how does a brain know which way its body is facing?",
+        "levels": {
+          "fly": "The fly has no map and no GPS. What could it use to hold a straight course?",
+          "brain": "Which senses would a compass in here need to listen to?",
+          "circuit": "These cells form a ring. Why might a ring be a good shape for a compass?",
+          "neuron": "This is one heading cell. If it fires, what do you think it says about where the fly is facing?"
+        },
+        "predictWhy": "The heading cells keep firing, so the bump does not vanish. With no landmarks to pin it, it slides off its spot and wanders."
       },
       "escape": {
         "goal": "Students follow a reflex from the eyes to the leg muscles in about 30 milliseconds, and show that the fast escape depends on one link, the giant fiber.",
@@ -1378,8 +1583,19 @@
             "a": "Why did the jump neurons stay dark, even though the fly saw the swatter?",
             "b": "Which features of this pathway make the escape so fast?"
           }
-        }
+        },
+        "story": "{name} is resting when a swatter swoops in, and he jumps clear in about 30 milliseconds. The story sets up the question: what in a brain can be that fast?",
+        "levels": {
+          "fly": "Which parts of this body does the fly need in order to escape?",
+          "brain": "The signal starts in the eyes and ends in the legs. Where does it have to pass on the way?",
+          "circuit": "Hundreds of blue cells, and one red line. What do you notice about the route?",
+          "neuron": "This one cell is unusually thick. Why would a thick wire help a fast escape?"
+        },
+        "predictWhy": "The looming neurons still fire, so the fly sees the swatter, but with the giant fiber silent the signal never reaches the jump neurons, and they stay dark."
       }
     }
+  },
+  "character": {
+    "name": "Ziv"
   }
 }

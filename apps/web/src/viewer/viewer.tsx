@@ -25,6 +25,7 @@ import {
 } from "./replay.js";
 import { ReplayRunner } from "./replay-runner.js";
 import { useViewerStore } from "./store.js";
+import { Story } from "./story.js";
 
 const Scene = dynamic(() => import("./scene.js"), { ssr: false });
 
@@ -49,6 +50,28 @@ export function Viewer({
   const [shared, setShared] = useState<Shared | null>(null);
   const [notice, setNotice] = useState<string | null>(null);
   const classMode = useViewerStore((state) => state.classMode);
+  const chapter = useViewerStore((state) => state.chapter);
+  // A shared run plays in the brain, with no story before it.
+  const story = chapter === "story" && shared === null;
+  // The circuit is megabytes to fetch and seconds to decode. While the story's
+  // first panel is all there is to see, it waits: it starts at the reader's
+  // first tap or key, which leaves the rest of the story to load behind.
+  const [awake, setAwake] = useState(false);
+  useEffect(() => {
+    if (awake) return;
+    if (!story) {
+      setAwake(true);
+      return;
+    }
+    const wake = () => setAwake(true);
+    const events = ["pointerdown", "keydown", "touchstart"] as const;
+    for (const name of events) {
+      window.addEventListener(name, wake, { once: true, passive: true });
+    }
+    return () => {
+      for (const name of events) window.removeEventListener(name, wake);
+    };
+  }, [awake, story]);
 
   // Class mode is whatever the address says, on every lesson page.
   useEffect(() => {
@@ -102,33 +125,52 @@ export function Viewer({
   return (
     <div
       data-mode={classMode ? "class" : undefined}
-      className="flex h-dvh flex-col overflow-hidden bg-canvas text-fg md:flex-row"
+      className="relative flex h-dvh flex-col overflow-hidden bg-canvas text-fg md:flex-row"
     >
-      {shared && !shared.demo ? (
-        <ReplayRunner
-          key={`${shared.entry.id}-replay`}
-          entry={shared.entry}
-          replay={shared.replay}
-          onExit={exitReplay}
-          credit={credit}
-        />
-      ) : (
-        // A walkthrough link gets its own runner, which starts on the
-        // walkthrough and stays mounted when it hands the lesson over.
-        <ModuleRunner
-          key={shared ? `${entry.id}-demo` : entry.id}
+      {story ? (
+        <Story
+          key={entry.id}
           entry={entry}
-          notice={notice}
-          credit={credit}
-          autoDemo={shared !== null}
-          onDemoEnd={dropReplayParam}
+          menu={
+            <>
+              <ClassModeButton />
+              {menu}
+              <StageLanguageMenu path={entry.path} />
+            </>
+          }
+          onDone={() => useViewerStore.getState().setChapter("journey")}
         />
-      )}
-      <Stage
-        entry={entry}
-        menu={menu}
-        replaying={shared !== null && !shared.demo}
-      />
+      ) : null}
+      {/* Behind the story the lesson loads, out of reach of taps and tabs. */}
+      <div inert={story} className="contents">
+        {shared && !shared.demo ? (
+          <ReplayRunner
+            key={`${shared.entry.id}-replay`}
+            entry={shared.entry}
+            replay={shared.replay}
+            onExit={exitReplay}
+            credit={credit}
+          />
+        ) : (
+          // A walkthrough link gets its own runner, which starts on the
+          // walkthrough and stays mounted when it hands the lesson over.
+          <ModuleRunner
+            key={shared ? `${entry.id}-demo` : entry.id}
+            entry={entry}
+            notice={notice}
+            credit={credit}
+            autoDemo={shared !== null}
+            onDemoEnd={dropReplayParam}
+          />
+        )}
+        <Stage
+          entry={entry}
+          menu={menu}
+          covered={story}
+          awake={awake}
+          replaying={shared !== null && !shared.demo}
+        />
+      </div>
     </div>
   );
 }
@@ -136,10 +178,16 @@ export function Viewer({
 function Stage({
   entry,
   menu,
+  covered,
+  awake,
   replaying,
 }: {
   entry: LessonEntry;
   menu?: ReactNode;
+  /** The story is over the stage, and carries the menus itself. */
+  covered: boolean;
+  /** The circuit may start loading. */
+  awake: boolean;
   /** A shared run is playing, which has no intro to reopen. */
   replaying: boolean;
 }) {
@@ -151,6 +199,7 @@ function Stage({
   const lessonCopy = useTranslations(`lessons.${entry.id}`);
   const percent = Math.round(progress * 100);
   const { module } = entry;
+  const lesson = useViewerStore((state) => state.chapter === "lesson");
 
   return (
     <div className="relative order-1 min-h-0 flex-1 bg-zinc-950 md:order-2">
@@ -177,12 +226,15 @@ function Stage({
             {lessonCopy("summary")}
           </p>
         </div>
-        <div className="flex shrink-0 items-start gap-1.5">
-          {replaying ? null : <IntroButton />}
-          <ClassModeButton />
-          {menu}
-          <StageLanguageMenu path={entry.path} />
-        </div>
+        {covered ? null : (
+          <div className="flex shrink-0 items-start gap-1.5">
+            {replaying ? null : <JourneyButton />}
+            {replaying ? null : <IntroButton />}
+            <ClassModeButton />
+            {menu}
+            <StageLanguageMenu path={entry.path} />
+          </div>
+        )}
       </header>
       <p className="sr-only">{t("stage.canvasHelp")}</p>
       {/* The brain is a real fly's, so it never mirrors for right-to-left languages. */}
@@ -191,10 +243,13 @@ function Stage({
         dir="ltr"
         data-intro="canvas"
       >
-        <Scene module={module} />
+        {awake ? (
+          <Scene module={module} journeyGroup={entry.lesson.journey.neuron} />
+        ) : null}
       </div>
-      <Legend module={module} />
-      {module.compass && status === "ready" ? (
+      {/* The color key and the dial are about the circuit, not the fly around it. */}
+      {lesson ? <Legend module={module} /> : null}
+      {lesson && module.compass && status === "ready" ? (
         <div className="absolute end-3 bottom-3 z-10 md:end-4 md:bottom-4">
           <CompassDial color={groupColor(module, module.compass.colorGroup)} />
         </div>
@@ -235,12 +290,54 @@ function IntroButton() {
       aria-label={t("label")}
       title={t("label")}
       aria-pressed={open}
-      onClick={() => useViewerStore.getState().setIntro(true)}
+      onClick={() => {
+        const store = useViewerStore.getState();
+        store.setChapter("lesson");
+        store.setIntro(true);
+      }}
       className={`${STAGE_BUTTON} ${open ? STAGE_BUTTON_ON : STAGE_BUTTON_OFF}`}
     >
       <span aria-hidden="true" className="text-lg leading-none">
         {"?"}
       </span>
+    </button>
+  );
+}
+
+/** Opens the zoom from the whole fly down to one neuron, at any point of the lesson. */
+function JourneyButton() {
+  const t = useTranslations("viewer.journey");
+  const open = useViewerStore((state) => state.chapter === "journey");
+  function toggle() {
+    const store = useViewerStore.getState();
+    if (open) {
+      store.setChapter("lesson");
+      return;
+    }
+    store.setIntro(false);
+    store.setLevel(0);
+    store.setChapter("journey");
+  }
+  return (
+    <button
+      type="button"
+      data-journey-open=""
+      aria-label={t("open")}
+      title={t("open")}
+      aria-pressed={open}
+      onClick={toggle}
+      className={`${STAGE_BUTTON} ${open ? STAGE_BUTTON_ON : STAGE_BUTTON_OFF}`}
+    >
+      <svg
+        aria-hidden="true"
+        viewBox="0 0 20 20"
+        className="size-5 fill-none stroke-current"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+      >
+        <circle cx="8.5" cy="8.5" r="5" />
+        <path d="m12.5 12.5 4.5 4.5M6.5 8.5h4M8.5 6.5v4" />
+      </svg>
     </button>
   );
 }
