@@ -20,7 +20,7 @@ Replace a file, keep its name. Nothing else changes.
 
 ## The character
 
-**Name:** placeholder "Ziv" (זיו). The name is one line per language in `apps/web/messages/*.json` (`character.name`) and appears nowhere in the art.
+**Name:** Dror (דרור). The name is one line per language in `apps/web/messages/*.json` (`character.name`) and appears nowhere in the art.
 
 **Who he is:** an adult male fruit fly, _Drosophila melanogaster_. Curious, a little dry, unbothered. He is the same fly in all three stories. He is a fly, not a person in a fly costume: no clothes, no hands, no eyebrows, no teeth.
 
