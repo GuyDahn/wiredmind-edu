@@ -60,7 +60,10 @@ function routeLanguage(request: NextRequest): NextResponse {
 }
 
 export const config = {
-  // Everything but build output and the big data files, so an old address
-  // redirects its robots.txt, sitemaps, and share images too.
-  matcher: ["/((?!_next/|_vercel/|data/|draco/).*)"],
+  // Everything but build output, the big data files, and the story pictures
+  // and home page clips, so an old address redirects its robots.txt,
+  // sitemaps, and share images too. The pictures and clips are new, have no
+  // old address, and are fetched one after another in a story, where an
+  // extra hop through this function for each one is felt.
+  matcher: ["/((?!_next/|_vercel/|data/|draco/|art/|hero/).*)"],
 };

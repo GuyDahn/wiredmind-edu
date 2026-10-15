@@ -13,8 +13,9 @@ const { NextRequest } = createRequire(
   NextRequest: new (url: string, init?: RequestInit) => Request;
 };
 const MIDDLEWARE = new URL("../apps/web/middleware.ts", import.meta.url).href;
-const { middleware } = (await import(MIDDLEWARE)) as {
+const { middleware, config } = (await import(MIDDLEWARE)) as {
   middleware: (request: Request) => Response;
+  config: { matcher: string[] };
 };
 
 function request(url: string, headers: Record<string, string> = {}) {
@@ -104,5 +105,23 @@ describe("host routing", () => {
       routeHost({ host: "localhost:3000", pathname: "/", search: "" }),
       { kind: "serve" },
     );
+  });
+});
+
+describe("what the middleware runs on", () => {
+  // Next.js anchors each matcher at the start and end of the path.
+  const runs = (path: string) =>
+    config.matcher.some((source) => new RegExp(`^${source}$`).test(path));
+
+  it("skips story pictures and home page clips, fetched one after another", () => {
+    assert.ok(!runs("/art/story/escape-rest.svg"));
+    assert.ok(!runs("/hero/escape.webm"));
+    assert.ok(!runs("/data/body.glb"));
+  });
+
+  it("still runs on pages and on files an old address may ask for", () => {
+    assert.ok(runs("/he/modules/escape"));
+    assert.ok(runs("/robots.txt"));
+    assert.ok(runs("/og/en/home.png"));
   });
 });
