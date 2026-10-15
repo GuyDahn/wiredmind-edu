@@ -16,4 +16,7 @@ exclude = [
   '^https://doi\.org/',
   # Behind Cloudflare's bot check. Checked by hand: the page exists.
   '^https://buymeacoffee\.com/',
+  # Campus IL answers GitHub's runners with 403. Checked by hand: the course
+  # page exists (the teachers page links it as a companion course).
+  '^https://campus\.gov\.il/',
 ]
