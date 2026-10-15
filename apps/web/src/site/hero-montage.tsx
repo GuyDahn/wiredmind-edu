@@ -54,17 +54,15 @@ export function HeroMontage({
       { threshold: 0.35 },
     );
     observer.observe(el);
-    // Video comes after everything the page needs to be read and used.
-    let timer: ReturnType<typeof setTimeout> | null = null;
-    const settle = () => {
-      timer = setTimeout(() => setSettled(true), 1500);
-    };
+    // Video comes once the page itself has loaded, so it never competes with
+    // it. Not later: browsers count a clip's first moving frame as the page's
+    // main paint, so a clip held back is a page that looks slow to load.
+    const settle = () => setSettled(true);
     if (document.readyState === "complete") settle();
     else window.addEventListener("load", settle, { once: true });
     return () => {
       observer.disconnect();
       window.removeEventListener("load", settle);
-      if (timer !== null) clearTimeout(timer);
     };
   }, []);
 
@@ -100,8 +98,13 @@ export function HeroMontage({
       {/* Clips are pictures of a real fly, which never mirror for right-to-left languages. */}
       <div className="relative aspect-[4/3]" dir="ltr">
         {clips.map((item, index) => {
-          // Only the clip on screen and the one after it are fetched.
-          const near = index === at || index === (at + 1) % clips.length;
+          // Every clip shows its still from the first paint, the hidden ones
+          // invisibly, and only the clip on screen fetches its video.
+          // Browsers count the first visible paint of an element as a
+          // candidate for the page's main paint; drawn first while hidden,
+          // the clips after the first never are, so a montage that keeps
+          // moving does not make the page look slow to load.
+          const current = index === at;
           return (
             <div
               key={item.id}
@@ -112,35 +115,32 @@ export function HeroMontage({
                 transitionDuration: `${FADE_MS}ms`,
               }}
             >
-              {/* eslint-disable-next-line @next/next/no-img-element -- a still of the clip, already the size it is shown at */}
-              <img
-                src={item.poster}
-                alt=""
+              {/* One element per clip: its still is the video's poster, so
+                  the still is the first thing painted and the clip that
+                  follows is the same picture moving, not a new one on top. */}
+              <video
+                ref={(el) => {
+                  videos.current[index] = el;
+                }}
+                poster={item.poster}
+                src={
+                  broken[item.id] || !(wanted && settled && current)
+                    ? undefined
+                    : item.src
+                }
                 width={640}
                 height={480}
-                loading={index === 0 ? "eager" : "lazy"}
-                fetchPriority={index === 0 ? "high" : "auto"}
-                decoding="async"
+                muted
+                playsInline
+                loop
+                preload={wanted && settled && current ? "auto" : "none"}
+                disablePictureInPicture
+                tabIndex={-1}
+                onError={() =>
+                  setBroken((value) => ({ ...value, [item.id]: true }))
+                }
                 className="absolute inset-0 size-full object-cover"
               />
-              {broken[item.id] || !(wanted && settled && near) ? null : (
-                <video
-                  ref={(el) => {
-                    videos.current[index] = el;
-                  }}
-                  src={item.src}
-                  muted
-                  playsInline
-                  loop
-                  preload="auto"
-                  disablePictureInPicture
-                  tabIndex={-1}
-                  onError={() =>
-                    setBroken((value) => ({ ...value, [item.id]: true }))
-                  }
-                  className="absolute inset-0 size-full object-cover"
-                />
-              )}
             </div>
           );
         })}

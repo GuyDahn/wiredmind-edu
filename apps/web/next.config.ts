@@ -74,6 +74,18 @@ const nextConfig: NextConfig = {
         ],
       },
       {
+        // Story pictures and home page clips keep their file names when they
+        // are replaced (docs/art-brief.md), so a day, then revalidated in the
+        // background: a new picture shows up by the next day at the latest.
+        source: "/:dir(art|hero)/:path*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=86400, stale-while-revalidate=2592000",
+          },
+        ],
+      },
+      {
         // The Draco decoder only changes with a three.js upgrade.
         source: "/draco/:path*",
         headers: [

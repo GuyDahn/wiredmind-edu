@@ -17,6 +17,38 @@ export function storyArt(lessonId: string, panel: string): string {
 /** The picture every story's last screen shares: the fly, looking at the reader. */
 export const BRIDGE_ART = "/art/story/bridge.svg";
 
+/** Every picture a lesson's story shows, the win screen's ending included. */
+export function storyPictures(entry: LessonEntry): string[] {
+  return [
+    ...entry.lesson.story.panels.map((panel) => storyArt(entry.id, panel)),
+    BRIDGE_ART,
+    storyArt(entry.id, "ending"),
+  ];
+}
+
+/**
+ * Fetches the rest of the story while the first panel is being read, so a
+ * tap on Next shows the next picture at once instead of waiting a round trip
+ * for it. It starts once the page itself has loaded, so it never competes
+ * with the first panel.
+ */
+function usePreloadedStory(entry: LessonEntry) {
+  useEffect(() => {
+    const held: HTMLImageElement[] = [];
+    const preload = () => {
+      for (const src of storyPictures(entry)) {
+        const image = new Image();
+        image.decoding = "async";
+        image.src = src;
+        held.push(image);
+      }
+    };
+    if (document.readyState === "complete") preload();
+    else window.addEventListener("load", preload, { once: true });
+    return () => window.removeEventListener("load", preload);
+  }, [entry]);
+}
+
 /**
  * One comic panel: the picture, what the fly says in a speech bubble over
  * it, and the line of story under it. The words are text, not part of the
@@ -46,7 +78,7 @@ export function StoryPanel({
           alt=""
           width={ART.width}
           height={ART.height}
-          loading={eager ? "eager" : "lazy"}
+          loading="eager"
           fetchPriority={eager ? "high" : "auto"}
           decoding="async"
           className="block h-auto w-full"
@@ -94,6 +126,7 @@ export function Story({
   const panels = entry.lesson.story.panels;
   const [at, setAt] = useState(0);
   const heading = useRef<HTMLHeadingElement>(null);
+  usePreloadedStory(entry);
   const bridge = at >= panels.length;
   const panel = panels[at];
 
