@@ -31,6 +31,11 @@ export const PAPER = {
 
 export const LINKS = {
   maleCns: "https://male-cns.janelia.org/",
+  /** Tel Aviv University's brain course on Campus IL, which many biology classes take alongside. */
+  /** The fly body the zoom journey starts from. License and version: ATTRIBUTION.md. */
+  neuroMechFly: "https://neuromechfly.org/",
+  campusIl:
+    "https://campus.gov.il/course/tau-acd-rfp5-brain-most-wonderful-machine-he/",
   neuprint: "https://neuprint.janelia.org/?dataset=male-cns%3Av1.0",
   ccBy: "https://creativecommons.org/licenses/by/4.0/",
   shiu: "https://doi.org/10.1038/s41586-024-07763-9",

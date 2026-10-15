@@ -109,7 +109,12 @@
       "lead": "Mỗi bài học chỉ cần vài lần nhấn. Học sinh kích thích và làm im lặng các loại tế bào thật, trả lời một câu hỏi, rồi tự mình khám phá.",
       "lesson": "Bài {number}",
       "meta": "{steps, plural, other {# bước}} và một câu hỏi · khoảng 10 phút",
-      "start": "Bắt đầu bài {number}"
+      "start": "Bắt đầu bài {number}",
+      "mission": "Nhiệm vụ {number}",
+      "mapLabel": "Bản đồ nhiệm vụ",
+      "done": "Đã xong",
+      "todo": "Chưa xong",
+      "mapNote": "Các nhiệm vụ đã hoàn thành được đánh dấu ở đây cho đến khi bạn tải lại trang. Không có gì được lưu lại."
     },
     "teachers": {
       "title": "Dành cho giáo viên",
@@ -147,6 +152,18 @@
       "guidesLead": "Mỗi bài học có hướng dẫn cho giáo viên với giáo án 45 phút và một phiếu học tập để in.",
       "guide": "Hướng dẫn cho giáo viên",
       "worksheet": "Phiếu học tập"
+    },
+    "montage": {
+      "label": "Những đoạn phim ngắn từ các bài học",
+      "pause": "Tạm dừng các đoạn phim",
+      "play": "Phát các đoạn phim",
+      "credit": "Đoạn phim: {credit}",
+      "clips": {
+        "escape": "Tín hiệu thoát hiểm, từ mắt xuống chân",
+        "compass": "Đốm sáng của la bàn xoay vòng",
+        "smell": "Một mùi, một mẫu hình nhỏ của các tế bào",
+        "zoom": "Từ cả con ruồi xuống tới một nơ-ron"
+      }
     }
   },
   "about": {
@@ -264,7 +281,15 @@
         },
         "silence": {
           "text": "Giờ hãy làm im lặng <kenyon>tế bào Kenyon</kenyon> <gloss>(người phân loại mùi)</gloss>. Chúng mình sẽ gửi mùi giúp bạn. Điều gì sẽ biến mất?",
-          "result": "Ánh sáng màu hồng gần như tắt hẳn. Mùi vẫn vào được, nhưng người đọc ký ức chẳng có gì để đọc."
+          "result": "Ánh sáng màu hồng gần như tắt hẳn. Mùi vẫn vào được, nhưng người đọc ký ức chẳng có gì để đọc.",
+          "predict": {
+            "question": "Người phân loại mùi sắp im lặng. Cái gì sẽ tối đi?",
+            "choices": {
+              "all": "Tất cả. Không màu nào sáng lên.",
+              "pink": "Chỉ người đọc ký ức màu hồng.",
+              "none": "Không có gì. Màu nào cũng vẫn sáng lên."
+            }
+          }
         },
         "restore": {
           "text": "Nhấn nút <kenyon>tế bào Kenyon</kenyon> <gloss>(người phân loại mùi)</gloss> một lần nữa để bật lại chúng. Chúng mình sẽ gửi đúng mùi đó.",
@@ -291,6 +316,38 @@
       "freePlay": {
         "title": "Khám phá tự do",
         "text": "Giờ thì nút nào cũng dùng được. Hãy đoán trước rồi mới nhấn: phần nào sẽ tối đi nếu bạn làm im lặng những người đưa tin mùi màu vàng? Thử làm im lặng hai màu cùng lúc xem sao."
+      },
+      "mission": {
+        "goal": "Tìm những tế bào lưu giữ ký ức về mùi của ruồi.",
+        "win": "Bạn đã tìm ra. Người phân loại mùi biến mỗi mùi thành một mẫu hình, và người đọc ký ức đọc mẫu hình đó. Không có mẫu hình thì chẳng có gì để nhớ."
+      },
+      "story": {
+        "panels": {
+          "ripe": {
+            "caption": "Quả đào chín cả ngày trên bậu cửa sổ. Mùi thơm bay ra qua ô cửa mở.",
+            "bubble": "Thơm quá."
+          },
+          "sniff": {
+            "caption": "Râu của {name} bắt được vài phân tử mùi. Ruồi chỉ cần có thế.",
+            "bubble": "Mình biết mùi này!"
+          },
+          "recall": {
+            "caption": "Tuần trước, chính mùi này đã dẫn {name} tới thức ăn. Não cậu vẫn giữ một dấu vết.",
+            "bubble": "Đào nghĩa là bữa tối."
+          },
+          "land": {
+            "caption": "{name} quay ngược chiều gió và lần theo mùi tới tận quả đào.",
+            "bubble": "Tìm thấy rồi. Lại lần nữa."
+          }
+        },
+        "ending": {
+          "caption": "Mùi làm sáng vài tế bào phân loại. Người đọc ký ức hiểu mẫu hình ấy nghĩa là gì.",
+          "bubble": "Ra là mình nhớ như thế!"
+        }
+      },
+      "journey": {
+        "circuit": "Những tế bào có màu này mang mùi từ râu tới ký ức của ruồi.",
+        "neuron": "Một người đọc ký ức, chỉ là một tế bào. Chấm sáng là một xung, tín hiệu mà nó gửi đi."
       }
     },
     "compass": {
@@ -309,7 +366,15 @@
         },
         "silence": {
           "text": "Hãy làm im lặng <ring>nơ-ron vòng</ring> <gloss>(người mang điểm mốc)</gloss>. Chúng đưa vào những gì ruồi nhìn thấy. Chúng mình sẽ gửi tín hiệu rẽ phải giúp bạn.",
-          "result": "Đốm sáng trượt khỏi chỗ của nó và đi lang thang. Không có điểm mốc, la bàn bị trôi."
+          "result": "Đốm sáng trượt khỏi chỗ của nó và đi lang thang. Không có điểm mốc, la bàn bị trôi.",
+          "predict": {
+            "question": "Người mang điểm mốc sắp im lặng. Đốm sáng sẽ ra sao?",
+            "choices": {
+              "vanish": "Nó sẽ biến mất.",
+              "drift": "Nó sẽ rời chỗ và đi lang thang.",
+              "hold": "Nó sẽ đứng yên đúng chỗ cũ."
+            }
+          }
         },
         "restore": {
           "text": "Nhấn nút <ring>nơ-ron vòng</ring> <gloss>(người mang điểm mốc)</gloss> một lần nữa để bật lại chúng. Chúng mình sẽ gửi đúng tín hiệu đó.",
@@ -336,6 +401,38 @@
       "freePlay": {
         "title": "Khám phá tự do",
         "text": "Giờ thì nút nào cũng dùng được. Hãy đoán trước rồi mới nhấn: đốm sáng sẽ đi đâu nếu bạn cho cả hai tín hiệu rẽ phát xung cùng lúc? Thử lại khi các tế bào màu tím đang bị làm im lặng xem sao."
+      },
+      "mission": {
+        "goal": "Tìm xem điều gì giữ cho la bàn của ruồi luôn chỉ đúng hướng.",
+        "win": "Bạn đã tìm ra. Tín hiệu rẽ đẩy đốm sáng đi quanh la bàn, còn người mang điểm mốc ghim nó vào những gì ruồi nhìn thấy. Không có họ, la bàn bị trôi."
+      },
+      "story": {
+        "panels": {
+          "dawn": {
+            "caption": "Buổi sáng. Ánh sáng tràn qua khe cửa chớp, và {name} muốn ra ngoài.",
+            "bubble": "Lối kia."
+          },
+          "heading": {
+            "caption": "{name} bay về phía ánh sáng. Trong não cậu, một la bàn đánh dấu hướng cậu đang quay mặt.",
+            "bubble": "Sáng ngay phía trước. Giữ nguyên."
+          },
+          "gust": {
+            "caption": "Một luồng gió lùa đẩy cậu sang ngang. Ánh sáng trượt về một bên.",
+            "bubble": "Ối. Mình bị xoay rồi."
+          },
+          "hold": {
+            "caption": "Cậu thấy ánh sáng giờ ở đâu rồi lái trở lại, bay thẳng qua khe cửa.",
+            "bubble": "Lại đúng hướng rồi."
+          }
+        },
+        "ending": {
+          "caption": "Tín hiệu rẽ đẩy la bàn xoay. Những gì {name} nhìn thấy ghim nó đúng chỗ.",
+          "bubble": "La bàn của riêng mình!"
+        }
+      },
+      "journey": {
+        "circuit": "Vòng tế bào này là la bàn của ruồi, cùng với các tế bào xoay nó và các tế bào giữ nó ổn định.",
+        "neuron": "Một tế bào chỉ hướng. Chấm sáng là một xung, tín hiệu mà nó gửi đi."
       }
     },
     "escape": {
@@ -354,7 +451,15 @@
         },
         "silence": {
           "text": "Giờ hãy làm im lặng <giantfiber>sợi khổng lồ</giantfiber> <gloss>(dây thoát hiểm)</gloss>. Chúng mình sẽ gửi vỉ đập ruồi tới. Hãy quan sát <jump>nơ-ron nhảy</jump> <gloss>(bộ đạp chân)</gloss>.",
-          "result": "<looming>Nơ-ron phát hiện vật lao tới</looming> <gloss>(bộ dò vỉ ruồi)</gloss> vẫn phát xung, nhưng <jump>nơ-ron nhảy</jump> thì tối om. Cú thoát hiểm nhanh không còn nữa."
+          "result": "<looming>Nơ-ron phát hiện vật lao tới</looming> <gloss>(bộ dò vỉ ruồi)</gloss> vẫn phát xung, nhưng <jump>nơ-ron nhảy</jump> thì tối om. Cú thoát hiểm nhanh không còn nữa.",
+          "predict": {
+            "question": "Dây thoát hiểm sắp im lặng. Bộ đạp chân sẽ làm gì?",
+            "choices": {
+              "fire": "Phát xung, y như trước.",
+              "dark": "Vẫn tối om.",
+              "late": "Phát xung, nhưng muộn hơn."
+            }
+          }
         },
         "restore": {
           "text": "Nhấn nút <giantfiber>sợi khổng lồ</giantfiber> <gloss>(dây thoát hiểm)</gloss> một lần nữa để bật lại nó. Chúng mình sẽ gửi đúng chiếc vỉ đó.",
@@ -381,6 +486,38 @@
       "freePlay": {
         "title": "Khám phá tự do",
         "text": "Giờ thì nút nào cũng dùng được. Hãy đoán trước rồi mới nhấn: những màu nào vẫn sáng lên khi dây thoát hiểm bị làm im lặng? Rồi thử đổi sang làm im lặng bộ dò vỉ ruồi xem sao."
+      },
+      "mission": {
+        "goal": "Tìm sợi dây cứu mạng con ruồi.",
+        "win": "Bạn đã tìm ra. Bộ dò vỉ ruồi phát xung, dây thoát hiểm mang báo động xuống dây thần kinh bụng, và bộ đạp chân bật nhảy. Cắt sợi dây đi thì cú thoát hiểm nhanh không còn nữa."
+      },
+      "story": {
+        "panels": {
+          "rest": {
+            "caption": "{name} đang chải cánh trên miệng một chiếc cốc. Căn bếp yên ắng.",
+            "bubble": "Yên bình ghê."
+          },
+          "shadow": {
+            "caption": "Một cái bóng lớn nhanh trong mắt cậu. Thứ gì đó rất to đang lao thẳng tới.",
+            "bubble": "Thôi chết."
+          },
+          "leap": {
+            "caption": "Đôi chân giữa đạp trước khi vỉ đập ruồi giáng xuống. Từ lúc thấy đến lúc nhảy: khoảng 30 mili giây.",
+            "bubble": "Nhảy!"
+          },
+          "safe": {
+            "caption": "Vỉ đập ruồi đập trúng chiếc cốc trống. {name} đã ở tận bên kia phòng.",
+            "bubble": "Trượt rồi nhé."
+          }
+        },
+        "ending": {
+          "caption": "Một sợi dây to mang báo động từ mắt xuống chân. Nhờ nó mà {name} thoát được.",
+          "bubble": "Cảm ơn nhé, sợi khổng lồ."
+        }
+      },
+      "journey": {
+        "circuit": "Đây là mạch thoát hiểm: từ mắt, qua một sợi dây, xuống tới chân.",
+        "neuron": "Đây là sợi khổng lồ, chỉ là một tế bào. Chấm sáng là một xung đang lao dọc xuống nó."
       }
     }
   },
@@ -590,6 +727,48 @@
       "playing": "Đang cho bạn xem cách hoạt động",
       "upNext": "Tiếp theo, chúng mình nhấn {action}: {name}",
       "stop": "Dừng lại và tự điều khiển"
+    },
+    "story": {
+      "label": "Câu chuyện",
+      "skip": "Bỏ qua câu chuyện",
+      "back": "Quay lại",
+      "next": "Tiếp theo",
+      "progress": "Khung {number}/{total}",
+      "bridge": "Giờ hãy xem điều gì đã xảy ra bên trong não cậu ấy.",
+      "zoom": "Phóng to",
+      "says": "{name} nói:"
+    },
+    "journey": {
+      "label": "Hành trình phóng to",
+      "open": "Phóng to từ cả con ruồi tới một nơ-ron",
+      "progress": "Cấp {number}/{total}",
+      "levels": {
+        "label": "Các cấp phóng to",
+        "fly": "Ruồi",
+        "brain": "Não",
+        "circuit": "Mạch",
+        "neuron": "Nơ-ron"
+      },
+      "captions": {
+        "fly": "Một con ruồi giấm, dài khoảng 3 mm. Cơ thể này được dựng mô hình từ ảnh quét một con ruồi thật.",
+        "brain": "Bên trong đầu là bộ não. Bộ não này được lập bản đồ, từng tế bào một, từ một con ruồi thật khác."
+      },
+      "out": "Thu nhỏ",
+      "in": "Phóng to",
+      "start": "Bắt đầu nhiệm vụ",
+      "resume": "Quay lại nhiệm vụ",
+      "skip": "Bỏ qua, vào nhiệm vụ"
+    },
+    "mission": {
+      "label": "Nhiệm vụ {number}",
+      "predictLabel": "Dự đoán trước khi nhấn",
+      "predictFirst": "Hãy chọn điều bạn nghĩ sẽ xảy ra. Sau đó nút mới hiện ra.",
+      "predictHeld": "Bạn đã dự đoán đúng.",
+      "predictSurprise": "Bộ não đã làm khác đi. Thí nghiệm sinh ra là để thế.",
+      "finish": "Kết thúc nhiệm vụ",
+      "winTitle": "Hoàn thành nhiệm vụ {number}",
+      "nextMission": "Nhiệm vụ tiếp theo: {title}",
+      "map": "Xem bản đồ nhiệm vụ"
     }
   },
   "errors": {
@@ -816,7 +995,9 @@
       "guide": "Hướng dẫn cho giáo viên",
       "worksheet": "Phiếu học tập cho học sinh",
       "demo": "Trình chiếu cho cả lớp",
-      "generalTerms": "Thuật ngữ cơ bản"
+      "generalTerms": "Thuật ngữ cơ bản",
+      "companionTitle": "Một khóa học đi kèm",
+      "companion": "Ở Israel, nhiều học sinh học Sinh học 5 đơn vị cũng theo học khóa miễn phí <campusil>Bộ não: cỗ máy kỳ diệu nhất</campusil> của Đại học Tel Aviv trên Campus IL, do GS. Yossi Yovel và GS. Yaniv Assaf giảng dạy. Khóa học ấy dạy kỹ về nơ-ron, điện thế hoạt động và xináp, còn các bài học ở đây là phần thực hành đi kèm với nó. WiredMind là một dự án độc lập, không liên kết với khóa học, trường đại học hay Campus IL."
     },
     "topics": {
       "excitation": "Hưng phấn và ức chế",
@@ -865,7 +1046,15 @@
       "realMore": "Danh sách đầy đủ, kèm số liệu",
       "termsTitle": "Thuật ngữ chính",
       "curriculumTitle": "Liên hệ với chương trình học",
-      "curriculumPending": "Phần này chưa được hoàn thiện. Mức độ phù hợp với chương trình sinh học chính thức đang được xác nhận cùng các giáo viên sinh học."
+      "curriculumPending": "Phần này chưa được hoàn thiện. Mức độ phù hợp với chương trình sinh học chính thức đang được xác nhận cùng các giáo viên sinh học.",
+      "storyTitle": "Câu chuyện",
+      "storyHow": "Bài học mở đầu bằng một truyện tranh ngắn về chú ruồi {name}. Hãy đọc to các khung tranh hoặc để học sinh tự đọc; mất khoảng một phút. Khung cuối cùng sẽ hiện lại trên màn hình hoàn thành nhiệm vụ.",
+      "journeyTitle": "Phóng to từ con ruồi tới nơ-ron",
+      "journeyHow": "Chiếu bài học lên màn hình. Dừng ở mỗi cấp trong bốn cấp và nêu câu hỏi của cấp đó trước khi phóng to. Các nút cấp cho phép nhảy tới cấp bất kỳ, và nút kính lúp mở lại hành trình phóng to ở bất kỳ lúc nào trong bài.",
+      "journeyNote": "Cơ thể và bộ não lấy từ hai con ruồi khác nhau, được hiển thị cùng nhau theo đúng kích thước thật. Hãy nói rõ điều này với cả lớp.",
+      "predictTitle": "Dự đoán",
+      "predictHow": "Trước bước làm im lặng, học sinh chọn điều các em nghĩ sẽ xảy ra. Hãy cho cả lớp giơ tay biểu quyết trước. Không chấm điểm, và đoán sai cũng chẳng mất gì.",
+      "predictExpected": "Đáp án mong đợi"
     },
     "worksheet": {
       "eyebrow": "Phiếu học tập cho học sinh · Bài {number}",
@@ -935,7 +1124,15 @@
             "a": "Vì sao các tế bào màu hồng tối đi khi bạn làm im lặng các tế bào màu xanh dương, dù mùi vẫn vào được?",
             "b": "Các nhà khoa học cho rằng ký ức về một mùi được lưu ở đâu trong mạch thần kinh này?"
           }
-        }
+        },
+        "story": "{name} ngửi thấy một quả đào chín, nhận ra đó là mùi lần trước đã dẫn cậu tới thức ăn, rồi lần theo mùi ngược chiều gió. Câu chuyện dẫn tới câu hỏi: ký ức ấy được cất ở đâu trong não?",
+        "levels": {
+          "fly": "Trên cơ thể này, bạn sẽ tìm cái mũi ở đâu?",
+          "brain": "Bộ não chiếm gần hết phần đầu. Theo bạn, cái gì chiếm nhiều chỗ đến thế?",
+          "circuit": "Mùi đi vào ở các tế bào màu cam. Theo bạn, màu nào là nơi nó tới sau cùng?",
+          "neuron": "Chấm này là một xung. Làm sao một tế bào có thể báo cho phần còn lại của não biết về một mùi?"
+        },
+        "predictWhy": "Khi người phân loại mùi im lặng, mùi vẫn đi vào, nên màu cam và màu vàng vẫn sáng lên, nhưng không mẫu hình nào tới được người đọc ký ức màu hồng."
       },
       "compass": {
         "goal": "Học sinh thấy rằng một vòng nơ-ron lưu giữ hướng của ruồi dưới dạng một đốm hoạt động, và sự ức chế từ nơ-ron vòng giữ đốm ấy đứng yên.",
@@ -987,7 +1184,15 @@
             "a": "Vì sao đốm sáng bị trôi khi nơ-ron vòng bị làm im lặng?",
             "b": "Vì sao hình vòng là hình dạng phù hợp cho những tế bào theo dõi phương hướng?"
           }
-        }
+        },
+        "story": "{name} bay về phía một khe sáng, bị một luồng gió lùa làm xoay đi, rồi lái trở lại đúng hướng. Câu chuyện dẫn tới câu hỏi: làm sao bộ não biết cơ thể mình đang quay mặt về hướng nào?",
+        "levels": {
+          "fly": "Ruồi không có bản đồ, cũng không có GPS. Nó có thể dựa vào đâu để bay thẳng một hướng?",
+          "brain": "Một chiếc la bàn ở trong này cần lắng nghe những giác quan nào?",
+          "circuit": "Các tế bào này xếp thành một vòng. Vì sao hình vòng có thể hợp với một chiếc la bàn?",
+          "neuron": "Đây là một tế bào chỉ hướng. Nếu nó phát xung, theo bạn nó nói gì về hướng ruồi đang quay mặt?"
+        },
+        "predictWhy": "Các tế bào chỉ hướng vẫn tiếp tục phát xung, nên đốm sáng không biến mất. Không có điểm mốc nào ghim nó lại, nó trượt khỏi chỗ và đi lang thang."
       },
       "escape": {
         "goal": "Học sinh lần theo một phản xạ từ mắt đến cơ chân trong khoảng 30 mili giây, và chỉ ra rằng cú thoát hiểm nhanh phụ thuộc vào một mắt xích duy nhất: sợi khổng lồ.",
@@ -1039,8 +1244,19 @@
             "a": "Vì sao nơ-ron nhảy vẫn tối, dù ruồi đã thấy chiếc vỉ?",
             "b": "Những đặc điểm nào của đường dẫn truyền này khiến cú thoát hiểm nhanh đến vậy?"
           }
-        }
+        },
+        "story": "{name} đang nghỉ thì một chiếc vỉ đập ruồi lao tới, và cậu nhảy thoát trong khoảng 30 mili giây. Câu chuyện dẫn tới câu hỏi: thứ gì trong não có thể nhanh đến vậy?",
+        "levels": {
+          "fly": "Để thoát hiểm, con ruồi cần đến những bộ phận nào của cơ thể này?",
+          "brain": "Tín hiệu bắt đầu ở mắt và kết thúc ở chân. Trên đường đi nó phải qua những đâu?",
+          "circuit": "Hàng trăm tế bào màu xanh dương, và chỉ một đường màu đỏ. Bạn nhận thấy điều gì ở lộ trình này?",
+          "neuron": "Riêng tế bào này to khác thường. Vì sao một sợi dây to lại giúp thoát hiểm nhanh?"
+        },
+        "predictWhy": "Nơ-ron phát hiện vật lao tới vẫn phát xung, nên ruồi vẫn thấy chiếc vỉ đập ruồi, nhưng khi sợi khổng lồ im lặng thì tín hiệu không bao giờ tới được nơ-ron nhảy, và chúng vẫn tối om."
       }
     }
+  },
+  "character": {
+    "name": "Dror"
   }
 }

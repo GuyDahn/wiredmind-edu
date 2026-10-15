@@ -18,21 +18,26 @@ import { enqueue } from "./commands.js";
 import { TERM_ANCHOR, useCircuitCopy, useLessonCopy } from "./copy.js";
 import { DEMO_PACE, DEMO_RESULT_MS, demoRun } from "./demo.js";
 import {
+  awaitsGuess,
   controlState,
   focusFor,
   meetsGoal,
   type LessonGoal,
   type LessonModule,
   type LessonPhase,
+  type LessonStep,
 } from "./lesson.js";
 import { IntroActions, IntroCard } from "./intro.js";
 import { INTRO_SCREENS } from "./intro-screens.js";
+import { JourneyActions, JourneyCard } from "./journey-card.js";
 import { LESSONS, type LessonEntry } from "./modules.js";
 import { groupColor } from "./module.js";
 import { Controls, FOCUS_RING, press } from "./panel.js";
+import { useProgress } from "./progress.js";
 import { startPlayback, stopPlayback } from "./recorder.js";
 import { Sheet, type SheetState } from "./sheet.js";
 import { useViewerStore } from "./store.js";
+import { StoryPanel, storyArt } from "./story.js";
 import { Toolbar } from "./toolbar.js";
 import type { ControlAction, ControlGate, ModuleSpec } from "./types.js";
 
@@ -74,6 +79,7 @@ export function ModuleRunner({
   const puffTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const intro = useViewerStore((state) => state.intro);
   const classMode = useViewerStore((state) => state.classMode);
+  const journey = useViewerStore((state) => state.chapter === "journey");
   const [introScreen, setIntroScreen] = useState(0);
   const stimulating = useViewerStore((state) => state.stimulating);
   const live = useViewerStore((state) => state.circuit === module.id);
@@ -121,6 +127,8 @@ export function ModuleRunner({
     clearPuff();
     const store = useViewerStore.getState();
     store.setIntro(false);
+    // The walkthrough is the lesson itself, past the story and the zoom.
+    store.setChapter("lesson");
     store.resetControls();
     enqueue({ type: "reset", seed: module.seed });
     startPlayback(run.replay, DEMO_PACE);
@@ -193,13 +201,35 @@ export function ModuleRunner({
     useViewerStore.getState().setFocus(focusFor(lesson, phase));
   }, [lesson, phase]);
 
-  // Every lesson opens on the intro, unless a "Show me" link asked for the
-  // walkthrough. Nothing remembers that it was seen: no cookie, no storage.
-  // Skip is one tap.
+  // Every lesson opens on its story, then the zoom from the fly to a neuron,
+  // unless a "Show me" link asked for the walkthrough. Nothing remembers that
+  // they were seen: no cookie, no storage. Skip is one tap each. "How to
+  // read this brain" waits behind the "?" button.
   useEffect(() => {
-    useViewerStore.getState().setIntro(!autoDemo);
-    return () => useViewerStore.getState().setIntro(false);
+    const store = useViewerStore.getState();
+    store.setIntro(false);
+    store.setLevel(0);
+    store.setChapter(autoDemo ? "lesson" : "story");
+    return () => {
+      const last = useViewerStore.getState();
+      last.setIntro(false);
+      last.setLevel(0);
+      last.setChapter("story");
+    };
   }, [autoDemo]);
+
+  const closeJourney = useCallback(() => {
+    useViewerStore.getState().setChapter("lesson");
+  }, []);
+
+  // A look back at the fly stops the walkthrough, as the intro does.
+  useEffect(() => {
+    if (journey && demo) stopDemo();
+  }, [journey, demo, stopDemo]);
+
+  useEffect(() => {
+    if (journey) setSheet("peek");
+  }, [journey]);
 
   const closeIntro = useCallback(() => {
     useViewerStore.getState().setIntro(false);
@@ -230,7 +260,7 @@ export function ModuleRunner({
     if (revealed) setSheet("peek");
   }, [revealed]);
   useEffect(() => {
-    if (phase.kind === "check") setSheet("full");
+    if (phase.kind === "check" || phase.kind === "win") setSheet("full");
     if (phase.kind === "free") setSheet("peek");
   }, [phase.kind]);
 
@@ -250,6 +280,7 @@ export function ModuleRunner({
 
   function onAction(action: ControlAction) {
     if (demo || phase.kind !== "step" || phase.done || !step) return;
+    if (awaitsGuess(lesson, phase)) return;
     if (!meetsGoal(step.goal, action)) return;
     setPhase({ ...phase, done: true });
     if (step.puff) sendPuff(step.puff);
@@ -277,6 +308,14 @@ export function ModuleRunner({
     phase.kind === "check" &&
     phase.picked !== null &&
     lesson.check.choices[phase.picked]?.correct === true;
+  // A walkthrough presses for the reader, so it asks for no prediction.
+  const guessing = !demo && awaitsGuess(lesson, phase);
+  const started = phase.kind !== "step" || phase.index > 0 || phase.done;
+
+  function win() {
+    useProgress.getState().finish(entry.id);
+    setPhase({ kind: "win" });
+  }
 
   return (
     <Sheet
@@ -284,12 +323,16 @@ export function ModuleRunner({
       onState={setSheet}
       label={copy.plain("title")}
       moment={
-        intro
-          ? `intro-${introScreen}`
-          : `${phase.kind}-${phase.kind === "step" ? phase.index : ""}-${revealed}`
+        journey
+          ? "journey"
+          : intro
+            ? `intro-${introScreen}`
+            : `${phase.kind}-${phase.kind === "step" ? phase.index : ""}-${revealed}`
       }
       footer={
-        intro ? (
+        journey ? (
+          <JourneyActions resume={started} onDone={closeJourney} />
+        ) : intro ? (
           <IntroActions
             screen={introScreen}
             onNext={() =>
@@ -316,12 +359,14 @@ export function ModuleRunner({
             goal={
               phase.kind === "step" && step && !phase.done ? step.goal : null
             }
+            guessing={guessing}
             puffPending={pending}
             watching={watching}
             revealed={revealed}
             solved={solved}
             onAction={onAction}
             onNext={next}
+            onWin={win}
             onFree={() => setPhase({ kind: "free" })}
           />
         )
@@ -342,10 +387,13 @@ export function ModuleRunner({
           {notice}
         </p>
       ) : null}
-      {intro ? <IntroCard module={module} screen={introScreen} /> : null}
+      {journey ? <JourneyCard entry={entry} /> : null}
+      {intro && !journey ? (
+        <IntroCard module={module} screen={introScreen} />
+      ) : null}
       <section
         aria-label={copy.plain("title")}
-        hidden={intro}
+        hidden={intro || journey}
         className="flex flex-col gap-4 rounded-2xl bg-overlay-strong p-4 [&[hidden]]:hidden"
       >
         {demo ? (
@@ -356,6 +404,9 @@ export function ModuleRunner({
             {d("playing")}
           </p>
         ) : null}
+        {phase.kind === "win" ? null : (
+          <MissionGoal entry={entry} goal={copy.plain("mission.goal")} />
+        )}
         <Progress lesson={lesson} phase={phase} />
         {phase.kind === "step" && step ? (
           <>
@@ -364,21 +415,33 @@ export function ModuleRunner({
             >
               {copy.rich(`steps.${step.id}.text`)}
             </p>
+            {step.predict && !demo ? (
+              <Predict
+                lesson={lesson}
+                step={step}
+                guess={phase.guess}
+                locked={phase.done}
+                revealed={revealed}
+                onGuess={(guess) => setPhase({ ...phase, guess })}
+              />
+            ) : null}
             <div aria-live="polite" className="flex flex-col gap-4">
               {revealed ? (
                 <p
+                  data-step-result=""
                   className={`${TERM_ANCHOR} border-s-4 border-fg/40 ps-3 text-base leading-snug text-fg-muted classroom:text-3xl`}
                 >
                   {copy.rich(`steps.${step.id}.result`)}
                 </p>
               ) : phase.done ? (
                 <p className={HINT}>{t("watching")}</p>
-              ) : demo ? null : (
+              ) : demo || guessing ? null : (
                 <p className={HINT}>{t("tapCue")}</p>
               )}
             </div>
           </>
         ) : null}
+        {phase.kind === "win" ? <Win entry={entry} /> : null}
         {phase.kind === "check" ? (
           <Check
             lesson={lesson}
@@ -429,7 +492,10 @@ export function ModuleRunner({
           </button>
         )}
       </section>
-      {intro || (classMode && phase.kind !== "free") ? null : (
+      {intro ||
+      journey ||
+      phase.kind === "win" ||
+      (classMode && phase.kind !== "free") ? null : (
         <Controls
           module={module}
           gate={gate}
@@ -526,30 +592,43 @@ function Footer({
   entry,
   phase,
   goal,
+  guessing,
   puffPending,
   watching,
   revealed,
   solved,
   onAction,
   onNext,
+  onWin,
   onFree,
 }: {
   entry: LessonEntry;
   phase: LessonPhase;
   goal: LessonGoal | null;
+  /** The step is waiting for a prediction, so its button is not offered yet. */
+  guessing: boolean;
   puffPending: boolean;
   watching: boolean;
   revealed: boolean;
   solved: boolean;
   onAction: (action: ControlAction) => void;
   onNext: () => void;
+  onWin: () => void;
   onFree: () => void;
 }) {
   const { module, lesson } = entry;
   const t = useTranslations("viewer.lesson");
+  const m = useTranslations("viewer.mission");
   const titles = useTranslations("lessons");
   const locale = useLocale();
   const classMode = useViewerStore((state) => state.classMode);
+  if (guessing) {
+    return (
+      <p data-predict-first="" className={`py-3 text-center ${HINT}`}>
+        {m("predictFirst")}
+      </p>
+    );
+  }
   if (goal)
     return <CueButton module={module} goal={goal} onAction={onAction} />;
   if (watching) return <Watching module={module} pending={puffPending} />;
@@ -557,6 +636,7 @@ function Footer({
     return (
       <button
         type="button"
+        data-step-next=""
         onClick={onNext}
         className={`${BUTTON} bg-accent text-accent-fg hover:bg-accent-hover`}
       >
@@ -568,16 +648,45 @@ function Footer({
     return solved ? (
       <button
         type="button"
-        onClick={onFree}
+        data-mission-finish=""
+        onClick={onWin}
         className={`${BUTTON} bg-accent text-accent-fg hover:bg-accent-hover`}
       >
-        {t("freePlay")}
+        {m("finish")}
       </button>
     ) : (
       <p className={`py-3 text-center ${HINT}`}>{t("pickAnswer")}</p>
     );
   }
   const after = LESSONS.find((item) => item.number === entry.number + 1);
+  if (phase.kind === "win") {
+    return (
+      <div className="flex flex-col gap-2">
+        <Link
+          data-mission-onward=""
+          href={modeHref(
+            after
+              ? localePath(locale, after.path)
+              : `${localePath(locale, "/")}#lessons`,
+            classMode,
+          )}
+          className={`${BUTTON} flex items-center justify-center gap-2 bg-accent py-2 text-center text-accent-fg hover:bg-accent-hover`}
+        >
+          {after
+            ? m("nextMission", { title: titles(`${after.id}.title`) })
+            : m("map")}
+        </Link>
+        <button
+          type="button"
+          data-free-play=""
+          onClick={onFree}
+          className={`${BUTTON} border border-border-strong text-fg hover:bg-overlay`}
+        >
+          {t("freePlay")}
+        </button>
+      </div>
+    );
+  }
   if (after) {
     return (
       <Link
@@ -711,6 +820,120 @@ function Watching({
   );
 }
 
+/** The mission, in one line, above every step. */
+function MissionGoal({ entry, goal }: { entry: LessonEntry; goal: string }) {
+  const m = useTranslations("viewer.mission");
+  return (
+    <p
+      data-mission-goal=""
+      className="flex flex-col gap-0.5 rounded-xl border border-border-strong px-3 py-2"
+    >
+      <span className="text-xs font-semibold tracking-[0.14em] text-fg-subtle uppercase classroom:text-lg">
+        {m("label", { number: entry.number })}
+      </span>
+      <span className="text-base leading-snug font-semibold text-fg classroom:text-2xl">
+        {goal}
+      </span>
+    </p>
+  );
+}
+
+/**
+ * "Predict before you tap": the step's button stays shut until an answer is
+ * picked. No answer is marked wrong before the brain has shown what happens,
+ * and none costs anything after.
+ */
+function Predict({
+  lesson,
+  step,
+  guess,
+  locked,
+  revealed,
+  onGuess,
+}: {
+  lesson: LessonModule;
+  step: LessonStep;
+  guess: number | undefined;
+  /** The experiment has run, so the prediction stands as it was made. */
+  locked: boolean;
+  revealed: boolean;
+  onGuess: (index: number) => void;
+}) {
+  const m = useTranslations("viewer.mission");
+  const copy = useLessonCopy(lesson);
+  const choices = step.predict?.choices ?? [];
+  const picked = guess === undefined ? undefined : choices[guess];
+  return (
+    <div
+      data-predict={guess === undefined ? "open" : "picked"}
+      className="flex flex-col gap-2 rounded-xl border border-border-strong p-3"
+    >
+      <p className="text-xs font-semibold tracking-[0.14em] text-fg-subtle uppercase classroom:text-lg">
+        {m("predictLabel")}
+      </p>
+      <p className="text-base leading-snug font-semibold text-fg classroom:text-2xl">
+        {copy.plain(`steps.${step.id}.predict.question`)}
+      </p>
+      <div
+        role="group"
+        aria-label={m("predictLabel")}
+        className="flex flex-col gap-2"
+      >
+        {choices.map((choice, index) => {
+          const chosen = guess === index;
+          return (
+            <button
+              key={choice.id}
+              type="button"
+              data-predict-choice={choice.id}
+              aria-pressed={chosen}
+              disabled={locked}
+              onClick={() => onGuess(index)}
+              className={`min-h-12 rounded-xl border px-4 py-2.5 text-start text-base leading-snug disabled:cursor-default classroom:min-h-16 classroom:text-2xl ${FOCUS_RING} ${chosen ? "border-fg bg-overlay-strong text-fg" : "border-border-strong bg-overlay text-fg"} ${locked && !chosen ? "opacity-50" : ""}`}
+            >
+              {copy.plain(`steps.${step.id}.predict.choices.${choice.id}`)}
+            </button>
+          );
+        })}
+      </div>
+      <p aria-live="polite" className={HINT}>
+        {revealed && picked ? (
+          <span data-predict-outcome={picked.correct ? "held" : "surprise"}>
+            {picked.correct ? m("predictHeld") : m("predictSurprise")}
+          </span>
+        ) : null}
+      </p>
+    </div>
+  );
+}
+
+/** The win screen: the story's last panel, and what the mission found. */
+function Win({ entry }: { entry: LessonEntry }) {
+  const m = useTranslations("viewer.mission");
+  const copy = useLessonCopy(entry.lesson);
+  const t = useTranslations(`lessons.${entry.id}`);
+  const name = useTranslations("character")("name");
+  return (
+    <div data-mission-win="" className="flex flex-col gap-4">
+      <h2 className="text-xl font-semibold text-fg classroom:text-3xl">
+        {m("winTitle", { number: entry.number })}
+      </h2>
+      <StoryPanel
+        art={storyArt(entry.id, "ending")}
+        caption={t("story.ending.caption", { name })}
+        bubble={t("story.ending.bubble", { name })}
+        name={name}
+        eager
+      />
+      <p
+        className={`${TERM_ANCHOR} border-s-4 border-emerald-400 ps-3 text-base leading-snug text-fg-muted classroom:text-2xl`}
+      >
+        {copy.rich("mission.win")}
+      </p>
+    </div>
+  );
+}
+
 function Progress({
   lesson,
   phase,
@@ -726,6 +949,7 @@ function Progress({
       : phase.kind === "check"
         ? lesson.steps.length
         : total;
+  if (phase.kind === "win") return null;
   const label =
     phase.kind === "step"
       ? t("step", { number: phase.index + 1, total: lesson.steps.length })
@@ -800,6 +1024,7 @@ function Check({
               type="button"
               disabled={solved}
               aria-pressed={chosen}
+              data-check-choice={item.id}
               onClick={() => onPick(index)}
               className={`min-h-12 rounded-xl border px-4 py-3 text-start text-base leading-snug disabled:cursor-default classroom:min-h-16 classroom:text-2xl ${FOCUS_RING} ${tone}`}
             >

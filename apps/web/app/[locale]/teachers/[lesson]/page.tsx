@@ -26,6 +26,7 @@ import {
   TEACHERS_PATH,
   worksheetPath,
 } from "@/src/site/teachers";
+import { JOURNEY_LEVELS } from "@/src/viewer/journey";
 import { findLesson, LESSONS } from "@/src/viewer/modules";
 import { LESSON_TERMS } from "@/src/viewer/terms";
 
@@ -81,6 +82,12 @@ export default async function TeacherGuidePage({
   });
   const title = lesson("title");
   const right = entry.lesson.check.choices.find((choice) => choice.correct)!;
+  const name = t("character.name");
+  // Steps that ask for a prediction, each with the answer the brain gives.
+  const predictions = entry.lesson.steps.flatMap((step) => {
+    const expected = step.predict?.choices.find((choice) => choice.correct);
+    return expected ? [{ step, right: expected.id }] : [];
+  });
   const lessonUrl = `${SITE_URL}${localePath(locale, entry.path)}`;
   return (
     <>
@@ -177,6 +184,50 @@ export default async function TeacherGuidePage({
             ))}
           </ol>
         </Section>
+
+        <Section title={g("storyTitle")}>
+          <p>{own("story", { name })}</p>
+          <p className="mt-2">{g("storyHow", { name })}</p>
+        </Section>
+
+        <Section title={g("journeyTitle")}>
+          <p>{g("journeyHow")}</p>
+          <ol className="mt-3 flex flex-col gap-3">
+            {JOURNEY_LEVELS.map((level) => (
+              <li
+                key={level}
+                className="grid break-inside-avoid grid-cols-[4.5rem_1fr] gap-x-4 border-t border-border pt-3"
+              >
+                <span className="font-semibold text-fg">
+                  {t(`viewer.journey.levels.${level}`)}
+                </span>
+                <p className="text-fg">{own(`levels.${level}`)}</p>
+              </li>
+            ))}
+          </ol>
+          <p className="mt-3">{g("journeyNote")}</p>
+        </Section>
+
+        {predictions.length > 0 ? (
+          <Section title={g("predictTitle")}>
+            <p>{g("predictHow")}</p>
+            {predictions.map(({ step, right: expected }) => (
+              <div key={step.id} className="mt-3 break-inside-avoid">
+                <p className="font-semibold text-fg">
+                  {lesson(`steps.${step.id}.predict.question`)}
+                </p>
+                <p className="mt-2">
+                  <span className="font-semibold text-fg">
+                    {g("predictExpected")}
+                    {":"}
+                  </span>{" "}
+                  {lesson(`steps.${step.id}.predict.choices.${expected}`)}
+                </p>
+                <p className="mt-2">{own("predictWhy")}</p>
+              </div>
+            ))}
+          </Section>
+        ) : null}
 
         <Section title={g("noticeTitle")}>
           <ol className="flex flex-col gap-3">

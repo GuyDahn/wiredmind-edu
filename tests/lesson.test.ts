@@ -3,10 +3,12 @@ import { readFileSync } from "node:fs";
 import { describe, it } from "node:test";
 import { writeFocus } from "../apps/web/src/viewer/groups.js";
 import {
+  awaitsGuess,
   controlState,
   focusFor,
   glossParts,
   markupParts,
+  MAX_PANEL_WORDS,
   MAX_STEP_WORDS,
   meetsGoal,
   plainText,
@@ -342,8 +344,31 @@ describe("lesson reader", () => {
 
 describe("lesson controls", () => {
   const silenceStep = lesson.steps.findIndex((s) => s.goal.type === "silence");
-  const before: LessonPhase = { kind: "step", index: silenceStep, done: false };
+  // The silence step asks for a prediction first; `before` has made one.
+  const unguessed: LessonPhase = {
+    kind: "step",
+    index: silenceStep,
+    done: false,
+  };
+  const before: LessonPhase = { ...unguessed, guess: 0 };
   const after: LessonPhase = { kind: "step", index: silenceStep, done: true };
+
+  it("keeps every control shut until a prediction is picked", () => {
+    assert.ok(lesson.steps[silenceStep]?.predict);
+    assert.ok(awaitsGuess(lesson, unguessed));
+    assert.equal(controlState(lesson, unguessed, "silence", "kc"), "locked");
+    assert.equal(controlState(lesson, unguessed, "stimulate", "orn"), "locked");
+    assert.ok(!awaitsGuess(lesson, before));
+    assert.ok(!awaitsGuess(lesson, after));
+    // A step that asks for no prediction opens at once.
+    assert.ok(!awaitsGuess(lesson, { kind: "step", index: 0, done: false }));
+  });
+
+  it("opens every control on the win screen", () => {
+    const win: LessonPhase = { kind: "win" };
+    assert.equal(controlState(lesson, win, "silence", "mbon"), "open");
+    assert.deepEqual(focusFor(lesson, win), []);
+  });
 
   it("points at the goal and locks the rest before the learner acts", () => {
     assert.equal(controlState(lesson, before, "silence", "kc"), "cue");
@@ -386,5 +411,108 @@ describe("lesson controls", () => {
     assert.deepEqual(Array.from(bytes), [255, 0, 255]);
     writeFocus(bytes, groups, []);
     assert.deepEqual(Array.from(bytes), [255, 255, 255]);
+  });
+});
+
+type StoryCopy = {
+  mission: { goal: string; win: string };
+  story: {
+    panels: Record<string, { caption: string; bubble: string }>;
+    ending: { caption: string; bubble: string };
+  };
+  journey: { circuit: string; neuron: string };
+  steps: Record<
+    string,
+    { predict?: { question: string; choices: Record<string, string> } }
+  >;
+};
+
+/** The two languages written by hand, which count words the same way. */
+const STORY_LOCALES = ["he", "en"];
+
+describe("fly stories and missions", () => {
+  const catalogs = STORY_LOCALES.map((locale) => ({
+    locale,
+    messages: JSON.parse(
+      readFileSync(
+        new URL(`../apps/web/messages/${locale}.json`, import.meta.url),
+        "utf8",
+      ),
+    ) as {
+      character: { name: string };
+      lessons: Record<string, StoryCopy>;
+      viewer: { story: { bridge: string } };
+    },
+  }));
+
+  for (const { lesson: item } of LESSONS) {
+    it(`${item.id}: four to six panels and an ending, 25 words each at most`, () => {
+      assert.ok(item.story.panels.length >= 4 && item.story.panels.length <= 6);
+      for (const { locale, messages } of catalogs) {
+        const copy = messages.lessons[item.id]!;
+        assert.deepEqual(Object.keys(copy.story.panels), item.story.panels);
+        const panels = [
+          ...Object.entries(copy.story.panels),
+          ["ending", copy.story.ending] as const,
+        ];
+        for (const [id, panel] of panels) {
+          const said = `${panel.caption} ${panel.bubble}`.replaceAll(
+            "{name}",
+            messages.character.name,
+          );
+          const words = wordCount(said);
+          assert.ok(
+            words > 0 && words <= MAX_PANEL_WORDS,
+            `${locale} ${item.id} ${id}: ${words} words`,
+          );
+          assert.ok(panel.bubble.trim().length > 0, `${locale} ${id} bubble`);
+        }
+      }
+    });
+
+    it(`${item.id}: a one-line mission, and a prediction on a silence step`, () => {
+      const asking = item.steps.filter((step) => step.predict);
+      assert.equal(asking.length, 1);
+      assert.equal(asking[0]!.goal.type, "silence");
+      assert.equal(
+        asking[0]!.predict!.choices.filter((choice) => choice.correct).length,
+        1,
+      );
+      for (const { locale, messages } of catalogs) {
+        const copy = messages.lessons[item.id]!;
+        assert.ok(!copy.mission.goal.includes("\n"));
+        assert.ok(
+          wordCount(copy.mission.goal) <= 12,
+          `${locale} ${item.id} goal`,
+        );
+        const predict = copy.steps[asking[0]!.id]!.predict!;
+        assert.deepEqual(
+          Object.keys(predict.choices),
+          asking[0]!.predict!.choices.map((choice) => choice.id),
+        );
+        for (const caption of [copy.journey.circuit, copy.journey.neuron]) {
+          assert.ok(wordCount(caption) <= 22, `${locale} ${item.id} caption`);
+        }
+      }
+    });
+  }
+
+  it("ends every story on the bridge into the brain", () => {
+    const [he, english] = catalogs;
+    assert.match(english!.messages.viewer.story.bridge, /inside his brain/);
+    assert.match(he!.messages.viewer.story.bridge, /בתוך המוח/);
+  });
+
+  it("refuses a lesson without a story, or with a journey into no group", () => {
+    const circuit = readModule(json("olfactory/module.json"));
+    const raw = json("modules/smell-memory.json") as Record<string, unknown>;
+    assert.throws(
+      () => readLesson({ ...raw, story: { panels: ["a", "b"] } }, circuit),
+      /4 to 6 panels/,
+    );
+    assert.throws(
+      () => readLesson({ ...raw, journey: { neuron: "nope" } }, circuit),
+      /unknown group/,
+    );
   });
 });

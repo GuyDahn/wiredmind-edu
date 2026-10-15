@@ -109,7 +109,12 @@
       "lead": "Chaque leçon ne demande que quelques gestes. Les élèves stimulent et font taire de vrais types de cellules, répondent à une question, puis explorent par eux-mêmes.",
       "lesson": "Leçon {number}",
       "meta": "{steps, plural, one {# étape} many {# étapes} other {# étapes}} et une question · environ 10 minutes",
-      "start": "Commencer la leçon {number}"
+      "start": "Commencer la leçon {number}",
+      "mission": "Mission {number}",
+      "mapLabel": "Carte des missions",
+      "done": "Terminée",
+      "todo": "Pas encore terminée",
+      "mapNote": "Les missions terminées restent cochées ici jusqu’à ce que vous rechargiez la page. Rien n’est enregistré."
     },
     "teachers": {
       "title": "Pour les enseignants",
@@ -147,6 +152,18 @@
       "guidesLead": "Chaque leçon est accompagnée d’un guide de l’enseignant, avec un déroulé de 45 minutes, et d’une fiche élève à imprimer.",
       "guide": "Guide de l’enseignant",
       "worksheet": "Fiche élève"
+    },
+    "montage": {
+      "label": "Courts extraits des leçons",
+      "pause": "Mettre les extraits en pause",
+      "play": "Lancer les extraits",
+      "credit": "Extrait : {credit}",
+      "clips": {
+        "escape": "Le signal de fuite, des yeux jusqu’aux pattes",
+        "compass": "La bosse de la boussole qui tourne",
+        "smell": "Une odeur, un petit motif de cellules",
+        "zoom": "De la mouche entière jusqu’à un seul neurone"
+      }
     }
   },
   "about": {
@@ -264,7 +281,15 @@
         },
         "silence": {
           "text": "Maintenant, fais taire les <kenyon>cellules de Kenyon</kenyon> <gloss>(les trieuses d’odeurs)</gloss>. On envoie l’odeur à ta place. Qu’est-ce qui disparaît ?",
-          "result": "La lumière rose disparaît presque. L’odeur entre toujours, mais les décodeurs n’ont plus rien à décoder."
+          "result": "La lumière rose disparaît presque. L’odeur entre toujours, mais les décodeurs n’ont plus rien à décoder.",
+          "predict": {
+            "question": "Les trieuses d’odeurs vont se taire. Qu’est-ce qui va s’éteindre ?",
+            "choices": {
+              "all": "Tout. Aucune couleur ne s’allume.",
+              "pink": "Seulement les décodeurs, en rose.",
+              "none": "Rien. Toutes les couleurs s’allument encore."
+            }
+          }
         },
         "restore": {
           "text": "Appuie de nouveau sur le bouton des <kenyon>cellules de Kenyon</kenyon> <gloss>(les trieuses d’odeurs)</gloss> pour les réactiver. On envoie la même odeur.",
@@ -291,6 +316,38 @@
       "freePlay": {
         "title": "Exploration libre",
         "text": "Tous les boutons fonctionnent maintenant. Devine d’abord, puis appuie : qu’est-ce qui s’éteint si tu fais taire les messagers d’odeurs, en jaune ? Essaie de faire taire deux couleurs à la fois."
+      },
+      "mission": {
+        "goal": "Trouve les cellules qui gardent le souvenir d’une odeur chez la mouche.",
+        "win": "Tu les as trouvées. Les trieuses d’odeurs donnent à chaque odeur un motif, et les décodeurs le lisent. Sans motif, il n’y a rien à se rappeler."
+      },
+      "story": {
+        "panels": {
+          "ripe": {
+            "caption": "Une pêche a mûri toute la journée sur le rebord de la fenêtre. Son odeur s’échappe dehors.",
+            "bubble": "Ça sent bon."
+          },
+          "sniff": {
+            "caption": "Les antennes de {name} en captent quelques molécules. Une mouche n’a pas besoin de plus.",
+            "bubble": "Je connais cette odeur !"
+          },
+          "recall": {
+            "caption": "La semaine dernière, cette même odeur a mené {name} à un repas. Son cerveau en a gardé une trace.",
+            "bubble": "Pêche égale dîner."
+          },
+          "land": {
+            "caption": "{name} se tourne face au vent et remonte l’odeur jusqu’à la pêche.",
+            "bubble": "Trouvée. Encore une fois."
+          }
+        },
+        "ending": {
+          "caption": "L’odeur a allumé quelques trieuses d’odeurs. Les décodeurs savaient ce que ce motif voulait dire.",
+          "bubble": "Voilà comment je me souviens !"
+        }
+      },
+      "journey": {
+        "circuit": "Ces cellules colorées portent une odeur des antennes jusqu’à la mémoire de la mouche.",
+        "neuron": "Un décodeur, une seule cellule. Le point lumineux est une activation, le signal qu’elle envoie."
       }
     },
     "compass": {
@@ -309,7 +366,15 @@
         },
         "silence": {
           "text": "Fais taire les <ring>neurones en anneau</ring> <gloss>(les porte-repères)</gloss>. Ils apportent ce que la mouche voit. On envoie l’ordre de droite à ta place.",
-          "result": "La bosse quitte sa place et se met à errer. Sans repères, la boussole dérive."
+          "result": "La bosse quitte sa place et se met à errer. Sans repères, la boussole dérive.",
+          "predict": {
+            "question": "Les porte-repères vont se taire. Que va faire la bosse ?",
+            "choices": {
+              "vanish": "Elle va disparaître.",
+              "drift": "Elle va quitter sa place et errer.",
+              "hold": "Elle va rester exactement où elle est."
+            }
+          }
         },
         "restore": {
           "text": "Appuie de nouveau sur le bouton des <ring>neurones en anneau</ring> <gloss>(les porte-repères)</gloss> pour les réactiver. On envoie le même ordre.",
@@ -336,6 +401,38 @@
       "freePlay": {
         "title": "Exploration libre",
         "text": "Tous les boutons fonctionnent maintenant. Devine d’abord, puis appuie : où va la bosse si tu envoies les deux ordres de tourner en même temps ? Refais l’essai en faisant taire les cellules violettes."
+      },
+      "mission": {
+        "goal": "Trouve ce qui permet à la boussole de la mouche de rester juste.",
+        "win": "Tu as trouvé. Les ordres de tourner poussent la bosse autour de la boussole, et les porte-repères l’accrochent à ce que la mouche voit. Sans eux, la boussole dérive."
+      },
+      "story": {
+        "panels": {
+          "dawn": {
+            "caption": "Le matin. La lumière entre à flots par une fente des volets, et {name} veut sortir.",
+            "bubble": "Par là."
+          },
+          "heading": {
+            "caption": "{name} file vers la lumière. Dans son cerveau, une boussole indique de quel côté il est tourné.",
+            "bubble": "Lumière droit devant. Qu’elle y reste."
+          },
+          "gust": {
+            "caption": "Un courant d’air le pousse de travers. La lumière glisse sur le côté.",
+            "bubble": "Oups. J’ai tourné."
+          },
+          "hold": {
+            "caption": "Il voit où est la lumière maintenant et redresse, droit à travers la fente.",
+            "bubble": "Retour sur le cap."
+          }
+        },
+        "ending": {
+          "caption": "Les ordres de tourner font pivoter la boussole. Ce que voit {name} la maintient en place.",
+          "bubble": "Ma boussole à moi !"
+        }
+      },
+      "journey": {
+        "circuit": "Cet anneau de cellules est la boussole de la mouche, avec les cellules qui la font tourner et celles qui la stabilisent.",
+        "neuron": "Une cellule d’orientation. Le point lumineux est une activation, le signal qu’elle envoie."
       }
     },
     "escape": {
@@ -354,7 +451,15 @@
         },
         "silence": {
           "text": "Maintenant, fais taire la <giantfiber>fibre géante</giantfiber> <gloss>(le fil d’évasion)</gloss>. On envoie le tue-mouches. Regarde les <jump>neurones du saut</jump> <gloss>(les propulseurs)</gloss>.",
-          "result": "Les <looming>neurones d’approche</looming> <gloss>(les guetteurs)</gloss> s’activent toujours, mais les <jump>neurones du saut</jump> restent éteints. La fuite rapide a disparu."
+          "result": "Les <looming>neurones d’approche</looming> <gloss>(les guetteurs)</gloss> s’activent toujours, mais les <jump>neurones du saut</jump> restent éteints. La fuite rapide a disparu.",
+          "predict": {
+            "question": "Le fil d’évasion va se taire. Que vont faire les propulseurs ?",
+            "choices": {
+              "fire": "S’activer, comme avant.",
+              "dark": "Rester éteints.",
+              "late": "S’activer, mais plus tard."
+            }
+          }
         },
         "restore": {
           "text": "Appuie de nouveau sur le bouton de la <giantfiber>fibre géante</giantfiber> <gloss>(le fil d’évasion)</gloss> pour la réactiver. On envoie le même tue-mouches.",
@@ -381,6 +486,38 @@
       "freePlay": {
         "title": "Exploration libre",
         "text": "Tous les boutons fonctionnent maintenant. Devine d’abord, puis appuie : quelles couleurs s’allument encore si tu fais taire le fil d’évasion ? Essaie ensuite plutôt de faire taire les guetteurs."
+      },
+      "mission": {
+        "goal": "Trouve le fil qui sauve la mouche.",
+        "win": "Tu l’as trouvé. Les guetteurs s’activent, le fil d’évasion porte l’alerte le long du cordon nerveux, et les propulseurs déclenchent le saut. Coupe le fil, et la fuite rapide disparaît."
+      },
+      "story": {
+        "panels": {
+          "rest": {
+            "caption": "{name} se nettoie les ailes sur le bord d’un verre. La cuisine est calme.",
+            "bubble": "Tout est tranquille."
+          },
+          "shadow": {
+            "caption": "Une ombre grossit vite dans ses yeux. Quelque chose d’énorme fonce droit sur lui.",
+            "bubble": "Oh oh."
+          },
+          "leap": {
+            "caption": "Ses pattes du milieu se détendent avant que le tue-mouches s’abatte. Du premier regard au saut : environ 30 millisecondes.",
+            "bubble": "Saute !"
+          },
+          "safe": {
+            "caption": "Le tue-mouches frappe un verre vide. {name} est déjà à l’autre bout de la pièce.",
+            "bubble": "Raté."
+          }
+        },
+        "ending": {
+          "caption": "Un seul gros fil a porté l’alerte de ses yeux à ses pattes. Grâce à lui, {name} s’est échappé.",
+          "bubble": "Merci, fibre géante."
+        }
+      },
+      "journey": {
+        "circuit": "Voici le circuit de la fuite : des yeux, par un seul fil, jusqu’aux pattes.",
+        "neuron": "Voici la fibre géante, une seule cellule. Le point lumineux est une activation qui la parcourt à toute vitesse."
       }
     }
   },
@@ -590,6 +727,48 @@
       "playing": "On te montre comment ça marche",
       "upNext": "Ensuite, on appuie sur « {action} » : {name}",
       "stop": "Arrêter et reprendre la main"
+    },
+    "story": {
+      "label": "L’histoire",
+      "skip": "Passer l’histoire",
+      "back": "Précédent",
+      "next": "Suivant",
+      "progress": "Case {number} sur {total}",
+      "bridge": "Voyons maintenant ce qui s’est passé dans son cerveau.",
+      "zoom": "Zoomer",
+      "says": "{name} dit :"
+    },
+    "journey": {
+      "label": "Le zoom",
+      "open": "Zoomer de la mouche entière jusqu’à un neurone",
+      "progress": "Niveau {number} sur {total}",
+      "levels": {
+        "label": "Niveaux de zoom",
+        "fly": "Mouche",
+        "brain": "Cerveau",
+        "circuit": "Circuit",
+        "neuron": "Neurone"
+      },
+      "captions": {
+        "fly": "Une drosophile, environ 3 mm de long. Ce corps a été modélisé à partir du scan d’une vraie mouche.",
+        "brain": "Dans la tête se trouve le cerveau. Celui-ci a été cartographié, cellule par cellule, à partir d’une autre vraie mouche."
+      },
+      "out": "Dézoomer",
+      "in": "Zoomer",
+      "start": "Commencer la mission",
+      "resume": "Retour à la mission",
+      "skip": "Passer à la mission"
+    },
+    "mission": {
+      "label": "Mission {number}",
+      "predictLabel": "Fais ta prédiction avant d’appuyer",
+      "predictFirst": "Choisis ce qui va se passer, à ton avis. Le bouton apparaîtra ensuite.",
+      "predictHeld": "Ta prédiction était la bonne.",
+      "predictSurprise": "Le cerveau a fait autre chose. C’est à ça que servent les expériences.",
+      "finish": "Terminer la mission",
+      "winTitle": "Mission {number} accomplie",
+      "nextMission": "Mission suivante : {title}",
+      "map": "Voir la carte des missions"
     }
   },
   "errors": {
@@ -816,7 +995,9 @@
       "guide": "Guide de l’enseignant",
       "worksheet": "Fiche élève",
       "demo": "Montrer à la classe",
-      "generalTerms": "Notions de base"
+      "generalTerms": "Notions de base",
+      "companionTitle": "Un cours complémentaire",
+      "companion": "Beaucoup d’élèves qui suivent 5 unités de biologie suivent aussi le cours gratuit de l’université de Tel-Aviv, <campusil>Le cerveau : la machine la plus merveilleuse de toutes</campusil>, sur Campus IL, donné par le Pr Yossi Yovel et le Pr Yaniv Assaf. Ce cours traite en profondeur des neurones, des potentiels d’action et des synapses, et ces leçons en sont un complément pratique. WiredMind est un projet indépendant. Il n’est affilié ni au cours, ni à l’université, ni à Campus IL."
     },
     "topics": {
       "excitation": "Excitation et inhibition",
@@ -865,7 +1046,15 @@
       "realMore": "La liste complète, chiffres à l’appui",
       "termsTitle": "Termes clés",
       "curriculumTitle": "Liens avec le programme",
-      "curriculumPending": "Cette section n’est pas encore rédigée. La correspondance avec le programme officiel de SVT est en cours de validation avec des enseignants de la discipline."
+      "curriculumPending": "Cette section n’est pas encore rédigée. La correspondance avec le programme officiel de SVT est en cours de validation avec des enseignants de la discipline.",
+      "storyTitle": "L’histoire",
+      "storyHow": "La leçon s’ouvre sur une courte bande dessinée consacrée à {name}, la mouche. Lisez les cases à voix haute ou laissez les élèves les lire ; cela prend environ une minute. La dernière case revient sur l’écran de fin de mission.",
+      "journeyTitle": "Le zoom de la mouche au neurone",
+      "journeyHow": "Projetez la leçon. Faites une pause à chacun des quatre niveaux et posez sa question avant de zoomer. Les boutons de niveau permettent d’aller directement à n’importe quel niveau, et le bouton en forme de loupe rouvre le zoom à tout moment de la leçon.",
+      "journeyNote": "Le corps et le cerveau viennent de deux mouches différentes, montrées ensemble à leur taille réelle. Dites-le à la classe.",
+      "predictTitle": "La prédiction",
+      "predictHow": "Avant l’étape où l’on fait taire des cellules, les élèves choisissent ce qui va se passer, à leur avis. Commencez par un vote à main levée. Rien n’est noté, et une mauvaise réponse ne coûte rien.",
+      "predictExpected": "Réponse attendue"
     },
     "worksheet": {
       "eyebrow": "Fiche élève · Leçon {number}",
@@ -935,7 +1124,15 @@
             "a": "Pourquoi les cellules roses se sont-elles éteintes quand tu as fait taire les cellules bleues, alors que l’odeur entrait toujours ?",
             "b": "À quel endroit de ce circuit les scientifiques pensent-ils que le souvenir d’une odeur est conservé ?"
           }
-        }
+        },
+        "story": "{name} sent une pêche mûre, reconnaît l’odeur qui l’avait déjà mené à un repas, et la remonte face au vent. L’histoire amène la question : où, dans le cerveau, ce souvenir est-il gardé ?",
+        "levels": {
+          "fly": "Où, sur ce corps, chercheriez-vous un nez ?",
+          "brain": "Le cerveau remplit presque toute la tête. À votre avis, qu’est-ce qui y prend autant de place ?",
+          "circuit": "L’odeur arrive par les cellules orange. À votre avis, quelle couleur atteint-elle en dernier ?",
+          "neuron": "Le point est une seule activation. Comment une seule cellule pourrait-elle parler d’une odeur au reste du cerveau ?"
+        },
+        "predictWhy": "Quand les trieuses d’odeurs se taisent, l’odeur entre toujours, donc l’orange et le jaune s’allument, mais aucun motif n’arrive aux décodeurs, en rose."
       },
       "compass": {
         "goal": "Les élèves constatent qu’un anneau de neurones garde l’orientation de la mouche sous la forme d’une seule tache d’activité, et que l’inhibition exercée par les neurones en anneau maintient cette tache en place.",
@@ -987,7 +1184,15 @@
             "a": "Pourquoi la bosse a-t-elle dérivé quand les neurones en anneau ont été réduits au silence ?",
             "b": "Pourquoi l’anneau est-il une bonne forme pour des cellules qui gardent la trace d’une direction ?"
           }
-        }
+        },
+        "story": "{name} file vers une fente de lumière, un courant d’air le fait tourner, et il reprend son cap. L’histoire amène la question : comment un cerveau sait-il de quel côté son corps est tourné ?",
+        "levels": {
+          "fly": "La mouche n’a ni carte ni GPS. De quoi pourrait-elle se servir pour garder un cap bien droit ?",
+          "brain": "Quels sens une boussole logée ici devrait-elle écouter ?",
+          "circuit": "Ces cellules forment un anneau. Pourquoi un anneau serait-il une bonne forme pour une boussole ?",
+          "neuron": "Voici une cellule d’orientation. Si elle s’active, que dit-elle, à votre avis, sur le côté vers lequel la mouche est tournée ?"
+        },
+        "predictWhy": "Les cellules d’orientation continuent de s’activer, donc la bosse ne disparaît pas. Sans repères pour l’accrocher, elle quitte sa place et se met à errer."
       },
       "escape": {
         "goal": "Les élèves suivent un réflexe des yeux jusqu’aux muscles des pattes en 30 millisecondes environ, et montrent que la fuite rapide dépend d’un seul maillon : la fibre géante.",
@@ -1039,8 +1244,19 @@
             "a": "Pourquoi les neurones du saut sont-ils restés éteints, alors que la mouche a vu le tue-mouches ?",
             "b": "Quelles caractéristiques de cette voie rendent la fuite si rapide ?"
           }
-        }
+        },
+        "story": "{name} se repose quand un tue-mouches s’abat sur lui, et il se met hors de portée d’un saut en 30 millisecondes environ. L’histoire amène la question : qu’est-ce qui, dans un cerveau, peut être aussi rapide ?",
+        "levels": {
+          "fly": "De quelles parties de ce corps la mouche a-t-elle besoin pour s’échapper ?",
+          "brain": "Le signal part des yeux et arrive aux pattes. Par où doit-il passer en chemin ?",
+          "circuit": "Des centaines de cellules bleues, et une seule ligne rouge. Que remarquez-vous sur le trajet ?",
+          "neuron": "Cette cellule est étonnamment épaisse. En quoi un gros fil aiderait-il à fuir vite ?"
+        },
+        "predictWhy": "Les neurones d’approche s’activent toujours, donc la mouche voit le tue-mouches, mais comme la fibre géante se tait, le signal n’arrive jamais aux neurones du saut, et ils restent éteints."
       }
     }
+  },
+  "character": {
+    "name": "Dror"
   }
 }

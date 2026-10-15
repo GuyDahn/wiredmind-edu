@@ -10,6 +10,12 @@
     "output neurons",
     "mushroom body"
   ],
+  "story": {
+    "panels": ["ripe", "sniff", "recall", "land"]
+  },
+  "journey": {
+    "neuron": "mbon"
+  },
   "steps": [
     {
       "id": "send",
@@ -59,7 +65,23 @@
         "colorGroup": "kc",
         "on": true
       },
-      "puff": "orn"
+      "puff": "orn",
+      "predict": {
+        "choices": [
+          {
+            "id": "all",
+            "correct": false
+          },
+          {
+            "id": "pink",
+            "correct": true
+          },
+          {
+            "id": "none",
+            "correct": false
+          }
+        ]
+      }
     },
     {
       "id": "restore",

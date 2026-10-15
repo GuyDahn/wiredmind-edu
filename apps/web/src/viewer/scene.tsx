@@ -18,6 +18,7 @@ import {
   SphereGeometry,
   Vector3,
   type InstancedMesh,
+  type LineSegments,
 } from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { TICK_MS } from "../sim/index.js";
@@ -26,6 +27,8 @@ import { drainCommands, setPoker, type ViewerCommand } from "./commands.js";
 import { activityByGroup, FLASH_DECAY_MS } from "./flash.js";
 import { frameBox, frameSphere, type Box, type Point3 } from "./fit.js";
 import { writeFocus } from "./groups.js";
+import { groupColor } from "./module.js";
+import { JourneyRig, type JourneyState } from "./journey-rig.js";
 import {
   boxForGroups,
   loadError,
@@ -48,7 +51,14 @@ const PUBLISH_MS = 100;
 /** A little margin around whatever the camera fits: the frame, not the text. */
 const FRAME_PADDING = 1.08;
 
-const CAMERA_DIRECTION = new Vector3(0.72, 0.42, 0.86).normalize();
+/**
+ * MaleCNS runs +y toward the fly's belly and +z toward its tail, so the
+ * camera's up is -y and it sits ahead of the fly, to its side and a little
+ * above: the brain upright, the nerve cord trailing down and away, the same
+ * way up as the body the zoom journey shows it in.
+ */
+const CAMERA_UP: [number, number, number] = [0, -1, 0];
+const CAMERA_DIRECTION = new Vector3(0.72, -0.42, -0.86).normalize();
 const CAMERA_DIRECTION_XYZ: Point3 = {
   x: CAMERA_DIRECTION.x,
   y: CAMERA_DIRECTION.y,
@@ -77,8 +87,21 @@ function ignoreRaycast() {
   return undefined;
 }
 
-export default function Scene({ module }: { module: ModuleSpec }) {
+export default function Scene({
+  module,
+  journeyGroup,
+}: {
+  module: ModuleSpec;
+  /** Color group the zoom journey picks its one neuron from. */
+  journeyGroup: string;
+}) {
   const [model, setModel] = useState<LoadedCircuit | null>(null);
+  const opening = useViewerStore((state) => state.chapter !== "lesson");
+
+  // The body is a small file, fetched while the story is still being read.
+  useEffect(() => {
+    if (opening) void import("./fly-body.js").then((body) => body.openBody());
+  }, [opening]);
 
   useEffect(() => {
     let active = true;
@@ -124,12 +147,24 @@ export default function Scene({ module }: { module: ModuleSpec }) {
       flat
       frameloop="demand"
       dpr={[1, 1.5]}
-      camera={{ fov: 42, near: 0.1, far: 8000, position: [0, 0, 800] }}
+      camera={{
+        fov: 42,
+        near: 0.1,
+        far: 8000,
+        position: [0, 0, -800],
+        up: CAMERA_UP,
+      }}
       gl={{ antialias: true, alpha: false }}
       className="h-full w-full touch-none"
     >
       <color attach="background" args={["#09090b"]} />
-      {model ? <CircuitView model={model} module={module} /> : null}
+      {model ? (
+        <CircuitView
+          model={model}
+          module={module}
+          journeyGroup={journeyGroup}
+        />
+      ) : null}
     </Canvas>
   );
 }
@@ -137,9 +172,11 @@ export default function Scene({ module }: { module: ModuleSpec }) {
 function CircuitView({
   model,
   module,
+  journeyGroup,
 }: {
   model: LoadedCircuit;
   module: ModuleSpec;
+  journeyGroup: string;
 }) {
   const camera = useThree((state) => state.camera);
   const gl = useThree((state) => state.gl);
@@ -147,6 +184,9 @@ function CircuitView({
   const invalidate = useThree((state) => state.invalidate);
   const orbitRef = useRef<OrbitControls | null>(null);
   const dotsRef = useRef<InstancedMesh>(null);
+  const linesRef = useRef<LineSegments>(null);
+  const journey = useViewerStore((state) => state.chapter === "journey");
+  const journeyState = useRef<JourneyState>({ flying: false });
   const fittedAspect = useRef<number | null>(null);
   const fittedDistance = useRef<number | null>(null);
   const modelMs = useRef(1);
@@ -171,6 +211,8 @@ function CircuitView({
     (force: boolean) => {
       const perspective = camera as PerspectiveCamera;
       if (perspective.isPerspectiveCamera !== true) return;
+      // The zoom journey flies the camera itself.
+      if (useViewerStore.getState().chapter === "journey") return;
       const view = sizeRef.current;
       if (view.width < 2 || view.height < 2) return;
       const aspect = view.width / view.height;
@@ -244,6 +286,12 @@ function CircuitView({
     placeCamera(false);
   }, [placeCamera, size.width, size.height]);
 
+  // No spikes yet, so no dots: an instanced mesh draws all of them, at the
+  // origin, until it is told how many there are.
+  useLayoutEffect(() => {
+    if (dotsRef.current) dotsRef.current.count = 0;
+  }, [model]);
+
   // Whatever ran on this circuit before (it is cached across pages) is not
   // part of the next recording. The lesson or replay resets it next.
   useEffect(() => {
@@ -278,8 +326,18 @@ function CircuitView({
     };
   }, [camera, gl, invalidate, placeCamera]);
 
+  // Back from the journey: the lesson's own highlight and framing again.
+  useEffect(() => {
+    if (journey) return;
+    const store = useViewerStore.getState();
+    writeFocus(model.focus, model.session.groups, store.focus);
+    model.focusTexture.needsUpdate = true;
+    placeCamera(true);
+  }, [journey, model, placeCamera]);
+
   useEffect(() => {
     const paint = (focus: readonly string[]) => {
+      if (useViewerStore.getState().chapter === "journey") return;
       writeFocus(model.focus, model.session.groups, focus);
       model.focusTexture.needsUpdate = true;
       invalidate();
@@ -349,7 +407,9 @@ function CircuitView({
 
   useFrame((_, delta) => {
     if (failed.current) return;
-    const moving = orbitRef.current?.update() ?? false;
+    const moving = journeyState.current.flying
+      ? false
+      : (orbitRef.current?.update() ?? false);
     let busy = moving;
     try {
       if (!document.hidden) {
@@ -461,7 +521,20 @@ function CircuitView({
 
   return (
     <group>
+      {journey ? (
+        <JourneyRig
+          model={model}
+          group={journeyGroup}
+          circuit={module.circuit}
+          color={groupColor(module, journeyGroup)}
+          direction={CAMERA_DIRECTION}
+          orbit={orbitRef}
+          lines={linesRef}
+          state={journeyState}
+        />
+      ) : null}
       <lineSegments
+        ref={linesRef}
         geometry={model.geometry}
         material={model.material}
         raycast={ignoreRaycast}

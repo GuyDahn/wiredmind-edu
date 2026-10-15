@@ -28,6 +28,8 @@ export type LoadedCircuit = {
   focus: Uint8Array;
   focusTexture: ReturnType<typeof createFlashTexture>;
   paths: NeuronPaths;
+  /** Neuron index of each MaleCNS body id. */
+  indexOfBody: ReadonlyMap<number, number>;
   bounds: Box3;
   /** What the camera fits at the start: the module's frame groups, or everything. */
   frameBounds: Box3;
@@ -172,6 +174,7 @@ async function loadCircuit(module: ModuleSpec): Promise<LoadedCircuit> {
     focus,
     focusTexture,
     paths: built.paths,
+    indexOfBody: bodyIndex(neurons),
     bounds: built.bounds,
     frameBounds:
       boxForGroups(built.paths, assigned.groups, module.frame) ?? built.bounds,
@@ -426,7 +429,8 @@ type DracoFileDecoder = {
   ): Promise<unknown>;
 };
 
-function decodePosition(
+/** One Draco mesh: its positions, and its triangles if it has any. */
+export function decodePosition(
   draco: DRACOLoader,
   bytes: ArrayBuffer,
   positionId: number,

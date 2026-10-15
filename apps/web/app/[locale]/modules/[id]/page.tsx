@@ -14,7 +14,8 @@ import { SiteMenu } from "@/src/site/header";
 import { LESSON_ABOUT_ID, LessonAbout } from "@/src/site/lesson-about";
 import { jsonLdScript, lessonJsonLd, pageJsonLd } from "@/src/site/json-ld";
 import { pageMetadata, shareImagePath } from "@/src/site/page-meta";
-import { SITE_NAME } from "@/src/site/site";
+import { SiteLink } from "@/src/site/rich-text";
+import { LINKS, SITE_NAME } from "@/src/site/site";
 import { findLesson, LESSONS } from "@/src/viewer/modules";
 import { Viewer } from "@/src/viewer/viewer";
 
@@ -63,6 +64,7 @@ export default async function LessonPage({
   const messages = pick((await getMessages()) as MessageTree, [
     "viewer",
     "terms",
+    "character",
     "language",
     "translate",
     ...LESSONS.map((other) => `lessons.${other.id}.title`),
@@ -80,6 +82,16 @@ export default async function LessonPage({
           credit={
             <>
               <LessonCredits locale={locale} />
+              {/* The body in the zoom is someone else's work too. Names only,
+                  so it reads the same in every language. */}
+              <p className="mt-2" data-body-credit="">
+                {t("viewer.journey.levels.fly")}
+                {": "}
+                <SiteLink href={LINKS.neuroMechFly} newTab={t("a11y.newTab")}>
+                  {"NeuroMechFly v2"}
+                </SiteLink>
+                {" (EPFL), Apache-2.0"}
+              </p>
               {/* The viewer fills the screen and keeps the mouse wheel, so
                   this is the way down to the lesson in words. */}
               <a

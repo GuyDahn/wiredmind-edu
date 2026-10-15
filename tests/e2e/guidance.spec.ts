@@ -1,9 +1,10 @@
 import { expect, test, type Page } from "@playwright/test";
 import { measureOverflow } from "./layout.js";
+import { journey, skipStory, story, toMission } from "./lesson.js";
 
 /**
  * What a teacher with no training leans on: the "How to read this brain"
- * intro, the color key, the term explanations, the "Show me" walkthrough,
+ * intro behind the "?" button, the color key, the term explanations, the "Show me" walkthrough,
  * and class mode. And the promise on the about page: none of it sets a
  * cookie or writes to storage.
  */
@@ -14,11 +15,10 @@ const PHONE = { width: 390, height: 844 };
 const intro = (page: Page) => page.locator("[data-intro-screen]");
 const skip = (page: Page) => page.locator("[data-intro-skip]");
 
-/** The lesson, past its intro, with the circuit loaded. */
+/** The lesson, past its story and zoom, with the circuit loaded. */
 async function openLesson(page: Page, path: string) {
   await page.goto(path);
-  await expect(intro(page)).toBeVisible();
-  await skip(page).click();
+  await toMission(page);
   await expect(intro(page)).toHaveCount(0);
   await expect(page.locator("[data-cue]").first()).toBeEnabled({
     timeout: 60_000,
@@ -37,11 +37,14 @@ const NOTHING = { cookie: "", local: 0, session: 0 };
 
 test.describe("how to read this brain", () => {
   for (const lesson of LESSONS) {
-    test(`opens on ${lesson}, skips in one tap, and reopens from "?"`, async ({
+    test(`opens from "?" on ${lesson}, skips in one tap, and reopens`, async ({
       page,
     }) => {
       await page.setViewportSize(DESKTOP);
       await page.goto(`/he/modules/${lesson}`);
+      await toMission(page);
+      await expect(intro(page)).toHaveCount(0);
+      await page.locator("[data-intro-open]").click();
       await expect(intro(page)).toHaveAttribute("data-intro-screen", "lines");
       await expect(page.locator('[data-spotlight="canvas"]')).toBeVisible();
       await skip(page).click();
@@ -61,15 +64,17 @@ test.describe("how to read this brain", () => {
       await expect(intro(page)).toHaveAttribute("data-intro-screen", "time");
       await next.click();
       await expect(intro(page)).toHaveCount(0);
-      // It shows again the next time the lesson starts: nothing remembers it.
+      // The lesson starts from its story again: nothing remembers a visit.
       await page.reload();
-      await expect(intro(page)).toBeVisible();
+      await expect(story(page)).toBeVisible();
       expect(await stored(page)).toEqual(NOTHING);
     });
   }
 
   test("closes on Escape", async ({ page }) => {
     await page.goto("/en/modules/escape");
+    await toMission(page);
+    await page.locator("[data-intro-open]").click();
     await expect(intro(page)).toBeVisible();
     await page.keyboard.press("Escape");
     await expect(intro(page)).toHaveCount(0);
@@ -83,6 +88,7 @@ test.describe("color key", () => {
     }) => {
       await page.setViewportSize(DESKTOP);
       await page.goto(`/he/modules/${lesson}`);
+      await toMission(page);
       const rows = page.locator('[data-intro="legend"] li');
       await expect(rows.first()).toBeVisible();
       // Every group, and the row that says what a glow means.
@@ -208,7 +214,7 @@ test.describe("class mode", () => {
       // The plain link from the teacher guide opens the plain lesson too.
       await page.goto(`/he/teachers/${lesson}`);
       await page.locator(`main a[href="/he/modules/${lesson}"]`).click();
-      await expect(intro(page)).toBeVisible();
+      await expect(story(page)).toBeVisible();
       await expect(page.locator('[data-mode="class"]')).toHaveCount(0);
       await expect(page).not.toHaveURL(/mode=class/);
     });
@@ -249,7 +255,7 @@ test.describe("class mode", () => {
     expect(await stored(page)).toEqual(NOTHING);
     await page.reload();
     await expect(page.locator('[data-mode="class"]')).toHaveCount(1);
-    await page.locator("[data-intro-skip]").click();
+    await toMission(page);
     await page.locator("[data-class-mode]").click();
     await expect(page).not.toHaveURL(/mode=class/);
     await expect(page.locator('[data-mode="class"]')).toHaveCount(0);
@@ -262,9 +268,14 @@ test("none of it sets a cookie or a storage key", async ({ page }) => {
   await page.setViewportSize(DESKTOP);
   await page.goto("/he/modules/escape");
   expect(await stored(page)).toEqual(NOTHING);
-  await page.locator("[data-intro-next]").click();
-  await skip(page).click();
+  await page.locator("[data-story-next]").click();
+  await skipStory(page);
+  await page.locator("[data-journey-next]").click();
+  await page.locator('[data-journey-jump="neuron"]').click();
+  await page.locator("[data-journey-next]").click();
+  await expect(journey(page)).toHaveCount(0);
   await page.locator("[data-intro-open]").click();
+  await page.locator("[data-intro-next]").click();
   await skip(page).click();
   await page.locator('[data-intro="legend"] button').click();
   await page.locator("[data-class-mode]").click();
@@ -287,7 +298,7 @@ test("none of it sets a cookie or a storage key", async ({ page }) => {
 test.describe("no sideways scroll at 390 px, right to left", () => {
   for (const locale of ["he", "ar"]) {
     for (const lesson of LESSONS) {
-      test(`${locale} ${lesson}: intro, color key, and class mode`, async ({
+      test(`${locale} ${lesson}: story, zoom, intro, color key, and class mode`, async ({
         page,
       }) => {
         await page.setViewportSize(PHONE);
@@ -298,7 +309,28 @@ test.describe("no sideways scroll at 390 px, right to left", () => {
           expect(offenders, `${what}\n${offenders.join("\n")}`).toEqual([]);
           expect(scrollWidth, what).toBeLessThanOrEqual(width);
         };
+        // Every story panel, and the sentence that leads into the zoom.
+        await expect(story(page)).toBeVisible();
+        for (let panel = 0; panel < 7; panel++) {
+          await check(`story panel ${panel + 1}`);
+          if ((await story(page).getAttribute("data-story")) === "bridge") {
+            break;
+          }
+          await page.locator("[data-story-next]").click();
+        }
+        await page.locator("[data-story-next]").click();
+        // Every level of the zoom.
+        for (const level of ["fly", "brain", "circuit", "neuron"]) {
+          await expect(journey(page)).toHaveAttribute(
+            "data-journey-level",
+            level,
+          );
+          await check(`zoom: ${level}`);
+          await page.locator("[data-journey-next]").click();
+        }
+        await expect(journey(page)).toHaveCount(0);
         // Every intro screen, the key held open by class mode throughout.
+        await page.locator("[data-intro-open]").click();
         const next = page.locator("[data-intro-next]");
         for (const screen of ["lines", "colors", "buttons", "time"]) {
           await expect(intro(page)).toHaveAttribute(

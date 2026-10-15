@@ -1,0 +1,40 @@
+{
+  "clips": [
+    {
+      "id": "escape",
+      "src": "/hero/escape.webm",
+      "poster": "/hero/escape.webp",
+      "duration": 1.9,
+      "caption": "escape",
+      "credit": "WiredMind · MaleCNS v1.0, CC BY 4.0",
+      "creditUrl": "/modules/escape"
+    },
+    {
+      "id": "compass",
+      "src": "/hero/compass.webm",
+      "poster": "/hero/compass.webp",
+      "duration": 1.9,
+      "caption": "compass",
+      "credit": "WiredMind · MaleCNS v1.0, CC BY 4.0",
+      "creditUrl": "/modules/compass"
+    },
+    {
+      "id": "smell",
+      "src": "/hero/smell.webm",
+      "poster": "/hero/smell.webp",
+      "duration": 1.9,
+      "caption": "smell",
+      "credit": "WiredMind · MaleCNS v1.0, CC BY 4.0",
+      "creditUrl": "/modules/smell-memory"
+    },
+    {
+      "id": "zoom",
+      "src": "/hero/zoom.webm",
+      "poster": "/hero/zoom.webp",
+      "duration": 1.9,
+      "caption": "zoom",
+      "credit": "WiredMind · NeuroMechFly body, Apache-2.0 · MaleCNS v1.0, CC BY 4.0",
+      "creditUrl": "/modules/escape"
+    }
+  ]
+}

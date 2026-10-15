@@ -109,7 +109,12 @@
       "lead": "Cada lección se completa en unos pocos toques. Los estudiantes estimulan y silencian tipos de células reales, responden una pregunta y luego exploran por su cuenta.",
       "lesson": "Lección {number}",
       "meta": "{steps, plural, one {# paso} many {# pasos} other {# pasos}} y una pregunta · unos 10 minutos",
-      "start": "Empezar la lección {number}"
+      "start": "Empezar la lección {number}",
+      "mission": "Misión {number}",
+      "mapLabel": "Mapa de misiones",
+      "done": "Completada",
+      "todo": "Aún sin completar",
+      "mapNote": "Las misiones completadas quedan marcadas aquí hasta que recargues la página. No se guarda nada."
     },
     "teachers": {
       "title": "Para docentes",
@@ -147,6 +152,18 @@
       "guidesLead": "Cada lección tiene una guía docente con un plan de 45 minutos y una hoja de trabajo para imprimir.",
       "guide": "Guía docente",
       "worksheet": "Hoja de trabajo"
+    },
+    "montage": {
+      "label": "Clips breves de las lecciones",
+      "pause": "Pausar los clips",
+      "play": "Reproducir los clips",
+      "credit": "Clip: {credit}",
+      "clips": {
+        "escape": "La señal de escape, de los ojos a las patas",
+        "compass": "El pico de actividad de la brújula girando",
+        "smell": "Un olor, un pequeño patrón de células",
+        "zoom": "De la mosca entera hasta una sola neurona"
+      }
     }
   },
   "about": {
@@ -264,7 +281,15 @@
         },
         "silence": {
           "text": "Ahora silencia las <kenyon>células de Kenyon</kenyon> <gloss>(clasificadoras de olores)</gloss>. Nosotros enviaremos el olor por ti. ¿Qué desaparece?",
-          "result": "La luz rosa casi desaparece. El olor sigue entrando, pero las lectoras de recuerdos no reciben nada que leer."
+          "result": "La luz rosa casi desaparece. El olor sigue entrando, pero las lectoras de recuerdos no reciben nada que leer.",
+          "predict": {
+            "question": "Las clasificadoras de olores están a punto de quedar en silencio. ¿Qué se quedará a oscuras?",
+            "choices": {
+              "all": "Todo. No se ilumina ningún color.",
+              "pink": "Solo las lectoras de recuerdos, las rosas.",
+              "none": "Nada. Todos los colores se siguen iluminando."
+            }
+          }
         },
         "restore": {
           "text": "Toca otra vez el botón de las <kenyon>células de Kenyon</kenyon> <gloss>(clasificadoras de olores)</gloss> para volver a encenderlas. Enviaremos el mismo olor.",
@@ -291,6 +316,38 @@
       "freePlay": {
         "title": "Exploración libre",
         "text": "Ahora funcionan todos los botones. Primero adivina y luego toca: ¿qué se queda a oscuras si silencias a las mensajeras amarillas del olor? Intenta silenciar dos colores a la vez."
+      },
+      "mission": {
+        "goal": "Encuentra las células que guardan el recuerdo de un olor en la mosca.",
+        "win": "Las encontraste. Las clasificadoras de olores convierten cada olor en un patrón, y las lectoras de recuerdos lo leen. Sin el patrón no hay nada que recordar."
+      },
+      "story": {
+        "panels": {
+          "ripe": {
+            "caption": "Un durazno lleva todo el día madurando en el alféizar. Su olor se escapa por la ventana abierta.",
+            "bubble": "Algo huele bien."
+          },
+          "sniff": {
+            "caption": "Las antenas de {name} atrapan unas pocas moléculas. Una mosca no necesita más.",
+            "bubble": "¡Conozco este olor!"
+          },
+          "recall": {
+            "caption": "La semana pasada, este mismo olor llevó a {name} hasta la comida. Su cerebro guardó un rastro.",
+            "bubble": "Durazno significa cena."
+          },
+          "land": {
+            "caption": "{name} gira contra el viento y sigue el olor hasta el durazno.",
+            "bubble": "Lo encontré. Otra vez."
+          }
+        },
+        "ending": {
+          "caption": "El olor encendió unas pocas clasificadoras de olores. Las lectoras de recuerdos sabían qué significaba ese patrón.",
+          "bubble": "¡Así que así es como recuerdo!"
+        }
+      },
+      "journey": {
+        "circuit": "Estas células de colores llevan un olor desde las antenas hasta la memoria de la mosca.",
+        "neuron": "Una lectora de recuerdos, una sola célula. El punto brillante es un disparo, la señal que envía."
       }
     },
     "compass": {
@@ -309,7 +366,15 @@
         },
         "silence": {
           "text": "Silencia las <ring>neuronas del anillo</ring> <gloss>(portadoras de referencias)</gloss>. Traen lo que ve la mosca. Nosotros enviaremos la señal de la derecha por ti.",
-          "result": "El pico se sale de su sitio y deambula. Sin puntos de referencia, la brújula va a la deriva."
+          "result": "El pico se sale de su sitio y deambula. Sin puntos de referencia, la brújula va a la deriva.",
+          "predict": {
+            "question": "Las portadoras de referencias están a punto de quedar en silencio. ¿Qué hará el pico de actividad?",
+            "choices": {
+              "vanish": "Desaparecerá.",
+              "drift": "Se saldrá de su sitio y deambulará.",
+              "hold": "Se quedará exactamente donde está."
+            }
+          }
         },
         "restore": {
           "text": "Toca otra vez el botón de las <ring>neuronas del anillo</ring> <gloss>(portadoras de referencias)</gloss> para volver a encenderlas. Enviaremos la misma señal.",
@@ -336,6 +401,38 @@
       "freePlay": {
         "title": "Exploración libre",
         "text": "Ahora funcionan todos los botones. Primero adivina y luego toca: ¿adónde va el pico si activas las dos señales de giro a la vez? Pruébalo con las células violetas silenciadas."
+      },
+      "mission": {
+        "goal": "Encuentra qué mantiene bien orientada la brújula de la mosca.",
+        "win": "Lo encontraste. Las señales de giro empujan el pico de actividad alrededor de la brújula, y las portadoras de referencias lo fijan a lo que ve la mosca. Sin ellas, la brújula va a la deriva."
+      },
+      "story": {
+        "panels": {
+          "dawn": {
+            "caption": "Es de mañana. La luz entra por una rendija de la persiana, y {name} quiere salir.",
+            "bubble": "Por ahí."
+          },
+          "heading": {
+            "caption": "{name} sale hacia la luz. Dentro de su cerebro, una brújula marca hacia dónde mira.",
+            "bubble": "Luz al frente. Que no se mueva."
+          },
+          "gust": {
+            "caption": "Una corriente de aire lo empuja de lado. La luz se desliza hacia un costado.",
+            "bubble": "¡Uy! Me giré."
+          },
+          "hold": {
+            "caption": "Ve dónde está ahora la luz y corrige el rumbo, directo por la rendija.",
+            "bubble": "De vuelta al rumbo."
+          }
+        },
+        "ending": {
+          "caption": "Las señales de giro mueven la brújula. Lo que {name} ve la mantiene en su sitio.",
+          "bubble": "¡Mi propia brújula!"
+        }
+      },
+      "journey": {
+        "circuit": "Este anillo de células es la brújula de la mosca, junto con las células que la hacen girar y las que la estabilizan.",
+        "neuron": "Una célula del rumbo. El punto brillante es un disparo, la señal que envía."
       }
     },
     "escape": {
@@ -354,7 +451,15 @@
         },
         "silence": {
           "text": "Ahora silencia la <giantfiber>fibra gigante</giantfiber> <gloss>(cable de escape)</gloss>. Nosotros enviaremos el matamoscas. Mira las <jump>neuronas del salto</jump> <gloss>(pateadoras)</gloss>.",
-          "result": "Las <looming>neuronas de aproximación</looming> <gloss>(vigías del matamoscas)</gloss> siguen disparando, pero las <jump>neuronas del salto</jump> se quedan a oscuras. Ya no hay escape rápido."
+          "result": "Las <looming>neuronas de aproximación</looming> <gloss>(vigías del matamoscas)</gloss> siguen disparando, pero las <jump>neuronas del salto</jump> se quedan a oscuras. Ya no hay escape rápido.",
+          "predict": {
+            "question": "El cable de escape está a punto de quedar en silencio. ¿Qué harán las pateadoras?",
+            "choices": {
+              "fire": "Disparar, igual que antes.",
+              "dark": "Quedarse a oscuras.",
+              "late": "Disparar, pero más tarde."
+            }
+          }
         },
         "restore": {
           "text": "Toca otra vez el botón de la <giantfiber>fibra gigante</giantfiber> <gloss>(cable de escape)</gloss> para volver a encenderla. Enviaremos el mismo matamoscas.",
@@ -381,6 +486,38 @@
       "freePlay": {
         "title": "Exploración libre",
         "text": "Ahora funcionan todos los botones. Primero adivina y luego toca: con el cable de escape silenciado, ¿qué colores se siguen iluminando? Después intenta silenciar a las vigías del matamoscas en su lugar."
+      },
+      "mission": {
+        "goal": "Encuentra el cable que salva a la mosca.",
+        "win": "Lo encontraste. Las vigías del matamoscas disparan, el cable de escape lleva la alarma por el cordón nervioso y las pateadoras saltan. Si cortas el cable, se acaba el escape rápido."
+      },
+      "story": {
+        "panels": {
+          "rest": {
+            "caption": "{name} se limpia las alas en el borde de un vaso. La cocina está en silencio.",
+            "bubble": "Qué tranquilidad."
+          },
+          "shadow": {
+            "caption": "Una sombra crece rápido en sus ojos. Algo grande viene directo hacia él.",
+            "bubble": "Oh, oh."
+          },
+          "leap": {
+            "caption": "Sus patas medias patean antes de que caiga el matamoscas. De verlo a saltar: unos 30 milisegundos.",
+            "bubble": "¡Salta!"
+          },
+          "safe": {
+            "caption": "El matamoscas golpea un vaso vacío. {name} ya está al otro lado de la cocina.",
+            "bubble": "Fallaste."
+          }
+        },
+        "ending": {
+          "caption": "Un solo cable grueso llevó la alarma de sus ojos a sus patas. Por ese cable, {name} escapó.",
+          "bubble": "Gracias, fibra gigante."
+        }
+      },
+      "journey": {
+        "circuit": "Este es el circuito de escape: desde los ojos, por un solo cable, hasta las patas.",
+        "neuron": "Esta es la fibra gigante, una sola célula. El punto brillante es un disparo que la recorre a toda velocidad."
       }
     }
   },
@@ -590,6 +727,48 @@
       "playing": "Te mostramos cómo funciona",
       "upNext": "Ahora tocamos {action}: {name}",
       "stop": "Parar y tomar el control"
+    },
+    "story": {
+      "label": "La historia",
+      "skip": "Saltar la historia",
+      "back": "Atrás",
+      "next": "Siguiente",
+      "progress": "Viñeta {number} de {total}",
+      "bridge": "Ahora veamos qué pasó dentro de su cerebro.",
+      "zoom": "Acercar",
+      "says": "{name} dice:"
+    },
+    "journey": {
+      "label": "El zoom",
+      "open": "Hacer zoom desde la mosca entera hasta una neurona",
+      "progress": "Nivel {number} de {total}",
+      "levels": {
+        "label": "Niveles de zoom",
+        "fly": "Mosca",
+        "brain": "Cerebro",
+        "circuit": "Circuito",
+        "neuron": "Neurona"
+      },
+      "captions": {
+        "fly": "Una mosca de la fruta, de unos 3 mm de largo. Este cuerpo se modeló a partir del escaneo de una mosca real.",
+        "brain": "Dentro de la cabeza está el cerebro. Este se cartografió, célula a célula, a partir de otra mosca real."
+      },
+      "out": "Alejar",
+      "in": "Acercar",
+      "start": "Empezar la misión",
+      "resume": "Volver a la misión",
+      "skip": "Saltar a la misión"
+    },
+    "mission": {
+      "label": "Misión {number}",
+      "predictLabel": "Predice antes de tocar",
+      "predictFirst": "Elige lo que crees que va a pasar. Después aparecerá el botón.",
+      "predictHeld": "Tu predicción se cumplió.",
+      "predictSurprise": "El cerebro hizo otra cosa. Para eso están los experimentos.",
+      "finish": "Terminar la misión",
+      "winTitle": "Misión {number} completada",
+      "nextMission": "Siguiente misión: {title}",
+      "map": "Ver el mapa de misiones"
     }
   },
   "errors": {
@@ -816,7 +995,9 @@
       "guide": "Guía docente",
       "worksheet": "Hoja de trabajo del estudiante",
       "demo": "Mostrarla a la clase",
-      "generalTerms": "Términos básicos"
+      "generalTerms": "Términos básicos",
+      "companionTitle": "Un curso complementario",
+      "companion": "Muchos estudiantes que cursan 5 unidades de Biología también siguen el curso gratuito de la Universidad de Tel Aviv <campusil>El cerebro: la máquina más maravillosa de todas</campusil> en Campus IL, impartido por el Prof. Yossi Yovel y el Prof. Yaniv Assaf. El curso enseña a fondo las neuronas, los potenciales de acción y las sinapsis, y estas lecciones son un complemento práctico. WiredMind es un proyecto independiente. No está afiliado al curso, a la universidad ni a Campus IL."
     },
     "topics": {
       "excitation": "Excitación e inhibición",
@@ -865,7 +1046,15 @@
       "realMore": "La lista completa, con cifras",
       "termsTitle": "Términos clave",
       "curriculumTitle": "Relación con el currículo",
-      "curriculumPending": "Esta sección aún no está completa. La correspondencia con el currículo oficial de Biología se está confirmando con docentes de la materia."
+      "curriculumPending": "Esta sección aún no está completa. La correspondencia con el currículo oficial de Biología se está confirmando con docentes de la materia.",
+      "storyTitle": "La historia",
+      "storyHow": "La lección empieza con un cómic breve sobre {name}, la mosca. Lee las viñetas en voz alta o deja que las lean los estudiantes; lleva más o menos un minuto. La última viñeta vuelve a aparecer en la pantalla final.",
+      "journeyTitle": "El zoom de la mosca a la neurona",
+      "journeyHow": "Proyecta la lección. Haz una pausa en cada uno de los cuatro niveles y plantea su pregunta antes de acercar. Los botones de nivel saltan a cualquier nivel, y el botón de la lupa vuelve a abrir el zoom en cualquier momento de la lección.",
+      "journeyNote": "El cuerpo y el cerebro provienen de dos moscas distintas, mostradas juntas a su tamaño real. Díselo a la clase.",
+      "predictTitle": "La predicción",
+      "predictHow": "Antes del paso de silenciar, los estudiantes eligen lo que creen que va a pasar. Primero pide que voten a mano alzada. No se puntúa nada, y equivocarse no cuesta nada.",
+      "predictExpected": "Respuesta esperada"
     },
     "worksheet": {
       "eyebrow": "Hoja de trabajo del estudiante · Lección {number}",
@@ -935,7 +1124,15 @@
             "a": "¿Por qué se quedaron a oscuras las células rosas cuando silenciaste las azules, si el olor seguía entrando?",
             "b": "¿En qué parte de este circuito creen los científicos que se guarda el recuerdo de un olor?"
           }
-        }
+        },
+        "story": "{name} huele un durazno maduro, reconoce el olor de la última vez que lo llevó hasta la comida y lo sigue contra el viento. La historia plantea la pregunta: ¿en qué parte del cerebro se guarda ese recuerdo?",
+        "levels": {
+          "fly": "¿En qué parte de este cuerpo buscarías una nariz?",
+          "brain": "El cerebro ocupa casi toda la cabeza. ¿Qué crees que ocupa tanto espacio en él?",
+          "circuit": "El olor entra por las células naranjas. ¿A qué color crees que llega al final?",
+          "neuron": "El punto es un disparo. ¿Cómo podría una sola célula avisar al resto del cerebro de un olor?"
+        },
+        "predictWhy": "Con las clasificadoras de olores en silencio, el olor sigue entrando, así que el naranja y el amarillo se iluminan, pero ningún patrón llega a las lectoras de recuerdos, las rosas."
       },
       "compass": {
         "goal": "Los estudiantes ven que un anillo de neuronas guarda el rumbo de la mosca como una única zona de actividad, y que la inhibición de las neuronas del anillo mantiene esa zona en su sitio.",
@@ -987,7 +1184,15 @@
             "a": "¿Por qué el pico se fue a la deriva cuando se silenciaron las neuronas del anillo?",
             "b": "¿Por qué un anillo es una buena forma para unas células que llevan la cuenta de la dirección?"
           }
-        }
+        },
+        "story": "{name} va hacia una rendija de luz, una corriente de aire lo hace girar y él corrige el rumbo. La historia plantea la pregunta: ¿cómo sabe un cerebro hacia dónde mira su cuerpo?",
+        "levels": {
+          "fly": "La mosca no tiene mapa ni GPS. ¿Qué podría usar para mantener un rumbo recto?",
+          "brain": "¿A qué sentidos tendría que prestar atención una brújula aquí dentro?",
+          "circuit": "Estas células forman un anillo. ¿Por qué un anillo podría ser una buena forma para una brújula?",
+          "neuron": "Esta es una célula del rumbo. Si dispara, ¿qué crees que dice sobre hacia dónde mira la mosca?"
+        },
+        "predictWhy": "Las células del rumbo siguen disparando, así que el pico de actividad no desaparece. Sin puntos de referencia que lo fijen, se sale de su sitio y deambula."
       },
       "escape": {
         "goal": "Los estudiantes siguen un reflejo desde los ojos hasta los músculos de las patas en unos 30 milisegundos, y comprueban que el escape rápido depende de un solo eslabón: la fibra gigante.",
@@ -1039,8 +1244,19 @@
             "a": "¿Por qué las neuronas del salto se quedaron a oscuras, si la mosca vio el matamoscas?",
             "b": "¿Qué características de esta vía hacen que el escape sea tan rápido?"
           }
-        }
+        },
+        "story": "{name} está descansando cuando un matamoscas se le viene encima, y se pone a salvo de un salto en unos 30 milisegundos. La historia plantea la pregunta: ¿qué puede ser tan rápido en un cerebro?",
+        "levels": {
+          "fly": "¿Qué partes de este cuerpo necesita la mosca para escapar?",
+          "brain": "La señal empieza en los ojos y termina en las patas. ¿Por dónde tiene que pasar en el camino?",
+          "circuit": "Cientos de células azules y una sola línea roja. ¿Qué te llama la atención del recorrido?",
+          "neuron": "Esta célula es inusualmente gruesa. ¿Por qué un cable grueso ayudaría a escapar rápido?"
+        },
+        "predictWhy": "Las neuronas de aproximación siguen disparando, así que la mosca ve el matamoscas, pero con la fibra gigante en silencio la señal nunca llega a las neuronas del salto, y estas se quedan a oscuras."
       }
     }
+  },
+  "character": {
+    "name": "Dror"
   }
 }

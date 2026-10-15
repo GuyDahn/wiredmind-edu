@@ -109,7 +109,12 @@
       "lead": "Każda lekcja to tylko kilka kliknięć. Uczniowie pobudzają i wyciszają prawdziwe typy komórek, odpowiadają na jedno pytanie, a potem eksperymentują na własną rękę.",
       "lesson": "Lekcja {number}",
       "meta": "{steps, plural, one {# krok} few {# kroki} many {# kroków} other {# kroku}} i pytanie · około 10 minut",
-      "start": "Zacznij lekcję {number}"
+      "start": "Zacznij lekcję {number}",
+      "mission": "Misja {number}",
+      "mapLabel": "Mapa misji",
+      "done": "Ukończona",
+      "todo": "Jeszcze nieukończona",
+      "mapNote": "Ukończone misje są tu zaznaczone do ponownego wczytania strony. Nic nie jest zapisywane."
     },
     "teachers": {
       "title": "Dla nauczycieli",
@@ -147,6 +152,18 @@
       "guidesLead": "Do każdej lekcji jest przewodnik dla nauczyciela z planem na 45 minut i karta pracy do wydrukowania.",
       "guide": "Przewodnik dla nauczyciela",
       "worksheet": "Karta pracy"
+    },
+    "montage": {
+      "label": "Krótkie klipy z lekcji",
+      "pause": "Wstrzymaj klipy",
+      "play": "Odtwórz klipy",
+      "credit": "Klip: {credit}",
+      "clips": {
+        "escape": "Sygnał ucieczki, od oczu do nóg",
+        "compass": "Górka kompasu krąży dookoła",
+        "smell": "Jeden zapach, mały wzór komórek",
+        "zoom": "Od całej muszki do jednego neuronu"
+      }
     }
   },
   "about": {
@@ -264,7 +281,15 @@
         },
         "silence": {
           "text": "Teraz wycisz <kenyon>komórki Kenyona</kenyon> <gloss>(sortery zapachów)</gloss>. Zapach wyślemy za ciebie. Co zniknie?",
-          "result": "Różowe światło prawie znika. Zapach wciąż dociera do mózgu, ale czytniki pamięci nie mają czego odczytać."
+          "result": "Różowe światło prawie znika. Zapach wciąż dociera do mózgu, ale czytniki pamięci nie mają czego odczytać.",
+          "predict": {
+            "question": "Sortery zapachów zaraz zostaną wyciszone. Co zgaśnie?",
+            "choices": {
+              "all": "Wszystko. Żaden kolor się nie zapali.",
+              "pink": "Tylko różowe czytniki pamięci.",
+              "none": "Nic. Każdy kolor nadal się zapali."
+            }
+          }
         },
         "restore": {
           "text": "Włącz z powrotem <kenyon>komórki Kenyona</kenyon> <gloss>(sortery zapachów)</gloss>: naciśnij jeszcze raz ich przycisk. Wyślemy ten sam zapach.",
@@ -291,6 +316,38 @@
       "freePlay": {
         "title": "Swobodne eksperymenty",
         "text": "Teraz działa każdy przycisk. Najpierw zgadnij, potem naciśnij: co zgaśnie, jeśli wyciszysz żółtych posłańców zapachu? Spróbuj wyciszyć dwa kolory naraz."
+      },
+      "mission": {
+        "goal": "Znajdź komórki, które przechowują pamięć zapachów muszki.",
+        "win": "Udało ci się je znaleźć. Sortery zapachów zamieniają każdy zapach we wzór, a czytniki pamięci go odczytują. Bez wzoru nie ma czego pamiętać."
+      },
+      "story": {
+        "panels": {
+          "ripe": {
+            "caption": "Brzoskwinia przez cały dzień dojrzewała na parapecie. Jej zapach ulatuje przez otwarte okno.",
+            "bubble": "Coś tu ładnie pachnie."
+          },
+          "sniff": {
+            "caption": "{name} łapie czułkami kilka jej cząsteczek. Muszce więcej nie trzeba.",
+            "bubble": "Znam ten zapach!"
+          },
+          "recall": {
+            "caption": "Tydzień temu {name} trafił za tym samym zapachem do jedzenia. Jego mózg zachował po nim ślad.",
+            "bubble": "Brzoskwinia znaczy kolacja."
+          },
+          "land": {
+            "caption": "{name} ustawia się pod wiatr i leci za zapachem aż do samej brzoskwini.",
+            "bubble": "Znalazłem. Znowu."
+          }
+        },
+        "ending": {
+          "caption": "Zapach zapalił kilka sorterów zapachów. Czytniki pamięci wiedziały, co ten wzór oznacza.",
+          "bubble": "Więc to tak pamiętam!"
+        }
+      },
+      "journey": {
+        "circuit": "Te kolorowe komórki niosą zapach od czułków do pamięci muszki.",
+        "neuron": "Jeden czytnik pamięci, pojedyncza komórka. Jasna kropka to impuls, czyli sygnał, który ta komórka wysyła."
       }
     },
     "compass": {
@@ -309,7 +366,15 @@
         },
         "silence": {
           "text": "Wycisz <ring>neurony pierścieniowe</ring> <gloss>(kurierów widoków)</gloss>. Dostarczają mózgowi to, co widzi muszka. Prawy sygnał wyślemy za ciebie.",
-          "result": "Górka zsuwa się ze swojego miejsca i wędruje. Bez punktów orientacyjnych kompas dryfuje."
+          "result": "Górka zsuwa się ze swojego miejsca i wędruje. Bez punktów orientacyjnych kompas dryfuje.",
+          "predict": {
+            "question": "Kurierzy widoków zaraz zostaną wyciszeni. Co zrobi górka?",
+            "choices": {
+              "vanish": "Zniknie.",
+              "drift": "Zsunie się ze swojego miejsca i zacznie wędrować.",
+              "hold": "Zostanie dokładnie tam, gdzie jest."
+            }
+          }
         },
         "restore": {
           "text": "Włącz z powrotem <ring>neurony pierścieniowe</ring> <gloss>(kurierów widoków)</gloss>: naciśnij jeszcze raz ich przycisk. Wyślemy ten sam sygnał.",
@@ -336,6 +401,38 @@
       "freePlay": {
         "title": "Swobodne eksperymenty",
         "text": "Teraz działa każdy przycisk. Najpierw zgadnij, potem naciśnij: dokąd pójdzie górka, jeśli pobudzisz oba sygnały skrętu naraz? Spróbuj też z wyciszonymi fioletowymi komórkami."
+      },
+      "mission": {
+        "goal": "Znajdź to, co pilnuje, żeby kompas muszki wskazywał dobrze.",
+        "win": "Udało ci się to znaleźć. Sygnały skrętu przesuwają górkę po kompasie, a kurierzy widoków przypinają ją do tego, co muszka widzi. Bez nich kompas dryfuje."
+      },
+      "story": {
+        "panels": {
+          "dawn": {
+            "caption": "Ranek. Światło wlewa się przez szparę w okiennicach, a {name} chce się wydostać.",
+            "bubble": "Tędy."
+          },
+          "heading": {
+            "caption": "{name} rusza w stronę światła. W jego mózgu kompas zaznacza, w którą stronę jest zwrócony.",
+            "bubble": "Światło na wprost. Tak trzymać."
+          },
+          "gust": {
+            "caption": "Przeciąg spycha go w bok. Światło ucieka na jedną stronę.",
+            "bubble": "Ojej. Obróciło mnie."
+          },
+          "hold": {
+            "caption": "Widzi, gdzie teraz jest światło, i wraca na kurs, prosto przez szparę.",
+            "bubble": "Znów na kursie."
+          }
+        },
+        "ending": {
+          "caption": "Sygnały skrętu obracają kompas. To, co widzi {name}, trzyma go w miejscu.",
+          "bubble": "Mój własny kompas!"
+        }
+      },
+      "journey": {
+        "circuit": "Ten pierścień komórek to kompas muszki, razem z komórkami, które go obracają, i komórkami, które go stabilizują.",
+        "neuron": "Jedna komórka kierunku. Jasna kropka to impuls, czyli sygnał, który ta komórka wysyła."
       }
     },
     "escape": {
@@ -354,7 +451,15 @@
         },
         "silence": {
           "text": "Teraz wycisz <giantfiber>włókno olbrzymie</giantfiber> <gloss>(kabel ucieczki)</gloss>. Packę wyślemy my. Obserwuj <jump>neurony skoku</jump> <gloss>(motorki nóg)</gloss>.",
-          "result": "<looming>Neurony zbliżeniowe</looming> <gloss>(wykrywacze packi)</gloss> nadal wysyłają impulsy, ale <jump>neurony skoku</jump> pozostają ciemne. Szybkiej ucieczki już nie ma."
+          "result": "<looming>Neurony zbliżeniowe</looming> <gloss>(wykrywacze packi)</gloss> nadal wysyłają impulsy, ale <jump>neurony skoku</jump> pozostają ciemne. Szybkiej ucieczki już nie ma.",
+          "predict": {
+            "question": "Kabel ucieczki zaraz zostanie wyciszony. Co zrobią motorki nóg?",
+            "choices": {
+              "fire": "Wyślą impulsy, tak jak wcześniej.",
+              "dark": "Pozostaną ciemne.",
+              "late": "Wyślą impulsy, ale później."
+            }
+          }
         },
         "restore": {
           "text": "Włącz z powrotem <giantfiber>włókno olbrzymie</giantfiber> <gloss>(kabel ucieczki)</gloss>: naciśnij jeszcze raz jego przycisk. Wyślemy tę samą packę.",
@@ -381,6 +486,38 @@
       "freePlay": {
         "title": "Swobodne eksperymenty",
         "text": "Teraz działa każdy przycisk. Najpierw zgadnij, potem naciśnij: które kolory wciąż się zapalają, gdy kabel ucieczki jest wyciszony? Potem spróbuj zamiast niego wyciszyć wykrywacze packi."
+      },
+      "mission": {
+        "goal": "Znajdź kabel, który ratuje muszkę.",
+        "win": "Udało ci się go znaleźć. Wykrywacze packi wysyłają impulsy, kabel ucieczki niesie alarm w dół łańcuszka nerwowego, a motorki nóg wybijają muszkę do skoku. Przetnij kabel, a szybka ucieczka znika."
+      },
+      "story": {
+        "panels": {
+          "rest": {
+            "caption": "{name} czyści skrzydła na brzegu szklanki. W kuchni panuje cisza.",
+            "bubble": "Miło i spokojnie."
+          },
+          "shadow": {
+            "caption": "W jego oczach szybko rośnie cień. Coś dużego leci prosto na niego.",
+            "bubble": "Oho."
+          },
+          "leap": {
+            "caption": "Środkowe nogi odbijają się, zanim packa spadnie. Od pierwszego spojrzenia do skoku: około 30 milisekund.",
+            "bubble": "Skok!"
+          },
+          "safe": {
+            "caption": "Packa trafia w pustą szklankę. {name} jest już po drugiej stronie pokoju.",
+            "bubble": "Pudło."
+          }
+        },
+        "ending": {
+          "caption": "Jeden gruby kabel przeniósł alarm z oczu do nóg. To dzięki niemu {name} uciekł.",
+          "bubble": "Dziękuję, włókno olbrzymie."
+        }
+      },
+      "journey": {
+        "circuit": "To obwód ucieczki: od oczu, przez jeden kabel, w dół do nóg.",
+        "neuron": "To włókno olbrzymie, pojedyncza komórka. Jasna kropka to impuls, który pędzi wzdłuż niego."
       }
     }
   },
@@ -590,6 +727,48 @@
       "playing": "Pokazujemy, jak to działa",
       "upNext": "Za chwilę naciśniemy „{action}”: {name}",
       "stop": "Zatrzymaj i przejmij stery"
+    },
+    "story": {
+      "label": "Historia",
+      "skip": "Pomiń historię",
+      "back": "Wstecz",
+      "next": "Dalej",
+      "progress": "Kadr {number} z {total}",
+      "bridge": "A teraz zobaczmy, co działo się w jego mózgu.",
+      "zoom": "Przybliż",
+      "says": "{name} mówi:"
+    },
+    "journey": {
+      "label": "Zbliżenie",
+      "open": "Zbliżenie od całej muszki do jednego neuronu",
+      "progress": "Poziom {number} z {total}",
+      "levels": {
+        "label": "Poziomy zbliżenia",
+        "fly": "Muszka",
+        "brain": "Mózg",
+        "circuit": "Obwód",
+        "neuron": "Neuron"
+      },
+      "captions": {
+        "fly": "Muszka owocowa, około 3 mm długości. To ciało wymodelowano na podstawie skanu prawdziwej muszki.",
+        "brain": "W głowie mieści się mózg. Ten został zmapowany, komórka po komórce, u innej prawdziwej muszki."
+      },
+      "out": "Oddal",
+      "in": "Przybliż",
+      "start": "Zacznij misję",
+      "resume": "Wróć do misji",
+      "skip": "Przejdź do misji"
+    },
+    "mission": {
+      "label": "Misja {number}",
+      "predictLabel": "Najpierw przewiduj, potem naciskaj",
+      "predictFirst": "Wybierz, co twoim zdaniem się stanie. Wtedy pojawi się przycisk.",
+      "predictHeld": "Twoje przewidywanie się sprawdziło.",
+      "predictSurprise": "Mózg zrobił coś innego. Właśnie po to są eksperymenty.",
+      "finish": "Zakończ misję",
+      "winTitle": "Misja {number} ukończona",
+      "nextMission": "Następna misja: {title}",
+      "map": "Zobacz mapę misji"
     }
   },
   "errors": {
@@ -816,7 +995,9 @@
       "guide": "Przewodnik dla nauczyciela",
       "worksheet": "Karta pracy ucznia",
       "demo": "Pokaz dla klasy",
-      "generalTerms": "Podstawowe pojęcia"
+      "generalTerms": "Podstawowe pojęcia",
+      "companionTitle": "Kurs uzupełniający",
+      "companion": "Wielu uczniów, którzy uczą się biologii na poziomie 5 jednostek, korzysta też z bezpłatnego kursu Uniwersytetu Telawiwskiego <campusil>Mózg: najwspanialsza ze wszystkich maszyn</campusil> na platformie Campus IL, który prowadzą prof. Yossi Yovel i prof. Yaniv Assaf. Kurs szczegółowo omawia neurony, potencjały czynnościowe i synapsy, a te lekcje są do niego praktycznym uzupełnieniem. WiredMind to niezależny projekt. Nie jest powiązany z kursem, uniwersytetem ani Campus IL."
     },
     "topics": {
       "excitation": "Pobudzanie i hamowanie",
@@ -865,7 +1046,15 @@
       "realMore": "Pełna lista, z liczbami",
       "termsTitle": "Kluczowe pojęcia",
       "curriculumTitle": "Zgodność z podstawą programową",
-      "curriculumPending": "Ta część nie jest jeszcze uzupełniona. Zgodność z oficjalną podstawą programową z biologii jest właśnie potwierdzana z nauczycielami biologii."
+      "curriculumPending": "Ta część nie jest jeszcze uzupełniona. Zgodność z oficjalną podstawą programową z biologii jest właśnie potwierdzana z nauczycielami biologii.",
+      "storyTitle": "Historia",
+      "storyHow": "Lekcja zaczyna się od krótkiego komiksu, którego bohaterem jest {name}, muszka. Kadry można przeczytać na głos albo dać je do przeczytania uczniom; zajmuje to około minuty. Ostatni kadr wraca na ekranie ukończenia misji.",
+      "journeyTitle": "Zbliżenie od muszki do neuronu",
+      "journeyHow": "Lekcję należy wyświetlić na wspólnym ekranie. Przy każdym z czterech poziomów warto się zatrzymać i zadać przypisane do niego pytanie, zanim nastąpi przybliżenie. Przyciski poziomów przenoszą do dowolnego poziomu, a przycisk z lupą otwiera zbliżenie ponownie w każdym momencie lekcji.",
+      "journeyNote": "Ciało i mózg pochodzą od dwóch różnych muszek i są pokazane razem w prawdziwych rozmiarach. Warto powiedzieć o tym klasie.",
+      "predictTitle": "Przewidywanie",
+      "predictHow": "Przed krokiem z wyciszaniem uczniowie wybierają, co ich zdaniem się stanie. Najpierw warto poprosić o podniesienie rąk. Nic nie jest oceniane, a błędne przewidywanie nic nie kosztuje.",
+      "predictExpected": "Oczekiwana odpowiedź"
     },
     "worksheet": {
       "eyebrow": "Karta pracy ucznia · Lekcja {number}",
@@ -935,7 +1124,15 @@
             "a": "Dlaczego różowe komórki zgasły, gdy niebieskie zostały wyciszone, chociaż zapach wciąż docierał do mózgu?",
             "b": "W którym miejscu tego obwodu, zdaniem naukowców, zapisane jest wspomnienie zapachu?"
           }
-        }
+        },
+        "story": "{name} czuje dojrzałą brzoskwinię, rozpoznaje zapach, który poprzednio doprowadził go do jedzenia, i leci za nim pod wiatr. Historia prowadzi do pytania: gdzie w mózgu przechowywane jest to wspomnienie?",
+        "levels": {
+          "fly": "W którym miejscu tego ciała szukalibyście nosa?",
+          "brain": "Mózg wypełnia większość głowy. Jak myślicie, co zajmuje w nim tyle miejsca?",
+          "circuit": "Zapach wchodzi przez pomarańczowe komórki. Jak myślicie, do którego koloru dociera na końcu?",
+          "neuron": "Kropka to jeden impuls. Jak jedna komórka mogłaby powiedzieć reszcie mózgu o zapachu?"
+        },
+        "predictWhy": "Gdy sortery zapachów są wyciszone, zapach nadal dociera do mózgu, więc pomarańczowe i żółte komórki się zapalają, ale do różowych czytników pamięci nie dociera żaden wzór."
       },
       "compass": {
         "goal": "Uczniowie widzą, że pierścień neuronów przechowuje kierunek muszki jako jedną plamę aktywności, a hamowanie przez neurony pierścieniowe utrzymuje tę plamę w miejscu.",
@@ -987,7 +1184,15 @@
             "a": "Dlaczego górka dryfowała, gdy neurony pierścieniowe były wyciszone?",
             "b": "Dlaczego pierścień to dobry kształt dla komórek, które śledzą kierunek?"
           }
-        }
+        },
+        "story": "{name} leci do szpary, przez którą wpada światło, przeciąg go obraca, a on wraca na kurs. Historia prowadzi do pytania: skąd mózg wie, w którą stronę zwrócone jest ciało?",
+        "levels": {
+          "fly": "Muszka nie ma mapy ani GPS. Z czego mogłaby skorzystać, żeby lecieć prosto?",
+          "brain": "Jakich zmysłów musiałby słuchać kompas, który jest tu w środku?",
+          "circuit": "Te komórki tworzą pierścień. Dlaczego pierścień może być dobrym kształtem dla kompasu?",
+          "neuron": "To jedna komórka kierunku. Jeśli wysyła impuls, to co waszym zdaniem mówi o tym, w którą stronę zwrócona jest muszka?"
+        },
+        "predictWhy": "Komórki kierunku nadal wysyłają impulsy, więc górka nie znika. Bez punktów orientacyjnych, które by ją przypinały, zsuwa się ze swojego miejsca i wędruje."
       },
       "escape": {
         "goal": "Uczniowie śledzą odruch od oczu do mięśni nóg, trwający około 30 milisekund, i pokazują, że szybka ucieczka zależy od jednego ogniwa: włókna olbrzymiego.",
@@ -1039,8 +1244,19 @@
             "a": "Dlaczego neurony skoku pozostały ciemne, chociaż muszka widziała packę?",
             "b": "Jakie cechy tego szlaku sprawiają, że ucieczka jest tak szybka?"
           }
-        }
+        },
+        "story": "{name} odpoczywa, gdy nadlatuje packa, i odskakuje w około 30 milisekund. Historia prowadzi do pytania: co w mózgu może działać tak szybko?",
+        "levels": {
+          "fly": "Których części tego ciała muszka potrzebuje, żeby uciec?",
+          "brain": "Sygnał zaczyna się w oczach, a kończy w nogach. Którędy musi po drodze przejść?",
+          "circuit": "Setki niebieskich komórek i jedna czerwona linia. Co zauważacie w tej trasie?",
+          "neuron": "Ta jedna komórka jest wyjątkowo gruba. Dlaczego gruby kabel pomaga w szybkiej ucieczce?"
+        },
+        "predictWhy": "Neurony zbliżeniowe nadal wysyłają impulsy, więc muszka widzi packę, ale przy wyciszonym włóknie olbrzymim sygnał nigdy nie dociera do neuronów skoku i te pozostają ciemne."
       }
     }
+  },
+  "character": {
+    "name": "Dror"
   }
 }

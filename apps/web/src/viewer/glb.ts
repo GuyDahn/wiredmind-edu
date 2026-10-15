@@ -5,6 +5,10 @@
  */
 
 export type GltfJson = {
+  /** body.glb only: each circuit's zoom neuron and its spike's path. */
+  extras?: {
+    journey?: Record<string, { bodyId?: unknown; path?: unknown }>;
+  };
   nodes?: Array<{
     name?: string;
     mesh?: number;

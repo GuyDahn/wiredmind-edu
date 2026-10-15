@@ -109,7 +109,12 @@
       "lead": "Jede Lektion ist in wenigen Klicks erledigt. Schülerinnen und Schüler stimulieren echte Zelltypen und schalten sie stumm, beantworten eine Frage und erkunden danach selbst weiter.",
       "lesson": "Lektion {number}",
       "meta": "{steps, plural, one {# Schritt} other {# Schritte}} und eine Frage · etwa 10 Minuten",
-      "start": "Lektion {number} starten"
+      "start": "Lektion {number} starten",
+      "mission": "Mission {number}",
+      "mapLabel": "Missionskarte",
+      "done": "Geschafft",
+      "todo": "Noch offen",
+      "mapNote": "Abgeschlossene Missionen bleiben hier markiert, bis die Seite neu geladen wird. Es wird nichts gespeichert."
     },
     "teachers": {
       "title": "Für Lehrkräfte",
@@ -147,6 +152,18 @@
       "guidesLead": "Zu jeder Lektion gibt es einen Leitfaden für Lehrkräfte mit einem 45-Minuten-Plan und ein Arbeitsblatt zum Ausdrucken.",
       "guide": "Leitfaden für Lehrkräfte",
       "worksheet": "Arbeitsblatt"
+    },
+    "montage": {
+      "label": "Kurze Clips aus den Lektionen",
+      "pause": "Clips anhalten",
+      "play": "Clips abspielen",
+      "credit": "Clip: {credit}",
+      "clips": {
+        "escape": "Das Fluchtsignal, von den Augen bis zu den Beinen",
+        "compass": "Der Leuchtfleck des Kompasses schwenkt herum",
+        "smell": "Ein Duft, ein kleines Muster aus Zellen",
+        "zoom": "Von der ganzen Fliege bis zu einem einzigen Neuron"
+      }
     }
   },
   "about": {
@@ -264,7 +281,15 @@
         },
         "silence": {
           "text": "Schalte jetzt die <kenyon>Kenyon-Zellen</kenyon> <gloss>(die Duftsortierer)</gloss> stumm. Wir schicken den Duft für dich hinein. Was verschwindet?",
-          "result": "Das pinkfarbene Leuchten verschwindet fast ganz. Der Duft kommt zwar noch hinein, aber die Gedächtnisleser bekommen nichts zu lesen."
+          "result": "Das pinkfarbene Leuchten verschwindet fast ganz. Der Duft kommt zwar noch hinein, aber die Gedächtnisleser bekommen nichts zu lesen.",
+          "predict": {
+            "question": "Gleich werden die Duftsortierer stummgeschaltet. Was wird dunkel?",
+            "choices": {
+              "all": "Alles. Keine Farbe leuchtet auf.",
+              "pink": "Nur die pinkfarbenen Gedächtnisleser.",
+              "none": "Nichts. Alle Farben leuchten weiter auf."
+            }
+          }
         },
         "restore": {
           "text": "Tippe noch einmal auf den Knopf der <kenyon>Kenyon-Zellen</kenyon> <gloss>(der Duftsortierer)</gloss>, um sie wieder einzuschalten. Wir schicken denselben Duft.",
@@ -291,6 +316,38 @@
       "freePlay": {
         "title": "Freies Experimentieren",
         "text": "Jetzt funktionieren alle Knöpfe. Rate zuerst, dann tippe: Was wird dunkel, wenn du die gelben Duftboten stummschaltest? Probiere auch, zwei Farben gleichzeitig stummzuschalten."
+      },
+      "mission": {
+        "goal": "Finde die Zellen, die das Duftgedächtnis einer Fliege speichern.",
+        "win": "Du hast sie gefunden. Die Duftsortierer machen aus jedem Duft ein Muster, und die Gedächtnisleser lesen es. Ohne das Muster gibt es nichts, woran sich die Fliege erinnern könnte."
+      },
+      "story": {
+        "panels": {
+          "ripe": {
+            "caption": "Ein Pfirsich ist den ganzen Tag auf der Fensterbank gereift. Sein Duft zieht durchs offene Fenster nach draußen.",
+            "bubble": "Hier riecht etwas gut."
+          },
+          "sniff": {
+            "caption": "Die Antennen von {name} fangen ein paar Moleküle davon auf. Mehr braucht eine Fliege nicht.",
+            "bubble": "Den Duft kenne ich!"
+          },
+          "recall": {
+            "caption": "Letzte Woche hat genau dieser Duft {name} zu Futter geführt. Sein Gehirn hat eine Spur davon behalten.",
+            "bubble": "Pfirsich heißt Abendessen."
+          },
+          "land": {
+            "caption": "{name} dreht sich in den Wind und folgt dem Duft bis zum Pfirsich.",
+            "bubble": "Gefunden. Schon wieder."
+          }
+        },
+        "ending": {
+          "caption": "Der Duft ließ ein paar Duftsortierer aufleuchten. Die Gedächtnisleser wussten, was dieses Muster bedeutet.",
+          "bubble": "So erinnere ich mich also!"
+        }
+      },
+      "journey": {
+        "circuit": "Diese farbigen Zellen leiten einen Duft von den Antennen zum Gedächtnis der Fliege.",
+        "neuron": "Ein Gedächtnisleser, eine einzelne Zelle. Der helle Punkt ist ein Impuls, das Signal, das sie sendet."
       }
     },
     "compass": {
@@ -309,7 +366,15 @@
         },
         "silence": {
           "text": "Schalte die <ring>Ringneuronen</ring> <gloss>(die Landmarkenboten)</gloss> stumm. Sie melden, was die Fliege sieht. Wir schicken das Signal von rechts für dich.",
-          "result": "Der Leuchtfleck rutscht von seinem Platz und wandert umher. Ohne Landmarken driftet der Kompass."
+          "result": "Der Leuchtfleck rutscht von seinem Platz und wandert umher. Ohne Landmarken driftet der Kompass.",
+          "predict": {
+            "question": "Gleich werden die Landmarkenboten stummgeschaltet. Was macht der Leuchtfleck?",
+            "choices": {
+              "vanish": "Er verschwindet.",
+              "drift": "Er wandert von seinem Platz weg.",
+              "hold": "Er bleibt genau, wo er ist."
+            }
+          }
         },
         "restore": {
           "text": "Tippe noch einmal auf den Knopf der <ring>Ringneuronen</ring> <gloss>(der Landmarkenboten)</gloss>, um sie wieder einzuschalten. Wir schicken dasselbe Signal.",
@@ -336,6 +401,38 @@
       "freePlay": {
         "title": "Freies Experimentieren",
         "text": "Jetzt funktionieren alle Knöpfe. Rate zuerst, dann tippe: Wohin wandert der Leuchtfleck, wenn du beide Drehsignale gleichzeitig feuern lässt? Probiere es auch mit stummgeschalteten violetten Zellen."
+      },
+      "mission": {
+        "goal": "Finde heraus, was den Kompass einer Fliege auf Kurs hält.",
+        "win": "Du hast es gefunden. Drehsignale schieben den Leuchtfleck um den Kompass, und die Landmarkenboten heften ihn an das, was die Fliege sieht. Ohne sie driftet der Kompass."
+      },
+      "story": {
+        "panels": {
+          "dawn": {
+            "caption": "Morgen. Licht fällt durch einen Spalt im Fensterladen, und {name} will raus.",
+            "bubble": "Da lang."
+          },
+          "heading": {
+            "caption": "{name} fliegt los, auf das Licht zu. In seinem Gehirn zeigt ein Kompass an, wohin er schaut.",
+            "bubble": "Licht voraus. So soll es bleiben."
+          },
+          "gust": {
+            "caption": "Ein Luftzug schiebt ihn seitwärts. Das Licht rutscht zur Seite weg.",
+            "bubble": "Hoppla. Ich habe mich gedreht."
+          },
+          "hold": {
+            "caption": "Er sieht, wo das Licht jetzt ist, und steuert zurück, mitten durch den Spalt.",
+            "bubble": "Wieder auf Kurs."
+          }
+        },
+        "ending": {
+          "caption": "Drehsignale schieben den Kompass herum. Was {name} sieht, hält ihn an seinem Platz.",
+          "bubble": "Mein ganz eigener Kompass!"
+        }
+      },
+      "journey": {
+        "circuit": "Dieser Ring aus Zellen ist der Kompass der Fliege, dazu die Zellen, die ihn drehen, und die Zellen, die ihn ruhig halten.",
+        "neuron": "Eine Richtungszelle. Der helle Punkt ist ein Impuls, das Signal, das sie sendet."
       }
     },
     "escape": {
@@ -354,7 +451,15 @@
         },
         "silence": {
           "text": "Schalte jetzt die <giantfiber>Riesenfaser</giantfiber> <gloss>(die Fluchtleitung)</gloss> stumm. Wir schicken die Fliegenklatsche. Beobachte die <jump>Sprungneuronen</jump> <gloss>(die Beinkicker)</gloss>.",
-          "result": "Die <looming>Annäherungsneuronen</looming> <gloss>(die Klatschen-Späher)</gloss> feuern noch, aber die <jump>Sprungneuronen</jump> bleiben dunkel. Die schnelle Flucht ist weg."
+          "result": "Die <looming>Annäherungsneuronen</looming> <gloss>(die Klatschen-Späher)</gloss> feuern noch, aber die <jump>Sprungneuronen</jump> bleiben dunkel. Die schnelle Flucht ist weg.",
+          "predict": {
+            "question": "Gleich wird die Fluchtleitung stummgeschaltet. Was machen die Beinkicker?",
+            "choices": {
+              "fire": "Sie feuern, genau wie vorher.",
+              "dark": "Sie bleiben dunkel.",
+              "late": "Sie feuern, aber später."
+            }
+          }
         },
         "restore": {
           "text": "Tippe noch einmal auf den Knopf der <giantfiber>Riesenfaser</giantfiber> <gloss>(der Fluchtleitung)</gloss>, um sie wieder einzuschalten. Wir schicken dieselbe Fliegenklatsche.",
@@ -381,6 +486,38 @@
       "freePlay": {
         "title": "Freies Experimentieren",
         "text": "Jetzt funktionieren alle Knöpfe. Rate zuerst, dann tippe: Welche Farben leuchten noch, wenn die Fluchtleitung stummgeschaltet ist? Schalte danach stattdessen die Klatschen-Späher stumm."
+      },
+      "mission": {
+        "goal": "Finde die Leitung, die die Fliege rettet.",
+        "win": "Du hast sie gefunden. Die Klatschen-Späher feuern, die Fluchtleitung trägt den Alarm das Bauchmark hinunter, und die Beinkicker lassen die Fliege springen. Kappe die Leitung, und die schnelle Flucht ist weg."
+      },
+      "story": {
+        "panels": {
+          "rest": {
+            "caption": "{name} putzt seine Flügel auf dem Rand eines Glases. In der Küche ist es still.",
+            "bubble": "Schön ruhig."
+          },
+          "shadow": {
+            "caption": "Ein Schatten wächst rasend schnell in seinen Augen. Etwas Großes kommt direkt auf ihn zu.",
+            "bubble": "Oh-oh."
+          },
+          "leap": {
+            "caption": "Seine mittleren Beine stoßen sich ab, bevor die Klatsche trifft. Vom ersten Blick bis zum Sprung: etwa 30 Millisekunden.",
+            "bubble": "Spring!"
+          },
+          "safe": {
+            "caption": "Die Klatsche trifft ein leeres Glas. {name} ist längst am anderen Ende des Zimmers.",
+            "bubble": "Daneben."
+          }
+        },
+        "ending": {
+          "caption": "Eine dicke Leitung trug den Alarm von seinen Augen zu den Beinen. Nur deshalb ist {name} entkommen.",
+          "bubble": "Danke, Riesenfaser."
+        }
+      },
+      "journey": {
+        "circuit": "Das ist der Fluchtschaltkreis: von den Augen über eine einzige Leitung bis hinunter zu den Beinen.",
+        "neuron": "Das ist die Riesenfaser, eine einzelne Zelle. Der helle Punkt ist ein Impuls, der an ihr entlangrast."
       }
     }
   },
@@ -590,6 +727,48 @@
       "playing": "Wir zeigen dir, wie es funktioniert",
       "upNext": "Als Nächstes tippen wir auf „{action}“: {name}",
       "stop": "Anhalten und selbst übernehmen"
+    },
+    "story": {
+      "label": "Die Geschichte",
+      "skip": "Überspringen",
+      "back": "Zurück",
+      "next": "Weiter",
+      "progress": "Bild {number} von {total}",
+      "bridge": "Schauen wir uns an, was dabei in seinem Gehirn passiert ist.",
+      "zoom": "Reinzoomen",
+      "says": "{name} sagt:"
+    },
+    "journey": {
+      "label": "Der Zoom",
+      "open": "Von der ganzen Fliege bis zu einem Neuron zoomen",
+      "progress": "Ebene {number} von {total}",
+      "levels": {
+        "label": "Zoom-Ebenen",
+        "fly": "Fliege",
+        "brain": "Gehirn",
+        "circuit": "Schaltkreis",
+        "neuron": "Neuron"
+      },
+      "captions": {
+        "fly": "Eine Fruchtfliege, etwa 3 mm lang. Dieser Körper wurde nach dem Scan einer echten Fliege modelliert.",
+        "brain": "Im Kopf sitzt das Gehirn. Dieses hier wurde Zelle für Zelle kartiert, bei einer anderen echten Fliege."
+      },
+      "out": "Rauszoomen",
+      "in": "Reinzoomen",
+      "start": "Mission starten",
+      "resume": "Zurück zur Mission",
+      "skip": "Direkt zur Mission"
+    },
+    "mission": {
+      "label": "Mission {number}",
+      "predictLabel": "Erst vermuten, dann tippen",
+      "predictFirst": "Wähle, was deiner Meinung nach passiert. Dann erscheint der Knopf.",
+      "predictHeld": "Deine Vermutung hat gestimmt.",
+      "predictSurprise": "Das Gehirn hat etwas anderes gemacht. Genau dafür sind Experimente da.",
+      "finish": "Mission beenden",
+      "winTitle": "Mission {number} geschafft",
+      "nextMission": "Nächste Mission: {title}",
+      "map": "Zur Missionskarte"
     }
   },
   "errors": {
@@ -816,7 +995,9 @@
       "guide": "Leitfaden für Lehrkräfte",
       "worksheet": "Arbeitsblatt",
       "demo": "Der Klasse zeigen",
-      "generalTerms": "Grundbegriffe"
+      "generalTerms": "Grundbegriffe",
+      "companionTitle": "Ein begleitender Kurs",
+      "companion": "Viele Schülerinnen und Schüler, die Biologie mit 5 Lerneinheiten belegen, besuchen auch den kostenlosen Kurs <campusil>Das Gehirn: die wunderbarste Maschine von allen</campusil> der Universität Tel Aviv auf Campus IL, geleitet von Prof. Yossi Yovel und Prof. Yaniv Assaf. Er behandelt Neuronen, Aktionspotenziale und Synapsen ausführlich, und diese Lektionen sind eine praktische Ergänzung dazu. WiredMind ist ein unabhängiges Projekt. Es steht in keiner Verbindung zum Kurs, zur Universität oder zu Campus IL."
     },
     "topics": {
       "excitation": "Erregung und Hemmung",
@@ -865,7 +1046,15 @@
       "realMore": "Die vollständige Liste, mit Zahlen",
       "termsTitle": "Wichtige Begriffe",
       "curriculumTitle": "Lehrplanbezug",
-      "curriculumPending": "Dieser Abschnitt ist noch nicht ausgefüllt. Die Zuordnung zum offiziellen Biologielehrplan wird derzeit mit Biologielehrkräften abgestimmt."
+      "curriculumPending": "Dieser Abschnitt ist noch nicht ausgefüllt. Die Zuordnung zum offiziellen Biologielehrplan wird derzeit mit Biologielehrkräften abgestimmt.",
+      "storyTitle": "Die Geschichte",
+      "storyHow": "Die Lektion beginnt mit einem kurzen Comic über {name}, die Fliege. Lesen Sie die Bilder vor oder lassen Sie die Schülerinnen und Schüler selbst lesen; das dauert etwa eine Minute. Das letzte Bild erscheint noch einmal auf dem Abschlussbildschirm.",
+      "journeyTitle": "Der Zoom von der Fliege zum Neuron",
+      "journeyHow": "Projizieren Sie die Lektion. Halten Sie auf jeder der vier Ebenen an und stellen Sie die zugehörige Frage, bevor Sie hineinzoomen. Mit den Ebenen-Knöpfen springen Sie zu jeder Ebene, und der Lupen-Knopf öffnet den Zoom an jeder Stelle der Lektion erneut.",
+      "journeyNote": "Körper und Gehirn stammen von zwei verschiedenen Fliegen und werden zusammen in ihrer wahren Größe gezeigt. Sagen Sie das der Klasse.",
+      "predictTitle": "Die Vermutung",
+      "predictHow": "Vor dem Schritt mit dem Stummschalten wählen die Schülerinnen und Schüler, was ihrer Meinung nach passiert. Lassen Sie zuerst per Handzeichen abstimmen. Nichts wird bewertet, und eine falsche Vermutung kostet nichts.",
+      "predictExpected": "Erwartete Antwort"
     },
     "worksheet": {
       "eyebrow": "Arbeitsblatt · Lektion {number}",
@@ -935,7 +1124,15 @@
             "a": "Warum sind die pinkfarbenen Zellen dunkel geworden, als du die blauen Zellen stummgeschaltet hast, obwohl der Duft weiterhin hineingelangt ist?",
             "b": "An welcher Stelle dieses Schaltkreises wird nach Ansicht der Forschung die Erinnerung an einen Duft gespeichert?"
           }
-        }
+        },
+        "story": "{name} riecht einen reifen Pfirsich, erkennt den Duft wieder, der ihn beim letzten Mal zu Futter geführt hat, und folgt ihm gegen den Wind. Die Geschichte führt zu der Frage: Wo im Gehirn ist diese Erinnerung gespeichert?",
+        "levels": {
+          "fly": "Wo an diesem Körper würdet ihr nach einer Nase suchen?",
+          "brain": "Das Gehirn füllt den größten Teil des Kopfes aus. Was braucht darin wohl so viel Platz?",
+          "circuit": "Der Duft kommt bei den orangefarbenen Zellen an. Welche Farbe erreicht er wohl zuletzt?",
+          "neuron": "Der Punkt ist ein einzelner Impuls. Wie könnte eine einzige Zelle dem Rest des Gehirns von einem Duft berichten?"
+        },
+        "predictWhy": "Sind die Duftsortierer stumm, kommt der Duft trotzdem hinein: Orange und Gelb leuchten auf, aber kein Muster erreicht die pinkfarbenen Gedächtnisleser."
       },
       "compass": {
         "goal": "Die Schülerinnen und Schüler erkennen, dass ein Ring aus Neuronen die Blickrichtung der Fliege als einen einzigen Fleck von Aktivität festhält und dass die Hemmung durch die Ringneuronen diesen Fleck an seinem Platz hält.",
@@ -987,7 +1184,15 @@
             "a": "Warum ist der Leuchtfleck abgedriftet, als die Ringneuronen stummgeschaltet waren?",
             "b": "Warum ist ein Ring eine gute Form für Zellen, die eine Richtung festhalten?"
           }
-        }
+        },
+        "story": "{name} steuert auf einen Lichtspalt zu, ein Luftzug dreht ihn, und er steuert zurück auf Kurs. Die Geschichte führt zu der Frage: Woher weiß ein Gehirn, wohin sein Körper schaut?",
+        "levels": {
+          "fly": "Die Fliege hat keine Karte und kein GPS. Womit könnte sie einen geraden Kurs halten?",
+          "brain": "Auf welche Sinne müsste ein Kompass hier drin hören?",
+          "circuit": "Diese Zellen bilden einen Ring. Warum könnte ein Ring eine gute Form für einen Kompass sein?",
+          "neuron": "Das ist eine Richtungszelle. Wenn sie feuert: Was sagt sie wohl darüber, wohin die Fliege schaut?"
+        },
+        "predictWhy": "Die Richtungszellen feuern weiter, also verschwindet der Leuchtfleck nicht. Ohne Landmarken, die ihn festhalten, rutscht er von seinem Platz und wandert umher."
       },
       "escape": {
         "goal": "Die Schülerinnen und Schüler verfolgen einen Reflex von den Augen bis zu den Beinmuskeln in etwa 30 Millisekunden und zeigen, dass die schnelle Flucht an einem einzigen Glied hängt: der Riesenfaser.",
@@ -1039,8 +1244,19 @@
             "a": "Warum sind die Sprungneuronen dunkel geblieben, obwohl die Fliege die Fliegenklatsche gesehen hat?",
             "b": "Welche Eigenschaften dieser Bahn machen die Flucht so schnell?"
           }
-        }
+        },
+        "story": "{name} ruht sich aus, als eine Fliegenklatsche heransaust, und springt in etwa 30 Millisekunden davon. Die Geschichte führt zu der Frage: Was in einem Gehirn kann so schnell sein?",
+        "levels": {
+          "fly": "Welche Teile dieses Körpers braucht die Fliege, um zu fliehen?",
+          "brain": "Das Signal beginnt in den Augen und endet in den Beinen. Wo muss es unterwegs durch?",
+          "circuit": "Hunderte blaue Zellen und eine rote Linie. Was fällt euch an dem Weg auf?",
+          "neuron": "Diese eine Zelle ist ungewöhnlich dick. Warum hilft eine dicke Leitung bei einer schnellen Flucht?"
+        },
+        "predictWhy": "Die Annäherungsneuronen feuern weiter, die Fliege sieht die Klatsche also. Ist die Riesenfaser aber stumm, erreicht das Signal die Sprungneuronen nie, und sie bleiben dunkel."
       }
     }
+  },
+  "character": {
+    "name": "Dror"
   }
 }

@@ -12,4 +12,6 @@
 
 `uv run --directory tools/data compass-cells` prints the cells the heading lesson drives: P-EN2 turn neurons split by protocerebral bridge side, and E-PG compass neurons in their 16 ellipsoid body wedges, each with its angle measured from the SWC skeletons as seen from behind the fly. `neurons.json` keeps cell types but not sides, so `apps/web/content/visual/module.json` lists those body ids.
 
+`uv run tools/data/scripts/bake_body.py` bakes `dist/body.glb`, the fly the lessons' zoom journey starts from: the NeuroMechFly body (Apache-2.0) with the MaleCNS brain and nerve cord shells inside it, in the circuits' coordinates. It is a standalone script with its own dependencies (FlyGym at a pinned commit, MuJoCo), so they stay out of this project's lockfile. `--check` prints how much of each shell lands inside the body. Sources, licenses, and what the placement does and does not mean are in [ATTRIBUTION.md](../../ATTRIBUTION.md).
+
 Seed type names are in `seeds.yaml`. Change them after looking at the [Cell Type Explorer](https://male-cns.janelia.org/); a name that matches nothing fails the build.

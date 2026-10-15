@@ -3,6 +3,10 @@
   "repository": "GuyDahn/wiredmind-edu",
   "files": [
     {
+      "name": "body.glb",
+      "sha256": "95557e7e1e9f8212be37a9dd42bc6f667dd398834ad6876da9a080f82f343435"
+    },
+    {
       "name": "escape.glb",
       "sha256": "0a66cc8064d8107f34b17fa31d43865bfc53a76775e57ec608a2d896bf6278d2"
     },

@@ -22,9 +22,9 @@ Every neuron and synapse count in WiredMind comes from MaleCNS v1.0, the complet
 | 2. [How a fly knows which way it's facing](https://wiredmind.app/en/modules/compass) | Push the compass bump around with the turn neurons, then silence the ring neurons and watch it drift.                         | Head-direction compass, 4,000 neurons |
 | 3. [The 30-millisecond escape](https://wiredmind.app/en/modules/escape)              | Follow a swatter from the looming neurons to the giant fiber and the jump neurons, then silence the giant fiber.              | Giant fiber escape, 3,000 neurons     |
 
-Each lesson is four or five one-tap steps, one check question, and free play, about 10 minutes in all. For a class, that is one or two periods with discussion. The Share button copies a link that replays a student's run, spike for spike.
+Each lesson is a mission. It opens on a short comic about a fly, zooms from a 3D fly body through its brain and the lesson's circuit down to one neuron, and then gives the student four or five one-tap steps, a prediction to make before the step that tests it, one check question, a win screen, and free play: about 10 minutes in all. For a class, that is one or two periods with discussion. The Share button copies a link that replays a student's run, spike for spike.
 
-**For teachers.** Every lesson opens on a short "How to read this brain" intro, keeps a color key on the canvas, and explains each scientific term on a tap. "Show me how it works" plays the lesson's ideal run with its text in step, and class mode (`?mode=class`) sizes everything for a shared screen: a projector, a TV, or one computer. Each lesson has a teacher guide (`/en/teachers/escape`) with a 45-minute plan, expected answers, discussion questions, and common misconceptions, and a one-page student worksheet (`/en/teachers/escape/worksheet`); both print on A4. None of it sets a cookie or uses browser storage.
+**For teachers.** Every lesson has a short "How to read this brain" intro behind its "?" button, keeps a color key on the canvas, and explains each scientific term on a tap. "Show me how it works" plays the lesson's ideal run with its text in step, and class mode (`?mode=class`) sizes everything for a shared screen: a projector, a TV, or one computer. Each lesson has a teacher guide (`/en/teachers/escape`) with a 45-minute plan, the story in brief, a question to ask at each level of the zoom, the prediction and its expected answer, expected answers, discussion questions, and common misconceptions, and a one-page student worksheet (`/en/teachers/escape/worksheet`); both print on A4. None of it sets a cookie or uses browser storage.
 
 ## Languages
 
@@ -107,17 +107,20 @@ apps/web/             Next.js app, and the Vercel project root
   middleware.ts       the one place a language is guessed, and the old-URL redirects
   messages/           every string on the site, one file per language
   i18n/               the translation glossary and style guide
-  content/            circuit definitions (module.json) and lesson scripts (modules/*.json)
+  content/            circuit definitions (module.json), lesson scripts (modules/*.json), and the home page clip list
+  public/art/story/   the story panels, by file name (placeholders until docs/art-brief.md is filled)
+  public/hero/        the home page clips, recorded from the lessons (pnpm hero:clips)
   src/sim/            leaky integrate-and-fire simulator
   src/viewer/         3D viewer, lesson runner, and share-link replays
   src/site/           landing loop, header, footer, language menu, and metadata
   src/i18n/           the language list, detection, and right-to-left rules
   src/og/             share images, with text shaped for every script
   public/draco/       Draco decoder, copied from three.js
-scripts/              data download and sha256 checks, the landing-loop bake, translation draft and check, git hooks
+scripts/              data download and sha256 checks, the landing-loop bake, translation draft and check, placeholder art, clip recording, git hooks
 tools/data/           Python pipeline that cuts the circuits out of MaleCNS
 tests/                node:test suites, including the science checks
-docs/                 notes, the screenshot, and USER_TEST.md
+docs/                 notes, the screenshot, USER_TEST.md, the art brief, and the montage's permission list
+ATTRIBUTION.md        other people's work shown on the site, and the license of each
 data.lock.json        the data release tag and each file's sha256
 ```
 
@@ -190,6 +193,10 @@ The simulator uses the neuron model and parameters of:
 
 > Shiu, P. K., et al. (2024). A _Drosophila_ computational brain model reveals sensorimotor processing. _Nature_ 634, 210–219. https://doi.org/10.1038/s41586-024-07763-9
 
+The fly body in each lesson's zoom is [NeuroMechFly v2](https://neuromechfly.org/) from the Neuroengineering Laboratory at EPFL, under Apache-2.0. It is a different fly from the one whose brain is inside it; [ATTRIBUTION.md](ATTRIBUTION.md) has the version, the changes, and how the two were put together.
+
+> Wang-Chen, S., et al. (2024). NeuroMechFly v2: simulating embodied sensorimotor control in adult _Drosophila_. _Nature Methods_ 21, 2353–2362. https://doi.org/10.1038/s41592-024-02497-y
+
 The Draco decoder in `apps/web/public/draco/` is Google's glTF build (Apache-2.0), copied unchanged from three.js 0.169.0. Nothing else is vendored. [docs/NOTES-webgpu-fly.md](docs/NOTES-webgpu-fly.md) records what in [abgnydn/webgpu-fly](https://github.com/abgnydn/webgpu-fly) (MIT) could be ported later; none of that code was copied.
 
 Built with [Next.js](https://nextjs.org/), [three.js](https://threejs.org/), [Tailwind CSS](https://tailwindcss.com/), and [Vercel](https://vercel.com/).
@@ -202,7 +209,7 @@ WiredMind is free and always will be. If it helped your class, [coffee keeps the
 
 ## License
 
-The code is MIT licensed; see [LICENSE](LICENSE). The neuron data, and anything baked from it, is CC BY 4.0; [DATA_LICENSE.md](DATA_LICENSE.md) says how to credit it if you reuse it.
+The code is MIT licensed; see [LICENSE](LICENSE). The neuron data, and anything baked from it, is CC BY 4.0; [DATA_LICENSE.md](DATA_LICENSE.md) says how to credit it if you reuse it. Everything else that is not ours is in [ATTRIBUTION.md](ATTRIBUTION.md).
 
 ## About
 
