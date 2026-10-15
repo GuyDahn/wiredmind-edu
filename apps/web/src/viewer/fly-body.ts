@@ -41,6 +41,12 @@ export type FlyBody = {
   bounds: Box3;
   /** Around the head and the eyes. */
   head: Box3;
+  /**
+   * For each circuit, the neuron the zoom ends on and the way its spike runs,
+   * from where its inputs meet it to its farthest terminal, along its real
+   * skeleton (bake_body.py). Flat x, y, z in microns, start first.
+   */
+  journey: ReadonlyMap<string, { bodyId: number; path: Float32Array }>;
   /** Sets how solid the body and the outlines inside it are, each from 0 to 1. */
   show: (body: number, shell: number) => void;
 };
@@ -124,10 +130,19 @@ async function loadBody(): Promise<FlyBody> {
   if (bounds.isEmpty() || head.isEmpty()) {
     throw new Error("The fly body has no head or no body.");
   }
+  const journey = new Map<string, { bodyId: number; path: Float32Array }>();
+  for (const [circuit, entry] of Object.entries(json.extras?.journey ?? {})) {
+    const { bodyId, path } = entry;
+    if (typeof bodyId !== "number" || !Array.isArray(path)) continue;
+    if (path.length < 6 || path.length % 3 !== 0) continue;
+    if (!path.every((value) => typeof value === "number")) continue;
+    journey.set(circuit, { bodyId, path: Float32Array.from(path as number[]) });
+  }
   return {
     group,
     bounds,
     head,
+    journey,
     show(body, shell) {
       for (const [part, material] of materials) {
         const isShell = SHELLS.some((name) => name === part);

@@ -4,7 +4,9 @@ import { useEffect, useMemo, useRef, useState, type RefObject } from "react";
 import { useFrame, useThree } from "@react-three/fiber";
 import {
   Box3,
+  CatmullRomCurve3,
   MeshBasicMaterial,
+  TubeGeometry,
   Sphere,
   SphereGeometry,
   Vector3,
@@ -13,7 +15,7 @@ import {
   type PerspectiveCamera,
 } from "three";
 import type { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
-import { samplePath } from "./centerline.js";
+import { samplePath, type NeuronPaths } from "./centerline.js";
 import { frameBox, type Box } from "./fit.js";
 import { openBody, type FlyBody } from "./fly-body.js";
 import {
@@ -46,31 +48,64 @@ function toBox(box: Box3): Box {
   };
 }
 
-/** The cell of `group` that reaches farthest: the one whose spike is easiest to follow. */
+export type JourneyNeuron = {
+  index: number;
+  box: Box3;
+  /** The way the spike runs, as one path: x, y, z in microns, start first. */
+  path: NeuronPaths;
+};
+
+function boxOf(data: ArrayLike<number>, start: number, end: number): Box3 {
+  const box = new Box3();
+  const point = new Vector3();
+  for (let at = start; at < end; at += 3) {
+    point.set(data[at] ?? 0, data[at + 1] ?? 0, data[at + 2] ?? 0);
+    box.expandByPoint(point);
+  }
+  return box;
+}
+
+/**
+ * The neuron the zoom ends on. The baked one if the body file names a cell of
+ * `group`, with its spike running from its inputs to its farthest terminal.
+ * Otherwise the cell of `group` that reaches farthest, along its centerline,
+ * which has no direction of its own.
+ */
 export function journeyNeuron(
   model: LoadedCircuit,
   group: string,
-): { index: number; box: Box3 } | null {
-  let best: { index: number; box: Box3 } | null = null;
+  baked: { bodyId: number; path: Float32Array } | null,
+): JourneyNeuron | null {
+  const members = model.session.groups.get(group) ?? new Uint32Array();
+  const index = baked ? model.indexOfBody.get(baked.bodyId) : undefined;
+  if (baked && index !== undefined && members.includes(index)) {
+    return {
+      index,
+      box: boxOf(baked.path, 0, baked.path.length),
+      path: {
+        data: baked.path,
+        offset: Uint32Array.from([0, baked.path.length]),
+      },
+    };
+  }
+  let best: JourneyNeuron | null = null;
   let reach = 0;
-  const point = new Vector3();
-  for (const index of model.session.groups.get(group) ?? []) {
-    const start = model.paths.offset[index] ?? 0;
-    const end = model.paths.offset[index + 1] ?? start;
+  for (const member of members) {
+    const start = model.paths.offset[member] ?? 0;
+    const end = model.paths.offset[member + 1] ?? start;
     if (end - start < 6) continue;
-    const box = new Box3();
-    for (let at = start; at < end; at += 3) {
-      point.set(
-        model.paths.data[at] ?? 0,
-        model.paths.data[at + 1] ?? 0,
-        model.paths.data[at + 2] ?? 0,
-      );
-      box.expandByPoint(point);
-    }
+    const box = boxOf(model.paths.data, start, end);
     const size = box.getSize(new Vector3()).length();
     if (size > reach) {
       reach = size;
-      best = { index, box };
+      best = {
+        index: member,
+        box,
+        path: {
+          data: model.paths.data.slice(start, end),
+          offset: Uint32Array.from([0, end - start]),
+        },
+      };
     }
   }
   return best;
@@ -84,6 +119,8 @@ export function journeyNeuron(
 export function JourneyRig({
   model,
   group,
+  circuit,
+  color,
   direction,
   orbit,
   lines,
@@ -92,6 +129,10 @@ export function JourneyRig({
   model: LoadedCircuit;
   /** Color group the last stop's single neuron is picked from. */
   group: string;
+  /** Circuit id, which names its baked journey neuron in the body file. */
+  circuit: string;
+  /** The group's color, for the one neuron drawn at the last stop. */
+  color: string;
   /** The lesson's own view of the circuit, which the third stop lands in. */
   direction: Vector3;
   orbit: RefObject<OrbitControls | null>;
@@ -116,7 +157,10 @@ export function JourneyRig({
     layersTo: Layers;
     startedAt: number;
   } | null>(null);
-  const neuron = useMemo(() => journeyNeuron(model, group), [model, group]);
+  const neuron = useMemo(
+    () => journeyNeuron(model, group, body?.journey.get(circuit) ?? null),
+    [model, group, body, circuit],
+  );
   const aspect = size.width / Math.max(size.height, 1);
 
   useEffect(() => {
@@ -138,6 +182,44 @@ export function JourneyRig({
       : 1;
     return new SphereGeometry(Math.max(radius * 0.035, 0.6), 14, 10);
   }, [neuron]);
+  // The circuit draws each cell as a rough line through its middle. At the
+  // last stop the one cell is drawn along its real path, which the spike
+  // then travels.
+  const strand = useMemo(() => {
+    if (!neuron) return null;
+    const points: Vector3[] = [];
+    for (let at = 0; at + 2 < neuron.path.data.length; at += 3) {
+      points.push(
+        new Vector3(
+          neuron.path.data[at],
+          neuron.path.data[at + 1],
+          neuron.path.data[at + 2],
+        ),
+      );
+    }
+    if (points.length < 2) return null;
+    const radius = neuron.box.getBoundingSphere(new Sphere()).radius;
+    return new TubeGeometry(
+      new CatmullRomCurve3(points),
+      points.length * 3,
+      Math.max(radius * 0.008, 0.4),
+      6,
+      false,
+    );
+  }, [neuron]);
+  const strandMaterial = useMemo(() => {
+    const material = new MeshBasicMaterial({ color });
+    material.toneMapped = false;
+    return material;
+  }, [color]);
+  useEffect(
+    () => () => {
+      strand?.dispose();
+      strandMaterial.dispose();
+    },
+    [strand, strandMaterial],
+  );
+  const strandRef = useRef<Mesh>(null);
   const dotMaterial = useMemo(() => {
     const material = new MeshBasicMaterial({ color: "#fff7e8" });
     material.toneMapped = false;
@@ -187,9 +269,9 @@ export function JourneyRig({
     const layersTo: Layers = body
       ? JOURNEY_LAYERS[name]
       : { ...JOURNEY_LAYERS[name], lines: true };
-    // The last stop dims every cell but one.
+    // The last stop dims every cell, that one too: it is drawn on its own,
+    // along its real path.
     model.focus.fill(name === "neuron" && neuron ? 0 : 255);
-    if (name === "neuron" && neuron) model.focus[neuron.index] = 255;
     model.focusTexture.needsUpdate = true;
     const control = orbit.current;
     const from: Pose = {
@@ -281,6 +363,10 @@ export function JourneyRig({
     }
     body?.show(shown.current.body, shown.current.shell);
     if (lines.current) lines.current.visible = shown.current.lines;
+    if (strandRef.current) {
+      strandRef.current.visible =
+        JOURNEY_LEVELS[level] === "neuron" && !flight.current;
+    }
     const mesh = dot.current;
     if (mesh) {
       const at =
@@ -289,7 +375,7 @@ export function JourneyRig({
       if (at && neuron) {
         // Still, halfway along, for readers who asked for less motion.
         const t = reduce.current ? 0.5 : (now % SPIKE_MS) / SPIKE_MS;
-        const point = samplePath(model.paths, neuron.index, t);
+        const point = samplePath(neuron.path, 0, t);
         if (point) mesh.position.set(point[0], point[1], point[2]);
         if (!reduce.current) invalidate();
       }
@@ -301,6 +387,15 @@ export function JourneyRig({
       <hemisphereLight args={["#fff4e0", "#3b2a1a", 2.2]} />
       <directionalLight position={[600, -1400, -1200]} intensity={2.4} />
       {body ? <primitive object={body.group} /> : null}
+      {strand ? (
+        <mesh
+          ref={strandRef}
+          geometry={strand}
+          material={strandMaterial}
+          visible={false}
+          renderOrder={3}
+        />
+      ) : null}
       <mesh
         ref={dot}
         geometry={dotGeometry}

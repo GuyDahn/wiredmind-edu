@@ -17,6 +17,13 @@ Two animals meet in this file, and neither is the other's:
 * The brain and nerve cord outlines are the MaleCNS v1.0 shell meshes
   (HHMI Janelia FlyEM, CC BY 4.0), the same male the neurons come from.
 
+The file also carries, for each lesson circuit, the one neuron its zoom ends
+on and the path a spike takes along it: from where the lesson's upstream
+cells meet it (the looming cells on the giant fiber, the Kenyon cells on an
+output neuron, the ring neurons on a compass cell) to its farthest terminal,
+along its MaleCNS skeleton. That needs the baked circuits in dist/ and their
+skeletons in raw/skeletons/ (make-data).
+
 The body is moved into MaleCNS coordinates (microns), so it lines up with the
 circuit files without touching them. Both stay at their true size. The
 placement is a rigid fit, not a registration: FIT below is the pitch and
@@ -32,6 +39,8 @@ much of each shell lands inside.
 from __future__ import annotations
 
 import argparse
+import json
+import struct
 import subprocess
 import urllib.request
 import warnings
@@ -157,6 +166,113 @@ def shell(name: str, raw_dir: Path) -> tuple[np.ndarray, np.ndarray]:
     return read_ngmesh(path)
 
 
+# For each circuit: the cells the zoom's last neuron is picked from, and the
+# upstream cells whose contacts mark where its spike starts.
+JOURNEY = {
+    "escape": ({"DNp01"}, None, {"LC4", "LPLC2"}, None),
+    "olfactory": (None, "mbon", None, "kc"),
+    "visual": ({"EPG", "EPGt"}, None, None, "ring"),
+}
+JOURNEY_POINTS = 64
+CONTACT_UM = 3.0
+# Upstream skeletons sampled per circuit, enough to find where they meet the cell.
+UPSTREAM_CAP = 400
+
+
+def matches(row: dict, types: set[str] | None, group: str | None) -> bool:
+    return (types is not None and row["type"] in types) or (
+        group is not None and row["colorGroup"] == group
+    )
+
+
+def skeleton(path: Path):
+    """Points in microns, and the skeleton as a weighted graph."""
+    from scipy.sparse import coo_matrix
+
+    table = np.loadtxt(path, comments="#", ndmin=2)
+    ids = table[:, 0].astype(int)
+    points = table[:, 2:5] * 0.008
+    index = {node: at for at, node in enumerate(ids)}
+    edges = np.array(
+        [
+            (at, index[parent])
+            for at, parent in enumerate(table[:, 6].astype(int))
+            if parent in index
+        ]
+    )
+    lengths = np.linalg.norm(points[edges[:, 0]] - points[edges[:, 1]], axis=1)
+    count = len(points)
+    graph = coo_matrix(
+        (
+            np.r_[lengths, lengths],
+            (np.r_[edges[:, 0], edges[:, 1]], np.r_[edges[:, 1], edges[:, 0]]),
+        ),
+        shape=(count, count),
+    ).tocsr()
+    return points, graph
+
+
+def resample(points: np.ndarray, count: int) -> np.ndarray:
+    steps = np.r_[0, np.cumsum(np.linalg.norm(np.diff(points, axis=0), axis=1))]
+    targets = np.linspace(0, steps[-1], count)
+    return np.stack([np.interp(targets, steps, points[:, axis]) for axis in range(3)], axis=1)
+
+
+def journey_paths(dist: Path, skeletons: Path) -> dict[str, dict]:
+    """The zoom's last neuron in each circuit, and its spike's path, start first."""
+    from scipy.sparse.csgraph import dijkstra
+    from scipy.spatial import cKDTree
+
+    out: dict[str, dict] = {}
+    for circuit, (types, group, up_types, up_group) in JOURNEY.items():
+        rows = json.loads((dist / f"{circuit}.neurons.json").read_text())["neurons"]
+        upstream = [
+            skeleton(skeletons / f"{row['id']}.swc")[0]
+            for row in rows
+            if matches(row, up_types, up_group) and (skeletons / f"{row['id']}.swc").exists()
+        ][:UPSTREAM_CAP]
+        cloud = cKDTree(np.vstack(upstream))
+        best: tuple[float, int, np.ndarray] | None = None
+        for row in rows:
+            file = skeletons / f"{row['id']}.swc"
+            if not matches(row, types, group) or not file.exists():
+                continue
+            points, graph = skeleton(file)
+            contacts = np.array([len(near) for near in cloud.query_ball_point(points, CONTACT_UM)])
+            start = int(np.argmax(contacts))
+            reach, previous = dijkstra(graph, indices=start, return_predecessors=True)
+            reach = np.where(np.isinf(reach), -1, reach)
+            end = int(np.argmax(reach))
+            # The cell whose spike has the farthest to go is the easiest to follow.
+            if best is None or reach[end] > best[0]:
+                walk = [end]
+                while walk[-1] != start:
+                    walk.append(int(previous[walk[-1]]))
+                best = (float(reach[end]), int(row["id"]), points[walk[::-1]])
+        if best is None:
+            raise SystemExit(f"No skeleton for the zoom's neuron in {circuit}")
+        length, body_id, path = best
+        print(f"{circuit}: body {body_id}, a {length:.0f} um path")
+        out[circuit] = {
+            "bodyId": body_id,
+            "path": [round(float(v), 2) for v in resample(path, JOURNEY_POINTS).ravel()],
+        }
+    return out
+
+
+def with_extras(glb: Path, extras: dict) -> None:
+    """Writes `extras` into the glTF's own JSON, padded as the format asks."""
+    blob = glb.read_bytes()
+    json_length = struct.unpack_from("<I", blob, 12)[0]
+    gltf = json.loads(blob[20 : 20 + json_length])
+    gltf["extras"] = extras
+    text = json.dumps(gltf, separators=(",", ":")).encode()
+    text += b" " * (-len(text) % 4)
+    rest = blob[20 + json_length :]
+    header = struct.pack("<4sII", b"glTF", 2, 12 + 8 + len(text) + len(rest))
+    glb.write_bytes(header + struct.pack("<I4s", len(text), b"JSON") + text + rest)
+
+
 def group_of(name: str) -> str:
     if name in EYES:
         return "eyes"
@@ -231,6 +347,7 @@ def main() -> None:
         cwd=ROOT.parents[1],
     )
     plain.unlink()
+    with_extras(args.out, {"journey": journey_paths(ROOT / "dist", ROOT / "raw" / "skeletons")})
     print(f"wrote {args.out} ({args.out.stat().st_size} bytes)")
 
 

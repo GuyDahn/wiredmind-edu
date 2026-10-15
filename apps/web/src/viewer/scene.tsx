@@ -27,6 +27,7 @@ import { drainCommands, setPoker, type ViewerCommand } from "./commands.js";
 import { activityByGroup, FLASH_DECAY_MS } from "./flash.js";
 import { frameBox, frameSphere, type Box, type Point3 } from "./fit.js";
 import { writeFocus } from "./groups.js";
+import { groupColor } from "./module.js";
 import { JourneyRig, type JourneyState } from "./journey-rig.js";
 import {
   boxForGroups,
@@ -524,6 +525,8 @@ function CircuitView({
         <JourneyRig
           model={model}
           group={journeyGroup}
+          circuit={module.circuit}
+          color={groupColor(module, journeyGroup)}
           direction={CAMERA_DIRECTION}
           orbit={orbitRef}
           lines={linesRef}

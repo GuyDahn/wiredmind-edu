@@ -33,7 +33,7 @@ The other candidate, [flybody](https://github.com/TuragaLab/flybody) (HHMI Janel
 
 The body and the brain are **two different animals**: a female fly scanned at EPFL and a male fly imaged at Janelia. Both are shown at their true size. The body is rotated and shifted, as one rigid piece, to where the most of the brain outline sits inside the head and the most of the nerve cord outline sits inside the thorax; with that placement 99.9% of each outline is inside its part of the body (`bake_body.py --check`). This is a placement for teaching, not an anatomical registration: nothing was warped, and no claim is made about where a given neuron lies relative to the cuticle. The lesson says in words that the brain was mapped from another fly.
 
-Both end up in one file, `body.glb` (about 80 KB), published with the other baked assets as a GitHub Release and pinned in `data.lock.json`.
+The same file carries one path per lesson circuit for the spike at the zoom's last level: a line along one MaleCNS neuron's skeleton (CC BY 4.0), from where the lesson's upstream cells meet it to its farthest terminal. Both end up in one file, `body.glb` (about 85 KB), published with the other baked assets as a GitHub Release and pinned in `data.lock.json`.
 
 ## The story pictures
 
