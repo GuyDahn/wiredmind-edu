@@ -20,6 +20,20 @@
     }
   }
 
+  /* A loading bar with no number yet: a third of it sweeps from one end to
+     the other and back, never past either end. --shimmer-dir is -1 in
+     right-to-left text, where the third starts at the right. */
+  --animate-shimmer: shimmer 0.9s ease-in-out infinite alternate;
+
+  @keyframes shimmer {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(200% * var(--shimmer-dir, 1)));
+    }
+  }
+
   /* Every color below has a light value here and a dark override further
      down, so a component reaches for `bg-canvas`/`text-fg`/etc. once and
      gets the right shade in both themes, rather than pairing a literal

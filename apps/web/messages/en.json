@@ -367,7 +367,8 @@
       "viewer.controls.silenceNamed",
       "viewer.story.bridge",
       "teachers.index.companion",
-      "teachers.lessons.escape.levels.circuit"
+      "teachers.lessons.escape.levels.circuit",
+      "viewer.story.loading"
     ]
   },
   "meta": {
@@ -1098,6 +1099,7 @@
       "skip": "Skip the story",
       "back": "Back",
       "next": "Next",
+      "loading": "Loading…",
       "progress": "Panel {number} of {total}",
       "bridge": "Now let’s see what happened inside his brain.",
       "zoom": "Zoom in",

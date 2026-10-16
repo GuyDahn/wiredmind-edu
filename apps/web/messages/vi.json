@@ -733,6 +733,7 @@
       "skip": "Bỏ qua câu chuyện",
       "back": "Quay lại",
       "next": "Tiếp theo",
+      "loading": "Đang tải…",
       "progress": "Khung {number}/{total}",
       "bridge": "Giờ hãy xem điều gì đã xảy ra bên trong não cậu ấy.",
       "zoom": "Phóng to",

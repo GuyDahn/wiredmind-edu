@@ -733,6 +733,7 @@
       "skip": "跳过故事",
       "back": "上一步",
       "next": "下一步",
+      "loading": "正在加载……",
       "progress": "第{number}格，共{total}格",
       "bridge": "现在，来看看他的大脑里发生了什么。",
       "zoom": "放大",

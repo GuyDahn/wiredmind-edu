@@ -1,0 +1,3 @@
+/** The keyboard focus outline every viewer control shares. */
+export const FOCUS_RING =
+  "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring";

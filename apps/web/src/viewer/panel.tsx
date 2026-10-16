@@ -12,11 +12,9 @@ import type {
   ControlState,
   ModuleSpec,
 } from "./types.js";
+import { FOCUS_RING } from "./ui.js";
 
 const openGate: ControlGate = () => "open";
-
-export const FOCUS_RING =
-  "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring";
 
 /** Sends a control to the brain. The list and the lesson's action bar both press through here. */
 export function press(

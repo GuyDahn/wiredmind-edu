@@ -32,7 +32,7 @@ import { INTRO_SCREENS } from "./intro-screens.js";
 import { JourneyActions, JourneyCard } from "./journey-card.js";
 import { LESSONS, type LessonEntry } from "./modules.js";
 import { groupColor } from "./module.js";
-import { Controls, FOCUS_RING, press } from "./panel.js";
+import { Controls, press } from "./panel.js";
 import { useProgress } from "./progress.js";
 import { startPlayback, stopPlayback } from "./recorder.js";
 import { Sheet, type SheetState } from "./sheet.js";
@@ -40,6 +40,7 @@ import { useViewerStore } from "./store.js";
 import { StoryPanel, storyArt } from "./story.js";
 import { Toolbar } from "./toolbar.js";
 import type { ControlAction, ControlGate, ModuleSpec } from "./types.js";
+import { FOCUS_RING } from "./ui.js";
 
 /** Gap between a silence toggle and the puff we send for the learner. */
 const PUFF_DELAY_MS = 500;

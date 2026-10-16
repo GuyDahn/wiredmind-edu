@@ -733,6 +733,7 @@
       "skip": "Pular a história",
       "back": "Voltar",
       "next": "Próximo",
+      "loading": "Carregando…",
       "progress": "Quadrinho {number} de {total}",
       "bridge": "Agora vamos ver o que aconteceu dentro do cérebro dele.",
       "zoom": "Aproximar",

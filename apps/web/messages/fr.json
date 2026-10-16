@@ -733,6 +733,7 @@
       "skip": "Passer l’histoire",
       "back": "Précédent",
       "next": "Suivant",
+      "loading": "Chargement…",
       "progress": "Case {number} sur {total}",
       "bridge": "Voyons maintenant ce qui s’est passé dans son cerveau.",
       "zoom": "Zoomer",

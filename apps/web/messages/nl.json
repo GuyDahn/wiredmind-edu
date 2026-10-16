@@ -734,6 +734,7 @@
       "skip": "Sla het verhaal over",
       "back": "Terug",
       "next": "Volgende",
+      "loading": "Laden…",
       "progress": "Plaatje {number} van {total}",
       "bridge": "Nu gaan we kijken wat er in zijn brein gebeurde.",
       "zoom": "Inzoomen",

@@ -733,6 +733,7 @@
       "skip": "Überspringen",
       "back": "Zurück",
       "next": "Weiter",
+      "loading": "Wird geladen …",
       "progress": "Bild {number} von {total}",
       "bridge": "Schauen wir uns an, was dabei in seinem Gehirn passiert ist.",
       "zoom": "Hineinzoomen",
