@@ -41,4 +41,8 @@ The comic panels in `apps/web/public/art/story/` are original placeholders drawn
 
 ## The home page clips
 
-The clips in `apps/web/public/hero/` are recorded from WiredMind's own lessons by `scripts/hero-clips.ts`. They show MaleCNS neurons (CC BY 4.0) and, in the zoom clip, the NeuroMechFly body (Apache-2.0), and each carries that credit on screen. No one else's video is used. Clips from other projects may be added only with a license or written permission that allows it: [docs/hero-montage-sources.md](docs/hero-montage-sources.md).
+The clips in `apps/web/public/hero/` are recorded from WiredMind's own lessons by `scripts/hero-clips.ts`. They show MaleCNS neurons (CC BY 4.0) and, in the zoom clip, the NeuroMechFly body (Apache-2.0), and each carries that credit on screen. No one else's video is used.
+
+One clip is not from the lessons: `walk.webm`, a stylized fruit fly walking, made on 15 October 2026 with the AI video generator Higgsfield (Kling 3.0) from a text prompt alone, with no reference footage, and cut to 1.9 seconds. It is an illustration, not footage of a real or simulated fly, and its proportions and gait are not accurate. Its on-screen credit says it is AI-generated.
+
+The earlier plan to ask other projects for their clips was dropped on 16 October 2026; no requests were sent. The list of candidates stays in [docs/hero-montage-sources.md](docs/hero-montage-sources.md) for the record, and any clip from another project would still need a license or written permission that allows it.

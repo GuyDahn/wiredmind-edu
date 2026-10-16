@@ -35,6 +35,14 @@
       "caption": "zoom",
       "credit": "WiredMind · NeuroMechFly body, Apache-2.0 · MaleCNS v1.0, CC BY 4.0",
       "creditUrl": "/modules/escape"
+    },
+    {
+      "id": "walk",
+      "src": "/hero/walk.webm",
+      "poster": "/hero/walk.webp",
+      "duration": 1.9,
+      "credit": "AI-generated illustration, not footage · Higgsfield (Kling 3.0)",
+      "creditUrl": "https://github.com/GuyDahn/wiredmind-edu/blob/main/ATTRIBUTION.md#the-home-page-clips"
     }
   ]
 }
