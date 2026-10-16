@@ -8,6 +8,13 @@ import {
 } from "three";
 import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader.js";
 import { centerline, packPaths, type NeuronPaths } from "./centerline.js";
+import {
+  CircuitError,
+  downloadCircuit,
+  downloaded,
+  takeCircuitFiles,
+  type LoadErrorCode,
+} from "./circuit-files.js";
 import { CompassReadout, compassWedges } from "./compass.js";
 import { FlashField } from "./flash.js";
 import { dracoParts, readGlb, type GltfJson } from "./glb.js";
@@ -17,6 +24,12 @@ import { emptyGroups } from "./module.js";
 import { parseGraphBin } from "../sim/index.js";
 import { createViewerSession, type ViewerSession } from "./session.js";
 import type { ModuleSpec } from "./types.js";
+
+export {
+  CircuitError,
+  type LoadErrorCode,
+  versioned,
+} from "./circuit-files.js";
 
 export type LoadedCircuit = {
   session: ViewerSession;
@@ -98,23 +111,6 @@ export function openCircuit(module: ModuleSpec): Ticket {
   };
 }
 
-/**
- * What went wrong loading a circuit, for the reader: the files are missing,
- * damaged, or something else failed. The viewer says it in the reader's
- * language, from viewer.load, and logs the details for developers.
- */
-export type LoadErrorCode = "unavailable" | "damaged" | "failed";
-
-/** A circuit that could not load, and why. */
-export class CircuitError extends Error {
-  constructor(
-    readonly code: LoadErrorCode,
-    message: string,
-  ) {
-    super(message);
-  }
-}
-
 export function loadError(error: unknown): LoadErrorCode {
   if (error instanceof CircuitError) return error.code;
   const message = error instanceof Error ? error.message : "";
@@ -129,32 +125,20 @@ const DOWNLOAD_SHARE = 0.6;
 
 async function loadCircuit(module: ModuleSpec): Promise<LoadedCircuit> {
   report(0.02);
-  // On a slow connection the downloads are most of the wait, so the bar
-  // follows their bytes as they arrive.
-  const files = [
-    module.assets.graph,
-    module.assets.neurons,
-    module.assets.gltf,
-  ];
-  const seen: Download[] = files.map(() => ({
-    loaded: 0,
-    total: 0,
-    done: false,
-  }));
-  const tick = () => report(0.02 + (DOWNLOAD_SHARE - 0.02) * downloaded(seen));
-  const [graphBuffer, neuronBuffer, glb] = await Promise.all(
-    files.map(async (url, index) => {
-      const download = seen[index]!;
-      const buffer = await readBody(await fetchOk(url), (loaded, total) => {
-        download.loaded = loaded;
-        download.total = total;
-        tick();
-      });
-      download.done = true;
-      tick();
-      return buffer;
-    }),
-  );
+  // The story may have started the download already. On a slow connection
+  // it is most of the wait, so the bar follows its bytes as they arrive.
+  const download = downloadCircuit(module);
+  const tick = () =>
+    report(0.02 + (DOWNLOAD_SHARE - 0.02) * downloaded(download.seen));
+  download.listeners.add(tick);
+  tick();
+  let files: [ArrayBuffer, ArrayBuffer, ArrayBuffer];
+  try {
+    files = await takeCircuitFiles(download, module);
+  } finally {
+    download.listeners.delete(tick);
+  }
+  const [graphBuffer, neuronBuffer, glb] = files;
   const neuronFile = JSON.parse(
     new TextDecoder().decode(neuronBuffer),
   ) as unknown;
@@ -242,96 +226,6 @@ export function boxForGroups(
     }
   }
   return box.isEmpty() ? null : box;
-}
-
-type Download = { loaded: number; total: number; done: boolean };
-
-/**
- * How much of the downloads is in, from 0 to 1. By bytes when every file
- * said how big it is; otherwise each file counts the same, and one that did
- * not say counts only once it is done.
- */
-export function downloaded(downloads: readonly Download[]): number {
-  if (downloads.length === 0) return 1;
-  if (downloads.every((item) => item.done || item.total > 0)) {
-    let loaded = 0;
-    let total = 0;
-    for (const item of downloads) {
-      const size = item.total > 0 ? item.total : item.loaded;
-      total += size;
-      loaded += item.done ? size : Math.min(item.loaded, size);
-    }
-    return total > 0 ? loaded / total : 0;
-  }
-  let sum = 0;
-  for (const item of downloads) {
-    if (item.done) sum += 1;
-    else if (item.total > 0) sum += Math.min(1, item.loaded / item.total);
-  }
-  return sum / downloads.length;
-}
-
-/**
- * The whole body, telling `onBytes` how much has arrived as it does. The
- * total is the Content-Length, which counts bytes on the wire: when the
- * server compressed the file, the body reads longer, so then it is unknown (0).
- */
-async function readBody(
-  response: Response,
-  onBytes: (loaded: number, total: number) => void,
-): Promise<ArrayBuffer> {
-  const length = Number(response.headers.get("content-length"));
-  const total =
-    response.headers.get("content-encoding") ||
-    !Number.isFinite(length) ||
-    length <= 0
-      ? 0
-      : length;
-  if (!response.body) {
-    const buffer = await response.arrayBuffer();
-    onBytes(buffer.byteLength, total);
-    return buffer;
-  }
-  const reader = response.body.getReader();
-  const chunks: Uint8Array[] = [];
-  let loaded = 0;
-  for (;;) {
-    const { done, value } = await reader.read();
-    if (done) break;
-    chunks.push(value);
-    loaded += value.byteLength;
-    onBytes(loaded, total);
-  }
-  const body = new Uint8Array(loaded);
-  let at = 0;
-  for (const chunk of chunks) {
-    body.set(chunk, at);
-    at += chunk.byteLength;
-  }
-  return body.buffer;
-}
-
-/**
- * /data files are cached for a year, so each request names the data release
- * the build fetched. A new release is a new URL.
- */
-export function versioned(url: string, version: string | undefined): string {
-  if (!version) return url;
-  const join = url.includes("?") ? "&" : "?";
-  return `${url}${join}v=${encodeURIComponent(version)}`;
-}
-
-async function fetchOk(url: string): Promise<Response> {
-  const response = await fetch(
-    versioned(url, process.env.NEXT_PUBLIC_DATA_VERSION),
-  );
-  if (!response.ok) {
-    throw new CircuitError(
-      "unavailable",
-      "The circuit files are not available. Run pnpm data:fetch and refresh.",
-    );
-  }
-  return response;
 }
 
 function readNeurons(value: unknown, circuit: string): NeuronRow[] {

@@ -8,6 +8,7 @@ import { useCallback, useEffect, useState, type ReactNode } from "react";
 import { ENDONYMS, localePath } from "../i18n/locales.js";
 import { LanguageMenu } from "../site/language-menu.js";
 import { SITE_NAME } from "../site/site.js";
+import { prefetchCircuit } from "./circuit-files.js";
 import { readClassMode, withClassMode } from "./class-mode.js";
 import { LoadingBar } from "./loading-bar.js";
 import { groupColor } from "./module.js";
@@ -25,7 +26,7 @@ import { Story } from "./story.js";
 
 // The story is all a lesson page shows at first, so it is all the page's own
 // bundle carries. Everything behind it (the lesson panel and the simulator it
-// drives, the 3D scene, the color key) loads on its own, once the story
+// drives, the 3D scene, the color key) loads on its own, after the story
 // answers taps.
 const Scene = dynamic(() => import("./scene.js"), { ssr: false });
 const ModuleRunner = dynamic(
@@ -79,11 +80,13 @@ export function Viewer({
   // A shared run plays in the brain, with no story before it.
   const story = chapter === "story" && shared === null;
   // The lesson panel, the 3D scene and the circuit are megabytes to fetch
-  // and seconds to decode. None of it may hold up the story, so it starts
-  // only once the story answers taps (this effect runs after hydration) and
-  // the page itself has loaded, in the main thread's first idle moment. It
-  // then loads while the story is read, so the zoom is ready when it ends.
-  // Leaving the story wakes it at once.
+  // and seconds to decode, and none of it may hold up the story. The
+  // circuit's files start downloading once the story answers taps (this
+  // effect runs after hydration) and the page has loaded, in the first idle
+  // moment: network only, one file at a time. The work that takes the main
+  // thread (three.js, the panel, the decode) waits for the reader's first
+  // tap or key, then runs while the rest of the story is read, so the zoom
+  // is ready when it ends. Leaving the story wakes it at once.
   const [awake, setAwake] = useState(false);
   useEffect(() => {
     if (awake) return;
@@ -94,15 +97,21 @@ export function Viewer({
     const wake = () => setAwake(true);
     let cancel: (() => void) | null = null;
     const afterLoad = () => {
-      cancel = whenIdle(wake, 2000);
+      cancel = whenIdle(() => prefetchCircuit(entry.module), 2000);
     };
     if (document.readyState === "complete") afterLoad();
     else window.addEventListener("load", afterLoad, { once: true });
+    // A click too: a tap held before hydration comes back as one.
+    const events = ["pointerdown", "keydown", "click"] as const;
+    for (const name of events) {
+      window.addEventListener(name, wake, { once: true, passive: true });
+    }
     return () => {
       window.removeEventListener("load", afterLoad);
       cancel?.();
+      for (const name of events) window.removeEventListener(name, wake);
     };
-  }, [awake, story]);
+  }, [awake, story, entry.module]);
 
   // Class mode is whatever the address says, on every lesson page.
   useEffect(() => {

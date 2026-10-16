@@ -51,11 +51,18 @@ async function readStory(page: Page, lesson: LessonFile) {
   const next = page.locator("[data-story-next]");
   const back = page.locator("[data-story-back]");
   await expect(back).toBeDisabled();
-  for (const panel of lesson.story.panels) {
+  for (const [index, panel] of lesson.story.panels.entries()) {
     await expect(story(page)).toHaveAttribute("data-story", panel);
     await expect(page.locator("[data-story-caption]")).not.toBeEmpty();
     await expect(page.locator("[data-story-bubble]")).not.toBeEmpty();
     await next.click();
+    if (index === 0) {
+      // The reader's first tap starts the lesson loading behind the story,
+      // out of reach of taps and tabs.
+      await expect(page.locator("[inert] [data-mission-goal]")).toHaveCount(1, {
+        timeout: 30_000,
+      });
+    }
   }
   await expect(story(page)).toHaveAttribute("data-story", "bridge");
   // Back is always there, and the story is where it was left.
@@ -113,8 +120,9 @@ for (const id of LESSONS) {
     // The story comes first, over everything else.
     await expect(story(page)).toBeVisible();
     await expect(journey(page)).toHaveCount(0);
-    // The lesson loads behind it, out of reach of taps and tabs.
-    await expect(page.locator("[inert] [data-mission-goal]")).toHaveCount(1);
+    // Nothing of the lesson's own until the reader taps: the story has the
+    // main thread to itself.
+    await expect(page.locator("[data-mission-goal]")).toHaveCount(0);
     await readStory(page, lesson);
 
     // The zoom: four levels in order, a caption at each.
