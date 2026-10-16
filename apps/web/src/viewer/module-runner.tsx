@@ -206,11 +206,14 @@ export function ModuleRunner({
   // unless a "Show me" link asked for the walkthrough. Nothing remembers that
   // they were seen: no cookie, no storage. Skip is one tap each. "How to
   // read this brain" waits behind the "?" button.
+  // The store starts on the story, and every runner puts it back there when
+  // it goes. This one loads while the story is read, so by the time it
+  // mounts the reader may have skipped ahead: it leaves the chapter alone.
   useEffect(() => {
     const store = useViewerStore.getState();
     store.setIntro(false);
     store.setLevel(0);
-    store.setChapter(autoDemo ? "lesson" : "story");
+    if (autoDemo) store.setChapter("lesson");
     return () => {
       const last = useViewerStore.getState();
       last.setIntro(false);

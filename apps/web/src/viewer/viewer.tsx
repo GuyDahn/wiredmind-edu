@@ -9,12 +9,9 @@ import { ENDONYMS, localePath } from "../i18n/locales.js";
 import { LanguageMenu } from "../site/language-menu.js";
 import { SITE_NAME } from "../site/site.js";
 import { readClassMode, withClassMode } from "./class-mode.js";
-import { CompassDial } from "./compass-dial.js";
-import { isDemo } from "./demo.js";
-import { Legend } from "./legend.js";
+import { LoadingBar } from "./loading-bar.js";
 import { groupColor } from "./module.js";
 import { findLesson, LESSONS, type LessonEntry } from "./modules.js";
-import { ModuleRunner } from "./module-runner.js";
 import {
   decodeReplay,
   REPLAY_PARAM,
@@ -23,11 +20,39 @@ import {
   type Replay,
   type ReplayErrorCode,
 } from "./replay.js";
-import { ReplayRunner } from "./replay-runner.js";
 import { useViewerStore } from "./store.js";
 import { Story } from "./story.js";
 
+// The story is all a lesson page shows at first, so it is all the page's own
+// bundle carries. Everything behind it (the lesson panel and the simulator it
+// drives, the 3D scene, the color key) loads on its own, once the story
+// answers taps.
 const Scene = dynamic(() => import("./scene.js"), { ssr: false });
+const ModuleRunner = dynamic(
+  () => import("./module-runner.js").then((mod) => mod.ModuleRunner),
+  { ssr: false, loading: PanelLoading },
+);
+const ReplayRunner = dynamic(
+  () => import("./replay-runner.js").then((mod) => mod.ReplayRunner),
+  { ssr: false, loading: PanelLoading },
+);
+const Legend = dynamic(() => import("./legend.js").then((mod) => mod.Legend), {
+  ssr: false,
+});
+const CompassDial = dynamic(
+  () => import("./compass-dial.js").then((mod) => mod.CompassDial),
+  { ssr: false },
+);
+
+/** Runs `task` once the main thread is free, or after `timeout` ms at the latest. */
+function whenIdle(task: () => void, timeout: number): () => void {
+  if (typeof window.requestIdleCallback === "function") {
+    const handle = window.requestIdleCallback(task, { timeout });
+    return () => window.cancelIdleCallback(handle);
+  }
+  const handle = window.setTimeout(task, 200);
+  return () => window.clearTimeout(handle);
+}
 
 /** A run from a ?r= link: someone's own, or the lesson's "Show me" walkthrough. */
 type Shared = { entry: LessonEntry; replay: Replay; demo: boolean };
@@ -53,9 +78,12 @@ export function Viewer({
   const chapter = useViewerStore((state) => state.chapter);
   // A shared run plays in the brain, with no story before it.
   const story = chapter === "story" && shared === null;
-  // The circuit is megabytes to fetch and seconds to decode. While the story's
-  // first panel is all there is to see, it waits: it starts at the reader's
-  // first tap or key, which leaves the rest of the story to load behind.
+  // The lesson panel, the 3D scene and the circuit are megabytes to fetch
+  // and seconds to decode. None of it may hold up the story, so it starts
+  // only once the story answers taps (this effect runs after hydration) and
+  // the page itself has loaded, in the main thread's first idle moment. It
+  // then loads while the story is read, so the zoom is ready when it ends.
+  // Leaving the story wakes it at once.
   const [awake, setAwake] = useState(false);
   useEffect(() => {
     if (awake) return;
@@ -64,12 +92,15 @@ export function Viewer({
       return;
     }
     const wake = () => setAwake(true);
-    const events = ["pointerdown", "keydown", "touchstart"] as const;
-    for (const name of events) {
-      window.addEventListener(name, wake, { once: true, passive: true });
-    }
+    let cancel: (() => void) | null = null;
+    const afterLoad = () => {
+      cancel = whenIdle(wake, 2000);
+    };
+    if (document.readyState === "complete") afterLoad();
+    else window.addEventListener("load", afterLoad, { once: true });
     return () => {
-      for (const name of events) window.removeEventListener(name, wake);
+      window.removeEventListener("load", afterLoad);
+      cancel?.();
     };
   }, [awake, story]);
 
@@ -97,8 +128,17 @@ export function Viewer({
         router.replace(`${localePath(locale, target.path)}${search}`);
         return;
       }
-      setShared({ entry: target, replay, demo: isDemo(replay, target) });
-      return;
+      // Telling a walkthrough from someone's own run takes the simulator's
+      // clock, which is not in the story's bundle.
+      let active = true;
+      void import("./demo.js").then(({ isDemo }) => {
+        if (active) {
+          setShared({ entry: target, replay, demo: isDemo(replay, target) });
+        }
+      });
+      return () => {
+        active = false;
+      };
     } catch (error) {
       code = error instanceof ReplayError ? error.code : "generic";
     }
@@ -143,7 +183,9 @@ export function Viewer({
       ) : null}
       {/* Behind the story the lesson loads, out of reach of taps and tabs. */}
       <div inert={story} className="contents">
-        {shared && !shared.demo ? (
+        {!awake ? (
+          <PanelLoading />
+        ) : shared && !shared.demo ? (
           <ReplayRunner
             key={`${shared.entry.id}-replay`}
             entry={shared.entry}
@@ -254,12 +296,29 @@ function Stage({
           <CompassDial color={groupColor(module, module.compass.colorGroup)} />
         </div>
       ) : null}
-      {status === "loading" ? (
-        <p className="pointer-events-none absolute inset-x-4 bottom-16 text-center text-sm text-zinc-300 md:bottom-3">
-          {percent > 0
-            ? t("stage.loadingPercent", { percent })
-            : t("stage.loading")}
-        </p>
+      {status === "loading" && !covered ? (
+        // Out of the story before the circuit is in: the zoom and the lesson
+        // wait on it, so say how far it has got rather than show a still,
+        // empty stage.
+        <div
+          role="progressbar"
+          aria-label={t("stage.loading")}
+          aria-valuemin={0}
+          aria-valuemax={100}
+          aria-valuenow={percent > 0 ? percent : undefined}
+          data-stage-loading=""
+          className="pointer-events-none absolute inset-x-0 top-1/2 z-10 mx-auto flex w-[min(20rem,calc(100%-2rem))] -translate-y-1/2 flex-col gap-2 rounded-2xl bg-zinc-900/90 px-4 py-3 text-center text-sm font-semibold text-zinc-100 classroom:w-[min(32rem,calc(100%-2rem))] classroom:text-2xl"
+        >
+          <span>
+            {percent > 0
+              ? t("stage.loadingPercent", { percent })
+              : t("stage.loading")}
+          </span>
+          <LoadingBar
+            progress={progress}
+            className="h-1.5 rounded-full bg-zinc-700 text-zinc-100"
+          />
+        </div>
       ) : null}
       {error ? (
         <p
@@ -270,6 +329,27 @@ function Stage({
         </p>
       ) : null}
     </div>
+  );
+}
+
+/**
+ * Where the lesson panel goes, while its code loads: the same box as the
+ * panel, with a loading bar, so the page does not jump when it arrives.
+ */
+function PanelLoading() {
+  const t = useTranslations("viewer.story");
+  return (
+    <section
+      aria-busy="true"
+      aria-label={t("loading")}
+      data-panel-loading=""
+      className="relative z-10 order-2 flex h-[calc(40dvh+7.5rem)] w-full shrink-0 flex-col gap-3 rounded-t-3xl border-t border-border bg-surface px-4 pt-6 md:order-1 md:h-full md:w-96 md:rounded-none md:border-t-0 md:border-e classroom:md:w-[min(36rem,45vw)]"
+    >
+      <p className="text-sm font-semibold text-fg-muted classroom:text-xl">
+        {t("loading")}
+      </p>
+      <LoadingBar className="h-1 rounded-full bg-overlay-strong text-fg" />
+    </section>
   );
 }
 
