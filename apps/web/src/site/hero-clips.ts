@@ -3,7 +3,8 @@
  * (content/hero-clips.json), so a clip can be added without touching code.
  *
  * Every clip carries a credit, shown over it while it plays. Ours are
- * recorded from the lessons (pnpm hero:clips). A clip from someone else's
+ * recorded from the lessons (pnpm hero:clips), except the walking fly, an
+ * AI-generated illustration whose credit says so. A clip from someone else's
  * project goes in only with a license or written permission that allows it,
  * and with the credit its owner asked for: docs/hero-montage-sources.md.
  */

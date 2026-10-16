@@ -109,7 +109,7 @@ apps/web/             Next.js app, and the Vercel project root
   i18n/               the translation glossary and style guide
   content/            circuit definitions (module.json), lesson scripts (modules/*.json), and the home page clip list
   public/art/story/   the story panels, by file name (placeholders until docs/art-brief.md is filled)
-  public/hero/        the home page clips, recorded from the lessons (pnpm hero:clips)
+  public/hero/        the home page clips, recorded from the lessons (pnpm hero:clips), plus one AI-generated walking fly
   src/sim/            leaky integrate-and-fire simulator
   src/viewer/         3D viewer, lesson runner, and share-link replays
   src/site/           landing loop, header, footer, language menu, and metadata
@@ -119,7 +119,7 @@ apps/web/             Next.js app, and the Vercel project root
 scripts/              data download and sha256 checks, the landing-loop bake, translation draft and check, placeholder art, clip recording, git hooks
 tools/data/           Python pipeline that cuts the circuits out of MaleCNS
 tests/                node:test suites, including the science checks
-docs/                 notes, the screenshot, USER_TEST.md, the art brief, and the montage's permission list
+docs/                 notes, the screenshot, USER_TEST.md, the art brief, and the montage's (dropped) permission list
 ATTRIBUTION.md        other people's work shown on the site, and the license of each
 data.lock.json        the data release tag and each file's sha256
 ```

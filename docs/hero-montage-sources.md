@@ -1,5 +1,7 @@
 # Hero montage: sources and permissions
 
+> **Dropped, 16 October 2026.** We decided not to use other projects' footage in the montage, and no permission request below was ever sent. The walking fly the montage was missing is now an AI-generated illustration of our own (see [ATTRIBUTION.md](../ATTRIBUTION.md#the-home-page-clips)). This document stays as a record; the rules in it still apply if the decision is ever reversed.
+
 Internal working document. The home page opens on a montage of short clips (1.5 to 2 seconds each). Today every clip is our own, recorded from the lessons with `pnpm hero:clips`. The idea is to add clips from other projects built on the same fly connectomes: simulated flies walking, grooming, flying, seeing.
 
 **Those clips belong to the people who made them.** Nothing from this list is downloaded, embedded, or re-encoded until its owner has said yes in writing, or the clip itself carries a license that allows it. A code license on a repository does not cover the videos on its website, and an open-access paper's license covers the paper's figures and supplementary videos, not the lab's other footage. When in doubt, ask.
