@@ -124,15 +124,42 @@ export function loadError(error: unknown): LoadErrorCode {
   return "failed";
 }
 
+/** Share of the bar the three downloads fill; decoding fills the rest. */
+const DOWNLOAD_SHARE = 0.6;
+
 async function loadCircuit(module: ModuleSpec): Promise<LoadedCircuit> {
-  report(0.04);
-  const [graphBuffer, neuronFile, glb] = await Promise.all([
-    fetchBuffer(module.assets.graph),
-    fetchJson(module.assets.neurons),
-    fetchBuffer(module.assets.gltf),
-  ]);
+  report(0.02);
+  // On a slow connection the downloads are most of the wait, so the bar
+  // follows their bytes as they arrive.
+  const files = [
+    module.assets.graph,
+    module.assets.neurons,
+    module.assets.gltf,
+  ];
+  const seen: Download[] = files.map(() => ({
+    loaded: 0,
+    total: 0,
+    done: false,
+  }));
+  const tick = () => report(0.02 + (DOWNLOAD_SHARE - 0.02) * downloaded(seen));
+  const [graphBuffer, neuronBuffer, glb] = await Promise.all(
+    files.map(async (url, index) => {
+      const download = seen[index]!;
+      const buffer = await readBody(await fetchOk(url), (loaded, total) => {
+        download.loaded = loaded;
+        download.total = total;
+        tick();
+      });
+      download.done = true;
+      tick();
+      return buffer;
+    }),
+  );
+  const neuronFile = JSON.parse(
+    new TextDecoder().decode(neuronBuffer),
+  ) as unknown;
   await yieldToMain();
-  report(0.2);
+  report(DOWNLOAD_SHARE);
   const neurons = readNeurons(neuronFile, module.circuit);
   const graph = parseGraphBin(graphBuffer);
   if (graph.neuronCount !== neurons.length) {
@@ -217,14 +244,71 @@ export function boxForGroups(
   return box.isEmpty() ? null : box;
 }
 
-async function fetchBuffer(url: string): Promise<ArrayBuffer> {
-  const response = await fetchOk(url);
-  return response.arrayBuffer();
+type Download = { loaded: number; total: number; done: boolean };
+
+/**
+ * How much of the downloads is in, from 0 to 1. By bytes when every file
+ * said how big it is; otherwise each file counts the same, and one that did
+ * not say counts only once it is done.
+ */
+export function downloaded(downloads: readonly Download[]): number {
+  if (downloads.length === 0) return 1;
+  if (downloads.every((item) => item.done || item.total > 0)) {
+    let loaded = 0;
+    let total = 0;
+    for (const item of downloads) {
+      const size = item.total > 0 ? item.total : item.loaded;
+      total += size;
+      loaded += item.done ? size : Math.min(item.loaded, size);
+    }
+    return total > 0 ? loaded / total : 0;
+  }
+  let sum = 0;
+  for (const item of downloads) {
+    if (item.done) sum += 1;
+    else if (item.total > 0) sum += Math.min(1, item.loaded / item.total);
+  }
+  return sum / downloads.length;
 }
 
-async function fetchJson(url: string): Promise<unknown> {
-  const response = await fetchOk(url);
-  return response.json() as Promise<unknown>;
+/**
+ * The whole body, telling `onBytes` how much has arrived as it does. The
+ * total is the Content-Length, which counts bytes on the wire: when the
+ * server compressed the file, the body reads longer, so then it is unknown (0).
+ */
+async function readBody(
+  response: Response,
+  onBytes: (loaded: number, total: number) => void,
+): Promise<ArrayBuffer> {
+  const length = Number(response.headers.get("content-length"));
+  const total =
+    response.headers.get("content-encoding") ||
+    !Number.isFinite(length) ||
+    length <= 0
+      ? 0
+      : length;
+  if (!response.body) {
+    const buffer = await response.arrayBuffer();
+    onBytes(buffer.byteLength, total);
+    return buffer;
+  }
+  const reader = response.body.getReader();
+  const chunks: Uint8Array[] = [];
+  let loaded = 0;
+  for (;;) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    chunks.push(value);
+    loaded += value.byteLength;
+    onBytes(loaded, total);
+  }
+  const body = new Uint8Array(loaded);
+  let at = 0;
+  for (const chunk of chunks) {
+    body.set(chunk, at);
+    at += chunk.byteLength;
+  }
+  return body.buffer;
 }
 
 /**
@@ -343,7 +427,12 @@ async function mergeLines(
         );
         geometry.dispose();
       }
-      report(0.25 + 0.7 * ((start + slice.length) / jobs.length));
+      report(
+        DOWNLOAD_SHARE +
+          0.05 +
+          (0.95 - DOWNLOAD_SHARE - 0.05) *
+            ((start + slice.length) / jobs.length),
+      );
       await yieldToMain();
     }
   } finally {
