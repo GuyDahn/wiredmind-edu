@@ -7,7 +7,7 @@
   },
   "meta": {
     "home": {
-      "title": "WiredMind: Das Gehirn einer echten Fruchtfliege erkunden",
+      "title": "WiredMind: Interaktive Lektionen zum Gehirn der Fruchtfliege",
       "description": "Kostenlose Lektionen für den Unterricht: Neuronen aus dem MaleCNS-Konnektom einer echten Fruchtfliege im Browser stimulieren und stummschalten. Ohne Login."
     },
     "about": {
@@ -236,7 +236,7 @@
         "fit": "Parameter je Zelltyp an Messungen anpassen, Neuronen mit graduierten Potenzialen und ohne Aktionspotenziale zulassen und leitfähigkeitsbasierte oder Mehrkompartimentmodelle nutzen, wo Dendriten eine Rolle spielen.",
         "add": "Gap Junctions aus anderen Daten ergänzen, außerdem Neuromodulatoren wie Dopamin und Octopamin sowie Plastizität, zum Beispiel dopaminabhängige Abschwächung an den Synapsen von Kenyon-Zellen zu Ausgangsneuronen.",
         "drive": "Sinnesneuronen so ansteuern, wie es die Welt tut: mit duftspezifischen Rezeptormustern und mit Annäherungsreizen, die immer mehr Zellen rekrutieren, je größer das Objekt wird.",
-        "uncertain": "Transmitter-Vorhersagen und Gewichte als unsicher behandeln, sie systematisch variieren, viele Zufallsstartwerte durchrechnen und die Ergebnisse mit Elektrophysiologie und Verhalten vergleichen."
+        "uncertain": "Transmitter-Vorhersagen und Gewichte als unsicher behandeln, sie systematisch variieren, mit vielen Startwerten durchrechnen und die Ergebnisse mit Elektrophysiologie und Verhalten vergleichen."
       },
       "furtherTitle": "Zu den Quellen",
       "furtherItems": {
@@ -264,8 +264,8 @@
     "smell-memory": {
       "title": "Wie sich eine Fliege einen Duft merkt",
       "summary": "Einen Duft in ein echtes Fliegengehirn schicken und die Zellen finden, die ihn sich merken.",
-      "description": "Einen Duft durch ein echtes Fruchtfliegengehirn bis in den Pilzkörper verfolgen und die Zellen finden, die ihn speichern. Kostenlose 10-Minuten-Lektion.",
-      "searchTitle": "Wie Fliegen riechen und sich erinnern: interaktive Lektion",
+      "description": "Einen Duft durch ein echtes Fruchtfliegengehirn bis zum Pilzkörper verfolgen und die Zellen finden, die die Erinnerung speichern. Kostenlos, 10 Minuten.",
+      "searchTitle": "Duftgedächtnis der Fruchtfliege: interaktive Gehirn-Lektion",
       "steps": {
         "send": {
           "text": "Eine Fliege riecht mit ihren <antenna>Antennen</antenna> <gloss>(ihren zwei Fühlern)</gloss>. Tippe auf „Stimulieren“, um einen Duft hineinzuschicken. Sieh zu, wie die orangefarbenen Neuronen aufleuchten.",
@@ -354,7 +354,7 @@
       "title": "Woher eine Fliege weiß, wohin sie schaut",
       "summary": "Den Kompass einer echten Fliege verschieben und herausfinden, was ihn an seinem Platz hält.",
       "description": "Den inneren Kompass einer echten Fruchtfliege verschieben, dann die Ringneuronen stummschalten und zusehen, wie er driftet. Kostenlose 10-Minuten-Lektion.",
-      "searchTitle": "Der innere Kompass der Fliege: interaktive Lektion",
+      "searchTitle": "Innerer Kompass der Fruchtfliege: interaktive Gehirn-Lektion",
       "steps": {
         "left": {
           "text": "Tippe auf „Stimulieren“, um die linken <turn>Drehneuronen</turn> <gloss>(das Drehsignal)</gloss> feuern zu lassen. Beobachte dann die Kompassanzeige.",
@@ -404,12 +404,12 @@
       },
       "mission": {
         "goal": "Finde heraus, was den Kompass einer Fliege auf Kurs hält.",
-        "win": "Du hast es gefunden. Drehsignale schieben den Leuchtfleck um den Kompass, und die Landmarkenboten heften ihn an das, was die Fliege sieht. Ohne sie driftet der Kompass."
+        "win": "Du hast es herausgefunden. Drehsignale schieben den Leuchtfleck im Kompass herum, und die Landmarkenboten heften ihn an das, was die Fliege sieht. Ohne sie driftet der Kompass."
       },
       "story": {
         "panels": {
           "dawn": {
-            "caption": "Morgen. Licht fällt durch einen Spalt im Fensterladen, und {name} will raus.",
+            "caption": "Es ist Morgen. Licht fällt durch einen Spalt im Fensterladen, und {name} will raus.",
             "bubble": "Da lang."
           },
           "heading": {
@@ -431,7 +431,7 @@
         }
       },
       "journey": {
-        "circuit": "Dieser Ring aus Zellen ist der Kompass der Fliege, dazu die Zellen, die ihn drehen, und die Zellen, die ihn ruhig halten.",
+        "circuit": "Dieser Zellring ist der Kompass der Fliege. Dazu kommen die Zellen, die ihn drehen, und die Zellen, die ihn ruhig halten.",
         "neuron": "Eine Richtungszelle. Der helle Punkt ist ein Impuls, das Signal, das sie sendet."
       }
     },
@@ -659,7 +659,7 @@
       "over": "Das war der ganze Versuch. Jetzt funktionieren alle Knöpfe, also starte deinen eigenen.",
       "replaying": "Ein geteilter Versuch wird abgespielt",
       "progress": "Fortschritt der Wiedergabe",
-      "pressOf": "Knopfdruck {number} von {total}, mit gleichen Zeitschritten und gleichem Zufallswert",
+      "pressOf": "Knopfdruck {number} von {total}, mit gleichen Zeitschritten und gleichem Startwert",
       "tick": "{ms} ms",
       "watchAgain": "Noch einmal ansehen",
       "start": "Lektion starten",
@@ -672,7 +672,7 @@
         "unknownButton": "Diese Wiedergabe nutzt einen Knopf, den es in dieser Lektion nicht mehr gibt.",
         "empty": "Dieser Wiedergabe-Link ist leer oder zu lang.",
         "version": "Dieser Wiedergabe-Link stammt aus einer anderen Version.",
-        "seed": "Der Zufallswert dieser Wiedergabe ist zu groß.",
+        "seed": "Der Startwert dieser Wiedergabe ist zu groß.",
         "tooMany": "Diese Wiedergabe hat zu viele Schritte, um sie abzuspielen.",
         "tooLong": "Diese Wiedergabe ist zu lang, um sie abzuspielen.",
         "broken": "Dieser Wiedergabe-Link ist fehlerhaft oder abgeschnitten.",
@@ -735,7 +735,7 @@
       "next": "Weiter",
       "progress": "Bild {number} von {total}",
       "bridge": "Schauen wir uns an, was dabei in seinem Gehirn passiert ist.",
-      "zoom": "Reinzoomen",
+      "zoom": "Hineinzoomen",
       "says": "{name} sagt:"
     },
     "journey": {
@@ -753,8 +753,8 @@
         "fly": "Eine Fruchtfliege, etwa 3 mm lang. Dieser Körper wurde nach dem Scan einer echten Fliege modelliert.",
         "brain": "Im Kopf sitzt das Gehirn. Dieses hier wurde Zelle für Zelle kartiert, bei einer anderen echten Fliege."
       },
-      "out": "Rauszoomen",
-      "in": "Reinzoomen",
+      "out": "Herauszoomen",
+      "in": "Hineinzoomen",
       "start": "Mission starten",
       "resume": "Zurück zur Mission",
       "skip": "Direkt zur Mission"
@@ -779,7 +779,7 @@
     },
     "error": {
       "title": "Etwas ist schiefgelaufen",
-      "body": "Auf der Seite ist ein Fehler aufgetreten. Versuchen Sie es noch einmal oder gehen Sie zurück zu den Lektionen.",
+      "body": "Auf der Seite ist ein Fehler aufgetreten. Bitte noch einmal versuchen oder zurück zu den Lektionen gehen.",
       "retry": "Erneut versuchen",
       "home": "Zu den Lektionen"
     }
@@ -811,7 +811,7 @@
     },
     "output": {
       "name": "Ausgangsneuronen",
-      "text": "Nervenzellen, die das Muster der Kenyon-Zellen lesen und an den Rest des Gehirns weitergeben. In der Forschung heißen sie MBONs, kurz für Ausgangsneuronen des Pilzkörpers."
+      "text": "Nervenzellen, die das Muster der Kenyon-Zellen lesen und an den Rest des Gehirns weitergeben. In der Forschung heißen sie MBONs, kurz für englisch „mushroom body output neurons“ (Ausgangsneuronen des Pilzkörpers)."
     },
     "turn": {
       "name": "Drehneuronen",
@@ -839,7 +839,7 @@
     },
     "jump": {
       "name": "Sprungneuronen",
-      "text": "Motoneuronen, die die Sprungmuskeln der Mittelbeine anspannen, sodass die Fliege in die Luft schnellt."
+      "text": "Motoneuronen, die die Sprungmuskeln der Mittelbeine zum Zusammenziehen bringen, sodass die Fliege in die Luft schnellt."
     },
     "neuron": {
       "name": "Neuron",
@@ -847,7 +847,7 @@
     },
     "spike": {
       "name": "Feuern",
-      "text": "Ein kurzer elektrischer Impuls, den ein aktives Neuron an sich entlangschickt, auch Aktionspotenzial genannt. In den Lektionen zeigt jedes Aufleuchten einen solchen Impuls."
+      "text": "Ein kurzer elektrischer Impuls, der an einem aktiven Neuron entlangläuft, auch Aktionspotenzial oder Spike genannt. In den Lektionen zeigt jedes Aufleuchten einen solchen Impuls."
     },
     "synapse": {
       "name": "Synapse",
@@ -863,7 +863,7 @@
     },
     "inhibition": {
       "name": "Hemmung",
-      "text": "Ein Signal, das das nächste Neuron vom Feuern abhält. Ein Netzwerk braucht sie, um stabil und genau zu bleiben."
+      "text": "Ein Signal, das das nächste Neuron vom Feuern abhält. Ein Netzwerk braucht Hemmung, um stabil und genau zu bleiben."
     },
     "acetylcholine": {
       "name": "Acetylcholin",
@@ -921,7 +921,7 @@
   "glossary": {
     "nav": "Glossar",
     "title": "Glossar der Neurobiologie",
-    "lead": "Alle Fachbegriffe aus den Lektionen, in ein bis zwei Sätzen erklärt. Jeder Begriff zeigt, wo er im Gehirn einer echten Fruchtfliege vorkommt.",
+    "lead": "Alle Fachbegriffe aus den Lektionen, in ein bis zwei Sätzen erklärt. Ein Klick auf einen Begriff zeigt, wo er im Gehirn einer echten Fruchtfliege vorkommt.",
     "metaTitle": "Neurobiologie-Glossar für die Schule · WiredMind",
     "metaDescription": "Neuron, Synapse, Konnektom, Pilzkörper und mehr: die Fachbegriffe aus den Fruchtfliegen-Lektionen von WiredMind, jeweils in ein bis zwei Sätzen erklärt.",
     "termTitle": "{term}: einfach erklärt für die Schule",
@@ -933,7 +933,7 @@
   "questions": {
     "nav": "Fragen",
     "title": "Fragen zum Fliegengehirn",
-    "lead": "Kurze Antworten auf Fragen, die Menschen über Fliegen und ihr Gehirn stellen. Zu jeder gibt es eine Lektion, in der sich die Antwort selbst beobachten lässt.",
+    "lead": "Kurze Antworten auf häufige Fragen zu Fliegen und ihrem Gehirn. Zu jeder gibt es eine Lektion, in der sich die Antwort selbst beobachten lässt.",
     "metaTitle": "Fragen zum Fliegengehirn, einfach beantwortet · WiredMind",
     "metaDescription": "Wie riechen Fliegen? Warum erwischt man sie so schwer? Kurze, klare Antworten zum Gehirn der Fruchtfliege, jede mit einer kostenlosen Lektion.",
     "more": "Weitere Fragen",
@@ -949,24 +949,24 @@
       },
       "memory": {
         "title": "Haben Fliegen ein Gedächtnis?",
-        "short": "Ja. Eine Fruchtfliege kann lernen, dass ein Duft Futter oder Gefahr bedeutet, und es sich tagelang merken. Die Erinnerung entsteht im Pilzkörper.",
-        "a": "In Experimenten laufen Fliegen, die einen Duft zusammen mit Zucker erlebt haben, später auf diesen Duft zu. Fliegen, die ihn zusammen mit einem leichten Stromschlag erlebt haben, meiden ihn. Sie haben gelernt und können es sich Stunden merken, manchmal Tage.",
+        "short": "Ja. Eine Fruchtfliege kann lernen, dass ein Duft Futter oder Gefahr bedeutet, und sich das Stunden bis Tage merken. Das geschieht im Pilzkörper.",
+        "a": "In Experimenten laufen Fliegen, die einen Duft zusammen mit Zucker erlebt haben, später auf diesen Duft zu. Fliegen, die ihn zusammen mit einem leichten Stromschlag erlebt haben, meiden ihn. Sie haben gelernt und können es sich stundenlang merken, manchmal sogar tagelang.",
         "b": "Gelernt wird im Pilzkörper. Etwa 2.000 Kenyon-Zellen auf jeder Seite des Gehirns geben jedem Duft sein eigenes Muster, und Ausgangsneuronen lesen dieses Muster. Kommt ein Duft zusammen mit Belohnung oder Strafe, ändert sich die Stärke der Synapsen zwischen den beiden Gruppen. Forschende vermuten, dass diese Änderung die Erinnerung ist. Die WiredMind-Lektion zeigt diesen Weg, aber nichts darin lernt: Ihre Verbindungen ändern sich nie."
       },
       "direction": {
         "title": "Woher wissen Fliegen, in welche Richtung sie schauen?",
-        "short": "Eine Fliege hat einen inneren Kompass: einen Ring aus Neuronen, in dem ein aktiver Fleck ihre Richtung anzeigt. Drehungen verschieben ihn.",
+        "short": "Ein innerer Kompass: In einem Ring aus Neuronen zeigt ein aktiver Fleck, wohin die Fliege schaut. Drehungen verschieben ihn, Landmarken halten ihn fest.",
         "a": "Mitten im Gehirn der Fliege sind Kompassneuronen zu einem Ring verschaltet. In jedem Moment ist nur ein Fleck von ihnen aktiv, und seine Position auf dem Ring steht für die Richtung, in die die Fliege schaut. 2015 haben Forschende erstmals beobachtet, wie dieser Fleck im Gehirn einer lebenden Fliege wandert.",
-        "b": "Dreht sich die Fliege, schieben Drehneuronen den Fleck um den Ring. Das allein würde mit der Zeit ungenau, deshalb nutzt die Fliege auch, was sie sieht: Ringneuronen bringen Landmarken wie die Sonne ein und halten den Fleck an seinem Platz. Der Kompass ist nicht magnetisch. Er ist ein Aktivitätsmuster, das die Fliege laufend aktualisiert, und im Dunkeln driftet er langsam."
+        "b": "Dreht sich die Fliege, schieben Drehneuronen den Fleck im Ring herum. Das allein würde mit der Zeit ungenau werden, deshalb nutzt die Fliege auch, was sie sieht: Ringneuronen bringen Landmarken wie die Sonne ein und halten den Fleck an seinem Platz. Der Kompass ist nicht magnetisch. Er ist ein Aktivitätsmuster, das die Fliege laufend aktualisiert, und im Dunkeln driftet er langsam."
       },
       "swat": {
         "title": "Warum sind Fliegen so schwer zu erwischen?",
-        "short": "Eine Fliege sieht die Klatsche früh kommen, und ein schneller Fluchtschaltkreis bringt sie in wenigen Hundertstelsekunden in die Luft.",
+        "short": "Eine Fliege sieht die Klatsche früh, und ein schneller Fluchtschaltkreis bringt sie in Hundertstelsekunden in die Luft, noch bevor die Klatsche trifft.",
         "a": "Drei Dinge helfen der Fliege. Ihre Augen überblicken fast den ganzen Raum um sie herum, sodass man sich kaum von hinten anschleichen kann. Sie sieht schneller als wir, eine Hand wirkt auf sie langsam. Und sie hat Neuronen mit einer einzigen Aufgabe: Sie feuern, wenn etwas im Blickfeld schnell größer wird, so wie eine näher kommende Klatsche.",
         "b": "Diese Annäherungsneuronen sind mit der Riesenfaser verbunden, einer sehr dicken Nervenzelle, die vom Gehirn hinunter zu den Neuronen der Sprungbeine zieht. Eine dicke Faser leitet ihr Signal schnell, der Befehl zum Sprung kommt also fast sofort an. Hochgeschwindigkeitsaufnahmen zeigen außerdem, dass die Fliege kurz vor dem Abheben ihre Beine umsetzt, damit der Sprung sie von der Klatsche wegträgt."
       },
       "reaction": {
-        "title": "Wie schnell reagiert eine Fliege?",
+        "title": "Wie lang ist die Reaktionszeit einer Fliege?",
         "short": "Eine Fruchtfliege kann wenige Hundertstelsekunden, nachdem sie Gefahr bemerkt, zum Fluchtsprung ansetzen. Ein Mensch braucht etwa eine Viertelsekunde.",
         "a": "Wenn etwas auf eine Fliege zurast, läuft das Signal in einigen Dutzend Millisekunden von den Augen zu den Beinmuskeln. Eine Millisekunde ist eine Tausendstelsekunde. In der WiredMind-Lektion feuern die Sprungneuronen etwa 30 ms, nachdem die Klatsche auftaucht. Dieser Wert stammt aus einem einfachen Modell, nicht aus der Messung an einer Fliege, liegt aber in einem realistischen Bereich. Ein Mensch braucht rund 250 ms, nur um auf einen Lichtblitz zu reagieren.",
         "b": "Die Geschwindigkeit steckt in der Verschaltung. Der Weg ist kurz: Annäherungsneuronen, dann die Riesenfaser, dann die Sprungneuronen. Die Riesenfaser ist ungewöhnlich dick, deshalb läuft ihr Signal schnell. Und in einer echten Fliege gibt sie das Signal über elektrische Synapsen weiter, direkte Kanäle zwischen Zellen fast ohne Verzögerung."
@@ -974,17 +974,17 @@
       "neurons": {
         "title": "Wie viele Neuronen hat das Gehirn einer Fruchtfliege?",
         "short": "Etwa 140.000. 2024 wurde jedes einzelne davon im Gehirn einer erwachsenen Fruchtfliege kartiert, samt den Dutzenden Millionen Synapsen dazwischen.",
-        "a": "Das Gehirn einer Fruchtfliege ist kleiner als ein Mohnkorn und enthält etwa 140.000 Neuronen. Ein menschliches Gehirn hat Hunderttausende Male mehr. Trotzdem kann die Fliege damit fliegen, Futter finden, Düfte lernen und einer Klatsche entkommen.",
+        "a": "Das Gehirn einer Fruchtfliege ist kleiner als ein Mohnkorn und enthält etwa 140.000 Neuronen. Ein menschliches Gehirn hat mehrere hunderttausendmal so viele. Trotzdem kann die Fliege damit fliegen, Futter finden, Düfte lernen und einer Klatsche entkommen.",
         "b": "Eine vollständige Karte eines Nervensystems, mit jedem Neuron und jeder Synapse, heißt Konnektom. Die Fruchtfliege ist eines von sehr wenigen Tieren, deren ganzes Gehirn so kartiert wurde. Die WiredMind-Lektionen laufen auf dem Konnektom von Gehirn und Bauchmark einer männlichen Fliege, und jede Lektion nutzt einen Schaltkreis aus 3.000 bis 4.500 seiner Neuronen."
       }
     }
   },
   "teachers": {
     "meta": {
-      "indexTitle": "Leitfäden für Lehrkräfte · WiredMind",
-      "indexDescription": "Zu jeder WiredMind-Lektion: ein Stundenplan, erwartete Antworten, Diskussionsfragen und ein Arbeitsblatt zum Ausdrucken.",
-      "guideTitle": "Leitfaden für Lehrkräfte: {title}",
-      "guideDescription": "Ein 45-Minuten-Plan für „{title}“: Lernziel, was den Schülerinnen und Schülern auffallen sollte, erwartete Antworten, Diskussionsfragen und häufige Fehlvorstellungen.",
+      "indexTitle": "Unterrichtsmaterial Neurobiologie für Lehrkräfte · WiredMind",
+      "indexDescription": "Zu jeder WiredMind-Lektion: ein Stundenentwurf, erwartete Antworten, Diskussionsfragen und ein Arbeitsblatt zum Ausdrucken.",
+      "guideTitle": "Stundenentwurf: {title}",
+      "guideDescription": "Stundenentwurf (45 Min.) zu „{title}“: Lernziel, Beobachtungen, erwartete Antworten, Diskussionsfragen, Fehlvorstellungen.",
       "worksheetTitle": "Arbeitsblatt: {title}",
       "worksheetDescription": "Ein Arbeitsblatt zum Ausdrucken für „{title}“: vermuten, ausprobieren, beobachten, erklären."
     },
@@ -997,7 +997,7 @@
       "demo": "Der Klasse zeigen",
       "generalTerms": "Grundbegriffe",
       "companionTitle": "Ein begleitender Kurs",
-      "companion": "Viele Schülerinnen und Schüler, die Biologie mit 5 Lerneinheiten belegen, besuchen auch den kostenlosen Kurs <campusil>Das Gehirn: die wunderbarste Maschine von allen</campusil> der Universität Tel Aviv auf Campus IL, geleitet von Prof. Yossi Yovel und Prof. Yaniv Assaf. Er behandelt Neuronen, Aktionspotenziale und Synapsen ausführlich, und diese Lektionen sind eine praktische Ergänzung dazu. WiredMind ist ein unabhängiges Projekt. Es steht in keiner Verbindung zum Kurs, zur Universität oder zu Campus IL."
+      "companion": "Viele Schülerinnen und Schüler in Israel, die Biologie auf dem höchsten Niveau (5 Einheiten) belegen, besuchen auch den kostenlosen Kurs <campusil>Das Gehirn: die wunderbarste Maschine von allen</campusil> der Universität Tel Aviv auf Campus IL, geleitet von Prof. Yossi Yovel und Prof. Yaniv Assaf. Er behandelt Neuronen, Aktionspotenziale und Synapsen ausführlich, und diese Lektionen sind eine praktische Ergänzung dazu. WiredMind ist ein unabhängiges Projekt. Es steht in keiner Verbindung zum Kurs, zur Universität oder zu Campus IL."
     },
     "topics": {
       "excitation": "Erregung und Hemmung",
@@ -1028,7 +1028,7 @@
       "plan": {
         "demo": "Zeigen Sie die Lektion im Klassenmodus auf einem gemeinsamen Bildschirm (Beamer, Fernseher oder Computerbildschirm) und drücken Sie auf „Zeig mir, wie es funktioniert“. Lesen Sie jeden Schritt laut vor, während er abläuft. Ohne gemeinsamen Bildschirm öffnen die Schülerinnen und Schüler dieselbe Vorführung auf ihren eigenen Geräten. Die Vorführung hält bei der Frage der Lektion an: Lassen Sie diese vorerst unbeantwortet.",
         "explore": "Die Schülerinnen und Schüler arbeiten zu zweit an ihren eigenen Geräten, mit dem Arbeitsblatt. Vor jedem Tippen notieren sie eine Vermutung, dann gehen sie die Lektion durch, beantworten deren Frage und probieren das freie Experimentieren aus.",
-        "discuss": "Sammeln Sie die Antworten der Zweiergruppen auf die Frage der Lektion und nutzen Sie dann die Diskussionsfragen unten. Schließen Sie mit dem, was das Modell weglässt."
+        "discuss": "Sammeln Sie die Antworten der Zweiergruppen auf die Frage der Lektion und nutzen Sie dann die Diskussionsfragen unten. Sprechen Sie zum Schluss darüber, was das Modell weglässt."
       },
       "noticeTitle": "Was den Schülerinnen und Schülern bei jedem Schritt auffallen sollte",
       "step": "Schritt {number}",
@@ -1036,7 +1036,7 @@
       "rightChoice": "Die richtige Antwort",
       "discussTitle": "Diskussionsfragen",
       "misconceptionsTitle": "Häufige Fehlvorstellungen",
-      "claim": "Mögliche Vorstellung:",
+      "claim": "Mögliche Schülervorstellung:",
       "fix": "So gehen Sie darauf ein:",
       "realTitle": "Was echt ist und was vereinfacht",
       "real": "Echt",
@@ -1048,7 +1048,7 @@
       "curriculumTitle": "Lehrplanbezug",
       "curriculumPending": "Dieser Abschnitt ist noch nicht ausgefüllt. Die Zuordnung zum offiziellen Biologielehrplan wird derzeit mit Biologielehrkräften abgestimmt.",
       "storyTitle": "Die Geschichte",
-      "storyHow": "Die Lektion beginnt mit einem kurzen Comic über {name}, die Fliege. Lesen Sie die Bilder vor oder lassen Sie die Schülerinnen und Schüler selbst lesen; das dauert etwa eine Minute. Das letzte Bild erscheint noch einmal auf dem Abschlussbildschirm.",
+      "storyHow": "Die Lektion beginnt mit einem kurzen Comic über die Fliege {name}. Lesen Sie die Texte vor oder lassen Sie die Schülerinnen und Schüler selbst lesen; das dauert etwa eine Minute. Das letzte Bild erscheint noch einmal auf dem Abschlussbildschirm.",
       "journeyTitle": "Der Zoom von der Fliege zum Neuron",
       "journeyHow": "Projizieren Sie die Lektion. Halten Sie auf jeder der vier Ebenen an und stellen Sie die zugehörige Frage, bevor Sie hineinzoomen. Mit den Ebenen-Knöpfen springen Sie zu jeder Ebene, und der Lupen-Knopf öffnet den Zoom an jeder Stelle der Lektion erneut.",
       "journeyNote": "Körper und Gehirn stammen von zwei verschiedenen Fliegen und werden zusammen in ihrer wahren Größe gezeigt. Sagen Sie das der Klasse.",
