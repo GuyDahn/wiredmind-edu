@@ -983,8 +983,8 @@
     "meta": {
       "indexTitle": "Hướng dẫn cho giáo viên · WiredMind",
       "indexDescription": "Giáo án, đáp án mong đợi, câu hỏi thảo luận và phiếu học tập in được cho học sinh, dành cho từng bài học của WiredMind.",
-      "guideTitle": "Hướng dẫn cho giáo viên: {title}",
-      "guideDescription": "Giáo án 45 phút cho bài “{title}”: mục tiêu bài học, điều học sinh cần nhận ra, đáp án mong đợi, câu hỏi thảo luận và những hiểu lầm thường gặp.",
+      "guideTitle": "Giáo án: {title}",
+      "guideDescription": "Giáo án 45 phút cho bài “{title}”: mục tiêu, đáp án mong đợi, câu hỏi thảo luận và những hiểu lầm thường gặp.",
       "worksheetTitle": "Phiếu học tập: {title}",
       "worksheetDescription": "Phiếu học tập in được cho học sinh, bài “{title}”: dự đoán, thử, quan sát, giải thích."
     },

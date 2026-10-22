@@ -142,6 +142,18 @@ function noteFor(key: string): string | null {
   ) {
     return "search result title, at most 60 characters";
   }
+  if (/^teachers\.meta\.(guide|worksheet)Title$/.test(key)) {
+    return "search result title pattern; with the longest lesson title filled in it must stay within 60 characters";
+  }
+  if (/^teachers\.meta\.(guide|worksheet)Description$/.test(key)) {
+    return "search result description pattern; with the longest lesson title filled in it must stay within 155 characters";
+  }
+  if (key === "teachers.meta.indexTitle") {
+    return "search result title, at most 60 characters";
+  }
+  if (key === "teachers.meta.indexDescription") {
+    return "search result description, at most 155 characters";
+  }
   if (key === "glossary.termTitle") {
     return "search result title pattern; with the longest term name filled in it must stay within 60 characters";
   }
@@ -387,8 +399,8 @@ async function main() {
       }).filter((issue) => issue.level === "error");
       for (const issue of issues) {
         const key = issue.key.replace(
-          /^glossary\.termTitle \((.+)\)$/,
-          "glossary.termTitle",
+          /^(glossary\.termTitle|teachers\.meta\.\w+) \((.+)\)$/,
+          "$1",
         );
         failing.set(key, [...(failing.get(key) ?? []), issue.message]);
       }

@@ -984,7 +984,7 @@
       "indexTitle": "Öğretmen kılavuzları · WiredMind",
       "indexDescription": "Her WiredMind dersi için ders planı, beklenen yanıtlar, tartışma soruları ve yazdırılabilir öğrenci çalışma kâğıdı.",
       "guideTitle": "Öğretmen kılavuzu: {title}",
-      "guideDescription": "“{title}” için 45 dakikalık plan: öğrenme hedefi, öğrencilerin fark etmesi gerekenler, beklenen yanıtlar, tartışma soruları, sık yanılgılar.",
+      "guideDescription": "“{title}” için 45 dakikalık plan: hedef, fark edilecekler, beklenen yanıtlar, tartışma soruları, sık yanılgılar.",
       "worksheetTitle": "Çalışma kâğıdı: {title}",
       "worksheetDescription": "“{title}” için yazdırılabilir öğrenci çalışma kâğıdı: tahmin et, dene, gözlemle, açıkla."
     },

@@ -22,6 +22,10 @@ export const SIMPLE_KEYS: ReadonlySet<string> = new Set([
   "landing.loop.clock",
   "translate.notice",
   "glossary.termTitle",
+  "teachers.meta.guideTitle",
+  "teachers.meta.worksheetTitle",
+  "teachers.meta.guideDescription",
+  "teachers.meta.worksheetDescription",
 ]);
 
 /** Search result limits, counting a Chinese, Japanese, or Korean character as two. */
@@ -258,6 +262,33 @@ export function searchSnippets(
     ) {
       snippets.push({ key, text, limit: TITLE_WIDTH });
     }
+  }
+  // The teacher pages, with each lesson's title filled in.
+  const lessonTitles = [...flat]
+    .filter(([key]) => /^lessons\.[^.]+\.title$/.test(key))
+    .map(([, text]) => text);
+  for (const [key, limit] of [
+    ["teachers.meta.guideTitle", TITLE_WIDTH],
+    ["teachers.meta.worksheetTitle", TITLE_WIDTH],
+    ["teachers.meta.guideDescription", DESCRIPTION_WIDTH],
+    ["teachers.meta.worksheetDescription", DESCRIPTION_WIDTH],
+  ] as const) {
+    const pattern = flat.get(key);
+    if (pattern === undefined) continue;
+    for (const title of lessonTitles) {
+      snippets.push({
+        key: `${key} (${title})`,
+        text: fill(pattern, { title }),
+        limit,
+      });
+    }
+  }
+  for (const [key, limit] of [
+    ["teachers.meta.indexTitle", TITLE_WIDTH],
+    ["teachers.meta.indexDescription", DESCRIPTION_WIDTH],
+  ] as const) {
+    const text = flat.get(key);
+    if (text !== undefined) snippets.push({ key, text, limit });
   }
   const template = flat.get("glossary.termTitle");
   for (const [key, text] of flat) {

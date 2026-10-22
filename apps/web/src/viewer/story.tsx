@@ -149,13 +149,15 @@ export function Story({
             <p className="text-xs font-semibold tracking-[0.14em] text-fg-subtle uppercase classroom:text-lg">
               {mission("label", { number: entry.number })} · {t("label")}
             </p>
-            <h1
+            {/* An h2: the lesson's own h1 is under the overlay, and a page
+                has one main heading. */}
+            <h2
               ref={heading}
               tabIndex={-1}
               className="text-xl font-semibold tracking-tight text-fg outline-none sm:text-2xl classroom:text-4xl"
             >
               {copy("title")}
-            </h1>
+            </h2>
           </div>
           <div className="flex shrink-0 items-start gap-1.5">
             <button
@@ -189,6 +191,7 @@ export function Story({
         </div>
         <footer className="flex flex-col gap-3">
           <p
+            role="img"
             className="flex items-center justify-center gap-1.5"
             aria-label={t("progress", {
               number: at + 1,

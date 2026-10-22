@@ -983,8 +983,8 @@
     "meta": {
       "indexTitle": "Przewodniki dla nauczycieli · WiredMind",
       "indexDescription": "Plan lekcji, oczekiwane odpowiedzi, pytania do dyskusji i karta pracy ucznia do wydrukowania do każdej lekcji WiredMind.",
-      "guideTitle": "Przewodnik dla nauczyciela: {title}",
-      "guideDescription": "Plan na 45 minut do lekcji „{title}”: cel lekcji, co uczniowie powinni zauważyć, oczekiwane odpowiedzi, pytania do dyskusji i częste błędne przekonania.",
+      "guideTitle": "Konspekt: {title}",
+      "guideDescription": "Plan na 45 minut do lekcji „{title}”: cel, oczekiwane odpowiedzi, pytania do dyskusji i typowe błędy.",
       "worksheetTitle": "Karta pracy: {title}",
       "worksheetDescription": "Karta pracy ucznia do wydrukowania do lekcji „{title}”: przewiduj, sprawdź, obserwuj, wyjaśnij."
     },

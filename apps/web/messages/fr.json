@@ -983,8 +983,8 @@
     "meta": {
       "indexTitle": "Guides de l’enseignant · WiredMind",
       "indexDescription": "Pour chaque leçon WiredMind : un déroulé de séance, les réponses attendues, des questions de discussion et une fiche élève à imprimer.",
-      "guideTitle": "Guide de l’enseignant : {title}",
-      "guideDescription": "Un déroulé de 45 minutes pour « {title} » : objectif d’apprentissage, ce que les élèves doivent remarquer, réponses attendues, questions de discussion et idées fausses courantes.",
+      "guideTitle": "Fiche prof : {title}",
+      "guideDescription": "Déroulé de 45 min pour « {title} » : objectif, réponses attendues, questions de discussion et idées fausses courantes.",
       "worksheetTitle": "Fiche élève : {title}",
       "worksheetDescription": "Une fiche élève à imprimer pour « {title} » : prévoir, essayer, observer, expliquer."
     },
