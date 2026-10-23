@@ -7,8 +7,8 @@
   },
   "meta": {
     "home": {
-      "title": "WiredMind: explora el cerebro real de una mosca de la fruta",
-      "description": "Lecciones gratis para el aula sobre el cableado real de una mosca de la fruta: estimula y silencia neuronas del conectoma MaleCNS. Sin registro."
+      "title": "WiredMind: neurociencia gratis con el cerebro de una mosca",
+      "description": "Lecciones gratis de neurociencia de 10 minutos, para 11–16 años. Estimula y silencia neuronas reales del conectoma de una mosca de la fruta. Sin registro."
     },
     "about": {
       "title": "Acerca de WiredMind: qué es real y qué está simplificado",
@@ -82,7 +82,7 @@
   "landing": {
     "hero": {
       "eyebrow": "Lecciones gratuitas de neurociencia para el aula",
-      "title": "Activa una neurona en el cerebro real de una mosca de la fruta y mira cómo la señal corre de sus ojos a sus patas.",
+      "title": "Activa una neurona en el mapa de conexiones real de una mosca de la fruta y mira cómo la señal corre de sus ojos a sus patas.",
       "lead": "WiredMind da vida en el navegador al mapa real de conexiones del sistema nervioso de una mosca de la fruta. Los estudiantes estimulan neuronas, las silencian y ven qué cambia, en tres lecciones breves y guiadas.",
       "start": "Empezar la primera lección",
       "teachers": "Para docentes"
@@ -93,7 +93,7 @@
       "steps": {
         "looming": "Las neuronas de aproximación detectan el matamoscas",
         "gf": "La fibra gigante dispara",
-        "jump": "Las neuronas del salto dan la patada"
+        "jump": "Las neuronas del salto disparan"
       },
       "cells": "{count, plural, one {# célula} many {# células} other {# células}}",
       "firstSpike": "{cells} · {ms} ms",
@@ -121,8 +121,8 @@
       "lead": "Pon el enlace en la pizarra o envíalo a los dispositivos de tus estudiantes. No hay nada más que configurar.",
       "points": {
         "periods": {
-          "title": "1–2 sesiones de clase",
-          "body": "Cada lección dura unos 10 minutos. Las tres, con debate incluido, caben en una o dos sesiones."
+          "title": "Una sesión de clase por lección",
+          "body": "Cada lección dura unos 10 minutos por sí sola. Con el debate de la guía docente, cada una ocupa una sesión de 45 minutos."
         },
         "install": {
           "title": "Sin instalación ni registro",
@@ -263,8 +263,8 @@
   "lessons": {
     "smell-memory": {
       "title": "Cómo recuerda una mosca un olor",
-      "summary": "Envía un olor al cerebro real de una mosca y encuentra las células que lo recuerdan.",
-      "description": "Envía un olor al cerebro real de una mosca de la fruta y síguelo hasta el cuerpo fungiforme, donde se guarda su recuerdo. Lección gratis de 10 minutos.",
+      "summary": "Envía un olor al cerebro real de una mosca y encuentra dónde se guarda su recuerdo.",
+      "description": "Envía un olor al cerebro real de una mosca de la fruta, síguelo al cuerpo fungiforme y descubre dónde se guarda su recuerdo. Lección gratis de 10 minutos.",
       "searchTitle": "Cómo huelen y recuerdan las moscas: lección interactiva",
       "steps": {
         "send": {
@@ -318,7 +318,7 @@
         "text": "Ahora funcionan todos los botones. Primero adivina y luego toca: ¿qué se queda a oscuras si silencias a las mensajeras amarillas del olor? Intenta silenciar dos colores a la vez."
       },
       "mission": {
-        "goal": "Encuentra las células que guardan el recuerdo de un olor en la mosca.",
+        "goal": "Encuentra dónde guarda una mosca el recuerdo de un olor.",
         "win": "Las encontraste. Las clasificadoras de olores convierten cada olor en un patrón, y las lectoras de recuerdos lo leen. Sin el patrón no hay nada que recordar."
       },
       "story": {
@@ -328,11 +328,11 @@
             "bubble": "Algo huele bien."
           },
           "sniff": {
-            "caption": "Las antenas de {name} atrapan unas pocas moléculas. Una mosca no necesita más.",
+            "caption": "Las antenas de {name} atrapan un leve rastro del olor. Una mosca no necesita más.",
             "bubble": "¡Conozco este olor!"
           },
           "recall": {
-            "caption": "La semana pasada, este mismo olor llevó a {name} hasta la comida. Su cerebro guardó un rastro.",
+            "caption": "Hace dos días, este mismo olor llevó a {name} hasta la comida. Su cerebro guardó un rastro.",
             "bubble": "Durazno significa cena."
           },
           "land": {
@@ -354,7 +354,7 @@
       "title": "Cómo sabe una mosca hacia dónde mira",
       "summary": "Haz girar la brújula de una mosca real y descubre qué la mantiene en su sitio.",
       "description": "Haz girar la brújula interna de una mosca de la fruta, silencia las neuronas del anillo y mira cómo pierde el rumbo. Lección gratis de 10 minutos.",
-      "searchTitle": "La brújula interna de la mosca: lección interactiva",
+      "searchTitle": "Brújula interna de la mosca de la fruta: lección interactiva",
       "steps": {
         "left": {
           "text": "Toca Estimular para activar las <turn>neuronas de giro</turn> <gloss>(señal de giro)</gloss> de la izquierda. Luego mira el dial de la brújula.",
@@ -362,10 +362,10 @@
         },
         "right": {
           "text": "Ahora toca Estimular en las <turn>neuronas de giro</turn> <gloss>(la otra señal)</gloss> de la derecha. No pierdas de vista el pico.",
-          "result": "El pico se desplazó por el dial. Las señales de giro de cada lado lo empujan en sentidos opuestos, así que el rumbo de la mosca también gira."
+          "result": "El pico se desplazó por el dial. Las señales de giro de cada lado lo empujan en sentidos opuestos, así que el sentido de la orientación de la mosca también gira."
         },
         "silence": {
-          "text": "Silencia las <ring>neuronas del anillo</ring> <gloss>(portadoras de referencias)</gloss>. Traen lo que ve la mosca. Nosotros enviaremos la señal de la derecha por ti.",
+          "text": "Silencia las <ring>neuronas del anillo</ring> <gloss>(portadoras de referencias)</gloss>. Traen lo que ve la mosca. Nosotros activaremos la señal de giro de la derecha por ti.",
           "result": "El pico se sale de su sitio y deambula. Sin puntos de referencia, la brújula va a la deriva.",
           "predict": {
             "question": "Las portadoras de referencias están a punto de quedar en silencio. ¿Qué hará el pico de actividad?",
@@ -377,7 +377,7 @@
           }
         },
         "restore": {
-          "text": "Toca otra vez el botón de las <ring>neuronas del anillo</ring> <gloss>(portadoras de referencias)</gloss> para volver a encenderlas. Enviaremos la misma señal.",
+          "text": "Toca otra vez el botón de las <ring>neuronas del anillo</ring> <gloss>(portadoras de referencias)</gloss> para volver a encenderlas. Enviaremos la misma señal de giro.",
           "result": "El pico vuelve a quedarse en su sitio. Los puntos de referencia mantienen la brújula de la mosca bien orientada."
         }
       },
@@ -394,7 +394,7 @@
           },
           "both": {
             "text": "También apagaste las células verdes del rumbo.",
-            "feedback": "No exactamente. Solo silenciaste las células violetas. Las células verdes del rumbo siguieron disparando, pero nada las mantenía quietas."
+            "feedback": "No exactamente. Solo silenciaste las células violetas. Las células verdes del rumbo siguieron disparando, pero nada mantenía quieto el pico."
           }
         }
       },
@@ -446,7 +446,7 @@
           "result": "Disparan, y en pocas milésimas de segundo la <giantfiber>fibra gigante</giantfiber> <gloss>(cable de escape)</gloss> también dispara."
         },
         "jump": {
-          "text": "Toca Estimular otra vez. Sigue la <giantfiber>fibra gigante</giantfiber> <gloss>(cable de escape)</gloss> hacia abajo, hasta el <nervecord>cordón nervioso</nervecord> <gloss>(su médula espinal)</gloss>.",
+          "text": "Toca Estimular otra vez. Sigue la <giantfiber>fibra gigante</giantfiber> <gloss>(cable de escape)</gloss> hacia abajo, hasta el <nervecord>cordón nervioso</nervecord> <gloss>(como una médula)</gloss>.",
           "result": "Las <jump>neuronas del salto</jump> <gloss>(pateadoras)</gloss> disparan en menos de 30 milisegundos. Hacen que las patas del medio den una patada, y la mosca sale de un salto."
         },
         "silence": {
@@ -485,7 +485,7 @@
       },
       "freePlay": {
         "title": "Exploración libre",
-        "text": "Ahora funcionan todos los botones. Primero adivina y luego toca: con el cable de escape silenciado, ¿qué colores se siguen iluminando? Después intenta silenciar a las vigías del matamoscas en su lugar."
+        "text": "Ahora funcionan todos los botones. Primero adivina y luego toca: ¿qué pasa si, en cambio, silencias a las pateadoras? Después intenta silenciar a las vigías del matamoscas."
       },
       "mission": {
         "goal": "Encuentra el cable que salva a la mosca.",
@@ -502,7 +502,7 @@
             "bubble": "Oh, oh."
           },
           "leap": {
-            "caption": "Sus patas medias patean antes de que caiga el matamoscas. De verlo a saltar: unos 30 milisegundos.",
+            "caption": "Sus patas medias patean antes de que caiga el matamoscas. De verlo a saltar pasan solo unas centésimas de segundo.",
             "bubble": "¡Salta!"
           },
           "safe": {
@@ -609,7 +609,7 @@
       "locked": "Bloqueado",
       "lockedHint": "En este paso no. Todos los botones se desbloquean en la exploración libre.",
       "stimulateNamed": "Estimular {name}",
-      "silenceNamed": "Silenciar: {name}",
+      "silenceNamed": "Silenciar {name}",
       "silenced": "En silencio · toca para encender",
       "silencedLocked": "En silencio"
     },
@@ -831,7 +831,7 @@
     },
     "giantfiber": {
       "name": "Fibra gigante",
-      "text": "Una célula nerviosa muy gruesa que baja desde el cerebro hasta el cordón nervioso. Lleva la señal de escape más rápida de la mosca."
+      "text": "Una célula nerviosa muy gruesa que baja desde el cerebro hasta el cordón nervioso. Lleva la señal de escape más rápida de la mosca. Una mosca tiene dos, una a cada lado."
     },
     "nervecord": {
       "name": "Cordón nervioso",
@@ -846,7 +846,7 @@
       "text": "Una célula nerviosa. Recibe señales de otras células y, cuando se suman suficientes, envía su propia señal."
     },
     "spike": {
-      "name": "Disparo",
+      "name": "Potencial de acción (disparo)",
       "text": "Un breve impulso eléctrico que una neurona activa envía a lo largo de sí misma, también llamado potencial de acción. En las lecciones, cada destello de luz marca uno."
     },
     "synapse": {
@@ -891,7 +891,7 @@
     },
     "sensory": {
       "name": "Neurona sensorial",
-      "text": "Una neurona que capta algo del mundo, como un olor o una sombra que se acerca, y se lo comunica al cerebro."
+      "text": "Una neurona que capta algo del mundo, como la luz o un olor, y se lo comunica al cerebro."
     },
     "motor": {
       "name": "Neurona motora",
@@ -906,7 +906,7 @@
       "text": "Un canal directo entre dos neuronas que pasa la señal casi sin retraso. El mapa en el que se basan las lecciones solo registra sinapsis químicas."
     },
     "bump": {
-      "name": "Pico",
+      "name": "Pico de actividad",
       "text": "La zona de neuronas de la brújula que están activas. Su posición en el anillo muestra hacia dónde mira la mosca."
     },
     "landmark": {
@@ -914,7 +914,7 @@
       "text": "Algo que la mosca ve y que no se mueve, como el sol o un árbol. La mosca lo usa para mantener estable su sentido de la orientación."
     },
     "bridge": {
-      "name": "Puente",
+      "name": "Puente protocerebral",
       "text": "Una parte del cerebro de la mosca con forma de barra, el puente protocerebral. Por él pasan las neuronas de la brújula y las neuronas de giro."
     }
   },
@@ -924,7 +924,7 @@
     "lead": "Todos los términos científicos de las lecciones, explicados en una o dos frases. Abre un término para ver dónde aparece en el cerebro real de una mosca de la fruta.",
     "metaTitle": "Glosario de neurociencia para estudiantes · WiredMind",
     "metaDescription": "Neurona, sinapsis, conectoma, cuerpo fungiforme y más: los términos de las lecciones de WiredMind sobre la mosca de la fruta, en una o dos frases.",
-    "termTitle": "{term}: explicación fácil para estudiantes",
+    "termTitle": "{term}: explicación para estudiantes",
     "inLessons": "Míralo en una lección",
     "steps": "Dónde aparece en la lección",
     "related": "Términos relacionados",
@@ -943,8 +943,8 @@
     "items": {
       "smell": {
         "title": "¿Cómo huelen las moscas?",
-        "short": "Una mosca huele con sus dos antenas. Sus receptores olfativos se activan cuando llega un olor, y la señal viaja al cerebro para ser clasificada.",
-        "a": "Una mosca no tiene nariz. Sus dos antenas están cubiertas de pelos diminutos, y dentro de cada pelo hay receptores olfativos: células nerviosas que se activan cuando les llega la molécula de olor adecuada. Una mosca de la fruta tiene unos 50 tipos de receptor, y cada tipo responde a su propio conjunto de olores. Con esa mezcla de señales la mosca distingue un olor de otro.",
+        "short": "Una mosca huele sobre todo con sus dos antenas. Sus receptores olfativos se activan cuando llega un olor, y la señal viaja al cerebro para ser clasificada.",
+        "a": "Una mosca no tiene nariz. Huele sobre todo con sus dos antenas, que están cubiertas de pelos diminutos, y dentro de cada pelo hay receptores olfativos: células nerviosas que se activan cuando les llega la molécula de olor adecuada. Una mosca de la fruta tiene unos 50 tipos de receptor, y cada tipo responde a su propio conjunto de olores. Con esa mezcla de señales la mosca distingue un olor de otro.",
         "b": "Los receptores envían su señal al lóbulo antenal, la primera parada de los olores en el cerebro. Allí, todos los receptores de un mismo tipo se reúnen en el mismo punto, así que un olor se convierte en un patrón de puntos activos. Las neuronas de proyección llevan ese patrón más adentro, al cuerpo fungiforme, donde la mosca asocia los olores con experiencias buenas y malas."
       },
       "memory": {
@@ -963,30 +963,30 @@
         "title": "¿Por qué es tan difícil cazar una mosca?",
         "short": "La mosca ve venir el matamoscas muy pronto, y un circuito de escape rápido la lanza al aire en unas centésimas de segundo, antes de que llegue el golpe.",
         "a": "Tres cosas juegan a favor de la mosca. Sus ojos cubren casi todo el espacio que la rodea, así que es difícil acercarse por detrás. Su visión es más rápida que la nuestra, y una mano le parece lenta. Y tiene neuronas con una sola tarea: se activan cuando algo crece deprisa en su campo de visión, como un matamoscas que se acerca.",
-        "b": "Esas neuronas de aproximación se conectan con la fibra gigante, una célula nerviosa muy gruesa que baja del cerebro hasta las neuronas que mueven las patas del salto. Una fibra gruesa transmite su señal deprisa, así que la orden de saltar llega casi al instante. Las grabaciones a alta velocidad muestran además que la mosca recoloca las patas justo antes de despegar, para que el salto la aleje del matamoscas."
+        "b": "Esas neuronas de aproximación se conectan con la fibra gigante, una célula nerviosa muy gruesa que baja del cerebro hasta las neuronas que mueven las patas del salto. Una fibra gruesa transmite su señal deprisa, así que la orden de saltar llega casi al instante. Cuando tiene un momento, la mosca primero recoloca las patas para que el salto la aleje del matamoscas. En una emergencia, la fibra gigante puede lanzarla al instante."
       },
       "reaction": {
         "title": "¿Qué tiempo de reacción tiene una mosca?",
-        "short": "Una mosca de la fruta puede iniciar su salto de escape unas centésimas de segundo después de ver el peligro. Una persona necesita un cuarto de segundo.",
-        "a": "Cuando algo se abalanza sobre una mosca, la señal va de sus ojos a los músculos de las patas en decenas de milisegundos. Un milisegundo es la milésima parte de un segundo. En la lección de WiredMind, las neuronas del salto se activan unos 30 ms después de que aparezca el matamoscas. Esa cifra sale de un modelo sencillo, no de un registro en una mosca, pero cae en un rango realista. Una persona tarda unos 250 ms solo en reaccionar a un destello de luz.",
+        "short": "La mosca inicia su salto de escape más rápido unas centésimas de segundo tras ver el peligro. Una persona tarda un cuarto de segundo solo en reaccionar.",
+        "a": "Cuando algo se abalanza sobre una mosca, la señal va de sus ojos a los músculos de las patas en decenas de milisegundos. Un milisegundo es la milésima parte de un segundo. En la lección de WiredMind, las neuronas del salto se activan unos 30 ms después de que aparezca el matamoscas. Esa cifra sale de un modelo sencillo, no de un registro en una mosca, pero tiene el orden de magnitud correcto. Una persona tarda unos 250 ms solo en reaccionar a un destello de luz.",
         "b": "La velocidad está en el cableado. El camino es corto: neuronas de aproximación, luego la fibra gigante, luego las neuronas del salto. La fibra gigante es inusualmente gruesa, y por eso su señal viaja deprisa. Y en una mosca real pasa la señal por sinapsis eléctricas, canales directos entre células casi sin retraso."
       },
       "neurons": {
         "title": "¿Cuántas neuronas tiene el cerebro de una mosca?",
-        "short": "Unas 140 000. En 2024 se terminó de cartografiar cada una de ellas en el cerebro de una mosca de la fruta adulta, con sus decenas de millones de sinapsis.",
+        "short": "Unas 140 000. En 2024 se terminó de cartografiar cada una en el cerebro de una mosca de la fruta adulta, con más de 50 millones de sinapsis entre ellas.",
         "a": "El cerebro de una mosca de la fruta es más pequeño que una semilla de amapola y contiene unas 140 000 neuronas. Un cerebro humano tiene cientos de miles de veces más. Aun así, con él la mosca vuela, encuentra comida, aprende olores y escapa de un matamoscas.",
-        "b": "Un mapa completo de un sistema nervioso, con cada neurona y cada sinapsis, se llama conectoma. La mosca de la fruta es uno de los poquísimos animales cuyo cerebro entero se ha cartografiado así. Las lecciones de WiredMind funcionan con el conectoma del cerebro y el cordón nervioso de una mosca macho, y cada lección usa un circuito de 3000 a 4500 de sus neuronas."
+        "b": "Un mapa completo de un sistema nervioso, con cada neurona y cada sinapsis, se llama conectoma. La mosca de la fruta es uno de los poquísimos animales cuyo cerebro entero se ha cartografiado así. Las lecciones de WiredMind funcionan con un mapa distinto y más reciente: el conectoma del cerebro y el cordón nervioso de una mosca macho, y cada lección usa un circuito de 3000 a 4500 de sus neuronas."
       }
     }
   },
   "teachers": {
     "meta": {
-      "indexTitle": "Guías docentes · WiredMind",
-      "indexDescription": "Un plan de clase, las respuestas esperadas, preguntas para el debate y una hoja de trabajo imprimible para cada lección de WiredMind.",
+      "indexTitle": "Neurociencia: planes de clase y hojas de trabajo · WiredMind",
+      "indexDescription": "Planes de clase gratis de neurociencia (45 min), respuestas, preguntas y hojas imprimibles para cada lección de WiredMind sobre la mosca de la fruta.",
       "guideTitle": "Guía docente: {title}",
       "guideDescription": "Plan de 45 minutos para «{title}»: objetivo, qué observar, respuestas esperadas, preguntas para debatir y errores frecuentes.",
       "worksheetTitle": "Hoja de trabajo: {title}",
-      "worksheetDescription": "Una hoja de trabajo imprimible para «{title}»: predecir, probar, observar y explicar."
+      "worksheetDescription": "Una hoja de trabajo imprimible y gratis para «{title}»: los estudiantes predicen, prueban, observan y explican."
     },
     "index": {
       "title": "Guías docentes",
@@ -997,7 +997,7 @@
       "demo": "Mostrarla a la clase",
       "generalTerms": "Términos básicos",
       "companionTitle": "Un curso complementario",
-      "companion": "Muchos estudiantes que cursan 5 unidades de Biología también siguen el curso gratuito de la Universidad de Tel Aviv <campusil>El cerebro: la máquina más maravillosa de todas</campusil> en Campus IL, impartido por el Prof. Yossi Yovel y el Prof. Yaniv Assaf. El curso enseña a fondo las neuronas, los potenciales de acción y las sinapsis, y estas lecciones son un complemento práctico. WiredMind es un proyecto independiente. No está afiliado al curso, a la universidad ni a Campus IL."
+      "companion": "En Israel, muchos estudiantes que cursan Biología a nivel de 5 unidades también siguen el curso gratuito de la Universidad de Tel Aviv <campusil>El cerebro: la máquina más maravillosa de todas</campusil> en Campus IL, impartido por el Prof. Yossi Yovel y el Prof. Yaniv Assaf. El curso enseña a fondo las neuronas, los potenciales de acción y las sinapsis, y estas lecciones son un complemento práctico. WiredMind es un proyecto independiente. No está afiliado al curso, a la universidad ni a Campus IL."
     },
     "topics": {
       "excitation": "Excitación e inhibición",
@@ -1009,7 +1009,7 @@
       "eyebrow": "Guía docente · Lección {number}",
       "print": "Imprimir",
       "lesson": "Abrir la lección",
-      "demo": "Reproducir «Muéstrame» en modo clase",
+      "demo": "Reproducir «Muéstrame cómo funciona» en modo clase",
       "worksheet": "Hoja de trabajo del estudiante",
       "all": "Todas las guías docentes",
       "address": "Dirección de la lección",
@@ -1021,7 +1021,7 @@
       "minutes": "{minutes} min",
       "phases": {
         "opening": "Pregunta inicial",
-        "demo": "Demostración con «Muéstrame»",
+        "demo": "Demostración con «Muéstrame cómo funciona»",
         "explore": "Los estudiantes exploran",
         "discuss": "Debate"
       },
@@ -1197,7 +1197,7 @@
       "escape": {
         "goal": "Los estudiantes siguen un reflejo desde los ojos hasta los músculos de las patas en unos 30 milisegundos, y comprueban que el escape rápido depende de un solo eslabón: la fibra gigante.",
         "topics": {
-          "reflex": "Una vía refleja completa en tres partes: neuronas sensoriales (las neuronas de aproximación), un relevo (la fibra gigante) y neuronas motoras (las neuronas del salto). A diferencia del reflejo rotuliano, este relevo pasa por el cerebro.",
+          "reflex": "Una vía refleja completa en tres partes: el lado sensorial (las neuronas de aproximación, que informan de lo que ven los ojos), un relevo (la fibra gigante) y neuronas motoras (las neuronas del salto). A diferencia del reflejo rotuliano, este relevo pasa por el cerebro.",
           "structure": "La señal se estrecha desde cientos de neuronas de aproximación hasta la fibra gigante. Ese cuello de botella explica por qué silenciar un solo tipo de célula elimina el comportamiento.",
           "synapses": "La fibra gigante es gruesa, y por eso su señal es rápida. En una mosca real usa además sinapsis eléctricas, las más rápidas; el modelo solo tiene sinapsis químicas."
         },
@@ -1217,7 +1217,7 @@
         "misconceptions": {
           "a": {
             "claim": "La mosca decide saltar.",
-            "fix": "El salto rápido es un reflejo: el cableado lleva la señal de un extremo al otro sin detenerse. No hay ninguna etapa en la que la mosca sopese sus opciones."
+            "fix": "El salto más rápido funciona como un reflejo: el cableado lleva la señal de un extremo al otro sin detenerse. Los escapes más lentos dejan un poco de tiempo para apuntar el salto, pero no para pensárselo."
           },
           "b": {
             "claim": "Si la mosca no saltó, es que no vio el matamoscas.",
@@ -1249,7 +1249,7 @@
         "levels": {
           "fly": "¿Qué partes de este cuerpo necesita la mosca para escapar?",
           "brain": "La señal empieza en los ojos y termina en las patas. ¿Por dónde tiene que pasar en el camino?",
-          "circuit": "Cientos de células azules y una sola línea roja. ¿Qué te llama la atención del recorrido?",
+          "circuit": "Cientos de células azules y solo dos líneas rojas, una a cada lado. ¿Qué te llama la atención del recorrido?",
           "neuron": "Esta célula es inusualmente gruesa. ¿Por qué un cable grueso ayudaría a escapar rápido?"
         },
         "predictWhy": "Las neuronas de aproximación siguen disparando, así que la mosca ve el matamoscas, pero con la fibra gigante en silencio la señal nunca llega a las neuronas del salto, y estas se quedan a oscuras."

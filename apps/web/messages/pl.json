@@ -7,8 +7,8 @@
   },
   "meta": {
     "home": {
-      "title": "WiredMind: prawdziwy mózg muszki owocowej do odkrycia",
-      "description": "Darmowe lekcje o prawdziwych połączeniach w mózgu muszki owocowej. Pobudzanie i wyciszanie neuronów z konektomu MaleCNS w przeglądarce. Bez logowania."
+      "title": "WiredMind: darmowa neuronauka na prawdziwym mózgu muszki",
+      "description": "Darmowe 10-minutowe lekcje neuronauki, 11–16 lat. Pobudzanie i wyciszanie prawdziwych neuronów z konektomu muszki owocowej w przeglądarce. Bez logowania."
     },
     "about": {
       "title": "O projekcie WiredMind: co jest prawdziwe, a co uproszczone",
@@ -82,7 +82,7 @@
   "landing": {
     "hero": {
       "eyebrow": "Darmowe lekcje neurobiologii dla szkół",
-      "title": "Wystarczy pobudzić neuron w prawdziwym mózgu muszki owocowej, by zobaczyć, jak sygnał pędzi od jej oczu do nóg.",
+      "title": "Wystarczy pobudzić neuron w schemacie połączeń prawdziwej muszki owocowej, by zobaczyć, jak sygnał pędzi od jej oczu do nóg.",
       "lead": "WiredMind uruchamia w przeglądarce prawdziwą mapę połączeń układu nerwowego muszki owocowej. W trzech krótkich lekcjach z przewodnikiem uczniowie pobudzają neurony, wyciszają je i sprawdzają, co się zmienia.",
       "start": "Zacznij pierwszą lekcję",
       "teachers": "Dla nauczycieli"
@@ -93,7 +93,7 @@
       "steps": {
         "looming": "Neurony zbliżeniowe wykrywają packę",
         "gf": "Włókno olbrzymie wysyła impuls",
-        "jump": "Neurony skoku uruchamiają nogi"
+        "jump": "Neurony skoku wysyłają impulsy"
       },
       "cells": "{count, plural, one {# komórka} few {# komórki} many {# komórek} other {# komórki}}",
       "firstSpike": "{cells} · {ms} ms",
@@ -121,8 +121,8 @@
       "lead": "Wystarczy umieścić link na tablicy albo wysłać go uczniom na ich urządzenia. Niczego więcej nie trzeba ustawiać.",
       "points": {
         "periods": {
-          "title": "1–2 godziny lekcyjne",
-          "body": "Każda lekcja trwa około 10 minut. Wszystkie trzy, razem z dyskusją, mieszczą się w jednej lub dwóch godzinach lekcyjnych."
+          "title": "Każda na jedną godzinę lekcyjną",
+          "body": "Każda lekcja sama w sobie trwa około 10 minut. Razem z dyskusją z przewodnika dla nauczyciela wypełnia całą 45-minutową godzinę lekcyjną."
         },
         "install": {
           "title": "Bez instalacji i logowania",
@@ -263,8 +263,8 @@
   "lessons": {
     "smell-memory": {
       "title": "Jak muszka zapamiętuje zapach",
-      "summary": "Wyślij zapach do prawdziwego mózgu muszki i znajdź komórki, które go zapamiętują.",
-      "description": "Wyślij zapach do prawdziwego mózgu muszki owocowej, śledź go aż do ciała grzybkowatego i znajdź komórki, które go zapamiętują. Darmowa lekcja na 10 minut.",
+      "summary": "Wyślij zapach do prawdziwego mózgu muszki i znajdź, gdzie jest przechowywane wspomnienie o nim.",
+      "description": "Wyślij zapach do prawdziwego mózgu muszki owocowej, śledź go do ciała grzybkowatego i znajdź, gdzie jest zapisana pamięć o nim. Darmowa lekcja na 10 minut.",
       "searchTitle": "Jak muszki czują i zapamiętują zapachy: lekcja interaktywna",
       "steps": {
         "send": {
@@ -318,7 +318,7 @@
         "text": "Teraz działa każdy przycisk. Najpierw zgadnij, potem naciśnij: co zgaśnie, jeśli wyciszysz żółtych posłańców zapachu? Spróbuj wyciszyć dwa kolory naraz."
       },
       "mission": {
-        "goal": "Znajdź komórki, które przechowują pamięć zapachów muszki.",
+        "goal": "Znajdź, gdzie muszka przechowuje pamięć o zapachu.",
         "win": "Udało ci się je znaleźć. Sortery zapachów zamieniają każdy zapach we wzór, a czytniki pamięci go odczytują. Bez wzoru nie ma czego pamiętać."
       },
       "story": {
@@ -328,11 +328,11 @@
             "bubble": "Coś tu ładnie pachnie."
           },
           "sniff": {
-            "caption": "{name} łapie czułkami kilka jej cząsteczek. Muszce więcej nie trzeba.",
+            "caption": "{name} łapie czułkami jej słaby ślad. Muszce więcej nie trzeba.",
             "bubble": "Znam ten zapach!"
           },
           "recall": {
-            "caption": "Tydzień temu {name} trafił za tym samym zapachem do jedzenia. Jego mózg zachował po nim ślad.",
+            "caption": "Dwa dni temu {name} trafił za tym samym zapachem do jedzenia. Jego mózg zachował po nim ślad.",
             "bubble": "Brzoskwinia znaczy kolacja."
           },
           "land": {
@@ -354,7 +354,7 @@
       "title": "Skąd muszka wie, w którą stronę jest zwrócona",
       "summary": "Poobracaj kompasem prawdziwej muszki i zobacz, co utrzymuje go w miejscu.",
       "description": "Poobracaj wewnętrznym kompasem prawdziwej muszki owocowej, wycisz neurony pierścieniowe i zobacz, jak muszka gubi kierunek. Darmowa lekcja na 10 minut.",
-      "searchTitle": "Wewnętrzny kompas muszki: interaktywna lekcja o mózgu",
+      "searchTitle": "Wewnętrzny kompas muszki owocowej: interaktywna lekcja",
       "steps": {
         "left": {
           "text": "Naciśnij „Pobudź”, żeby uruchomić lewe <turn>neurony skrętu</turn> <gloss>(sygnał skrętu)</gloss>. Potem obserwuj tarczę kompasu.",
@@ -362,10 +362,10 @@
         },
         "right": {
           "text": "Teraz naciśnij „Pobudź”, żeby uruchomić prawe <turn>neurony skrętu</turn> <gloss>(drugi sygnał)</gloss>. Nie spuszczaj oka z górki.",
-          "result": "Górka przesunęła się po tarczy. Sygnały skrętu z lewej i z prawej pchają ją w przeciwne strony, więc muszka też się obraca."
+          "result": "Górka przesunęła się po tarczy. Sygnały skrętu z lewej i z prawej pchają ją w przeciwne strony, więc obraca się też poczucie kierunku muszki."
         },
         "silence": {
-          "text": "Wycisz <ring>neurony pierścieniowe</ring> <gloss>(kurierów widoków)</gloss>. Dostarczają mózgowi to, co widzi muszka. Prawy sygnał wyślemy za ciebie.",
+          "text": "Wycisz <ring>neurony pierścieniowe</ring> <gloss>(kurierów widoków)</gloss>. Dostarczają mózgowi to, co widzi muszka. Prawy sygnał skrętu uruchomimy za ciebie.",
           "result": "Górka zsuwa się ze swojego miejsca i wędruje. Bez punktów orientacyjnych kompas dryfuje.",
           "predict": {
             "question": "Kurierzy widoków zaraz zostaną wyciszeni. Co zrobi górka?",
@@ -377,7 +377,7 @@
           }
         },
         "restore": {
-          "text": "Włącz z powrotem <ring>neurony pierścieniowe</ring> <gloss>(kurierów widoków)</gloss>: naciśnij jeszcze raz ich przycisk. Wyślemy ten sam sygnał.",
+          "text": "Włącz z powrotem <ring>neurony pierścieniowe</ring> <gloss>(kurierów widoków)</gloss>: naciśnij jeszcze raz ich przycisk. Wyślemy ten sam sygnał skrętu.",
           "result": "Górka znów trzyma się swojego miejsca. Punkty orientacyjne pilnują, żeby kompas muszki się nie mylił."
         }
       },
@@ -394,7 +394,7 @@
           },
           "both": {
             "text": "Zielone komórki kierunku też były wyłączone.",
-            "feedback": "Niezupełnie. Wyciszone były tylko fioletowe komórki. Zielone komórki kierunku dalej wysyłały impulsy, ale nic nie trzymało ich w miejscu."
+            "feedback": "Niezupełnie. Wyciszone były tylko fioletowe komórki. Zielone komórki kierunku dalej wysyłały impulsy, ale nic nie trzymało górki w miejscu."
           }
         }
       },
@@ -446,7 +446,7 @@
           "result": "Wysyłają impulsy, a po kilku tysięcznych sekundy impuls wysyła też <giantfiber>włókno olbrzymie</giantfiber> <gloss>(kabel ucieczki)</gloss>."
         },
         "jump": {
-          "text": "Naciśnij jeszcze raz „Pobudź”. Śledź <giantfiber>włókno olbrzymie</giantfiber> <gloss>(kabel ucieczki)</gloss> w dół, aż do <nervecord>łańcuszka nerwowego</nervecord> <gloss>(jej rdzenia kręgowego)</gloss>.",
+          "text": "Naciśnij jeszcze raz „Pobudź”. Śledź <giantfiber>włókno olbrzymie</giantfiber> <gloss>(kabel ucieczki)</gloss> w dół, aż do <nervecord>łańcuszka nerwowego</nervecord> <gloss>(jak rdzeń kręgowy)</gloss>.",
           "result": "<jump>Neurony skoku</jump> <gloss>(motorki nóg)</gloss> wysyłają impulsy w ciągu 30 milisekund. Sprawiają, że środkowe nogi kopią, a muszka odskakuje."
         },
         "silence": {
@@ -485,7 +485,7 @@
       },
       "freePlay": {
         "title": "Swobodne eksperymenty",
-        "text": "Teraz działa każdy przycisk. Najpierw zgadnij, potem naciśnij: które kolory wciąż się zapalają, gdy kabel ucieczki jest wyciszony? Potem spróbuj zamiast niego wyciszyć wykrywacze packi."
+        "text": "Teraz działa każdy przycisk. Najpierw zgadnij, potem naciśnij: co się stanie, jeśli zamiast tego wyciszysz motorki nóg? Potem spróbuj wyciszyć wykrywacze packi."
       },
       "mission": {
         "goal": "Znajdź kabel, który ratuje muszkę.",
@@ -502,7 +502,7 @@
             "bubble": "Oho."
           },
           "leap": {
-            "caption": "Środkowe nogi odbijają się, zanim packa spadnie. Od pierwszego spojrzenia do skoku: około 30 milisekund.",
+            "caption": "Środkowe nogi odbijają się, zanim packa spadnie. Od zauważenia packi do skoku mija zaledwie kilka setnych sekundy.",
             "bubble": "Skok!"
           },
           "safe": {
@@ -831,7 +831,7 @@
     },
     "giantfiber": {
       "name": "Włókno olbrzymie",
-      "text": "Bardzo gruba komórka nerwowa, która biegnie z mózgu w dół, do łańcuszka nerwowego. Niesie najszybszy sygnał ucieczki muszki."
+      "text": "Bardzo gruba komórka nerwowa, która biegnie z mózgu w dół, do łańcuszka nerwowego. Niesie najszybszy sygnał ucieczki muszki. Muszka ma dwa takie włókna, po jednym z każdej strony."
     },
     "nervecord": {
       "name": "Łańcuszek nerwowy",
@@ -846,7 +846,7 @@
       "text": "Komórka nerwowa. Odbiera sygnały od innych komórek, a gdy zbierze się ich dość dużo, wysyła własny sygnał."
     },
     "spike": {
-      "name": "Impuls",
+      "name": "Potencjał czynnościowy",
       "text": "Krótki sygnał elektryczny, który aktywny neuron wysyła wzdłuż swojej długości, nazywany też iglicą lub potencjałem czynnościowym. W lekcjach każdy błysk światła oznacza jeden impuls."
     },
     "synapse": {
@@ -891,7 +891,7 @@
     },
     "sensory": {
       "name": "Neuron czuciowy",
-      "text": "Neuron, który wychwytuje coś ze świata, na przykład zapach albo zbliżający się cień, i zgłasza to mózgowi."
+      "text": "Neuron, który wychwytuje coś ze świata, na przykład światło albo zapach, i zgłasza to mózgowi."
     },
     "motor": {
       "name": "Neuron ruchowy",
@@ -906,7 +906,7 @@
       "text": "Bezpośredni kanał między dwoma neuronami, który przekazuje sygnał prawie bez opóźnienia. Mapa, na której opierają się lekcje, zawiera tylko synapsy chemiczne."
     },
     "bump": {
-      "name": "Górka",
+      "name": "Górka aktywności",
       "text": "Plama aktywnych neuronów kompasu. Jej miejsce na pierścieniu pokazuje, w którą stronę zwrócona jest muszka."
     },
     "landmark": {
@@ -914,7 +914,7 @@
       "text": "Coś, co muszka widzi i co stoi w miejscu, na przykład słońce albo drzewo. Dzięki niemu muszka nie gubi poczucia kierunku."
     },
     "bridge": {
-      "name": "Mostek",
+      "name": "Mostek protocerebralny",
       "text": "Część mózgu muszki w kształcie pręta, czyli mostek protocerebralny. Biegną przez nią i neurony kompasu, i neurony skrętu."
     }
   },
@@ -943,8 +943,8 @@
     "items": {
       "smell": {
         "title": "Jak muszki czują zapachy?",
-        "short": "Muszka czuje zapachy dwoma czułkami. Receptory węchowe na nich pobudzają się, gdy dociera zapach, a sygnał biegnie do mózgu, gdzie jest sortowany.",
-        "a": "Muszka nie ma nosa. Jej dwa czułki pokrywają maleńkie włoski, a w każdym włosku siedzą receptory węchowe: komórki nerwowe, które pobudzają się, gdy trafi na nie właściwa cząsteczka zapachu. Muszka owocowa ma około 50 rodzajów receptorów, a każdy rodzaj odpowiada na własny zestaw zapachów. Dzięki tej mieszance sygnałów muszka odróżnia jeden zapach od drugiego.",
+        "short": "Muszka czuje zapachy głównie dwoma czułkami. Receptory węchowe na nich pobudzają się, gdy dociera zapach, a sygnał biegnie do mózgu, gdzie jest sortowany.",
+        "a": "Muszka nie ma nosa. Czuje zapachy głównie dwoma czułkami, które pokrywają maleńkie włoski, a w każdym włosku siedzą receptory węchowe: komórki nerwowe, które pobudzają się, gdy trafi na nie właściwa cząsteczka zapachu. Muszka owocowa ma około 50 rodzajów receptorów, a każdy rodzaj odpowiada na własny zestaw zapachów. Dzięki tej mieszance sygnałów muszka odróżnia jeden zapach od drugiego.",
         "b": "Receptory wysyłają sygnał do płata czułkowego, pierwszego przystanku zapachów w mózgu. Tam wszystkie receptory jednego rodzaju spotykają się w tym samym miejscu, więc zapach staje się wzorem aktywnych miejsc. Neurony projekcyjne niosą ten wzór głębiej, do ciała grzybkowatego, gdzie muszka łączy zapachy z dobrymi i złymi doświadczeniami."
       },
       "memory": {
@@ -963,30 +963,30 @@
         "title": "Dlaczego tak trudno trafić muchę packą?",
         "short": "Mucha wcześnie widzi nadlatującą packę, a szybki obwód ucieczki wyrzuca ją w powietrze w kilka setnych sekundy, zanim packa spadnie.",
         "a": "Trzy rzeczy działają na korzyść muchy. Jej oczy obejmują prawie całą przestrzeń dookoła, więc trudno podejść ją od tyłu. Widzi szybciej niż my, dlatego ręka wydaje się jej powolna. I ma neurony z jednym zadaniem: pobudzają się, gdy coś szybko rośnie w polu widzenia, tak jak zbliżająca się packa.",
-        "b": "Te neurony zbliżeniowe łączą się z włóknem olbrzymim, bardzo grubą komórką nerwową, która biegnie z mózgu w dół do neuronów poruszających nogami skocznymi. Grube włókno szybko przewodzi sygnał, więc rozkaz skoku dociera prawie natychmiast. Na filmach z szybkich kamer widać też, że tuż przed startem mucha przestawia nogi, tak aby skok odniósł ją od packi."
+        "b": "Te neurony zbliżeniowe łączą się z włóknem olbrzymim, bardzo grubą komórką nerwową, która biegnie z mózgu w dół do neuronów poruszających nogami skocznymi. Grube włókno szybko przewodzi sygnał, więc rozkaz skoku dociera prawie natychmiast. Gdy ma chwilę, mucha najpierw przestawia nogi, tak aby skok odniósł ją od packi. W nagłej sytuacji włókno olbrzymie może wyrzucić ją w powietrze od razu."
       },
       "reaction": {
         "title": "Jak szybko reaguje mucha?",
-        "short": "Muszka owocowa może zacząć skok ucieczki kilka setnych sekundy po zauważeniu zagrożenia. Człowiek potrzebuje około ćwierć sekundy.",
-        "a": "Gdy coś pędzi w stronę muszki, sygnał biegnie od jej oczu do mięśni nóg w kilkadziesiąt milisekund. Milisekunda to jedna tysięczna sekundy. W lekcji WiredMind neurony skoku pobudzają się około 30 ms po pojawieniu się packi. Ta liczba pochodzi z prostego modelu, a nie z pomiaru u muszki, ale mieści się w realistycznym zakresie. Człowiek potrzebuje około 250 ms tylko na to, by zareagować na błysk światła.",
+        "short": "Najszybszy skok ucieczki muszki zaczyna się kilka setnych sekundy po pojawieniu się zagrożenia. Człowiek potrzebuje ćwierć sekundy, by w ogóle zareagować.",
+        "a": "Gdy coś pędzi w stronę muszki, sygnał biegnie od jej oczu do mięśni nóg w kilkadziesiąt milisekund. Milisekunda to jedna tysięczna sekundy. W lekcji WiredMind neurony skoku pobudzają się około 30 ms po pojawieniu się packi. Ta liczba pochodzi z prostego modelu, a nie z pomiaru u muszki, ale ma właściwy rząd wielkości. Człowiek potrzebuje około 250 ms tylko na to, by zareagować na błysk światła.",
         "b": "Szybkość bierze się z połączeń. Droga jest krótka: neurony zbliżeniowe, potem włókno olbrzymie, potem neurony skoku. Włókno olbrzymie jest wyjątkowo grube, dlatego jego sygnał biegnie szybko. A u prawdziwej muszki przekazuje sygnał dalej przez synapsy elektryczne, bezpośrednie kanały między komórkami, prawie bez opóźnienia."
       },
       "neurons": {
         "title": "Ile neuronów ma mózg muszki owocowej?",
-        "short": "Około 140 000. W 2024 roku naukowcy zmapowali każdy z nich w mózgu dorosłej muszki owocowej, razem z dziesiątkami milionów synaps między nimi.",
+        "short": "Około 140 000. W 2024 roku naukowcy zmapowali każdy z nich w mózgu jednej dorosłej muszki owocowej, razem z ponad 50 milionami synaps między nimi.",
         "a": "Mózg muszki owocowej jest mniejszy niż ziarenko maku i ma około 140 000 neuronów. Mózg człowieka ma ich setki tysięcy razy więcej. Mimo to muszka potrafi dzięki niemu latać, znajdować jedzenie, uczyć się zapachów i uciekać przed packą.",
-        "b": "Pełna mapa układu nerwowego, z każdym neuronem i każdą synapsą, nazywa się konektom. Muszka owocowa jest jednym z bardzo niewielu zwierząt, których cały mózg tak zmapowano. Lekcje WiredMind działają na konektomie mózgu i łańcuszka nerwowego jednego samca muszki, a każda lekcja korzysta z obwodu liczącego od 3000 do 4500 jego neuronów."
+        "b": "Pełna mapa układu nerwowego, z każdym neuronem i każdą synapsą, nazywa się konektom. Muszka owocowa jest jednym z bardzo niewielu zwierząt, których cały mózg tak zmapowano. Lekcje WiredMind działają na innej, późniejszej mapie: konektomie mózgu i łańcuszka nerwowego jednego samca muszki, a każda lekcja korzysta z obwodu liczącego od 3000 do 4500 jego neuronów."
       }
     }
   },
   "teachers": {
     "meta": {
-      "indexTitle": "Przewodniki dla nauczycieli · WiredMind",
-      "indexDescription": "Plan lekcji, oczekiwane odpowiedzi, pytania do dyskusji i karta pracy ucznia do wydrukowania do każdej lekcji WiredMind.",
+      "indexTitle": "Scenariusze lekcji i karty pracy z neuronauki · WiredMind",
+      "indexDescription": "Darmowe 45-minutowe scenariusze lekcji z neuronauki, oczekiwane odpowiedzi, pytania do dyskusji i karty pracy do druku do każdej lekcji WiredMind o muszce.",
       "guideTitle": "Konspekt: {title}",
       "guideDescription": "Plan na 45 minut do lekcji „{title}”: cel, oczekiwane odpowiedzi, pytania do dyskusji i typowe błędy.",
       "worksheetTitle": "Karta pracy: {title}",
-      "worksheetDescription": "Karta pracy ucznia do wydrukowania do lekcji „{title}”: przewiduj, sprawdź, obserwuj, wyjaśnij."
+      "worksheetDescription": "Darmowa karta pracy do wydrukowania do lekcji „{title}”: uczniowie przewidują, sprawdzają, obserwują i wyjaśniają."
     },
     "index": {
       "title": "Przewodniki dla nauczycieli",
@@ -997,7 +997,7 @@
       "demo": "Pokaz dla klasy",
       "generalTerms": "Podstawowe pojęcia",
       "companionTitle": "Kurs uzupełniający",
-      "companion": "Wielu uczniów, którzy uczą się biologii na poziomie 5 jednostek, korzysta też z bezpłatnego kursu Uniwersytetu Telawiwskiego <campusil>Mózg: najwspanialsza ze wszystkich maszyn</campusil> na platformie Campus IL, który prowadzą prof. Yossi Yovel i prof. Yaniv Assaf. Kurs szczegółowo omawia neurony, potencjały czynnościowe i synapsy, a te lekcje są do niego praktycznym uzupełnieniem. WiredMind to niezależny projekt. Nie jest powiązany z kursem, uniwersytetem ani Campus IL."
+      "companion": "W Izraelu wielu uczniów, którzy uczą się biologii na poziomie 5 jednostek, korzysta też z bezpłatnego kursu Uniwersytetu Telawiwskiego <campusil>Mózg: najwspanialsza ze wszystkich maszyn</campusil> na platformie Campus IL, który prowadzą prof. Yossi Yovel i prof. Yaniv Assaf. Kurs szczegółowo omawia neurony, potencjały czynnościowe i synapsy, a te lekcje są do niego praktycznym uzupełnieniem. WiredMind to niezależny projekt. Nie jest powiązany z kursem, uniwersytetem ani Campus IL."
     },
     "topics": {
       "excitation": "Pobudzanie i hamowanie",
@@ -1009,7 +1009,7 @@
       "eyebrow": "Przewodnik dla nauczyciela · Lekcja {number}",
       "print": "Drukuj",
       "lesson": "Otwórz lekcję",
-      "demo": "Odtwórz „Pokaż mi” w trybie klasowym",
+      "demo": "Odtwórz „Pokaż mi, jak to działa” w trybie klasowym",
       "worksheet": "Karta pracy ucznia",
       "all": "Wszystkie przewodniki dla nauczycieli",
       "address": "Adres lekcji",
@@ -1021,7 +1021,7 @@
       "minutes": "{minutes} min",
       "phases": {
         "opening": "Pytanie na początek",
-        "demo": "Pokaz z „Pokaż mi”",
+        "demo": "Pokaz z „Pokaż mi, jak to działa”",
         "explore": "Uczniowie badają sami",
         "discuss": "Dyskusja"
       },
@@ -1197,7 +1197,7 @@
       "escape": {
         "goal": "Uczniowie śledzą odruch od oczu do mięśni nóg, trwający około 30 milisekund, i pokazują, że szybka ucieczka zależy od jednego ogniwa: włókna olbrzymiego.",
         "topics": {
-          "reflex": "Cała droga odruchu w trzech częściach: neurony czuciowe (neurony zbliżeniowe), przekaźnik (włókno olbrzymie) i neurony ruchowe (neurony skoku). Inaczej niż w odruchu kolanowym, ten przekaźnik biegnie przez mózg.",
+          "reflex": "Cała droga odruchu w trzech częściach: strona czuciowa (neurony zbliżeniowe, które zgłaszają, co widzą oczy), przekaźnik (włókno olbrzymie) i neurony ruchowe (neurony skoku). Inaczej niż w odruchu kolanowym, ten przekaźnik biegnie przez mózg.",
           "structure": "Sygnał z setek neuronów zbliżeniowych zbiega się na włóknie olbrzymim. To wąskie gardło sprawia, że wyciszenie jednego rodzaju komórek usuwa całe zachowanie.",
           "synapses": "Włókno olbrzymie jest grube, dlatego jego sygnał jest szybki. U prawdziwej muszki korzysta też z synaps elektrycznych, najszybszych ze wszystkich; w modelu są tylko synapsy chemiczne."
         },
@@ -1217,7 +1217,7 @@
         "misconceptions": {
           "a": {
             "claim": "Muszka decyduje, że skoczy.",
-            "fix": "Szybki skok to odruch: połączenia przenoszą sygnał prosto do celu. Nie ma etapu, na którym muszka rozważa, co zrobić."
+            "fix": "Najszybszy skok działa jak odruch: połączenia przenoszą sygnał prosto do celu. Przy wolniejszych ucieczkach jest trochę czasu, by wycelować skok, ale nie ma czasu na zastanawianie się."
           },
           "b": {
             "claim": "Skoro muszka nie skoczyła, to nie widziała packi.",
@@ -1249,7 +1249,7 @@
         "levels": {
           "fly": "Których części tego ciała muszka potrzebuje, żeby uciec?",
           "brain": "Sygnał zaczyna się w oczach, a kończy w nogach. Którędy musi po drodze przejść?",
-          "circuit": "Setki niebieskich komórek i jedna czerwona linia. Co zauważacie w tej trasie?",
+          "circuit": "Setki niebieskich komórek i tylko dwie czerwone linie, po jednej z każdej strony. Co zauważacie w tej trasie?",
           "neuron": "Ta jedna komórka jest wyjątkowo gruba. Dlaczego gruby kabel pomaga w szybkiej ucieczce?"
         },
         "predictWhy": "Neurony zbliżeniowe nadal wysyłają impulsy, więc muszka widzi packę, ale przy wyciszonym włóknie olbrzymim sygnał nigdy nie dociera do neuronów skoku i te pozostają ciemne."

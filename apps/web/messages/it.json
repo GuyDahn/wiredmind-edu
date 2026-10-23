@@ -7,8 +7,8 @@
   },
   "meta": {
     "home": {
-      "title": "WiredMind: esplora il vero cervello di un moscerino",
-      "description": "Lezioni gratuite per la classe sul vero cervello del moscerino della frutta: stimola e silenzia i neuroni del connettoma MaleCNS nel browser. Senza login."
+      "title": "WiredMind: neuroscienze gratis sul cervello di un moscerino",
+      "description": "Lezioni gratuite di neuroscienze da 10 minuti, per 11–16 anni. Stimola e silenzia neuroni reali del connettoma di un moscerino della frutta. Senza login."
     },
     "about": {
       "title": "Il progetto WiredMind: cosa è reale e cosa è semplificato",
@@ -82,7 +82,7 @@
   "landing": {
     "hero": {
       "eyebrow": "Lezioni gratuite di neuroscienze per la classe",
-      "title": "Attiva un neurone nel cervello di un vero moscerino della frutta e guarda il segnale sfrecciare dagli occhi alle zampe.",
+      "title": "Attiva un neurone nella mappa delle connessioni di un vero moscerino della frutta e guarda il segnale sfrecciare dagli occhi alle zampe.",
       "lead": "WiredMind simula nel browser il sistema nervoso di un moscerino della frutta, a partire dalla sua vera mappa dei collegamenti. Gli studenti stimolano i neuroni, li silenziano e vedono che cosa cambia, in tre brevi lezioni guidate.",
       "start": "Inizia la prima lezione",
       "teachers": "Per gli insegnanti"
@@ -93,7 +93,7 @@
       "steps": {
         "looming": "I neuroni di avvicinamento avvistano lo scacciamosche",
         "gf": "La fibra gigante si attiva",
-        "jump": "I neuroni del salto fanno scattare le zampe"
+        "jump": "I neuroni del salto si attivano"
       },
       "cells": "{count, plural, one {# cellula} many {# di cellule} other {# cellule}}",
       "firstSpike": "{cells} · {ms} ms",
@@ -121,8 +121,8 @@
       "lead": "Scrivi il link alla lavagna o invialo ai dispositivi degli studenti. Non c’è nient’altro da preparare.",
       "points": {
         "periods": {
-          "title": "1–2 ore di lezione",
-          "body": "Ogni lezione dura circa 10 minuti. Tutte e tre, discussione compresa, stanno in una o due ore."
+          "title": "Un’ora di lezione ciascuna",
+          "body": "Da sola, ogni lezione dura circa 10 minuti. Con la discussione della guida per l’insegnante, ognuna riempie un’ora di lezione di 45 minuti."
         },
         "install": {
           "title": "Niente da installare, nessun login",
@@ -263,8 +263,8 @@
   "lessons": {
     "smell-memory": {
       "title": "Come un moscerino ricorda un odore",
-      "summary": "Manda un odore nel cervello di un vero moscerino e trova le cellule che lo ricordano.",
-      "description": "Manda un odore nel cervello di un vero moscerino, seguilo fino al corpo fungiforme e scopri le cellule che lo ricordano. Lezione gratuita di 10 minuti.",
+      "summary": "Manda un odore nel cervello di un vero moscerino e scopri dove viene conservato il suo ricordo.",
+      "description": "Manda un odore nel cervello di un vero moscerino, seguilo fino al corpo fungiforme e scopri dove si conserva il suo ricordo. Lezione gratuita di 10 minuti.",
       "searchTitle": "Olfatto e memoria del moscerino: lezione interattiva",
       "steps": {
         "send": {
@@ -318,7 +318,7 @@
         "text": "Ora tutti i pulsanti funzionano. Prima prova a indovinare, poi tocca: che cosa si spegne se silenzi i messaggeri gialli dell’odore? Prova a silenziare due colori insieme."
       },
       "mission": {
-        "goal": "Trova le cellule che custodiscono il ricordo di un odore nel moscerino.",
+        "goal": "Trova dove un moscerino conserva il ricordo di un odore.",
         "win": "Le hai trovate. Le smistatrici di odori trasformano ogni odore in una combinazione, e i lettori di ricordi la leggono. Senza la combinazione non c’è niente da ricordare."
       },
       "story": {
@@ -328,11 +328,11 @@
             "bubble": "Che buon odore."
           },
           "sniff": {
-            "caption": "Le antenne di {name} ne catturano poche molecole. A un moscerino non serve altro.",
+            "caption": "Le antenne di {name} ne colgono una debole traccia. A un moscerino non serve altro.",
             "bubble": "Questo odore lo conosco!"
           },
           "recall": {
-            "caption": "La settimana scorsa questo stesso odore ha portato {name} al cibo. Il suo cervello ne ha conservato una traccia.",
+            "caption": "Due giorni fa questo stesso odore ha portato {name} al cibo. Il suo cervello ne ha conservato una traccia.",
             "bubble": "Pesca vuol dire cena."
           },
           "land": {
@@ -354,7 +354,7 @@
       "title": "Come un moscerino sa da che parte è rivolto",
       "summary": "Fai girare la bussola di un vero moscerino e scopri che cosa la tiene ferma.",
       "description": "Fai girare la bussola interna di un vero moscerino, poi silenzia i neuroni ad anello e guardala andare alla deriva. Lezione gratuita di 10 minuti.",
-      "searchTitle": "La bussola interna del moscerino: lezione interattiva",
+      "searchTitle": "Moscerino della frutta, bussola interna: lezione interattiva",
       "steps": {
         "left": {
           "text": "Tocca «Stimola» per attivare i <turn>neuroni di svolta</turn> di sinistra <gloss>(segnale per girare)</gloss>. Poi guarda il quadrante della bussola.",
@@ -362,10 +362,10 @@
         },
         "right": {
           "text": "Ora tocca «Stimola» sui <turn>neuroni di svolta</turn> di destra <gloss>(segnale opposto)</gloss>. Tieni d’occhio il picco.",
-          "result": "Il picco si è spostato lungo il quadrante. I segnali di svolta dei due lati lo spingono in direzioni opposte, così cambia anche la rotta del moscerino."
+          "result": "Il picco si è spostato lungo il quadrante. I segnali di svolta dei due lati lo spingono in direzioni opposte, così gira anche il senso dell’orientamento del moscerino."
         },
         "silence": {
-          "text": "Silenzia i <ring>neuroni ad anello</ring> <gloss>(occhi della bussola)</gloss>. Portano dentro quello che vede il moscerino. Il segnale di destra lo mandiamo noi.",
+          "text": "Silenzia i <ring>neuroni ad anello</ring> <gloss>(occhi della bussola)</gloss>. Portano dentro quello che vede il moscerino. Il segnale di svolta di destra lo attiviamo noi.",
           "result": "Il picco scivola via dal suo posto e vaga. Senza punti di riferimento, la bussola va alla deriva.",
           "predict": {
             "question": "Gli occhi della bussola stanno per essere silenziati. Che cosa farà il picco?",
@@ -377,7 +377,7 @@
           }
         },
         "restore": {
-          "text": "Tocca di nuovo il pulsante dei <ring>neuroni ad anello</ring> <gloss>(occhi della bussola)</gloss> per riattivarli. Mandiamo di nuovo lo stesso segnale.",
+          "text": "Tocca di nuovo il pulsante dei <ring>neuroni ad anello</ring> <gloss>(occhi della bussola)</gloss> per riattivarli. Mandiamo di nuovo lo stesso segnale di svolta.",
           "result": "Il picco resta di nuovo fermo al suo posto. I punti di riferimento tengono la bussola del moscerino sulla rotta giusta."
         }
       },
@@ -394,7 +394,7 @@
           },
           "both": {
             "text": "Hai disattivato anche le cellule di rotta verdi.",
-            "feedback": "Non proprio. Hai silenziato solo le cellule viola. Le cellule di rotta verdi hanno continuato ad attivarsi, ma niente le teneva ferme."
+            "feedback": "Non proprio. Hai silenziato solo le cellule viola. Le cellule di rotta verdi hanno continuato ad attivarsi, ma niente teneva fermo il picco."
           }
         }
       },
@@ -446,7 +446,7 @@
           "result": "Si attivano e, in pochi millesimi di secondo, si attiva anche la <giantfiber>fibra gigante</giantfiber> <gloss>(filo di fuga)</gloss>."
         },
         "jump": {
-          "text": "Tocca di nuovo «Stimola». Segui la <giantfiber>fibra gigante</giantfiber> <gloss>(filo di fuga)</gloss> giù nel <nervecord>cordone nervoso</nervecord> <gloss>(midollo spinale)</gloss>.",
+          "text": "Tocca di nuovo «Stimola». Segui la <giantfiber>fibra gigante</giantfiber> <gloss>(filo di fuga)</gloss> giù nel <nervecord>cordone nervoso</nervecord> <gloss>(come un midollo)</gloss>.",
           "result": "I <jump>neuroni del salto</jump> <gloss>(motori delle zampe)</gloss> si attivano entro 30 millisecondi. Fanno scattare le zampe centrali e il moscerino salta via."
         },
         "silence": {
@@ -485,7 +485,7 @@
       },
       "freePlay": {
         "title": "Esplorazione libera",
-        "text": "Ora tutti i pulsanti funzionano. Prima prova a indovinare, poi tocca: quali colori si accendono ancora con il filo di fuga silenziato? Poi prova invece a silenziare le sentinelle."
+        "text": "Ora tutti i pulsanti funzionano. Prima prova a indovinare, poi tocca: che cosa succede se invece silenzi i motori delle zampe? Poi prova a silenziare le sentinelle."
       },
       "mission": {
         "goal": "Trova il filo che salva il moscerino.",
@@ -502,7 +502,7 @@
             "bubble": "Oh-oh."
           },
           "leap": {
-            "caption": "Le zampe di mezzo scattano prima che lo scacciamosche colpisca. Dal primo sguardo al salto: circa 30 millisecondi.",
+            "caption": "Le zampe di mezzo scattano prima che lo scacciamosche colpisca. Dall’avvistamento al salto passano solo pochi centesimi di secondo.",
             "bubble": "Salta!"
           },
           "safe": {
@@ -831,7 +831,7 @@
     },
     "giantfiber": {
       "name": "Fibra gigante",
-      "text": "Una cellula nervosa molto spessa che scende dal cervello fino al cordone nervoso. Porta il segnale di fuga più veloce del moscerino."
+      "text": "Una cellula nervosa molto spessa che scende dal cervello fino al cordone nervoso. Porta il segnale di fuga più veloce del moscerino. Un moscerino ne ha due, una per lato."
     },
     "nervecord": {
       "name": "Cordone nervoso",
@@ -846,7 +846,7 @@
       "text": "Una cellula nervosa. Riceve segnali da altre cellule e, quando se ne sommano abbastanza, manda un segnale suo."
     },
     "spike": {
-      "name": "Attivazione",
+      "name": "Potenziale d’azione (impulso)",
       "text": "Un breve impulso elettrico che un neurone attivo manda lungo tutta la sua lunghezza, detto anche potenziale d’azione. Nelle lezioni ogni lampo di luce ne segna uno."
     },
     "synapse": {
@@ -891,7 +891,7 @@
     },
     "sensory": {
       "name": "Neurone sensoriale",
-      "text": "Un neurone che coglie qualcosa del mondo, come un odore o un’ombra che si avvicina, e lo riferisce al cervello."
+      "text": "Un neurone che coglie qualcosa del mondo, come la luce o un odore, e lo riferisce al cervello."
     },
     "motor": {
       "name": "Motoneurone",
@@ -906,7 +906,7 @@
       "text": "Un canale diretto tra due neuroni che passa il segnale quasi senza ritardo. La mappa su cui si basano le lezioni registra solo le sinapsi chimiche."
     },
     "bump": {
-      "name": "Picco",
+      "name": "Picco di attività",
       "text": "La zona di neuroni bussola attivi. Il punto dell’anello in cui si trova indica da che parte è rivolto il moscerino."
     },
     "landmark": {
@@ -914,7 +914,7 @@
       "text": "Qualcosa che il moscerino vede e che resta fermo, come il sole o un albero. Il moscerino lo usa per tenere stabile il suo senso dell’orientamento."
     },
     "bridge": {
-      "name": "Ponte",
+      "name": "Ponte protocerebrale",
       "text": "Una parte del cervello del moscerino a forma di barra, il ponte protocerebrale. Ci passano sia i neuroni bussola sia i neuroni di svolta."
     }
   },
@@ -924,7 +924,7 @@
     "lead": "Tutti i termini scientifici delle lezioni, spiegati in una o due frasi. Apri un termine per vedere dove compare nel cervello di un vero moscerino della frutta.",
     "metaTitle": "Glossario di neuroscienze per studenti · WiredMind",
     "metaDescription": "Neurone, sinapsi, connettoma, corpo fungiforme e altro: i termini delle lezioni di WiredMind sul moscerino della frutta, spiegati in una o due frasi.",
-    "termTitle": "{term}: spiegazione semplice per studenti",
+    "termTitle": "{term}: spiegazione per studenti",
     "inLessons": "Guardalo in una lezione",
     "steps": "Dove compare nella lezione",
     "related": "Termini correlati",
@@ -943,8 +943,8 @@
     "items": {
       "smell": {
         "title": "Come sentono gli odori i moscerini?",
-        "short": "Un moscerino sente gli odori con le due antenne. I recettori olfattivi si attivano quando arriva un odore e il segnale va al cervello per essere smistato.",
-        "a": "Un moscerino non ha il naso. Le sue due antenne sono coperte di peli minuscoli e dentro ogni pelo ci sono i recettori olfattivi: cellule nervose che si attivano quando vi si posa la molecola di odore giusta. Un moscerino della frutta ha circa 50 tipi di recettori, e ogni tipo risponde al proprio insieme di odori. È con questo miscuglio di segnali che il moscerino distingue un odore dall’altro.",
+        "short": "Un moscerino annusa soprattutto con le due antenne. I recettori olfattivi si attivano quando arriva un odore e il segnale va al cervello, che lo smista.",
+        "a": "Un moscerino non ha il naso. Sente gli odori soprattutto con le due antenne, che sono coperte di peli minuscoli, e dentro ogni pelo ci sono i recettori olfattivi: cellule nervose che si attivano quando vi si posa la molecola di odore giusta. Un moscerino della frutta ha circa 50 tipi di recettori, e ogni tipo risponde al proprio insieme di odori. È con questo miscuglio di segnali che il moscerino distingue un odore dall’altro.",
         "b": "I recettori mandano il segnale al lobo antennale, la prima tappa degli odori nel cervello. Lì tutti i recettori dello stesso tipo si incontrano nello stesso punto, così un odore diventa uno schema di punti attivi. I neuroni di proiezione portano questo schema più in profondità, fino al corpo fungiforme, dove il moscerino collega gli odori a esperienze buone e cattive."
       },
       "memory": {
@@ -963,30 +963,30 @@
         "title": "Perché è così difficile schiacciare una mosca?",
         "short": "La mosca vede arrivare lo scacciamosche molto presto, e un circuito di fuga veloce la fa decollare in pochi centesimi di secondo, prima del colpo.",
         "a": "Tre cose giocano a favore della mosca. I suoi occhi coprono quasi tutto lo spazio intorno, quindi è difficile avvicinarsi da dietro. La sua vista è più veloce della nostra, e una mano le sembra lenta. E ha neuroni con un solo compito: si attivano quando qualcosa si ingrandisce in fretta nel campo visivo, come uno scacciamosche che si avvicina.",
-        "b": "Questi neuroni di avvicinamento sono collegati alla fibra gigante, una cellula nervosa molto spessa che scende dal cervello fino ai neuroni che muovono le zampe del salto. Una fibra spessa trasmette il segnale in fretta, così l’ordine di saltare arriva quasi subito. Le riprese ad alta velocità mostrano anche che la mosca sposta le zampe appena prima del decollo, in modo che il salto la allontani dallo scacciamosche."
+        "b": "Questi neuroni di avvicinamento sono collegati alla fibra gigante, una cellula nervosa molto spessa che scende dal cervello fino ai neuroni che muovono le zampe del salto. Una fibra spessa trasmette il segnale in fretta, così l’ordine di saltare arriva quasi subito. Quando ha un attimo, il moscerino prima sposta le zampe, così il salto lo allontana dallo scacciamosche. In un’emergenza, la fibra gigante può lanciarlo subito."
       },
       "reaction": {
         "title": "Quanto è veloce il tempo di reazione di una mosca?",
-        "short": "Un moscerino della frutta può iniziare il salto di fuga pochi centesimi di secondo dopo aver visto il pericolo. A una persona serve un quarto di secondo.",
-        "a": "Quando qualcosa piomba su un moscerino, il segnale va dagli occhi ai muscoli delle zampe in poche decine di millisecondi. Un millisecondo è un millesimo di secondo. Nella lezione di WiredMind, i neuroni del salto si attivano circa 30 ms dopo la comparsa dello scacciamosche. Quel valore viene da un modello semplice, non da una registrazione su un moscerino, ma cade in un intervallo realistico. Una persona impiega circa 250 ms solo per reagire a un lampo di luce.",
+        "short": "Il salto di fuga più rapido del moscerino parte pochi centesimi di secondo dopo il pericolo. A una persona serve un quarto di secondo solo per reagire.",
+        "a": "Quando qualcosa piomba su un moscerino, il segnale va dagli occhi ai muscoli delle zampe in poche decine di millisecondi. Un millisecondo è un millesimo di secondo. Nella lezione di WiredMind, i neuroni del salto si attivano circa 30 ms dopo la comparsa dello scacciamosche. Quel valore viene da un modello semplice, non da una registrazione su un moscerino, ma l’ordine di grandezza è giusto. Una persona impiega circa 250 ms solo per reagire a un lampo di luce.",
         "b": "La velocità sta nel cablaggio. Il percorso è breve: i neuroni di avvicinamento, poi la fibra gigante, poi i neuroni del salto. La fibra gigante è insolitamente spessa, e questo fa viaggiare veloce il suo segnale. E in un moscerino vero passa il segnale attraverso sinapsi elettriche, canali diretti tra le cellule quasi senza ritardo."
       },
       "neurons": {
         "title": "Quanti neuroni ha il cervello di un moscerino?",
-        "short": "Circa 140.000. Nel 2024 è stata completata la mappa di ognuno di essi nel cervello di un moscerino della frutta adulto, con decine di milioni di sinapsi.",
+        "short": "Circa 140.000. Nel 2024 sono stati mappati tutti nel cervello di un singolo moscerino della frutta adulto, con oltre 50 milioni di sinapsi tra loro.",
         "a": "Il cervello di un moscerino della frutta è più piccolo di un seme di papavero e contiene circa 140.000 neuroni. Un cervello umano ne ha centinaia di migliaia di volte di più. Eppure, con quel cervello il moscerino vola, trova il cibo, impara gli odori e sfugge a uno scacciamosche.",
-        "b": "La mappa completa di un sistema nervoso, con ogni neurone e ogni sinapsi, si chiama connettoma. Il moscerino della frutta è uno dei pochissimi animali il cui cervello intero è stato mappato in questo modo. Le lezioni di WiredMind funzionano sul connettoma del cervello e del cordone nervoso di un moscerino maschio, e ogni lezione usa un circuito di 3.000-4.500 dei suoi neuroni."
+        "b": "La mappa completa di un sistema nervoso, con ogni neurone e ogni sinapsi, si chiama connettoma. Il moscerino della frutta è uno dei pochissimi animali il cui cervello intero è stato mappato in questo modo. Le lezioni di WiredMind funzionano su una mappa diversa e più recente: il connettoma del cervello e del cordone nervoso di un moscerino maschio, e ogni lezione usa un circuito di 3.000-4.500 dei suoi neuroni."
       }
     }
   },
   "teachers": {
     "meta": {
-      "indexTitle": "Guide per l’insegnante · WiredMind",
-      "indexDescription": "Per ogni lezione di WiredMind: piano della lezione, risposte attese, domande per la discussione e scheda di lavoro da stampare.",
+      "indexTitle": "Piani di lezione e schede di neuroscienze · WiredMind",
+      "indexDescription": "Piani di lezione gratis di neuroscienze (45 min), risposte, domande di discussione e schede da stampare delle lezioni WiredMind sul moscerino della frutta.",
       "guideTitle": "Guida docente: {title}",
       "guideDescription": "Un piano di 45 minuti per «{title}»: obiettivo, cosa notare, risposte attese, domande per discutere ed errori comuni.",
       "worksheetTitle": "Scheda alunno: {title}",
-      "worksheetDescription": "Una scheda di lavoro da stampare per «{title}»: prevedi, prova, osserva, spiega."
+      "worksheetDescription": "Una scheda di lavoro gratuita da stampare per «{title}»: gli studenti prevedono, provano, osservano e spiegano."
     },
     "index": {
       "title": "Guide per l’insegnante",
@@ -997,7 +997,7 @@
       "demo": "Mostrala alla classe",
       "generalTerms": "Termini di base",
       "companionTitle": "Un corso da affiancare",
-      "companion": "Molti studenti che seguono 5 unità di biologia frequentano anche il corso gratuito dell’Università di Tel Aviv <campusil>Il cervello: la macchina più meravigliosa di tutte</campusil> su Campus IL, tenuto dal Prof. Yossi Yovel e dal Prof. Yaniv Assaf. Il corso tratta in modo approfondito neuroni, potenziali d’azione e sinapsi, e queste lezioni ne sono un complemento pratico. WiredMind è un progetto indipendente. Non è affiliato al corso, all’università o a Campus IL."
+      "companion": "In Israele, molti studenti dell’indirizzo di biologia da 5 unità frequentano anche il corso gratuito dell’Università di Tel Aviv <campusil>Il cervello: la macchina più meravigliosa di tutte</campusil> su Campus IL, tenuto dal Prof. Yossi Yovel e dal Prof. Yaniv Assaf. Il corso tratta in modo approfondito neuroni, potenziali d’azione e sinapsi, e queste lezioni ne sono un complemento pratico. WiredMind è un progetto indipendente. Non è affiliato al corso, all’università o a Campus IL."
     },
     "topics": {
       "excitation": "Eccitazione e inibizione",
@@ -1197,7 +1197,7 @@
       "escape": {
         "goal": "Gli studenti seguono un riflesso dagli occhi ai muscoli delle zampe in circa 30 millisecondi, e mostrano che la fuga veloce dipende da un solo anello della catena: la fibra gigante.",
         "topics": {
-          "reflex": "Un’intera via riflessa in tre parti: neuroni sensoriali (i neuroni di avvicinamento), una stazione intermedia (la fibra gigante) e motoneuroni (i neuroni del salto). A differenza del riflesso patellare, qui il segnale passa dal cervello.",
+          "reflex": "Un’intera via riflessa in tre parti: il lato sensoriale (i neuroni di avvicinamento, che riferiscono ciò che vedono gli occhi), una stazione intermedia (la fibra gigante) e motoneuroni (i neuroni del salto). A differenza del riflesso patellare, qui il segnale passa dal cervello.",
           "structure": "Il segnale si restringe da centinaia di neuroni di avvicinamento alla fibra gigante. È per questa strozzatura che silenziare un solo tipo di cellula elimina il comportamento.",
           "synapses": "La fibra gigante è spessa, e questo rende veloce il suo segnale. In un moscerino vero usa anche sinapsi elettriche, le più veloci; il modello ha solo sinapsi chimiche."
         },
@@ -1217,7 +1217,7 @@
         "misconceptions": {
           "a": {
             "claim": "Il moscerino decide di saltare.",
-            "fix": "Il salto veloce è un riflesso: i collegamenti portano il segnale dritto fino in fondo. Non c’è una fase in cui il moscerino valuta le alternative."
+            "fix": "Il salto più veloce funziona come un riflesso: i collegamenti portano il segnale dritto fino in fondo. Le fughe più lente lasciano un po’ di tempo per mirare il salto, ma non per pensarci su."
           },
           "b": {
             "claim": "Se il moscerino non è saltato, vuol dire che non ha visto lo scacciamosche.",
@@ -1249,7 +1249,7 @@
         "levels": {
           "fly": "Di quali parti di questo corpo ha bisogno il moscerino per scappare?",
           "brain": "Il segnale parte dagli occhi e finisce nelle zampe. Da dove deve passare lungo il percorso?",
-          "circuit": "Centinaia di cellule blu e una sola linea rossa. Che cosa noti nel percorso?",
+          "circuit": "Centinaia di cellule blu e solo due linee rosse, una per lato. Che cosa noti nel percorso?",
           "neuron": "Questa cellula è insolitamente spessa. Perché un filo spesso aiuterebbe una fuga veloce?"
         },
         "predictWhy": "I neuroni di avvicinamento si attivano ancora, quindi il moscerino vede lo scacciamosche, ma con la fibra gigante silenziata il segnale non arriva mai ai neuroni del salto, che restano spenti."

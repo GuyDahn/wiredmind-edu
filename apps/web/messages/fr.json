@@ -7,8 +7,8 @@
   },
   "meta": {
     "home": {
-      "title": "WiredMind : explorez un vrai cerveau de drosophile",
-      "description": "Leçons gratuites pour la classe sur le vrai câblage d’un cerveau de drosophile. Stimulez ou faites taire les neurones du connectome MaleCNS. Sans compte."
+      "title": "WiredMind : neurosciences gratuites sur une vraie drosophile",
+      "description": "Leçons gratuites de neurosciences de 10 minutes, de 11 à 16 ans. Stimulez ou faites taire de vrais neurones du connectome d’une drosophile. Sans compte."
     },
     "about": {
       "title": "À propos de WiredMind : ce qui est réel ou simplifié",
@@ -82,7 +82,7 @@
   "landing": {
     "hero": {
       "eyebrow": "Leçons de neurosciences gratuites pour la classe",
-      "title": "Activez un neurone dans le cerveau d’une vraie drosophile et regardez le signal filer de ses yeux à ses pattes.",
+      "title": "Activez un neurone dans la carte des connexions d’une vraie drosophile et regardez le signal filer de ses yeux à ses pattes.",
       "lead": "WiredMind fait tourner dans le navigateur le vrai schéma de câblage du système nerveux d’une drosophile. Les élèves stimulent des neurones, les font taire et observent ce qui change, en trois courtes leçons guidées.",
       "start": "Commencer la première leçon",
       "teachers": "Pour les enseignants"
@@ -93,7 +93,7 @@
       "steps": {
         "looming": "Les neurones d’approche repèrent le tue-mouches",
         "gf": "La fibre géante s’active",
-        "jump": "Les neurones du saut font bondir la mouche"
+        "jump": "Les neurones du saut s’activent"
       },
       "cells": "{count, plural, one {# cellule} many {# cellules} other {# cellules}}",
       "firstSpike": "{cells} · {ms} ms",
@@ -121,8 +121,8 @@
       "lead": "Affichez le lien au tableau ou envoyez-le sur les appareils des élèves. Rien d’autre à préparer.",
       "points": {
         "periods": {
-          "title": "1 à 2 heures de cours",
-          "body": "Chaque leçon dure environ 10 minutes. Les trois, discussion comprise, tiennent en une ou deux heures de cours."
+          "title": "Une heure de cours par leçon",
+          "body": "Seule, chaque leçon dure environ 10 minutes. Avec la discussion du guide de l’enseignant, chacune occupe une heure de cours de 45 minutes."
         },
         "install": {
           "title": "Sans installation ni compte",
@@ -263,7 +263,7 @@
   "lessons": {
     "smell-memory": {
       "title": "Comment une mouche se souvient d’une odeur",
-      "summary": "Envoyer une odeur dans un vrai cerveau de mouche et trouver les cellules qui s’en souviennent.",
+      "summary": "Envoyer une odeur dans un vrai cerveau de mouche et trouver où son souvenir est gardé.",
       "description": "Envoyer une odeur dans un vrai cerveau de drosophile, la suivre jusqu’au corps pédonculé et trouver où se loge son souvenir. Leçon gratuite de 10 minutes.",
       "searchTitle": "Odorat et mémoire de la mouche : leçon interactive",
       "steps": {
@@ -318,7 +318,7 @@
         "text": "Tous les boutons fonctionnent maintenant. Devine d’abord, puis appuie : qu’est-ce qui s’éteint si tu fais taire les messagers d’odeurs, en jaune ? Essaie de faire taire deux couleurs à la fois."
       },
       "mission": {
-        "goal": "Trouve les cellules qui gardent le souvenir d’une odeur chez la mouche.",
+        "goal": "Trouve où la mouche garde le souvenir d’une odeur.",
         "win": "Tu les as trouvées. Les trieuses d’odeurs donnent à chaque odeur un motif, et les décodeurs le lisent. Sans motif, il n’y a rien à se rappeler."
       },
       "story": {
@@ -328,11 +328,11 @@
             "bubble": "Ça sent bon."
           },
           "sniff": {
-            "caption": "Les antennes de {name} en captent quelques molécules. Une mouche n’a pas besoin de plus.",
+            "caption": "Les antennes de {name} en captent une faible trace. Une mouche n’a pas besoin de plus.",
             "bubble": "Je connais cette odeur !"
           },
           "recall": {
-            "caption": "La semaine dernière, cette même odeur a mené {name} à un repas. Son cerveau en a gardé une trace.",
+            "caption": "Il y a deux jours, cette même odeur a mené {name} à un repas. Son cerveau en a gardé une trace.",
             "bubble": "Pêche égale dîner."
           },
           "land": {
@@ -354,7 +354,7 @@
       "title": "Comment une mouche s’oriente",
       "summary": "Faire tourner la boussole d’une vraie mouche et voir ce qui la maintient en place.",
       "description": "Faire tourner la boussole interne d’une vraie drosophile, puis faire taire les neurones en anneau et la voir dériver. Leçon gratuite de 10 minutes.",
-      "searchTitle": "La boussole interne de la mouche : leçon interactive",
+      "searchTitle": "Boussole interne de la drosophile : leçon interactive",
       "steps": {
         "left": {
           "text": "Appuie sur « Stimuler » pour activer les <turn>neurones de rotation</turn> <gloss>(l’ordre de tourner)</gloss> du côté gauche. Puis regarde le cadran de la boussole.",
@@ -362,10 +362,10 @@
         },
         "right": {
           "text": "Maintenant, appuie sur « Stimuler » pour les <turn>neurones de rotation</turn> <gloss>(l’autre ordre)</gloss> du côté droit. Garde les yeux sur la bosse.",
-          "result": "La bosse a tourné autour du cadran. Les ordres de tourner venus de chaque côté la poussent dans des sens opposés : la mouche change donc d’orientation, elle aussi."
+          "result": "La bosse a tourné autour du cadran. Les ordres de tourner venus de chaque côté la poussent dans des sens opposés : le sens de l’orientation de la mouche tourne donc, lui aussi."
         },
         "silence": {
-          "text": "Fais taire les <ring>neurones en anneau</ring> <gloss>(les porte-repères)</gloss>. Ils apportent ce que la mouche voit. On envoie l’ordre de droite à ta place.",
+          "text": "Fais taire les <ring>neurones en anneau</ring> <gloss>(les porte-repères)</gloss>. Ils apportent ce que la mouche voit. On envoie à ta place l’ordre de tourner du côté droit.",
           "result": "La bosse quitte sa place et se met à errer. Sans repères, la boussole dérive.",
           "predict": {
             "question": "Les porte-repères vont se taire. Que va faire la bosse ?",
@@ -377,7 +377,7 @@
           }
         },
         "restore": {
-          "text": "Appuie de nouveau sur le bouton des <ring>neurones en anneau</ring> <gloss>(les porte-repères)</gloss> pour les réactiver. On envoie le même ordre.",
+          "text": "Appuie de nouveau sur le bouton des <ring>neurones en anneau</ring> <gloss>(les porte-repères)</gloss> pour les réactiver. On envoie le même ordre de tourner.",
           "result": "La bosse tient de nouveau sa place. Grâce aux repères, la boussole de la mouche reste fiable."
         }
       },
@@ -394,7 +394,7 @@
           },
           "both": {
             "text": "Tu as aussi fait taire les cellules d’orientation vertes.",
-            "feedback": "Pas tout à fait. Tu as seulement fait taire les cellules violettes. Les cellules d’orientation vertes ont continué à s’activer, mais rien ne les retenait en place."
+            "feedback": "Pas tout à fait. Tu as seulement fait taire les cellules violettes. Les cellules d’orientation vertes ont continué à s’activer, mais rien ne retenait la bosse en place."
           }
         }
       },
@@ -446,7 +446,7 @@
           "result": "Ils s’activent et, en quelques millièmes de seconde, la <giantfiber>fibre géante</giantfiber> <gloss>(le fil d’évasion)</gloss> s’active à son tour."
         },
         "jump": {
-          "text": "Appuie de nouveau sur « Stimuler ». Suis la <giantfiber>fibre géante</giantfiber> <gloss>(le fil d’évasion)</gloss> qui descend jusque dans le <nervecord>cordon nerveux</nervecord> <gloss>(sa moelle épinière)</gloss>.",
+          "text": "Appuie de nouveau sur « Stimuler ». Suis la <giantfiber>fibre géante</giantfiber> <gloss>(le fil d’évasion)</gloss> qui descend jusque dans le <nervecord>cordon nerveux</nervecord> <gloss>(comme une moelle)</gloss>.",
           "result": "Les <jump>neurones du saut</jump> <gloss>(les propulseurs)</gloss> s’activent en moins de 30 millisecondes. Ils détendent d’un coup les pattes du milieu, et la mouche s’envole d’un bond."
         },
         "silence": {
@@ -485,7 +485,7 @@
       },
       "freePlay": {
         "title": "Exploration libre",
-        "text": "Tous les boutons fonctionnent maintenant. Devine d’abord, puis appuie : quelles couleurs s’allument encore si tu fais taire le fil d’évasion ? Essaie ensuite plutôt de faire taire les guetteurs."
+        "text": "Tous les boutons fonctionnent maintenant. Devine d’abord, puis appuie : que se passe-t-il si tu fais plutôt taire les propulseurs ? Essaie ensuite de faire taire les guetteurs."
       },
       "mission": {
         "goal": "Trouve le fil qui sauve la mouche.",
@@ -502,7 +502,7 @@
             "bubble": "Oh oh."
           },
           "leap": {
-            "caption": "Ses pattes du milieu se détendent avant que le tue-mouches s’abatte. Du premier regard au saut : environ 30 millisecondes.",
+            "caption": "Ses pattes du milieu se détendent avant que le tue-mouches s’abatte. Entre le repérer et sauter, il ne faut que quelques centièmes de seconde.",
             "bubble": "Saute !"
           },
           "safe": {
@@ -831,7 +831,7 @@
     },
     "giantfiber": {
       "name": "Fibre géante",
-      "text": "Une cellule nerveuse très épaisse qui descend du cerveau jusque dans le cordon nerveux. Elle porte le signal de fuite le plus rapide de la mouche."
+      "text": "Une cellule nerveuse très épaisse qui descend du cerveau jusque dans le cordon nerveux. Elle porte le signal de fuite le plus rapide de la mouche. Une mouche en a deux, une de chaque côté."
     },
     "nervecord": {
       "name": "Cordon nerveux",
@@ -846,7 +846,7 @@
       "text": "Une cellule nerveuse. Elle reçoit des signaux d’autres cellules et, quand ils sont assez nombreux à s’additionner, elle envoie son propre signal."
     },
     "spike": {
-      "name": "Activation",
+      "name": "Potentiel d’action (pic)",
       "text": "Une brève impulsion électrique qu’un neurone actif envoie sur toute sa longueur, aussi appelée potentiel d’action. Dans les leçons, chaque éclair de lumière en marque une."
     },
     "synapse": {
@@ -891,7 +891,7 @@
     },
     "sensory": {
       "name": "Neurone sensoriel",
-      "text": "Un neurone qui capte quelque chose du monde, comme une odeur ou une ombre qui grandit, et le signale au cerveau."
+      "text": "Un neurone qui capte quelque chose du monde, comme la lumière ou une odeur, et le signale au cerveau."
     },
     "motor": {
       "name": "Motoneurone",
@@ -906,7 +906,7 @@
       "text": "Un canal direct entre deux neurones, qui transmet un signal presque sans délai. La carte utilisée par les leçons n’enregistre que les synapses chimiques."
     },
     "bump": {
-      "name": "Bosse",
+      "name": "Bosse d’activité",
       "text": "La zone de neurones de la boussole qui sont actifs. Sa position sur l’anneau indique la direction vers laquelle la mouche est tournée."
     },
     "landmark": {
@@ -914,7 +914,7 @@
       "text": "Quelque chose que la mouche voit et qui ne bouge pas, comme le soleil ou un arbre. Il l’aide à garder un sens de l’orientation stable."
     },
     "bridge": {
-      "name": "Pont",
+      "name": "Pont protocérébral",
       "text": "Une partie du cerveau de la mouche en forme de barre, le pont protocérébral. Les neurones de la boussole et les neurones de rotation le traversent."
     }
   },
@@ -924,7 +924,7 @@
     "lead": "Tous les termes scientifiques des leçons, expliqués en une ou deux phrases. Ouvrez un terme pour voir où il apparaît dans le cerveau d’une vraie drosophile.",
     "metaTitle": "Glossaire de neurosciences pour la classe · WiredMind",
     "metaDescription": "Neurone, synapse, connectome, corps pédonculé et plus : les termes des leçons WiredMind sur la drosophile, expliqués chacun en une ou deux phrases.",
-    "termTitle": "{term} : explication simple pour les élèves",
+    "termTitle": "{term} : explication pour les élèves",
     "inLessons": "À voir dans une leçon",
     "steps": "Où la leçon l’utilise",
     "related": "Termes associés",
@@ -943,8 +943,8 @@
     "items": {
       "smell": {
         "title": "Comment les mouches sentent-elles les odeurs ?",
-        "short": "Une mouche sent avec ses deux antennes. Des récepteurs olfactifs s’y activent quand une odeur arrive, et le signal part vers le cerveau pour être trié.",
-        "a": "Une mouche n’a pas de nez. Ses deux antennes sont couvertes de poils minuscules, et chaque poil abrite des récepteurs olfactifs : des cellules nerveuses qui s’activent quand la bonne molécule odorante s’y pose. Une drosophile possède environ 50 sortes de récepteurs, et chaque sorte répond à son propre ensemble d’odeurs. C’est ce mélange de signaux qui permet à la mouche de distinguer une odeur d’une autre.",
+        "short": "Une mouche sent surtout avec ses deux antennes. Leurs récepteurs olfactifs s’activent quand une odeur arrive, et le signal file au cerveau pour être trié.",
+        "a": "Une mouche n’a pas de nez. Elle sent surtout avec ses deux antennes, qui sont couvertes de poils minuscules, et chaque poil abrite des récepteurs olfactifs : des cellules nerveuses qui s’activent quand la bonne molécule odorante s’y pose. Une drosophile possède environ 50 sortes de récepteurs, et chaque sorte répond à son propre ensemble d’odeurs. C’est ce mélange de signaux qui permet à la mouche de distinguer une odeur d’une autre.",
         "b": "Les récepteurs envoient leur signal au lobe antennaire, la première étape des odeurs dans le cerveau. Là, tous les récepteurs d’une même sorte se rejoignent au même endroit, si bien qu’une odeur devient un motif de points actifs. Les neurones de projection portent ce motif plus loin, jusqu’au corps pédonculé, où la mouche associe les odeurs à de bonnes et de mauvaises expériences."
       },
       "memory": {
@@ -963,30 +963,30 @@
         "title": "Pourquoi les mouches sont-elles si dures à attraper ?",
         "short": "La mouche voit la tapette arriver très tôt, et un circuit de fuite rapide la fait décoller en quelques centièmes de seconde, avant que le coup ne tombe.",
         "a": "Trois choses jouent en faveur de la mouche. Ses yeux couvrent presque tout l’espace autour d’elle, il est donc difficile de l’approcher par derrière. Sa vision est plus rapide que la nôtre, et une main lui paraît lente. Et elle possède des neurones qui n’ont qu’une tâche : s’activer quand quelque chose grossit vite dans son champ de vision, comme une tapette qui s’approche.",
-        "b": "Ces neurones d’approche sont reliés à la fibre géante, une cellule nerveuse très épaisse qui descend du cerveau jusqu’aux neurones qui commandent les pattes du saut. Une fibre épaisse transmet vite son signal, et l’ordre de sauter arrive presque aussitôt. Les films à haute vitesse montrent aussi que la mouche replace ses pattes juste avant de décoller, pour que le saut l’éloigne de la tapette."
+        "b": "Ces neurones d’approche sont reliés à la fibre géante, une cellule nerveuse très épaisse qui descend du cerveau jusqu’aux neurones qui commandent les pattes du saut. Une fibre épaisse transmet vite son signal, et l’ordre de sauter arrive presque aussitôt. Quand elle en a le temps, la mouche replace d’abord ses pattes pour que le saut l’éloigne de la tapette. En cas d’urgence, la fibre géante peut la lancer aussitôt."
       },
       "reaction": {
         "title": "Quel est le temps de réaction d’une mouche ?",
-        "short": "Une drosophile peut lancer son saut de fuite quelques centièmes de seconde après avoir repéré un danger. Il faut un quart de seconde à une personne.",
-        "a": "Quand quelque chose fonce sur une mouche, le signal va de ses yeux aux muscles de ses pattes en quelques dizaines de millisecondes. Une milliseconde est un millième de seconde. Dans la leçon WiredMind, les neurones du saut s’activent environ 30 ms après l’apparition de la tapette. Ce chiffre vient d’un modèle simple, pas d’un enregistrement chez une mouche, mais il tombe dans une fourchette réaliste. Une personne met environ 250 ms rien que pour réagir à un éclair de lumière.",
+        "short": "Le saut de fuite le plus rapide d’une mouche part quelques centièmes de seconde après le danger. Une personne met un quart de seconde rien que pour réagir.",
+        "a": "Quand quelque chose fonce sur une mouche, le signal va de ses yeux aux muscles de ses pattes en quelques dizaines de millisecondes. Une milliseconde est un millième de seconde. Dans la leçon WiredMind, les neurones du saut s’activent environ 30 ms après l’apparition de la tapette. Ce chiffre vient d’un modèle simple, pas d’un enregistrement chez une mouche, mais il donne le bon ordre de grandeur. Une personne met environ 250 ms rien que pour réagir à un éclair de lumière.",
         "b": "La vitesse vient du câblage. Le chemin est court : les neurones d’approche, puis la fibre géante, puis les neurones du saut. La fibre géante est inhabituellement épaisse, ce qui fait voyager vite son signal. Et chez une vraie mouche, elle transmet le signal par des synapses électriques, des canaux directs entre cellules, presque sans délai."
       },
       "neurons": {
         "title": "Combien de neurones dans le cerveau d’une drosophile ?",
-        "short": "Environ 140 000. En 2024, chacun a été cartographié dans le cerveau d’une drosophile adulte, avec les dizaines de millions de synapses qui les relient.",
+        "short": "Environ 140 000. En 2024, chacun a été cartographié dans le cerveau d’une seule drosophile adulte, avec plus de 50 millions de synapses qui les relient.",
         "a": "Le cerveau d’une drosophile est plus petit qu’une graine de pavot et contient environ 140 000 neurones. Un cerveau humain en compte des centaines de milliers de fois plus. Pourtant, il permet à la mouche de voler, de trouver à manger, d’apprendre des odeurs et d’échapper à une tapette.",
-        "b": "La carte complète d’un système nerveux, avec chaque neurone et chaque synapse, s’appelle un connectome. La drosophile est l’un des très rares animaux dont le cerveau entier a été cartographié ainsi. Les leçons WiredMind s’appuient sur le connectome du cerveau et du cordon nerveux d’une mouche mâle, et chaque leçon utilise un circuit de 3 000 à 4 500 de ses neurones."
+        "b": "La carte complète d’un système nerveux, avec chaque neurone et chaque synapse, s’appelle un connectome. La drosophile est l’un des très rares animaux dont le cerveau entier a été cartographié ainsi. Les leçons WiredMind s’appuient sur une autre carte, plus récente : le connectome du cerveau et du cordon nerveux d’une mouche mâle, et chaque leçon utilise un circuit de 3 000 à 4 500 de ses neurones."
       }
     }
   },
   "teachers": {
     "meta": {
-      "indexTitle": "Guides de l’enseignant · WiredMind",
-      "indexDescription": "Pour chaque leçon WiredMind : un déroulé de séance, les réponses attendues, des questions de discussion et une fiche élève à imprimer.",
+      "indexTitle": "Neurosciences : fiches pédagogiques et élèves · WiredMind",
+      "indexDescription": "Fiches pédagogiques gratuites de neurosciences (45 min), réponses, questions de discussion et fiches élèves pour chaque leçon WiredMind sur la drosophile.",
       "guideTitle": "Fiche prof : {title}",
       "guideDescription": "Déroulé de 45 min pour « {title} » : objectif, réponses attendues, questions de discussion et idées fausses courantes.",
       "worksheetTitle": "Fiche élève : {title}",
-      "worksheetDescription": "Une fiche élève à imprimer pour « {title} » : prévoir, essayer, observer, expliquer."
+      "worksheetDescription": "Une fiche élève gratuite à imprimer pour « {title} » : les élèves prévoient, essaient, observent et expliquent."
     },
     "index": {
       "title": "Guides de l’enseignant",
@@ -997,7 +997,7 @@
       "demo": "Montrer à la classe",
       "generalTerms": "Notions de base",
       "companionTitle": "Un cours complémentaire",
-      "companion": "Beaucoup d’élèves qui suivent 5 unités de biologie suivent aussi le cours gratuit de l’université de Tel-Aviv, <campusil>Le cerveau : la machine la plus merveilleuse de toutes</campusil>, sur Campus IL, donné par le Pr Yossi Yovel et le Pr Yaniv Assaf. Ce cours traite en profondeur des neurones, des potentiels d’action et des synapses, et ces leçons en sont un complément pratique. WiredMind est un projet indépendant. Il n’est affilié ni au cours, ni à l’université, ni à Campus IL."
+      "companion": "En Israël, beaucoup d’élèves qui suivent la biologie en 5 unités suivent aussi le cours gratuit de l’université de Tel-Aviv, <campusil>Le cerveau : la machine la plus merveilleuse de toutes</campusil>, sur Campus IL, donné par le Pr Yossi Yovel et le Pr Yaniv Assaf. Ce cours traite en profondeur des neurones, des potentiels d’action et des synapses, et ces leçons en sont un complément pratique. WiredMind est un projet indépendant. Il n’est affilié ni au cours, ni à l’université, ni à Campus IL."
     },
     "topics": {
       "excitation": "Excitation et inhibition",
@@ -1009,7 +1009,7 @@
       "eyebrow": "Guide de l’enseignant · Leçon {number}",
       "print": "Imprimer",
       "lesson": "Ouvrir la leçon",
-      "demo": "Lancer « Montre-moi » en mode classe",
+      "demo": "Lancer « Montre-moi comment ça marche » en mode classe",
       "worksheet": "Fiche élève",
       "all": "Tous les guides de l’enseignant",
       "address": "Adresse de la leçon",
@@ -1021,7 +1021,7 @@
       "minutes": "{minutes} min",
       "phases": {
         "opening": "Question d’ouverture",
-        "demo": "Démonstration avec « Montre-moi »",
+        "demo": "Démonstration avec « Montre-moi comment ça marche »",
         "explore": "Exploration par les élèves",
         "discuss": "Discussion"
       },
@@ -1197,7 +1197,7 @@
       "escape": {
         "goal": "Les élèves suivent un réflexe des yeux jusqu’aux muscles des pattes en 30 millisecondes environ, et montrent que la fuite rapide dépend d’un seul maillon : la fibre géante.",
         "topics": {
-          "reflex": "Une voie réflexe complète en trois parties : des neurones sensoriels (les neurones d’approche), un relais (la fibre géante) et des motoneurones (les neurones du saut). À la différence du réflexe rotulien, ce relais passe par le cerveau.",
+          "reflex": "Une voie réflexe complète en trois parties : le versant sensoriel (les neurones d’approche, qui signalent ce que voient les yeux), un relais (la fibre géante) et des motoneurones (les neurones du saut). À la différence du réflexe rotulien, ce relais passe par le cerveau.",
           "structure": "Le signal converge de centaines de neurones d’approche vers la fibre géante. Ce goulot d’étranglement explique pourquoi faire taire un seul type de cellule supprime le comportement.",
           "synapses": "La fibre géante est épaisse, ce qui rend son signal rapide. Chez la vraie mouche, elle utilise aussi des synapses électriques, les plus rapides ; le modèle n’a que des synapses chimiques."
         },
@@ -1217,7 +1217,7 @@
         "misconceptions": {
           "a": {
             "claim": "La mouche décide de sauter.",
-            "fix": "Le saut rapide est un réflexe : le câblage conduit le signal d’un bout à l’autre, sans détour. À aucun moment la mouche ne pèse le pour et le contre."
+            "fix": "Le saut le plus rapide fonctionne comme un réflexe : le câblage conduit le signal d’un bout à l’autre, sans détour. Les fuites plus lentes laissent un peu de temps pour orienter le saut, mais pas pour réfléchir."
           },
           "b": {
             "claim": "Si la mouche n’a pas sauté, c’est qu’elle n’a pas vu le tue-mouches.",
@@ -1249,7 +1249,7 @@
         "levels": {
           "fly": "De quelles parties de ce corps la mouche a-t-elle besoin pour s’échapper ?",
           "brain": "Le signal part des yeux et arrive aux pattes. Par où doit-il passer en chemin ?",
-          "circuit": "Des centaines de cellules bleues, et une seule ligne rouge. Que remarquez-vous sur le trajet ?",
+          "circuit": "Des centaines de cellules bleues, et seulement deux lignes rouges, une de chaque côté. Que remarquez-vous sur le trajet ?",
           "neuron": "Cette cellule est étonnamment épaisse. En quoi un gros fil aiderait-il à fuir vite ?"
         },
         "predictWhy": "Les neurones d’approche s’activent toujours, donc la mouche voit le tue-mouches, mais comme la fibre géante se tait, le signal n’arrive jamais aux neurones du saut, et ils restent éteints."

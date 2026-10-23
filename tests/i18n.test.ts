@@ -392,6 +392,12 @@ describe("translation checks", () => {
     assert.ok(has("1 861 neurones", 1861));
     assert.ok(has("١٨٦١ خلية", 1861));
     assert.ok(has("४० Hz", 40));
+    // "more than 50 million", counted in ten-thousands.
+    assert.ok(has("超过5000万个突触", 50));
+    assert.ok(has("5000万を超える", 50));
+    assert.ok(has("시냅스 5000만 개", 50));
+    assert.ok(has("约1.4亿", 140_000_000));
+    assert.ok(!has("5000个", 50));
   });
 
   it("parses ICU shape and counts wide characters twice", () => {

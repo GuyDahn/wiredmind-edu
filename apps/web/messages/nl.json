@@ -8,8 +8,8 @@
   },
   "meta": {
     "home": {
-      "title": "WiredMind: ontdek het brein van een echte fruitvlieg",
-      "description": "Gratis lessen voor in de klas over een echt fruitvliegbrein. Stimuleer neuronen uit het MaleCNS-connectoom en leg ze stil in je browser. Zonder inloggen."
+      "title": "WiredMind: gratis neurowetenschap met een echt vliegenbrein",
+      "description": "Gratis 10-minutenlessen neurowetenschap, 11–16 jaar. Stimuleer echte neuronen uit een fruitvliegconnectoom en leg ze stil in je browser. Zonder inloggen."
     },
     "about": {
       "title": "Over WiredMind: wat is echt en wat is vereenvoudigd?",
@@ -83,7 +83,7 @@
   "landing": {
     "hero": {
       "eyebrow": "Gratis lessen neurowetenschap voor in de klas",
-      "title": "Laat een neuron vuren in het brein van een echte fruitvlieg en kijk hoe het signaal van de ogen naar de poten raast.",
+      "title": "Laat een neuron vuren in het bedradingsschema van een echte fruitvlieg en kijk hoe het signaal van de ogen naar de poten raast.",
       "lead": "WiredMind simuleert het echte bedradingsschema van het zenuwstelsel van een fruitvlieg, gewoon in de browser. Leerlingen stimuleren neuronen, leggen ze stil en zien wat er verandert, in drie korte, begeleide lessen.",
       "start": "Start de eerste les",
       "teachers": "Voor docenten"
@@ -94,7 +94,7 @@
       "steps": {
         "looming": "Naderingsneuronen zien de vliegenmepper",
         "gf": "De reuzenvezel vuurt",
-        "jump": "De springneuronen geven een schop"
+        "jump": "De springneuronen vuren"
       },
       "cells": "{count, plural, one {# cel} other {# cellen}}",
       "firstSpike": "{cells} · {ms} ms",
@@ -122,8 +122,8 @@
       "lead": "Zet de link op het digibord of stuur hem naar de eigen apparaten van je leerlingen. Verder hoef je niets in te stellen.",
       "points": {
         "periods": {
-          "title": "1–2 lesuren",
-          "body": "Elke les duurt ongeveer 10 minuten. Alle drie samen, met nabespreking, passen in één of twee lesuren."
+          "title": "Eén lesuur per les",
+          "body": "Elke les op zich duurt ongeveer 10 minuten. Met de nabespreking uit de docentenhandleiding vult elke les een lesuur van 45 minuten."
         },
         "install": {
           "title": "Niets installeren, nergens inloggen",
@@ -264,8 +264,8 @@
   "lessons": {
     "smell-memory": {
       "title": "Hoe een vlieg een geur onthoudt",
-      "summary": "Stuur een geur een echt vliegenbrein in en zoek de cellen die de geur onthouden.",
-      "description": "Stuur een geur een echt fruitvliegbrein in, volg hem naar het paddenstoellichaam en vind de cellen die hem onthouden. Een gratis les van 10 minuten.",
+      "summary": "Stuur een geur een echt vliegenbrein in en zoek waar de herinnering eraan bewaard wordt.",
+      "description": "Stuur een geur een echt fruitvliegbrein in, volg hem naar het paddenstoellichaam en vind waar de herinnering is opgeslagen. Een gratis les van 10 minuten.",
       "searchTitle": "Hoe vliegen ruiken en onthouden: interactieve les",
       "steps": {
         "send": {
@@ -319,7 +319,7 @@
         "text": "Alle knoppen werken nu. Eerst gokken, dan tikken: wat wordt er donker als je de gele geurboodschappers stillegt? Probeer ook eens twee kleuren tegelijk stil te leggen."
       },
       "mission": {
-        "goal": "Vind de cellen die het geurgeheugen van een vlieg bewaren.",
+        "goal": "Vind waar een vlieg zijn geurgeheugen bewaart.",
         "win": "Je hebt ze gevonden. De geursorteerders maken van elke geur een patroon, en de geheugenlezers lezen het. Zonder het patroon valt er niets te onthouden."
       },
       "story": {
@@ -329,11 +329,11 @@
             "bubble": "Hier ruikt iets lekker."
           },
           "sniff": {
-            "caption": "De antennes van {name} vangen er een paar moleculen van op. Meer heeft een vlieg niet nodig.",
+            "caption": "De antennes van {name} vangen er een vleugje van op. Meer heeft een vlieg niet nodig.",
             "bubble": "Die geur ken ik!"
           },
           "recall": {
-            "caption": "Vorige week bracht precies deze geur {name} bij eten. Zijn brein bewaarde er een spoor van.",
+            "caption": "Twee dagen geleden bracht precies deze geur {name} bij eten. Zijn brein bewaarde er een spoor van.",
             "bubble": "Perzik betekent avondeten."
           },
           "land": {
@@ -355,7 +355,7 @@
       "title": "Hoe een vlieg weet welke kant hij op kijkt",
       "summary": "Duw het kompas van een echte vlieg rond en ontdek wat het op zijn plaats houdt.",
       "description": "Duw het interne kompas van een echte fruitvlieg rond, leg dan de ringneuronen stil en zie het richtinggevoel afdrijven. Een gratis les van 10 minuten.",
-      "searchTitle": "Het interne kompas van de vlieg: interactieve les",
+      "searchTitle": "Het interne kompas van de fruitvlieg: interactieve les",
       "steps": {
         "left": {
           "text": "Tik op Stimuleren om links de <turn>draaineuronen</turn> <gloss>(het draaisignaal)</gloss> te laten vuren. Kijk dan naar de kompasschijf.",
@@ -363,10 +363,10 @@
         },
         "right": {
           "text": "Tik nu op Stimuleren om rechts de <turn>draaineuronen</turn> <gloss>(het andere signaal)</gloss> te laten vuren. Hou de bult goed in de gaten.",
-          "result": "De bult zwaaide over de schijf. Draaisignalen van elke kant duwen hem in tegengestelde richtingen, dus de kijkrichting van de vlieg draait mee."
+          "result": "De bult zwaaide over de schijf. Draaisignalen van elke kant duwen hem in tegengestelde richtingen, dus het richtinggevoel van de vlieg draait mee."
         },
         "silence": {
-          "text": "Nu ga je de <ring>ringneuronen</ring> <gloss>(de wegwijzers)</gloss> stilleggen. Die brengen binnen wat de vlieg ziet. Wij sturen het signaal van rechts voor je.",
+          "text": "Nu ga je de <ring>ringneuronen</ring> <gloss>(de wegwijzers)</gloss> stilleggen. Die brengen binnen wat de vlieg ziet. Wij laten het rechter draaisignaal voor je vuren.",
           "result": "De bult glijdt van zijn plek en dwaalt rond. Zonder oriëntatiepunten drijft het kompas af.",
           "predict": {
             "question": "De wegwijzers worden zo stilgelegd. Wat gaat de bult doen?",
@@ -378,7 +378,7 @@
           }
         },
         "restore": {
-          "text": "Tik nog een keer op de knop van de <ring>ringneuronen</ring> <gloss>(de wegwijzers)</gloss> om ze weer aan te zetten. Wij sturen hetzelfde signaal.",
+          "text": "Tik nog een keer op de knop van de <ring>ringneuronen</ring> <gloss>(de wegwijzers)</gloss> om ze weer aan te zetten. Wij sturen hetzelfde draaisignaal.",
           "result": "De bult blijft weer op zijn plek. Oriëntatiepunten houden het kompas van de vlieg op koers."
         }
       },
@@ -395,7 +395,7 @@
           },
           "both": {
             "text": "Je hebt de groene richtingcellen ook uitgezet.",
-            "feedback": "Niet helemaal. Je hebt alleen de paarse cellen stilgelegd. De groene richtingcellen bleven vuren, maar niets hield ze op hun plek."
+            "feedback": "Niet helemaal. Je hebt alleen de paarse cellen stilgelegd. De groene richtingcellen bleven vuren, maar niets hield de bult op zijn plek."
           }
         }
       },
@@ -486,7 +486,7 @@
       },
       "freePlay": {
         "title": "Vrij spel",
-        "text": "Alle knoppen werken nu. Eerst gokken, dan tikken: welke kleuren lichten nog op als de ontsnappingsdraad is stilgelegd? Probeer daarna eens de meppermelders stil te leggen."
+        "text": "Alle knoppen werken nu. Eerst gokken, dan tikken: wat gebeurt er als je in plaats daarvan de pootschoppers stillegt? Probeer daarna de meppermelders stil te leggen."
       },
       "mission": {
         "goal": "Vind de draad die de vlieg redt.",
@@ -503,7 +503,7 @@
             "bubble": "O jee."
           },
           "leap": {
-            "caption": "Zijn middelste poten zetten af voordat de mepper neerkomt. Van de eerste blik tot de sprong: ongeveer 30 milliseconden.",
+            "caption": "Zijn middelste poten zetten af voordat de mepper neerkomt. Van het zien van de mepper tot de sprong duurt maar een paar honderdsten van een seconde.",
             "bubble": "Springen!"
           },
           "safe": {
@@ -832,7 +832,7 @@
     },
     "giantfiber": {
       "name": "Reuzenvezel",
-      "text": "Een heel dikke zenuwcel die van het brein omlaag loopt, de zenuwstreng in. Hij vervoert het snelste ontsnappingssignaal van de vlieg."
+      "text": "Een heel dikke zenuwcel die van het brein omlaag loopt, de zenuwstreng in. Hij vervoert het snelste ontsnappingssignaal van de vlieg. Een vlieg heeft er twee, één aan elke kant."
     },
     "nervecord": {
       "name": "Zenuwstreng",
@@ -847,7 +847,7 @@
       "text": "Een zenuwcel. Hij krijgt signalen van andere cellen en stuurt zelf een signaal als er genoeg bij elkaar komen."
     },
     "spike": {
-      "name": "Vuren",
+      "name": "Actiepotentiaal (impuls)",
       "text": "Een korte elektrische puls die een actief neuron over zijn hele lengte stuurt, ook wel impuls of actiepotentiaal genoemd. In de lessen staat elke lichtflits voor één impuls."
     },
     "synapse": {
@@ -892,7 +892,7 @@
     },
     "sensory": {
       "name": "Sensorisch neuron",
-      "text": "Een neuron dat iets uit de buitenwereld oppikt, zoals een geur of een naderende schaduw, en dat aan het brein doorgeeft."
+      "text": "Een neuron dat iets uit de buitenwereld oppikt, zoals licht of een geur, en dat aan het brein doorgeeft."
     },
     "motor": {
       "name": "Motorneuron",
@@ -907,7 +907,7 @@
       "text": "Een rechtstreeks kanaal tussen twee neuronen dat een signaal bijna zonder vertraging doorgeeft. De kaart achter de lessen legt alleen chemische synapsen vast."
     },
     "bump": {
-      "name": "Bult",
+      "name": "Activiteitsbult",
       "text": "De vlek van actieve kompasneuronen. Waar hij op de ring zit, laat zien welke kant de vlieg op kijkt."
     },
     "landmark": {
@@ -915,7 +915,7 @@
       "text": "Iets wat de vlieg ziet en wat op zijn plek blijft, zoals de zon of een boom. De vlieg gebruikt het om zijn richtingsgevoel stabiel te houden."
     },
     "bridge": {
-      "name": "Brug",
+      "name": "Protocerebrale brug",
       "text": "Een staafvormig deel van het brein van de vlieg, de protocerebrale brug. De kompasneuronen en de draaineuronen lopen er allebei doorheen."
     }
   },
@@ -944,8 +944,8 @@
     "items": {
       "smell": {
         "title": "Hoe ruiken vliegen?",
-        "short": "Een vlieg ruikt met zijn twee antennes. Geurreceptoren daarop vuren als er een geur landt, en het signaal gaat naar het brein om gesorteerd te worden.",
-        "a": "Een vlieg heeft geen neus. Zijn twee antennes zijn bedekt met piepkleine haartjes, en in elk haartje zitten geurreceptoren: zenuwcellen die vuren als het juiste geurmolecuul erop landt. Een fruitvlieg heeft ongeveer 50 soorten receptoren, en elke soort reageert op zijn eigen reeks geuren. Aan die mix van signalen herkent de vlieg de ene geur van de andere.",
+        "short": "Een vlieg ruikt vooral met zijn twee antennes. Geurreceptoren daarop vuren als er een geur landt, en het signaal wordt in het brein gesorteerd.",
+        "a": "Een vlieg heeft geen neus. Hij ruikt vooral met zijn twee antennes, die bedekt zijn met piepkleine haartjes, en in elk haartje zitten geurreceptoren: zenuwcellen die vuren als het juiste geurmolecuul erop landt. Een fruitvlieg heeft ongeveer 50 soorten receptoren, en elke soort reageert op zijn eigen reeks geuren. Aan die mix van signalen herkent de vlieg de ene geur van de andere.",
         "b": "De receptoren sturen hun signaal naar de antennekwab, de eerste halte voor geuren in het brein. Daar komen alle receptoren van één soort op dezelfde plek samen, zodat een geur een patroon van actieve plekken wordt. Projectieneuronen brengen dat patroon dieper het brein in, naar het paddenstoellichaam, waar de vlieg geuren koppelt aan goede en slechte ervaringen."
       },
       "memory": {
@@ -964,30 +964,30 @@
         "title": "Waarom zijn vliegen zo moeilijk dood te slaan?",
         "short": "Een vlieg ziet de mepper vroeg aankomen, en een snel vluchtcircuit lanceert hem binnen een paar honderdsten van een seconde de lucht in.",
         "a": "Drie dingen werken in het voordeel van de vlieg. Zijn ogen overzien bijna de hele ruimte om hem heen, dus van achteren besluipen lukt nauwelijks. Hij ziet sneller dan wij, zodat een hand voor hem langzaam lijkt. En hij heeft neuronen met één taak: ze vuren als iets in beeld snel groter wordt, zoals een vliegenmepper die dichterbij komt.",
-        "b": "Die naderingsneuronen zijn verbonden met de reuzenvezel, een heel dikke zenuwcel die van het brein omlaag loopt naar de neuronen die de springpoten aansturen. Een dikke vezel geleidt zijn signaal snel, dus het bevel om te springen komt bijna meteen aan. Op hogesnelheidsbeelden is ook te zien dat de vlieg vlak voor het opstijgen zijn poten verzet, zodat de sprong hem van de mepper weg draagt."
+        "b": "Die naderingsneuronen zijn verbonden met de reuzenvezel, een heel dikke zenuwcel die van het brein omlaag loopt naar de neuronen die de springpoten aansturen. Een dikke vezel geleidt zijn signaal snel, dus het bevel om te springen komt bijna meteen aan. Als hij even de tijd heeft, verzet een vlieg eerst zijn poten, zodat de sprong hem van de mepper weg draagt. In een noodgeval kan de reuzenvezel hem meteen lanceren."
       },
       "reaction": {
         "title": "Hoe snel is de reactietijd van een vlieg?",
-        "short": "Een fruitvlieg kan een paar honderdsten van een seconde nadat hij gevaar ziet al aan zijn vluchtsprong beginnen. Een mens heeft een kwart seconde nodig.",
-        "a": "Als er iets op een vlieg afkomt, loopt het signaal in enkele tientallen milliseconden van zijn ogen naar zijn pootspieren. Een milliseconde is een duizendste van een seconde. In de les van WiredMind vuren de springneuronen ongeveer 30 ms nadat de mepper verschijnt. Dat getal komt uit een eenvoudig model, niet uit een meting bij een vlieg, maar het valt binnen een realistisch bereik. Een mens doet er ongeveer 250 ms over om alleen al op een lichtflits te reageren.",
+        "short": "De snelste vluchtsprong van een vlieg begint een paar honderdsten van een seconde nadat gevaar opdoemt. Een mens reageert pas na zo’n kwart seconde.",
+        "a": "Als er iets op een vlieg afkomt, loopt het signaal in enkele tientallen milliseconden van zijn ogen naar zijn pootspieren. Een milliseconde is een duizendste van een seconde. In de les van WiredMind vuren de springneuronen ongeveer 30 ms nadat de mepper verschijnt. Dat getal komt uit een eenvoudig model, niet uit een meting bij een vlieg, maar de orde van grootte klopt. Een mens doet er ongeveer 250 ms over om alleen al op een lichtflits te reageren.",
         "b": "De snelheid zit in de bedrading. De route is kort: naderingsneuronen, dan de reuzenvezel, dan de springneuronen. De reuzenvezel is ongewoon dik, waardoor zijn signaal snel reist. En in een echte vlieg geeft hij het signaal door via elektrische synapsen, directe kanalen tussen cellen met bijna geen vertraging."
       },
       "neurons": {
         "title": "Hoeveel neuronen heeft het brein van een fruitvlieg?",
-        "short": "Ongeveer 140.000. In 2024 werd elk ervan in het brein van een volwassen fruitvlieg in kaart gebracht, met de tientallen miljoenen synapsen ertussen.",
+        "short": "Ongeveer 140.000. In 2024 werd elk ervan in het brein van één volwassen fruitvlieg in kaart gebracht, met meer dan 50 miljoen synapsen ertussen.",
         "a": "Het brein van een fruitvlieg is kleiner dan een maanzaadje en telt ongeveer 140.000 neuronen. Een mensenbrein heeft er honderdduizenden keren meer. Toch kan de vlieg ermee vliegen, eten vinden, geuren leren en aan een vliegenmepper ontsnappen.",
-        "b": "Een volledige kaart van een zenuwstelsel, met elk neuron en elke synaps, heet een connectoom. De fruitvlieg is een van de zeer weinige dieren waarvan het hele brein zo in kaart is gebracht. De lessen van WiredMind draaien op het connectoom van het brein en de zenuwstreng van één mannetjesvlieg, en elke les gebruikt een circuit van 3.000 tot 4.500 van zijn neuronen."
+        "b": "Een volledige kaart van een zenuwstelsel, met elk neuron en elke synaps, heet een connectoom. De fruitvlieg is een van de zeer weinige dieren waarvan het hele brein zo in kaart is gebracht. De lessen van WiredMind draaien op een andere, latere kaart: het connectoom van het brein en de zenuwstreng van één mannetjesvlieg, en elke les gebruikt een circuit van 3.000 tot 4.500 van zijn neuronen."
       }
     }
   },
   "teachers": {
     "meta": {
-      "indexTitle": "Docentenhandleidingen · WiredMind",
-      "indexDescription": "Bij elke les van WiredMind: een lesplan, de antwoorden die je kunt verwachten, discussievragen en een werkblad voor leerlingen om te printen.",
+      "indexTitle": "Lesplannen en werkbladen neurowetenschap · WiredMind",
+      "indexDescription": "Gratis lesplannen neurowetenschap van 45 minuten, verwachte antwoorden, discussievragen en werkbladen om te printen bij elke fruitvliegles van WiredMind.",
       "guideTitle": "Lesplan: {title}",
       "guideDescription": "Lesplan van 45 minuten bij “{title}”: leerdoel, verwachte antwoorden, discussievragen en veelgemaakte fouten.",
       "worksheetTitle": "Werkblad: {title}",
-      "worksheetDescription": "Een werkblad voor leerlingen bij “{title}”, om te printen: voorspellen, proberen, waarnemen, verklaren."
+      "worksheetDescription": "Een gratis werkblad om te printen bij “{title}”: leerlingen voorspellen, proberen, nemen waar en verklaren."
     },
     "index": {
       "title": "Docentenhandleidingen",
@@ -998,7 +998,7 @@
       "demo": "Laat het de klas zien",
       "generalTerms": "Basisbegrippen",
       "companionTitle": "Een cursus die erbij past",
-      "companion": "Veel leerlingen die 5 eenheden biologie volgen, doen ook de gratis cursus <campusil>Het brein: de wonderlijkste machine van allemaal</campusil> van de Universiteit van Tel Aviv op Campus IL, gegeven door prof. Yossi Yovel en prof. Yaniv Assaf. Die cursus behandelt neuronen, actiepotentialen en synapsen uitgebreid, en deze lessen zijn er een praktische aanvulling op. WiredMind is een onafhankelijk project. Het is niet verbonden aan de cursus, de universiteit of Campus IL."
+      "companion": "In Israël volgen veel leerlingen met 5 eenheden biologie ook de gratis cursus <campusil>Het brein: de wonderlijkste machine van allemaal</campusil> van de Universiteit van Tel Aviv op Campus IL, gegeven door prof. Yossi Yovel en prof. Yaniv Assaf. Die cursus behandelt neuronen, actiepotentialen en synapsen uitgebreid, en deze lessen zijn er een praktische aanvulling op. WiredMind is een onafhankelijk project. Het is niet verbonden aan de cursus, de universiteit of Campus IL."
     },
     "topics": {
       "excitation": "Excitatie en inhibitie",
@@ -1010,7 +1010,7 @@
       "eyebrow": "Docentenhandleiding · Les {number}",
       "print": "Printen",
       "lesson": "Open de les",
-      "demo": "Speel “Laat zien” af in klasmodus",
+      "demo": "Speel “Laat zien hoe het werkt” af in klasmodus",
       "worksheet": "Werkblad voor leerlingen",
       "all": "Alle docentenhandleidingen",
       "address": "Adres van de les",
@@ -1022,7 +1022,7 @@
       "minutes": "{minutes} min",
       "phases": {
         "opening": "Openingsvraag",
-        "demo": "Demonstratie met “Laat zien”",
+        "demo": "Demonstratie met “Laat zien hoe het werkt”",
         "explore": "Leerlingen gaan zelf aan de slag",
         "discuss": "Nabespreking"
       },
@@ -1198,7 +1198,7 @@
       "escape": {
         "goal": "Leerlingen volgen een reflex van de ogen naar de pootspieren in ongeveer 30 milliseconden, en laten zien dat de snelle ontsnapping afhangt van één schakel: de reuzenvezel.",
         "topics": {
-          "reflex": "Een complete reflexroute in drie delen: sensorische neuronen (de naderingsneuronen), een schakel (de reuzenvezel) en motorneuronen (de springneuronen). Anders dan bij de kniepeesreflex loopt deze schakel door het brein.",
+          "reflex": "Een complete reflexroute in drie delen: de sensorische kant (de naderingsneuronen, die doorgeven wat de ogen zien), een schakel (de reuzenvezel) en motorneuronen (de springneuronen). Anders dan bij de kniepeesreflex loopt deze schakel door het brein.",
           "structure": "Het signaal van honderden naderingsneuronen komt samen op de reuzenvezel. Door dat knelpunt verdwijnt het gedrag als je één soort cel stillegt.",
           "synapses": "De reuzenvezel is dik, en dat maakt zijn signaal snel. In een echte vlieg gebruikt hij ook elektrische synapsen, de snelste soort; het model heeft alleen chemische synapsen."
         },
@@ -1218,7 +1218,7 @@
         "misconceptions": {
           "a": {
             "claim": "De vlieg besluit om te springen.",
-            "fix": "De snelle sprong is een reflex: de bedrading stuurt het signaal er rechtstreeks doorheen. Er is geen stap waarin de vlieg afweegt wat hij gaat doen."
+            "fix": "De snelste sprong werkt als een reflex: de bedrading stuurt het signaal er rechtstreeks doorheen. Bij tragere ontsnappingen is er wat tijd om de sprong te richten, maar geen tijd om erover na te denken."
           },
           "b": {
             "claim": "Als de vlieg niet sprong, heeft hij de vliegenmepper niet gezien.",
@@ -1250,7 +1250,7 @@
         "levels": {
           "fly": "Welke delen van dit lijf heeft de vlieg nodig om te ontsnappen?",
           "brain": "Het signaal begint in de ogen en eindigt in de poten. Waar moet het onderweg langs?",
-          "circuit": "Honderden blauwe cellen, en één rode lijn. Wat valt je op aan de route?",
+          "circuit": "Honderden blauwe cellen, en maar twee rode lijnen, één aan elke kant. Wat valt je op aan de route?",
           "neuron": "Deze ene cel is ongewoon dik. Waarom zou een dikke draad helpen bij een snelle ontsnapping?"
         },
         "predictWhy": "De naderingsneuronen vuren nog steeds, dus de vlieg ziet de mepper, maar als de reuzenvezel stilligt, bereikt het signaal de springneuronen nooit, en die blijven donker."
