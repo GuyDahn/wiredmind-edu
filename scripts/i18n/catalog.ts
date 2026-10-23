@@ -189,6 +189,16 @@ function asciiDigits(text: string): string {
  * The numbers a message states. A translation may group and point them its
  * own way (3 000, 3.000, 0,275), so each one yields every value it can mean.
  */
+/** The ten-thousand and hundred-million units of Chinese, Japanese, and Korean. */
+const MYRIADS: Readonly<Record<string, number>> = {
+  万: 1e4,
+  萬: 1e4,
+  만: 1e4,
+  亿: 1e8,
+  億: 1e8,
+  억: 1e8,
+};
+
 export function numbersIn(message: string): number[][] {
   const text = asciiDigits(visibleText(message));
   const found: number[][] = [];
@@ -199,6 +209,15 @@ export function numbersIn(message: string): number[][] {
     const last = /[.,٫](\d+)$/.exec(raw);
     if (last && groups.length > 1) {
       meanings.push(Number(`${groups.slice(0, -1).join("")}.${last[1]}`));
+    }
+    // Chinese, Japanese, and Korean count large numbers in ten-thousands
+    // (5000万 is 50 million). English says "50 million", so a counted number
+    // also stands for its millions and billions.
+    const unit = MYRIADS[text[(match.index ?? 0) + raw.length] ?? ""];
+    if (unit) {
+      for (const value of meanings.map((meaning) => meaning * unit)) {
+        meanings.push(value, value / 1e6, value / 1e9);
+      }
     }
     found.push(meanings);
   }

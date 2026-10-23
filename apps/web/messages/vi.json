@@ -7,8 +7,8 @@
   },
   "meta": {
     "home": {
-      "title": "WiredMind: khám phá bộ não thật của ruồi giấm",
-      "description": "Bài học miễn phí cho lớp học về não ruồi giấm thật. Kích thích và làm im lặng nơ-ron từ connectome MaleCNS ngay trên trình duyệt. Không cần đăng nhập."
+      "title": "WiredMind: học khoa học thần kinh miễn phí với não ruồi thật",
+      "description": "Bài học khoa học thần kinh 10 phút miễn phí, tuổi 11–16. Kích thích, làm im lặng nơ-ron thật từ connectome ruồi giấm trên trình duyệt. Không cần đăng nhập."
     },
     "about": {
       "title": "Về WiredMind: điều gì là thật, điều gì được đơn giản hóa",
@@ -82,7 +82,7 @@
   "landing": {
     "hero": {
       "eyebrow": "Bài học khoa học thần kinh miễn phí cho lớp học",
-      "title": "Kích hoạt một nơ-ron trong não của một con ruồi giấm thật và xem tín hiệu lao vút từ mắt xuống chân.",
+      "title": "Kích hoạt một nơ-ron trong sơ đồ kết nối thần kinh của một con ruồi giấm thật và xem tín hiệu lao vút từ mắt xuống chân.",
       "lead": "WiredMind chạy bản đồ kết nối thật của hệ thần kinh ruồi giấm ngay trên trình duyệt. Qua ba bài học ngắn có hướng dẫn, học sinh kích thích nơ-ron, làm im lặng chúng và xem điều gì thay đổi.",
       "start": "Bắt đầu bài học đầu tiên",
       "teachers": "Dành cho giáo viên"
@@ -93,7 +93,7 @@
       "steps": {
         "looming": "Nơ-ron phát hiện vật lao tới nhận ra vỉ đập ruồi",
         "gf": "Sợi khổng lồ phát xung",
-        "jump": "Nơ-ron nhảy khiến chân đạp mạnh"
+        "jump": "Nơ-ron nhảy phát xung"
       },
       "cells": "{count, plural, other {# tế bào}}",
       "firstSpike": "{cells} · {ms} ms",
@@ -121,8 +121,8 @@
       "lead": "Đưa liên kết lên bảng hoặc gửi đến thiết bị riêng của học sinh. Không cần thiết lập gì thêm.",
       "points": {
         "periods": {
-          "title": "1–2 tiết học",
-          "body": "Mỗi bài học mất khoảng 10 phút. Cả ba bài, kèm thảo luận, vừa đủ trong một hoặc hai tiết."
+          "title": "Mỗi bài một tiết học",
+          "body": "Riêng mỗi bài học mất khoảng 10 phút. Kèm phần thảo luận trong hướng dẫn cho giáo viên, mỗi bài vừa đủ một tiết 45 phút."
         },
         "install": {
           "title": "Không cài đặt, không đăng nhập",
@@ -263,8 +263,8 @@
   "lessons": {
     "smell-memory": {
       "title": "Ruồi ghi nhớ mùi như thế nào",
-      "summary": "Gửi một mùi vào não ruồi thật và tìm những tế bào ghi nhớ mùi đó.",
-      "description": "Gửi một mùi vào não ruồi giấm thật, lần theo nó đến thể nấm và tìm các tế bào lưu giữ ký ức về mùi. Bài học miễn phí dài 10 phút.",
+      "summary": "Gửi một mùi vào não ruồi thật và tìm nơi trí nhớ về mùi đó được giữ lại.",
+      "description": "Gửi một mùi vào não ruồi giấm thật, lần theo nó đến thể nấm và tìm nơi lưu giữ ký ức về mùi. Bài học miễn phí dài 10 phút.",
       "searchTitle": "Ruồi ngửi và ghi nhớ mùi thế nào: bài học tương tác",
       "steps": {
         "send": {
@@ -318,7 +318,7 @@
         "text": "Giờ thì nút nào cũng dùng được. Hãy đoán trước rồi mới nhấn: phần nào sẽ tối đi nếu bạn làm im lặng những người đưa tin mùi màu vàng? Thử làm im lặng hai màu cùng lúc xem sao."
       },
       "mission": {
-        "goal": "Tìm những tế bào lưu giữ ký ức về mùi của ruồi.",
+        "goal": "Tìm nơi ruồi giữ ký ức về mùi.",
         "win": "Bạn đã tìm ra. Người phân loại mùi biến mỗi mùi thành một mẫu hình, và người đọc ký ức đọc mẫu hình đó. Không có mẫu hình thì chẳng có gì để nhớ."
       },
       "story": {
@@ -328,11 +328,11 @@
             "bubble": "Thơm quá."
           },
           "sniff": {
-            "caption": "Râu của {name} bắt được vài phân tử mùi. Ruồi chỉ cần có thế.",
+            "caption": "Râu của {name} bắt được một chút mùi thoảng qua. Ruồi chỉ cần có thế.",
             "bubble": "Mình biết mùi này!"
           },
           "recall": {
-            "caption": "Tuần trước, chính mùi này đã dẫn {name} tới thức ăn. Não cậu vẫn giữ một dấu vết.",
+            "caption": "Hai ngày trước, chính mùi này đã dẫn {name} tới thức ăn. Não cậu vẫn giữ một dấu vết.",
             "bubble": "Đào nghĩa là bữa tối."
           },
           "land": {
@@ -354,7 +354,7 @@
       "title": "Làm sao ruồi biết mình đang hướng về đâu",
       "summary": "Đẩy la bàn của một con ruồi thật xoay vòng và xem điều gì giữ nó đúng chỗ.",
       "description": "Đẩy la bàn trong não ruồi giấm thật xoay vòng, rồi làm im lặng nơ-ron vòng và xem cảm giác phương hướng của ruồi trôi đi. Bài học miễn phí dài 10 phút.",
-      "searchTitle": "La bàn bên trong của ruồi: bài học tương tác về não",
+      "searchTitle": "La bàn bên trong của ruồi giấm: bài học tương tác về não",
       "steps": {
         "left": {
           "text": "Nhấn nút Kích thích để <turn>nơ-ron rẽ trái</turn> <gloss>(tín hiệu rẽ)</gloss> phát xung. Sau đó hãy nhìn mặt la bàn.",
@@ -362,7 +362,7 @@
         },
         "right": {
           "text": "Giờ hãy nhấn nút Kích thích của <turn>nơ-ron rẽ phải</turn> <gloss>(tín hiệu kia)</gloss>. Đừng rời mắt khỏi đốm sáng.",
-          "result": "Đốm sáng đã xoay quanh mặt la bàn. Tín hiệu rẽ từ mỗi bên đẩy nó theo hai hướng ngược nhau, nên hướng của ruồi cũng xoay theo."
+          "result": "Đốm sáng đã xoay quanh mặt la bàn. Tín hiệu rẽ từ mỗi bên đẩy nó theo hai hướng ngược nhau, nên cảm nhận phương hướng của ruồi cũng xoay theo."
         },
         "silence": {
           "text": "Hãy làm im lặng <ring>nơ-ron vòng</ring> <gloss>(người mang điểm mốc)</gloss>. Chúng đưa vào những gì ruồi nhìn thấy. Chúng mình sẽ gửi tín hiệu rẽ phải giúp bạn.",
@@ -377,7 +377,7 @@
           }
         },
         "restore": {
-          "text": "Nhấn nút <ring>nơ-ron vòng</ring> <gloss>(người mang điểm mốc)</gloss> một lần nữa để bật lại chúng. Chúng mình sẽ gửi đúng tín hiệu đó.",
+          "text": "Nhấn nút <ring>nơ-ron vòng</ring> <gloss>(người mang điểm mốc)</gloss> một lần nữa để bật lại chúng. Chúng mình sẽ gửi đúng tín hiệu rẽ đó.",
           "result": "Đốm sáng lại đứng yên đúng chỗ. Điểm mốc giúp la bàn của ruồi luôn chỉ đúng."
         }
       },
@@ -394,7 +394,7 @@
           },
           "both": {
             "text": "Bạn đã tắt luôn cả các tế bào chỉ hướng màu xanh lá.",
-            "feedback": "Chưa đúng lắm. Bạn chỉ làm im lặng các tế bào màu tím thôi. Các tế bào chỉ hướng màu xanh lá vẫn phát xung, nhưng không có gì giữ chúng đứng yên."
+            "feedback": "Chưa đúng lắm. Bạn chỉ làm im lặng các tế bào màu tím thôi. Các tế bào chỉ hướng màu xanh lá vẫn phát xung, nhưng không có gì giữ đốm sáng đứng yên."
           }
         }
       },
@@ -446,7 +446,7 @@
           "result": "Chúng phát xung, và chỉ vài phần nghìn giây sau, <giantfiber>sợi khổng lồ</giantfiber> <gloss>(dây thoát hiểm)</gloss> cũng phát xung theo."
         },
         "jump": {
-          "text": "Nhấn nút Kích thích lần nữa. Lần theo <giantfiber>sợi khổng lồ</giantfiber> <gloss>(dây thoát hiểm)</gloss> xuống tận <nervecord>dây thần kinh bụng</nervecord> <gloss>(tủy sống của ruồi)</gloss>.",
+          "text": "Nhấn nút Kích thích lần nữa. Lần theo <giantfiber>sợi khổng lồ</giantfiber> <gloss>(dây thoát hiểm)</gloss> xuống tận <nervecord>dây thần kinh bụng</nervecord> <gloss>(giống tủy sống)</gloss>.",
           "result": "<jump>Nơ-ron nhảy</jump> <gloss>(bộ đạp chân)</gloss> phát xung trong vòng 30 mili giây. Chúng khiến đôi chân giữa đạp mạnh, và ruồi nhảy vọt đi."
         },
         "silence": {
@@ -485,7 +485,7 @@
       },
       "freePlay": {
         "title": "Khám phá tự do",
-        "text": "Giờ thì nút nào cũng dùng được. Hãy đoán trước rồi mới nhấn: những màu nào vẫn sáng lên khi dây thoát hiểm bị làm im lặng? Rồi thử đổi sang làm im lặng bộ dò vỉ ruồi xem sao."
+        "text": "Giờ thì nút nào cũng dùng được. Hãy đoán trước rồi mới nhấn: điều gì xảy ra nếu bạn đổi sang làm im lặng bộ đạp chân? Rồi thử làm im lặng bộ dò vỉ ruồi."
       },
       "mission": {
         "goal": "Tìm sợi dây cứu mạng con ruồi.",
@@ -502,7 +502,7 @@
             "bubble": "Thôi chết."
           },
           "leap": {
-            "caption": "Đôi chân giữa đạp trước khi vỉ đập ruồi giáng xuống. Từ lúc thấy đến lúc nhảy: khoảng 30 mili giây.",
+            "caption": "Đôi chân giữa đạp trước khi vỉ đập ruồi giáng xuống. Từ lúc phát hiện đến lúc nhảy chỉ mất vài phần trăm giây.",
             "bubble": "Nhảy!"
           },
           "safe": {
@@ -609,7 +609,7 @@
       "locked": "Đã khóa",
       "lockedHint": "Chưa dùng được ở bước này. Mọi nút sẽ mở khóa khi đến phần khám phá tự do.",
       "stimulateNamed": "Kích thích {name}",
-      "silenceNamed": "Làm im lặng: {name}",
+      "silenceNamed": "Làm im lặng {name}",
       "silenced": "Đã làm im lặng · nhấn để bật lại",
       "silencedLocked": "Đã làm im lặng"
     },
@@ -831,7 +831,7 @@
     },
     "giantfiber": {
       "name": "Sợi khổng lồ",
-      "text": "Một tế bào thần kinh rất to, chạy từ não xuống dây thần kinh bụng. Nó mang tín hiệu thoát hiểm nhanh nhất của ruồi."
+      "text": "Một tế bào thần kinh rất to, chạy từ não xuống dây thần kinh bụng. Nó mang tín hiệu thoát hiểm nhanh nhất của ruồi. Mỗi con ruồi có hai sợi như vậy, mỗi bên một sợi."
     },
     "nervecord": {
       "name": "Dây thần kinh bụng",
@@ -846,7 +846,7 @@
       "text": "Một tế bào thần kinh. Nó nhận tín hiệu từ các tế bào khác và khi đủ tín hiệu cộng lại, nó gửi đi tín hiệu của riêng mình."
     },
     "spike": {
-      "name": "Phát xung",
+      "name": "Điện thế hoạt động (xung thần kinh)",
       "text": "Một xung điện ngắn mà nơ-ron đang hoạt động gửi dọc theo chiều dài của nó, còn gọi là xung thần kinh hay điện thế hoạt động. Trong bài học, mỗi lần lóe sáng là một xung."
     },
     "synapse": {
@@ -891,7 +891,7 @@
     },
     "sensory": {
       "name": "Nơ-ron cảm giác",
-      "text": "Nơ-ron thu nhận một điều gì đó từ thế giới bên ngoài, như một mùi hay một cái bóng đang lao tới, rồi báo cho não."
+      "text": "Nơ-ron thu nhận một điều gì đó từ thế giới bên ngoài, như ánh sáng hay một mùi, rồi báo cho não."
     },
     "motor": {
       "name": "Nơ-ron vận động",
@@ -906,7 +906,7 @@
       "text": "Một kênh nối thẳng hai nơ-ron, truyền tín hiệu gần như không chậm trễ. Bản đồ đằng sau các bài học chỉ ghi lại xináp hóa học."
     },
     "bump": {
-      "name": "Đốm sáng",
+      "name": "Đốm hoạt động",
       "text": "Cụm nơ-ron la bàn đang hoạt động. Vị trí của nó trên vòng tròn cho biết ruồi đang quay mặt về hướng nào."
     },
     "landmark": {
@@ -943,8 +943,8 @@
     "items": {
       "smell": {
         "title": "Ruồi ngửi mùi như thế nào?",
-        "short": "Ruồi ngửi bằng hai anten. Các thụ thể mùi trên đó phát xung khi có mùi bay tới, rồi tín hiệu đi vào não để được phân loại.",
-        "a": "Ruồi không có mũi. Hai anten của nó phủ đầy những sợi lông tí hon, và bên trong mỗi sợi lông là các thụ thể mùi: những tế bào thần kinh phát xung khi đúng phân tử mùi đậu lên chúng. Ruồi giấm có khoảng 50 loại thụ thể, và mỗi loại đáp lại một nhóm mùi riêng. Nhờ hỗn hợp tín hiệu đó mà ruồi phân biệt mùi này với mùi khác.",
+        "short": "Ruồi ngửi chủ yếu bằng hai anten. Các thụ thể mùi trên đó phát xung khi có mùi bay tới, rồi tín hiệu đi vào não để được phân loại.",
+        "a": "Ruồi không có mũi. Nó ngửi chủ yếu bằng hai anten phủ đầy những sợi lông tí hon, và bên trong mỗi sợi lông là các thụ thể mùi: những tế bào thần kinh phát xung khi đúng phân tử mùi đậu lên chúng. Ruồi giấm có khoảng 50 loại thụ thể, và mỗi loại đáp lại một nhóm mùi riêng. Nhờ hỗn hợp tín hiệu đó mà ruồi phân biệt mùi này với mùi khác.",
         "b": "Các thụ thể gửi tín hiệu đến thùy râu, trạm dừng đầu tiên của mùi trong não. Ở đó, mọi thụ thể cùng loại gặp nhau tại cùng một điểm, nên một mùi trở thành một kiểu hình gồm các điểm đang hoạt động. Nơ-ron chiếu mang kiểu hình ấy vào sâu hơn, đến thể nấm, nơi ruồi gắn mùi với những trải nghiệm tốt và xấu."
       },
       "memory": {
@@ -963,30 +963,30 @@
         "title": "Vì sao đập trúng ruồi lại khó đến vậy?",
         "short": "Ruồi thấy vỉ đập lao tới từ sớm, và một mạch thoát hiểm nhanh phóng nó lên không trong vài phần trăm giây, trước khi vỉ kịp đập xuống.",
         "a": "Có ba điều có lợi cho ruồi. Mắt nó bao quát gần như toàn bộ không gian xung quanh, nên rất khó lén tới từ phía sau. Thị giác của nó nhanh hơn chúng ta, nên bàn tay trông chậm chạp với nó. Và nó có những nơ-ron chỉ làm một việc: phát xung khi có thứ gì đó lớn nhanh trong tầm nhìn, như chiếc vỉ đập đang tới gần.",
-        "b": "Các nơ-ron phát hiện vật lao tới ấy nối với sợi khổng lồ, một tế bào thần kinh rất dày chạy từ não xuống các nơ-ron điều khiển đôi chân nhảy. Sợi dày dẫn tín hiệu nhanh, nên lệnh nhảy đến gần như tức thì. Phim quay tốc độ cao còn cho thấy ruồi dịch chân ngay trước khi cất cánh, để cú nhảy đưa nó ra xa chiếc vỉ đập."
+        "b": "Các nơ-ron phát hiện vật lao tới ấy nối với sợi khổng lồ, một tế bào thần kinh rất dày chạy từ não xuống các nơ-ron điều khiển đôi chân nhảy. Sợi dày dẫn tín hiệu nhanh, nên lệnh nhảy đến gần như tức thì. Khi còn chút thời gian, ruồi dịch chân trước để cú nhảy đưa nó ra xa chiếc vỉ đập. Trong tình huống khẩn cấp, sợi khổng lồ có thể phóng nó đi ngay lập tức."
       },
       "reaction": {
         "title": "Ruồi phản ứng nhanh đến mức nào?",
-        "short": "Ruồi giấm có thể bắt đầu cú nhảy thoát hiểm chỉ vài phần trăm giây sau khi thấy nguy hiểm. Con người cần khoảng một phần tư giây để phản ứng.",
-        "a": "Khi có thứ gì đó lao về phía ruồi, tín hiệu chạy từ mắt đến cơ chân của nó trong vài chục mili giây. Một mili giây là một phần nghìn giây. Trong bài học của WiredMind, các nơ-ron nhảy phát xung khoảng 30 ms sau khi vỉ đập xuất hiện. Con số đó đến từ một mô hình đơn giản, không phải từ phép đo trên ruồi, nhưng nằm trong khoảng thực tế. Con người mất khoảng 250 ms chỉ để phản ứng với một tia sáng lóe lên.",
+        "short": "Cú nhảy thoát hiểm nhanh nhất của ruồi bắt đầu chỉ vài phần trăm giây sau khi nguy hiểm lao tới. Con người cần khoảng một phần tư giây chỉ để phản ứng.",
+        "a": "Khi có thứ gì đó lao về phía ruồi, tín hiệu chạy từ mắt đến cơ chân của nó trong vài chục mili giây. Một mili giây là một phần nghìn giây. Trong bài học của WiredMind, các nơ-ron nhảy phát xung khoảng 30 ms sau khi vỉ đập xuất hiện. Con số đó đến từ một mô hình đơn giản, không phải từ phép đo trên ruồi, nhưng đúng về bậc độ lớn. Con người mất khoảng 250 ms chỉ để phản ứng với một tia sáng lóe lên.",
         "b": "Tốc độ đến từ cách đi dây. Con đường rất ngắn: nơ-ron phát hiện vật lao tới, rồi sợi khổng lồ, rồi nơ-ron nhảy. Sợi khổng lồ dày khác thường, nên tín hiệu của nó đi rất nhanh. Và ở ruồi thật, nó truyền tín hiệu qua các xináp điện, những kênh trực tiếp giữa các tế bào, gần như không có độ trễ."
       },
       "neurons": {
         "title": "Não ruồi giấm có bao nhiêu nơ-ron?",
-        "short": "Khoảng 140.000. Năm 2024, các nhà khoa học đã lập xong bản đồ từng nơ-ron trong não ruồi giấm trưởng thành, cùng hàng chục triệu xináp giữa chúng.",
+        "short": "Khoảng 140.000. Năm 2024, các nhà khoa học đã lập xong bản đồ từng nơ-ron trong não của một con ruồi giấm trưởng thành, cùng hơn 50 triệu xináp giữa chúng.",
         "a": "Não ruồi giấm nhỏ hơn một hạt anh túc và chứa khoảng 140.000 nơ-ron. Não người có nhiều hơn hàng trăm nghìn lần. Dù vậy, bộ não ấy vẫn giúp ruồi bay, tìm thức ăn, học mùi và thoát khỏi vỉ đập.",
-        "b": "Bản đồ đầy đủ của một hệ thần kinh, với mọi nơ-ron và mọi xináp, được gọi là connectome. Ruồi giấm là một trong số rất ít loài vật có toàn bộ não được lập bản đồ theo cách này. Các bài học của WiredMind chạy trên connectome của não và dây thần kinh bụng của một con ruồi đực, và mỗi bài học dùng một mạch gồm 3.000 đến 4.500 nơ-ron của nó."
+        "b": "Bản đồ đầy đủ của một hệ thần kinh, với mọi nơ-ron và mọi xináp, được gọi là connectome. Ruồi giấm là một trong số rất ít loài vật có toàn bộ não được lập bản đồ theo cách này. Các bài học của WiredMind chạy trên một bản đồ khác, mới hơn: connectome của não và dây thần kinh bụng của một con ruồi đực, và mỗi bài học dùng một mạch gồm 3.000 đến 4.500 nơ-ron của nó."
       }
     }
   },
   "teachers": {
     "meta": {
-      "indexTitle": "Hướng dẫn cho giáo viên · WiredMind",
-      "indexDescription": "Giáo án, đáp án mong đợi, câu hỏi thảo luận và phiếu học tập in được cho học sinh, dành cho từng bài học của WiredMind.",
+      "indexTitle": "Giáo án và phiếu học tập khoa học thần kinh · WiredMind",
+      "indexDescription": "Giáo án khoa học thần kinh 45 phút miễn phí, đáp án, câu hỏi thảo luận và phiếu học tập in được cho từng bài học về ruồi giấm của WiredMind.",
       "guideTitle": "Giáo án: {title}",
       "guideDescription": "Giáo án 45 phút cho bài “{title}”: mục tiêu, đáp án mong đợi, câu hỏi thảo luận và những hiểu lầm thường gặp.",
       "worksheetTitle": "Phiếu học tập: {title}",
-      "worksheetDescription": "Phiếu học tập in được cho học sinh, bài “{title}”: dự đoán, thử, quan sát, giải thích."
+      "worksheetDescription": "Phiếu học tập in được miễn phí cho bài “{title}”: học sinh dự đoán, thử, quan sát và giải thích."
     },
     "index": {
       "title": "Hướng dẫn cho giáo viên",
@@ -1009,7 +1009,7 @@
       "eyebrow": "Hướng dẫn cho giáo viên · Bài {number}",
       "print": "In",
       "lesson": "Mở bài học",
-      "demo": "Phát “Cho mình xem” ở chế độ lớp học",
+      "demo": "Phát “Cho mình xem cách hoạt động” ở chế độ lớp học",
       "worksheet": "Phiếu học tập cho học sinh",
       "all": "Tất cả hướng dẫn cho giáo viên",
       "address": "Địa chỉ bài học",
@@ -1021,7 +1021,7 @@
       "minutes": "{minutes} phút",
       "phases": {
         "opening": "Câu hỏi mở đầu",
-        "demo": "Trình diễn bằng “Cho mình xem”",
+        "demo": "Trình diễn bằng “Cho mình xem cách hoạt động”",
         "explore": "Học sinh tự khám phá",
         "discuss": "Thảo luận"
       },
@@ -1197,7 +1197,7 @@
       "escape": {
         "goal": "Học sinh lần theo một phản xạ từ mắt đến cơ chân trong khoảng 30 mili giây, và chỉ ra rằng cú thoát hiểm nhanh phụ thuộc vào một mắt xích duy nhất: sợi khổng lồ.",
         "topics": {
-          "reflex": "Một đường phản xạ trọn vẹn gồm ba phần: nơ-ron cảm giác (nơ-ron phát hiện vật lao tới), trạm chuyển tiếp (sợi khổng lồ) và nơ-ron vận động (nơ-ron nhảy). Khác với phản xạ đầu gối, trạm chuyển tiếp này đi qua não.",
+          "reflex": "Một đường phản xạ trọn vẹn gồm ba phần: phía cảm giác (nơ-ron phát hiện vật lao tới, chúng báo lại những gì mắt nhìn thấy), trạm chuyển tiếp (sợi khổng lồ) và nơ-ron vận động (nơ-ron nhảy). Khác với phản xạ đầu gối, trạm chuyển tiếp này đi qua não.",
           "structure": "Tín hiệu từ hàng trăm nơ-ron phát hiện vật lao tới dồn về sợi khổng lồ. Vì nút thắt cổ chai ấy, chỉ cần làm im lặng một loại tế bào là hành vi biến mất.",
           "synapses": "Sợi khổng lồ rất to nên tín hiệu của nó truyền nhanh. Ở ruồi thật, nó còn dùng xináp điện, loại nhanh nhất; mô hình chỉ có xináp hóa học."
         },
@@ -1217,7 +1217,7 @@
         "misconceptions": {
           "a": {
             "claim": "Ruồi quyết định nhảy.",
-            "fix": "Cú nhảy nhanh là một phản xạ: các kết nối đưa tín hiệu đi thẳng một mạch. Không có giai đoạn nào để ruồi cân nhắc các lựa chọn."
+            "fix": "Cú nhảy nhanh nhất hoạt động như một phản xạ: các kết nối đưa tín hiệu đi thẳng một mạch. Những lần thoát chậm hơn có chút thời gian để nhắm hướng nhảy, nhưng không đủ thời gian để cân nhắc."
           },
           "b": {
             "claim": "Nếu ruồi không nhảy thì tức là nó không thấy chiếc vỉ.",
@@ -1249,7 +1249,7 @@
         "levels": {
           "fly": "Để thoát hiểm, con ruồi cần đến những bộ phận nào của cơ thể này?",
           "brain": "Tín hiệu bắt đầu ở mắt và kết thúc ở chân. Trên đường đi nó phải qua những đâu?",
-          "circuit": "Hàng trăm tế bào màu xanh dương, và chỉ một đường màu đỏ. Bạn nhận thấy điều gì ở lộ trình này?",
+          "circuit": "Hàng trăm tế bào màu xanh dương, và chỉ hai đường màu đỏ, mỗi bên một đường. Bạn nhận thấy điều gì ở lộ trình này?",
           "neuron": "Riêng tế bào này to khác thường. Vì sao một sợi dây to lại giúp thoát hiểm nhanh?"
         },
         "predictWhy": "Nơ-ron phát hiện vật lao tới vẫn phát xung, nên ruồi vẫn thấy chiếc vỉ đập ruồi, nhưng khi sợi khổng lồ im lặng thì tín hiệu không bao giờ tới được nơ-ron nhảy, và chúng vẫn tối om."

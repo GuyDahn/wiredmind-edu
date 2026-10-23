@@ -112,7 +112,7 @@ describe("lesson registry", () => {
   it("titles the new lessons as asked", () => {
     assert.equal(
       en.lessons.compass?.title,
-      "How a fly knows which way it's facing",
+      "How a fly knows which way it’s facing",
     );
     assert.equal(en.lessons.escape?.title, "The 30-millisecond escape");
   });

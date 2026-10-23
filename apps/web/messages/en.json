@@ -341,13 +341,39 @@
       "questions.items.neurons.title",
       "questions.items.neurons.short",
       "questions.items.neurons.a",
-      "questions.items.neurons.b"
+      "questions.items.neurons.b",
+      "landing.hero.title",
+      "landing.loop.steps.jump",
+      "landing.teachers.points.periods.title",
+      "landing.teachers.points.periods.body",
+      "lessons.smell-memory.summary",
+      "lessons.smell-memory.check.choices.pattern.text",
+      "lessons.smell-memory.mission.goal",
+      "lessons.smell-memory.story.panels.sniff.caption",
+      "lessons.smell-memory.story.panels.recall.caption",
+      "lessons.smell-memory.journey.circuit",
+      "lessons.compass.title",
+      "lessons.compass.summary",
+      "lessons.compass.steps.right.result",
+      "lessons.compass.steps.silence.text",
+      "lessons.compass.steps.restore.text",
+      "lessons.compass.steps.restore.result",
+      "lessons.compass.check.choices.both.feedback",
+      "lessons.compass.mission.goal",
+      "lessons.compass.journey.circuit",
+      "lessons.escape.steps.jump.text",
+      "lessons.escape.freePlay.text",
+      "lessons.escape.story.panels.leap.caption",
+      "viewer.controls.silenceNamed",
+      "viewer.story.bridge",
+      "teachers.index.companion",
+      "teachers.lessons.escape.levels.circuit"
     ]
   },
   "meta": {
     "home": {
-      "title": "WiredMind: interactive lessons on a real fruit fly brain",
-      "description": "Free classroom lessons on the real wiring of a fruit fly’s brain. Stimulate and silence neurons from the MaleCNS connectome in your browser. No login."
+      "title": "WiredMind: free neuroscience lessons on a real fly brain",
+      "description": "Free 10-minute neuroscience lessons for ages 11–16. Stimulate and silence real neurons from a fruit fly’s connectome in your browser. No login."
     },
     "about": {
       "title": "About WiredMind: what’s real and what’s simplified",
@@ -421,7 +447,7 @@
   "landing": {
     "hero": {
       "eyebrow": "Free neuroscience lessons for the classroom",
-      "title": "Fire a neuron in a real fruit fly’s brain and watch the signal race from its eyes to its legs.",
+      "title": "Fire a neuron in a real fruit fly’s wiring diagram and watch the signal race from its eyes to its legs.",
       "lead": "WiredMind runs the real wiring diagram of a fruit fly’s nervous system in the browser. Students stimulate neurons, silence them, and see what changes, in three short guided lessons.",
       "start": "Start the first lesson",
       "teachers": "For teachers"
@@ -432,7 +458,7 @@
       "steps": {
         "looming": "Looming neurons spot the swatter",
         "gf": "The giant fiber fires",
-        "jump": "The jump neurons kick"
+        "jump": "The jump neurons fire"
       },
       "cells": "{count, plural, one {# cell} other {# cells}}",
       "firstSpike": "{cells} · {ms} ms",
@@ -460,8 +486,8 @@
       "lead": "Put the link on the board or send it to students’ own devices. Nothing else to set up.",
       "points": {
         "periods": {
-          "title": "1–2 class periods",
-          "body": "Each lesson takes about 10 minutes. All three, with discussion, fit in one or two periods."
+          "title": "One class period each",
+          "body": "Each lesson takes about 10 minutes on its own. With the teacher guide’s discussion, each one fills a 45-minute period."
         },
         "install": {
           "title": "No install, no login",
@@ -602,8 +628,8 @@
   "lessons": {
     "smell-memory": {
       "title": "How a fly remembers a smell",
-      "summary": "Send a smell into a real fly brain and find the cells that remember it.",
-      "description": "Send a smell into a real fruit fly brain, follow it to the mushroom body, and find the cells that store its memory. A free 10-minute lesson.",
+      "summary": "Send a smell into a real fly brain and find where its memory is kept.",
+      "description": "Send a smell into a real fruit fly brain, follow it to the mushroom body, and find where its memory is stored. A free 10-minute lesson.",
       "searchTitle": "How flies smell and remember: an interactive brain lesson",
       "steps": {
         "send": {
@@ -643,7 +669,7 @@
             "feedback": "Not quite. The orange and yellow cells still lit up, so the smell got in. It stopped at the blue cells."
           },
           "pattern": {
-            "text": "The blue cells pass each smell's pattern to the pink cells.",
+            "text": "The blue cells pass each smell’s pattern to the pink cells.",
             "feedback": "Yes! The blue cells sort each smell into a pattern, and the pink cells read it. No pattern means nothing to remember."
           },
           "both": {
@@ -657,7 +683,7 @@
         "text": "Every button works now. Guess first, then tap: what goes dark if you silence the yellow smell messengers? Try silencing two colors at once."
       },
       "mission": {
-        "goal": "Find the cells that hold a fly's smell memory.",
+        "goal": "Find where a fly keeps its smell memory.",
         "win": "You found them. The smell sorters turn each smell into a pattern, and the memory readers read it. Without the pattern there is nothing to remember."
       },
       "story": {
@@ -667,11 +693,11 @@
             "bubble": "Something smells good."
           },
           "sniff": {
-            "caption": "{name}'s antennae catch a few molecules of it. That is all a fly needs.",
+            "caption": "{name}’s antennae catch a faint trace of it. That is all a fly needs.",
             "bubble": "I know this smell!"
           },
           "recall": {
-            "caption": "Last week this same smell led {name} to food. His brain kept a trace of it.",
+            "caption": "Two days ago this same smell led {name} to food. His brain kept a trace of it.",
             "bubble": "Peach means dinner."
           },
           "land": {
@@ -685,15 +711,15 @@
         }
       },
       "journey": {
-        "circuit": "These colored cells carry a smell from the antennae to the fly's memory.",
+        "circuit": "These colored cells carry a smell from the antennae to the fly’s memory.",
         "neuron": "One memory reader, a single cell. The bright dot is a spike, the signal it sends."
       }
     },
     "compass": {
-      "title": "How a fly knows which way it's facing",
-      "summary": "Push a real fly's compass around and see what holds it in place.",
+      "title": "How a fly knows which way it’s facing",
+      "summary": "Push a real fly’s compass around and see what holds it in place.",
       "description": "Push a real fruit fly’s internal compass around, then silence the ring neurons and watch its sense of direction drift. A free 10-minute lesson.",
-      "searchTitle": "A fly’s internal compass: an interactive brain lesson",
+      "searchTitle": "Fruit fly internal compass: an interactive brain lesson",
       "steps": {
         "left": {
           "text": "Tap Stimulate to fire the left <turn>turn neurons</turn> <gloss>(the turning signal)</gloss>. Then watch the compass dial.",
@@ -701,10 +727,10 @@
         },
         "right": {
           "text": "Now tap Stimulate on the right <turn>turn neurons</turn> <gloss>(the other signal)</gloss>. Keep your eyes on the bump.",
-          "result": "The bump swung around the dial. Turning signals from each side push it opposite ways, so the fly's heading turns too."
+          "result": "The bump swung around the dial. Turning signals from each side push it opposite ways, so the fly’s sense of direction turns too."
         },
         "silence": {
-          "text": "Silence the <ring>ring neurons</ring> <gloss>(the landmark carriers)</gloss>. They bring in what the fly sees. We will send the right signal for you.",
+          "text": "Silence the <ring>ring neurons</ring> <gloss>(the landmark carriers)</gloss>. They bring in what the fly sees. We will fire the right turning signal for you.",
           "result": "The bump slips off its spot and wanders. Without landmarks, the compass drifts.",
           "predict": {
             "question": "The landmark carriers are about to go silent. What will the bump do?",
@@ -716,8 +742,8 @@
           }
         },
         "restore": {
-          "text": "Tap the <ring>ring neurons</ring> <gloss>(the landmark carriers)</gloss> button again to switch them back on. We will send the same signal.",
-          "result": "The bump holds its spot again. Landmarks keep the fly's compass true."
+          "text": "Tap the <ring>ring neurons</ring> <gloss>(the landmark carriers)</gloss> button again to switch them back on. We will send the same turning signal.",
+          "result": "The bump holds its spot again. Landmarks keep the fly’s compass true."
         }
       },
       "check": {
@@ -733,7 +759,7 @@
           },
           "both": {
             "text": "You switched off the green heading cells too.",
-            "feedback": "Not quite. You only silenced the violet cells. The green heading cells kept firing, but nothing held them still."
+            "feedback": "Not quite. You only silenced the violet cells. The green heading cells kept firing, but nothing held the bump still."
           }
         }
       },
@@ -742,7 +768,7 @@
         "text": "Every button works now. Guess first, then tap: where does the bump go if you fire both turning signals at once? Try it with the violet cells silenced."
       },
       "mission": {
-        "goal": "Find what keeps a fly's compass pointing true.",
+        "goal": "Find what keeps a fly’s compass pointing true.",
         "win": "You found it. Turning signals push the bump around the compass, and the landmark carriers pin it to what the fly sees. Without them the compass drifts."
       },
       "story": {
@@ -770,7 +796,7 @@
         }
       },
       "journey": {
-        "circuit": "This ring of cells is the fly's compass, with the cells that turn it and the cells that steady it.",
+        "circuit": "This ring of cells is the fly’s compass, with the cells that turn it and the cells that steady it.",
         "neuron": "One heading cell. The bright dot is a spike, the signal it sends."
       }
     },
@@ -785,7 +811,7 @@
           "result": "They fire, and in a few thousandths of a second the <giantfiber>giant fiber</giantfiber> <gloss>(the escape wire)</gloss> fires too."
         },
         "jump": {
-          "text": "Tap Stimulate again. Follow the <giantfiber>giant fiber</giantfiber> <gloss>(the escape wire)</gloss> down into the <nervecord>nerve cord</nervecord> <gloss>(its spinal cord)</gloss>.",
+          "text": "Tap Stimulate again. Follow the <giantfiber>giant fiber</giantfiber> <gloss>(the escape wire)</gloss> down into the <nervecord>nerve cord</nervecord> <gloss>(like a spine)</gloss>.",
           "result": "The <jump>jump neurons</jump> <gloss>(the leg kickers)</gloss> fire within 30 milliseconds. They kick the middle legs, and the fly leaps away."
         },
         "silence": {
@@ -824,7 +850,7 @@
       },
       "freePlay": {
         "title": "Free play",
-        "text": "Every button works now. Guess first, then tap: which colors still light up with the escape wire silenced? Then try silencing the swatter spotters instead."
+        "text": "Every button works now. Guess first, then tap: what happens if you silence the leg kickers instead? Then try silencing the swatter spotters."
       },
       "mission": {
         "goal": "Find the wire that saves the fly.",
@@ -841,7 +867,7 @@
             "bubble": "Uh-oh."
           },
           "leap": {
-            "caption": "His middle legs kick before the swatter lands. From first sight to jump: about 30 milliseconds.",
+            "caption": "His middle legs kick before the swatter lands. From spotting it to jumping takes only a few hundredths of a second.",
             "bubble": "Jump!"
           },
           "safe": {
@@ -948,7 +974,7 @@
       "locked": "Locked",
       "lockedHint": "Not in this step. Every button opens in free play.",
       "stimulateNamed": "Stimulate {name}",
-      "silenceNamed": "Silence: {name}",
+      "silenceNamed": "Silence {name}",
       "silenced": "Silenced · tap to switch on",
       "silencedLocked": "Silenced"
     },
@@ -1073,7 +1099,7 @@
       "back": "Back",
       "next": "Next",
       "progress": "Panel {number} of {total}",
-      "bridge": "Now let's see what happened inside his brain.",
+      "bridge": "Now let’s see what happened inside his brain.",
       "zoom": "Zoom in",
       "says": "{name} says:"
     },
@@ -1170,7 +1196,7 @@
     },
     "giantfiber": {
       "name": "Giant fiber",
-      "text": "A very thick nerve cell that runs from the brain down into the nerve cord. It carries the fly’s fastest escape signal."
+      "text": "A very thick nerve cell that runs from the brain down into the nerve cord. It carries the fly’s fastest escape signal. A fly has two, one on each side."
     },
     "nervecord": {
       "name": "Nerve cord",
@@ -1185,7 +1211,7 @@
       "text": "A nerve cell. It receives signals from other cells and, when enough of them add up, sends a signal of its own."
     },
     "spike": {
-      "name": "Firing",
+      "name": "Action potential (spike)",
       "text": "A brief electrical pulse that an active neuron sends along its length, also called a spike or an action potential. In the lessons, each flash of light marks one."
     },
     "synapse": {
@@ -1230,7 +1256,7 @@
     },
     "sensory": {
       "name": "Sensory neuron",
-      "text": "A neuron that picks up something from the world, such as a smell or a looming shadow, and reports it to the brain."
+      "text": "A neuron that picks up something from the world, such as light or a smell, and reports it to the brain."
     },
     "motor": {
       "name": "Motor neuron",
@@ -1245,7 +1271,7 @@
       "text": "A direct channel between two neurons that passes a signal with almost no delay. The map behind the lessons records chemical synapses only."
     },
     "bump": {
-      "name": "Bump",
+      "name": "Activity bump",
       "text": "The patch of active compass neurons. Where it sits on the ring shows which way the fly is facing."
     },
     "landmark": {
@@ -1253,7 +1279,7 @@
       "text": "Something the fly sees that stays in place, like the sun or a tree. The fly uses it to keep its sense of direction steady."
     },
     "bridge": {
-      "name": "Bridge",
+      "name": "Protocerebral bridge",
       "text": "A bar-shaped part of the fly’s brain, the protocerebral bridge. The compass neurons and the turn neurons both run through it."
     }
   },
@@ -1282,8 +1308,8 @@
     "items": {
       "smell": {
         "title": "How do flies smell?",
-        "short": "A fly smells with its two antennae. Smell receptors on them fire when an odor lands, and the signal travels into the brain to be sorted.",
-        "a": "A fly has no nose. Its two antennae are covered in tiny hairs, and inside each hair sit smell receptors: nerve cells that fire when the right odor molecule lands on them. A fruit fly has about 50 kinds of receptor, and each kind answers to its own set of smells. That mix of signals is how the fly tells one smell from another.",
+        "short": "A fly smells mainly with its two antennae. Smell receptors on them fire when an odor lands, and the signal travels into the brain to be sorted.",
+        "a": "A fly has no nose. It smells mainly with its two antennae, which are covered in tiny hairs, and inside each hair sit smell receptors: nerve cells that fire when the right odor molecule lands on them. A fruit fly has about 50 kinds of receptor, and each kind answers to its own set of smells. That mix of signals is how the fly tells one smell from another.",
         "b": "The receptors send their signal to the antennal lobe, the first stop for smells in the brain. There, all the receptors of one kind meet in the same spot, so a smell becomes a pattern of active spots. Projection neurons carry that pattern deeper, to the mushroom body, where the fly links smells to good and bad experiences."
       },
       "memory": {
@@ -1302,30 +1328,30 @@
         "title": "Why are flies so hard to swat?",
         "short": "A fly sees the swatter coming early, and a fast escape circuit launches it into the air in a few hundredths of a second, before the swatter lands.",
         "a": "Three things work in the fly’s favor. Its eyes cover almost the whole space around it, so it is hard to sneak up from behind. Its vision is faster than ours, so a hand looks slow to it. And it has neurons with one job: they fire when something grows quickly in view, the way a swatter does as it comes closer.",
-        "b": "Those looming neurons connect to the giant fiber, a very thick nerve cell that runs from the brain down to the neurons that drive the jumping legs. A thick fiber carries its signal fast, so the order to jump arrives almost at once. High-speed films also show the fly shifting its legs just before take-off, so that the jump carries it away from the swatter."
+        "b": "Those looming neurons connect to the giant fiber, a very thick nerve cell that runs from the brain down to the neurons that drive the jumping legs. A thick fiber carries its signal fast, so the order to jump arrives almost at once. When it has a moment, a fly first shifts its legs so the jump carries it away from the swatter. In an emergency, the giant fiber can launch it at once."
       },
       "reaction": {
         "title": "How fast is a fly’s reaction time?",
-        "short": "A fruit fly can start its escape jump a few hundredths of a second after it spots danger. A person needs about a quarter of a second to react.",
-        "a": "When something looms toward a fly, the signal runs from its eyes to its leg muscles in tens of milliseconds. A millisecond is a thousandth of a second. In the WiredMind lesson, the jump neurons fire about 30 ms after the swatter appears. That figure comes from a simple model, not from a recording of a fly, but it lands in a realistic range. A person takes around 250 ms just to react to a flash of light.",
+        "short": "A fly’s fastest escape jump starts a few hundredths of a second after danger looms. A person needs about a quarter of a second just to react.",
+        "a": "When something looms toward a fly, the signal runs from its eyes to its leg muscles in tens of milliseconds. A millisecond is a thousandth of a second. In the WiredMind lesson, the jump neurons fire about 30 ms after the swatter appears. That figure comes from a simple model, not from a recording of a fly, but it is the right order of size. A person takes around 250 ms just to react to a flash of light.",
         "b": "The speed comes from the wiring. The path is short: looming neurons, then the giant fiber, then the jump neurons. The giant fiber is unusually thick, which makes its signal travel fast. And in a real fly it hands the signal on through electrical synapses, direct channels between cells with almost no delay."
       },
       "neurons": {
         "title": "How many neurons does a fruit fly brain have?",
-        "short": "About 140,000. In 2024 scientists finished mapping every one of them in an adult fruit fly’s brain, with the tens of millions of synapses between them.",
+        "short": "About 140,000. In 2024 scientists finished mapping every one of them in one adult fruit fly’s brain, with more than 50 million synapses between them.",
         "a": "A fruit fly’s brain is smaller than a poppy seed and holds about 140,000 neurons. A human brain has hundreds of thousands of times more. Even so, the fly’s brain lets it fly, find food, learn smells, and escape a swatter.",
-        "b": "A complete map of a nervous system, with every neuron and every synapse, is called a connectome. The fruit fly is one of very few animals whose whole brain has been mapped this way. The WiredMind lessons run on the connectome of one male fly’s brain and nerve cord, and each lesson uses a circuit of 3,000 to 4,500 of its neurons."
+        "b": "A complete map of a nervous system, with every neuron and every synapse, is called a connectome. The fruit fly is one of very few animals whose whole brain has been mapped this way. The WiredMind lessons run on a different, later map: the connectome of one male fly’s brain and nerve cord, and each lesson uses a circuit of 3,000 to 4,500 of its neurons."
       }
     }
   },
   "teachers": {
     "meta": {
-      "indexTitle": "Teacher guides · WiredMind",
-      "indexDescription": "A lesson plan, expected answers, discussion questions, and a printable student worksheet for each WiredMind lesson.",
+      "indexTitle": "Neuroscience lesson plans and worksheets · WiredMind",
+      "indexDescription": "Free 45-minute neuroscience lesson plans, expected answers, discussion questions, and printable worksheets for each WiredMind fruit fly lesson.",
       "guideTitle": "Teacher guide: {title}",
       "guideDescription": "A 45-minute plan for “{title}”: goal, what to notice, expected answers, discussion questions, and common misconceptions.",
       "worksheetTitle": "Worksheet: {title}",
-      "worksheetDescription": "A printable student worksheet for “{title}”: predict, try, observe, explain."
+      "worksheetDescription": "A free printable worksheet for “{title}”: students predict, try, observe, and explain."
     },
     "index": {
       "title": "Teacher guides",
@@ -1336,7 +1362,7 @@
       "demo": "Show it to the class",
       "generalTerms": "Basic terms",
       "companionTitle": "A companion course",
-      "companion": "Many students who take 5 units of biology also take Tel Aviv University's free course <campusil>The Brain: the Most Wonderful Machine of All</campusil> on Campus IL, taught by Prof. Yossi Yovel and Prof. Yaniv Assaf. It teaches neurons, action potentials, and synapses in depth, and these lessons make a hands-on companion to it. WiredMind is an independent project. It is not affiliated with the course, the university, or Campus IL."
+      "companion": "In Israel, many students on the 5-unit biology track also take Tel Aviv University’s free course <campusil>The Brain: the Most Wonderful Machine of All</campusil> on Campus IL, taught by Prof. Yossi Yovel and Prof. Yaniv Assaf. It teaches neurons, action potentials, and synapses in depth, and these lessons make a hands-on companion to it. WiredMind is an independent project. It is not affiliated with the course, the university, or Campus IL."
     },
     "topics": {
       "excitation": "Excitation and inhibition",
@@ -1348,7 +1374,7 @@
       "eyebrow": "Teacher guide · Lesson {number}",
       "print": "Print",
       "lesson": "Open the lesson",
-      "demo": "Play “Show me” in class mode",
+      "demo": "Play “Show me how it works” in class mode",
       "worksheet": "Student worksheet",
       "all": "All teacher guides",
       "address": "Lesson address",
@@ -1360,7 +1386,7 @@
       "minutes": "{minutes} min",
       "phases": {
         "opening": "Opening question",
-        "demo": "Demo with “Show me”",
+        "demo": "Demo with “Show me how it works”",
         "explore": "Students explore",
         "discuss": "Discussion"
       },
@@ -1536,7 +1562,7 @@
       "escape": {
         "goal": "Students follow a reflex from the eyes to the leg muscles in about 30 milliseconds, and show that the fast escape depends on one link, the giant fiber.",
         "topics": {
-          "reflex": "A whole reflex pathway in three parts: sensory neurons (the looming neurons), a relay (the giant fiber), and motor neurons (the jump neurons). Unlike a knee-jerk reflex, this relay runs through the brain.",
+          "reflex": "A whole reflex pathway in three parts: the sensory side (the looming neurons, which report what the eyes see), a relay (the giant fiber), and motor neurons (the jump neurons). Unlike a knee-jerk reflex, this relay runs through the brain.",
           "structure": "The signal narrows from hundreds of looming neurons onto the giant fiber. That bottleneck is why silencing one kind of cell removes the behavior.",
           "synapses": "The giant fiber is thick, which makes its signal fast. In a real fly it also uses electrical synapses, the fastest kind; the model has chemical synapses only."
         },
@@ -1556,7 +1582,7 @@
         "misconceptions": {
           "a": {
             "claim": "The fly decides to jump.",
-            "fix": "The fast jump is a reflex: the wiring carries the signal straight through. There is no stage where the fly weighs its options."
+            "fix": "The fastest jump works like a reflex: the wiring carries the signal straight through. Slower escapes leave a little time to aim the jump, but no time to think it over."
           },
           "b": {
             "claim": "If the fly did not jump, it did not see the swatter.",
@@ -1588,7 +1614,7 @@
         "levels": {
           "fly": "Which parts of this body does the fly need in order to escape?",
           "brain": "The signal starts in the eyes and ends in the legs. Where does it have to pass on the way?",
-          "circuit": "Hundreds of blue cells, and one red line. What do you notice about the route?",
+          "circuit": "Hundreds of blue cells, and just two red lines, one on each side. What do you notice about the route?",
           "neuron": "This one cell is unusually thick. Why would a thick wire help a fast escape?"
         },
         "predictWhy": "The looming neurons still fire, so the fly sees the swatter, but with the giant fiber silent the signal never reaches the jump neurons, and they stay dark."

@@ -7,8 +7,8 @@
   },
   "meta": {
     "home": {
-      "title": "WiredMind: Interaktive Lektionen zum Gehirn der Fruchtfliege",
-      "description": "Kostenlose Lektionen für den Unterricht: Neuronen aus dem MaleCNS-Konnektom einer echten Fruchtfliege im Browser stimulieren und stummschalten. Ohne Login."
+      "title": "WiredMind: Neurobiologie-Lektionen zum Fruchtfliegengehirn",
+      "description": "Gratis Neurobiologie in 10 Minuten, 11–16 Jahre: echte Neuronen aus dem Konnektom einer Fruchtfliege im Browser stimulieren und stummschalten. Ohne Login."
     },
     "about": {
       "title": "Über WiredMind: Was echt ist und was vereinfacht",
@@ -82,7 +82,7 @@
   "landing": {
     "hero": {
       "eyebrow": "Kostenlose Neurobiologie-Lektionen für den Unterricht",
-      "title": "Bringen Sie ein Neuron im Gehirn einer echten Fruchtfliege zum Feuern und sehen Sie zu, wie das Signal von den Augen bis in die Beine rast.",
+      "title": "Bringen Sie ein Neuron im Schaltplan einer echten Fruchtfliege zum Feuern und sehen Sie zu, wie das Signal von den Augen bis in die Beine rast.",
       "lead": "WiredMind lässt den echten Schaltplan des Nervensystems einer Fruchtfliege im Browser laufen. Schülerinnen und Schüler stimulieren Neuronen, schalten sie stumm und sehen, was sich verändert – in drei kurzen, angeleiteten Lektionen.",
       "start": "Erste Lektion starten",
       "teachers": "Für Lehrkräfte"
@@ -93,7 +93,7 @@
       "steps": {
         "looming": "Annäherungsneuronen erkennen die Fliegenklatsche",
         "gf": "Die Riesenfaser feuert",
-        "jump": "Die Sprungneuronen lösen den Sprung aus"
+        "jump": "Die Sprungneuronen feuern"
       },
       "cells": "{count, plural, one {# Zelle} other {# Zellen}}",
       "firstSpike": "{cells} · {ms} ms",
@@ -121,8 +121,8 @@
       "lead": "Schreiben Sie den Link an die Tafel oder schicken Sie ihn auf die Geräte der Schülerinnen und Schüler. Sonst gibt es nichts einzurichten.",
       "points": {
         "periods": {
-          "title": "1–2 Unterrichtsstunden",
-          "body": "Jede Lektion dauert etwa 10 Minuten. Alle drei passen samt Besprechung in ein bis zwei Schulstunden."
+          "title": "Je eine Unterrichtsstunde",
+          "body": "Jede Lektion allein dauert etwa 10 Minuten. Mit der Besprechung aus dem Leitfaden für Lehrkräfte füllt jede eine Schulstunde von 45 Minuten."
         },
         "install": {
           "title": "Keine Installation, keine Anmeldung",
@@ -263,8 +263,8 @@
   "lessons": {
     "smell-memory": {
       "title": "Wie sich eine Fliege einen Duft merkt",
-      "summary": "Einen Duft in ein echtes Fliegengehirn schicken und die Zellen finden, die ihn sich merken.",
-      "description": "Einen Duft durch ein echtes Fruchtfliegengehirn bis zum Pilzkörper verfolgen und die Zellen finden, die die Erinnerung speichern. Kostenlos, 10 Minuten.",
+      "summary": "Einen Duft in ein echtes Fliegengehirn schicken und herausfinden, wo die Erinnerung daran gespeichert ist.",
+      "description": "Einen Duft durch ein echtes Fruchtfliegengehirn bis zum Pilzkörper verfolgen und finden, wo die Erinnerung daran gespeichert ist. Kostenlos, 10 Minuten.",
       "searchTitle": "Duftgedächtnis der Fruchtfliege: interaktive Gehirn-Lektion",
       "steps": {
         "send": {
@@ -318,7 +318,7 @@
         "text": "Jetzt funktionieren alle Knöpfe. Rate zuerst, dann tippe: Was wird dunkel, wenn du die gelben Duftboten stummschaltest? Probiere auch, zwei Farben gleichzeitig stummzuschalten."
       },
       "mission": {
-        "goal": "Finde die Zellen, die das Duftgedächtnis einer Fliege speichern.",
+        "goal": "Finde heraus, wo eine Fliege ihr Duftgedächtnis aufbewahrt.",
         "win": "Du hast sie gefunden. Die Duftsortierer machen aus jedem Duft ein Muster, und die Gedächtnisleser lesen es. Ohne das Muster gibt es nichts, woran sich die Fliege erinnern könnte."
       },
       "story": {
@@ -328,11 +328,11 @@
             "bubble": "Hier riecht etwas gut."
           },
           "sniff": {
-            "caption": "Die Antennen von {name} fangen ein paar Moleküle davon auf. Mehr braucht eine Fliege nicht.",
+            "caption": "Die Antennen von {name} fangen einen schwachen Hauch davon auf. Mehr braucht eine Fliege nicht.",
             "bubble": "Den Duft kenne ich!"
           },
           "recall": {
-            "caption": "Letzte Woche hat genau dieser Duft {name} zu Futter geführt. Sein Gehirn hat eine Spur davon behalten.",
+            "caption": "Vor zwei Tagen hat genau dieser Duft {name} zu Futter geführt. Sein Gehirn hat eine Spur davon behalten.",
             "bubble": "Pfirsich heißt Abendessen."
           },
           "land": {
@@ -362,10 +362,10 @@
         },
         "right": {
           "text": "Tippe jetzt bei den rechten <turn>Drehneuronen</turn> <gloss>(dem anderen Signal)</gloss> auf „Stimulieren“. Behalte den Leuchtfleck im Blick.",
-          "result": "Der Leuchtfleck ist über die Anzeige gewandert. Die Drehsignale von links und rechts schieben ihn in entgegengesetzte Richtungen. So ändert sich auch, wohin die Fliege schaut."
+          "result": "Der Leuchtfleck ist über die Anzeige gewandert. Die Drehsignale von links und rechts schieben ihn in entgegengesetzte Richtungen. So dreht sich auch der Richtungssinn der Fliege mit."
         },
         "silence": {
-          "text": "Schalte die <ring>Ringneuronen</ring> <gloss>(die Landmarkenboten)</gloss> stumm. Sie melden, was die Fliege sieht. Wir schicken das Signal von rechts für dich.",
+          "text": "Schalte die <ring>Ringneuronen</ring> <gloss>(die Landmarkenboten)</gloss> stumm. Sie melden, was die Fliege sieht. Wir lassen das rechte Drehsignal für dich feuern.",
           "result": "Der Leuchtfleck rutscht von seinem Platz und wandert umher. Ohne Landmarken driftet der Kompass.",
           "predict": {
             "question": "Gleich werden die Landmarkenboten stummgeschaltet. Was macht der Leuchtfleck?",
@@ -377,7 +377,7 @@
           }
         },
         "restore": {
-          "text": "Tippe noch einmal auf den Knopf der <ring>Ringneuronen</ring> <gloss>(der Landmarkenboten)</gloss>, um sie wieder einzuschalten. Wir schicken dasselbe Signal.",
+          "text": "Tippe noch einmal auf den Knopf der <ring>Ringneuronen</ring> <gloss>(der Landmarkenboten)</gloss>, um sie wieder einzuschalten. Wir schicken dasselbe Drehsignal.",
           "result": "Der Leuchtfleck bleibt wieder an seinem Platz. Landmarken halten den Kompass der Fliege auf Kurs."
         }
       },
@@ -394,7 +394,7 @@
           },
           "both": {
             "text": "Du hast auch die grünen Richtungszellen ausgeschaltet.",
-            "feedback": "Nicht ganz. Du hast nur die violetten Zellen stummgeschaltet. Die grünen Richtungszellen haben weiter gefeuert, aber nichts hat sie festgehalten."
+            "feedback": "Nicht ganz. Du hast nur die violetten Zellen stummgeschaltet. Die grünen Richtungszellen haben weiter gefeuert, aber nichts hat den Leuchtfleck festgehalten."
           }
         }
       },
@@ -446,7 +446,7 @@
           "result": "Sie feuern, und nach wenigen Tausendstelsekunden feuert auch die <giantfiber>Riesenfaser</giantfiber> <gloss>(die Fluchtleitung)</gloss>."
         },
         "jump": {
-          "text": "Tippe noch einmal auf „Stimulieren“. Folge der <giantfiber>Riesenfaser</giantfiber> <gloss>(der Fluchtleitung)</gloss> hinunter ins <nervecord>Bauchmark</nervecord> <gloss>(das Fliegen-Rückenmark)</gloss>.",
+          "text": "Tippe noch einmal auf „Stimulieren“. Folge der <giantfiber>Riesenfaser</giantfiber> <gloss>(der Fluchtleitung)</gloss> hinunter ins <nervecord>Bauchmark</nervecord> <gloss>(wie ein Rückenmark)</gloss>.",
           "result": "Die <jump>Sprungneuronen</jump> <gloss>(die Beinkicker)</gloss> feuern innerhalb von 30 Millisekunden. Sie lassen die Mittelbeine nach unten schnellen, und die Fliege springt davon."
         },
         "silence": {
@@ -485,7 +485,7 @@
       },
       "freePlay": {
         "title": "Freies Experimentieren",
-        "text": "Jetzt funktionieren alle Knöpfe. Rate zuerst, dann tippe: Welche Farben leuchten noch, wenn die Fluchtleitung stummgeschaltet ist? Schalte danach stattdessen die Klatschen-Späher stumm."
+        "text": "Jetzt funktionieren alle Knöpfe. Rate zuerst, dann tippe: Was passiert, wenn du stattdessen die Beinkicker stummschaltest? Schalte danach die Klatschen-Späher stumm."
       },
       "mission": {
         "goal": "Finde die Leitung, die die Fliege rettet.",
@@ -502,7 +502,7 @@
             "bubble": "Oh-oh."
           },
           "leap": {
-            "caption": "Seine mittleren Beine stoßen sich ab, bevor die Klatsche trifft. Vom ersten Blick bis zum Sprung: etwa 30 Millisekunden.",
+            "caption": "Seine mittleren Beine stoßen sich ab, bevor die Klatsche trifft. Vom Erkennen bis zum Sprung vergehen nur wenige Hundertstelsekunden.",
             "bubble": "Spring!"
           },
           "safe": {
@@ -609,7 +609,7 @@
       "locked": "Gesperrt",
       "lockedHint": "Nicht in diesem Schritt. Beim freien Experimentieren kannst du alle Knöpfe nutzen.",
       "stimulateNamed": "{name} stimulieren",
-      "silenceNamed": "Stummschalten: {name}",
+      "silenceNamed": "{name} stummschalten",
       "silenced": "Stummgeschaltet · zum Einschalten tippen",
       "silencedLocked": "Stummgeschaltet"
     },
@@ -831,7 +831,7 @@
     },
     "giantfiber": {
       "name": "Riesenfaser",
-      "text": "Eine sehr dicke Nervenzelle, die vom Gehirn hinunter ins Bauchmark zieht. Sie leitet das schnellste Fluchtsignal der Fliege."
+      "text": "Eine sehr dicke Nervenzelle, die vom Gehirn hinunter ins Bauchmark zieht. Sie leitet das schnellste Fluchtsignal der Fliege. Eine Fliege hat zwei davon, eine auf jeder Seite."
     },
     "nervecord": {
       "name": "Bauchmark",
@@ -846,7 +846,7 @@
       "text": "Eine Nervenzelle. Sie empfängt Signale von anderen Zellen. Kommen genug davon zusammen, sendet sie selbst ein Signal."
     },
     "spike": {
-      "name": "Feuern",
+      "name": "Aktionspotenzial (Spike)",
       "text": "Ein kurzer elektrischer Impuls, der an einem aktiven Neuron entlangläuft, auch Aktionspotenzial oder Spike genannt. In den Lektionen zeigt jedes Aufleuchten einen solchen Impuls."
     },
     "synapse": {
@@ -891,7 +891,7 @@
     },
     "sensory": {
       "name": "Sensorisches Neuron",
-      "text": "Ein Neuron, das etwas aus der Umwelt aufnimmt, etwa einen Duft oder einen heransausenden Schatten, und es dem Gehirn meldet."
+      "text": "Ein Neuron, das etwas aus der Umwelt aufnimmt, etwa Licht oder einen Duft, und es dem Gehirn meldet."
     },
     "motor": {
       "name": "Motoneuron",
@@ -906,7 +906,7 @@
       "text": "Ein direkter Kanal zwischen zwei Neuronen, der ein Signal fast ohne Verzögerung weitergibt. Die Karte hinter den Lektionen erfasst nur chemische Synapsen."
     },
     "bump": {
-      "name": "Leuchtfleck",
+      "name": "Aktivitätsfleck",
       "text": "Der Fleck aktiver Kompassneuronen. Seine Lage auf dem Ring zeigt, wohin die Fliege gerade schaut."
     },
     "landmark": {
@@ -914,7 +914,7 @@
       "text": "Etwas, das die Fliege sieht und das an seinem Platz bleibt, wie die Sonne oder ein Baum. Damit hält die Fliege ihren Richtungssinn stabil."
     },
     "bridge": {
-      "name": "Brücke",
+      "name": "Protozerebralbrücke",
       "text": "Ein balkenförmiger Teil des Fliegengehirns, die Protozerebralbrücke. Durch sie ziehen sowohl die Kompassneuronen als auch die Drehneuronen."
     }
   },
@@ -943,8 +943,8 @@
     "items": {
       "smell": {
         "title": "Wie riechen Fliegen?",
-        "short": "Eine Fliege riecht mit ihren zwei Antennen. Duftrezeptoren darauf feuern, wenn ein Duft landet, und das Signal wird im Gehirn sortiert.",
-        "a": "Eine Fliege hat keine Nase. Ihre zwei Antennen sind mit winzigen Härchen bedeckt, und in jedem Härchen sitzen Duftrezeptoren: Nervenzellen, die feuern, wenn das passende Duftmolekül auf ihnen landet. Eine Fruchtfliege hat etwa 50 Arten von Rezeptoren, und jede Art reagiert auf ihre eigene Auswahl an Düften. An dieser Mischung von Signalen unterscheidet die Fliege einen Duft vom anderen.",
+        "short": "Eine Fliege riecht vor allem mit ihren zwei Antennen. Duftrezeptoren darauf feuern, wenn ein Duft landet, und das Signal wird im Gehirn sortiert.",
+        "a": "Eine Fliege hat keine Nase. Sie riecht vor allem mit ihren zwei Antennen. Diese sind mit winzigen Härchen bedeckt, und in jedem Härchen sitzen Duftrezeptoren: Nervenzellen, die feuern, wenn das passende Duftmolekül auf ihnen landet. Eine Fruchtfliege hat etwa 50 Arten von Rezeptoren, und jede Art reagiert auf ihre eigene Auswahl an Düften. An dieser Mischung von Signalen unterscheidet die Fliege einen Duft vom anderen.",
         "b": "Die Rezeptoren schicken ihr Signal in den Antennallobus, die erste Station für Düfte im Gehirn. Dort treffen sich alle Rezeptoren einer Art an derselben Stelle, sodass aus einem Duft ein Muster aktiver Stellen wird. Projektionsneuronen tragen dieses Muster tiefer ins Gehirn, zum Pilzkörper, wo die Fliege Düfte mit guten und schlechten Erfahrungen verknüpft."
       },
       "memory": {
@@ -963,30 +963,30 @@
         "title": "Warum sind Fliegen so schwer zu erwischen?",
         "short": "Eine Fliege sieht die Klatsche früh, und ein schneller Fluchtschaltkreis bringt sie in Hundertstelsekunden in die Luft, noch bevor die Klatsche trifft.",
         "a": "Drei Dinge helfen der Fliege. Ihre Augen überblicken fast den ganzen Raum um sie herum, sodass man sich kaum von hinten anschleichen kann. Sie sieht schneller als wir, eine Hand wirkt auf sie langsam. Und sie hat Neuronen mit einer einzigen Aufgabe: Sie feuern, wenn etwas im Blickfeld schnell größer wird, so wie eine näher kommende Klatsche.",
-        "b": "Diese Annäherungsneuronen sind mit der Riesenfaser verbunden, einer sehr dicken Nervenzelle, die vom Gehirn hinunter zu den Neuronen der Sprungbeine zieht. Eine dicke Faser leitet ihr Signal schnell, der Befehl zum Sprung kommt also fast sofort an. Hochgeschwindigkeitsaufnahmen zeigen außerdem, dass die Fliege kurz vor dem Abheben ihre Beine umsetzt, damit der Sprung sie von der Klatsche wegträgt."
+        "b": "Diese Annäherungsneuronen sind mit der Riesenfaser verbunden, einer sehr dicken Nervenzelle, die vom Gehirn hinunter zu den Neuronen der Sprungbeine zieht. Eine dicke Faser leitet ihr Signal schnell, der Befehl zum Sprung kommt also fast sofort an. Wenn ihr einen Moment Zeit bleibt, setzt eine Fliege zuerst ihre Beine um, damit der Sprung sie von der Klatsche wegträgt. Im Notfall kann die Riesenfaser sie sofort abheben lassen."
       },
       "reaction": {
         "title": "Wie lang ist die Reaktionszeit einer Fliege?",
-        "short": "Eine Fruchtfliege kann wenige Hundertstelsekunden, nachdem sie Gefahr bemerkt, zum Fluchtsprung ansetzen. Ein Mensch braucht etwa eine Viertelsekunde.",
-        "a": "Wenn etwas auf eine Fliege zurast, läuft das Signal in einigen Dutzend Millisekunden von den Augen zu den Beinmuskeln. Eine Millisekunde ist eine Tausendstelsekunde. In der WiredMind-Lektion feuern die Sprungneuronen etwa 30 ms, nachdem die Klatsche auftaucht. Dieser Wert stammt aus einem einfachen Modell, nicht aus der Messung an einer Fliege, liegt aber in einem realistischen Bereich. Ein Mensch braucht rund 250 ms, nur um auf einen Lichtblitz zu reagieren.",
+        "short": "Fliegen starten ihren schnellsten Fluchtsprung wenige Hundertstelsekunden, nachdem Gefahr naht. Ein Mensch braucht schon zum Reagieren eine Viertelsekunde.",
+        "a": "Wenn etwas auf eine Fliege zurast, läuft das Signal in einigen Dutzend Millisekunden von den Augen zu den Beinmuskeln. Eine Millisekunde ist eine Tausendstelsekunde. In der WiredMind-Lektion feuern die Sprungneuronen etwa 30 ms, nachdem die Klatsche auftaucht. Dieser Wert stammt aus einem einfachen Modell, nicht aus der Messung an einer Fliege, liegt aber in der richtigen Größenordnung. Ein Mensch braucht rund 250 ms, nur um auf einen Lichtblitz zu reagieren.",
         "b": "Die Geschwindigkeit steckt in der Verschaltung. Der Weg ist kurz: Annäherungsneuronen, dann die Riesenfaser, dann die Sprungneuronen. Die Riesenfaser ist ungewöhnlich dick, deshalb läuft ihr Signal schnell. Und in einer echten Fliege gibt sie das Signal über elektrische Synapsen weiter, direkte Kanäle zwischen Zellen fast ohne Verzögerung."
       },
       "neurons": {
         "title": "Wie viele Neuronen hat das Gehirn einer Fruchtfliege?",
-        "short": "Etwa 140.000. 2024 wurde jedes einzelne davon im Gehirn einer erwachsenen Fruchtfliege kartiert, samt den Dutzenden Millionen Synapsen dazwischen.",
+        "short": "Etwa 140.000. 2024 wurde jedes einzelne davon im Gehirn einer einzigen erwachsenen Fruchtfliege kartiert, samt mehr als 50 Millionen Synapsen dazwischen.",
         "a": "Das Gehirn einer Fruchtfliege ist kleiner als ein Mohnkorn und enthält etwa 140.000 Neuronen. Ein menschliches Gehirn hat mehrere hunderttausendmal so viele. Trotzdem kann die Fliege damit fliegen, Futter finden, Düfte lernen und einer Klatsche entkommen.",
-        "b": "Eine vollständige Karte eines Nervensystems, mit jedem Neuron und jeder Synapse, heißt Konnektom. Die Fruchtfliege ist eines von sehr wenigen Tieren, deren ganzes Gehirn so kartiert wurde. Die WiredMind-Lektionen laufen auf dem Konnektom von Gehirn und Bauchmark einer männlichen Fliege, und jede Lektion nutzt einen Schaltkreis aus 3.000 bis 4.500 seiner Neuronen."
+        "b": "Eine vollständige Karte eines Nervensystems, mit jedem Neuron und jeder Synapse, heißt Konnektom. Die Fruchtfliege ist eines von sehr wenigen Tieren, deren ganzes Gehirn so kartiert wurde. Die WiredMind-Lektionen laufen auf einer anderen, späteren Karte: dem Konnektom von Gehirn und Bauchmark einer männlichen Fliege, und jede Lektion nutzt einen Schaltkreis aus 3.000 bis 4.500 seiner Neuronen."
       }
     }
   },
   "teachers": {
     "meta": {
       "indexTitle": "Unterrichtsmaterial Neurobiologie für Lehrkräfte · WiredMind",
-      "indexDescription": "Zu jeder WiredMind-Lektion: ein Stundenentwurf, erwartete Antworten, Diskussionsfragen und ein Arbeitsblatt zum Ausdrucken.",
+      "indexDescription": "Zu jeder WiredMind-Lektion zur Fruchtfliege: kostenloser Stundenentwurf Neurobiologie für 45 Minuten, erwartete Antworten, Diskussionsfragen, Arbeitsblatt.",
       "guideTitle": "Stundenentwurf: {title}",
       "guideDescription": "Stundenentwurf (45 Min.) zu „{title}“: Lernziel, Beobachtungen, erwartete Antworten, Diskussionsfragen, Fehlvorstellungen.",
       "worksheetTitle": "Arbeitsblatt: {title}",
-      "worksheetDescription": "Ein Arbeitsblatt zum Ausdrucken für „{title}“: vermuten, ausprobieren, beobachten, erklären."
+      "worksheetDescription": "Ein kostenloses Arbeitsblatt zum Ausdrucken für „{title}“: Die Klasse vermutet, probiert aus, beobachtet und erklärt."
     },
     "index": {
       "title": "Leitfäden für Lehrkräfte",
@@ -1009,7 +1009,7 @@
       "eyebrow": "Leitfaden für Lehrkräfte · Lektion {number}",
       "print": "Drucken",
       "lesson": "Lektion öffnen",
-      "demo": "„Zeig mir“ im Klassenmodus abspielen",
+      "demo": "„Zeig mir, wie es funktioniert“ im Klassenmodus abspielen",
       "worksheet": "Arbeitsblatt",
       "all": "Alle Leitfäden für Lehrkräfte",
       "address": "Adresse der Lektion",
@@ -1021,7 +1021,7 @@
       "minutes": "{minutes} Min.",
       "phases": {
         "opening": "Einstiegsfrage",
-        "demo": "Vorführung mit „Zeig mir“",
+        "demo": "Vorführung mit „Zeig mir, wie es funktioniert“",
         "explore": "Die Klasse erkundet selbst",
         "discuss": "Besprechung"
       },
@@ -1197,7 +1197,7 @@
       "escape": {
         "goal": "Die Schülerinnen und Schüler verfolgen einen Reflex von den Augen bis zu den Beinmuskeln in etwa 30 Millisekunden und zeigen, dass die schnelle Flucht an einem einzigen Glied hängt: der Riesenfaser.",
         "topics": {
-          "reflex": "Eine vollständige Reflexbahn in drei Teilen: sensorische Neuronen (die Annäherungsneuronen), eine Schaltstation (die Riesenfaser) und Motoneuronen (die Sprungneuronen). Anders als beim Kniesehnenreflex läuft diese Verschaltung über das Gehirn.",
+          "reflex": "Eine vollständige Reflexbahn in drei Teilen: die sensorische Seite (die Annäherungsneuronen, die melden, was die Augen sehen), eine Schaltstation (die Riesenfaser) und Motoneuronen (die Sprungneuronen). Anders als beim Kniesehnenreflex läuft diese Verschaltung über das Gehirn.",
           "structure": "Das Signal läuft von Hunderten Annäherungsneuronen auf die Riesenfaser zusammen. Wegen dieses Engpasses verschwindet das Verhalten, wenn man eine einzige Zellart stummschaltet.",
           "synapses": "Die Riesenfaser ist dick, und das macht ihr Signal schnell. In einer echten Fliege nutzt sie außerdem elektrische Synapsen, die schnellste Art; das Modell hat nur chemische Synapsen."
         },
@@ -1217,7 +1217,7 @@
         "misconceptions": {
           "a": {
             "claim": "Die Fliege entscheidet sich zu springen.",
-            "fix": "Der schnelle Sprung ist ein Reflex: Die Verschaltung leitet das Signal ohne Umweg durch. Es gibt keine Stufe, auf der die Fliege abwägt."
+            "fix": "Der schnellste Sprung funktioniert wie ein Reflex: Die Verschaltung leitet das Signal ohne Umweg durch. Langsamere Fluchten lassen ein wenig Zeit, den Sprung auszurichten, aber keine Zeit zum Nachdenken."
           },
           "b": {
             "claim": "Wenn die Fliege nicht gesprungen ist, hat sie die Fliegenklatsche nicht gesehen.",
@@ -1249,7 +1249,7 @@
         "levels": {
           "fly": "Welche Teile dieses Körpers braucht die Fliege, um zu fliehen?",
           "brain": "Das Signal beginnt in den Augen und endet in den Beinen. Wo muss es unterwegs durch?",
-          "circuit": "Hunderte blaue Zellen und eine rote Linie. Was fällt euch an dem Weg auf?",
+          "circuit": "Hunderte blaue Zellen und nur zwei rote Linien, eine auf jeder Seite. Was fällt euch an dem Weg auf?",
           "neuron": "Diese eine Zelle ist ungewöhnlich dick. Warum hilft eine dicke Leitung bei einer schnellen Flucht?"
         },
         "predictWhy": "Die Annäherungsneuronen feuern weiter, die Fliege sieht die Klatsche also. Ist die Riesenfaser aber stumm, erreicht das Signal die Sprungneuronen nie, und sie bleiben dunkel."

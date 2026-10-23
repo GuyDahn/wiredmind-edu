@@ -7,8 +7,8 @@
   },
   "meta": {
     "home": {
-      "title": "WiredMind: Gerçek bir meyve sineği beynini keşfedin",
-      "description": "Meyve sineği beyninin gerçek bağlantıları üzerine ücretsiz sınıf dersleri. MaleCNS konektomundaki nöronları tarayıcıda uyarın ve susturun. Giriş gerekmez."
+      "title": "WiredMind: Gerçek sinek beyninde ücretsiz nörobilim dersleri",
+      "description": "11–16 yaş için ücretsiz, 10 dakikalık sinirbilim dersleri. Meyve sineği konektomundaki gerçek nöronları tarayıcıda uyarın ve susturun. Giriş gerekmez."
     },
     "about": {
       "title": "WiredMind hakkında: Neler gerçek, neler basitleştirilmiş",
@@ -82,7 +82,7 @@
   "landing": {
     "hero": {
       "eyebrow": "Sınıf için ücretsiz sinirbilim dersleri",
-      "title": "Gerçek bir meyve sineğinin beyninde bir nöronu ateşleyin ve sinyalin gözlerinden bacaklarına nasıl hızla ulaştığını izleyin.",
+      "title": "Gerçek bir meyve sineğinin bağlantı şemasında bir nöronu ateşleyin ve sinyalin gözlerinden bacaklarına nasıl hızla ulaştığını izleyin.",
       "lead": "WiredMind, bir meyve sineğinin sinir sisteminin gerçek bağlantı şemasını tarayıcıda çalıştırır. Öğrenciler üç kısa, rehberli derste nöronları uyarır, susturur ve neyin değiştiğini görür.",
       "start": "İlk derse başlayın",
       "teachers": "Öğretmenler için"
@@ -93,7 +93,7 @@
       "steps": {
         "looming": "Yaklaşma nöronları sinekliği fark eder",
         "gf": "Dev lif ateşlenir",
-        "jump": "Sıçrama nöronları bacakları iter"
+        "jump": "Sıçrama nöronları ateşlenir"
       },
       "cells": "{count, plural, one {# hücre} other {# hücre}}",
       "firstSpike": "{cells} · {ms} ms",
@@ -121,8 +121,8 @@
       "lead": "Bağlantıyı tahtaya yazın ya da öğrencilerin kendi cihazlarına gönderin. Başka hiçbir kurulum gerekmez.",
       "points": {
         "periods": {
-          "title": "1–2 ders saati",
-          "body": "Her ders yaklaşık 10 dakika sürer. Tartışmayla birlikte üç ders de bir ya da iki ders saatine sığar."
+          "title": "Her biri bir ders saati",
+          "body": "Her ders tek başına yaklaşık 10 dakika sürer. Öğretmen kılavuzundaki tartışmayla birlikte her biri 45 dakikalık bir ders saatini doldurur."
         },
         "install": {
           "title": "Kurulum yok, giriş yok",
@@ -263,8 +263,8 @@
   "lessons": {
     "smell-memory": {
       "title": "Sinek bir kokuyu nasıl hatırlar?",
-      "summary": "Gerçek bir sinek beynine bir koku gönder ve onu hatırlayan hücreleri bul.",
-      "description": "Gerçek bir meyve sineği beynine koku gönder, onu mantar cisimciğine kadar izle ve kokunun anısını saklayan hücreleri bul. Ücretsiz, 10 dakikalık bir ders.",
+      "summary": "Gerçek bir sinek beynine bir koku gönder ve kokunun anısının nerede saklandığını bul.",
+      "description": "Gerçek bir meyve sineği beynine koku gönder, onu mantar cisimciğine kadar izle ve kokunun anısının nerede saklandığını bul. Ücretsiz, 10 dakikalık ders.",
       "searchTitle": "Sinekler nasıl koku alır ve hatırlar? Etkileşimli ders",
       "steps": {
         "send": {
@@ -318,7 +318,7 @@
         "text": "Artık tüm düğmeler çalışıyor. Önce tahmin et, sonra dokun: Sarı koku habercilerini susturursan ne söner? İki rengi aynı anda susturmayı da dene."
       },
       "mission": {
-        "goal": "Sineğin koku belleğini tutan hücreleri bul.",
+        "goal": "Sineğin koku belleğini nerede tuttuğunu bul.",
         "win": "Onları buldun. Koku ayırıcıları her kokuyu bir desene çevirir, bellek okuyucuları da bu deseni okur. Desen yoksa hatırlanacak bir şey de yoktur."
       },
       "story": {
@@ -328,11 +328,11 @@
             "bubble": "Bir şey güzel kokuyor."
           },
           "sniff": {
-            "caption": "{name} antenleriyle bu kokunun birkaç molekülünü yakalar. Bir sineğe bu kadarı yeter.",
+            "caption": "{name} antenleriyle bu kokunun hafif bir izini yakalar. Bir sineğe bu kadarı yeter.",
             "bubble": "Bu kokuyu tanıyorum!"
           },
           "recall": {
-            "caption": "Geçen hafta {name} aynı kokuyu izleyip yemeğe ulaşmıştı. Beyni bundan bir iz sakladı.",
+            "caption": "İki gün önce {name} aynı kokuyu izleyip yemeğe ulaşmıştı. Beyni bundan bir iz sakladı.",
             "bubble": "Şeftali demek, akşam yemeği demek."
           },
           "land": {
@@ -354,7 +354,7 @@
       "title": "Sinek hangi yöne baktığını nasıl bilir?",
       "summary": "Gerçek bir sineğin pusulasını sağa sola it ve onu yerinde neyin tuttuğunu gör.",
       "description": "Gerçek bir meyve sineğinin iç pusulasını sağa sola it, sonra halka nöronlarını sustur ve yön duygusunun kaymasını izle. Ücretsiz, 10 dakikalık bir ders.",
-      "searchTitle": "Sineğin iç pusulası: etkileşimli beyin dersi",
+      "searchTitle": "Meyve sineğinin iç pusulası: etkileşimli beyin dersi",
       "steps": {
         "left": {
           "text": "Sol <turn>dönüş nöronlarını</turn> <gloss>(dönüş sinyali)</gloss> ateşlemek için “Uyar” düğmesine dokun. Sonra pusula kadranını izle.",
@@ -362,7 +362,7 @@
         },
         "right": {
           "text": "Şimdi sağ <turn>dönüş nöronlarının</turn> <gloss>(diğer sinyal)</gloss> “Uyar” düğmesine dokun. Gözünü tümsekten ayırma.",
-          "result": "Tümsek kadranda döndü. İki taraftan gelen dönüş sinyalleri onu zıt yönlere iter; bu yüzden sineğin yönü de döner."
+          "result": "Tümsek kadranda döndü. İki taraftan gelen dönüş sinyalleri onu zıt yönlere iter; bu yüzden sineğin yön duygusu da döner."
         },
         "silence": {
           "text": "<ring>Halka nöronlarını</ring> <gloss>(yer işareti taşıyıcıları)</gloss> sustur. Bu nöronlar sineğin gördüklerini içeri taşır. Sağ dönüş sinyalini senin için biz göndereceğiz.",
@@ -377,7 +377,7 @@
           }
         },
         "restore": {
-          "text": "<ring>Halka nöronları</ring> <gloss>(yer işareti taşıyıcıları)</gloss> düğmesine tekrar dokunup onları yeniden aç. Aynı sinyali biz göndereceğiz.",
+          "text": "<ring>Halka nöronları</ring> <gloss>(yer işareti taşıyıcıları)</gloss> düğmesine tekrar dokunup onları yeniden aç. Aynı dönüş sinyalini biz göndereceğiz.",
           "result": "Tümsek yine yerinde durur. Yer işaretleri sineğin pusulasını şaşmaz tutar."
         }
       },
@@ -394,7 +394,7 @@
           },
           "both": {
             "text": "Yeşil yön hücrelerini de kapattın.",
-            "feedback": "Tam olarak değil. Sadece mor hücreleri susturdun. Yeşil yön hücreleri ateşlenmeye devam etti ama onları sabit tutan hiçbir şey yoktu."
+            "feedback": "Tam olarak değil. Sadece mor hücreleri susturdun. Yeşil yön hücreleri ateşlenmeye devam etti ama tümseği sabit tutan hiçbir şey yoktu."
           }
         }
       },
@@ -446,7 +446,7 @@
           "result": "Onlar ateşlenir ve saniyenin birkaç binde biri içinde <giantfiber>dev lif</giantfiber> <gloss>(kaçış kablosu)</gloss> de ateşlenir."
         },
         "jump": {
-          "text": "“Uyar” düğmesine yine dokun. <giantfiber>Dev lifi</giantfiber> <gloss>(kaçış kablosu)</gloss> aşağıya, <nervecord>sinir kordonuna</nervecord> <gloss>(sineğin omuriliği)</gloss> kadar izle.",
+          "text": "“Uyar” düğmesine yine dokun. <giantfiber>Dev lifi</giantfiber> <gloss>(kaçış kablosu)</gloss> aşağıya, <nervecord>sinir kordonuna</nervecord> <gloss>(omurilik gibi)</gloss> kadar izle.",
           "result": "<jump>Sıçrama nöronları</jump> <gloss>(bacak iticileri)</gloss> 30 milisaniye içinde ateşlenir. Orta bacakları hızla iterler ve sinek sıçrayıp kaçar."
         },
         "silence": {
@@ -485,7 +485,7 @@
       },
       "freePlay": {
         "title": "Serbest keşif",
-        "text": "Artık tüm düğmeler çalışıyor. Önce tahmin et, sonra dokun: Kaçış kablosu susturulmuşken hangi renkler hâlâ yanıyor? Sonra bunun yerine sineklik gözcülerini susturmayı dene."
+        "text": "Artık tüm düğmeler çalışıyor. Önce tahmin et, sonra dokun: Bunun yerine bacak iticilerini susturursan ne olur? Sonra sineklik gözcülerini susturmayı dene."
       },
       "mission": {
         "goal": "Sineği kurtaran kabloyu bul.",
@@ -502,7 +502,7 @@
             "bubble": "Eyvah."
           },
           "leap": {
-            "caption": "Sineklik inmeden önce orta bacakları iter. İlk görüşten sıçrayışa: yaklaşık 30 milisaniye.",
+            "caption": "Sineklik inmeden önce orta bacakları iter. Onu fark etmesinden sıçramasına kadar saniyenin yalnızca birkaç yüzde biri geçer.",
             "bubble": "Zıpla!"
           },
           "safe": {
@@ -831,7 +831,7 @@
     },
     "giantfiber": {
       "name": "Dev lif",
-      "text": "Beyinden aşağıya, sinir kordonuna uzanan çok kalın bir sinir hücresi. Sineğin en hızlı kaçış sinyalini taşır."
+      "text": "Beyinden aşağıya, sinir kordonuna uzanan çok kalın bir sinir hücresi. Sineğin en hızlı kaçış sinyalini taşır. Bir sinekte iki tane vardır, her yanda bir tane."
     },
     "nervecord": {
       "name": "Sinir kordonu",
@@ -846,7 +846,7 @@
       "text": "Bir sinir hücresi. Başka hücrelerden sinyal alır ve bu sinyaller yeterince birikince kendi sinyalini gönderir."
     },
     "spike": {
-      "name": "Ateşleme",
+      "name": "Aksiyon potansiyeli (spike)",
       "text": "Etkin bir nöronun kendi boyunca gönderdiği kısa elektrik darbesi. Buna aksiyon potansiyeli de denir. Derslerde her ışık parlaması bir ateşlemeyi gösterir."
     },
     "synapse": {
@@ -891,7 +891,7 @@
     },
     "sensory": {
       "name": "Duyu nöronu",
-      "text": "Dış dünyadan bir şeyi, örneğin bir kokuyu ya da yaklaşan bir gölgeyi algılayıp beyne bildiren nöron."
+      "text": "Dış dünyadan bir şeyi, örneğin ışığı ya da bir kokuyu algılayıp beyne bildiren nöron."
     },
     "motor": {
       "name": "Motor nöron",
@@ -906,7 +906,7 @@
       "text": "İki nöron arasında, sinyali neredeyse hiç gecikmeden ileten doğrudan bir kanal. Derslerin dayandığı harita yalnızca kimyasal sinapsları kaydeder."
     },
     "bump": {
-      "name": "Tümsek",
+      "name": "Aktivite tümseği",
       "text": "Etkin pusula nöronlarının oluşturduğu bölge. Halka üzerinde durduğu yer, sineğin hangi yöne baktığını gösterir."
     },
     "landmark": {
@@ -914,7 +914,7 @@
       "text": "Sineğin gördüğü ve yerinde duran bir şey; örneğin güneş ya da bir ağaç. Sinek, yön duygusunu sabit tutmak için onu kullanır."
     },
     "bridge": {
-      "name": "Köprü",
+      "name": "Protoserebral köprü",
       "text": "Sineğin beyninde çubuk biçimli bir bölüm: protoserebral köprü. Hem pusula nöronları hem dönüş nöronları buradan geçer."
     }
   },
@@ -943,8 +943,8 @@
     "items": {
       "smell": {
         "title": "Sinekler nasıl koku alır?",
-        "short": "Sinek, iki anteniyle koku alır. Antenlerdeki koku reseptörleri bir koku geldiğinde ateşlenir ve sinyal ayrıştırılmak üzere beyne gider.",
-        "a": "Sineğin burnu yoktur. İki anteni minik tüylerle kaplıdır ve her tüyün içinde koku reseptörleri bulunur: doğru koku molekülü üzerlerine konduğunda ateşlenen sinir hücreleri. Bir meyve sineğinde yaklaşık 50 çeşit reseptör vardır ve her çeşit kendi koku grubuna yanıt verir. Sinek, bir kokuyu diğerinden bu sinyal karışımıyla ayırt eder.",
+        "short": "Sinek, çoğunlukla iki anteniyle koku alır. Antenlerdeki koku reseptörleri bir koku geldiğinde ateşlenir ve sinyal ayrıştırılmak üzere beyne gider.",
+        "a": "Sineğin burnu yoktur. Çoğunlukla iki anteniyle koku alır. Antenleri minik tüylerle kaplıdır ve her tüyün içinde koku reseptörleri bulunur: doğru koku molekülü üzerlerine konduğunda ateşlenen sinir hücreleri. Bir meyve sineğinde yaklaşık 50 çeşit reseptör vardır ve her çeşit kendi koku grubuna yanıt verir. Sinek, bir kokuyu diğerinden bu sinyal karışımıyla ayırt eder.",
         "b": "Reseptörler sinyallerini beyindeki ilk koku durağı olan anten lobuna gönderir. Orada aynı çeşitten bütün reseptörler aynı noktada buluşur, böylece bir koku etkin noktalardan oluşan bir desene dönüşür. Projeksiyon nöronları bu deseni daha derine, mantar cisimciğine taşır; sinek kokuları iyi ve kötü deneyimlerle orada ilişkilendirir."
       },
       "memory": {
@@ -963,30 +963,30 @@
         "title": "Sinekleri vurmak neden bu kadar zor?",
         "short": "Sinek, sinekliğin geldiğini erkenden görür ve hızlı bir kaçış devresi onu saniyenin birkaç yüzde biri içinde, sineklik inmeden havalandırır.",
         "a": "Üç şey sineğin lehine çalışır. Gözleri çevresindeki alanın neredeyse tamamını görür, bu yüzden arkadan sessizce yaklaşmak zordur. Görmesi bizimkinden hızlıdır, bir el ona yavaş görünür. Bir de tek görevi olan nöronları vardır: yaklaşan bir sineklik gibi, görüş alanında bir şey hızla büyüdüğünde ateşlenirler.",
-        "b": "Bu yaklaşma nöronları dev life bağlanır: beyinden aşağıya, sıçrama bacaklarını çalıştıran nöronlara uzanan çok kalın bir sinir hücresi. Kalın bir lif sinyalini hızlı taşır, bu yüzden sıçrama emri neredeyse anında ulaşır. Yüksek hızlı çekimler ayrıca sineğin havalanmadan hemen önce bacaklarını yeniden yerleştirdiğini gösterir; böylece sıçrayış onu sineklikten uzağa götürür."
+        "b": "Bu yaklaşma nöronları dev life bağlanır: beyinden aşağıya, sıçrama bacaklarını çalıştıran nöronlara uzanan çok kalın bir sinir hücresi. Kalın bir lif sinyalini hızlı taşır, bu yüzden sıçrama emri neredeyse anında ulaşır. Bir anlık zamanı olduğunda sinek önce bacaklarını yeniden yerleştirir; böylece sıçrayış onu sineklikten uzağa götürür. Acil durumda ise dev lif onu hemen fırlatabilir."
       },
       "reaction": {
         "title": "Bir sineğin tepki süresi ne kadar?",
-        "short": "Meyve sineği, tehlikeyi fark ettikten saniyenin birkaç yüzde biri sonra kaçış sıçramasına başlayabilir. Bir insanın çeyrek saniyeye ihtiyacı vardır.",
-        "a": "Bir şey sineğe doğru hızla yaklaştığında, sinyal gözlerinden bacak kaslarına onlarca milisaniyede ulaşır. Bir milisaniye, saniyenin binde biridir. WiredMind dersinde sıçrama nöronları, sineklik göründükten yaklaşık 30 ms sonra ateşlenir. Bu sayı bir sinekten alınmış kayıttan değil, basit bir modelden gelir, ama gerçekçi bir aralığa düşer. Bir insanın yalnızca bir ışık parlamasına tepki vermesi yaklaşık 250 ms sürer.",
+        "short": "Sineğin en hızlı kaçış sıçraması, tehlike yaklaştıktan saniyenin birkaç yüzde biri sonra başlar. İnsanın yalnızca tepki vermesi çeyrek saniye kadar sürer.",
+        "a": "Bir şey sineğe doğru hızla yaklaştığında, sinyal gözlerinden bacak kaslarına onlarca milisaniyede ulaşır. Bir milisaniye, saniyenin binde biridir. WiredMind dersinde sıçrama nöronları, sineklik göründükten yaklaşık 30 ms sonra ateşlenir. Bu sayı bir sinekten alınmış kayıttan değil, basit bir modelden gelir, ama büyüklük mertebesi doğrudur. Bir insanın yalnızca bir ışık parlamasına tepki vermesi yaklaşık 250 ms sürer.",
         "b": "Hız, bağlantılardan gelir. Yol kısadır: yaklaşma nöronları, sonra dev lif, sonra sıçrama nöronları. Dev lif alışılmadık ölçüde kalındır, bu da sinyalini hızlandırır. Gerçek bir sinekte ise sinyali elektriksel sinapslarla, yani hücreler arasında neredeyse hiç gecikmesiz doğrudan kanallarla aktarır."
       },
       "neurons": {
         "title": "Meyve sineğinin beyninde kaç nöron var?",
-        "short": "Yaklaşık 140.000. 2024’te bilim insanları yetişkin bir meyve sineğinin beynindeki her nöronu, aralarındaki on milyonlarca sinapsla birlikte haritaladı.",
+        "short": "Yaklaşık 140.000. 2024’te bilim insanları yetişkin tek bir meyve sineğinin beynindeki her nöronu ve aralarındaki 50 milyondan fazla sinapsı haritaladı.",
         "a": "Bir meyve sineğinin beyni haşhaş tohumundan küçüktür ve yaklaşık 140.000 nöron içerir. İnsan beyninde bunun yüz binlerce katı vardır. Yine de sinek bu beyinle uçar, yiyecek bulur, kokuları öğrenir ve sineklikten kaçar.",
-        "b": "Bir sinir sisteminin her nöronu ve her sinapsıyla eksiksiz haritasına konektom denir. Meyve sineği, bütün beyni bu şekilde haritalanmış çok az sayıdaki hayvandan biridir. WiredMind dersleri bir erkek sineğin beyninin ve sinir kordonunun konektomu üzerinde çalışır ve her ders, onun 3.000 ile 4.500 arasındaki nöronundan oluşan bir devre kullanır."
+        "b": "Bir sinir sisteminin her nöronu ve her sinapsıyla eksiksiz haritasına konektom denir. Meyve sineği, bütün beyni bu şekilde haritalanmış çok az sayıdaki hayvandan biridir. WiredMind dersleri farklı ve daha sonraki bir harita üzerinde çalışır: bir erkek sineğin beyninin ve sinir kordonunun konektomu. Her ders, onun 3.000 ile 4.500 arasındaki nöronundan oluşan bir devre kullanır."
       }
     }
   },
   "teachers": {
     "meta": {
-      "indexTitle": "Öğretmen kılavuzları · WiredMind",
-      "indexDescription": "Her WiredMind dersi için ders planı, beklenen yanıtlar, tartışma soruları ve yazdırılabilir öğrenci çalışma kâğıdı.",
+      "indexTitle": "Sinirbilim ders planları ve çalışma kâğıtları · WiredMind",
+      "indexDescription": "Her WiredMind meyve sineği dersi için ücretsiz 45 dakikalık sinirbilim ders planları, beklenen yanıtlar, tartışma soruları ve çalışma kâğıtları.",
       "guideTitle": "Öğretmen kılavuzu: {title}",
       "guideDescription": "“{title}” için 45 dakikalık plan: hedef, fark edilecekler, beklenen yanıtlar, tartışma soruları, sık yanılgılar.",
       "worksheetTitle": "Çalışma kâğıdı: {title}",
-      "worksheetDescription": "“{title}” için yazdırılabilir öğrenci çalışma kâğıdı: tahmin et, dene, gözlemle, açıkla."
+      "worksheetDescription": "“{title}” için ücretsiz, yazdırılabilir çalışma kâğıdı: öğrenciler tahmin eder, dener, gözlemler ve açıklar."
     },
     "index": {
       "title": "Öğretmen kılavuzları",
@@ -997,7 +997,7 @@
       "demo": "Sınıfa gösterin",
       "generalTerms": "Temel terimler",
       "companionTitle": "Tamamlayıcı bir kurs",
-      "companion": "5 ünite biyoloji alan birçok öğrenci, Tel Aviv Üniversitesi’nin Campus IL üzerinde sunduğu, Prof. Yossi Yovel ile Prof. Yaniv Assaf’ın verdiği <campusil>Beyin: Makinelerin En Harikası</campusil> adlı ücretsiz kursu da alıyor. Kurs nöronları, aksiyon potansiyellerini ve sinapsları derinlemesine anlatır; bu dersler de ona uygulamalı bir eşlikçi olur. WiredMind bağımsız bir projedir. Kursla, üniversiteyle ya da Campus IL ile bir bağlantısı yoktur."
+      "companion": "İsrail’de 5 ünite biyoloji alan birçok öğrenci, Tel Aviv Üniversitesi’nin Campus IL üzerinde sunduğu, Prof. Yossi Yovel ile Prof. Yaniv Assaf’ın verdiği <campusil>Beyin: Makinelerin En Harikası</campusil> adlı ücretsiz kursu da alıyor. Kurs nöronları, aksiyon potansiyellerini ve sinapsları derinlemesine anlatır; bu dersler de ona uygulamalı bir eşlikçi olur. WiredMind bağımsız bir projedir. Kursla, üniversiteyle ya da Campus IL ile bir bağlantısı yoktur."
     },
     "topics": {
       "excitation": "Uyarma ve baskılama",
@@ -1197,7 +1197,7 @@
       "escape": {
         "goal": "Öğrenciler gözlerden bacak kaslarına yaklaşık 30 milisaniyede ulaşan bir refleksi izler ve hızlı kaçışın tek bir halkaya, dev life bağlı olduğunu gösterir.",
         "topics": {
-          "reflex": "Üç parçalı eksiksiz bir refleks yolu: duyu nöronları (yaklaşma nöronları), bir ara durak (dev lif) ve motor nöronlar (sıçrama nöronları). Diz kapağı refleksinden farklı olarak bu ara durak beyinden geçer.",
+          "reflex": "Üç parçalı eksiksiz bir refleks yolu: duyusal taraf (gözlerin gördüğünü bildiren yaklaşma nöronları), bir ara durak (dev lif) ve motor nöronlar (sıçrama nöronları). Diz kapağı refleksinden farklı olarak bu ara durak beyinden geçer.",
           "structure": "Sinyal, yüzlerce yaklaşma nöronundan dev life doğru daralır. Tek bir hücre türünü susturmanın davranışı ortadan kaldırmasının nedeni bu dar boğazdır.",
           "synapses": "Dev lif kalındır; bu da sinyalini hızlandırır. Gerçek sinekte ayrıca en hızlı tür olan elektriksel sinapsları kullanır; modelde yalnızca kimyasal sinapslar vardır."
         },
@@ -1217,7 +1217,7 @@
         "misconceptions": {
           "a": {
             "claim": "Sinek sıçramaya karar verir.",
-            "fix": "Hızlı sıçrama bir reflekstir: Bağlantılar sinyali dosdoğru sonuna kadar taşır. Sineğin seçeneklerini tarttığı bir aşama yoktur."
+            "fix": "En hızlı sıçrama bir refleks gibi işler: Bağlantılar sinyali dosdoğru sonuna kadar taşır. Daha yavaş kaçışlarda sıçramayı yöneltmek için biraz zaman kalır, ama üzerine düşünmek için zaman kalmaz."
           },
           "b": {
             "claim": "Sinek sıçramadıysa sinekliği görmemiştir.",
@@ -1249,7 +1249,7 @@
         "levels": {
           "fly": "Sineğin kaçabilmesi için bu vücudun hangi bölümlerine ihtiyacı var?",
           "brain": "Sinyal gözlerde başlar, bacaklarda biter. Yol üzerinde nereden geçmek zorunda?",
-          "circuit": "Yüzlerce mavi hücre ve tek bir kırmızı çizgi. Bu yolda dikkatinizi ne çekiyor?",
+          "circuit": "Yüzlerce mavi hücre ve yalnızca iki kırmızı çizgi, her yanda bir tane. Bu yolda dikkatinizi ne çekiyor?",
           "neuron": "Bu tek hücre alışılmadık ölçüde kalın. Kalın bir kablo hızlı bir kaçışa neden yardım eder?"
         },
         "predictWhy": "Yaklaşma nöronları yine ateşlenir, yani sinek sinekliği görür; ama dev lif susturulduğunda sinyal sıçrama nöronlarına hiç ulaşmaz ve onlar sönük kalır."
