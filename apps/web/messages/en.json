@@ -1323,7 +1323,7 @@
       "indexTitle": "Teacher guides · WiredMind",
       "indexDescription": "A lesson plan, expected answers, discussion questions, and a printable student worksheet for each WiredMind lesson.",
       "guideTitle": "Teacher guide: {title}",
-      "guideDescription": "A 45-minute plan for “{title}”: learning goal, what students should notice, expected answers, discussion questions, and common misconceptions.",
+      "guideDescription": "A 45-minute plan for “{title}”: goal, what to notice, expected answers, discussion questions, and common misconceptions.",
       "worksheetTitle": "Worksheet: {title}",
       "worksheetDescription": "A printable student worksheet for “{title}”: predict, try, observe, explain."
     },

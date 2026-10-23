@@ -984,8 +984,8 @@
     "meta": {
       "indexTitle": "Docentenhandleidingen · WiredMind",
       "indexDescription": "Bij elke les van WiredMind: een lesplan, de antwoorden die je kunt verwachten, discussievragen en een werkblad voor leerlingen om te printen.",
-      "guideTitle": "Docentenhandleiding: {title}",
-      "guideDescription": "Een lesplan van 45 minuten bij “{title}”: leerdoel, wat leerlingen moeten opmerken, verwachte antwoorden, discussievragen en veelvoorkomende misvattingen.",
+      "guideTitle": "Lesplan: {title}",
+      "guideDescription": "Lesplan van 45 minuten bij “{title}”: leerdoel, verwachte antwoorden, discussievragen en veelgemaakte fouten.",
       "worksheetTitle": "Werkblad: {title}",
       "worksheetDescription": "Een werkblad voor leerlingen bij “{title}”, om te printen: voorspellen, proberen, waarnemen, verklaren."
     },

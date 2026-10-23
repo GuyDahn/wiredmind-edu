@@ -984,7 +984,7 @@
       "indexTitle": "Panduan guru · WiredMind",
       "indexDescription": "Rencana pelajaran, jawaban yang diharapkan, pertanyaan diskusi, dan lembar kerja siswa siap cetak untuk setiap pelajaran WiredMind.",
       "guideTitle": "Panduan guru: {title}",
-      "guideDescription": "Rencana 45 menit untuk “{title}”: tujuan pembelajaran, hal yang perlu diperhatikan siswa, jawaban yang diharapkan, pertanyaan diskusi, dan miskonsepsi umum.",
+      "guideDescription": "Rencana 45 menit untuk “{title}”: tujuan, jawaban yang diharapkan, pertanyaan diskusi, dan miskonsepsi umum.",
       "worksheetTitle": "Lembar kerja: {title}",
       "worksheetDescription": "Lembar kerja siswa siap cetak untuk “{title}”: prediksi, coba, amati, jelaskan."
     },

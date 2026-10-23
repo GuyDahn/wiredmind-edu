@@ -984,7 +984,7 @@
       "indexTitle": "Guías docentes · WiredMind",
       "indexDescription": "Un plan de clase, las respuestas esperadas, preguntas para el debate y una hoja de trabajo imprimible para cada lección de WiredMind.",
       "guideTitle": "Guía docente: {title}",
-      "guideDescription": "Un plan de 45 minutos para «{title}»: objetivo de aprendizaje, qué deben observar los estudiantes, respuestas esperadas, preguntas para el debate e ideas erróneas frecuentes.",
+      "guideDescription": "Plan de 45 minutos para «{title}»: objetivo, qué observar, respuestas esperadas, preguntas para debatir y errores frecuentes.",
       "worksheetTitle": "Hoja de trabajo: {title}",
       "worksheetDescription": "Una hoja de trabajo imprimible para «{title}»: predecir, probar, observar y explicar."
     },

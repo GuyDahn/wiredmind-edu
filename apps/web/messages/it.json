@@ -983,9 +983,9 @@
     "meta": {
       "indexTitle": "Guide per l’insegnante · WiredMind",
       "indexDescription": "Per ogni lezione di WiredMind: piano della lezione, risposte attese, domande per la discussione e scheda di lavoro da stampare.",
-      "guideTitle": "Guida per l’insegnante: {title}",
+      "guideTitle": "Guida docente: {title}",
       "guideDescription": "Un piano di 45 minuti per «{title}»: obiettivo, cosa notare, risposte attese, domande per discutere ed errori comuni.",
-      "worksheetTitle": "Scheda di lavoro: {title}",
+      "worksheetTitle": "Scheda alunno: {title}",
       "worksheetDescription": "Una scheda di lavoro da stampare per «{title}»: prevedi, prova, osserva, spiega."
     },
     "index": {

@@ -19,7 +19,13 @@ import { readClassMode } from "../apps/web/src/viewer/class-mode.js";
 import { isDemo } from "../apps/web/src/viewer/demo.js";
 import { LESSONS } from "../apps/web/src/viewer/modules.js";
 import { decodeReplay, REPLAY_PARAM } from "../apps/web/src/viewer/replay.js";
-import { flatten, readCatalog } from "../scripts/i18n/catalog.js";
+import { LOCALES } from "../apps/web/src/i18n/locales.js";
+import {
+  displayWidth,
+  flatten,
+  readCatalog,
+  searchSnippets,
+} from "../scripts/i18n/catalog.js";
 
 const page = (path: string) =>
   readFileSync(new URL(`../apps/web/app/${path}`, import.meta.url), "utf8");
@@ -112,6 +118,23 @@ describe("teacher guides", () => {
       page("[locale]/teachers/[lesson]/worksheet/page.tsx"),
       /robots: \{ index: false/,
     );
+  });
+
+  it("keeps every teacher page's search title and description short enough, in every language", () => {
+    for (const locale of LOCALES) {
+      const snippets = searchSnippets(flatten(readCatalog(locale)!)).filter(
+        (snippet) => snippet.key.startsWith("teachers.meta."),
+      );
+      // A guide and a worksheet title and description per lesson, and the index's two.
+      assert.equal(snippets.length, LESSONS.length * 4 + 2);
+      for (const snippet of snippets) {
+        assert.ok(
+          displayWidth(snippet.text) <= snippet.limit,
+          `${locale} ${snippet.key}: ${snippet.text}`,
+        );
+        assert.doesNotMatch(snippet.text, /\{title\}/);
+      }
+    }
   });
 
   it("leaves curriculum alignment marked as unconfirmed, with no invented codes", () => {

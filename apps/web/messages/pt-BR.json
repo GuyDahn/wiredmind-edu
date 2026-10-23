@@ -984,8 +984,8 @@
       "indexTitle": "Guias do professor · WiredMind",
       "indexDescription": "Plano de aula, respostas esperadas, perguntas para discussão e folha de atividades para imprimir, para cada aula do WiredMind.",
       "guideTitle": "Guia do professor: {title}",
-      "guideDescription": "Plano de 45 minutos para “{title}”: objetivo, o que os alunos devem notar, respostas esperadas, perguntas para discussão e equívocos comuns.",
-      "worksheetTitle": "Folha de atividades: {title}",
+      "guideDescription": "Plano de 45 min para “{title}”: objetivo, o que notar, respostas esperadas, perguntas para discussão e erros comuns.",
+      "worksheetTitle": "Atividade: {title}",
       "worksheetDescription": "Folha de atividades para imprimir da aula “{title}”: prever, testar, observar, explicar."
     },
     "index": {
