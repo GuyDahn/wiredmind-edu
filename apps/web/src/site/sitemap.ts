@@ -1,6 +1,5 @@
 import { LOCALES, localePath, type Locale } from "../i18n/locales.js";
 import { LESSONS } from "../viewer/modules.js";
-import { GLOSSARY_PATH, GLOSSARY_TERMS, termPath } from "./glossary.js";
 import { absoluteUrl, languageAlternates } from "./page-meta.js";
 import { questionPath, QUESTIONS, QUESTIONS_PATH } from "./questions.js";
 import { SITE_URL } from "./site.js";
@@ -13,7 +12,10 @@ export type SitemapPage = {
   sources: string[];
 };
 
-/** Every public page. The simulator bench is a developer tool and stays out. */
+/**
+ * Every page for search. The simulator bench is a developer tool, and the
+ * glossary is noindex (see its term page), so both stay out.
+ */
 export const SITEMAP_PAGES: readonly SitemapPage[] = [
   { path: "/", sources: ["app/[locale]/page.tsx"] },
   ...LESSONS.map((entry) => ({
@@ -33,11 +35,6 @@ export const SITEMAP_PAGES: readonly SitemapPage[] = [
       "app/[locale]/teachers/[lesson]/page.tsx",
       `content/modules/${entry.id}.json`,
     ],
-  })),
-  { path: GLOSSARY_PATH, sources: ["app/[locale]/glossary/page.tsx"] },
-  ...GLOSSARY_TERMS.map((id) => ({
-    path: termPath(id),
-    sources: ["app/[locale]/glossary/[term]/page.tsx"],
   })),
   { path: QUESTIONS_PATH, sources: ["app/[locale]/questions/page.tsx"] },
   ...QUESTIONS.map((question) => ({

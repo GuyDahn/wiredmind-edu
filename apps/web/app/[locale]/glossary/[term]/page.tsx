@@ -46,15 +46,21 @@ export async function generateMetadata({
   const t = await getTranslations({ locale });
   const card = await shareCard(locale, "home");
   const name = t(`terms.${id}.name`);
-  return pageMetadata({
-    locale,
-    path: termPath(id),
-    title: t("glossary.termTitle", { term: name }),
-    shareTitle: name,
-    description: t(`terms.${id}.text`),
-    image: shareImagePath(locale, "home", card.version),
-    imageAlt: card.alt,
-  });
+  return {
+    ...pageMetadata({
+      locale,
+      path: termPath(id),
+      title: t("glossary.termTitle", { term: name }),
+      shareTitle: name,
+      description: t(`terms.${id}.text`),
+      image: shareImagePath(locale, "home", card.version),
+      imageAlt: card.alt,
+    }),
+    // A sentence or two of definition, in 18 languages, read to Google as
+    // thin pages made at scale: it crawled them and kept them out of the
+    // index. The page stays for readers; search gets the lessons and answers.
+    robots: { index: false, follow: true },
+  };
 }
 
 export default async function TermPage({
