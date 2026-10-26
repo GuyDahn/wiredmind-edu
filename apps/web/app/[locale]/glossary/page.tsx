@@ -27,15 +27,19 @@ export async function generateMetadata({
   const locale = await pageLocale(params);
   const t = await getTranslations({ locale });
   const card = await shareCard(locale, "home");
-  return pageMetadata({
-    locale,
-    path: GLOSSARY_PATH,
-    title: t("glossary.metaTitle"),
-    shareTitle: t("glossary.title"),
-    description: t("glossary.metaDescription"),
-    image: shareImagePath(locale, "home", card.version),
-    imageAlt: card.alt,
-  });
+  return {
+    ...pageMetadata({
+      locale,
+      path: GLOSSARY_PATH,
+      title: t("glossary.metaTitle"),
+      shareTitle: t("glossary.title"),
+      description: t("glossary.metaDescription"),
+      image: shareImagePath(locale, "home", card.version),
+      imageAlt: card.alt,
+    }),
+    // Out of search with the term pages, whose definitions it lists.
+    robots: { index: false, follow: true },
+  };
 }
 
 export default async function GlossaryPage({

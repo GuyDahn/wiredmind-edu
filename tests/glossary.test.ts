@@ -52,10 +52,17 @@ describe("glossary", () => {
     assert.equal(findTerm("giantfiber"), undefined);
   });
 
-  it("lists the glossary and every term page in the sitemap", () => {
+  it("keeps the glossary and its term pages out of search and the sitemap", () => {
     const paths = SITEMAP_PAGES.map((item) => item.path);
-    assert.ok(paths.includes(GLOSSARY_PATH));
-    for (const id of GLOSSARY_TERMS) assert.ok(paths.includes(termPath(id)));
+    assert.ok(!paths.includes(GLOSSARY_PATH));
+    for (const id of GLOSSARY_TERMS) assert.ok(!paths.includes(termPath(id)));
+    for (const page of ["page.tsx", "[term]/page.tsx"]) {
+      const source = readFileSync(
+        new URL(`../apps/web/app/[locale]/glossary/${page}`, import.meta.url),
+        "utf8",
+      );
+      assert.match(source, /robots: \{ index: false, follow: true \}/);
+    }
   });
 
   it("points a lesson's term at that lesson and the steps that name it", () => {
