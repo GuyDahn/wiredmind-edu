@@ -265,6 +265,7 @@ function StimulateButton({
       disabled={disabled}
       aria-pressed={pressed}
       data-cue={state === "cue" ? "" : undefined}
+      data-stimulate={name}
       onClick={onPress}
       className={`flex min-h-[4.75rem] w-full touch-manipulation flex-col items-start gap-1 rounded-2xl px-4 py-3.5 text-start text-zinc-950 transition-transform active:scale-[0.99] disabled:opacity-40 ${FOCUS_RING} ${pressed ? "ring-2 ring-white" : ""} ${cueClass(state)}`}
       style={{ backgroundColor: color }}

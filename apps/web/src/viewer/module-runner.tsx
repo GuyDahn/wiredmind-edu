@@ -33,10 +33,19 @@ import { JourneyActions, JourneyCard } from "./journey-card.js";
 import { LESSONS, type LessonEntry } from "./modules.js";
 import { groupColor } from "./module.js";
 import { Controls, press } from "./panel.js";
+import { Exercises } from "./exercises.js";
+import { ComparisonCard, SHOW_COMPARISONS } from "./comparison.js";
+import { usePathwayView } from "./pathway-view.js";
+import {
+  PausedNote,
+  resumeWave,
+  SpeedControl,
+  StepModeToggle,
+} from "./playback-controls.js";
 import { useProgress } from "./progress.js";
 import { startPlayback, stopPlayback } from "./recorder.js";
 import { Sheet, type SheetState } from "./sheet.js";
-import { useViewerStore } from "./store.js";
+import { GUIDED_SPEED, useViewerStore } from "./store.js";
 import { StoryPanel, storyArt } from "./story.js";
 import { Toolbar } from "./toolbar.js";
 import type { ControlAction, ControlGate, ModuleSpec } from "./types.js";
@@ -201,6 +210,43 @@ export function ModuleRunner({
   useEffect(() => {
     useViewerStore.getState().setFocus(focusFor(lesson, phase));
   }, [lesson, phase]);
+
+  // The scene numbers each wave by this lesson's pathways.
+  useEffect(() => {
+    const store = useViewerStore.getState();
+    store.setPathways(lesson.pathways);
+    return () => {
+      const last = useViewerStore.getState();
+      last.setPathways([]);
+      last.setPreview(null);
+    };
+  }, [lesson]);
+
+  // Guided steps run at half the old pace. Free play runs at whatever the
+  // learner picked, which lasts for the visit and is never stored.
+  const guided = phase.kind === "step" || phase.kind === "check";
+  useEffect(() => {
+    const store = useViewerStore.getState();
+    store.setSpeed(guided ? GUIDED_SPEED : store.freeSpeed);
+  }, [guided]);
+
+  // The pathway diagram shows the puff a step is about to send before it
+  // goes: with what is silenced now, so it gives no prediction away.
+  const silencedNow = useViewerStore((state) => state.silenced);
+  const lastStimulus = useViewerStore((state) => state.pathway?.stimulus);
+  useEffect(() => {
+    const store = useViewerStore.getState();
+    const stimulus =
+      phase.kind === "step"
+        ? step?.goal.type === "stimulate"
+          ? step.goal.colorGroup
+          : step?.puff
+        : (lastStimulus ?? module.stimuli[0]?.colorGroup);
+    const silenced = Object.keys(silencedNow)
+      .filter((name) => silencedNow[name])
+      .sort();
+    store.setPreview(stimulus ? { stimulus, silenced } : null);
+  }, [phase.kind, step, silencedNow, lastStimulus, module.stimuli]);
 
   // Every lesson opens on its story, then the zoom from the fly to a neuron,
   // unless a "Show me" link asked for the walkthrough. Nothing remembers that
@@ -380,7 +426,8 @@ export function ModuleRunner({
       {classMode ? null : (
         <>
           <PanelTranslateNotice />
-          <Toolbar entry={entry} />
+          {/* Jumping to another lesson waits until the guided steps are done. */}
+          {guided ? null : <Toolbar entry={entry} />}
         </>
       )}
       {notice ? (
@@ -411,7 +458,6 @@ export function ModuleRunner({
         {phase.kind === "win" ? null : (
           <MissionGoal entry={entry} goal={copy.plain("mission.goal")} />
         )}
-        <Progress lesson={lesson} phase={phase} />
         {phase.kind === "step" && step ? (
           <>
             <p
@@ -443,9 +489,17 @@ export function ModuleRunner({
                 <p className={HINT}>{t("tapCue")}</p>
               )}
             </div>
+            {/* The one setting a guided step offers: stop after each group. */}
+            {classMode ? null : <StepModeToggle />}
           </>
         ) : null}
         {phase.kind === "win" ? <Win entry={entry} /> : null}
+        {phase.kind === "win" || phase.kind === "free" ? (
+          <Exercises entry={entry} />
+        ) : null}
+        {SHOW_COMPARISONS && phase.kind === "win" ? (
+          <ComparisonCard lessonId={entry.id} />
+        ) : null}
         {phase.kind === "check" ? (
           <Check
             lesson={lesson}
@@ -463,6 +517,8 @@ export function ModuleRunner({
             >
               {copy.rich("freePlay.text")}
             </p>
+            <SpeedControl />
+            <StepModeToggle />
           </>
         ) : null}
         {!demo &&
@@ -496,10 +552,8 @@ export function ModuleRunner({
           </button>
         )}
       </section>
-      {intro ||
-      journey ||
-      phase.kind === "win" ||
-      (classMode && phase.kind !== "free") ? null : (
+      {/* Every other button waits for free play: a guided step has one. */}
+      {intro || journey || phase.kind !== "free" ? null : (
         <Controls
           module={module}
           gate={gate}
@@ -565,9 +619,15 @@ function DemoBar({
       : goal.on
         ? t("cueSilence")
         : t("cueSwitchOn");
+  const paused = useViewerStore((state) => state.paused);
   return (
     <div className="flex flex-col gap-2">
-      {watching ? (
+      {paused ? (
+        <>
+          <PausedNote module={module} />
+          <NextGroupButton module={module} />
+        </>
+      ) : watching ? (
         <Watching module={module} pending={pending} />
       ) : (
         <p
@@ -620,12 +680,51 @@ function Footer({
   onWin: () => void;
   onFree: () => void;
 }) {
+  const { lesson } = entry;
+  const guided = phase.kind === "step" || phase.kind === "check";
+  return (
+    <div className="flex flex-col gap-2">
+      {guided ? <StepCounter lesson={lesson} phase={phase} /> : null}
+      <FooterAction
+        entry={entry}
+        phase={phase}
+        goal={goal}
+        guessing={guessing}
+        puffPending={puffPending}
+        watching={watching}
+        revealed={revealed}
+        solved={solved}
+        onAction={onAction}
+        onNext={onNext}
+        onWin={onWin}
+        onFree={onFree}
+      />
+    </div>
+  );
+}
+
+/** The footer's one big button, or what to do instead of pressing one. */
+function FooterAction({
+  entry,
+  phase,
+  goal,
+  guessing,
+  puffPending,
+  watching,
+  revealed,
+  solved,
+  onAction,
+  onNext,
+  onWin,
+  onFree,
+}: Parameters<typeof Footer>[0]) {
   const { module, lesson } = entry;
   const t = useTranslations("viewer.lesson");
   const m = useTranslations("viewer.mission");
   const titles = useTranslations("lessons");
   const locale = useLocale();
   const classMode = useViewerStore((state) => state.classMode);
+  const paused = useViewerStore((state) => state.paused);
   if (guessing) {
     return (
       <p data-predict-first="" className={`py-3 text-center ${HINT}`}>
@@ -635,17 +734,30 @@ function Footer({
   }
   if (goal)
     return <CueButton module={module} goal={goal} onAction={onAction} />;
+  if (paused) {
+    return (
+      <>
+        <PausedNote module={module} />
+        <NextGroupButton module={module} />
+      </>
+    );
+  }
   if (watching) return <Watching module={module} pending={puffPending} />;
   if (revealed && phase.kind === "step") {
+    const last = phase.index + 1 >= lesson.steps.length;
     return (
-      <button
-        type="button"
-        data-step-next=""
+      <NextButton
+        data={{ "data-step-next": "" }}
+        sub={
+          last
+            ? t("question")
+            : t("toStep", {
+                number: phase.index + 2,
+                total: lesson.steps.length + 1,
+              })
+        }
         onClick={onNext}
-        className={`${BUTTON} bg-accent text-accent-fg hover:bg-accent-hover`}
-      >
-        {phase.index + 1 < lesson.steps.length ? t("next") : t("question")}
-      </button>
+      />
     );
   }
   if (phase.kind === "check") {
@@ -746,30 +858,87 @@ function CueButton({
       : goal.on
         ? t("cueSilence")
         : t("cueSwitchOn");
-  const filled = goal.type === "stimulate";
+  return (
+    <NextButton
+      data={{ "data-cue": "" }}
+      disabled={!ready}
+      color={color}
+      sub={ready ? `${verb}: ${name}` : t("loadingBrain")}
+      onClick={() => press(action, onAction)}
+      pulse
+    />
+  );
+}
+
+/**
+ * The lesson's one primary button: "Next", in large type, with what it will
+ * do underneath. A guided step never shows another.
+ */
+function NextButton({
+  sub,
+  color,
+  disabled = false,
+  pulse = false,
+  data,
+  onClick,
+}: {
+  sub: string;
+  /** The color of the group it acts on, as a dot beside what it does. */
+  color?: string;
+  disabled?: boolean;
+  /** Pulse the dot: this is the thing to tap. */
+  pulse?: boolean;
+  data: Record<`data-${string}`, string>;
+  onClick: () => void;
+}) {
+  const t = useTranslations("viewer.lesson");
   return (
     <button
       type="button"
-      disabled={!ready}
-      data-cue=""
-      onClick={() => press(action, onAction)}
-      className={`flex min-h-14 w-full touch-manipulation items-center gap-3 rounded-2xl px-4 py-2.5 text-start classroom:min-h-20 transition-transform active:scale-[0.99] disabled:opacity-50 ${FOCUS_RING} ${filled ? "text-zinc-950" : "border-2 bg-overlay text-fg"}`}
-      style={filled ? { backgroundColor: color } : { borderColor: color }}
+      disabled={disabled}
+      onClick={onClick}
+      data-primary=""
+      {...data}
+      className={`flex min-h-16 w-full touch-manipulation flex-col items-center justify-center gap-0.5 rounded-2xl bg-accent px-4 py-2 text-accent-fg transition-transform hover:bg-accent-hover active:scale-[0.99] disabled:opacity-50 classroom:min-h-20 ${FOCUS_RING}`}
     >
-      <span className="flex flex-1 flex-col">
-        <span className="text-xs font-semibold tracking-[0.14em] uppercase opacity-80 classroom:text-lg">
-          {ready ? verb : t("loadingBrain")}
-        </span>
-        <span className="text-lg leading-tight font-semibold classroom:text-3xl">
-          {name}
-        </span>
+      <span className="text-xl leading-tight font-bold classroom:text-3xl">
+        {t("next")}
       </span>
-      <span
-        aria-hidden="true"
-        className="size-3 shrink-0 rounded-full motion-safe:animate-ping"
-        style={{ backgroundColor: filled ? "#09090b" : color }}
-      />
+      <span className="flex items-center gap-2 text-sm leading-snug opacity-90 classroom:text-xl">
+        {color ? (
+          <span
+            aria-hidden="true"
+            className={`size-2.5 shrink-0 rounded-full ring-1 ring-current ${pulse ? "motion-safe:animate-ping" : ""}`}
+            style={{ backgroundColor: color }}
+          />
+        ) : null}
+        {sub}
+      </span>
     </button>
+  );
+}
+
+/** "Next" while step mode holds the wave: on to the next group. */
+function NextGroupButton({ module }: { module: ModuleSpec }) {
+  const t = useTranslations("viewer.playback");
+  const circuit = useCircuitCopy(module);
+  const view = usePathwayView();
+  const at = view.current ? view.order.indexOf(view.current) : -1;
+  const upcoming = at >= 0 ? view.order[at + 1] : undefined;
+  return (
+    <NextButton
+      data={{ "data-next-group": "" }}
+      color={upcoming ? groupColor(module, upcoming) : undefined}
+      sub={
+        upcoming
+          ? t("nextGroupNamed", {
+              number: view.numbers.get(upcoming) ?? at + 2,
+              name: circuit.plain(upcoming),
+            })
+          : t("finishWave")
+      }
+      onClick={resumeWave}
+    />
   );
 }
 
@@ -938,7 +1107,11 @@ function Win({ entry }: { entry: LessonEntry }) {
   );
 }
 
-function Progress({
+/**
+ * "Step 3 of 6", pinned with the footer so it is always in sight. The last
+ * step is the question.
+ */
+function StepCounter({
   lesson,
   phase,
 }: {
@@ -947,25 +1120,13 @@ function Progress({
 }) {
   const t = useTranslations("viewer.lesson");
   const total = lesson.steps.length + 1;
-  const at =
-    phase.kind === "step"
-      ? phase.index
-      : phase.kind === "check"
-        ? lesson.steps.length
-        : total;
-  if (phase.kind === "win") return null;
-  const label =
-    phase.kind === "step"
-      ? t("step", { number: phase.index + 1, total: lesson.steps.length })
-      : phase.kind === "check"
-        ? t("quickQuestion")
-        : t("done");
+  const at = phase.kind === "step" ? phase.index : lesson.steps.length;
   return (
-    <div className="flex flex-col gap-2">
-      <p className="text-xs font-semibold tracking-[0.14em] text-fg-subtle uppercase classroom:text-lg">
-        {label}
+    <div data-step-counter="" className="flex items-center gap-3">
+      <p className="shrink-0 text-xs font-semibold tracking-[0.14em] text-fg-subtle uppercase classroom:text-lg">
+        {t("step", { number: at + 1, total })}
       </p>
-      <div className="flex gap-1.5" aria-hidden="true">
+      <div className="flex flex-1 gap-1" aria-hidden="true">
         {Array.from({ length: total }, (_, index) => (
           <span
             key={index}
