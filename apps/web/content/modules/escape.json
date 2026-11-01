@@ -94,5 +94,55 @@
         "correct": false
       }
     ]
-  }
+  },
+  "pathways": [
+    {
+      "stimulus": "looming",
+      "silenced": [],
+      "order": ["looming", "gf", "jump"],
+      "roles": ["input", "processing", "output"]
+    },
+    {
+      "stimulus": "looming",
+      "silenced": ["gf"],
+      "order": ["looming"],
+      "roles": ["input"]
+    },
+    {
+      "stimulus": "looming",
+      "silenced": ["jump"],
+      "order": ["looming", "gf"],
+      "roles": ["input", "processing"]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "order",
+      "type": "order",
+      "stimulus": "looming"
+    },
+    {
+      "id": "wire",
+      "type": "fires",
+      "stimulus": "looming",
+      "silenced": "gf",
+      "watch": "jump",
+      "fires": false
+    },
+    {
+      "id": "kickers",
+      "type": "fires",
+      "stimulus": "looming",
+      "silenced": "jump",
+      "watch": "gf",
+      "fires": true
+    },
+    {
+      "id": "timing",
+      "type": "timing",
+      "stimulus": "looming",
+      "watch": "jump",
+      "ms": [10, 20]
+    }
+  ]
 }
