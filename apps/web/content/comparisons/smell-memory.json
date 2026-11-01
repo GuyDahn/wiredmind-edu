@@ -1,0 +1,13 @@
+{
+  "lesson": "smell-memory",
+  "reviewed": false,
+  "illustration": null,
+  "text": {
+    "he": "[טיוטה – טרם נבדקה] כאן יופיע הסבר קצר על מה שדומה אצל יונקים ועופות, אחרי בדיקה של מורות וחוקר/ת מדעי המוח. ראו docs/comparisons-draft.md.",
+    "en": "[Draft – not yet reviewed] A short note on what is similar in mammals and birds will go here, once teachers and a neuroscientist have checked it. See docs/comparisons-draft.md."
+  },
+  "questions": {
+    "he": ["[טיוטה – טרם נבדקה] שאלת השוואה תופיע כאן."],
+    "en": ["[Draft – not yet reviewed] A comparison question will go here."]
+  }
+}

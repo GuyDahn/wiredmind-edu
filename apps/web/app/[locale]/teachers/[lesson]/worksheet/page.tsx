@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getTranslations, setRequestLocale } from "next-intl/server";
+import {
+  getFormatter,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server";
 import type { ReactNode } from "react";
 import { localePath } from "@/src/i18n/locales";
 import { pageLocale, type LocaleParams } from "@/src/i18n/server";
@@ -16,6 +20,12 @@ import {
   WORKSHEET_QUESTIONS,
   worksheetPath,
 } from "@/src/site/teachers";
+import {
+  comparisonFor,
+  localized,
+  SHOW_COMPARISONS,
+} from "@/src/viewer/comparison";
+import { exerciseWords } from "@/src/viewer/exercises";
 import { findLesson, LESSONS } from "@/src/viewer/modules";
 
 type Params = LocaleParams & { lesson: string };
@@ -73,6 +83,23 @@ export default async function WorksheetPage({
     namespace: `lessons.${entry.id}`,
   });
   const lessonUrl = `${SITE_URL}${localePath(locale, entry.path)}`;
+  const exercises = await getTranslations({
+    locale,
+    namespace: "viewer.exercises",
+  });
+  const circuit = await getTranslations({
+    locale,
+    namespace: `circuits.${entry.module.circuit}`,
+  });
+  const format = await getFormatter({ locale });
+  const words = {
+    viewer: (key: string, values: Record<string, string | number>) =>
+      exercises(key, values),
+    lesson: (key: string) => lesson(key),
+    plain: (group: string) => circuit(`plain.${group}`),
+    list: (items: string[]) => format.list(items, { type: "unit" }),
+  };
+  const comparison = SHOW_COMPARISONS ? comparisonFor(entry.id) : null;
   return (
     <>
       <div className="print:hidden">
@@ -150,6 +177,23 @@ export default async function WorksheetPage({
           {WORKSHEET_QUESTIONS.map((id) => (
             <Question key={id} lines={3}>
               {own(`explain.${id}`)}
+            </Question>
+          ))}
+        </Part>
+
+        <Part number={5} title={w("exercises")} hint={w("exercisesHint")}>
+          {entry.lesson.exercises.map((exercise) => (
+            <Question key={exercise.id} lines={2}>
+              {exerciseWords(entry, exercise, words).question}
+            </Question>
+          ))}
+          {/* Questions about mammals and birds wait for their review. */}
+          {(comparison
+            ? (localized(comparison.questions, locale) ?? [])
+            : []
+          ).map((question) => (
+            <Question key={question} lines={2}>
+              {question}
             </Question>
           ))}
         </Part>
