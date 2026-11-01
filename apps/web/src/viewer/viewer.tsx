@@ -44,6 +44,18 @@ const CompassDial = dynamic(
   () => import("./compass-dial.js").then((mod) => mod.CompassDial),
   { ssr: false },
 );
+const PathwayDiagram = dynamic(
+  () => import("./pathway-view.js").then((mod) => mod.PathwayDiagram),
+  { ssr: false },
+);
+const BadgeLayer = dynamic(
+  () => import("./pathway-view.js").then((mod) => mod.BadgeLayer),
+  { ssr: false },
+);
+const ResetViewButton = dynamic(
+  () => import("./pathway-view.js").then((mod) => mod.ResetViewButton),
+  { ssr: false },
+);
 
 /** Runs `task` once the main thread is free, or after `timeout` ms at the latest. */
 function whenIdle(task: () => void, timeout: number): () => void {
@@ -251,58 +263,105 @@ function Stage({
   const percent = Math.round(progress * 100);
   const { module } = entry;
   const lesson = useViewerStore((state) => state.chapter === "lesson");
+  const speed = useViewerStore((state) => state.speed);
+  const stepMode = useViewerStore((state) => state.stepMode);
+  const paused = useViewerStore((state) => state.paused);
+  const wave = useViewerStore((state) => state.wave);
+  const current = useViewerStore((state) => state.current);
+  const focusMode = useViewerStore((state) => state.pathway !== null);
+  // The pathway sits beside the brain on a wide screen, so the canvas makes
+  // room for it rather than drawing under it. Shared runs have no pathway.
+  const diagram = lesson && !replaying && status === "ready";
 
   return (
-    <div className="relative order-1 min-h-0 flex-1 bg-zinc-950 md:order-2">
-      <header className="pointer-events-none absolute inset-x-0 top-0 z-10 flex items-start justify-between gap-3 px-4 pt-[max(0.75rem,env(safe-area-inset-top))]">
-        <div className="min-w-0">
-          <p
-            className="text-xs font-semibold tracking-[0.16em] text-zinc-400 uppercase"
-            data-tap-target="text"
-          >
-            <Link
-              href={localePath(locale, "/")}
-              lang="en"
-              translate="no"
-              className="pointer-events-auto rounded-sm hover:text-zinc-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+    <div
+      data-stage=""
+      data-speed={speed}
+      data-step-mode={stepMode ? "on" : "off"}
+      data-paused={paused ? "true" : "false"}
+      data-wave={wave.join(" ")}
+      data-current={current ?? ""}
+      data-focus-mode={focusMode ? "pathway" : "step"}
+      className="relative order-1 min-h-0 flex-1 bg-zinc-950 md:order-2"
+    >
+      <header className="pointer-events-none absolute inset-x-0 top-0 z-10 flex flex-col gap-2 px-4 pt-[max(0.75rem,env(safe-area-inset-top))]">
+        <div className="flex items-start justify-between gap-3">
+          <div className="min-w-0">
+            <p
+              className="text-xs font-semibold tracking-[0.16em] text-zinc-400 uppercase"
+              data-tap-target="text"
             >
-              {SITE_NAME}
-            </Link>{" "}
-            · {t("stage.lesson", { number: entry.number })}
-          </p>
-          <h1 className="max-w-md text-xl font-semibold tracking-tight text-zinc-50 md:text-3xl classroom:md:max-w-2xl classroom:md:text-4xl">
-            {lessonCopy("title")}
-          </h1>
-          <p className="mt-1 hidden max-w-sm text-sm leading-snug text-zinc-300 md:block">
-            {lessonCopy("summary")}
-          </p>
-        </div>
-        {covered ? null : (
-          <div className="flex shrink-0 items-start gap-1.5">
-            {replaying ? null : <JourneyButton />}
-            {replaying ? null : <IntroButton />}
-            <ClassModeButton />
-            {menu}
-            <StageLanguageMenu path={entry.path} />
+              <Link
+                href={localePath(locale, "/")}
+                lang="en"
+                translate="no"
+                className="pointer-events-auto rounded-sm hover:text-zinc-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              >
+                {SITE_NAME}
+              </Link>{" "}
+              · {t("stage.lesson", { number: entry.number })}
+            </p>
+            <h1 className="max-w-md text-xl font-semibold tracking-tight text-zinc-50 md:text-3xl classroom:md:max-w-2xl classroom:md:text-4xl">
+              {lessonCopy("title")}
+            </h1>
+            <p className="mt-1 hidden max-w-sm text-sm leading-snug text-zinc-300 md:block">
+              {lessonCopy("summary")}
+            </p>
           </div>
-        )}
+          {covered ? null : (
+            <div className="flex shrink-0 items-start gap-1.5">
+              {replaying ? null : <JourneyButton />}
+              {replaying ? null : <IntroButton />}
+              <ClassModeButton />
+              {menu}
+              <StageLanguageMenu path={entry.path} />
+            </div>
+          )}
+        </div>
+        {/* On a phone the pathway is a strip above the brain. */}
+        {diagram ? (
+          <div className="md:hidden">
+            <PathwayDiagram
+              module={module}
+              lesson={entry.lesson}
+              variant="strip"
+            />
+          </div>
+        ) : null}
       </header>
       <p className="sr-only">{t("stage.canvasHelp")}</p>
       {/* The brain is a real fly's, so it never mirrors for right-to-left languages. */}
       <div
-        className="absolute inset-0 touch-none"
+        className={`absolute inset-0 touch-none ${diagram ? "md:right-[19rem] md:rtl:right-0 md:rtl:left-[19rem]" : ""}`}
         dir="ltr"
         data-intro="canvas"
       >
         {awake ? (
           <Scene module={module} journeyGroup={entry.lesson.journey.neuron} />
         ) : null}
+        {diagram ? <BadgeLayer module={module} /> : null}
       </div>
+      {diagram ? (
+        <aside className="absolute inset-y-0 end-0 z-10 hidden w-[19rem] overflow-y-auto border-s border-white/10 bg-zinc-950 px-4 pt-24 pb-4 md:block">
+          <PathwayDiagram
+            module={module}
+            lesson={entry.lesson}
+            variant="side"
+          />
+        </aside>
+      ) : null}
       {/* The color key and the dial are about the circuit, not the fly around it. */}
       {lesson ? <Legend module={module} /> : null}
-      {lesson && module.compass && status === "ready" ? (
-        <div className="absolute end-3 bottom-3 z-10 md:end-4 md:bottom-4">
-          <CompassDial color={groupColor(module, module.compass.colorGroup)} />
+      {lesson && status === "ready" ? (
+        <div
+          className={`absolute end-3 bottom-3 z-10 flex flex-col items-end gap-2 md:bottom-4 ${diagram ? "md:end-[20rem]" : "md:end-4"}`}
+        >
+          <ResetViewButton />
+          {module.compass ? (
+            <CompassDial
+              color={groupColor(module, module.compass.colorGroup)}
+            />
+          ) : null}
         </div>
       ) : null}
       {status === "loading" && !covered ? (

@@ -10,7 +10,13 @@ import {
   CompassReadout,
   compassWedges,
 } from "../apps/web/src/viewer/compass.js";
-import { activityByGroup, FlashField } from "../apps/web/src/viewer/flash.js";
+import {
+  activityByGroup,
+  AFTERGLOW_MS,
+  FIRED_TINT,
+  FLASH_DECAY_MS,
+  FlashField,
+} from "../apps/web/src/viewer/flash.js";
 import { frameBox, frameSphere, type Box } from "../apps/web/src/viewer/fit.js";
 import { assignGroups } from "../apps/web/src/viewer/groups.js";
 import { emptyGroups, readModule } from "../apps/web/src/viewer/module.js";
@@ -213,6 +219,31 @@ describe("flash", () => {
     flash.decay(75);
     assert.equal(flash.values[0], 0);
     assert.equal(flash.busy, false);
+  });
+
+  it("leaves a fired cell glowing after its flash, fading over the afterglow", () => {
+    const flash = new FlashField(2);
+    flash.glowMs = AFTERGLOW_MS;
+    flash.mark(Uint8Array.of(1, 0));
+    flash.decay(FLASH_DECAY_MS);
+    assert.equal(flash.busy, false, "the brain is quiet under the glow");
+    assert.ok(flash.fading);
+    assert.ok((flash.bytes[0] ?? 0) > 0 && (flash.bytes[0] ?? 0) < 255);
+    assert.equal(flash.bytes[1], 0);
+    flash.decay(AFTERGLOW_MS);
+    assert.equal(flash.bytes[0], 0);
+    assert.equal(flash.fading, false);
+  });
+
+  it("holds a steady fired tint with reduced motion until the next puff", () => {
+    const flash = new FlashField(1);
+    flash.glowMs = null;
+    flash.mark(Uint8Array.of(1));
+    flash.decay(10_000);
+    assert.equal(flash.bytes[0], Math.round(FIRED_TINT * 255));
+    assert.equal(flash.fading, false, "nothing animates");
+    flash.clearGlow();
+    assert.equal(flash.bytes[0], 0);
   });
 
   it("measures the share of a group that is still lit", () => {

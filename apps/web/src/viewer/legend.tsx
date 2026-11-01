@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import { useEffect, useId, useState } from "react";
 import { useCircuitCopy } from "./copy.js";
+import { NumberDot, usePathwayView } from "./pathway-view.js";
 import { useViewerStore } from "./store.js";
 import type { ModuleSpec } from "./types.js";
 
@@ -24,6 +25,8 @@ export function Legend({ module }: { module: ModuleSpec }) {
   // right thing before then, so the server render never jumps.
   const [picked, setPicked] = useState<boolean | null>(null);
   const listId = useId();
+  const pathway = usePathwayView();
+  const numbered = useTranslations("viewer.exercises");
   const held = classMode || pointedAt;
   const open = held || picked;
 
@@ -72,23 +75,52 @@ export function Legend({ module }: { module: ModuleSpec }) {
         id={listId}
         className={`flex-col gap-1.5 px-3 pb-3 text-sm leading-snug classroom:md:gap-2.5 classroom:md:text-xl ${open === null ? "hidden md:flex" : open ? "flex" : "hidden"}`}
       >
-        {module.groups.map((group) => (
-          <li key={group.colorGroup} className="flex items-baseline gap-2">
-            <span
-              aria-hidden="true"
-              className="size-2.5 shrink-0 translate-y-px rounded-full classroom:md:size-3.5"
-              style={{ backgroundColor: group.color }}
-            />
-            <span>
-              <span className="font-semibold text-zinc-50">
-                {circuit.plain(group.colorGroup)}
-              </span>{" "}
-              <span className="text-zinc-300">
-                · {circuit.name(group.colorGroup)}
+        {module.groups.map((group) => {
+          // Its place in the wave, as the brain and the pathway number it.
+          const number = pathway.numbers.get(group.colorGroup);
+          return (
+            <li
+              key={group.colorGroup}
+              data-legend-group={group.colorGroup}
+              data-number={number ?? ""}
+              className="flex items-center gap-2"
+            >
+              {number ? (
+                <NumberDot
+                  number={number}
+                  color={group.color}
+                  state={
+                    pathway.current === group.colorGroup
+                      ? "current"
+                      : pathway.fired.has(group.colorGroup)
+                        ? "fired"
+                        : "waiting"
+                  }
+                  className="size-5 text-[0.7rem] classroom:md:size-7 classroom:md:text-base"
+                />
+              ) : (
+                <span
+                  aria-hidden="true"
+                  className="mx-[0.3125rem] size-2.5 shrink-0 rounded-full classroom:md:size-3.5"
+                  style={{ backgroundColor: group.color }}
+                />
+              )}
+              <span>
+                {number ? (
+                  <span className="sr-only">
+                    {numbered("number", { number })}{" "}
+                  </span>
+                ) : null}
+                <span className="font-semibold text-zinc-50">
+                  {circuit.plain(group.colorGroup)}
+                </span>{" "}
+                <span className="text-zinc-300">
+                  · {circuit.name(group.colorGroup)}
+                </span>
               </span>
-            </span>
-          </li>
-        ))}
+            </li>
+          );
+        })}
         <li className="flex items-baseline gap-2 border-t border-white/15 pt-1.5 text-zinc-200">
           <span
             aria-hidden="true"

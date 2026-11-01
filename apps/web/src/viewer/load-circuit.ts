@@ -19,11 +19,16 @@ import { CompassReadout, compassWedges } from "./compass.js";
 import { FlashField } from "./flash.js";
 import { dracoParts, readGlb, type GltfJson } from "./glb.js";
 import { assignGroups, bodyIndex, type NeuronRow } from "./groups.js";
-import { createFlashTexture, createNeuronMaterial } from "./materials.js";
+import {
+  createFlashTexture,
+  createNeuronMaterial,
+  DIM_LEVEL,
+  type DimUniform,
+} from "./materials.js";
 import { emptyGroups } from "./module.js";
 import { parseGraphBin } from "../sim/index.js";
 import { createViewerSession, type ViewerSession } from "./session.js";
-import type { ModuleSpec } from "./types.js";
+import type { GroupMatch, ModuleSpec } from "./types.js";
 
 export {
   CircuitError,
@@ -48,6 +53,10 @@ export type LoadedCircuit = {
   frameBounds: Box3;
   /** Heading dial for circuits with a compass, else null. */
   compass: CompassReadout | null;
+  /** How dim the shader draws neurons out of focus. */
+  dim: DimUniform;
+  /** Where the module's light shines from, and the point by the eye it shines at. */
+  light: { source: Vector3; eye: Vector3 } | null;
   dispose: () => void;
 };
 
@@ -170,11 +179,15 @@ async function loadCircuit(module: ModuleSpec): Promise<LoadedCircuit> {
   const texture = createFlashTexture(flash.bytes, graph.neuronCount);
   const focus = new Uint8Array(graph.neuronCount).fill(255);
   const focusTexture = createFlashTexture(focus, graph.neuronCount);
+  const dim = { value: DIM_LEVEL };
   const material = createNeuronMaterial(
     texture,
     focusTexture,
     graph.neuronCount,
+    dim,
   );
+  const frameBounds =
+    boxForGroups(built.paths, assigned.groups, module.frame) ?? built.bounds;
   report(1);
   return {
     session,
@@ -187,9 +200,12 @@ async function loadCircuit(module: ModuleSpec): Promise<LoadedCircuit> {
     paths: built.paths,
     indexOfBody: bodyIndex(neurons),
     bounds: built.bounds,
-    frameBounds:
-      boxForGroups(built.paths, assigned.groups, module.frame) ?? built.bounds,
+    frameBounds,
     compass,
+    dim,
+    light: module.light
+      ? lightBeside(built.paths, neurons, module.light, frameBounds)
+      : null,
     dispose() {
       built.geometry.dispose();
       material.dispose();
@@ -197,6 +213,45 @@ async function loadCircuit(module: ModuleSpec): Promise<LoadedCircuit> {
       focusTexture.dispose();
     },
   };
+}
+
+/**
+ * A light outside the brain, shining at the point of the light-carrying cells
+ * farthest from the framed circuit: their end by the eye.
+ */
+function lightBeside(
+  paths: NeuronPaths,
+  neurons: readonly NeuronRow[],
+  match: GroupMatch,
+  frame: Box3,
+): { source: Vector3; eye: Vector3 } | null {
+  const { groups } = assignGroups(neurons, [
+    { colorGroup: "light", color: "#ffffff", match },
+  ]);
+  const center = frame.getCenter(new Vector3());
+  const point = new Vector3();
+  const eye = new Vector3();
+  let far = -1;
+  for (const neuron of groups.get("light") ?? []) {
+    const start = paths.offset[neuron] ?? 0;
+    const end = paths.offset[neuron + 1] ?? start;
+    for (let at = start; at < end; at += 3) {
+      point.set(
+        paths.data[at] ?? 0,
+        paths.data[at + 1] ?? 0,
+        paths.data[at + 2] ?? 0,
+      );
+      const distance = point.distanceToSquared(center);
+      if (distance > far) {
+        far = distance;
+        eye.copy(point);
+      }
+    }
+  }
+  if (far < 0) return null;
+  const outward = eye.clone().sub(center).normalize();
+  const reach = frame.getSize(new Vector3()).length() * 0.3;
+  return { eye, source: eye.clone().addScaledVector(outward, reach) };
 }
 
 /**

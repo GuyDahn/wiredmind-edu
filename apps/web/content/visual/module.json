@@ -146,5 +146,8 @@
         "ids": [512514, 519140]
       }
     ]
+  },
+  "light": {
+    "colorGroups": ["visual-input"]
   }
 }
