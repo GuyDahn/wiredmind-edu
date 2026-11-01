@@ -348,6 +348,30 @@
       "journey": {
         "circuit": "Estas células de colores llevan un olor desde las antenas hasta la memoria de la mosca.",
         "neuron": "Una lectora de recuerdos, una sola célula. El punto brillante es un disparo, la señal que envía."
+      },
+      "pathway": {
+        "before": "No se simula aquí: un olor que llega a las antenas. En esta lección encendemos todos los receptores olfativos a la vez, como si todos los olores llegaran juntos.",
+        "after": "No se simula aquí: en esta lección el circuito termina en las neuronas de salida. En una mosca real, su señal sigue hacia otras partes del cerebro que dirigen a la mosca hacia un olor o lejos de él. El aprendizaje en sí, el cambio en las conexiones, tampoco se simula.",
+        "orn": {
+          "orn": "Los receptores olfativos disparan primero: los encendemos directamente.",
+          "pn": "Las neuronas de proyección llevan el olor hacia dentro, hasta el cuerpo fungiforme.",
+          "kc": "Después disparan las células de Kenyon; en una mosca real, cada olor enciende un grupo distinto de ellas.",
+          "mbon": "Las neuronas de salida leen las células de Kenyon y disparan al final."
+        }
+      },
+      "exercises": {
+        "messengers": {
+          "question": "Si silencias las neuronas de proyección (las mensajeras del olor) y envías un olor, ¿dispararán las neuronas de salida? ¿Por qué?",
+          "answer": "No. Sin las neuronas de proyección, el olor nunca llega a las células de Kenyon, así que tampoco llega a las neuronas de salida. Solo disparan los receptores olfativos."
+        },
+        "readers": {
+          "question": "Si silencias las neuronas de salida, ¿siguen disparando las células de Kenyon?",
+          "answer": "Sí. Las células de Kenyon están antes que las neuronas de salida en la ruta, así que silenciar la salida no las detiene."
+        },
+        "timing": {
+          "question": "En la simulación, ¿cuánto tiempo pasa, más o menos, desde que empieza el estímulo hasta que disparan las neuronas de salida? (Pista: mira el reloj de abajo.)",
+          "answer": "Unos 14 milisegundos de tiempo de mosca."
+        }
       }
     },
     "compass": {
@@ -433,6 +457,36 @@
       "journey": {
         "circuit": "Este anillo de células es la brújula de la mosca, junto con las células que la hacen girar y las que la estabilizan.",
         "neuron": "Una célula del rumbo. El punto brillante es un disparo, la señal que envía."
+      },
+      "pathway": {
+        "before": "No se simula aquí: la luz que llega al ojo y la señal del ojo que viaja hasta las neuronas del anillo. En esta lección no llega nada del ojo: encendemos directamente las células de giro.",
+        "after": "No se simula aquí: en esta lección simplificada el circuito termina en las células de la brújula. En la mosca real, esta señal sigue, a través de otras células, hasta las neuronas motoras que dirigen a la mosca.",
+        "turn-left": {
+          "turn-left": "Las células de giro de la izquierda (P-EN2) disparan primero: las encendemos directamente.",
+          "compass": "Las células de la brújula (E-PG) disparan, y el pico brillante se desplaza por el dial.",
+          "ring": "Las neuronas del anillo disparan después de las células de la brújula: aquí su señal viene de dentro del circuito, porque no se simula ninguna luz.",
+          "turn-right": "También disparan algunas células de giro de la derecha: la brújula devuelve señal a las células de giro, porque esto es un bucle, no una línea recta."
+        },
+        "turn-right": {
+          "turn-right": "Las células de giro de la derecha (P-EN2) disparan primero: las encendemos directamente.",
+          "compass": "Las células de la brújula (E-PG) disparan, y el pico brillante se desplaza por el dial.",
+          "ring": "Las neuronas del anillo disparan después de las células de la brújula: aquí su señal viene de dentro del circuito, porque no se simula ninguna luz.",
+          "turn-left": "También disparan algunas células de giro de la izquierda: la brújula devuelve señal a las células de giro, porque esto es un bucle, no una línea recta."
+        }
+      },
+      "exercises": {
+        "ring": {
+          "question": "Si silencias las neuronas del anillo y activas la señal de giro a la derecha, ¿siguen disparando las células de la brújula?",
+          "answer": "Sí. Las células de la brújula disparan sin las neuronas del anillo, pero el pico brillante ya no se queda en su sitio."
+        },
+        "timing": {
+          "question": "En la simulación, ¿cuánto tiempo pasa, más o menos, desde que se estimulan las células de giro de la izquierda hasta que disparan las células de la brújula?",
+          "answer": "Unos 23 milisegundos de tiempo de mosca."
+        },
+        "missing": {
+          "question": "El circuito de esta lección termina en las células de la brújula. ¿Qué más necesitaría una mosca real para girar hacia la luz?",
+          "answer": "Sus ojos y el camino desde ellos hasta las neuronas del anillo, y las células y neuronas motoras que dirigen su cuerpo. Nada de esto se simula aquí."
+        }
       }
     },
     "escape": {
@@ -518,6 +572,29 @@
       "journey": {
         "circuit": "Este es el circuito de escape: desde los ojos, por un solo cable, hasta las patas.",
         "neuron": "Esta es la fibra gigante, una sola célula. El punto brillante es un disparo que la recorre a toda velocidad."
+      },
+      "pathway": {
+        "before": "No se simula aquí: una sombra que crece sobre el ojo. Encendemos directamente las células detectoras.",
+        "after": "No se simula aquí: el circuito llega a las neuronas motoras del salto, pero las patas y el salto en sí no se simulan.",
+        "looming": {
+          "looming": "Las células detectoras de aproximación (LC4 y LPLC2) disparan primero: las encendemos directamente.",
+          "gf": "La fibra gigante dispara unos milisegundos después y envía la alarma por el cordón nervioso.",
+          "jump": "Las neuronas del salto, las neuronas motoras del músculo de las patas del medio, disparan al final."
+        }
+      },
+      "exercises": {
+        "wire": {
+          "question": "Si silencias la fibra gigante y envías el matamoscas, ¿disparan las neuronas del salto?",
+          "answer": "No. Sin la fibra gigante, la señal nunca llega a las neuronas del salto, y solo disparan las células detectoras."
+        },
+        "kickers": {
+          "question": "Si silencias las neuronas del salto, ¿sigue disparando la fibra gigante?",
+          "answer": "Sí. La fibra gigante está antes que las neuronas del salto en la ruta, así que sigue disparando."
+        },
+        "timing": {
+          "question": "En la simulación, ¿cuánto tiempo pasa, más o menos, desde que empieza el estímulo hasta que disparan las neuronas del salto?",
+          "answer": "Unos 13 milisegundos de tiempo de mosca."
+        }
       }
     }
   },
@@ -649,7 +726,8 @@
       "quickQuestion": "Pregunta rápida",
       "done": "Lección terminada",
       "answers": "Respuestas",
-      "tryAnother": "Prueba otra respuesta."
+      "tryAnother": "Prueba otra respuesta.",
+      "toStep": "Ir al paso {number} de {total}"
     },
     "replay": {
       "label": "Repetición de {title}",
@@ -770,6 +848,41 @@
       "winTitle": "Misión {number} completada",
       "nextMission": "Siguiente misión: {title}",
       "map": "Ver el mapa de misiones"
+    },
+    "playback": {
+      "speed": "Velocidad",
+      "speedValue": "{speed}×",
+      "stepMode": "Paso a paso",
+      "stepModeHint": "Se detiene cada vez que dispara un grupo de células",
+      "pausedAt": "Detenido en el grupo {number}: {name}",
+      "nextGroupNamed": "Siguiente grupo: {number}. {name}",
+      "finishWave": "Dejar que la onda llegue hasta el final"
+    },
+    "pathway": {
+      "title": "Cómo viaja la señal",
+      "roles": {
+        "input": "Entrada",
+        "processing": "Procesamiento",
+        "output": "Salida",
+        "feedback": "Vuelve atrás"
+      },
+      "notSimulated": "No se simula en esta lección",
+      "silenced": "En silencio",
+      "light": "Luz (no se simula aquí)",
+      "eye": "Hacia el ojo",
+      "resetView": "Restablecer la vista"
+    },
+    "exercises": {
+      "title": "Ejercicios",
+      "showAnswer": "Ver la respuesta",
+      "number": "{number}.",
+      "numbered": "{number}. {name}",
+      "orderQuestion": "Ordena estos grupos según el orden en que disparan después de estimular «{stimulus}»: {names}.",
+      "orderAnswer": "{order}."
+    },
+    "comparison": {
+      "title": "¿Qué pasa en los mamíferos y las aves que se parezca a lo que pasa en la mosca?",
+      "draft": "Borrador – aún sin revisar"
     }
   },
   "errors": {
@@ -1071,7 +1184,9 @@
       "observeHint": "En cada paso: ¿qué colores se iluminaron y cuáles se quedaron a oscuras?",
       "step": "Paso {number}",
       "explain": "Explica",
-      "question": "La pregunta de la lección"
+      "question": "La pregunta de la lección",
+      "exercises": "Ejercicios",
+      "exercisesHint": "sobre el circuito de la mosca"
     },
     "lessons": {
       "smell-memory": {

@@ -348,6 +348,30 @@
       "journey": {
         "circuit": "Sel-sel berwarna ini membawa bau dari antena ke ingatan lalat.",
         "neuron": "Satu pembaca ingatan, sebuah sel tunggal. Titik terang itu adalah impuls, sinyal yang dikirimkannya."
+      },
+      "pathway": {
+        "before": "Tidak disimulasikan di sini: bau yang sampai ke antena. Dalam pelajaran ini kami menyalakan semua reseptor bau sekaligus, seolah semua bau datang bersamaan.",
+        "after": "Tidak disimulasikan di sini: dalam pelajaran ini sirkuitnya berakhir di neuron keluaran. Pada lalat sungguhan, sinyalnya berlanjut ke bagian otak lain yang mengarahkan lalat mendekati bau atau menjauhinya. Proses belajarnya sendiri, yaitu perubahan sambungan, juga tidak disimulasikan.",
+        "orn": {
+          "orn": "Reseptor bau aktif lebih dulu: kami menyalakannya secara langsung.",
+          "pn": "Neuron proyeksi membawa bau masuk lebih dalam, menuju badan jamur.",
+          "kc": "Berikutnya sel Kenyon aktif; pada lalat sungguhan, setiap bau menyalakan kelompok sel Kenyon yang berbeda.",
+          "mbon": "Neuron keluaran membaca sel Kenyon dan aktif paling akhir."
+        }
+      },
+      "exercises": {
+        "messengers": {
+          "question": "Kalau kamu membungkam neuron proyeksi (si kurir bau) lalu mengirim bau, apakah neuron keluaran akan aktif? Mengapa?",
+          "answer": "Tidak. Tanpa neuron proyeksi, bau tidak pernah sampai ke sel Kenyon, jadi tidak sampai juga ke neuron keluaran. Hanya reseptor bau yang aktif."
+        },
+        "readers": {
+          "question": "Kalau kamu membungkam neuron keluaran, apakah sel Kenyon masih aktif?",
+          "answer": "Ya. Di jalur ini sel Kenyon berada sebelum neuron keluaran, jadi membungkam neuron keluaran tidak menghentikan sel Kenyon."
+        },
+        "timing": {
+          "question": "Dalam simulasi, kira-kira berapa lama setelah rangsangan dimulai neuron keluaran aktif? (Petunjuk: perhatikan jam di bagian bawah.)",
+          "answer": "Sekitar 14 milidetik waktu lalat."
+        }
       }
     },
     "compass": {
@@ -433,6 +457,36 @@
       "journey": {
         "circuit": "Cincin sel ini adalah kompas lalat, bersama sel-sel yang memutarnya dan sel-sel yang menstabilkannya.",
         "neuron": "Satu sel penunjuk arah. Titik terang itu adalah impuls, sinyal yang dikirimkannya."
+      },
+      "pathway": {
+        "before": "Tidak disimulasikan di sini: cahaya yang sampai ke mata, dan sinyal dari mata yang berjalan ke neuron cincin. Dalam pelajaran ini tidak ada yang datang dari mata: kami menyalakan sel belok secara langsung.",
+        "after": "Tidak disimulasikan di sini: dalam pelajaran yang disederhanakan ini, sirkuitnya berakhir di sel kompas. Pada lalat sungguhan, sinyal ini berlanjut, lewat sel-sel lain, ke neuron motorik yang mengemudikan lalat.",
+        "turn-left": {
+          "turn-left": "Sel belok kiri (P-EN2) aktif lebih dulu: kami menyalakannya secara langsung.",
+          "compass": "Sel kompas (E-PG) aktif, dan tonjolan terang bergerak mengitari piringan.",
+          "ring": "Neuron cincin aktif setelah sel kompas: di sini sinyalnya datang dari dalam sirkuit, karena cahaya tidak disimulasikan.",
+          "turn-right": "Beberapa sel belok kanan juga aktif: kompas mengirim sinyal balik ke sel belok, karena ini sebuah lingkaran, bukan garis lurus."
+        },
+        "turn-right": {
+          "turn-right": "Sel belok kanan (P-EN2) aktif lebih dulu: kami menyalakannya secara langsung.",
+          "compass": "Sel kompas (E-PG) aktif, dan tonjolan terang bergerak mengitari piringan.",
+          "ring": "Neuron cincin aktif setelah sel kompas: di sini sinyalnya datang dari dalam sirkuit, karena cahaya tidak disimulasikan.",
+          "turn-left": "Beberapa sel belok kiri juga aktif: kompas mengirim sinyal balik ke sel belok, karena ini sebuah lingkaran, bukan garis lurus."
+        }
+      },
+      "exercises": {
+        "ring": {
+          "question": "Kalau kamu membungkam neuron cincin lalu mengaktifkan sinyal belok kanan, apakah sel kompas masih aktif?",
+          "answer": "Ya. Sel kompas tetap aktif tanpa neuron cincin, tetapi tonjolan terang itu tidak lagi diam di tempatnya."
+        },
+        "timing": {
+          "question": "Dalam simulasi, kira-kira berapa lama setelah sel belok kiri dirangsang sel kompas aktif?",
+          "answer": "Sekitar 23 milidetik waktu lalat."
+        },
+        "missing": {
+          "question": "Sirkuit di pelajaran ini berakhir di sel kompas. Apa lagi yang dibutuhkan lalat sungguhan untuk berbelok ke arah cahaya?",
+          "answer": "Matanya dan jalur dari mata ke neuron cincin, serta sel dan neuron motorik yang mengemudikan tubuhnya. Tidak satu pun dari semua itu disimulasikan di sini."
+        }
       }
     },
     "escape": {
@@ -518,6 +572,29 @@
       "journey": {
         "circuit": "Inilah sirkuit kabur: dari mata, lewat satu kabel, turun ke kaki.",
         "neuron": "Inilah serat raksasa, sebuah sel tunggal. Titik terang itu adalah impuls yang melesat di sepanjang serat."
+      },
+      "pathway": {
+        "before": "Tidak disimulasikan di sini: bayangan yang makin membesar di mata. Kami menyalakan sel pendeteksi secara langsung.",
+        "after": "Tidak disimulasikan di sini: sirkuitnya sampai ke neuron motorik untuk melompat, tetapi kaki dan lompatannya sendiri tidak disimulasikan.",
+        "looming": {
+          "looming": "Sel pendeteksi benda yang mendekat (LC4 dan LPLC2) aktif lebih dulu: kami menyalakannya secara langsung.",
+          "gf": "Serat raksasa aktif beberapa milidetik kemudian dan mengirim tanda bahaya turun lewat tali saraf.",
+          "jump": "Neuron lompat, yaitu neuron motorik otot kaki tengah, aktif paling akhir."
+        }
+      },
+      "exercises": {
+        "wire": {
+          "question": "Kalau kamu membungkam serat raksasa lalu mengirim pemukul, apakah neuron lompat aktif?",
+          "answer": "Tidak. Tanpa serat raksasa, sinyal tidak pernah sampai ke neuron lompat, dan hanya sel pendeteksi yang aktif."
+        },
+        "kickers": {
+          "question": "Kalau kamu membungkam neuron lompat, apakah serat raksasa masih aktif?",
+          "answer": "Ya. Di jalur ini serat raksasa berada sebelum neuron lompat, jadi serat itu tetap aktif."
+        },
+        "timing": {
+          "question": "Dalam simulasi, kira-kira berapa lama setelah rangsangan dimulai neuron lompat aktif?",
+          "answer": "Sekitar 13 milidetik waktu lalat."
+        }
       }
     }
   },
@@ -649,7 +726,8 @@
       "quickQuestion": "Pertanyaan singkat",
       "done": "Pelajaran selesai",
       "answers": "Jawaban",
-      "tryAnother": "Coba jawaban lain."
+      "tryAnother": "Coba jawaban lain.",
+      "toStep": "Lanjut ke langkah {number} dari {total}"
     },
     "replay": {
       "label": "Tayangan ulang {title}",
@@ -770,6 +848,41 @@
       "winTitle": "Misi {number} selesai",
       "nextMission": "Misi berikutnya: {title}",
       "map": "Lihat peta misi"
+    },
+    "playback": {
+      "speed": "Kecepatan",
+      "speedValue": "{speed}×",
+      "stepMode": "Langkah demi langkah",
+      "stepModeHint": "Berhenti setiap kali satu kelompok sel selesai aktif",
+      "pausedAt": "Berhenti di kelompok {number}: {name}",
+      "nextGroupNamed": "Kelompok berikutnya: {number}. {name}",
+      "finishWave": "Biarkan gelombang berjalan sampai selesai"
+    },
+    "pathway": {
+      "title": "Bagaimana sinyal berjalan",
+      "roles": {
+        "input": "Masukan",
+        "processing": "Pemrosesan",
+        "output": "Keluaran",
+        "feedback": "Umpan balik"
+      },
+      "notSimulated": "Tidak disimulasikan di pelajaran ini",
+      "silenced": "Dibungkam",
+      "light": "Cahaya (tidak disimulasikan di sini)",
+      "eye": "Ke arah mata",
+      "resetView": "Atur ulang tampilan"
+    },
+    "exercises": {
+      "title": "Latihan",
+      "showAnswer": "Tampilkan jawaban",
+      "number": "{number}.",
+      "numbered": "{number}. {name}",
+      "orderQuestion": "Urutkan kelompok ini sesuai urutan aktifnya setelah kamu merangsang “{stimulus}”: {names}.",
+      "orderAnswer": "{order}."
+    },
+    "comparison": {
+      "title": "Apa yang terjadi pada mamalia dan burung yang mirip dengan lalat?",
+      "draft": "Draf – belum ditinjau"
     }
   },
   "errors": {
@@ -1071,7 +1184,9 @@
       "observeHint": "Untuk setiap langkah: warna mana yang menyala, dan mana yang tetap gelap?",
       "step": "Langkah {number}",
       "explain": "Jelaskan",
-      "question": "Pertanyaan pelajaran"
+      "question": "Pertanyaan pelajaran",
+      "exercises": "Latihan",
+      "exercisesHint": "tentang sirkuit lalat"
     },
     "lessons": {
       "smell-memory": {

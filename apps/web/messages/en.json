@@ -368,7 +368,74 @@
       "viewer.story.bridge",
       "teachers.index.companion",
       "teachers.lessons.escape.levels.circuit",
-      "viewer.story.loading"
+      "viewer.story.loading",
+      "viewer.lesson.toStep",
+      "viewer.playback.speed",
+      "viewer.playback.speedValue",
+      "viewer.playback.stepMode",
+      "viewer.playback.stepModeHint",
+      "viewer.playback.pausedAt",
+      "viewer.playback.nextGroupNamed",
+      "viewer.playback.finishWave",
+      "viewer.pathway.title",
+      "viewer.pathway.roles.input",
+      "viewer.pathway.roles.processing",
+      "viewer.pathway.roles.output",
+      "viewer.pathway.roles.feedback",
+      "viewer.pathway.notSimulated",
+      "viewer.pathway.silenced",
+      "viewer.pathway.light",
+      "viewer.pathway.eye",
+      "viewer.pathway.resetView",
+      "viewer.exercises.title",
+      "viewer.exercises.showAnswer",
+      "viewer.exercises.number",
+      "viewer.exercises.numbered",
+      "viewer.exercises.orderQuestion",
+      "viewer.exercises.orderAnswer",
+      "viewer.comparison.title",
+      "viewer.comparison.draft",
+      "teachers.worksheet.exercises",
+      "teachers.worksheet.exercisesHint",
+      "lessons.smell-memory.pathway.before",
+      "lessons.smell-memory.pathway.after",
+      "lessons.smell-memory.pathway.orn.orn",
+      "lessons.smell-memory.pathway.orn.pn",
+      "lessons.smell-memory.pathway.orn.kc",
+      "lessons.smell-memory.pathway.orn.mbon",
+      "lessons.smell-memory.exercises.messengers.question",
+      "lessons.smell-memory.exercises.messengers.answer",
+      "lessons.smell-memory.exercises.readers.question",
+      "lessons.smell-memory.exercises.readers.answer",
+      "lessons.smell-memory.exercises.timing.question",
+      "lessons.smell-memory.exercises.timing.answer",
+      "lessons.compass.pathway.before",
+      "lessons.compass.pathway.after",
+      "lessons.compass.pathway.turn-left.turn-left",
+      "lessons.compass.pathway.turn-left.compass",
+      "lessons.compass.pathway.turn-left.ring",
+      "lessons.compass.pathway.turn-left.turn-right",
+      "lessons.compass.pathway.turn-right.turn-right",
+      "lessons.compass.pathway.turn-right.compass",
+      "lessons.compass.pathway.turn-right.ring",
+      "lessons.compass.pathway.turn-right.turn-left",
+      "lessons.compass.exercises.ring.question",
+      "lessons.compass.exercises.ring.answer",
+      "lessons.compass.exercises.timing.question",
+      "lessons.compass.exercises.timing.answer",
+      "lessons.compass.exercises.missing.question",
+      "lessons.compass.exercises.missing.answer",
+      "lessons.escape.pathway.before",
+      "lessons.escape.pathway.after",
+      "lessons.escape.pathway.looming.looming",
+      "lessons.escape.pathway.looming.gf",
+      "lessons.escape.pathway.looming.jump",
+      "lessons.escape.exercises.wire.question",
+      "lessons.escape.exercises.wire.answer",
+      "lessons.escape.exercises.kickers.question",
+      "lessons.escape.exercises.kickers.answer",
+      "lessons.escape.exercises.timing.question",
+      "lessons.escape.exercises.timing.answer"
     ]
   },
   "meta": {
@@ -714,6 +781,30 @@
       "journey": {
         "circuit": "These colored cells carry a smell from the antennae to the fly’s memory.",
         "neuron": "One memory reader, a single cell. The bright dot is a spike, the signal it sends."
+      },
+      "pathway": {
+        "before": "Not simulated here: a smell reaching the antennae. In this lesson we switch on every smell receptor at once, as if every smell arrived together.",
+        "after": "Not simulated here: in this lesson the circuit ends at the output neurons. In a real fly their signal goes on to other parts of the brain that steer the fly toward a smell or away from it. Learning itself, the change in the links, is not simulated either.",
+        "orn": {
+          "orn": "The smell receptors fire first: we switch them on directly.",
+          "pn": "The projection neurons carry the smell inward, to the mushroom body.",
+          "kc": "The Kenyon cells fire next; in a real fly each smell lights up a different set of them.",
+          "mbon": "The output neurons read the Kenyon cells and fire last."
+        }
+      },
+      "exercises": {
+        "messengers": {
+          "question": "If you silence the projection neurons (the smell messengers) and send a smell, will the output neurons fire? Why?",
+          "answer": "No. Without the projection neurons the smell never reaches the Kenyon cells, so it never reaches the output neurons either. Only the smell receptors fire."
+        },
+        "readers": {
+          "question": "If you silence the output neurons, do the Kenyon cells still fire?",
+          "answer": "Yes. The Kenyon cells come before the output neurons on the pathway, so silencing the output does not stop them."
+        },
+        "timing": {
+          "question": "In the simulation, about how long after the puff starts do the output neurons fire? (Hint: watch the clock at the bottom.)",
+          "answer": "About 14 milliseconds of fly time."
+        }
       }
     },
     "compass": {
@@ -799,6 +890,36 @@
       "journey": {
         "circuit": "This ring of cells is the fly’s compass, with the cells that turn it and the cells that steady it.",
         "neuron": "One heading cell. The bright dot is a spike, the signal it sends."
+      },
+      "pathway": {
+        "before": "Not simulated here: light reaching the eye, and the eye’s signal traveling to the ring neurons. In this lesson nothing comes from the eye: we switch on the turning cells directly.",
+        "after": "Not simulated here: in this simplified lesson the circuit ends at the compass cells. In the real fly this signal continues, through other cells, to the motor neurons that steer the fly.",
+        "turn-left": {
+          "turn-left": "The left turning cells (P-EN2) fire first: we switch them on directly.",
+          "compass": "The compass cells (E-PG) fire, and the bright bump moves around the dial.",
+          "ring": "The ring neurons fire after the compass cells: here their signal comes from inside the circuit, because no light is simulated.",
+          "turn-right": "A few right turning cells fire too: the compass feeds back into the turning cells, because this is a loop, not a straight line."
+        },
+        "turn-right": {
+          "turn-right": "The right turning cells (P-EN2) fire first: we switch them on directly.",
+          "compass": "The compass cells (E-PG) fire, and the bright bump moves around the dial.",
+          "ring": "The ring neurons fire after the compass cells: here their signal comes from inside the circuit, because no light is simulated.",
+          "turn-left": "A few left turning cells fire too: the compass feeds back into the turning cells, because this is a loop, not a straight line."
+        }
+      },
+      "exercises": {
+        "ring": {
+          "question": "If you silence the ring neurons and fire the right turning signal, do the compass cells still fire?",
+          "answer": "Yes. The compass cells fire without the ring neurons, but the bright bump no longer stays in place."
+        },
+        "timing": {
+          "question": "In the simulation, about how long after the left turning cells are stimulated do the compass cells fire?",
+          "answer": "About 23 milliseconds of fly time."
+        },
+        "missing": {
+          "question": "The circuit in this lesson ends at the compass cells. What else would a real fly need to turn toward the light?",
+          "answer": "Its eyes and the way from them to the ring neurons, and the cells and motor neurons that steer its body. None of these is simulated here."
+        }
       }
     },
     "escape": {
@@ -884,6 +1005,29 @@
       "journey": {
         "circuit": "This is the escape circuit: from the eyes, through one wire, down to the legs.",
         "neuron": "This is the giant fiber, a single cell. The bright dot is a spike racing down it."
+      },
+      "pathway": {
+        "before": "Not simulated here: a shadow growing on the eye. We switch on the detector cells directly.",
+        "after": "Not simulated here: the circuit reaches the jump’s motor neurons, but the legs and the jump itself are not simulated.",
+        "looming": {
+          "looming": "The looming detector cells (LC4 and LPLC2) fire first: we switch them on directly.",
+          "gf": "The giant fiber fires a few milliseconds later and sends the alarm down the nerve cord.",
+          "jump": "The jump neurons, the motor neurons of the middle-leg muscle, fire last."
+        }
+      },
+      "exercises": {
+        "wire": {
+          "question": "If you silence the giant fiber and send the swatter, do the jump neurons fire?",
+          "answer": "No. Without the giant fiber the signal never reaches the jump neurons, and only the detector cells fire."
+        },
+        "kickers": {
+          "question": "If you silence the jump neurons, does the giant fiber still fire?",
+          "answer": "Yes. The giant fiber comes before the jump neurons on the pathway, so it still fires."
+        },
+        "timing": {
+          "question": "In the simulation, about how long after the puff starts do the jump neurons fire?",
+          "answer": "About 13 milliseconds of fly time."
+        }
       }
     }
   },
@@ -1015,7 +1159,8 @@
       "quickQuestion": "Quick question",
       "done": "Lesson done",
       "answers": "Answers",
-      "tryAnother": "Try another answer."
+      "tryAnother": "Try another answer.",
+      "toStep": "On to step {number} of {total}"
     },
     "replay": {
       "label": "Replay of {title}",
@@ -1136,6 +1281,41 @@
       "winTitle": "Mission {number} complete",
       "nextMission": "Next mission: {title}",
       "map": "See the mission map"
+    },
+    "playback": {
+      "speed": "Speed",
+      "speedValue": "{speed}×",
+      "stepMode": "Step by step",
+      "stepModeHint": "Stops after each group of cells fires",
+      "pausedAt": "Stopped at group {number}: {name}",
+      "nextGroupNamed": "Next group: {number}. {name}",
+      "finishWave": "Let the wave run to its end"
+    },
+    "pathway": {
+      "title": "How the signal travels",
+      "roles": {
+        "input": "Input",
+        "processing": "Processing",
+        "output": "Output",
+        "feedback": "Loops back"
+      },
+      "notSimulated": "Not simulated in this lesson",
+      "silenced": "Silenced",
+      "light": "Light (not simulated here)",
+      "eye": "Toward the eye",
+      "resetView": "Reset view"
+    },
+    "exercises": {
+      "title": "Exercises",
+      "showAnswer": "Show the answer",
+      "number": "{number}.",
+      "numbered": "{number}. {name}",
+      "orderQuestion": "Put these in the order they fire after you stimulate “{stimulus}”: {names}.",
+      "orderAnswer": "{order}."
+    },
+    "comparison": {
+      "title": "What happens in mammals and birds that is like the fly?",
+      "draft": "Draft – not yet reviewed"
     }
   },
   "errors": {
@@ -1437,7 +1617,9 @@
       "observeHint": "For each step: which colors lit up, and which stayed dark?",
       "step": "Step {number}",
       "explain": "Explain",
-      "question": "The lesson’s question"
+      "question": "The lesson’s question",
+      "exercises": "Exercises",
+      "exercisesHint": "about the fly’s circuit"
     },
     "lessons": {
       "smell-memory": {

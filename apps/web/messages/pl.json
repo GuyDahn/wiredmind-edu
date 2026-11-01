@@ -348,6 +348,30 @@
       "journey": {
         "circuit": "Te kolorowe komórki niosą zapach od czułków do pamięci muszki.",
         "neuron": "Jeden czytnik pamięci, pojedyncza komórka. Jasna kropka to impuls, czyli sygnał, który ta komórka wysyła."
+      },
+      "pathway": {
+        "before": "Nie symulujemy tu zapachu, który dociera do czułków. W tej lekcji włączamy naraz wszystkie receptory węchowe, tak jakby wszystkie zapachy dotarły jednocześnie.",
+        "after": "Nie symulujemy tu dalszej drogi sygnału: w tej lekcji obwód kończy się na neuronach wyjściowych. U prawdziwej muszki ich sygnał biegnie dalej, do innych części mózgu, które kierują muszkę w stronę zapachu albo z dala od niego. Samego uczenia się, czyli zmiany połączeń, też tu nie symulujemy.",
+        "orn": {
+          "orn": "Receptory węchowe wysyłają impulsy jako pierwsze: włączamy je bezpośrednio.",
+          "pn": "Neurony projekcyjne niosą zapach w głąb mózgu, do ciała grzybkowatego.",
+          "kc": "Następnie impulsy wysyłają komórki Kenyona; u prawdziwej muszki każdy zapach zapala inny ich zestaw.",
+          "mbon": "Neurony wyjściowe odczytują komórki Kenyona i wysyłają impulsy jako ostatnie."
+        }
+      },
+      "exercises": {
+        "messengers": {
+          "question": "Jeśli wyciszysz neurony projekcyjne (posłańców zapachu) i wyślesz zapach, czy neurony wyjściowe wyślą impulsy? Dlaczego?",
+          "answer": "Nie. Bez neuronów projekcyjnych zapach nigdy nie dociera do komórek Kenyona, więc nie dociera też do neuronów wyjściowych. Impulsy wysyłają tylko receptory węchowe."
+        },
+        "readers": {
+          "question": "Jeśli wyciszysz neurony wyjściowe, czy komórki Kenyona nadal wysyłają impulsy?",
+          "answer": "Tak. Na szlaku komórki Kenyona są przed neuronami wyjściowymi, więc wyciszenie neuronów wyjściowych ich nie zatrzymuje."
+        },
+        "timing": {
+          "question": "Mniej więcej ile czasu po początku bodźca neurony wyjściowe wysyłają impulsy w symulacji? (Podpowiedź: obserwuj zegar na dole.)",
+          "answer": "Około 14 milisekund czasu muszki."
+        }
       }
     },
     "compass": {
@@ -433,6 +457,36 @@
       "journey": {
         "circuit": "Ten pierścień komórek to kompas muszki, razem z komórkami, które go obracają, i komórkami, które go stabilizują.",
         "neuron": "Jedna komórka kierunku. Jasna kropka to impuls, czyli sygnał, który ta komórka wysyła."
+      },
+      "pathway": {
+        "before": "Nie symulujemy tu światła, które dociera do oka, ani sygnału, który biegnie z oka do neuronów pierścieniowych. W tej lekcji nic nie przychodzi z oka: komórki skrętu włączamy bezpośrednio.",
+        "after": "Nie symulujemy tu dalszej drogi sygnału: w tej uproszczonej lekcji obwód kończy się na komórkach kompasu. U prawdziwej muszki ten sygnał biegnie dalej, przez inne komórki, do neuronów ruchowych, które sterują muszką.",
+        "turn-left": {
+          "turn-left": "Lewe komórki skrętu (P-EN2) wysyłają impulsy jako pierwsze: włączamy je bezpośrednio.",
+          "compass": "Komórki kompasu (E-PG) wysyłają impulsy, a jasna górka przesuwa się po tarczy.",
+          "ring": "Neurony pierścieniowe wysyłają impulsy po komórkach kompasu: tutaj ich sygnał pochodzi z wnętrza obwodu, bo światła nie symulujemy.",
+          "turn-right": "Kilka prawych komórek skrętu też wysyła impulsy: kompas oddaje sygnał komórkom skrętu, bo to pętla, a nie prosta linia."
+        },
+        "turn-right": {
+          "turn-right": "Prawe komórki skrętu (P-EN2) wysyłają impulsy jako pierwsze: włączamy je bezpośrednio.",
+          "compass": "Komórki kompasu (E-PG) wysyłają impulsy, a jasna górka przesuwa się po tarczy.",
+          "ring": "Neurony pierścieniowe wysyłają impulsy po komórkach kompasu: tutaj ich sygnał pochodzi z wnętrza obwodu, bo światła nie symulujemy.",
+          "turn-left": "Kilka lewych komórek skrętu też wysyła impulsy: kompas oddaje sygnał komórkom skrętu, bo to pętla, a nie prosta linia."
+        }
+      },
+      "exercises": {
+        "ring": {
+          "question": "Jeśli wyciszysz neurony pierścieniowe i uruchomisz prawy sygnał skrętu, czy komórki kompasu nadal wysyłają impulsy?",
+          "answer": "Tak. Komórki kompasu wysyłają impulsy bez neuronów pierścieniowych, ale jasna górka nie trzyma się już swojego miejsca."
+        },
+        "timing": {
+          "question": "Mniej więcej ile czasu po pobudzeniu lewych komórek skrętu komórki kompasu wysyłają impulsy w symulacji?",
+          "answer": "Około 23 milisekund czasu muszki."
+        },
+        "missing": {
+          "question": "Obwód w tej lekcji kończy się na komórkach kompasu. Czego jeszcze potrzebowałaby prawdziwa muszka, żeby skręcić w stronę światła?",
+          "answer": "Oczu i drogi od nich do neuronów pierścieniowych, a także komórek i neuronów ruchowych, które sterują jej ciałem. Niczego z tego tu nie symulujemy."
+        }
       }
     },
     "escape": {
@@ -518,6 +572,29 @@
       "journey": {
         "circuit": "To obwód ucieczki: od oczu, przez jeden kabel, w dół do nóg.",
         "neuron": "To włókno olbrzymie, pojedyncza komórka. Jasna kropka to impuls, który pędzi wzdłuż niego."
+      },
+      "pathway": {
+        "before": "Nie symulujemy tu cienia, który rośnie na oku. Komórki wykrywające włączamy bezpośrednio.",
+        "after": "Nie symulujemy tu nóg ani samego skoku: obwód dochodzi do neuronów ruchowych skoku i na nich się kończy.",
+        "looming": {
+          "looming": "Komórki wykrywające zbliżający się obiekt (LC4 i LPLC2) wysyłają impulsy jako pierwsze: włączamy je bezpośrednio.",
+          "gf": "Włókno olbrzymie wysyła impuls kilka milisekund później i przesyła alarm w dół łańcuszka nerwowego.",
+          "jump": "Neurony skoku, czyli neurony ruchowe mięśnia środkowej nogi, wysyłają impulsy jako ostatnie."
+        }
+      },
+      "exercises": {
+        "wire": {
+          "question": "Jeśli wyciszysz włókno olbrzymie i wyślesz packę, czy neurony skoku wyślą impulsy?",
+          "answer": "Nie. Bez włókna olbrzymiego sygnał nigdy nie dociera do neuronów skoku i impulsy wysyłają tylko komórki wykrywające."
+        },
+        "kickers": {
+          "question": "Jeśli wyciszysz neurony skoku, czy włókno olbrzymie nadal wysyła impulsy?",
+          "answer": "Tak. Na szlaku włókno olbrzymie jest przed neuronami skoku, więc nadal wysyła impulsy."
+        },
+        "timing": {
+          "question": "Mniej więcej ile czasu po początku bodźca neurony skoku wysyłają impulsy w symulacji?",
+          "answer": "Około 13 milisekund czasu muszki."
+        }
       }
     }
   },
@@ -649,7 +726,8 @@
       "quickQuestion": "Szybkie pytanie",
       "done": "Lekcja ukończona",
       "answers": "Odpowiedzi",
-      "tryAnother": "Spróbuj innej odpowiedzi."
+      "tryAnother": "Spróbuj innej odpowiedzi.",
+      "toStep": "Przejdź do kroku {number} z {total}"
     },
     "replay": {
       "label": "Powtórka: {title}",
@@ -770,6 +848,41 @@
       "winTitle": "Misja {number} ukończona",
       "nextMission": "Następna misja: {title}",
       "map": "Zobacz mapę misji"
+    },
+    "playback": {
+      "speed": "Prędkość",
+      "speedValue": "{speed}×",
+      "stepMode": "Krok po kroku",
+      "stepModeHint": "Zatrzymuje się, gdy każda grupa komórek wyśle impulsy",
+      "pausedAt": "Zatrzymano na grupie {number}: {name}",
+      "nextGroupNamed": "Następna grupa: {number}. {name}",
+      "finishWave": "Puść falę do samego końca"
+    },
+    "pathway": {
+      "title": "Jak biegnie sygnał",
+      "roles": {
+        "input": "Wejście",
+        "processing": "Przetwarzanie",
+        "output": "Wyjście",
+        "feedback": "Pętla zwrotna"
+      },
+      "notSimulated": "Tego nie symulujemy w tej lekcji",
+      "silenced": "Wyciszone",
+      "light": "Światło (tu niesymulowane)",
+      "eye": "W stronę oka",
+      "resetView": "Resetuj widok"
+    },
+    "exercises": {
+      "title": "Ćwiczenia",
+      "showAnswer": "Pokaż odpowiedź",
+      "number": "{number}.",
+      "numbered": "{number}. {name}",
+      "orderQuestion": "Ułóż je w kolejności, w jakiej wysyłają impulsy po pobudzeniu grupy „{stimulus}”: {names}.",
+      "orderAnswer": "{order}."
+    },
+    "comparison": {
+      "title": "Co u ssaków i ptaków działa podobnie jak u muszki?",
+      "draft": "Wersja robocza – jeszcze niesprawdzona"
     }
   },
   "errors": {
@@ -1071,7 +1184,9 @@
       "observeHint": "Dla każdego kroku: które kolory się zapaliły, a które pozostały ciemne?",
       "step": "Krok {number}",
       "explain": "Wyjaśnij",
-      "question": "Pytanie z lekcji"
+      "question": "Pytanie z lekcji",
+      "exercises": "Ćwiczenia",
+      "exercisesHint": "o obwodzie muszki"
     },
     "lessons": {
       "smell-memory": {

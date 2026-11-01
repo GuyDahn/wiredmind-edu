@@ -348,6 +348,30 @@
       "journey": {
         "circuit": "Diese farbigen Zellen leiten einen Duft von den Antennen zum Gedächtnis der Fliege.",
         "neuron": "Ein Gedächtnisleser, eine einzelne Zelle. Der helle Punkt ist ein Impuls, das Signal, das sie sendet."
+      },
+      "pathway": {
+        "before": "Hier nicht simuliert: ein Duft, der die Antennen erreicht. In dieser Lektion schalten wir alle Duftrezeptoren auf einmal ein, als kämen alle Düfte gleichzeitig an.",
+        "after": "Hier nicht simuliert: In dieser Lektion endet der Schaltkreis bei den Ausgangsneuronen. In einer echten Fliege geht ihr Signal weiter zu anderen Teilen des Gehirns, die die Fliege zu einem Duft hin oder von ihm weg lenken. Auch das Lernen selbst, also die Veränderung der Verbindungen, wird nicht simuliert.",
+        "orn": {
+          "orn": "Die Duftrezeptoren feuern zuerst: Wir schalten sie direkt ein.",
+          "pn": "Die Projektionsneuronen tragen den Duft nach innen, zum Pilzkörper.",
+          "kc": "Als Nächstes feuern die Kenyon-Zellen; in einer echten Fliege lässt jeder Duft eine andere Gruppe von ihnen aufleuchten.",
+          "mbon": "Die Ausgangsneuronen lesen die Kenyon-Zellen und feuern zuletzt."
+        }
+      },
+      "exercises": {
+        "messengers": {
+          "question": "Wenn du die Projektionsneuronen (die Duftboten) stummschaltest und einen Duft schickst, feuern dann die Ausgangsneuronen? Warum?",
+          "answer": "Nein. Ohne die Projektionsneuronen erreicht der Duft die Kenyon-Zellen nie, also erreicht er auch die Ausgangsneuronen nicht. Nur die Duftrezeptoren feuern."
+        },
+        "readers": {
+          "question": "Wenn du die Ausgangsneuronen stummschaltest, feuern die Kenyon-Zellen dann noch?",
+          "answer": "Ja. Die Kenyon-Zellen kommen auf dem Weg vor den Ausgangsneuronen. Wenn du den Ausgang stummschaltest, hält sie das also nicht auf."
+        },
+        "timing": {
+          "question": "Wie lange dauert es in der Simulation ungefähr nach dem Start des Reizes, bis die Ausgangsneuronen feuern? (Tipp: Achte auf die Uhr unten.)",
+          "answer": "Etwa 14 Millisekunden Fliegenzeit."
+        }
       }
     },
     "compass": {
@@ -433,6 +457,36 @@
       "journey": {
         "circuit": "Dieser Zellring ist der Kompass der Fliege. Dazu kommen die Zellen, die ihn drehen, und die Zellen, die ihn ruhig halten.",
         "neuron": "Eine Richtungszelle. Der helle Punkt ist ein Impuls, das Signal, das sie sendet."
+      },
+      "pathway": {
+        "before": "Hier nicht simuliert: Licht, das ins Auge fällt, und das Signal des Auges auf dem Weg zu den Ringneuronen. In dieser Lektion kommt nichts vom Auge: Wir schalten die Drehzellen direkt ein.",
+        "after": "Hier nicht simuliert: In dieser vereinfachten Lektion endet der Schaltkreis bei den Kompasszellen. In der echten Fliege geht dieses Signal über andere Zellen weiter bis zu den Motoneuronen, die die Fliege lenken.",
+        "turn-left": {
+          "turn-left": "Die linken Drehzellen (P-EN2) feuern zuerst: Wir schalten sie direkt ein.",
+          "compass": "Die Kompasszellen (E-PG) feuern, und der Leuchtfleck wandert über die Kompassanzeige.",
+          "ring": "Die Ringneuronen feuern nach den Kompasszellen: Ihr Signal kommt hier aus dem Schaltkreis selbst, weil kein Licht simuliert wird.",
+          "turn-right": "Auch ein paar rechte Drehzellen feuern: Der Kompass meldet sich bei den Drehzellen zurück, denn das hier ist eine Schleife und keine gerade Linie."
+        },
+        "turn-right": {
+          "turn-right": "Die rechten Drehzellen (P-EN2) feuern zuerst: Wir schalten sie direkt ein.",
+          "compass": "Die Kompasszellen (E-PG) feuern, und der Leuchtfleck wandert über die Kompassanzeige.",
+          "ring": "Die Ringneuronen feuern nach den Kompasszellen: Ihr Signal kommt hier aus dem Schaltkreis selbst, weil kein Licht simuliert wird.",
+          "turn-left": "Auch ein paar linke Drehzellen feuern: Der Kompass meldet sich bei den Drehzellen zurück, denn das hier ist eine Schleife und keine gerade Linie."
+        }
+      },
+      "exercises": {
+        "ring": {
+          "question": "Wenn du die Ringneuronen stummschaltest und das rechte Drehsignal feuern lässt, feuern die Kompasszellen dann noch?",
+          "answer": "Ja. Die Kompasszellen feuern auch ohne die Ringneuronen, aber der Leuchtfleck bleibt nicht mehr an seinem Platz."
+        },
+        "timing": {
+          "question": "Wie lange dauert es in der Simulation ungefähr, nachdem die linken Drehzellen stimuliert wurden, bis die Kompasszellen feuern?",
+          "answer": "Etwa 23 Millisekunden Fliegenzeit."
+        },
+        "missing": {
+          "question": "Der Schaltkreis in dieser Lektion endet bei den Kompasszellen. Was bräuchte eine echte Fliege noch, um sich zum Licht hin zu drehen?",
+          "answer": "Ihre Augen und den Weg von dort zu den Ringneuronen, außerdem die Zellen und Motoneuronen, die ihren Körper lenken. Nichts davon wird hier simuliert."
+        }
       }
     },
     "escape": {
@@ -518,6 +572,29 @@
       "journey": {
         "circuit": "Das ist der Fluchtschaltkreis: von den Augen über eine einzige Leitung bis hinunter zu den Beinen.",
         "neuron": "Das ist die Riesenfaser, eine einzelne Zelle. Der helle Punkt ist ein Impuls, der an ihr entlangrast."
+      },
+      "pathway": {
+        "before": "Hier nicht simuliert: ein Schatten, der auf dem Auge größer wird. Wir schalten die Detektorzellen direkt ein.",
+        "after": "Hier nicht simuliert: Der Schaltkreis erreicht die Motoneuronen für den Sprung, aber die Beine und der Sprung selbst werden nicht simuliert.",
+        "looming": {
+          "looming": "Die Detektorzellen für Annäherung (LC4 und LPLC2) feuern zuerst: Wir schalten sie direkt ein.",
+          "gf": "Die Riesenfaser feuert ein paar Millisekunden später und schickt den Alarm das Bauchmark hinunter.",
+          "jump": "Die Sprungneuronen, die Motoneuronen des Mittelbeinmuskels, feuern zuletzt."
+        }
+      },
+      "exercises": {
+        "wire": {
+          "question": "Wenn du die Riesenfaser stummschaltest und die Fliegenklatsche schickst, feuern dann die Sprungneuronen?",
+          "answer": "Nein. Ohne die Riesenfaser erreicht das Signal die Sprungneuronen nie, und nur die Detektorzellen feuern."
+        },
+        "kickers": {
+          "question": "Wenn du die Sprungneuronen stummschaltest, feuert die Riesenfaser dann noch?",
+          "answer": "Ja. Die Riesenfaser kommt auf dem Weg vor den Sprungneuronen, deshalb feuert sie weiter."
+        },
+        "timing": {
+          "question": "Wie lange dauert es in der Simulation ungefähr nach dem Start des Reizes, bis die Sprungneuronen feuern?",
+          "answer": "Etwa 13 Millisekunden Fliegenzeit."
+        }
       }
     }
   },
@@ -649,7 +726,8 @@
       "quickQuestion": "Kurze Frage",
       "done": "Lektion geschafft",
       "answers": "Antworten",
-      "tryAnother": "Probiere eine andere Antwort."
+      "tryAnother": "Probiere eine andere Antwort.",
+      "toStep": "Weiter zu Schritt {number} von {total}"
     },
     "replay": {
       "label": "Wiedergabe: {title}",
@@ -770,6 +848,41 @@
       "winTitle": "Mission {number} geschafft",
       "nextMission": "Nächste Mission: {title}",
       "map": "Zur Missionskarte"
+    },
+    "playback": {
+      "speed": "Geschwindigkeit",
+      "speedValue": "{speed}×",
+      "stepMode": "Schritt für Schritt",
+      "stepModeHint": "Hält an, sobald eine Zellgruppe gefeuert hat",
+      "pausedAt": "Angehalten bei Gruppe {number}: {name}",
+      "nextGroupNamed": "Nächste Gruppe: {number}. {name}",
+      "finishWave": "Die Welle bis zum Ende laufen lassen"
+    },
+    "pathway": {
+      "title": "So wandert das Signal",
+      "roles": {
+        "input": "Eingang",
+        "processing": "Verarbeitung",
+        "output": "Ausgang",
+        "feedback": "Führt zurück"
+      },
+      "notSimulated": "In dieser Lektion nicht simuliert",
+      "silenced": "Stummgeschaltet",
+      "light": "Licht (hier nicht simuliert)",
+      "eye": "Zum Auge",
+      "resetView": "Ansicht zurücksetzen"
+    },
+    "exercises": {
+      "title": "Aufgaben",
+      "showAnswer": "Antwort zeigen",
+      "number": "{number}.",
+      "numbered": "{number}. {name}",
+      "orderQuestion": "Bring diese Gruppen in die Reihenfolge, in der sie feuern, nachdem du „{stimulus}“ stimuliert hast: {names}.",
+      "orderAnswer": "{order}."
+    },
+    "comparison": {
+      "title": "Was passiert bei Säugetieren und Vögeln ähnlich wie bei der Fliege?",
+      "draft": "Entwurf – noch nicht geprüft"
     }
   },
   "errors": {
@@ -1071,7 +1184,9 @@
       "observeHint": "Für jeden Schritt: Welche Farben haben aufgeleuchtet, und welche sind dunkel geblieben?",
       "step": "Schritt {number}",
       "explain": "Erklären",
-      "question": "Die Frage der Lektion"
+      "question": "Die Frage der Lektion",
+      "exercises": "Aufgaben",
+      "exercisesHint": "zum Schaltkreis der Fliege"
     },
     "lessons": {
       "smell-memory": {

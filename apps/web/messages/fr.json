@@ -348,6 +348,30 @@
       "journey": {
         "circuit": "Ces cellules colorées portent une odeur des antennes jusqu’à la mémoire de la mouche.",
         "neuron": "Un décodeur, une seule cellule. Le point lumineux est une activation, le signal qu’elle envoie."
+      },
+      "pathway": {
+        "before": "Non simulé ici : une odeur qui arrive aux antennes. Dans cette leçon, on allume tous les récepteurs olfactifs à la fois, comme si toutes les odeurs arrivaient ensemble.",
+        "after": "Non simulé ici : dans cette leçon, le circuit s’arrête aux neurones de sortie. Chez une vraie mouche, leur signal continue vers d’autres parties du cerveau, qui dirigent la mouche vers une odeur ou l’en éloignent. L’apprentissage lui-même, le changement des connexions, n’est pas simulé non plus.",
+        "orn": {
+          "orn": "Les récepteurs olfactifs s’activent en premier : c’est nous qui les allumons directement.",
+          "pn": "Les neurones de projection emportent l’odeur vers l’intérieur, jusqu’au corps pédonculé.",
+          "kc": "Les cellules de Kenyon s’activent ensuite ; chez une vraie mouche, chaque odeur allume un groupe différent de ces cellules.",
+          "mbon": "Les neurones de sortie lisent les cellules de Kenyon et s’activent en dernier."
+        }
+      },
+      "exercises": {
+        "messengers": {
+          "question": "Si tu fais taire les neurones de projection (les messagers d’odeurs) et que tu envoies une odeur, les neurones de sortie vont-ils s’activer ? Pourquoi ?",
+          "answer": "Non. Sans les neurones de projection, l’odeur n’atteint jamais les cellules de Kenyon, donc elle n’atteint pas non plus les neurones de sortie. Seuls les récepteurs olfactifs s’activent."
+        },
+        "readers": {
+          "question": "Si tu fais taire les neurones de sortie, les cellules de Kenyon s’activent-elles toujours ?",
+          "answer": "Oui. Les cellules de Kenyon viennent avant les neurones de sortie sur le trajet : faire taire la sortie ne les arrête donc pas."
+        },
+        "timing": {
+          "question": "Dans la simulation, combien de temps environ après le début de la stimulation les neurones de sortie s’activent-ils ? (Indice : regarde l’horloge en bas.)",
+          "answer": "Environ 14 millisecondes de temps de mouche."
+        }
       }
     },
     "compass": {
@@ -433,6 +457,36 @@
       "journey": {
         "circuit": "Cet anneau de cellules est la boussole de la mouche, avec les cellules qui la font tourner et celles qui la stabilisent.",
         "neuron": "Une cellule d’orientation. Le point lumineux est une activation, le signal qu’elle envoie."
+      },
+      "pathway": {
+        "before": "Non simulé ici : la lumière qui atteint l’œil, et le signal de l’œil qui voyage jusqu’aux neurones en anneau. Dans cette leçon, rien ne vient de l’œil : c’est nous qui allumons directement les cellules de rotation.",
+        "after": "Non simulé ici : dans cette leçon simplifiée, le circuit s’arrête aux cellules de la boussole. Chez la vraie mouche, ce signal continue, à travers d’autres cellules, jusqu’aux motoneurones qui dirigent la mouche.",
+        "turn-left": {
+          "turn-left": "Les cellules de rotation de gauche (P-EN2) s’activent en premier : c’est nous qui les allumons directement.",
+          "compass": "Les cellules de la boussole (E-PG) s’activent, et la bosse brillante tourne autour du cadran.",
+          "ring": "Les neurones en anneau s’activent après les cellules de la boussole : ici, leur signal vient de l’intérieur du circuit, car aucune lumière n’est simulée.",
+          "turn-right": "Quelques cellules de rotation de droite s’activent aussi : la boussole renvoie un signal aux cellules de rotation, car c’est une boucle, pas une ligne droite."
+        },
+        "turn-right": {
+          "turn-right": "Les cellules de rotation de droite (P-EN2) s’activent en premier : c’est nous qui les allumons directement.",
+          "compass": "Les cellules de la boussole (E-PG) s’activent, et la bosse brillante tourne autour du cadran.",
+          "ring": "Les neurones en anneau s’activent après les cellules de la boussole : ici, leur signal vient de l’intérieur du circuit, car aucune lumière n’est simulée.",
+          "turn-left": "Quelques cellules de rotation de gauche s’activent aussi : la boussole renvoie un signal aux cellules de rotation, car c’est une boucle, pas une ligne droite."
+        }
+      },
+      "exercises": {
+        "ring": {
+          "question": "Si tu fais taire les neurones en anneau et que tu envoies l’ordre de tourner à droite, les cellules de la boussole s’activent-elles toujours ?",
+          "answer": "Oui. Les cellules de la boussole s’activent sans les neurones en anneau, mais la bosse brillante ne reste plus en place."
+        },
+        "timing": {
+          "question": "Dans la simulation, combien de temps environ après la stimulation des cellules de rotation de gauche les cellules de la boussole s’activent-elles ?",
+          "answer": "Environ 23 millisecondes de temps de mouche."
+        },
+        "missing": {
+          "question": "Dans cette leçon, le circuit s’arrête aux cellules de la boussole. De quoi d’autre une vraie mouche aurait-elle besoin pour se tourner vers la lumière ?",
+          "answer": "De ses yeux et du chemin qui va de ses yeux aux neurones en anneau, ainsi que des cellules et des motoneurones qui dirigent son corps. Rien de tout cela n’est simulé ici."
+        }
       }
     },
     "escape": {
@@ -518,6 +572,29 @@
       "journey": {
         "circuit": "Voici le circuit de la fuite : des yeux, par un seul fil, jusqu’aux pattes.",
         "neuron": "Voici la fibre géante, une seule cellule. Le point lumineux est une activation qui la parcourt à toute vitesse."
+      },
+      "pathway": {
+        "before": "Non simulé ici : une ombre qui grandit sur l’œil. C’est nous qui allumons directement les cellules détectrices.",
+        "after": "Non simulé ici : le circuit atteint les motoneurones du saut, mais les pattes et le saut lui-même ne sont pas simulés.",
+        "looming": {
+          "looming": "Les cellules qui détectent l’approche (LC4 et LPLC2) s’activent en premier : c’est nous qui les allumons directement.",
+          "gf": "La fibre géante s’active quelques millisecondes plus tard et envoie l’alerte le long du cordon nerveux.",
+          "jump": "Les neurones du saut, les motoneurones du muscle des pattes du milieu, s’activent en dernier."
+        }
+      },
+      "exercises": {
+        "wire": {
+          "question": "Si tu fais taire la fibre géante et que tu envoies le tue-mouches, les neurones du saut s’activent-ils ?",
+          "answer": "Non. Sans la fibre géante, le signal n’atteint jamais les neurones du saut, et seules les cellules détectrices s’activent."
+        },
+        "kickers": {
+          "question": "Si tu fais taire les neurones du saut, la fibre géante s’active-t-elle toujours ?",
+          "answer": "Oui. La fibre géante vient avant les neurones du saut sur le trajet : elle s’active donc toujours."
+        },
+        "timing": {
+          "question": "Dans la simulation, combien de temps environ après le début de la stimulation les neurones du saut s’activent-ils ?",
+          "answer": "Environ 13 millisecondes de temps de mouche."
+        }
       }
     }
   },
@@ -649,7 +726,8 @@
       "quickQuestion": "Petite question",
       "done": "Leçon terminée",
       "answers": "Réponses",
-      "tryAnother": "Essaie une autre réponse."
+      "tryAnother": "Essaie une autre réponse.",
+      "toStep": "Passer à l’étape {number} sur {total}"
     },
     "replay": {
       "label": "Rediffusion : {title}",
@@ -770,6 +848,41 @@
       "winTitle": "Mission {number} accomplie",
       "nextMission": "Mission suivante : {title}",
       "map": "Voir la carte des missions"
+    },
+    "playback": {
+      "speed": "Vitesse",
+      "speedValue": "{speed}×",
+      "stepMode": "Pas à pas",
+      "stepModeHint": "S’arrête chaque fois qu’un groupe de cellules s’active",
+      "pausedAt": "Arrêté au groupe {number} : {name}",
+      "nextGroupNamed": "Groupe suivant : {number}. {name}",
+      "finishWave": "Laisser la vague aller jusqu’au bout"
+    },
+    "pathway": {
+      "title": "Comment le signal circule",
+      "roles": {
+        "input": "Entrée",
+        "processing": "Traitement",
+        "output": "Sortie",
+        "feedback": "Retour en boucle"
+      },
+      "notSimulated": "Non simulé dans cette leçon",
+      "silenced": "Réduit au silence",
+      "light": "Lumière (non simulée ici)",
+      "eye": "Vers l’œil",
+      "resetView": "Réinitialiser la vue"
+    },
+    "exercises": {
+      "title": "Exercices",
+      "showAnswer": "Voir la réponse",
+      "number": "{number}.",
+      "numbered": "{number}. {name}",
+      "orderQuestion": "Range ces groupes dans l’ordre où ils s’activent quand tu stimules « {stimulus} » : {names}.",
+      "orderAnswer": "{order}."
+    },
+    "comparison": {
+      "title": "Qu’est-ce qui, chez les mammifères et les oiseaux, ressemble à ce qui se passe chez la mouche ?",
+      "draft": "Brouillon – pas encore relu"
     }
   },
   "errors": {
@@ -1071,7 +1184,9 @@
       "observeHint": "À chaque étape : quelles couleurs se sont allumées, et lesquelles sont restées éteintes ?",
       "step": "Étape {number}",
       "explain": "Explique",
-      "question": "La question de la leçon"
+      "question": "La question de la leçon",
+      "exercises": "Exercices",
+      "exercisesHint": "sur le circuit de la mouche"
     },
     "lessons": {
       "smell-memory": {

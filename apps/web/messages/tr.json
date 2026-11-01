@@ -348,6 +348,30 @@
       "journey": {
         "circuit": "Bu renkli hücreler bir kokuyu antenlerden sineğin belleğine taşır.",
         "neuron": "Bir bellek okuyucusu, tek bir hücre. Parlak nokta bir ateşleme, yani hücrenin gönderdiği sinyal."
+      },
+      "pathway": {
+        "before": "Burada simüle edilmeyen: Bir kokunun antenlere ulaşması. Bu derste, sanki bütün kokular aynı anda gelmiş gibi, tüm koku reseptörlerini bir kerede çalıştırıyoruz.",
+        "after": "Burada simüle edilmeyen: Bu derste devre çıktı nöronlarında biter. Gerçek bir sinekte onların sinyali beynin başka bölümlerine gider; bu bölümler sineği kokuya doğru ya da kokudan uzağa yönlendirir. Öğrenmenin kendisi, yani bağlantıların değişmesi de simüle edilmiyor.",
+        "orn": {
+          "orn": "Önce koku reseptörleri ateşlenir: Onları doğrudan biz çalıştırıyoruz.",
+          "pn": "Projeksiyon nöronları kokuyu içeriye, mantar cisimciğine taşır.",
+          "kc": "Sonra Kenyon hücreleri ateşlenir; gerçek bir sinekte her koku bu hücrelerin farklı bir grubunu yakar.",
+          "mbon": "Çıktı nöronları Kenyon hücrelerini okur ve en son ateşlenir."
+        }
+      },
+      "exercises": {
+        "messengers": {
+          "question": "Projeksiyon nöronlarını (koku habercilerini) susturup bir koku gönderirsen çıktı nöronları ateşlenir mi? Neden?",
+          "answer": "Hayır. Projeksiyon nöronları olmadan koku Kenyon hücrelerine hiç ulaşmaz, bu yüzden çıktı nöronlarına da ulaşmaz. Yalnızca koku reseptörleri ateşlenir."
+        },
+        "readers": {
+          "question": "Çıktı nöronlarını susturursan Kenyon hücreleri yine ateşlenir mi?",
+          "answer": "Evet. Yol üzerinde Kenyon hücreleri çıktı nöronlarından önce gelir, bu yüzden çıktıyı susturmak onları durdurmaz."
+        },
+        "timing": {
+          "question": "Simülasyonda uyarım başladıktan yaklaşık ne kadar sonra çıktı nöronları ateşlenir? (İpucu: Alttaki saate bak.)",
+          "answer": "Sineğin zamanıyla yaklaşık 14 milisaniye."
+        }
       }
     },
     "compass": {
@@ -433,6 +457,36 @@
       "journey": {
         "circuit": "Bu hücre halkası sineğin pusulasıdır; yanında onu döndüren ve onu sabit tutan hücreler var.",
         "neuron": "Bir yön hücresi. Parlak nokta bir ateşleme, yani hücrenin gönderdiği sinyal."
+      },
+      "pathway": {
+        "before": "Burada simüle edilmeyen: Işığın göze ulaşması ve gözün sinyalinin halka nöronlarına gitmesi. Bu derste gözden hiçbir şey gelmez: Dönüş hücrelerini doğrudan biz çalıştırıyoruz.",
+        "after": "Burada simüle edilmeyen: Bu basitleştirilmiş derste devre pusula hücrelerinde biter. Gerçek sinekte bu sinyal başka hücreler üzerinden, sineği yönlendiren motor nöronlarına kadar devam eder.",
+        "turn-left": {
+          "turn-left": "Önce sol dönüş hücreleri (P-EN2) ateşlenir: Onları doğrudan biz çalıştırıyoruz.",
+          "compass": "Pusula hücreleri (E-PG) ateşlenir ve parlak tümsek kadranda döner.",
+          "ring": "Halka nöronları pusula hücrelerinden sonra ateşlenir: Burada ışık simüle edilmediği için sinyalleri devrenin içinden gelir.",
+          "turn-right": "Birkaç sağ dönüş hücresi de ateşlenir: Pusula, dönüş hücrelerine geri sinyal gönderir, çünkü bu düz bir çizgi değil, bir döngüdür."
+        },
+        "turn-right": {
+          "turn-right": "Önce sağ dönüş hücreleri (P-EN2) ateşlenir: Onları doğrudan biz çalıştırıyoruz.",
+          "compass": "Pusula hücreleri (E-PG) ateşlenir ve parlak tümsek kadranda döner.",
+          "ring": "Halka nöronları pusula hücrelerinden sonra ateşlenir: Burada ışık simüle edilmediği için sinyalleri devrenin içinden gelir.",
+          "turn-left": "Birkaç sol dönüş hücresi de ateşlenir: Pusula, dönüş hücrelerine geri sinyal gönderir, çünkü bu düz bir çizgi değil, bir döngüdür."
+        }
+      },
+      "exercises": {
+        "ring": {
+          "question": "Halka nöronlarını susturup sağ dönüş sinyalini ateşlersen pusula hücreleri yine ateşlenir mi?",
+          "answer": "Evet. Pusula hücreleri halka nöronları olmadan da ateşlenir ama parlak tümsek artık yerinde durmaz."
+        },
+        "timing": {
+          "question": "Simülasyonda sol dönüş hücreleri uyarıldıktan yaklaşık ne kadar sonra pusula hücreleri ateşlenir?",
+          "answer": "Sineğin zamanıyla yaklaşık 23 milisaniye."
+        },
+        "missing": {
+          "question": "Bu dersteki devre pusula hücrelerinde biter. Gerçek bir sineğin ışığa doğru dönmesi için başka neye ihtiyacı olur?",
+          "answer": "Gözlerine ve gözlerden halka nöronlarına giden yola; bir de vücudunu yönlendiren hücrelere ve motor nöronlarına. Bunların hiçbiri burada simüle edilmiyor."
+        }
       }
     },
     "escape": {
@@ -518,6 +572,29 @@
       "journey": {
         "circuit": "Bu, kaçış devresi: gözlerden tek bir kablo boyunca bacaklara kadar.",
         "neuron": "Bu dev lif, tek bir hücre. Parlak nokta, lif boyunca hızla ilerleyen bir ateşleme."
+      },
+      "pathway": {
+        "before": "Burada simüle edilmeyen: Gözde büyüyen bir gölge. Algılayıcı hücreleri doğrudan biz çalıştırıyoruz.",
+        "after": "Burada simüle edilmeyen: Devre sıçramanın motor nöronlarına kadar ulaşır ama bacaklar ve sıçramanın kendisi simüle edilmiyor.",
+        "looming": {
+          "looming": "Önce yaklaşmayı algılayan hücreler (LC4 ve LPLC2) ateşlenir: Onları doğrudan biz çalıştırıyoruz.",
+          "gf": "Dev lif birkaç milisaniye sonra ateşlenir ve alarmı sinir kordonu boyunca aşağı gönderir.",
+          "jump": "Sıçrama nöronları, yani orta bacak kasının motor nöronları, en son ateşlenir."
+        }
+      },
+      "exercises": {
+        "wire": {
+          "question": "Dev lifi susturup sinekliği gönderirsen sıçrama nöronları ateşlenir mi?",
+          "answer": "Hayır. Dev lif olmadan sinyal sıçrama nöronlarına hiç ulaşmaz; yalnızca algılayıcı hücreler ateşlenir."
+        },
+        "kickers": {
+          "question": "Sıçrama nöronlarını susturursan dev lif yine ateşlenir mi?",
+          "answer": "Evet. Yol üzerinde dev lif sıçrama nöronlarından önce gelir, bu yüzden yine ateşlenir."
+        },
+        "timing": {
+          "question": "Simülasyonda uyarım başladıktan yaklaşık ne kadar sonra sıçrama nöronları ateşlenir?",
+          "answer": "Sineğin zamanıyla yaklaşık 13 milisaniye."
+        }
       }
     }
   },
@@ -649,7 +726,8 @@
       "quickQuestion": "Kısa soru",
       "done": "Ders tamamlandı",
       "answers": "Cevaplar",
-      "tryAnother": "Başka bir cevap dene."
+      "tryAnother": "Başka bir cevap dene.",
+      "toStep": "Sıradaki: adım {number}/{total}"
     },
     "replay": {
       "label": "Yeniden oynatma: {title}",
@@ -770,6 +848,41 @@
       "winTitle": "Görev {number} tamamlandı",
       "nextMission": "Sonraki görev: {title}",
       "map": "Görev haritasını gör"
+    },
+    "playback": {
+      "speed": "Hız",
+      "speedValue": "{speed}×",
+      "stepMode": "Adım adım",
+      "stepModeHint": "Her hücre grubu ateşlendikten sonra durur",
+      "pausedAt": "{number}. grupta durdu: {name}",
+      "nextGroupNamed": "Sonraki grup: {number}. {name}",
+      "finishWave": "Dalga sonuna kadar ilerlesin"
+    },
+    "pathway": {
+      "title": "Sinyal nasıl ilerler?",
+      "roles": {
+        "input": "Girdi",
+        "processing": "İşleme",
+        "output": "Çıktı",
+        "feedback": "Geri döner"
+      },
+      "notSimulated": "Bu derste simüle edilmiyor",
+      "silenced": "Susturuldu",
+      "light": "Işık (burada simüle edilmiyor)",
+      "eye": "Göze doğru",
+      "resetView": "Görünümü sıfırla"
+    },
+    "exercises": {
+      "title": "Alıştırmalar",
+      "showAnswer": "Cevabı göster",
+      "number": "{number}.",
+      "numbered": "{number}. {name}",
+      "orderQuestion": "“{stimulus}” uyarıldıktan sonra bunları ateşlenme sırasına koy: {names}.",
+      "orderAnswer": "{order}."
+    },
+    "comparison": {
+      "title": "Memelilerde ve kuşlarda sineğe benzer neler olur?",
+      "draft": "Taslak – henüz incelenmedi"
     }
   },
   "errors": {
@@ -1071,7 +1184,9 @@
       "observeHint": "Her adım için: Hangi renkler yandı, hangileri sönük kaldı?",
       "step": "Adım {number}",
       "explain": "Açıkla",
-      "question": "Dersin sorusu"
+      "question": "Dersin sorusu",
+      "exercises": "Alıştırmalar",
+      "exercisesHint": "sineğin devresi hakkında"
     },
     "lessons": {
       "smell-memory": {

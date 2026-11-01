@@ -348,6 +348,30 @@
       "journey": {
         "circuit": "Những tế bào có màu này mang mùi từ râu tới ký ức của ruồi.",
         "neuron": "Một người đọc ký ức, chỉ là một tế bào. Chấm sáng là một xung, tín hiệu mà nó gửi đi."
+      },
+      "pathway": {
+        "before": "Không mô phỏng ở đây: mùi đi đến anten. Trong bài này, chúng mình bật tất cả thụ thể mùi cùng lúc, như thể mọi mùi đến cùng một lúc.",
+        "after": "Không mô phỏng ở đây: trong bài này, mạch kết thúc ở nơ-ron đầu ra. Ở ruồi thật, tín hiệu của chúng còn đi tiếp đến những phần khác của não, nơi điều khiển ruồi bay về phía một mùi hoặc tránh xa nó. Bản thân việc học, tức là sự thay đổi của các liên kết, cũng không được mô phỏng.",
+        "orn": {
+          "orn": "Thụ thể mùi phát xung đầu tiên: chúng mình bật chúng trực tiếp.",
+          "pn": "Nơ-ron chiếu mang mùi vào sâu bên trong, đến thể nấm.",
+          "kc": "Tiếp theo, tế bào Kenyon phát xung; ở ruồi thật, mỗi mùi làm sáng lên một nhóm tế bào Kenyon khác nhau.",
+          "mbon": "Nơ-ron đầu ra đọc tế bào Kenyon và phát xung sau cùng."
+        }
+      },
+      "exercises": {
+        "messengers": {
+          "question": "Nếu bạn làm im lặng nơ-ron chiếu (người đưa tin mùi) rồi gửi một mùi vào, nơ-ron đầu ra có phát xung không? Vì sao?",
+          "answer": "Không. Không có nơ-ron chiếu, mùi không bao giờ đến được tế bào Kenyon, nên cũng không đến được nơ-ron đầu ra. Chỉ có thụ thể mùi phát xung."
+        },
+        "readers": {
+          "question": "Nếu bạn làm im lặng nơ-ron đầu ra, tế bào Kenyon có còn phát xung không?",
+          "answer": "Có. Trên đường dẫn truyền, tế bào Kenyon đứng trước nơ-ron đầu ra, nên làm im lặng nơ-ron đầu ra không chặn được chúng."
+        },
+        "timing": {
+          "question": "Trong mô phỏng, khoảng bao lâu sau khi đợt kích thích bắt đầu thì nơ-ron đầu ra phát xung? (Gợi ý: hãy nhìn đồng hồ ở phía dưới.)",
+          "answer": "Khoảng 14 mili giây theo thời gian của ruồi."
+        }
       }
     },
     "compass": {
@@ -433,6 +457,36 @@
       "journey": {
         "circuit": "Vòng tế bào này là la bàn của ruồi, cùng với các tế bào xoay nó và các tế bào giữ nó ổn định.",
         "neuron": "Một tế bào chỉ hướng. Chấm sáng là một xung, tín hiệu mà nó gửi đi."
+      },
+      "pathway": {
+        "before": "Không mô phỏng ở đây: ánh sáng đi đến mắt, và tín hiệu từ mắt đi đến nơ-ron vòng. Trong bài này không có gì đến từ mắt: chúng mình bật trực tiếp các tế bào rẽ.",
+        "after": "Không mô phỏng ở đây: trong bài học đã được đơn giản hóa này, mạch kết thúc ở các tế bào la bàn. Ở ruồi thật, tín hiệu này còn đi tiếp, qua những tế bào khác, đến các nơ-ron vận động điều khiển hướng đi của ruồi.",
+        "turn-left": {
+          "turn-left": "Các tế bào rẽ trái (P-EN2) phát xung đầu tiên: chúng mình bật chúng trực tiếp.",
+          "compass": "Các tế bào la bàn (E-PG) phát xung, và đốm sáng di chuyển quanh mặt la bàn.",
+          "ring": "Nơ-ron vòng phát xung sau các tế bào la bàn: ở đây tín hiệu của chúng đến từ bên trong mạch, vì ánh sáng không được mô phỏng.",
+          "turn-right": "Một vài tế bào rẽ phải cũng phát xung: la bàn gửi tín hiệu ngược lại các tế bào rẽ, vì đây là một vòng lặp, không phải một đường thẳng."
+        },
+        "turn-right": {
+          "turn-right": "Các tế bào rẽ phải (P-EN2) phát xung đầu tiên: chúng mình bật chúng trực tiếp.",
+          "compass": "Các tế bào la bàn (E-PG) phát xung, và đốm sáng di chuyển quanh mặt la bàn.",
+          "ring": "Nơ-ron vòng phát xung sau các tế bào la bàn: ở đây tín hiệu của chúng đến từ bên trong mạch, vì ánh sáng không được mô phỏng.",
+          "turn-left": "Một vài tế bào rẽ trái cũng phát xung: la bàn gửi tín hiệu ngược lại các tế bào rẽ, vì đây là một vòng lặp, không phải một đường thẳng."
+        }
+      },
+      "exercises": {
+        "ring": {
+          "question": "Nếu bạn làm im lặng nơ-ron vòng rồi cho tín hiệu rẽ phải phát xung, các tế bào la bàn có còn phát xung không?",
+          "answer": "Có. Các tế bào la bàn vẫn phát xung khi không có nơ-ron vòng, nhưng đốm sáng không còn đứng yên tại chỗ nữa."
+        },
+        "timing": {
+          "question": "Trong mô phỏng, khoảng bao lâu sau khi các tế bào rẽ trái được kích thích thì các tế bào la bàn phát xung?",
+          "answer": "Khoảng 23 mili giây theo thời gian của ruồi."
+        },
+        "missing": {
+          "question": "Mạch trong bài này kết thúc ở các tế bào la bàn. Một con ruồi thật còn cần gì nữa để rẽ về phía ánh sáng?",
+          "answer": "Đôi mắt và đường đi từ mắt đến nơ-ron vòng, cùng các tế bào và nơ-ron vận động điều khiển cơ thể nó. Không phần nào trong số đó được mô phỏng ở đây."
+        }
       }
     },
     "escape": {
@@ -518,6 +572,29 @@
       "journey": {
         "circuit": "Đây là mạch thoát hiểm: từ mắt, qua một sợi dây, xuống tới chân.",
         "neuron": "Đây là sợi khổng lồ, chỉ là một tế bào. Chấm sáng là một xung đang lao dọc xuống nó."
+      },
+      "pathway": {
+        "before": "Không mô phỏng ở đây: một cái bóng lớn dần trên mắt. Chúng mình bật trực tiếp các tế bào phát hiện.",
+        "after": "Không mô phỏng ở đây: mạch đi đến các nơ-ron vận động của cú nhảy, nhưng đôi chân và bản thân cú nhảy thì không được mô phỏng.",
+        "looming": {
+          "looming": "Các tế bào phát hiện vật lao tới (LC4 và LPLC2) phát xung đầu tiên: chúng mình bật chúng trực tiếp.",
+          "gf": "Sợi khổng lồ phát xung vài mili giây sau đó và gửi tín hiệu báo động xuống dây thần kinh bụng.",
+          "jump": "Nơ-ron nhảy, tức là các nơ-ron vận động của cơ chân giữa, phát xung sau cùng."
+        }
+      },
+      "exercises": {
+        "wire": {
+          "question": "Nếu bạn làm im lặng sợi khổng lồ rồi gửi vỉ đập ruồi tới, nơ-ron nhảy có phát xung không?",
+          "answer": "Không. Không có sợi khổng lồ, tín hiệu không bao giờ đến được nơ-ron nhảy, và chỉ có các tế bào phát hiện phát xung."
+        },
+        "kickers": {
+          "question": "Nếu bạn làm im lặng nơ-ron nhảy, sợi khổng lồ có còn phát xung không?",
+          "answer": "Có. Trên đường dẫn truyền, sợi khổng lồ đứng trước nơ-ron nhảy, nên nó vẫn phát xung."
+        },
+        "timing": {
+          "question": "Trong mô phỏng, khoảng bao lâu sau khi đợt kích thích bắt đầu thì nơ-ron nhảy phát xung?",
+          "answer": "Khoảng 13 mili giây theo thời gian của ruồi."
+        }
       }
     }
   },
@@ -649,7 +726,8 @@
       "quickQuestion": "Câu hỏi nhanh",
       "done": "Đã hoàn thành bài học",
       "answers": "Các câu trả lời",
-      "tryAnother": "Hãy thử câu trả lời khác."
+      "tryAnother": "Hãy thử câu trả lời khác.",
+      "toStep": "Sang bước {number}/{total}"
     },
     "replay": {
       "label": "Phát lại: {title}",
@@ -770,6 +848,41 @@
       "winTitle": "Hoàn thành nhiệm vụ {number}",
       "nextMission": "Nhiệm vụ tiếp theo: {title}",
       "map": "Xem bản đồ nhiệm vụ"
+    },
+    "playback": {
+      "speed": "Tốc độ",
+      "speedValue": "{speed}×",
+      "stepMode": "Từng bước một",
+      "stepModeHint": "Dừng lại sau khi mỗi nhóm tế bào phát xung",
+      "pausedAt": "Đã dừng ở nhóm {number}: {name}",
+      "nextGroupNamed": "Nhóm tiếp theo: {number}. {name}",
+      "finishWave": "Để làn sóng chạy đến hết"
+    },
+    "pathway": {
+      "title": "Tín hiệu đi như thế nào",
+      "roles": {
+        "input": "Đầu vào",
+        "processing": "Xử lý",
+        "output": "Đầu ra",
+        "feedback": "Vòng ngược lại"
+      },
+      "notSimulated": "Không được mô phỏng trong bài này",
+      "silenced": "Đã làm im lặng",
+      "light": "Ánh sáng (không mô phỏng ở đây)",
+      "eye": "Hướng về mắt",
+      "resetView": "Đặt lại góc nhìn"
+    },
+    "exercises": {
+      "title": "Bài tập",
+      "showAnswer": "Xem đáp án",
+      "number": "{number}.",
+      "numbered": "{number}. {name}",
+      "orderQuestion": "Hãy sắp xếp các nhóm này theo thứ tự phát xung sau khi bạn kích thích “{stimulus}”: {names}.",
+      "orderAnswer": "{order}."
+    },
+    "comparison": {
+      "title": "Ở động vật có vú và chim, điều gì diễn ra giống như ở ruồi?",
+      "draft": "Bản nháp – chưa được duyệt"
     }
   },
   "errors": {
@@ -1071,7 +1184,9 @@
       "observeHint": "Ở mỗi bước: màu nào sáng lên, màu nào vẫn tối?",
       "step": "Bước {number}",
       "explain": "Giải thích",
-      "question": "Câu hỏi của bài học"
+      "question": "Câu hỏi của bài học",
+      "exercises": "Bài tập",
+      "exercisesHint": "về mạch thần kinh của ruồi"
     },
     "lessons": {
       "smell-memory": {
