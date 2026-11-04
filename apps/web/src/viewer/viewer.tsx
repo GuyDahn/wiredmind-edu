@@ -284,7 +284,7 @@ function Stage({
       data-focus-mode={focusMode ? "pathway" : "step"}
       className="relative order-1 min-h-0 flex-1 bg-zinc-950 md:order-2"
     >
-      <header className="pointer-events-none absolute inset-x-0 top-0 z-10 flex flex-col gap-2 px-4 pt-[max(0.75rem,env(safe-area-inset-top))]">
+      <header className="pointer-events-none absolute inset-x-0 top-0 z-20 flex flex-col gap-2 px-4 pt-[max(0.75rem,env(safe-area-inset-top))]">
         <div className="flex items-start justify-between gap-3">
           <div className="min-w-0">
             <p

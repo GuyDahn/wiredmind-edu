@@ -362,6 +362,7 @@ function CircuitView({
         orbit &&
         !window.matchMedia("(prefers-reduced-motion: reduce)").matches
       ) {
+        stopOrbitDrift(orbit);
         glide.current = {
           fromPosition: perspective.position.clone(),
           toPosition: center.clone().addScaledVector(direction, frame.distance),
@@ -371,6 +372,7 @@ function CircuitView({
         };
       } else if (force || !orbit || fittedDistance.current === null) {
         glide.current = null;
+        if (orbit) stopOrbitDrift(orbit);
         perspective.position
           .copy(center)
           .addScaledVector(direction, frame.distance);
@@ -688,11 +690,16 @@ function CircuitView({
             });
           }
         }
-        // Tick by tick, so the wave's order is exact and step mode can stop
-        // on the very tick a group fires.
+        // Step mode runs tick by tick, so it can stop on the very tick a
+        // group fires. Otherwise a frame's ticks run in one go and the wave
+        // is read once, which keeps a busy machine from slowing it further.
         let stopped = false;
-        for (let tick = 0; tick < left && model.session.running(); tick++) {
-          const step = model.session.advance(1, result !== null);
+        const chunk = settings.stepMode ? 1 : left;
+        let ran = 0;
+        while (ran < left && model.session.running()) {
+          const ticks = Math.min(chunk, left - ran);
+          const step = model.session.advance(ticks, result !== null);
+          ran += ticks;
           result = {
             spikes: step.spikes,
             finished: [...(result?.finished ?? []), ...step.finished],
@@ -881,6 +888,16 @@ function CircuitView({
       />
     </group>
   );
+}
+
+/**
+ * Spends whatever turn a drag left in the controls' damping, so a camera the
+ * lesson moves stays where it is put instead of drifting on.
+ */
+function stopOrbitDrift(orbit: OrbitControls) {
+  orbit.enableDamping = false;
+  orbit.update();
+  orbit.enableDamping = true;
 }
 
 /** Dots follow spikes along neurons in the focus. Dimmed cells flash but get no dot. */

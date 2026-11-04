@@ -395,6 +395,11 @@ export function ModuleRunner({
         ) : demo ? (
           <DemoBar
             module={module}
+            counter={
+              phase.kind === "step" || phase.kind === "check" ? (
+                <StepCounter lesson={lesson} phase={phase} />
+              ) : null
+            }
             goal={
               phase.kind === "step" && step && !phase.done ? step.goal : null
             }
@@ -598,12 +603,15 @@ export function PanelCredit({ children }: { children?: ReactNode }) {
 /** While the walkthrough plays: what it is about to press, and the way out. */
 function DemoBar({
   module,
+  counter,
   goal,
   watching,
   pending,
   onStop,
 }: {
   module: ModuleSpec;
+  /** "Step 3 of 6", which stays in sight while the walkthrough plays. */
+  counter: ReactNode;
   goal: LessonGoal | null;
   watching: boolean;
   pending: boolean;
@@ -622,6 +630,7 @@ function DemoBar({
   const paused = useViewerStore((state) => state.paused);
   return (
     <div className="flex flex-col gap-2">
+      {counter}
       {paused ? (
         <>
           <PausedNote module={module} />
