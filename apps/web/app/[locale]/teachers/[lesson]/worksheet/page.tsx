@@ -181,7 +181,14 @@ export default async function WorksheetPage({
           ))}
         </Part>
 
-        <Part number={5} title={w("exercises")} hint={w("exercisesHint")}>
+        {/* The exercises start a second sheet, so the first still prints
+            on its own for a class that only does parts 1 to 4. */}
+        <Part
+          number={5}
+          title={w("exercises")}
+          hint={w("exercisesHint")}
+          newSheet
+        >
           {entry.lesson.exercises.map((exercise) => (
             <Question key={exercise.id} lines={2}>
               {exerciseWords(entry, exercise, words).question}
@@ -207,15 +214,21 @@ function Part({
   number,
   title,
   hint,
+  newSheet = false,
   children,
 }: {
   number: number;
   title: string;
   hint?: string;
+  /** Printed from the top of a new sheet. */
+  newSheet?: boolean;
   children: ReactNode;
 }) {
   return (
-    <section className="mt-8 print:mt-3">
+    <section
+      data-part={number}
+      className={`mt-8 print:mt-3 ${newSheet ? "print:break-before-page" : ""}`}
+    >
       <h2 className="flex break-after-avoid items-baseline gap-2 text-xl font-semibold text-fg print:text-[13pt]">
         <span className="flex size-7 shrink-0 items-center justify-center self-center rounded-full border border-fg text-sm tabular-nums">
           {number}
