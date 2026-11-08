@@ -241,3 +241,54 @@ test("lesson 2 shows where light would come in, and says it is not simulated", a
     page.locator('[data-pathway-diagram="side"] [data-pathway-limit]'),
   ).toHaveCount(2);
 });
+
+/** A message key path as next-intl prints one when a string is missing. */
+const KEY_PATH =
+  /\b(viewer|lessons|circuits|teachers|terms|character|language|translate)\.[\w-]+\.[\w.-]+/;
+
+for (const locale of ["de", "ar"]) {
+  test(`lesson 2 in ${locale} shows English for copy not yet translated, never a key or a blank`, async ({
+    page,
+  }) => {
+    test.setTimeout(180_000);
+    const missing: string[] = [];
+    page.on("console", (message) => {
+      if (/MISSING_MESSAGE|INSUFFICIENT_PATH/.test(message.text())) {
+        missing.push(message.text());
+      }
+    });
+    await page.setViewportSize(DESKTOP);
+    await page.goto(`/${locale}/modules/compass`);
+    await toMission(page);
+    await expect(page.locator("[data-cue]")).toBeEnabled({ timeout: 60_000 });
+    // The new pieces: the pathway, the step counter, step mode, the light.
+    await expect(page.locator('[data-pathway-diagram="side"]')).toBeVisible();
+    await page.locator("[data-step-toggle]").click();
+    await page.locator("[data-cue]").click();
+    await expect(stage(page)).toHaveAttribute("data-paused", "true", {
+      timeout: 120_000,
+    });
+    // The text a student sees, labels included.
+    const text = await page.evaluate(() => document.body.innerText);
+    expect(text).not.toMatch(KEY_PATH);
+    const blanks = await page.evaluate(() =>
+      [...document.querySelectorAll("button, a, [role=radio], [role=switch]")]
+        .filter((el) => {
+          const box = el.getBoundingClientRect();
+          if (box.width === 0 || box.height === 0 || el.closest("[inert]")) {
+            return false;
+          }
+          const name =
+            el.getAttribute("aria-label") ??
+            el.getAttribute("title") ??
+            (el as HTMLElement).innerText;
+          return name.trim() === "";
+        })
+        .map((el) => el.outerHTML.slice(0, 120)),
+    );
+    expect(blanks).toEqual([]);
+    // The English fallback shows, so the copy is really there.
+    await expect(page.locator("[data-next-group]")).toContainText("Next");
+    expect(missing).toEqual([]);
+  });
+}

@@ -63,12 +63,36 @@ export function readCatalog(locale: string): Catalog | null {
   return existsSync(url) ? readJson<Catalog>(url) : null;
 }
 
-/** Every messages file on disk, live or not. */
+/** Every messages file on disk, live or not. Files starting with _ are notes, not languages. */
 export function catalogLocales(): string[] {
   return readdirSync(MESSAGES)
-    .filter((name) => name.endsWith(".json"))
+    .filter((name) => name.endsWith(".json") && !name.startsWith("_"))
     .map((name) => name.replace(/\.json$/, ""))
     .sort();
+}
+
+/** Locales that must have every key, including the Hebrew-and-English-only ones. */
+export const FULL_LOCALES: ReadonlySet<string> = new Set(["en", "he"]);
+
+/**
+ * Keys written in Hebrew and English only. Every other language may lack
+ * them, and the site shows the English until it is drafted.
+ */
+export function readHeEnOnly(): Set<string> {
+  const url = new URL("_he-en-only.json", MESSAGES);
+  if (!existsSync(url)) return new Set();
+  return new Set(readJson<{ keys: string[] }>(url).keys);
+}
+
+/** Problems with the Hebrew-and-English-only list itself. */
+export function checkHeEnOnly(keys: ReadonlySet<string>, en: Flat): Issue[] {
+  return [...keys]
+    .filter((key) => !en.has(key))
+    .map((key) => ({
+      level: "error" as const,
+      key,
+      message: "is in _he-en-only.json but not in English",
+    }));
 }
 
 export function readGlossary(): Glossary {
@@ -382,12 +406,15 @@ export function checkTranslation({
   target,
   meta,
   glossary,
+  mayLack = new Set(),
 }: {
   locale: string;
   en: Flat;
   target: Flat;
   meta: MessagesMeta | undefined;
   glossary: Glossary;
+  /** Keys this language may leave to English (see readHeEnOnly). */
+  mayLack?: ReadonlySet<string>;
 }): Issue[] {
   const issues: Issue[] = [];
   const error = (key: string, message: string) =>
@@ -417,7 +444,7 @@ export function checkTranslation({
   for (const [key, source] of en) {
     const text = target.get(key);
     if (text === undefined) {
-      error(key, "missing");
+      if (!mayLack.has(key)) error(key, "missing");
       continue;
     }
     if (text.trim() === "") {

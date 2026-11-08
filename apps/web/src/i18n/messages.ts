@@ -18,6 +18,24 @@ export type MessagesMeta = {
   draftedAt?: string;
 };
 
+/**
+ * One language's copy laid over English: every string the language has, and
+ * English for the rest. Copy added in Hebrew and English only (listed in
+ * messages/_he-en-only.json) reads in English elsewhere until it is
+ * translated, never as a key path or a blank.
+ */
+export function overEnglish(en: MessageTree, own: MessageTree): MessageTree {
+  const out: MessageTree = { ...en };
+  for (const [key, value] of Object.entries(own)) {
+    const base = out[key];
+    out[key] =
+      typeof value === "object" && typeof base === "object"
+        ? overEnglish(base, value)
+        : value;
+  }
+  return out;
+}
+
 export function withoutMeta<T extends { _meta?: unknown }>(
   file: T,
 ): Omit<T, "_meta"> {
