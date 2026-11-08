@@ -348,30 +348,6 @@
       "journey": {
         "circuit": "Queste cellule colorate portano un odore dalle antenne fino alla memoria del moscerino.",
         "neuron": "Un lettore di ricordi, una sola cellula. Il punto luminoso è un’attivazione, il segnale che manda."
-      },
-      "pathway": {
-        "before": "Qui non è simulato: un odore che arriva alle antenne. In questa lezione accendiamo tutti i recettori olfattivi insieme, come se ogni odore arrivasse nello stesso momento.",
-        "after": "Qui non è simulato: in questa lezione il circuito finisce ai neuroni di uscita. In un vero moscerino il loro segnale prosegue verso altre parti del cervello, che guidano il moscerino verso un odore o lontano da esso. Nemmeno l’apprendimento, cioè il cambiamento dei collegamenti, è simulato.",
-        "orn": {
-          "orn": "I recettori olfattivi si attivano per primi: li accendiamo noi direttamente.",
-          "pn": "I neuroni di proiezione portano l’odore verso l’interno, fino al corpo fungiforme.",
-          "kc": "Poi si attivano le cellule di Kenyon; in un vero moscerino ogni odore ne accende un gruppo diverso.",
-          "mbon": "I neuroni di uscita leggono le cellule di Kenyon e si attivano per ultimi."
-        }
-      },
-      "exercises": {
-        "messengers": {
-          "question": "Se silenzi i neuroni di proiezione (i messaggeri dell’odore) e mandi un odore, i neuroni di uscita si attivano? Perché?",
-          "answer": "No. Senza i neuroni di proiezione l’odore non arriva mai alle cellule di Kenyon, quindi non arriva nemmeno ai neuroni di uscita. Si attivano solo i recettori olfattivi."
-        },
-        "readers": {
-          "question": "Se silenzi i neuroni di uscita, le cellule di Kenyon si attivano ancora?",
-          "answer": "Sì. Lungo il percorso le cellule di Kenyon vengono prima dei neuroni di uscita, quindi silenziare l’uscita non le ferma."
-        },
-        "timing": {
-          "question": "Nella simulazione, quanto tempo dopo l’inizio dello stimolo si attivano più o meno i neuroni di uscita? (Suggerimento: guarda l’orologio in basso.)",
-          "answer": "Circa 14 millisecondi del tempo del moscerino."
-        }
       }
     },
     "compass": {
@@ -457,36 +433,6 @@
       "journey": {
         "circuit": "Questo anello di cellule è la bussola del moscerino, con le cellule che la fanno girare e quelle che la tengono stabile.",
         "neuron": "Una cellula di rotta. Il punto luminoso è un’attivazione, il segnale che manda."
-      },
-      "pathway": {
-        "before": "Qui non è simulato: la luce che arriva all’occhio e il segnale dell’occhio che viaggia fino ai neuroni ad anello. In questa lezione dall’occhio non arriva niente: accendiamo direttamente le cellule di svolta.",
-        "after": "Qui non è simulato: in questa lezione semplificata il circuito finisce alle cellule della bussola. Nel vero moscerino questo segnale prosegue, attraverso altre cellule, fino ai motoneuroni che fanno girare il moscerino.",
-        "turn-left": {
-          "turn-left": "Le cellule di svolta di sinistra (P-EN2) si attivano per prime: le accendiamo noi direttamente.",
-          "compass": "Le cellule della bussola (E-PG) si attivano e il picco luminoso si sposta lungo il quadrante.",
-          "ring": "I neuroni ad anello si attivano dopo le cellule della bussola: qui il loro segnale viene dall’interno del circuito, perché la luce non è simulata.",
-          "turn-right": "Si attivano anche alcune cellule di svolta di destra: la bussola rimanda il segnale alle cellule di svolta, perché questo è un anello, non una linea retta."
-        },
-        "turn-right": {
-          "turn-right": "Le cellule di svolta di destra (P-EN2) si attivano per prime: le accendiamo noi direttamente.",
-          "compass": "Le cellule della bussola (E-PG) si attivano e il picco luminoso si sposta lungo il quadrante.",
-          "ring": "I neuroni ad anello si attivano dopo le cellule della bussola: qui il loro segnale viene dall’interno del circuito, perché la luce non è simulata.",
-          "turn-left": "Si attivano anche alcune cellule di svolta di sinistra: la bussola rimanda il segnale alle cellule di svolta, perché questo è un anello, non una linea retta."
-        }
-      },
-      "exercises": {
-        "ring": {
-          "question": "Se silenzi i neuroni ad anello e attivi il segnale per girare a destra, le cellule della bussola si attivano ancora?",
-          "answer": "Sì. Le cellule della bussola si attivano anche senza i neuroni ad anello, ma il picco luminoso non resta più al suo posto."
-        },
-        "timing": {
-          "question": "Nella simulazione, quanto tempo dopo la stimolazione delle cellule di svolta di sinistra si attivano più o meno le cellule della bussola?",
-          "answer": "Circa 23 millisecondi del tempo del moscerino."
-        },
-        "missing": {
-          "question": "Il circuito di questa lezione finisce alle cellule della bussola. Di che altro avrebbe bisogno un vero moscerino per girarsi verso la luce?",
-          "answer": "Degli occhi e della strada che va da loro ai neuroni ad anello, e delle cellule e dei motoneuroni che fanno girare il suo corpo. Niente di tutto questo è simulato qui."
-        }
       }
     },
     "escape": {
@@ -572,29 +518,6 @@
       "journey": {
         "circuit": "Questo è il circuito di fuga: dagli occhi, lungo un solo filo, fino alle zampe.",
         "neuron": "Questa è la fibra gigante, una sola cellula. Il punto luminoso è un’attivazione che la percorre a tutta velocità."
-      },
-      "pathway": {
-        "before": "Qui non è simulato: un’ombra che si allarga sull’occhio. Accendiamo direttamente le cellule che la rilevano.",
-        "after": "Qui non è simulato: il circuito arriva fino ai motoneuroni del salto, ma le zampe e il salto vero e proprio non sono simulati.",
-        "looming": {
-          "looming": "Le cellule che rilevano l’avvicinamento (LC4 e LPLC2) si attivano per prime: le accendiamo noi direttamente.",
-          "gf": "La fibra gigante si attiva pochi millisecondi dopo e manda l’allarme giù lungo il cordone nervoso.",
-          "jump": "I neuroni del salto, i motoneuroni del muscolo della zampa centrale, si attivano per ultimi."
-        }
-      },
-      "exercises": {
-        "wire": {
-          "question": "Se silenzi la fibra gigante e mandi lo scacciamosche, i neuroni del salto si attivano?",
-          "answer": "No. Senza la fibra gigante il segnale non arriva mai ai neuroni del salto, e si attivano solo le cellule che rilevano l’avvicinamento."
-        },
-        "kickers": {
-          "question": "Se silenzi i neuroni del salto, la fibra gigante si attiva ancora?",
-          "answer": "Sì. Lungo il percorso la fibra gigante viene prima dei neuroni del salto, quindi si attiva ancora."
-        },
-        "timing": {
-          "question": "Nella simulazione, quanto tempo dopo l’inizio dello stimolo si attivano più o meno i neuroni del salto?",
-          "answer": "Circa 13 millisecondi del tempo del moscerino."
-        }
       }
     }
   },
@@ -726,8 +649,7 @@
       "quickQuestion": "Domanda veloce",
       "done": "Lezione completata",
       "answers": "Risposte",
-      "tryAnother": "Prova un’altra risposta.",
-      "toStep": "Vai al passaggio {number} di {total}"
+      "tryAnother": "Prova un’altra risposta."
     },
     "replay": {
       "label": "Replay di {title}",
@@ -848,41 +770,6 @@
       "winTitle": "Missione {number} completata",
       "nextMission": "Prossima missione: {title}",
       "map": "Vedi la mappa delle missioni"
-    },
-    "playback": {
-      "speed": "Velocità",
-      "speedValue": "{speed}×",
-      "stepMode": "Passo dopo passo",
-      "stepModeHint": "Si ferma ogni volta che un gruppo di cellule si attiva",
-      "pausedAt": "Fermo al gruppo {number}: {name}",
-      "nextGroupNamed": "Gruppo successivo: {number}. {name}",
-      "finishWave": "Lascia arrivare l’onda fino in fondo"
-    },
-    "pathway": {
-      "title": "Come viaggia il segnale",
-      "roles": {
-        "input": "Ingresso",
-        "processing": "Elaborazione",
-        "output": "Uscita",
-        "feedback": "Torna indietro"
-      },
-      "notSimulated": "Non simulato in questa lezione",
-      "silenced": "Silenziato",
-      "light": "Luce (qui non simulata)",
-      "eye": "Verso l’occhio",
-      "resetView": "Ripristina la vista"
-    },
-    "exercises": {
-      "title": "Esercizi",
-      "showAnswer": "Mostra la risposta",
-      "number": "{number}.",
-      "numbered": "{number}. {name}",
-      "orderQuestion": "Metti questi gruppi nell’ordine in cui si attivano dopo che stimoli «{stimulus}»: {names}.",
-      "orderAnswer": "{order}."
-    },
-    "comparison": {
-      "title": "Che cosa succede nei mammiferi e negli uccelli di simile al moscerino?",
-      "draft": "Bozza – non ancora revisionata"
     }
   },
   "errors": {
@@ -1184,9 +1071,7 @@
       "observeHint": "Per ogni passaggio: quali colori si sono accesi e quali sono rimasti spenti?",
       "step": "Passaggio {number}",
       "explain": "Spiega",
-      "question": "La domanda della lezione",
-      "exercises": "Esercizi",
-      "exercisesHint": "sul circuito del moscerino"
+      "question": "La domanda della lezione"
     },
     "lessons": {
       "smell-memory": {

@@ -349,30 +349,6 @@
       "journey": {
         "circuit": "Deze gekleurde cellen brengen een geur van de antennes naar het geheugen van de vlieg.",
         "neuron": "Eén geheugenlezer, één enkele cel. De heldere stip is een impuls, het signaal dat hij verstuurt."
-      },
-      "pathway": {
-        "before": "Hier niet gesimuleerd: een geur die de antennes bereikt. In deze les zetten we alle geurreceptoren tegelijk aan, alsof alle geuren samen binnenkwamen.",
-        "after": "Hier niet gesimuleerd: in deze les houdt het circuit op bij de outputneuronen. In een echte vlieg gaat hun signaal verder naar andere delen van het brein, die de vlieg naar een geur toe of ervan weg sturen. Ook het leren zelf, de verandering in de verbindingen, wordt niet gesimuleerd.",
-        "orn": {
-          "orn": "De geurreceptoren vuren als eerste: die zetten we direct aan.",
-          "pn": "De projectieneuronen brengen de geur naar binnen, naar het paddenstoellichaam.",
-          "kc": "Daarna vuren de Kenyon-cellen; in een echte vlieg laat elke geur een andere groep ervan oplichten.",
-          "mbon": "De outputneuronen lezen de Kenyon-cellen en vuren als laatste."
-        }
-      },
-      "exercises": {
-        "messengers": {
-          "question": "Als je de projectieneuronen (de geurboodschappers) stillegt en een geur stuurt, vuren de outputneuronen dan? Waarom?",
-          "answer": "Nee. Zonder de projectieneuronen bereikt de geur de Kenyon-cellen nooit, en dus de outputneuronen ook niet. Alleen de geurreceptoren vuren."
-        },
-        "readers": {
-          "question": "Als je de outputneuronen stillegt, vuren de Kenyon-cellen dan nog?",
-          "answer": "Ja. De Kenyon-cellen komen op de route vóór de outputneuronen, dus het stilleggen van de output houdt ze niet tegen."
-        },
-        "timing": {
-          "question": "Hoe lang na het begin van de prikkel vuren de outputneuronen ongeveer in de simulatie? (Tip: kijk naar de klok onderaan.)",
-          "answer": "Ongeveer 14 milliseconden in de tijd van de vlieg."
-        }
       }
     },
     "compass": {
@@ -458,36 +434,6 @@
       "journey": {
         "circuit": "Deze ring van cellen is het kompas van de vlieg, met de cellen die het draaien en de cellen die het stabiel houden.",
         "neuron": "Eén richtingcel. De heldere stip is een impuls, het signaal dat hij verstuurt."
-      },
-      "pathway": {
-        "before": "Hier niet gesimuleerd: licht dat het oog bereikt, en het signaal van het oog dat naar de ringneuronen gaat. In deze les komt er niets van het oog: we zetten de draaicellen direct aan.",
-        "after": "Hier niet gesimuleerd: in deze vereenvoudigde les houdt het circuit op bij de kompascellen. In de echte vlieg gaat dit signaal verder, via andere cellen, naar de motorneuronen die de vlieg sturen.",
-        "turn-left": {
-          "turn-left": "De linker draaicellen (P-EN2) vuren als eerste: die zetten we direct aan.",
-          "compass": "De kompascellen (E-PG) vuren, en de heldere bult beweegt over de schijf.",
-          "ring": "De ringneuronen vuren na de kompascellen: hier komt hun signaal van binnen het circuit, omdat er geen licht wordt gesimuleerd.",
-          "turn-right": "Ook een paar rechter draaicellen vuren: het kompas geeft het signaal terug aan de draaicellen, want dit is een lus, geen rechte lijn."
-        },
-        "turn-right": {
-          "turn-right": "De rechter draaicellen (P-EN2) vuren als eerste: die zetten we direct aan.",
-          "compass": "De kompascellen (E-PG) vuren, en de heldere bult beweegt over de schijf.",
-          "ring": "De ringneuronen vuren na de kompascellen: hier komt hun signaal van binnen het circuit, omdat er geen licht wordt gesimuleerd.",
-          "turn-left": "Ook een paar linker draaicellen vuren: het kompas geeft het signaal terug aan de draaicellen, want dit is een lus, geen rechte lijn."
-        }
-      },
-      "exercises": {
-        "ring": {
-          "question": "Als je de ringneuronen stillegt en het draaisignaal rechts laat vuren, vuren de kompascellen dan nog?",
-          "answer": "Ja. De kompascellen vuren ook zonder de ringneuronen, maar de heldere bult blijft niet meer op zijn plek."
-        },
-        "timing": {
-          "question": "Hoe lang nadat de linker draaicellen zijn gestimuleerd, vuren de kompascellen ongeveer in de simulatie?",
-          "answer": "Ongeveer 23 milliseconden in de tijd van de vlieg."
-        },
-        "missing": {
-          "question": "Het circuit in deze les houdt op bij de kompascellen. Wat zou een echte vlieg nog meer nodig hebben om naar het licht te draaien?",
-          "answer": "Zijn ogen en de weg van de ogen naar de ringneuronen, en de cellen en motorneuronen die zijn lichaam sturen. Niets daarvan wordt hier gesimuleerd."
-        }
       }
     },
     "escape": {
@@ -573,29 +519,6 @@
       "journey": {
         "circuit": "Dit is het ontsnappingscircuit: van de ogen, via één draad, omlaag naar de poten.",
         "neuron": "Dit is de reuzenvezel, één enkele cel. De heldere stip is een impuls die erlangs raast."
-      },
-      "pathway": {
-        "before": "Hier niet gesimuleerd: een schaduw die steeds groter wordt op het oog. We zetten de detectorcellen direct aan.",
-        "after": "Hier niet gesimuleerd: het circuit bereikt de motorneuronen voor de sprong, maar de poten en de sprong zelf worden niet gesimuleerd.",
-        "looming": {
-          "looming": "De detectorcellen voor naderende dingen (LC4 en LPLC2) vuren als eerste: die zetten we direct aan.",
-          "gf": "De reuzenvezel vuurt een paar milliseconden later en stuurt het alarm omlaag door de zenuwstreng.",
-          "jump": "De springneuronen, de motorneuronen van de spier in de middelste poot, vuren als laatste."
-        }
-      },
-      "exercises": {
-        "wire": {
-          "question": "Als je de reuzenvezel stillegt en de vliegenmepper stuurt, vuren de springneuronen dan?",
-          "answer": "Nee. Zonder de reuzenvezel bereikt het signaal de springneuronen nooit, en vuren alleen de detectorcellen."
-        },
-        "kickers": {
-          "question": "Als je de springneuronen stillegt, vuurt de reuzenvezel dan nog?",
-          "answer": "Ja. De reuzenvezel komt op de route vóór de springneuronen, dus die vuurt nog steeds."
-        },
-        "timing": {
-          "question": "Hoe lang na het begin van de prikkel vuren de springneuronen ongeveer in de simulatie?",
-          "answer": "Ongeveer 13 milliseconden in de tijd van de vlieg."
-        }
       }
     }
   },
@@ -727,8 +650,7 @@
       "quickQuestion": "Korte vraag",
       "done": "Les afgerond",
       "answers": "Antwoorden",
-      "tryAnother": "Probeer een ander antwoord.",
-      "toStep": "Door naar stap {number} van {total}"
+      "tryAnother": "Probeer een ander antwoord."
     },
     "replay": {
       "label": "Herhaling van {title}",
@@ -849,41 +771,6 @@
       "winTitle": "Missie {number} voltooid",
       "nextMission": "Volgende missie: {title}",
       "map": "Bekijk de missiekaart"
-    },
-    "playback": {
-      "speed": "Snelheid",
-      "speedValue": "{speed}×",
-      "stepMode": "Stap voor stap",
-      "stepModeHint": "Stopt nadat elke groep cellen heeft gevuurd",
-      "pausedAt": "Gestopt bij groep {number}: {name}",
-      "nextGroupNamed": "Volgende groep: {number}. {name}",
-      "finishWave": "Laat de golf helemaal uitlopen"
-    },
-    "pathway": {
-      "title": "Hoe het signaal reist",
-      "roles": {
-        "input": "Invoer",
-        "processing": "Verwerking",
-        "output": "Uitvoer",
-        "feedback": "Terugkoppeling"
-      },
-      "notSimulated": "Niet gesimuleerd in deze les",
-      "silenced": "Stilgelegd",
-      "light": "Licht (hier niet gesimuleerd)",
-      "eye": "Naar het oog",
-      "resetView": "Weergave resetten"
-    },
-    "exercises": {
-      "title": "Opdrachten",
-      "showAnswer": "Toon het antwoord",
-      "number": "{number}.",
-      "numbered": "{number}. {name}",
-      "orderQuestion": "Zet deze in de volgorde waarin ze vuren nadat je “{stimulus}” stimuleert: {names}.",
-      "orderAnswer": "{order}."
-    },
-    "comparison": {
-      "title": "Wat gebeurt er bij zoogdieren en vogels dat lijkt op wat de vlieg doet?",
-      "draft": "Concept – nog niet nagekeken"
     }
   },
   "errors": {
@@ -1185,9 +1072,7 @@
       "observeHint": "Bij elke stap: welke kleuren lichtten op, en welke bleven donker?",
       "step": "Stap {number}",
       "explain": "Verklaren",
-      "question": "De vraag van de les",
-      "exercises": "Opdrachten",
-      "exercisesHint": "over het circuit van de vlieg"
+      "question": "De vraag van de les"
     },
     "lessons": {
       "smell-memory": {
