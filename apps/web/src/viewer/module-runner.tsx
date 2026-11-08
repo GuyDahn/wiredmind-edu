@@ -34,7 +34,7 @@ import { LESSONS, type LessonEntry } from "./modules.js";
 import { groupColor } from "./module.js";
 import { Controls, press } from "./panel.js";
 import { Exercises } from "./exercises.js";
-import { ComparisonCard, SHOW_COMPARISONS } from "./comparison.js";
+import { ComparisonCard } from "./comparison.js";
 import { usePathwayView } from "./pathway-view.js";
 import {
   PausedNote,
@@ -502,9 +502,7 @@ export function ModuleRunner({
         {phase.kind === "win" || phase.kind === "free" ? (
           <Exercises entry={entry} />
         ) : null}
-        {SHOW_COMPARISONS && phase.kind === "win" ? (
-          <ComparisonCard lessonId={entry.id} />
-        ) : null}
+        {phase.kind === "win" ? <ComparisonCard lessonId={entry.id} /> : null}
         {phase.kind === "check" ? (
           <Check
             lesson={lesson}

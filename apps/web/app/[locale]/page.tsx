@@ -28,6 +28,7 @@ import {
 import { shareCard } from "@/src/og/share-card";
 import { FEEDBACK_URL, PAPER, REPO_URL } from "@/src/site/site";
 import { guidePath, TEACHERS_PATH, worksheetPath } from "@/src/site/teachers";
+import { WhyFlyCard } from "@/src/viewer/comparison";
 import { findLesson, LESSONS } from "@/src/viewer/modules";
 
 const TEACHER_POINTS = [
@@ -291,6 +292,8 @@ export default async function HomePage({
                 </li>
               ))}
             </ol>
+            {/* Built, but hidden until its draft is reviewed. */}
+            <WhyFlyCard />
           </div>
         </section>
 

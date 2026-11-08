@@ -1,13 +1,38 @@
 {
+  "$comment": "Draft from docs/comparisons-draft.md (Guy's draft). Not for students until a scientific review; no claims beyond the draft. Each source's check is under sources.",
   "lesson": "escape",
   "reviewed": false,
   "illustration": null,
-  "text": {
-    "he": "[טיוטה – טרם נבדקה] כאן יופיע הסבר קצר על מה שדומה אצל יונקים ועופות, אחרי בדיקה של מורות וחוקר/ת מדעי המוח. ראו docs/comparisons-draft.md.",
-    "en": "[Draft – not yet reviewed] A short note on what is similar in mammals and birds will go here, once teachers and a neuroscientist have checked it. See docs/comparisons-draft.md."
+  "fly": {
+    "he": "תאים בעין מזהים צל שמתקרב ומתנפח (looming). הם מפעילים את „הסיב הענק” — תא עם אקסון עבה במיוחד — שמפעיל ישירות את עצבי השרירים של הרגליים והכנפיים. הזבוב קופץ תוך אלפיות שנייה.",
+    "en": "Cells in the eye detect a shadow that comes closer and grows (looming). They activate the “giant fiber”, a cell with an especially thick axon, which directly drives the nerves of the leg and wing muscles. The fly jumps within thousandths of a second."
   },
-  "questions": {
-    "he": ["[טיוטה – טרם נבדקה] שאלת השוואה תופיע כאן."],
-    "en": ["[Draft – not yet reviewed] A comparison question will go here."]
-  }
+  "mammals": {
+    "he": "הקוליקולוס העליון מזהה צל שמתקרב מלמעלה, ועכברים בורחים או קופאים. גם רפלקס הבהלה וקשתות רפלקס עוקפים את קליפת המוח, כדי להגיב מהר.",
+    "en": "The superior colliculus detects a shadow approaching from above, and mice flee or freeze. The startle reflex and reflex arcs also bypass the cortex, so the response is fast."
+  },
+  "birds": {
+    "he": "בטקטום האופטי (המקביל לקוליקולוס העליון) של יונים נמצאו תאים שמגיבים לעצם שמתקרב.",
+    "en": "In the pigeon's optic tectum (the counterpart of the superior colliculus), cells were found that respond to an approaching object."
+  },
+  "shared": {
+    "he": "מסלול קצר ומהיר מהעין לתגובה, ואקסון עבה מוליך מהר יותר.",
+    "en": "A short, fast path from the eye to the response, and a thick axon conducts faster."
+  },
+  "question": {
+    "he": "למה מסלול הבריחה קצר יותר ממסלול של החלטה רגילה?",
+    "en": "Why is the escape path shorter than the path of an ordinary decision?"
+  },
+  "sources": [
+    {
+      "citation": "Yilmaz, M., & Meister, M. (2013). Rapid innate defensive responses of mice to looming visual stimuli. Current Biology.",
+      "status": "verified",
+      "note": "Curr. Biol. 23:2011–2015. Shows the behavior (escape or freezing); it does not record from the superior colliculus."
+    },
+    {
+      "citation": "Sun, H., & Frost, B. J. (1998). Computation of different optical variables of looming objects in pigeon nucleus rotundus neurons. Nature Neuroscience.",
+      "status": "verified",
+      "note": "Nat. Neurosci. 1(4):296–303. The paper records from the nucleus rotundus, not the optic tectum the card names."
+    }
+  ]
 }

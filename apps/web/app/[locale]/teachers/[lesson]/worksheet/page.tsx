@@ -20,11 +20,8 @@ import {
   WORKSHEET_QUESTIONS,
   worksheetPath,
 } from "@/src/site/teachers";
-import {
-  comparisonFor,
-  localized,
-  SHOW_COMPARISONS,
-} from "@/src/viewer/comparison";
+import { inLocale } from "@/src/site/course";
+import { comparisonFor, comparisonsShown } from "@/src/viewer/comparisons";
 import { exerciseWords } from "@/src/viewer/exercises";
 import { findLesson, LESSONS } from "@/src/viewer/modules";
 
@@ -99,7 +96,7 @@ export default async function WorksheetPage({
     plain: (group: string) => circuit(`plain.${group}`),
     list: (items: string[]) => format.list(items, { type: "unit" }),
   };
-  const comparison = SHOW_COMPARISONS ? comparisonFor(entry.id) : null;
+  const comparison = comparisonsShown() ? comparisonFor(entry.id) : null;
   return (
     <>
       <div className="print:hidden">
@@ -195,14 +192,11 @@ export default async function WorksheetPage({
             </Question>
           ))}
           {/* Questions about mammals and birds wait for their review. */}
-          {(comparison
-            ? (localized(comparison.questions, locale) ?? [])
-            : []
-          ).map((question) => (
-            <Question key={question} lines={2}>
-              {question}
+          {comparison ? (
+            <Question lines={2}>
+              {inLocale(comparison.question, locale)}
             </Question>
-          ))}
+          ) : null}
         </Part>
       </main>
     </>

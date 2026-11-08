@@ -67,6 +67,12 @@
     "viewer.comparison.title",
     "viewer.comparison.draft",
     "teachers.worksheet.exercises",
-    "teachers.worksheet.exercisesHint"
+    "teachers.worksheet.exercisesHint",
+    "viewer.comparison.fly",
+    "viewer.comparison.mammals",
+    "viewer.comparison.birds",
+    "viewer.comparison.shared",
+    "viewer.comparison.question",
+    "viewer.comparison.course"
   ]
 }

@@ -1,13 +1,48 @@
 {
+  "$comment": "Draft from docs/comparisons-draft.md (Guy's draft). Not for students until a scientific review; no claims beyond the draft. Each source's check is under sources.",
   "lesson": "compass",
   "reviewed": false,
   "illustration": null,
-  "text": {
-    "he": "[טיוטה – טרם נבדקה] כאן יופיע הסבר קצר על מה שדומה אצל יונקים ועופות, אחרי בדיקה של מורות וחוקר/ת מדעי המוח. ראו docs/comparisons-draft.md.",
-    "en": "[Draft – not yet reviewed] A short note on what is similar in mammals and birds will go here, once teachers and a neuroscientist have checked it. See docs/comparisons-draft.md."
+  "fly": {
+    "he": "במבנה בצורת טבעת במוח יש „גבעה” של פעילות שמסמנת לאן הזבוב פונה. כשהזבוב מסתובב, הגבעה זזה סביב הטבעת. רמזים חזותיים (אור, נקודות ציון) מעדכנים אותה.",
+    "en": "In a ring-shaped structure in the brain there is a “bump” of activity that marks which way the fly is facing. When the fly turns, the bump moves around the ring. Visual cues (light, landmarks) update it."
   },
-  "questions": {
-    "he": ["[טיוטה – טרם נבדקה] שאלת השוואה תופיע כאן."],
-    "en": ["[Draft – not yet reviewed] A comparison question will go here."]
-  }
+  "mammals": {
+    "he": "אצל חולדות נמצאו תאי כיוון ראש — כל תא פעיל כשהראש פונה לכיוון מסוים. רמזים חזותיים מכיילים אותם. תאים כאלה נמצאו גם אצל עטלפים.",
+    "en": "Head-direction cells were found in rats: each cell is active when the head points in a particular direction. Visual cues calibrate them. Such cells have also been found in bats."
+  },
+  "birds": {
+    "he": "לאחרונה נמצאו גם אצל עופות תאים שמכווננים לכיוון.",
+    "en": "Recently, cells tuned to direction were found in birds too."
+  },
+  "shared": {
+    "he": "מצפן פנימי שמתעדכן לפי מה שרואים.",
+    "en": "An internal compass that is updated by what the animal sees."
+  },
+  "question": {
+    "he": "מה יקרה למצפן הפנימי אם האור יזוז פתאום?",
+    "en": "What will happen to the internal compass if the light suddenly moves?"
+  },
+  "sources": [
+    {
+      "citation": "Seelig, J. D., & Jayaraman, V. (2015). Neural dynamics for landmark orientation and angular path integration. Nature.",
+      "status": "verified",
+      "note": "Nature 521:186–191."
+    },
+    {
+      "citation": "Taube, J. S., Muller, R. U., & Ranck, J. B. (1990). Head-direction cells recorded from the postsubiculum in freely moving rats. Journal of Neuroscience.",
+      "status": "verified",
+      "note": "J. Neurosci. 10(2):420–435 (part I, Description and quantitative analysis)."
+    },
+    {
+      "citation": "Finkelstein, A., et al. (2015). Three-dimensional head-direction coding in the bat brain. Nature.",
+      "status": "verified",
+      "note": "Nature 517:159–164."
+    },
+    {
+      "citation": "Ben-Yishay, E., et al. (2021). Directional tuning in the hippocampal formation of birds. Current Biology.",
+      "status": "verified",
+      "note": "Curr. Biol. 31:2592–2602 (Japanese quail)."
+    }
+  ]
 }

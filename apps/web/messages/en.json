@@ -435,7 +435,13 @@
       "lessons.escape.exercises.kickers.question",
       "lessons.escape.exercises.kickers.answer",
       "lessons.escape.exercises.timing.question",
-      "lessons.escape.exercises.timing.answer"
+      "lessons.escape.exercises.timing.answer",
+      "viewer.comparison.fly",
+      "viewer.comparison.mammals",
+      "viewer.comparison.birds",
+      "viewer.comparison.shared",
+      "viewer.comparison.question",
+      "viewer.comparison.course"
     ]
   },
   "meta": {
@@ -1315,7 +1321,13 @@
     },
     "comparison": {
       "title": "What happens in mammals and birds that is like the fly?",
-      "draft": "Draft – not yet reviewed"
+      "draft": "Draft – not yet reviewed",
+      "fly": "In the fly",
+      "mammals": "In mammals",
+      "birds": "In birds",
+      "shared": "What they share",
+      "question": "A question for the class",
+      "course": "Connects to course lessons:"
     }
   },
   "errors": {

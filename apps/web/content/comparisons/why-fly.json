@@ -1,0 +1,23 @@
+{
+  "$comment": "Draft from docs/comparisons-draft.md (Guy's draft). Not for students until a scientific review; no claims beyond the draft. Each source's check is under sources.",
+  "id": "why-fly",
+  "reviewed": false,
+  "illustration": null,
+  "title": {
+    "he": "למה בכלל ללמוד מזבוב?",
+    "en": "Why learn from a fly at all?"
+  },
+  "points": {
+    "he": [
+      "אותן אבני בניין: תאי עצב, סינפסות, מוליכים עצביים — כמו אצלנו.",
+      "זה המוח הראשון שמופה במלואו, תא אחרי תא וקשר אחרי קשר.",
+      "הדמיון בין זבוב ליונק נובע לפעמים ממוצא משותף ולפעמים מאבולוציה מתכנסת — פתרונות דומים שהתפתחו בנפרד לאותה בעיה."
+    ],
+    "en": [
+      "The same building blocks as ours: nerve cells, synapses, neurotransmitters.",
+      "It is the first brain to be mapped in full, cell by cell and connection by connection.",
+      "The likeness between fly and mammal sometimes comes from shared ancestry and sometimes from convergent evolution: similar solutions that evolved separately for the same problem."
+    ]
+  },
+  "sources": []
+}

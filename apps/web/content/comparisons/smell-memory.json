@@ -1,13 +1,38 @@
 {
+  "$comment": "Draft from docs/comparisons-draft.md (Guy's draft). Not for students until a scientific review; no claims beyond the draft. Each source's check is under sources.",
   "lesson": "smell-memory",
   "reviewed": false,
   "illustration": null,
-  "text": {
-    "he": "[טיוטה – טרם נבדקה] כאן יופיע הסבר קצר על מה שדומה אצל יונקים ועופות, אחרי בדיקה של מורות וחוקר/ת מדעי המוח. ראו docs/comparisons-draft.md.",
-    "en": "[Draft – not yet reviewed] A short note on what is similar in mammals and birds will go here, once teachers and a neuroscientist have checked it. See docs/comparisons-draft.md."
+  "fly": {
+    "he": "קולטני ריח במחוש שולחים אות לכדוריות (גלומרולי) באונה האנטנלית. משם המידע עובר לגוף הפטרייה, שבו כל ריח מפעיל רק מעט תאי קניון (קידוד דליל). דופמין מסמן „טוב” או „רע”, והקשרים משתנים — כך הזבוב לומד לקשר ריח לתוצאה.",
+    "en": "Smell receptors on the antenna send their signal to small knots (glomeruli) in the antennal lobe. From there the information goes on to the mushroom body, where each smell activates only a few Kenyon cells (sparse coding). Dopamine marks “good” or “bad”, and the connections change: this is how the fly learns to link a smell to an outcome."
   },
-  "questions": {
-    "he": ["[טיוטה – טרם נבדקה] שאלת השוואה תופיע כאן."],
-    "en": ["[Draft – not yet reviewed] A comparison question will go here."]
-  }
+  "mammals": {
+    "he": "גם כאן קולטני ריח מתכנסים לכדוריות, בבולבוס הריח. בקליפת הריח (פירימית) כל ריח מפעיל קבוצה קטנה ומפוזרת של תאים. דופמין משתתף בלמידה מתגמול.",
+    "en": "Here too, smell receptors converge on glomeruli, in the olfactory bulb. In the olfactory (piriform) cortex each smell activates a small, scattered group of cells. Dopamine takes part in learning from reward."
+  },
+  "birds": {
+    "he": "גם לעופות יש כדוריות ריח. חלק מהמינים, למשל עופות ים, נעזרים בריח לניווט ולמציאת מזון.",
+    "en": "Birds have smell glomeruli too. Some species, seabirds for example, use smell to navigate and to find food."
+  },
+  "shared": {
+    "he": "התכנסות לכדוריות וקידוד דליל — פתרון דומה אצל חרקים ויונקים.",
+    "en": "Convergence onto glomeruli and sparse coding: a similar solution in insects and mammals."
+  },
+  "question": {
+    "he": "למה כדאי שכל ריח יפעיל מעט תאים ולא את כולם?",
+    "en": "Why is it useful for each smell to activate a few cells rather than all of them?"
+  },
+  "sources": [
+    {
+      "citation": "Stevens, C. F. (2015). What the fly's nose tells us about olfaction and memory / a statistical property of fly and mouse olfactory circuits. PNAS.",
+      "status": "partly",
+      "note": "Author, journal and year match Stevens C.F. (2015) What the fly's nose tells the fly's brain. PNAS 112(30):9460–9465. Neither title as written matches; a 2016 PNAS paper by Stevens is titled A statistical property of fly odor responses is conserved across odors."
+    },
+    {
+      "citation": "Literature on sparse coding in the piriform cortex (find a suitable review).",
+      "status": "unverified",
+      "note": "Not a citation yet: no paper is named."
+    }
+  ]
 }
