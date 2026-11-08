@@ -95,7 +95,7 @@ async function toFreePlay(page: Page, lesson: LessonFile) {
     await expect(page.locator("[data-cue]")).toBeEnabled({ timeout: 60_000 });
     await page.locator("[data-cue]").click();
     await expect(page.locator("[data-step-result]")).toBeVisible({
-      timeout: 150_000,
+      timeout: 300_000,
     });
     await page.locator("[data-step-next]").click();
   }
@@ -114,7 +114,7 @@ for (const id of LESSONS) {
     test("a guided step has one primary button, steps group by group, and numbers the wave as it fires", async ({
       page,
     }) => {
-      test.setTimeout(240_000);
+      test.setTimeout(480_000);
       const lesson = lessonFile(id);
       const first = lesson.steps[0]!;
       await page.setViewportSize(DESKTOP);
@@ -154,7 +154,7 @@ for (const id of LESSONS) {
       await page.locator("[data-cue]").click();
       await stepThrough(page, expected);
       await expect(page.locator("[data-step-result]")).toBeVisible({
-        timeout: 150_000,
+        timeout: 300_000,
       });
       // From a brain at rest, the live wave fired in exactly that order.
       await expect(stage(page)).toHaveAttribute(
@@ -167,7 +167,7 @@ for (const id of LESSONS) {
     test("at 0.25× in step mode, free play's wave advances group by group", async ({
       page,
     }) => {
-      test.setTimeout(900_000);
+      test.setTimeout(1_500_000);
       const lesson = lessonFile(id);
       await page.setViewportSize(DESKTOP);
       await page.goto(`/he/modules/${id}`);

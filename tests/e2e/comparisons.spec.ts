@@ -60,7 +60,7 @@ async function playToWin(page: Page, id: string) {
     await expect(page.locator("[data-cue]")).toBeEnabled({ timeout: 60_000 });
     await page.locator("[data-cue]").click();
     await expect(page.locator("[data-step-result]")).toBeVisible({
-      timeout: 150_000,
+      timeout: 300_000,
     });
     await page.locator("[data-step-next]").click();
   }
@@ -106,7 +106,7 @@ test.describe("comparison cards with the flag on", () => {
 
     for (const id of LESSONS) {
       test(`${id} ends on its card in ${locale}`, async ({ page }) => {
-        test.setTimeout(600_000);
+        test.setTimeout(1_200_000);
         await page.setViewportSize(DESKTOP);
         await page.goto(`/${locale}/modules/${id}`);
         await toMission(page);

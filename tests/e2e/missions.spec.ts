@@ -94,9 +94,10 @@ async function playSteps(page: Page, lesson: LessonFile, guessRight: boolean) {
     }
     await expect(cue.first()).toBeEnabled({ timeout: 60_000 });
     await cue.first().click();
-    // A puff runs in slow motion, and slower still on a machine with no GPU.
+    // A puff runs in slow motion (guided steps at half speed), and slower
+    // still on a machine with no GPU.
     await expect(page.locator("[data-step-result]")).toBeVisible({
-      timeout: 150_000,
+      timeout: 300_000,
     });
     if (step.predict) {
       // Right or wrong, the same next step: a guess costs nothing.
@@ -113,7 +114,7 @@ for (const id of LESSONS) {
   test(`${id}: the story, then the zoom, then the mission to its win screen`, async ({
     page,
   }) => {
-    test.setTimeout(480_000);
+    test.setTimeout(960_000);
     const lesson = lessonFile(id);
     await page.setViewportSize(DESKTOP);
     await page.goto(`/he/modules/${id}`);
@@ -176,7 +177,7 @@ for (const id of LESSONS) {
 test("the zoom can be reopened mid-mission, and the mission is where it was", async ({
   page,
 }) => {
-  test.setTimeout(120_000);
+  test.setTimeout(240_000);
   await page.setViewportSize(DESKTOP);
   await page.goto("/he/modules/escape");
   await toMission(page);
@@ -184,7 +185,7 @@ test("the zoom can be reopened mid-mission, and the mission is where it was", as
   await expect(cue.first()).toBeEnabled({ timeout: 60_000 });
   await cue.first().click();
   await expect(page.locator("[data-step-result]")).toBeVisible({
-    timeout: 60_000,
+    timeout: 150_000,
   });
   await page.locator("[data-journey-open]").click();
   await level(page, "fly");
@@ -243,7 +244,7 @@ test("without reduced motion a level change is a flight", async ({ page }) => {
 test("the mission map marks a finished mission until the page reloads", async ({
   page,
 }) => {
-  test.setTimeout(480_000);
+  test.setTimeout(960_000);
   const lesson = lessonFile("escape");
   await page.setViewportSize(DESKTOP);
   await page.goto("/he");
@@ -272,7 +273,7 @@ test.describe("no sideways scroll at 390 px, right to left", () => {
     test(`${locale}: mission goal, prediction, and win screen`, async ({
       page,
     }) => {
-      test.setTimeout(480_000);
+      test.setTimeout(960_000);
       const lesson = lessonFile("escape");
       await page.setViewportSize({ width: 390, height: 844 });
       await page.goto(`/${locale}/modules/escape`);
@@ -296,7 +297,7 @@ test.describe("no sideways scroll at 390 px, right to left", () => {
         await expect(cue.first()).toBeEnabled({ timeout: 60_000 });
         await cue.first().click();
         await expect(page.locator("[data-step-result]")).toBeVisible({
-          timeout: 150_000,
+          timeout: 300_000,
         });
         await page.locator("[data-step-next]").click();
       }
