@@ -27,6 +27,12 @@ import {
   worksheetPath,
 } from "@/src/site/teachers";
 import { JOURNEY_LEVELS } from "@/src/viewer/journey";
+import {
+  COURSE,
+  courseLessonsFor,
+  courseLessonTitle,
+  inLocale,
+} from "@/src/site/course";
 import { findLesson, LESSONS } from "@/src/viewer/modules";
 import { LESSON_TERMS } from "@/src/viewer/terms";
 
@@ -138,6 +144,8 @@ export default async function TeacherGuidePage({
             className={`${ACTION} border border-border-strong text-fg hover:bg-overlay`}
           />
         </div>
+
+        <CourseBox lessonId={entry.id} locale={locale} />
 
         <Section title={g("goalTitle")}>
           <p className="text-lg leading-relaxed text-fg print:text-base">
@@ -382,6 +390,57 @@ export default async function TeacherGuidePage({
         }}
       />
     </>
+  );
+}
+
+/**
+ * Where the lesson fits the Campus IL brain course, from
+ * content/course-mapping.json: the course lessons, when to use it, and the
+ * spikes every lesson shows. Aligned with the syllabus, not endorsed by it.
+ */
+function CourseBox({ lessonId, locale }: { lessonId: string; locale: string }) {
+  const lessons = courseLessonsFor(lessonId);
+  const when = COURSE.lessons[lessonId]!.when;
+  return (
+    <aside
+      data-course-box={lessonId}
+      aria-labelledby="course-box-title"
+      className="mt-8 break-inside-avoid rounded-2xl border-2 border-border-strong p-5 print:mt-5 print:p-3"
+    >
+      <h2
+        id="course-box-title"
+        className="text-lg font-semibold text-fg print:text-[12pt]"
+      >
+        {inLocale(COURSE.boxTitle, locale)}
+      </h2>
+      <p className="mt-1 text-sm text-fg-muted">
+        {inLocale(COURSE.aligned, locale)}
+      </p>
+      <ul className="mt-3 flex flex-col gap-1 text-base text-fg">
+        {lessons.map((number) => (
+          <li key={number} data-course-lesson={number}>
+            <span className="font-semibold">
+              {inLocale(COURSE.lessonLabel, locale).replace(
+                "{number}",
+                String(number),
+              )}
+              {": "}
+            </span>
+            {courseLessonTitle(number, locale)}
+          </li>
+        ))}
+      </ul>
+      <p className="mt-3 text-base text-fg">
+        <span className="font-semibold">
+          {inLocale(COURSE.whenLabel, locale)}
+          {": "}
+        </span>
+        {inLocale(when, locale)}
+      </p>
+      <p className="mt-2 text-sm text-fg-muted">
+        {inLocale(COURSE.spikes, locale)}
+      </p>
+    </aside>
   );
 }
 

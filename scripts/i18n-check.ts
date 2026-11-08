@@ -6,11 +6,14 @@ import {
 import {
   catalogLocales,
   checkSource,
+  checkHeEnOnly,
   checkTranslation,
+  FULL_LOCALES,
   flatten,
   isLive,
   readCatalog,
   readGlossary,
+  readHeEnOnly,
   unreviewedKeys,
   type Issue,
 } from "./i18n/catalog.js";
@@ -24,7 +27,8 @@ import { shareFontIssues } from "./i18n/share-fonts.js";
  * brand, the numbers, and search-length titles, and makes sure the share
  * images' fonts can draw every character. Fails on any error, so CI never
  * ships a missing or broken string. Drafts that no reviewer has signed off
- * pass, and are listed.
+ * pass, and are listed. The keys in messages/_he-en-only.json may be missing
+ * from every language but Hebrew and English: the site shows English there.
  */
 
 const args = process.argv.slice(2);
@@ -37,6 +41,7 @@ const glossary = readGlossary();
 const enCatalog = readCatalog(DEFAULT_LOCALE);
 if (!enCatalog) throw new Error("apps/web/messages/en.json is missing");
 const en = flatten(enCatalog);
+const heEnOnly = readHeEnOnly();
 
 type Row = {
   locale: string;
@@ -78,7 +83,9 @@ for (const locale of locales) {
           target: flat,
           meta: catalog._meta,
           glossary,
+          mayLack: FULL_LOCALES.has(locale) ? new Set() : heEnOnly,
         });
+  if (locale === DEFAULT_LOCALE) issues.push(...checkHeEnOnly(heEnOnly, en));
   if (isLive(locale)) issues.push(...shareFontIssues(locale as Locale, flat));
   const unreviewed = unreviewedKeys(catalog._meta, flat);
   const status =

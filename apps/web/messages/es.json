@@ -733,6 +733,7 @@
       "skip": "Saltar la historia",
       "back": "Atrás",
       "next": "Siguiente",
+      "loading": "Cargando…",
       "progress": "Viñeta {number} de {total}",
       "bridge": "Ahora veamos qué pasó dentro de su cerebro.",
       "zoom": "Acercar",

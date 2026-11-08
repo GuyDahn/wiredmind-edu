@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getTranslations, setRequestLocale } from "next-intl/server";
+import {
+  getFormatter,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server";
 import type { ReactNode } from "react";
 import { localePath } from "@/src/i18n/locales";
 import { pageLocale, type LocaleParams } from "@/src/i18n/server";
@@ -16,6 +20,9 @@ import {
   WORKSHEET_QUESTIONS,
   worksheetPath,
 } from "@/src/site/teachers";
+import { inLocale } from "@/src/site/course";
+import { comparisonFor, comparisonsShown } from "@/src/viewer/comparisons";
+import { exerciseWords } from "@/src/viewer/exercises";
 import { findLesson, LESSONS } from "@/src/viewer/modules";
 
 type Params = LocaleParams & { lesson: string };
@@ -73,6 +80,23 @@ export default async function WorksheetPage({
     namespace: `lessons.${entry.id}`,
   });
   const lessonUrl = `${SITE_URL}${localePath(locale, entry.path)}`;
+  const exercises = await getTranslations({
+    locale,
+    namespace: "viewer.exercises",
+  });
+  const circuit = await getTranslations({
+    locale,
+    namespace: `circuits.${entry.module.circuit}`,
+  });
+  const format = await getFormatter({ locale });
+  const words = {
+    viewer: (key: string, values: Record<string, string | number>) =>
+      exercises(key, values),
+    lesson: (key: string) => lesson(key),
+    plain: (group: string) => circuit(`plain.${group}`),
+    list: (items: string[]) => format.list(items, { type: "unit" }),
+  };
+  const comparison = comparisonsShown() ? comparisonFor(entry.id) : null;
   return (
     <>
       <div className="print:hidden">
@@ -153,6 +177,27 @@ export default async function WorksheetPage({
             </Question>
           ))}
         </Part>
+
+        {/* The exercises start a second sheet, so the first still prints
+            on its own for a class that only does parts 1 to 4. */}
+        <Part
+          number={5}
+          title={w("exercises")}
+          hint={w("exercisesHint")}
+          newSheet
+        >
+          {entry.lesson.exercises.map((exercise) => (
+            <Question key={exercise.id} lines={2}>
+              {exerciseWords(entry, exercise, words).question}
+            </Question>
+          ))}
+          {/* Questions about mammals and birds wait for their review. */}
+          {comparison ? (
+            <Question lines={2}>
+              {inLocale(comparison.question, locale)}
+            </Question>
+          ) : null}
+        </Part>
       </main>
     </>
   );
@@ -163,15 +208,21 @@ function Part({
   number,
   title,
   hint,
+  newSheet = false,
   children,
 }: {
   number: number;
   title: string;
   hint?: string;
+  /** Printed from the top of a new sheet. */
+  newSheet?: boolean;
   children: ReactNode;
 }) {
   return (
-    <section className="mt-8 print:mt-3">
+    <section
+      data-part={number}
+      className={`mt-8 print:mt-3 ${newSheet ? "print:break-before-page" : ""}`}
+    >
       <h2 className="flex break-after-avoid items-baseline gap-2 text-xl font-semibold text-fg print:text-[13pt]">
         <span className="flex size-7 shrink-0 items-center justify-center self-center rounded-full border border-fg text-sm tabular-nums">
           {number}

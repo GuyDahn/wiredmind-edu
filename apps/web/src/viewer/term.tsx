@@ -9,7 +9,7 @@ import {
   type KeyboardEvent,
   type ReactNode,
 } from "react";
-import { FOCUS_RING } from "./panel.js";
+import { FOCUS_RING } from "./ui.js";
 import type { TermId } from "./terms.js";
 
 /**

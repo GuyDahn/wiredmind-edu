@@ -144,7 +144,9 @@ test.describe("term explanations", () => {
 test.describe("show me how it works", () => {
   for (const lesson of LESSONS) {
     test(`plays ${lesson} to its question, text in step`, async ({ page }) => {
-      test.setTimeout(420_000);
+      // A walkthrough is a guided run, at half the old speed: the compass
+      // lesson's long first puff alone takes minutes on a machine with no GPU.
+      test.setTimeout(1_200_000);
       await page.setViewportSize(DESKTOP);
       await openLesson(page, `/en/modules/${lesson}`);
       await page.locator("[data-demo-start]").click();
@@ -154,11 +156,11 @@ test.describe("show me how it works", () => {
       await expect(page.locator("[data-cue]")).toHaveCount(0);
       // The step counter moves on by itself.
       await expect(page.getByText("Step 2 of", { exact: false })).toBeVisible({
-        timeout: 120_000,
+        timeout: 480_000,
       });
       // It ends on the check question and hands the lesson back.
       await expect(page.getByRole("group", { name: "Answers" })).toBeVisible({
-        timeout: 360_000,
+        timeout: 1_080_000,
       });
       await expect(page.locator('[data-demo="playing"]')).toHaveCount(0);
       expect(await stored(page)).toEqual(NOTHING);

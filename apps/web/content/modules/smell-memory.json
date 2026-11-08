@@ -114,5 +114,61 @@
         "correct": false
       }
     ]
-  }
+  },
+  "pathways": [
+    {
+      "stimulus": "orn",
+      "silenced": [],
+      "order": ["orn", "pn", "kc", "mbon"],
+      "roles": ["input", "processing", "processing", "output"]
+    },
+    {
+      "stimulus": "orn",
+      "silenced": ["pn"],
+      "order": ["orn"],
+      "roles": ["input"]
+    },
+    {
+      "stimulus": "orn",
+      "silenced": ["kc"],
+      "order": ["orn", "pn", "mbon"],
+      "roles": ["input", "processing", "output"]
+    },
+    {
+      "stimulus": "orn",
+      "silenced": ["mbon"],
+      "order": ["orn", "pn", "kc"],
+      "roles": ["input", "processing", "processing"]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "order",
+      "type": "order",
+      "stimulus": "orn"
+    },
+    {
+      "id": "messengers",
+      "type": "fires",
+      "stimulus": "orn",
+      "silenced": "pn",
+      "watch": "mbon",
+      "fires": false
+    },
+    {
+      "id": "readers",
+      "type": "fires",
+      "stimulus": "orn",
+      "silenced": "mbon",
+      "watch": "kc",
+      "fires": true
+    },
+    {
+      "id": "timing",
+      "type": "timing",
+      "stimulus": "orn",
+      "watch": "mbon",
+      "ms": [10, 20]
+    }
+  ]
 }

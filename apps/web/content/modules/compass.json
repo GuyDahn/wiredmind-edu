@@ -94,5 +94,69 @@
         "correct": false
       }
     ]
-  }
+  },
+  "pathways": [
+    {
+      "stimulus": "turn-left",
+      "silenced": [],
+      "order": ["turn-left", "compass", "ring", "turn-right"],
+      "roles": ["input", "output", "feedback", "feedback"]
+    },
+    {
+      "stimulus": "turn-left",
+      "silenced": ["ring"],
+      "order": ["turn-left", "compass", "turn-right"],
+      "roles": ["input", "output", "feedback"]
+    },
+    {
+      "stimulus": "turn-left",
+      "silenced": ["compass"],
+      "order": ["turn-left", "ring"],
+      "roles": ["input", "feedback"]
+    },
+    {
+      "stimulus": "turn-right",
+      "silenced": [],
+      "order": ["turn-right", "compass", "ring", "turn-left"],
+      "roles": ["input", "output", "feedback", "feedback"]
+    },
+    {
+      "stimulus": "turn-right",
+      "silenced": ["ring"],
+      "order": ["turn-right", "compass", "turn-left"],
+      "roles": ["input", "output", "feedback"]
+    },
+    {
+      "stimulus": "turn-right",
+      "silenced": ["compass"],
+      "order": ["turn-right", "ring"],
+      "roles": ["input", "feedback"]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "order",
+      "type": "order",
+      "stimulus": "turn-left"
+    },
+    {
+      "id": "ring",
+      "type": "fires",
+      "stimulus": "turn-right",
+      "silenced": "ring",
+      "watch": "compass",
+      "fires": true
+    },
+    {
+      "id": "timing",
+      "type": "timing",
+      "stimulus": "turn-left",
+      "watch": "compass",
+      "ms": [15, 30]
+    },
+    {
+      "id": "missing",
+      "type": "open"
+    }
+  ]
 }

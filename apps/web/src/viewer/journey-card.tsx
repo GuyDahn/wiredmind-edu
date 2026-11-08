@@ -3,7 +3,7 @@
 import { useTranslations } from "next-intl";
 import { clampLevel, JOURNEY_LEVELS } from "./journey.js";
 import type { LessonEntry } from "./modules.js";
-import { FOCUS_RING } from "./panel.js";
+import { FOCUS_RING } from "./ui.js";
 import { useViewerStore } from "./store.js";
 
 const ACTION = `min-h-14 rounded-xl px-4 text-lg font-semibold transition-colors classroom:min-h-16 classroom:text-2xl ${FOCUS_RING}`;

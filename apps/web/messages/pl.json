@@ -733,6 +733,7 @@
       "skip": "Pomiń historię",
       "back": "Wstecz",
       "next": "Dalej",
+      "loading": "Wczytywanie…",
       "progress": "Kadr {number} z {total}",
       "bridge": "A teraz zobaczmy, co działo się w jego mózgu.",
       "zoom": "Przybliż",

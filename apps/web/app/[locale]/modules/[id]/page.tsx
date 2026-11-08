@@ -16,6 +16,7 @@ import { jsonLdScript, lessonJsonLd, pageJsonLd } from "@/src/site/json-ld";
 import { pageMetadata, shareImagePath } from "@/src/site/page-meta";
 import { SiteLink } from "@/src/site/rich-text";
 import { LINKS, SITE_NAME } from "@/src/site/site";
+import { EARLY_TAPS_SCRIPT } from "@/src/viewer/early-taps";
 import { findLesson, LESSONS } from "@/src/viewer/modules";
 import { Viewer } from "@/src/viewer/viewer";
 
@@ -74,6 +75,9 @@ export default async function LessonPage({
   const title = t(`lessons.${entry.id}.title`);
   return (
     <>
+      {/* Before the story's HTML, so no tap on it is lost while the page
+          hydrates. The story plays the held taps back once it can. */}
+      <script dangerouslySetInnerHTML={{ __html: EARLY_TAPS_SCRIPT }} />
       <NextIntlClientProvider messages={messages}>
         {/* The data's makers are credited where their neurons are shown. No
             coffee link here: nothing asks students for anything mid-lesson. */}

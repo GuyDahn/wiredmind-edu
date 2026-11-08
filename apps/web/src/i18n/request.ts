@@ -3,9 +3,15 @@
 import type { IntlError } from "next-intl";
 import { getRequestConfig } from "next-intl/server";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "./locales.js";
-import { withoutMeta, type Messages } from "./messages.js";
+import {
+  overEnglish,
+  withoutMeta,
+  type MessageTree,
+  type Messages,
+} from "./messages.js";
 
-type Catalog = { default: Messages & { _meta?: unknown } };
+/** English has every key; another language may lack the ones not yet translated. */
+type Catalog = { default: { _meta?: unknown } };
 
 /**
  * One import per language, spelled out: a template like
@@ -52,8 +58,13 @@ export function onIntlError(error: IntlError) {
 }
 
 export async function loadMessages(locale: Locale): Promise<Messages> {
-  const file = await CATALOGS[locale]();
-  return withoutMeta(file.default);
+  const english = withoutMeta((await CATALOGS[DEFAULT_LOCALE]()).default);
+  if (locale === DEFAULT_LOCALE) return english as Messages;
+  const own = withoutMeta((await CATALOGS[locale]()).default);
+  return overEnglish(
+    english as MessageTree,
+    own as MessageTree,
+  ) as unknown as Messages;
 }
 
 export default getRequestConfig(async ({ requestLocale }) => {

@@ -15,12 +15,17 @@ import {
   OG_LOCALES,
   splitLocalePath,
 } from "../apps/web/src/i18n/locales.js";
-import { pick, type MessageTree } from "../apps/web/src/i18n/messages.js";
+import {
+  overEnglish,
+  pick,
+  type MessageTree,
+} from "../apps/web/src/i18n/messages.js";
 import { routeRequest } from "../apps/web/src/i18n/route.js";
 import { breakPieces } from "../apps/web/src/og/text.js";
 import { fill } from "../apps/web/src/site/text.js";
 import { LESSONS } from "../apps/web/src/viewer/modules.js";
 import {
+  checkHeEnOnly,
   checkTranslation,
   displayWidth,
   englishNumbers,
@@ -28,6 +33,7 @@ import {
   numbersIn,
   readCatalog,
   readGlossary,
+  readHeEnOnly,
   readStyleGuide,
   shapeOf,
   unreviewedKeys,
@@ -380,6 +386,37 @@ describe("translation checks", () => {
     assert.match(errors, /landing\.loop\.clock: missing/);
   });
 
+  it("lets a language lack only the Hebrew-and-English-only keys", () => {
+    const lazy = new Map(good);
+    lazy.delete("landing.loop.clock");
+    lazy.delete("a.term");
+    const errors = checkTranslation({
+      locale: "de",
+      en: source,
+      target: lazy,
+      meta: { ...meta, locale: "de" },
+      glossary,
+      mayLack: new Set(["landing.loop.clock"]),
+    })
+      .filter((issue) => issue.level === "error")
+      .map((issue) => `${issue.key}: ${issue.message}`)
+      .join("\n");
+    assert.doesNotMatch(errors, /landing\.loop\.clock/);
+    assert.match(errors, /a\.term: missing/);
+  });
+
+  it("keeps the Hebrew-and-English-only list to keys English has", () => {
+    assert.deepEqual(checkHeEnOnly(new Set(["a.term"]), source), []);
+    assert.equal(checkHeEnOnly(new Set(["a.gone"]), source).length, 1);
+    // The real list: every key in it is in English and in Hebrew.
+    const en = flatten(readCatalog("en")!);
+    const he = flatten(readCatalog("he")!);
+    for (const key of readHeEnOnly()) {
+      assert.ok(en.has(key), `en lacks ${key}`);
+      assert.ok(he.has(key), `he lacks ${key}`);
+    }
+  });
+
   it("reads numbers however a language groups and points them", () => {
     assert.deepEqual(
       englishNumbers("3,000 to 4,500 at 0.275 mV, 1–2 periods"),
@@ -492,5 +529,41 @@ describe("share image text", () => {
     assert.equal(issues.length, 1);
     assert.equal(issues[0]!.key, "lessons.escape.title");
     assert.match(issues[0]!.message, /鬱 \(U\+9B31\).*pnpm og:fonts/);
+  });
+});
+
+describe("English fallback", () => {
+  it("lays a language over English, so a missing key reads in English", () => {
+    const en: MessageTree = {
+      viewer: { next: "Next", pathway: { title: "How the signal travels" } },
+    };
+    const de: MessageTree = { viewer: { next: "Weiter" } };
+    assert.deepEqual(overEnglish(en, de), {
+      viewer: { next: "Weiter", pathway: { title: "How the signal travels" } },
+    });
+  });
+
+  it("gives every language every key, from its own file or English", () => {
+    const en = flatten(readCatalog("en")!);
+    const only = readHeEnOnly();
+    for (const locale of LOCALES) {
+      if (locale === "en") continue;
+      const own = readCatalog(locale)!;
+      const messages: Record<string, unknown> = { ...own };
+      delete messages._meta;
+      const merged = flatten(
+        overEnglish(
+          readCatalog("en")! as unknown as MessageTree,
+          messages as unknown as MessageTree,
+        ) as unknown as Parameters<typeof flatten>[0],
+      );
+      for (const key of en.keys()) {
+        const text = merged.get(key);
+        assert.ok(text && text.trim() !== "", `${locale} ${key}`);
+        if (!flatten(own).has(key)) {
+          assert.ok(only.has(key), `${locale} lacks ${key}, not he/en-only`);
+        }
+      }
+    }
   });
 });

@@ -51,6 +51,12 @@ export type ModuleSpec = {
   /** Groups the camera frames at the start. Empty frames the whole circuit. */
   frame: string[];
   compass: CompassSpec | null;
+  /**
+   * Cells that carry what the eye sees into this circuit. The scene puts a
+   * light beside the farthest of them, with its ray toward the eye, to show
+   * where light would come in. The lesson says it is not simulated.
+   */
+  light: GroupMatch | null;
 };
 
 export type ControlKind = "stimulate" | "silence" | "reset";

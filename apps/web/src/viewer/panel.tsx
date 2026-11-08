@@ -12,11 +12,9 @@ import type {
   ControlState,
   ModuleSpec,
 } from "./types.js";
+import { FOCUS_RING } from "./ui.js";
 
 const openGate: ControlGate = () => "open";
-
-export const FOCUS_RING =
-  "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring";
 
 /** Sends a control to the brain. The list and the lesson's action bar both press through here. */
 export function press(
@@ -267,6 +265,7 @@ function StimulateButton({
       disabled={disabled}
       aria-pressed={pressed}
       data-cue={state === "cue" ? "" : undefined}
+      data-stimulate={name}
       onClick={onPress}
       className={`flex min-h-[4.75rem] w-full touch-manipulation flex-col items-start gap-1 rounded-2xl px-4 py-3.5 text-start text-zinc-950 transition-transform active:scale-[0.99] disabled:opacity-40 ${FOCUS_RING} ${pressed ? "ring-2 ring-white" : ""} ${cueClass(state)}`}
       style={{ backgroundColor: color }}

@@ -733,6 +733,7 @@
       "skip": "Salta la storia",
       "back": "Indietro",
       "next": "Avanti",
+      "loading": "Caricamento…",
       "progress": "Vignetta {number} di {total}",
       "bridge": "Ora vediamo che cosa è successo nel suo cervello.",
       "zoom": "Ingrandisci",

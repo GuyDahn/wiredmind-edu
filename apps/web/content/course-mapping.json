@@ -1,0 +1,81 @@
+{
+  "$comment": "The single source for how WiredMind's lessons line up with the Campus IL course \"המוח – המכונה המופלאה מכולן\". Aligned with its syllabus only: no partnership or endorsement is claimed. Other languages use the English.",
+  "boxTitle": {
+    "he": "מתאים לקורס המוח",
+    "en": "Fits the Brain course"
+  },
+  "aligned": {
+    "he": "מותאם לסילבוס הקורס „המוח – המכונה המופלאה מכולן”.",
+    "en": "Aligned with the course syllabus of “The Brain – The Most Wonderful Machine of All” (Hebrew: המוח – המכונה המופלאה מכולן)."
+  },
+  "lessonLabel": {
+    "he": "שיעור {number} בקורס",
+    "en": "Course lesson {number}"
+  },
+  "whenLabel": {
+    "he": "מתי להשתמש",
+    "en": "When to use it"
+  },
+  "spikes": {
+    "he": "כל תא שנדלק בשיעור הזה יורה פוטנציאלי פעולה (ספייקים), הנושא של שיעור 1 בקורס.",
+    "en": "Every cell that lights up in this lesson is firing action potentials (spikes), the topic of course lesson 1."
+  },
+  "courseLessons": {
+    "1": {
+      "he": "נוירופיזיולוגיה (תעלות יונים, פוטנציאל פעולה)",
+      "en": "Neurophysiology (ion channels, action potentials)"
+    },
+    "2": {
+      "he": "תקשורת בין תאי עצב (סינפסות, מוליכים עצביים, רשתות קטנות)",
+      "en": "Communication between neurons (synapses, neurotransmitters, small networks)"
+    },
+    "3": {
+      "he": "נוירואנטומיה (כולל אבולוציה של המוח)",
+      "en": "Neuroanatomy (including brain evolution)"
+    },
+    "4": {
+      "he": "חישה ותפיסה (ראייה, שמיעה)",
+      "en": "Sensing and perception (vision, hearing)"
+    },
+    "5": {
+      "he": "מחלות ניווניות של מערכת העצבים",
+      "en": "Neurodegenerative diseases"
+    },
+    "6": {
+      "he": "פלסטיות, למידה וזיכרון",
+      "en": "Plasticity, learning and memory"
+    },
+    "7": {
+      "he": "הבסיס העצבי של התנהגות",
+      "en": "Neural basis of behavior"
+    },
+    "8": {
+      "he": "קוגניציה ותודעה",
+      "en": "Cognition and consciousness"
+    }
+  },
+  "evolutionLesson": 3,
+  "lessons": {
+    "smell-memory": {
+      "courseLessons": [2, 6],
+      "when": {
+        "he": "אחרי השיעור על תקשורת בין תאי עצב, או כפתיחה לשיעור על למידה וזיכרון.",
+        "en": "After the lesson on communication between neurons, or to open the lesson on learning and memory."
+      }
+    },
+    "compass": {
+      "courseLessons": [2, 4],
+      "when": {
+        "he": "בשיעור על חישה ותפיסה, כדוגמה למוח שעוקב אחרי הכיוון שאליו הוא פונה.",
+        "en": "In the lesson on sensing and perception, as an example of a brain keeping track of which way it faces."
+      }
+    },
+    "escape": {
+      "courseLessons": [2, 4, 7],
+      "when": {
+        "he": "בשיעור על הבסיס העצבי של התנהגות, כדוגמה למסלול קצר מראייה לתנועה.",
+        "en": "In the lesson on the neural basis of behavior, as an example of a short path from seeing to moving."
+      }
+    }
+  }
+}

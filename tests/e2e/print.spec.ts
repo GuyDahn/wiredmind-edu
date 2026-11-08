@@ -70,11 +70,20 @@ for (const locale of ["he", "en"]) {
   }
 }
 
-test("the worksheet fits one A4 sheet", async ({ page }) => {
+test("the worksheet's four parts fit one A4 sheet, the exercises a second", async ({
+  page,
+}) => {
   for (const locale of ["he", "en"]) {
     await page.goto(`/${locale}/teachers/smell-memory/worksheet`);
     const pdf = await page.pdf({ format: "A4", preferCSSPageSize: true });
     const pages = pdf.toString("latin1").match(/\/Type\s*\/Page[^s]/g) ?? [];
-    expect(pages.length, locale).toBe(1);
+    expect(pages.length, locale).toBe(2);
+    // Without the exercises, which start their own sheet, it is one page.
+    await page.evaluate(() =>
+      document.querySelector('[data-part="5"]')?.remove(),
+    );
+    const first = await page.pdf({ format: "A4", preferCSSPageSize: true });
+    const sheets = first.toString("latin1").match(/\/Type\s*\/Page[^s]/g) ?? [];
+    expect(sheets.length, locale).toBe(1);
   }
 });

@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { localePath } from "../i18n/locales.js";
 import { modeHref } from "./class-mode.js";
 import { LESSONS, type LessonEntry } from "./modules.js";
-import { FOCUS_RING } from "./panel.js";
+import { FOCUS_RING } from "./ui.js";
 import { recording } from "./recorder.js";
 import { replayUrl } from "./replay.js";
 import { useViewerStore } from "./store.js";

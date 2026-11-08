@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { useCircuitCopy } from "./copy.js";
 import { INTRO_SCREENS } from "./intro-screens.js";
 import { groupColor } from "./module.js";
-import { FOCUS_RING } from "./panel.js";
+import { FOCUS_RING } from "./ui.js";
 import { useViewerStore, type SpotlightTarget } from "./store.js";
 import type { ModuleSpec } from "./types.js";
 

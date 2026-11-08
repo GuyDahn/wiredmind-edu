@@ -53,6 +53,8 @@ export function readModule(value: unknown): ModuleSpec {
   }
   const compass =
     record.compass === undefined ? null : readCompass(record.compass, known);
+  const light =
+    record.light === undefined ? null : readMatch(record.light, "light");
   const frame = strings(record.frame, "frame");
   for (const name of frame) {
     if (!known.has(name)) {
@@ -75,6 +77,7 @@ export function readModule(value: unknown): ModuleSpec {
     groups,
     frame,
     compass,
+    light,
   };
 }
 

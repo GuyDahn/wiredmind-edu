@@ -733,6 +733,7 @@
       "skip": "Hikâyeyi geç",
       "back": "Geri",
       "next": "İleri",
+      "loading": "Yükleniyor…",
       "progress": "Kare {number}/{total}",
       "bridge": "Şimdi beyninin içinde neler olduğuna bakalım.",
       "zoom": "Yakınlaş",

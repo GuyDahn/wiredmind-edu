@@ -1,3 +1,4 @@
+import { PATHWAY_ROLES, type Pathway, type PathwayRole } from "./pathway.js";
 import { TERM_IDS } from "./terms.js";
 import type {
   ControlAction,
@@ -12,6 +13,8 @@ export const MAX_GLOSS_WORDS = 3;
 export const MAX_PANEL_WORDS = 25;
 export const MIN_STORY_PANELS = 4;
 export const MAX_STORY_PANELS = 6;
+export const MIN_EXERCISES = 3;
+export const MAX_EXERCISES = 5;
 
 export type LessonGoal =
   | { type: "stimulate"; colorGroup: string }
@@ -45,6 +48,38 @@ export type LessonChoice = {
   correct: boolean;
 };
 
+/** A pathway as a lesson lists it: the order, and each group's part in it. */
+export type LessonPathway = Pathway & { roles: PathwayRole[] };
+
+/**
+ * A short exercise about the fly circuit, for the end screen and the printed
+ * worksheet. Its question and answer are in messages, under
+ * exercises.<id>, except an "order" exercise's, which the viewer builds from
+ * the pathway. Each one's fact is checked against the simulation.
+ */
+export type LessonExercise =
+  /** Put the groups a puff fires in order. */
+  | { id: string; type: "order"; stimulus: string }
+  /** With one group silenced, does another still fire? */
+  | {
+      id: string;
+      type: "fires";
+      stimulus: string;
+      silenced: string;
+      watch: string;
+      fires: boolean;
+    }
+  /** Roughly how many milliseconds after the puff starts a group fires. */
+  | {
+      id: string;
+      type: "timing";
+      stimulus: string;
+      watch: string;
+      ms: [number, number];
+    }
+  /** A question to talk about. Nothing to check it against. */
+  | { id: string; type: "open" };
+
 /** A lesson's structure. Everything it says lives in messages, under lessons.<id>. */
 export type LessonModule = {
   id: string;
@@ -64,6 +99,13 @@ export type LessonModule = {
   story: { panels: string[] };
   /** The zoom from the whole fly down to one cell of this group, the last level. */
   journey: { neuron: string };
+  /**
+   * The order each puff fires the circuit in, as the simulation runs it from
+   * rest on the lesson's seed. Each group's sentence is in messages, under
+   * pathway.<stimulus>.<group>.
+   */
+  pathways: LessonPathway[];
+  exercises: LessonExercise[];
 };
 
 export type LessonPhase =
@@ -137,7 +179,122 @@ export function readLesson(value: unknown, module: ModuleSpec): LessonModule {
     },
     story: { panels },
     journey: { neuron },
+    pathways: list(record.pathways, "pathways").map((item, index) =>
+      readPathway(item, `pathways[${index}]`, { groups, stimuli, silence }),
+    ),
+    exercises: readExercises(record.exercises, { groups, stimuli, silence }),
   };
+}
+
+type Known = {
+  groups: ReadonlySet<string>;
+  stimuli: ReadonlySet<string>;
+  silence: ReadonlySet<string>;
+};
+
+function readPathway(
+  value: unknown,
+  field: string,
+  known: Known,
+): LessonPathway {
+  const row = object(value, field);
+  const stimulus = text(row.stimulus, `${field}.stimulus`);
+  if (!known.stimuli.has(stimulus)) {
+    throw new Error(`lesson ${field} cannot stimulate ${stimulus}`);
+  }
+  const silenced = groupList(row.silenced, `${field}.silenced`, known.silence);
+  const order = groupList(row.order, `${field}.order`, known.groups);
+  unique(order, `${field} groups`);
+  if (order[0] !== stimulus) {
+    throw new Error(`lesson ${field} must start at its stimulus`);
+  }
+  if (order.some((group) => silenced.includes(group))) {
+    throw new Error(`lesson ${field} fires a silenced group`);
+  }
+  const roles = list(row.roles, `${field}.roles`).map((item, index) => {
+    const role = text(item, `${field}.roles[${index}]`);
+    if (!PATHWAY_ROLES.includes(role as PathwayRole)) {
+      throw new Error(`lesson ${field}.roles[${index}] is not a role`);
+    }
+    return role as PathwayRole;
+  });
+  if (roles.length !== order.length) {
+    throw new Error(`lesson ${field} needs a role for each group`);
+  }
+  return { stimulus, silenced: [...silenced].sort(), order, roles };
+}
+
+function readExercises(value: unknown, known: Known): LessonExercise[] {
+  const exercises = list(value, "exercises").map((item, index) => {
+    const field = `exercises[${index}]`;
+    const row = object(item, field);
+    const id = text(row.id, `${field}.id`);
+    const stimulus = () => {
+      const name = text(row.stimulus, `${field}.stimulus`);
+      if (!known.stimuli.has(name)) {
+        throw new Error(`lesson ${field} cannot stimulate ${name}`);
+      }
+      return name;
+    };
+    const group = (key: string, from: ReadonlySet<string>) => {
+      const name = text(row[key], `${field}.${key}`);
+      if (!from.has(name)) {
+        throw new Error(`lesson ${field}.${key} names unknown group ${name}`);
+      }
+      return name;
+    };
+    switch (row.type) {
+      case "order":
+        return { id, type: "order", stimulus: stimulus() } as const;
+      case "fires":
+        if (typeof row.fires !== "boolean") {
+          throw new Error(`lesson ${field}.fires must be true or false`);
+        }
+        return {
+          id,
+          type: "fires",
+          stimulus: stimulus(),
+          silenced: group("silenced", known.silence),
+          watch: group("watch", known.groups),
+          fires: row.fires,
+        } as const;
+      case "timing": {
+        const ms = list(row.ms, `${field}.ms`);
+        const [low, high] = ms;
+        if (
+          ms.length !== 2 ||
+          typeof low !== "number" ||
+          typeof high !== "number" ||
+          !(low >= 0 && low < high)
+        ) {
+          throw new Error(`lesson ${field}.ms must be [low, high]`);
+        }
+        return {
+          id,
+          type: "timing",
+          stimulus: stimulus(),
+          watch: group("watch", known.groups),
+          ms: [low, high] as [number, number],
+        } as const;
+      }
+      case "open":
+        return { id, type: "open" } as const;
+      default:
+        throw new Error(
+          `lesson ${field}.type must be order, fires, timing, or open`,
+        );
+    }
+  });
+  if (exercises.length < MIN_EXERCISES || exercises.length > MAX_EXERCISES) {
+    throw new Error(
+      `lesson needs ${MIN_EXERCISES} to ${MAX_EXERCISES} exercises`,
+    );
+  }
+  unique(
+    exercises.map((exercise) => exercise.id),
+    "exercise ids",
+  );
+  return exercises;
 }
 
 /** Answers to pick from, exactly one of them right. */
@@ -290,15 +447,7 @@ export function glossParts(
   return parts;
 }
 
-function readStep(
-  value: unknown,
-  field: string,
-  known: {
-    groups: ReadonlySet<string>;
-    stimuli: ReadonlySet<string>;
-    silence: ReadonlySet<string>;
-  },
-): LessonStep {
+function readStep(value: unknown, field: string, known: Known): LessonStep {
   const row = object(value, field);
   const controls = object(row.controls, `${field}.controls`);
   const goalRow = object(row.goal, `${field}.goal`);

@@ -2,8 +2,11 @@
 
 import { useTranslations } from "next-intl";
 import { useEffect, useRef, useState, type ReactNode } from "react";
+import { releaseEarlyTaps } from "./early-taps.js";
+import { LoadingBar } from "./loading-bar.js";
 import type { LessonEntry } from "./modules.js";
-import { FOCUS_RING } from "./panel.js";
+import { FOCUS_RING } from "./ui.js";
+import { useHydrated } from "./use-hydrated.js";
 
 /** Pictures are drawn at this size. See docs/art-brief.md. */
 const ART = { width: 800, height: 600 };
@@ -107,6 +110,11 @@ export function StoryPanel({
  * The fly's story, before the brain: a few panels, one at a time, then the
  * sentence that leads into the zoom. It covers the lesson while the circuit
  * loads behind it. Skip is always one tap away.
+ *
+ * Until the page has hydrated, its buttons cannot do anything, so they do
+ * not pretend to: Next says it is loading and shows a bar, the rest are
+ * dimmed, and all of them are aria-busy. A tap in that time is held by the
+ * page's early-tap script and played back here (see early-taps.ts).
  */
 export function Story({
   entry,
@@ -126,6 +134,7 @@ export function Story({
   const panels = entry.lesson.story.panels;
   const [at, setAt] = useState(0);
   const heading = useRef<HTMLHeadingElement>(null);
+  const ready = useHydrated();
   usePreloadedStory(entry);
   const bridge = at >= panels.length;
   const panel = panels[at];
@@ -134,6 +143,13 @@ export function Story({
   useEffect(() => {
     if (at > 0) heading.current?.focus();
   }, [at]);
+
+  // The handlers are in place: do what the reader tapped while they were not.
+  useEffect(() => {
+    if (ready) releaseEarlyTaps();
+  }, [ready]);
+
+  const busy = ready ? undefined : true;
 
   return (
     <div
@@ -159,10 +175,14 @@ export function Story({
               {copy("title")}
             </h2>
           </div>
-          <div className="flex shrink-0 items-start gap-1.5">
+          <div
+            aria-busy={busy}
+            className={`flex shrink-0 items-start gap-1.5 ${ready ? "" : "cursor-progress opacity-60 [&_button]:cursor-progress"}`}
+          >
             <button
               type="button"
               data-story-skip=""
+              aria-disabled={busy}
               onClick={onDone}
               className={`min-h-11 rounded-xl border border-border-strong px-3.5 text-sm font-semibold text-fg-muted hover:bg-overlay classroom:text-xl ${FOCUS_RING}`}
             >
@@ -219,10 +239,15 @@ export function Story({
             <button
               type="button"
               data-story-next=""
+              aria-busy={busy}
+              aria-disabled={busy}
               onClick={bridge ? onDone : () => setAt((value) => value + 1)}
-              className={`${BUTTON} flex-[2] bg-accent text-accent-fg hover:bg-accent-hover`}
+              className={`${BUTTON} relative flex-[2] overflow-hidden ${ready ? "bg-accent text-accent-fg hover:bg-accent-hover" : "cursor-progress border border-border-strong bg-overlay text-fg-muted"}`}
             >
-              {bridge ? t("zoom") : t("next")}
+              {ready ? (bridge ? t("zoom") : t("next")) : t("loading")}
+              {ready ? null : (
+                <LoadingBar className="absolute inset-x-0 bottom-0 h-1 text-fg" />
+              )}
             </button>
           </div>
         </footer>

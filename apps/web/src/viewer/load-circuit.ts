@@ -8,15 +8,33 @@ import {
 } from "three";
 import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader.js";
 import { centerline, packPaths, type NeuronPaths } from "./centerline.js";
+import {
+  CircuitError,
+  downloadCircuit,
+  downloaded,
+  takeCircuitFiles,
+  type LoadErrorCode,
+} from "./circuit-files.js";
 import { CompassReadout, compassWedges } from "./compass.js";
 import { FlashField } from "./flash.js";
 import { dracoParts, readGlb, type GltfJson } from "./glb.js";
 import { assignGroups, bodyIndex, type NeuronRow } from "./groups.js";
-import { createFlashTexture, createNeuronMaterial } from "./materials.js";
+import {
+  createFlashTexture,
+  createNeuronMaterial,
+  DIM_LEVEL,
+  type DimUniform,
+} from "./materials.js";
 import { emptyGroups } from "./module.js";
 import { parseGraphBin } from "../sim/index.js";
 import { createViewerSession, type ViewerSession } from "./session.js";
-import type { ModuleSpec } from "./types.js";
+import type { GroupMatch, ModuleSpec } from "./types.js";
+
+export {
+  CircuitError,
+  type LoadErrorCode,
+  versioned,
+} from "./circuit-files.js";
 
 export type LoadedCircuit = {
   session: ViewerSession;
@@ -35,6 +53,10 @@ export type LoadedCircuit = {
   frameBounds: Box3;
   /** Heading dial for circuits with a compass, else null. */
   compass: CompassReadout | null;
+  /** How dim the shader draws neurons out of focus. */
+  dim: DimUniform;
+  /** Where the module's light shines from, and the point by the eye it shines at. */
+  light: { source: Vector3; eye: Vector3 } | null;
   dispose: () => void;
 };
 
@@ -98,23 +120,6 @@ export function openCircuit(module: ModuleSpec): Ticket {
   };
 }
 
-/**
- * What went wrong loading a circuit, for the reader: the files are missing,
- * damaged, or something else failed. The viewer says it in the reader's
- * language, from viewer.load, and logs the details for developers.
- */
-export type LoadErrorCode = "unavailable" | "damaged" | "failed";
-
-/** A circuit that could not load, and why. */
-export class CircuitError extends Error {
-  constructor(
-    readonly code: LoadErrorCode,
-    message: string,
-  ) {
-    super(message);
-  }
-}
-
 export function loadError(error: unknown): LoadErrorCode {
   if (error instanceof CircuitError) return error.code;
   const message = error instanceof Error ? error.message : "";
@@ -124,15 +129,30 @@ export function loadError(error: unknown): LoadErrorCode {
   return "failed";
 }
 
+/** Share of the bar the three downloads fill; decoding fills the rest. */
+const DOWNLOAD_SHARE = 0.6;
+
 async function loadCircuit(module: ModuleSpec): Promise<LoadedCircuit> {
-  report(0.04);
-  const [graphBuffer, neuronFile, glb] = await Promise.all([
-    fetchBuffer(module.assets.graph),
-    fetchJson(module.assets.neurons),
-    fetchBuffer(module.assets.gltf),
-  ]);
+  report(0.02);
+  // The story may have started the download already. On a slow connection
+  // it is most of the wait, so the bar follows its bytes as they arrive.
+  const download = downloadCircuit(module);
+  const tick = () =>
+    report(0.02 + (DOWNLOAD_SHARE - 0.02) * downloaded(download.seen));
+  download.listeners.add(tick);
+  tick();
+  let files: [ArrayBuffer, ArrayBuffer, ArrayBuffer];
+  try {
+    files = await takeCircuitFiles(download, module);
+  } finally {
+    download.listeners.delete(tick);
+  }
+  const [graphBuffer, neuronBuffer, glb] = files;
+  const neuronFile = JSON.parse(
+    new TextDecoder().decode(neuronBuffer),
+  ) as unknown;
   await yieldToMain();
-  report(0.2);
+  report(DOWNLOAD_SHARE);
   const neurons = readNeurons(neuronFile, module.circuit);
   const graph = parseGraphBin(graphBuffer);
   if (graph.neuronCount !== neurons.length) {
@@ -159,11 +179,15 @@ async function loadCircuit(module: ModuleSpec): Promise<LoadedCircuit> {
   const texture = createFlashTexture(flash.bytes, graph.neuronCount);
   const focus = new Uint8Array(graph.neuronCount).fill(255);
   const focusTexture = createFlashTexture(focus, graph.neuronCount);
+  const dim = { value: DIM_LEVEL };
   const material = createNeuronMaterial(
     texture,
     focusTexture,
     graph.neuronCount,
+    dim,
   );
+  const frameBounds =
+    boxForGroups(built.paths, assigned.groups, module.frame) ?? built.bounds;
   report(1);
   return {
     session,
@@ -176,9 +200,12 @@ async function loadCircuit(module: ModuleSpec): Promise<LoadedCircuit> {
     paths: built.paths,
     indexOfBody: bodyIndex(neurons),
     bounds: built.bounds,
-    frameBounds:
-      boxForGroups(built.paths, assigned.groups, module.frame) ?? built.bounds,
+    frameBounds,
     compass,
+    dim,
+    light: module.light
+      ? lightBeside(built.paths, neurons, module.light, frameBounds)
+      : null,
     dispose() {
       built.geometry.dispose();
       material.dispose();
@@ -186,6 +213,45 @@ async function loadCircuit(module: ModuleSpec): Promise<LoadedCircuit> {
       focusTexture.dispose();
     },
   };
+}
+
+/**
+ * A light outside the brain, shining at the point of the light-carrying cells
+ * farthest from the framed circuit: their end by the eye.
+ */
+function lightBeside(
+  paths: NeuronPaths,
+  neurons: readonly NeuronRow[],
+  match: GroupMatch,
+  frame: Box3,
+): { source: Vector3; eye: Vector3 } | null {
+  const { groups } = assignGroups(neurons, [
+    { colorGroup: "light", color: "#ffffff", match },
+  ]);
+  const center = frame.getCenter(new Vector3());
+  const point = new Vector3();
+  const eye = new Vector3();
+  let far = -1;
+  for (const neuron of groups.get("light") ?? []) {
+    const start = paths.offset[neuron] ?? 0;
+    const end = paths.offset[neuron + 1] ?? start;
+    for (let at = start; at < end; at += 3) {
+      point.set(
+        paths.data[at] ?? 0,
+        paths.data[at + 1] ?? 0,
+        paths.data[at + 2] ?? 0,
+      );
+      const distance = point.distanceToSquared(center);
+      if (distance > far) {
+        far = distance;
+        eye.copy(point);
+      }
+    }
+  }
+  if (far < 0) return null;
+  const outward = eye.clone().sub(center).normalize();
+  const reach = frame.getSize(new Vector3()).length() * 0.3;
+  return { eye, source: eye.clone().addScaledVector(outward, reach) };
 }
 
 /**
@@ -215,39 +281,6 @@ export function boxForGroups(
     }
   }
   return box.isEmpty() ? null : box;
-}
-
-async function fetchBuffer(url: string): Promise<ArrayBuffer> {
-  const response = await fetchOk(url);
-  return response.arrayBuffer();
-}
-
-async function fetchJson(url: string): Promise<unknown> {
-  const response = await fetchOk(url);
-  return response.json() as Promise<unknown>;
-}
-
-/**
- * /data files are cached for a year, so each request names the data release
- * the build fetched. A new release is a new URL.
- */
-export function versioned(url: string, version: string | undefined): string {
-  if (!version) return url;
-  const join = url.includes("?") ? "&" : "?";
-  return `${url}${join}v=${encodeURIComponent(version)}`;
-}
-
-async function fetchOk(url: string): Promise<Response> {
-  const response = await fetch(
-    versioned(url, process.env.NEXT_PUBLIC_DATA_VERSION),
-  );
-  if (!response.ok) {
-    throw new CircuitError(
-      "unavailable",
-      "The circuit files are not available. Run pnpm data:fetch and refresh.",
-    );
-  }
-  return response;
 }
 
 function readNeurons(value: unknown, circuit: string): NeuronRow[] {
@@ -343,7 +376,12 @@ async function mergeLines(
         );
         geometry.dispose();
       }
-      report(0.25 + 0.7 * ((start + slice.length) / jobs.length));
+      report(
+        DOWNLOAD_SHARE +
+          0.05 +
+          (0.95 - DOWNLOAD_SHARE - 0.05) *
+            ((start + slice.length) / jobs.length),
+      );
       await yieldToMain();
     }
   } finally {

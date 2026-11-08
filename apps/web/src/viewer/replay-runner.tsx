@@ -6,12 +6,13 @@ import { enqueue } from "./commands.js";
 import { useCircuitCopy } from "./copy.js";
 import type { LessonEntry } from "./modules.js";
 import { PanelCredit, PanelTranslateNotice } from "./module-runner.js";
-import { Controls, FOCUS_RING } from "./panel.js";
+import { Controls } from "./panel.js";
 import { startPlayback, stopPlayback } from "./recorder.js";
 import type { Replay, ReplayCommand } from "./replay.js";
 import { Sheet, type SheetState } from "./sheet.js";
 import { useViewerStore } from "./store.js";
 import { Toolbar } from "./toolbar.js";
+import { FOCUS_RING } from "./ui.js";
 
 const BUTTON = `min-h-12 flex-1 rounded-xl px-4 text-base font-semibold transition-colors ${FOCUS_RING}`;
 
