@@ -331,15 +331,18 @@ function Stage({
       </header>
       <p className="sr-only">{t("stage.canvasHelp")}</p>
       {/* The brain is a real fly's, so it never mirrors for right-to-left languages. */}
+      {/* The box follows the page's direction, so the canvas makes room on
+          the side the pathway is on; the brain inside it never mirrors. */}
       <div
-        className={`absolute inset-0 touch-none ${diagram ? "md:right-[19rem] md:rtl:right-0 md:rtl:left-[19rem]" : ""}`}
-        dir="ltr"
+        className={`absolute inset-0 touch-none ${diagram ? "md:end-[19rem]" : ""}`}
         data-intro="canvas"
       >
-        {awake ? (
-          <Scene module={module} journeyGroup={entry.lesson.journey.neuron} />
-        ) : null}
-        {diagram ? <BadgeLayer module={module} /> : null}
+        <div dir="ltr" className="relative h-full w-full">
+          {awake ? (
+            <Scene module={module} journeyGroup={entry.lesson.journey.neuron} />
+          ) : null}
+          {diagram ? <BadgeLayer module={module} /> : null}
+        </div>
       </div>
       {diagram ? (
         <aside className="absolute inset-y-0 end-0 z-10 hidden w-[19rem] overflow-y-auto border-s border-white/10 bg-zinc-950 px-4 pt-24 pb-4 md:block">

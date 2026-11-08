@@ -59,11 +59,10 @@ export function StepModeToggle() {
     >
       <span
         aria-hidden="true"
-        className={`flex h-6 w-10 shrink-0 items-center rounded-full p-0.5 transition-colors ${on ? "bg-accent" : "bg-overlay-strong"}`}
+        className={`flex h-6 w-10 shrink-0 items-center rounded-full p-0.5 transition-colors ${on ? "justify-end bg-accent" : "justify-start bg-overlay-strong"}`}
       >
-        <span
-          className={`size-5 rounded-full bg-white shadow transition-transform ${on ? "translate-x-4 rtl:-translate-x-4" : ""}`}
-        />
+        {/* Flex ends follow the reading direction: on is at the end in RTL too. */}
+        <span className="size-5 rounded-full bg-white shadow" />
       </span>
       <span className="flex flex-col">
         <span className="text-sm font-semibold text-fg">{t("stepMode")}</span>
