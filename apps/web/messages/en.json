@@ -1113,7 +1113,8 @@
     "load": {
       "unavailable": "The circuit files are not available. Refresh the page to try again.",
       "damaged": "The circuit files are damaged. Refresh the page to try again.",
-      "failed": "The circuit did not load. Refresh the page to try again."
+      "failed": "The circuit did not load. Refresh the page to try again.",
+      "noWebgl": "This browser cannot draw the brain, because its graphics (WebGL) are switched off. Open the lesson in another browser or on a phone, or turn on hardware acceleration in the browser settings."
     },
     "controls": {
       "stimulate": "Stimulate",

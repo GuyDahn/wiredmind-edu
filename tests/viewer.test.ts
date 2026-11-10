@@ -19,6 +19,7 @@ import {
 } from "../apps/web/src/viewer/flash.js";
 import { frameBox, frameSphere, type Box } from "../apps/web/src/viewer/fit.js";
 import { assignGroups } from "../apps/web/src/viewer/groups.js";
+import { hasWebgl } from "../apps/web/src/viewer/webgl.js";
 import { emptyGroups, readModule } from "../apps/web/src/viewer/module.js";
 import {
   createViewerSession,
@@ -517,6 +518,30 @@ describe("compass readout", () => {
           indexOf,
         ),
       /R2 has no neurons/,
+    );
+  });
+});
+
+describe("hasWebgl", () => {
+  it("is true when the browser hands back a WebGL context", () => {
+    assert.equal(
+      hasWebgl(() => ({
+        getContext: (kind) => (kind === "webgl" ? {} : null),
+      })),
+      true,
+    );
+  });
+
+  it("is false when there is no context, or asking for one throws", () => {
+    assert.equal(
+      hasWebgl(() => ({ getContext: () => null })),
+      false,
+    );
+    assert.equal(
+      hasWebgl(() => {
+        throw new Error("no canvas");
+      }),
+      false,
     );
   });
 });

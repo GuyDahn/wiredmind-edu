@@ -73,6 +73,7 @@
     "viewer.comparison.birds",
     "viewer.comparison.shared",
     "viewer.comparison.question",
-    "viewer.comparison.course"
+    "viewer.comparison.course",
+    "viewer.load.noWebgl"
   ]
 }

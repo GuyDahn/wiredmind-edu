@@ -11,7 +11,7 @@ import type { ModuleSpec } from "./types.js";
  * damaged, or something else failed. The viewer says it in the reader's
  * language, from viewer.load, and logs the details for developers.
  */
-export type LoadErrorCode = "unavailable" | "damaged" | "failed";
+export type LoadErrorCode = "unavailable" | "damaged" | "failed" | "noWebgl";
 
 /** A circuit that could not load, and why. */
 export class CircuitError extends Error {
