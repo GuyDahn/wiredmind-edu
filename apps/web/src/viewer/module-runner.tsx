@@ -870,7 +870,9 @@ function CueButton({
       data={{ "data-cue": "" }}
       disabled={!ready}
       color={color}
-      sub={ready ? `${verb}: ${name}` : t("loadingBrain")}
+      // A brain that failed to load is not loading: the stage says why, and
+      // the button keeps its own words.
+      sub={status === "loading" ? t("loadingBrain") : `${verb}: ${name}`}
       onClick={() => press(action, onAction)}
       pulse
     />
