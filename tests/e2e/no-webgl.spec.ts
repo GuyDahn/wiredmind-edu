@@ -15,7 +15,7 @@ function copy(locale: string) {
     import.meta.url,
   );
   return JSON.parse(readFileSync(url, "utf8")) as {
-    viewer: { load: { noWebgl: string } };
+    viewer: { load: { noWebgl: string }; lesson: { loadingBrain: string } };
     errors: { error: { title: string } };
   };
 }
@@ -48,5 +48,11 @@ for (const lesson of LESSONS) {
     );
     await expect(page.getByText(en.errors.error.title)).toHaveCount(0);
     await expect(page.locator("[data-stage] h1")).toBeVisible();
+    // The step's button stays off, and does not claim to be loading.
+    const zoomSkip = page.locator("[data-journey-skip]");
+    if (await zoomSkip.isVisible()) await zoomSkip.click();
+    const cue = page.locator("[data-cue]");
+    await expect(cue).toBeDisabled();
+    await expect(cue).not.toContainText(en.viewer.lesson.loadingBrain);
   });
 }
