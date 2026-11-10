@@ -13,6 +13,7 @@ import { readClassMode, withClassMode } from "./class-mode.js";
 import { LoadingBar } from "./loading-bar.js";
 import { groupColor } from "./module.js";
 import { findLesson, LESSONS, type LessonEntry } from "./modules.js";
+import { SceneGuard } from "./scene-guard.js";
 import {
   decodeReplay,
   REPLAY_PARAM,
@@ -339,7 +340,12 @@ function Stage({
       >
         <div dir="ltr" className="relative h-full w-full">
           {awake ? (
-            <Scene module={module} journeyGroup={entry.lesson.journey.neuron} />
+            <SceneGuard>
+              <Scene
+                module={module}
+                journeyGroup={entry.lesson.journey.neuron}
+              />
+            </SceneGuard>
           ) : null}
           {diagram ? <BadgeLayer module={module} /> : null}
         </div>
